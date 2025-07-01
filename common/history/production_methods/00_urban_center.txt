@@ -1,0 +1,58 @@
+﻿PRODUCTION_METHODS = {
+	c:DAR ?= {
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_market_stalls
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_no_street_lighting
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_no_public_transport
+		}
+	}
+	c:VAI ?= {
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_market_stalls
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_gas_streetlights
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_no_public_transport
+		}
+	}
+	c:VAE ?= {
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_market_stalls
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_gas_streetlights
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_no_public_transport
+		}
+	}
+	c:ZKW ?= {
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_market_stalls
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_gas_streetlights
+		}
+		activate_production_method = {
+			building_type = building_urban_center
+			production_method = pm_no_public_transport
+		}
+	}
+}

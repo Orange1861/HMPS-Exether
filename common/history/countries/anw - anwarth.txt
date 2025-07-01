@@ -1,0 +1,27 @@
+﻿COUNTRIES = {
+	c:ANW = {
+		effect_starting_technology_tier_knowledge_tech = yes
+
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_magical_schools	
+        activate_law = law_type:law_astrological_studies
+        activate_law = law_type:law_court_mages
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_ecumenical_recognition
+
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+	}
+}

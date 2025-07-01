@@ -1,0 +1,31 @@
+﻿# COUNTRIES = {
+# 	c:AMR = {
+# 		effect_starting_technology_tier_4_tech = yes
+		
+# 		activate_law = law_type:law_serfdom
+# 		activate_law = law_type:law_traditionalism
+# 		activate_law = law_type:law_land_based_taxation	
+# 		activate_law = law_type:law_debt_slavery
+# 		activate_law = law_type:law_right_of_assembly
+# 		activate_law = law_type:law_national_supremacy
+# 		activate_law = law_type:law_isolationism
+
+# 		ig:ig_landowners ?= {
+# 			add_ruling_interest_group = yes
+# 		}
+
+				
+# 		add_modifier = {
+# 			name = clan_dominance
+# 			days = very_long_modifier_time
+# 			is_decaying = yes
+# 		}
+# 		add_journal_entry = {
+# 			type = je_winds_of_change
+# 		}
+
+# 		activate_law = law_type:law_chiefdom
+# 		activate_law = law_type:law_elder_council
+		
+# 	}
+# }

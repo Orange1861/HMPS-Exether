@@ -1,0 +1,622 @@
+﻿ig_mages = {
+	color = hsv{ 0.81 0.56 0.75 }
+	texture = "gfx/interface/icons/ig_icons/mages.dds"
+	layer = "revolution_dynamic_mages"
+	index = 8
+
+	ideologies = {
+		ideology_arcane_scholars
+		ideology_power_hungry
+		ideology_liberal_mages
+	}
+	
+	character_ideologies = {
+		ideology_moderate
+		ideology_mad_scientist
+		ideology_druid
+		ideology_artificer_baron
+		ideology_mad_scientist
+		ideology_magillismo
+	}
+
+	enable = {
+		always = yes
+	}
+	
+	on_enable = {
+		ig:ig_mages ?= {
+			if = {
+				limit = {
+					#owner = { c:RVC ?= this }
+					always = no
+				}
+				set_interest_group_name = ig_midnight_court
+				set_ig_trait = ig_trait:ig_trait_vetitum_pulchrum
+				set_ig_trait = ig_trait:ig_trait_clausura_pecoris
+				set_ig_trait = ig_trait:ig_trait_libri_arma
+			}
+			else = {
+				set_ig_trait = ig_trait:ig_arcane_intervention
+				set_ig_trait = ig_trait:ig_mystical_traditions
+				set_ig_trait = ig_trait:ig_isolationist
+			}	
+		}
+
+		if = {
+			limit = {
+				owner = { 
+					any_primary_culture = {
+						has_discrimination_trait = dwarf_heritage
+					}	
+				}
+			}
+			ig:ig_mages ?= {
+				set_interest_group_name = ig_runeseers
+			}
+		}
+
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						c:CER ?= this
+					}
+					country_has_primary_culture = cu:cerunite
+				}
+			}
+			ig:ig_mages ?= {
+				set_interest_group_name = ig_alchemists
+			}
+		}
+
+		if = {
+			limit ={
+				owner ={
+					country_has_primary_culture = cu:south_sea_ravager
+				}
+			}
+			ig:ig_mages ?= {
+				set_interest_group_name = ig_necromancers
+			}
+		}
+	}
+
+	on_disable = {}
+	priority_cultures = { #Country scope
+		rule = {
+			trigger = {
+				NOT = { c:YUL ?= this }
+				NOT = { c:TEM ?= this }
+				any_primary_culture = { 
+					cu:khanaruk = this
+				}
+			}
+			cultures = {
+				sarhbalb yakamimbo morevnamarya puarfejiin kojiniu atiukura shkemger zangedlittuy
+			}
+		}
+		rule = {
+					trigger = {
+						OR = {
+							has_law = law_type:law_west_avian_caste_enforced
+							has_law = law_type:law_west_avian_caste_codified
+						}
+					}
+					cultures = {
+						cliffpercher whitefeather
+					}
+				}
+				rule = {
+					trigger = {
+						OR = {
+							has_law = law_type:law_avian_caste_enforced
+							has_law = law_type:law_avian_caste_codified
+						}
+					}
+					cultures = {
+						 whitefeather saglithan
+					}
+				}
+	}
+	on_character_ig_membership = {
+		if = { #sandspeaker viticist needs a little extra help
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_west_avian_caste_enforced
+						has_law = law_type:law_west_avian_caste_codified
+					}
+				}
+			}
+			random_list = {
+				70 = {
+					change_character_religion = rel:sandspeaker_viticist
+				}
+				30 = {}	
+			}
+				
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_avian_caste_enforced
+						has_law = law_type:law_avian_caste_codified
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					change_character_religion = rel:viticist
+				}
+				50 = {}	
+			}
+				
+		}
+	}
+
+	pop_potential = {
+		OR = {
+			AND = {
+				OR = {
+					is_pop_type = archmages
+					is_pop_type = wizards
+				}
+			}
+			AND = {
+				OR = {
+					is_pop_type = peasants
+					is_pop_type = bureaucrats
+					is_pop_type = capitalists
+					AND = {
+						is_pop_type = academics
+						owner = {
+							has_law = law_type:law_astrological_studies
+						}
+					}
+					AND = {
+						OR = {
+							is_pop_type = aristocrats
+							is_pop_type = clergymen
+						}
+						owner = {
+							has_law = law_type:law_divine_miracles
+						}
+					}
+				}
+				OR = {
+					pop_employment_building_group = bg_wizard_towers
+					pop_employment_building_group = bg_magic_manufacturing
+					pop_employment_building_group = bg_magic_resource
+					pop_employment_building_group = bg_subsistence_agriculture
+					pop_employment_building_group = bg_subsistence_ranching
+				}
+			}
+			AND = {
+				OR = {
+					pop_employment_building_group = bg_wizard_towers
+					pop_employment_building_group = bg_magic_manufacturing
+					pop_employment_building_group = bg_magic_resource
+				}
+				is_pop_type = machinists
+			}
+		}
+	}
+
+	pop_weight = {
+		value = 0
+
+		add = {
+			desc = "POP_ARCHMAGES"
+			if = {
+				limit = {
+					is_pop_type = archmages
+				}
+				value = 250
+			}
+		}
+
+		add = {
+			desc = "POP_WIZARDS"
+			if = {
+				limit = {
+					is_pop_type = wizards
+				}
+				value = 100
+			}
+		}
+
+		add = {
+			desc = "POP_MACHINISTS"
+			if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				value = 75
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_court_mages
+				}
+			}
+			add = {
+				desc = "POP_BUREAUCRATS_MAGES"
+				if = {
+					limit = {
+						is_pop_type = bureaucrats
+					}
+					value = 100
+				}
+			}
+		}
+
+		add = {
+			desc = "ASTROLOGICAL_STUDIES_LAW"
+			if = {
+				limit = {
+					OR = {
+						is_pop_type = wizards
+						is_pop_type = archmages
+						is_pop_type = machinists
+					}
+					
+					owner = {
+						has_law = law_type:law_astrological_studies
+					}
+				}
+				value = 25
+			}
+		}
+
+		add = {
+			desc = "POP_ARISTOCRATS"
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				if = {
+					limit = {
+						owner = {
+							has_law = law_type:law_court_mages
+						}
+					}
+					value = 75
+				}
+				else = {
+					value = 25
+				}
+			}
+		}
+
+		add = {
+			desc = "POP_PEASANTS"
+			if = {
+				limit = {
+					owner = {
+						NOT = {
+							is_country_type = preindustrial
+						}
+					}
+					is_pop_type = peasants
+				}
+				value = 12
+			}
+		}
+
+		add = {
+			desc = "ADMINISTRATION_ROLE"
+			if = {
+				limit = {
+					owner = {
+						has_law = law_type:law_magocracy
+					}
+					OR = {
+						is_pop_type = aristocrats
+						is_pop_type = clergymen
+						is_pop_type = capitalists
+						is_pop_type = archmages
+						is_pop_type = wizards
+					}
+					OR = {
+						pop_employment_building_group = bg_service
+						pop_employment_building_group = bg_arts
+						pop_employment_building_group = bg_government
+					}
+				}
+				value = 100
+			}
+		}
+		
+		if = {
+			limit = {
+				literacy_rate >= 0.50
+			}
+			add = {
+				desc = "POP_LITERACY"
+				value = literacy_rate
+				multiply = 20
+			}
+		}
+
+		multiply = {
+			desc = "LEADER_POPULARITY"
+			scope:interest_group = {
+				leader ?= {
+					value = popularity
+					multiply = 0.0025
+					add = 1
+					max = 1.25
+					min = 0.75
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = yes
+				}
+			}
+			multiply = {
+				desc = "IN_GOVERNMENT_ATTRACTION"
+				value = 1
+				add = scope:interest_group.modifier:interest_group_in_government_attraction_mult
+				min = 0
+			}
+		}
+		
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = yes
+				}
+			}
+			multiply = { # Multiplied by 1.25x max
+				desc = "POP_LOYALISTS"
+				value = pop_loyalist_fraction
+				divide = 4
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = no
+				}
+			}
+			multiply = { # Multiplied by 1.25x max
+				desc = "POP_RADICALS"
+				value = pop_radical_fraction
+				divide = 4
+				add = 1
+			}
+		}
+	}
+
+	monarch_weight = {
+		value = 1
+		# Monarch is not likely to adopt a marginal IG
+		if = {
+			limit = {
+				is_marginal = yes
+			}
+			multiply = {
+				value = 0.1
+			}
+		}
+		# Monarch is more likely to adopt a Powerful IG
+		if = {
+			limit = {
+				is_powerful = yes
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		# Much more likely with Technocracy
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_technocracy
+				}
+			}
+			multiply = {
+				value = 3
+			}
+		}
+		# More likely with Court Mages
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_court_mages
+				}
+			}
+			multiply = {
+				value = 1.5
+			}
+		}
+		# Impossible without Empiricism
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_technology_researched = empiricism }
+				}
+			}
+			multiply = {
+				value = 0
+			}
+		}
+	}
+
+	agitator_weight = {
+		# Agitators more likely to come from populist IG's rather than elitist
+		value = 0.75
+		# Agitators will never be part of a marginalized IG
+		if = {
+			limit = {
+				owner.ig:ig_intelligentsia ?= {
+					is_marginal = yes
+				}
+			}
+			multiply = {
+				value = 0
+			}
+		}
+	}
+
+	commander_weight = {
+		value = 1.0
+	}
+
+	noble_chance = {
+		value = 0.5
+	}
+
+	female_commander_chance = {
+		value = 0.35
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 1.0
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country ?= c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.15
+			}
+
+		}
+	}
+
+	female_politician_chance = { #girlboss
+		value = 0.35
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.615
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+
+			}
+			add = {
+				value = 0.035
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country ?= c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.3
+			}
+
+		}
+	}
+
+	female_agitator_chance = {
+		value = 0.3
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_own_property
+				}
+
+			}
+			add = {
+				value = 0.035
+			}
+		}	
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_in_the_workplace
+				}
+
+			}
+			add = {
+				value = 0.035
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+
+			}
+			add = {
+				value = 0.035
+			}
+		}		
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.685
+			}
+		}
+	}
+
+	# The chance that a commander belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular commander in the IG
+	commander_leader_chance = {
+		value = 0.25
+		if = {
+			limit = {
+				exists = scope:character
+			}
+			multiply = {
+				value = 1
+				add = scope:character.popularity
+				min = 0
+			}
+		}
+	}
+}

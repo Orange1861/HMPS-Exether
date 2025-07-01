@@ -1,0 +1,251 @@
+﻿# Fired off on_monthly_pulse_country
+
+# Coup
+coup_monthly_events = {
+	random_events = {
+		chance_to_happen = 20
+		1 = coup.1
+	}
+}
+
+# Fund Lobbies Events
+fund_lobbies_monthly_events = {
+	random_events = {
+		chance_to_happen = 25
+		10 = fund_lobbies_events.1
+		10 = fund_lobbies_events.2
+		10 = fund_lobbies_events.3
+		10 = fund_lobbies_events.4
+		10 = fund_lobbies_events.5
+	}
+}
+
+# Blue Riband Events
+blue_riband_monthly_events = {  
+	random_events = {
+		chance_of_no_event = 89
+		2 = blue_riband.41  #cruise line normal
+		3 = blue_riband.43  #paid shipyard event 2
+		3 = blue_riband.44  #paid shipyard event 3
+		3 = blue_riband.45  #company shipyard event 4
+	}
+}
+
+calculate_arcana_surplus = {
+	effect = {
+		remove_modifier = surplus_arcana
+		add_modifier = {
+			name = surplus_arcana 
+			multiplier = {
+				value = root.arcana
+				divide = 600
+			}
+		}
+	}
+}
+
+calculate_adventurer_coverage_deficit = {
+	effect = {
+		every_scope_state = {
+			remove_modifier = coverage_deficit
+			set_local_variable = {
+				name  = coverage_state
+				value = this
+			}
+			if = {
+				limit = {
+					state_adventurer_coverage_balance < 0
+				}
+				add_modifier = {
+					name = coverage_deficit
+					multiplier = {
+						value = local_var:coverage_state.state_adventurer_coverage_multiplier
+					}
+				}
+			}
+		}
+	}
+}
+
+calculate_veil_top_damage = {
+	effect = {
+		set_local_variable = {
+			name = current_rank
+			value = 0
+		}
+		ordered_country = {
+			limit = {
+				this = {
+					has_variable = veil_damage
+				}		
+			}
+			order_by = var:veil_damage
+			max = 3
+			change_local_variable = {
+				name = current_rank
+				add = 1
+			}
+			set_variable = {
+				name = player_rank
+				value = local_var:current_rank
+			}
+			
+			if = {
+				limit = {
+					var:player_rank = 1
+				}
+				set_global_variable = {
+					name = veil_damage_top_1
+					value = this
+				}
+				set_global_variable = {
+					name = veil_damage_top_1_value
+					value = var:veil_damage
+				}
+			}
+			else_if = {
+				limit = {
+					var:player_rank = 2
+				}
+				set_global_variable = {
+					name = veil_damage_top_2
+					value = this
+				}
+				set_global_variable = {
+					name = veil_damage_top_2_value
+					value = var:veil_damage
+				}
+			}
+			else_if = {
+				limit = {
+					var:player_rank = 3
+				}
+				set_global_variable = {
+					name = veil_damage_top_3
+					value = this
+				}
+				set_global_variable = {
+					name = veil_damage_top_3_value
+					value = var:veil_damage
+				}
+			}
+		}
+
+	}
+}
+
+
+calculate_blue_riband_scores = {
+	effect = {
+		set_local_variable = {
+			name = current_rank
+			value = 0
+		}
+		ordered_country = {
+			limit = {
+				this = {
+					has_variable = blue_riband_score
+				}		
+			}
+			order_by = var:blue_riband_score
+			max = 3
+			change_local_variable = {
+				name = current_rank
+				add = 1
+			}
+			set_variable = {
+				name = player_rank
+				value = local_var:current_rank
+			}
+			
+			if = {
+				limit = {
+					var:player_rank = 1
+				}
+				set_global_variable = {
+					name = blue_riband_top_1
+					value = this
+				}
+				set_global_variable = {
+					name = blue_riband_top_1_value
+					value = var:blue_riband_score
+				}
+				if = {
+					limit = {
+						NOT = { has_modifier = blue_riband_leader}
+					}
+					trigger_event = { id = blue_riband.3 }
+				}
+			}
+			else_if = {
+				limit = {
+					var:player_rank = 2
+				}
+				set_global_variable = {
+					name = blue_riband_top_2
+					value = this
+				}
+				set_global_variable = {
+					name = blue_riband_top_2_value
+					value = var:blue_riband_score
+				}
+			}
+			else_if = {
+				limit = {
+					var:player_rank = 3
+				}
+				set_global_variable = {
+					name = blue_riband_top_3
+					value = this
+				}
+				set_global_variable = {
+					name = blue_riband_top_3_value
+					value = var:blue_riband_score
+				}
+			}
+		}
+
+	}
+}
+
+tech_monthly_events = {
+	random_events = {
+		chance_to_happen = 50
+		10 = flamethrowers_event.1
+		10 = naval_tech_events.1
+		10 = naval_tech_events.2
+		10 = naval_tech_events.3
+		10 = military_tech_events.401
+		10 = military_tech_events.402
+		10 = military_tech_events.403
+		10 = military_tech_events.404
+		10 = aviation.1
+		10 = trench_warfare.1
+		10 = naval_tech_events.4
+		10 = naval_tech_events.5
+		10 = society_tech_events.301
+		10 = dan_society_tech_events.1
+		10 = production_tech_events.1
+		10 = production_tech_events.600
+		10 = production_tech_events.601
+		10 = production_tech_events.200
+		10 = production_tech_events.210
+		10 = production_tech_events.102
+		10 = production_tech_events.103
+		10 = production_tech_events.501
+		10 = production_tech_events.300
+		10 = production_tech_events.301
+		10 = production_tech_events.401
+		10 = production_tech_events.402
+		10 = production_tech_events.700
+		10 = production_tech_events.700
+		10 = production_tech_events.700
+		10 = society_tech_events.104
+		10 = society_tech_events.105
+		10 = metro.1
+		10 = dt_society_events.1
+		10 = dt_society_events.3
+		10 = war_crimes.1
+		10 = war_crimes.2
+	}
+}

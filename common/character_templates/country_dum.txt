@@ -1,0 +1,545 @@
+﻿DUM_dumonia_leader_template = {
+ 		first_name = Kamiel
+   		last_name = Romhaar
+    		historical = yes
+		ruler = yes
+    		age = 24
+    		dna = dna_dumonia_ruler
+    		culture = cu:dumonian
+		religion = rel:church_of_man
+		interest_group = ig_petty_bourgeoisie
+		ideology = ideology_jingoist_leader
+		traits = {
+			romantic
+			brave
+			explorer 
+    }
+}
+
+
+
+DUM_xarion_durand = { 
+	first_name = Xarion
+	last_name = Durand
+	historical = yes
+	ig_leader = yes
+	noble = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	interest_group = ig_industrialists
+	ideology = ideology_moderate
+	birth_date = 1145.4.26
+	traits = {
+		expensive_tastes
+		direct
+		reckless
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_industrialists
+        }   
+        earliest_usage_date = 1178.1.1
+        latest_usage_date = 1198.1.1
+		chance = 100
+    }   
+	trait_generation = { }
+}
+
+DUM_daelon_waverly = { 
+	first_name = Daelon
+	last_name = Waverly
+	historical = yes
+	ig_leader = yes
+	noble = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	interest_group = ig_landowners
+	ideology = ideology_protectionist
+	birth_date = 1135.2.25
+	traits = {
+		expensive_tastes
+		basic_diplomat
+		bigoted
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+        }   
+        earliest_usage_date = 1178.1.1
+        latest_usage_date = 1198.1.1
+		chance = 100
+    }   
+	trait_generation = { }
+}
+
+DUM_sarelo_veseur = { 
+	first_name = Sarelo
+	last_name = Veseur
+	historical = yes
+	ig_leader = yes
+	noble = yes
+	culture = cu:dumonian
+	religion = rel:cult_of_the_sun
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_jingoist_leader
+	birth_date = 1139.3.20
+	traits = {
+		firebrand
+		pious
+		scarred
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+        }   
+        earliest_usage_date = 1178.1.1
+		chance = 100
+    }   
+	trait_generation = { }
+}
+
+DUM_styrm_bacher = { 
+	first_name = Styrm
+	last_name = Bacher
+	historical = yes
+	ig_leader = yes
+	noble = no
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	interest_group = ig_devout
+	ideology = ideology_ecumenical_traditionalist
+	birth_date = 1139.3.20
+	traits = {
+		literary
+		meticulous
+		pious
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_devout
+        }   
+        earliest_usage_date = 1178.1.1
+		chance = 100
+    }   
+	trait_generation = { }
+}
+
+DUM_pyrros_waverly = { 
+	first_name = Pyrros
+	last_name = Waverly
+	historical = yes
+	ig_leader = yes
+	noble = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	interest_group = ig_landowners
+	ideology = ideology_skeptic_leader
+	birth_date = 1166.5.25
+	traits = {
+		expensive_tastes
+		basic_diplomat
+		bigoted
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+        }   
+        earliest_usage_date = 1198.1.1
+        latest_usage_date = 1218.1.1
+		chance = 60
+    }   
+	trait_generation = { }
+}
+
+DUM_ilros_waverly = { 
+	first_name = Ilros
+	last_name = Waverly
+	historical = yes
+	ig_leader = yes
+	noble = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	birth_date = 1179.6.27
+	traits = {
+		expensive_tastes
+		experienced_political_operator
+		bandit
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+        }   
+        earliest_usage_date = 1204.1.1
+        latest_usage_date = 1224.1.1
+		chance = 60
+    }   
+	trait_generation = { }
+}
+
+DUM_lysandra_waverly = { 
+	first_name = Lysandra
+	last_name = Waverly
+	historical = yes
+	ig_leader = yes
+	female = yes
+	noble = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	interest_group = ig_intelligentsia
+	ideology = ideology_skeptic_leader
+	dna = dna_louise_michel
+	birth_date = 1165.2.25
+	traits = {
+		erudite
+		demagogue
+		basic_political_operator
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }   
+        earliest_usage_date = 1188.1.1
+        latest_usage_date = 1215.1.1
+		chance = 80
+    }   
+	trait_generation = { }
+}
+
+DUM_quinara_crudaker = { 
+	first_name = Quinara
+	last_name = Crudaker
+	historical = yes
+	ig_leader = yes
+	female = yes
+	noble = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	interest_group = ig_rural_folk
+	ideology = ideology_land_reformer
+	birth_date = 1182.1.17
+	traits = {
+		grifter
+		demagogue
+		expert_political_operator
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:DUM ?= this
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+        }   
+        earliest_usage_date = 1204.2.25
+        latest_usage_date = 1225.1.1
+		chance = 60
+    }   
+	trait_generation = { }
+}
+
+##agitators
+DUM_jorik_kendig = {
+	first_name = Jorik
+	last_name = Kendig
+	historical = yes
+	female = no
+	is_agitator = yes
+	culture = cu:dumonian
+	interest_group = ig_mages
+	ideology = ideology_magillismo
+	birth_date = 1155.7.29
+	traits = {
+		imperious
+		brave
+		erudite
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:DUM ?= this
+		}
+
+        
+        interest_group_trigger = {
+			is_marginal = no
+			OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_mages
+            } 
+        }   
+        earliest_usage_date = 1178.1.1
+        latest_usage_date = 1190.1.1
+        chance = 75
+    }   
+	trait_generation = { }
+}
+
+DUM_ilyria_haldron = {
+	first_name = Ilyria
+	last_name = Haldron
+	historical = yes
+	female = yes
+	is_agitator = yes
+	culture = cu:dumonian
+	interest_group = ig_rural_folk
+	ideology = ideology_reformer
+	birth_date = 1165.7.19
+	traits = {
+		inspirational_orator
+		brave
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:DUM ?= this
+		}
+
+        
+        interest_group_trigger = {
+			is_marginal = no
+			OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_mages
+            } 
+        }   
+        earliest_usage_date = 1188.1.1
+        latest_usage_date = 1208.1.1
+        chance = 50
+    }   
+	trait_generation = { }
+}
+
+agitator_herschem_weylam = {
+	first_name = Herschem
+	last_name = Weylam
+	historical = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	female = no
+	is_agitator = yes
+	interest_group = ig_industrialists
+	ideology = ideology_ethno_nationalist
+	birth_date = 1203.7.30
+	dna = dna_henry_ford
+	traits = {
+		bigoted
+		ambitious
+		direct
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				c:DUM ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_industrialists
+        }   
+		earliest_usage_date = 1237.8.12
+		latest_usage_date = 1257.12.31
+		chance = 50
+	}
+}
+
+agitator_adalyn_bacher = {
+	first_name = Adalyn
+	last_name = Bacher
+	historical = yes
+	culture = cu:dumonian
+	religion = rel:church_of_man
+	female = yes
+	is_agitator = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_feminist
+	birth_date = 1179.5.29
+	traits = {
+		brave
+		firebrand
+		persistent
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			c:DUM ?= this
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_mages
+            } 
+        }   
+		earliest_usage_date = 1209.1.1
+		latest_usage_date = 1231.1.1
+		chance = 60
+	}
+}
+
+agitator_jurian_thiel = {
+	first_name = Jurian
+	last_name = Thiel
+	historical = yes
+	female = no
+	is_agitator = yes
+	culture = cu:dumonian
+	interest_group = ig_mages
+	ideology = ideology_magillismo
+	birth_date = 1165.3.15
+	traits = {
+		inspirational_orator
+		erudite
+	}
+    agitator_usage = {
+        country_trigger = {
+			OR = {
+				country_is_in_settler_coast = yes
+				country_is_in_noricum = yes
+			}
+			
+		}
+
+        
+        interest_group_trigger = {
+			is_marginal = no
+			OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_mages
+            } 
+        }   
+        earliest_usage_date = 1195.1.1
+        latest_usage_date = 1215.1.1
+        chance = 60
+    }  
+	on_created = {
+		exile_character = yes
+	}
+	trait_generation = { }
+}
+
+agitator_elysse_banekert = {
+	first_name = Elysse
+	last_name = Banekert
+	historical = yes
+	female = yes
+	is_agitator = yes
+	culture = cu:dumonian
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1165.3.15
+	traits = {
+		demagogue
+		erudite
+		reckless
+	}
+    agitator_usage = {
+        country_trigger = {
+			OR = {
+				country_is_in_settler_coast = yes
+				country_is_in_noricum = yes
+			}
+			
+		}
+
+        
+        interest_group_trigger = {
+			is_marginal = no
+			OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_mages
+            } 
+        }   
+        earliest_usage_date = 1240.1.1
+        latest_usage_date = 1260.1.1
+        chance = 70
+    }  
+	on_created = {
+		exile_character = yes
+	}
+	trait_generation = { }
+}
+
+agitator_rhaegal_orion = {
+	first_name = Rhaegel
+	last_name = Orion
+	historical = yes
+	female = no
+	is_agitator = yes
+	culture = cu:dumonian
+	interest_group = ig_trade_unions
+	ideology = ideology_vanguardist
+	birth_date = 1210.12.6
+	traits = {
+		firebrand
+		brave
+	}
+    agitator_usage = {
+        country_trigger = {
+			c:DUM ?= this
+			has_technology_researched = political_agitation
+		}
+
+        
+        interest_group_trigger = {
+			is_marginal = no
+			OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_trade_unions
+            } 
+        }   
+        earliest_usage_date = 1231.1.1
+        latest_usage_date = 1251.1.1
+        chance = 50
+    }   
+	trait_generation = { }
+}

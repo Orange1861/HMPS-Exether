@@ -1,0 +1,378 @@
+﻿#Thundergear Industries
+company_thundergear = {
+	icon = "gfx/interface/icons/company_icons/thundergear.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_gizmo_workshop
+		building_tooling_workshops
+		building_argentum_rail
+	}
+
+	extension_building_types = {  
+		building_thaumacore_foundry
+		building_artifactory
+	}
+
+	possible_prestige_goods = {
+		prestige_good_thunder_gear_gizmo
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_arrador
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_VICEROYS_PEARL
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_gizmo_workshop
+					is_building_type = building_tooling_workshops
+					is_building_type = building_argentum_rail
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		country_weekly_innovation_mult = 0.1
+		building_argentum_rail_throughput_add = 0.1
+	}	
+
+	ai_construction_targets = {
+		building_gizmo_workshop = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+		building_tooling_workshops = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_VICEROYS_PEARL
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Skysail Enterprises
+company_skysail = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_krupp.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_airshipyards
+		building_shipyards
+		building_military_shipyards
+		building_fishing_wharf
+	}
+
+	extension_building_types = {  
+		building_port
+		building_trade_center
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_arrador
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_VICEROYS_PEARL
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_airshipyards
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+					is_building_type = building_fishing_wharf
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = zeppelins
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.05
+		military_formation_mobilization_speed_mult = 0.1
+	}	
+	
+	ai_construction_targets = {
+		building_shipyards = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+		building_military_shipyards = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_VICEROYS_PEARL
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Jingleroot Botanics
+company_jingleroot = {
+	icon = "gfx/interface/icons/company_icons/jingleroot.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_chemical_plants
+		building_tea_plantation
+		building_potion_distillery
+	}
+
+	extension_building_types = {  
+		building_livestock_ranch
+		building_rye_farm
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_jingleroot_potions
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_arrador
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GREENCOURT
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_GREENCOURT
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_chemical_plants
+					is_building_type = building_tea_plantation
+					is_building_type = building_blubber_plants
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = intensive_agriculture
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_agriculture_throughput_add = 0.10
+		building_group_bg_plantations_throughput_add = 0.10
+		building_chemical_plants_throughput_add = 0.05
+	}	
+	
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_GREENCOURT
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_GREENCOURT
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_brinewick = {
+	icon = "gfx/interface/icons/company_icons/brinewick_times.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_paper_mills
+	}
+
+	extension_building_types = {
+		building_logging_camp
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_washi_paper
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_arrador
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_VICEROYS_PEARL
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_political_movements_mult = -0.05
+		state_loyalists_from_political_movements_mult = 0.05
+		building_logging_camp_throughput_add = 0.1
+	}
+
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_VICEROYS_PEARL
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_VICEROYS_PEARL
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_clearbough_estates = {
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations_1.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_CLEARBOUGH_ESTATES }
+
+	building_types = {  
+		building_beekeeping
+		building_distillery
+		building_tavern
+	}
+
+	extension_building_types = { 
+		building_tobacco_plantation
+		building_food_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_smirnoff_vodka
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_smallhills
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CLEARBOUGH_ESTATES
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CLEARBOUGH_ESTATES
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_beekeeping
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.1
+		state_trade_advantage_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_CLEARBOUGH_ESTATES
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_beekeeping = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CLEARBOUGH_ESTATES
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

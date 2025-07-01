@@ -1,0 +1,1578 @@
+﻿no_portrait_trigger = {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					OR = {
+						has_discrimination_trait = gnoll_heritage
+						has_discrimination_trait = naga_heritage_culture
+						has_discrimination_trait = bird_heritage
+						has_discrimination_trait = lizardfolk_heritage
+						has_discrimination_trait = mechanical_heritage
+						has_discrimination_trait = dragon_heritage
+						has_discrimination_trait = beast
+						has_discrimination_trait = gnoll
+						has_discrimination_trait = naga
+						has_discrimination_trait = mouse_heritage
+						has_discrimination_trait = awakened_heritage
+						AND = {
+							has_discrimination_trait = midnight_heritage
+							has_discrimination_trait = thoughtsmith_culture_group
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					OR = {
+						has_discrimination_trait = dragon_heritage
+						has_discrimination_trait = lizardfolk_heritage
+						has_discrimination_trait = mechanical_heritage
+						has_discrimination_trait = bird_heritage
+						has_discrimination_trait = beast
+						has_discrimination_trait = gnoll
+						has_discrimination_trait = naga_heritage_culture
+						has_discrimination_trait = mouse_heritage
+						has_discrimination_trait = awakened_heritage
+						AND = {
+							has_discrimination_trait = midnight_heritage
+							has_discrimination_trait = thoughtsmith_culture_group
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+
+
+british_empire_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = c:DUM
+		exists = home_country
+		home_country = {
+			OR = {
+				AND = {
+					c:DUM = this
+					is_subject = no # preventing uniform conflicts if DUM becomes a subject of another country with puppet uniforms
+				}
+				is_subject_of = c:DUM
+			}		
+		}
+	}
+}
+
+british_empire_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		exists = c:DUM
+		home_country = {
+			OR = {
+				AND = {
+					c:DUM = this
+					is_subject = no # preventing uniform conflicts if DUM becomes a subject of another country with puppet uniforms
+				}
+				is_subject_of = c:DUM
+			}		
+		}
+	}
+}
+
+british_empire_clothes_p_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		exists = c:DUM
+		home_country = {
+			OR = {
+				AND = {
+					c:DUM = this
+					is_subject = yes # preventing uniform conflicts if DUM becomes a subject of another country with puppet uniforms
+				}
+				is_subject_of = c:DUM
+			}		
+		}
+	}
+}
+
+french_empire_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = c:ARR
+		exists = home_country
+		home_country = {
+			OR = {
+				AND = {
+					c:ARR = this
+					is_subject = no # preventing uniform conflicts if ARR becomes a subject of another country with puppet uniforms
+				}
+				is_subject_of = c:ARR
+			}		
+		}
+	}
+}
+
+french_empire_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		exists = c:ARR
+		home_country = {
+			OR = {
+				AND = {
+					c:ARR = this
+					is_subject = no # preventing uniform conflicts if ARR becomes a subject of another country with puppet uniforms
+				}
+				is_subject_of = c:ARR
+			}		
+		}
+	}
+}
+
+russian_empire_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = c:RAV
+		exists = home_country
+		home_country = {
+			OR = {
+				AND = {
+					c:RAV = this
+					is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
+				}
+				is_subject_of = c:RAV
+			}		
+		}
+	}
+}
+
+russian_empire_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		exists = c:RAV
+		home_country = {
+			OR = {
+				AND = {
+					c:RAV = this
+					is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
+				}
+				is_subject_of = c:RAV
+			}		
+		}
+	}
+}
+
+german_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = home_country
+		home_country = {
+			is_subject = no
+			OR = {
+				country_has_primary_culture = cu:cerunite
+				country_has_primary_culture = cu:thiralian
+			}	
+		}
+	}
+}
+
+german_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		home_country = {
+			is_subject = no
+			OR = {
+				country_has_primary_culture = cu:cerunite
+				country_has_primary_culture = cu:thiralian
+			}	
+		}
+	}
+}
+
+
+native_american_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = {
+			has_discrimination_trait = gnome_heritage
+		}
+	}
+}
+
+native_north_american_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+always = no
+	}
+}
+
+muslim_clothes_pop_trigger = {
+     exists = scope:pop
+  	scope:pop = {
+		culture = {
+			has_discrimination_trait = hiadud_heritage
+		} 
+	}
+}
+
+jewish_clothes_pop_trigger = {
+		always= no
+}
+
+hindu_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		NOT = {
+			culture = cu:castaway_dwarf
+		}
+		culture = {
+			has_discrimination_trait = dwarf_heritage
+		}
+	}
+}
+
+african_diaspora_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			culture = {
+				has_discrimination_trait = new_khussite_culture_group
+			}
+		}
+	}
+}
+
+african_diaspora_pop_clothes_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = {
+				has_discrimination_trait = new_khussite_culture_group
+			}
+		}
+	}
+}
+
+japanese_imperial_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+     	home_country = {
+     		has_law = law_type:law_monarchy
+     	}
+		culture = cu:vandori
+	}
+}
+
+chinese_imperial_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+		exists = home_country
+     	home_country = {
+     		has_law = law_type:law_monarchy
+     	}
+		culture = {
+			AND = {
+				NOT = { 
+					has_discrimination_trait = hobgoblin
+				}
+				has_discrimination_trait = goblin_heritage
+				NOT = {
+					has_discrimination_trait = gavkhani_culture_group
+				}
+			}
+		}
+
+	}
+}
+
+chinese_manchu_queue_hairstyle_character_trigger = { # hairsyle for Manchu characters not living living under discriminatory Han rule, and Han characters living under discriminatory Manchu rule
+	exists = scope:character
+	scope:character = {
+		exists = home_country
+		home_country = { 
+			ruler = { 
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}
+			}
+			NOT = { 
+				has_law = law_type:law_multicultural
+			}
+		}
+	}
+}
+
+chinese_manchu_queue_hairstyle_pops_trigger = { # hairsyle for Manchu pops not living living under discriminatory Han rule, and Han pops living under discriminatory Manchu rule
+	exists = scope:pop
+	scope:pop = {
+		home_country = { 
+			ruler = { 
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}
+			}
+			NOT = { 
+				has_law = law_type:law_multicultural
+			}
+		}
+	}
+}
+
+chinese_court_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = {
+				AND = {
+					NOT = { has_discrimination_trait = hobgoblin }
+					AND = {
+						has_discrimination_trait = goblin_heritage
+						NOT = {
+							has_discrimination_trait = gavkhani_culture_group
+						}
+					}
+				}
+				
+		}
+	}	
+}
+
+chinese_court_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+				NOT = { has_discrimination_trait = hobgoblin }
+				AND = {
+					has_discrimination_trait = goblin_heritage
+					NOT = {
+						has_discrimination_trait = gavkhani_culture_group
+					}
+				}
+		}
+	}	
+}
+
+
+african_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = {
+			OR = {
+				has_discrimination_trait = hiadud_heritage
+				has_discrimination_trait = wood_elf
+		}
+	}     
+}
+}
+
+arabic_fez_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = home_country
+		OR = {
+			home_country = {
+				OR = {
+					is_country_type = recognized
+					is_country_type = colonial
+				}	
+			}
+			home_country = {
+				top_overlord = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}	
+				}
+			}
+			home_country = {
+				exists = c:TEF
+				c:TEF = this
+				c:TEF = { has_law = law_type:law_monarchy }
+			}
+		}
+	}       
+}
+
+arabic_military_fez_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		AND = {
+			OR = {
+				home_country = {
+					exists = c:TEF
+					c:TEF = this
+				}
+				home_country = {
+					exists = c:SET
+					c:SET = this
+				}
+				home_country = {
+					exists = c:ANW
+					c:ANW = this
+				}
+			}
+			OR = {
+				culture = cu:tefereti
+				}
+			}
+		}
+}       
+
+
+arabic_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			culture = {
+				OR = {
+					has_discrimination_trait = chin_culture_group
+				}
+			}
+			culture = cu:anwarthi
+			culture = cu:rahoru
+		}
+	}        
+}
+
+ethiopian_clothes_trigger = {
+	exists = scope:character
+
+	scope:character = {
+		culture = {
+			has_discrimination_trait = gavkhani_culture_group
+		}
+	}
+}
+
+european_clothes_trigger = {
+	
+
+
+
+
+	exists = scope:character
+	scope:character = {
+		NOT = {
+			is_interest_group_type = ig_mages
+		}
+		OR = {
+			culture = {
+				OR = {
+					OR = {
+						has_discrimination_trait = human_heritage
+						has_discrimination_trait = midnight_heritage
+					}
+				
+					has_discrimination_trait = halfling_heritage
+				}
+			}
+			AND = {
+				OR = {
+					culture = cu:vampire
+					culture = cu:sunkissed
+					culture = cu:changeling
+				}
+				NOT = {
+					culture = cu:waste_walker
+				}
+			}
+		}
+
+		NOT = {
+			
+			OR = {
+				culture = {
+					OR = {
+						has_discrimination_trait = chin_culture_group
+					}
+					
+				}
+				culture = cu:glethach
+				culture = cu:anwarthi
+				culture = cu:azmaraan
+				culture = cu:qinnaat
+				culture = cu:waste_walker
+			}
+
+		}
+	}
+}
+
+indian_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		NOT = {
+			culture = cu:castaway_dwarf
+		}
+		OR = {
+			culture = {
+				has_discrimination_trait = dwarf_heritage
+			}
+		}
+	}
+}
+
+halfling_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			culture = {
+				has_discrimination_trait = halfling_heritage
+			}
+		}
+	}
+}
+
+siamese_clothes_trigger = { #Pretty sure this is actual burmese
+	exists = scope:character
+	scope:character = {
+		culture = {
+			has_discrimination_trait = southern_elf
+		}
+	}
+}
+
+american_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+			OR = {
+				AND = {
+					exists = c:VAI
+					exists = home_country
+					home_country = {
+						OR = {
+							AND = {
+								c:VAI = this
+								is_subject = no # preventing uniform conflicts if DUM becomes a subject of another country with puppet uniforms
+							}
+							is_subject_of = c:VAI
+						}		
+					}
+				}
+			}
+	}
+}
+
+american_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+	
+			AND = {
+				exists = c:VAI
+				exists = home_country
+				home_country = {
+					OR = {
+						AND = {
+							c:VAI = this
+							is_subject = no # preventing uniform conflicts if DUM becomes a subject of another country with puppet uniforms
+						}
+						is_subject_of = c:VAI
+					}		
+				}
+			}
+		}
+	}
+}
+
+politician_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		AND = {
+			has_role = politician
+			is_ruler = no
+		}
+	}
+}
+
+recognized_country_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = home_country
+		OR = {
+			home_country = {
+				OR = {
+					is_country_type = recognized
+					is_country_type = colonial
+				}	
+			}
+			home_country = {
+				top_overlord = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}	
+				}
+			}
+		}
+	}       
+}
+
+recognized_country_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			home_country = {
+				OR = {
+					is_country_type = recognized
+					is_country_type = colonial
+				}	
+			}
+			home_country = {
+				top_overlord = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}	
+				}
+			}
+		}
+	}       
+}
+
+christian_clothes_trigger = {
+  	exists = scope:character
+	scope:character = {
+		religion = {
+			has_discrimination_trait = uriks_pantheon
+		}
+	}
+}
+
+devout_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_interest_group_type = ig_devout
+	}
+}
+
+armed_forces_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_interest_group_type = ig_armed_forces
+	}
+}
+
+ruler_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+	}
+}
+
+military_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			has_role = general
+			has_role = admiral
+		}
+	}
+}
+
+monarchy_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = owner
+		OR = {
+	     	is_ruler = yes
+	     	is_heir = yes
+	     }
+     	owner = {
+     		has_law = law_type:law_monarchy
+     	}
+	}
+}
+
+republic_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		exists = home_country
+		is_ruler = yes
+		home_country = {
+			NOT = { has_law = law_type:law_monarchy}
+		}
+	}
+}
+
+overweight_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			culture = {
+				OR = {
+					has_discrimination_trait = orc_heritage
+				}
+				
+			}  
+			has_trait = expensive_tastes
+		}
+  
+     }
+}
+
+army_traits_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			has_trait = resupply_commander
+			has_trait = surveyor
+			has_trait = forest_commander
+			has_trait = plains_commander
+			has_trait = mountain_commander
+			has_trait = basic_artillery_commander
+			has_trait = experienced_artillery_commander
+			has_trait = expert_artillery_commander
+			has_trait = stalwart_defender
+			has_trait = trench_rat
+			has_trait = defense_in_depth_specialist
+			has_trait = basic_offensive_planner
+			has_trait = experienced_offensive_planner
+			has_trait = expert_offensive_planner
+			has_trait = basic_defensive_strategist
+			has_trait = experienced_defensive_strategist
+			has_trait = expert_defensive_strategist
+			has_trait = traditionalist_commander
+			has_trait = popular_commander
+			has_trait = celebrity_commander
+		}
+	}
+}
+
+navy_traits_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			has_trait = basic_naval_commander
+			has_trait = experienced_naval_commander
+			has_trait = expert_naval_commander
+			has_trait = convoy_raider_commander
+			has_trait = experienced_convoy_raider
+			has_trait = expert_convoy_raider
+			has_trait = dockyard_master
+		}
+	}
+}
+
+#Pop 
+
+east_asian_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			AND = {
+				has_discrimination_trait = goblin_heritage
+				NOT = {
+					has_discrimination_trait = gavkhani_culture_group
+				}
+			}
+		}   
+	}
+}
+
+central_asian_clothes_pop_trigger= {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}   
+			}
+		}
+	}
+}
+
+european_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+
+			culture = {
+				OR = {
+					AND = {
+						has_discrimination_trait = human_heritage
+					}
+					has_discrimination_trait = halfling_heritage
+				}
+			}
+			AND = {
+				OR = {
+					culture = cu:vampire
+					culture = cu:sunkissed
+					culture = cu:changeling
+				}
+				NOT = {
+					culture = cu:waste_walker
+				}
+			}
+
+		}
+
+	}
+}
+
+arabic_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = {
+				has_discrimination_trait = chin_culture_group
+			}   
+			culture = cu:rahoru
+			culture = cu:anwarthi
+		}
+	}
+}
+
+indigenous_oceanic_clothes_trigger = {
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				OR = {
+					AND = {
+						NOT = {
+							culture = cu:tqalt
+						}
+						NOT = {
+							culture = cu:rahoru
+						}
+						
+						culture = {
+							AND = {
+								has_discrimination_trait = orc_heritage
+	
+						}  
+						}  	
+					}
+
+					culture = cu:castaway_dwarf
+				}
+ 
+			}
+		}
+		AND = {
+			exists = scope:character
+			scope:character = {
+				OR = {
+					AND = {
+						culture = {
+							AND = {
+								has_discrimination_trait = orc_heritage
+	
+						} 
+					}
+					NOT = {
+						culture = cu:tqalt
+					}
+					NOT = {
+						culture = cu:rahoru
+					}
+					}
+
+					culture = cu:castaway_dwarf
+
+
+			}
+		}
+	}
+}
+}
+
+circumpolar_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = {
+				has_discrimination_trait = giant_heritage
+			}
+		}
+		NOT = { is_pop_type = slaves }
+	}
+}
+
+sami_clothes_pop_trigger = {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = cu:toftir_giant
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = cu:toftir_giant
+			}
+		}
+	}
+}
+
+
+african_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			OR = {
+				has_discrimination_trait = hiadud_heritage
+				has_discrimination_trait = wood_elf
+		}
+	}   
+	}
+}
+
+native_american_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			has_discrimination_trait = wood_gnome
+		}   
+	}
+}
+
+south_east_asia_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			has_discrimination_trait = southern_elf
+		}   
+	}
+}
+
+south_american_clothes_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = cu:leiner
+	}
+}
+
+south_american_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = cu:leiner
+	}
+}
+
+integrated_south_american_natives_pop_trigger = { # Represents those South American native groups that had long been integrated into wider South and Central American society.
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					has_discrimination_trait = new_khussite_culture_group
+				}  
+			}
+		}
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					has_discrimination_trait = thalorian_culture_group
+				}  
+			}
+		}
+	}	
+
+}
+
+cold_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			has_pop_culture = umbradorn
+			has_pop_culture = glethach
+		}
+	}
+}
+
+japanese_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = cu:vandori
+	}
+}
+
+
+japanese_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = cu:vandori
+	}
+}
+
+indian_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		NOT = {
+			culture = cu:castaway_dwarf
+		}
+		OR = {
+			culture = {
+				has_discrimination_trait = dwarf_heritage
+			} 
+		}
+	}
+}
+
+slavic_clothes_pop_trigger = {
+	scope:pop ?= {
+		culture = {
+			OR = {
+				has_discrimination_trait = thalorian_culture_group
+			}
+			
+		}   
+	}
+}
+
+slavic_clothes_trigger = {
+	scope:character ?= {
+		culture = cu:thiralian
+	}
+}
+
+poor_clothes_pop_trigger = {
+	exists = scope:pop
+     scope:pop = {
+       	OR = {
+			is_pop_type = farmers
+			is_pop_type = peasants
+			is_pop_type = laborers
+			is_pop_type = machinists
+       	}
+     }   
+}
+
+middle_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+       	OR = {
+			is_pop_type = clerks
+			is_pop_type = engineers
+			is_pop_type = bureaucrats
+			is_pop_type = shopkeepers
+       	}
+     }  
+}
+
+upper_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+     	OR = {
+			is_pop_type = aristocrats
+			is_pop_type = capitalists
+			is_pop_type = academics
+     	}
+     }  
+}
+
+
+
+soldier_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		OR = {
+			is_pop_type = adventurers
+			is_pop_type = soldiers
+		}
+		
+     }
+}
+
+officers_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		is_pop_type = officers
+	} 
+}
+
+clergy_clothes_pop_trigger = {
+	exists = scope:pop
+     scope:pop = {
+		is_pop_type = clergymen
+     }
+}
+
+wizard_clothes_pop_trigger = {
+	exists = scope:pop
+     scope:pop = {
+		is_pop_type = wizards
+     }
+}
+
+archmage_clothes_pop_trigger = {
+	exists = scope:pop
+     scope:pop = {
+		is_pop_type = archmages
+     }
+}
+
+shopkeepers_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = shopkeepers	
+     }    
+}
+
+clerks_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = clerks	
+     }   
+}
+
+academics_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = academics	
+     }   
+}
+
+farmers_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = farmers	
+     }   
+}
+
+laborers_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = laborers	
+     }   
+}
+
+peasants_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = peasants	
+     }   
+}
+
+slaves_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = slaves	
+     }   
+}
+
+aristocrats_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = aristocrats	
+     }   
+}
+
+machinists_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = machinists	
+     }   
+}
+
+engineers_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = engineers	
+     }   
+}
+
+bureaucrats_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		is_pop_type = bureaucrats	
+     }   
+}
+
+christian_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+		religion = {
+			has_discrimination_trait = uriks_pantheon
+		}
+	}
+}
+
+buddhist_clothes_pop_trigger = {
+     exists = scope:pop
+     scope:pop = {
+  		OR = {
+
+			culture = cu:anwarthi
+		}
+     }
+}
+
+
+slightly_underweight_pop_trigger = {
+	OR = {
+		AND = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			AND = {
+				NOT = {
+					culture = {
+						OR = {
+							has_discrimination_trait = ogre_heritage
+							has_discrimination_trait = halfling_heritage
+						}  	
+					}	
+				}
+				OR = {
+					culture = {
+						OR = {
+							
+							has_discrimination_trait = elf_heritage
+							has_discrimination_trait = gnome_heritage
+						}  	
+					}	
+					AND = {
+						pop_weight_modifier_scale < 25	
+						standard_of_living >= 10		
+					}
+					AND = {
+						standard_of_living >= 5
+						standard_of_living < 10
+						pop_weight_modifier_scale >= 25
+						pop_weight_modifier_scale < 50
+					}			
+					AND = {
+						standard_of_living < 5
+						pop_weight_modifier_scale >= 50
+					}		
+				}	
+			}
+			AND = {
+				culture = {
+					OR = {
+						has_discrimination_trait = ogre_heritage
+						has_discrimination_trait = halfling_heritage
+					}  	
+				}	
+				OR = {
+					AND = {
+						pop_weight_modifier_scale < 25
+						standard_of_living >= 5
+						standard_of_living < 10
+					}		
+					AND = {
+						standard_of_living < 5
+						pop_weight_modifier_scale >= 25
+						pop_weight_modifier_scale < 50
+					}		
+				}	
+			}
+		}
+		}
+    }
+	AND = {
+		exists = scope:character
+		scope:character = {
+			culture = {
+				OR = {
+					has_discrimination_trait = elf_heritage
+					has_discrimination_trait = gnome_heritage
+				}  	
+			}	
+		}
+	}
+}
+}
+
+underweight_pop_trigger = {
+	
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				NOT = {
+					culture = {
+						OR = {
+							has_discrimination_trait = halfling_heritage
+							has_discrimination_trait = ogre_heritage
+						}  	
+					}	
+				}
+				OR = {
+					culture = {
+						OR = {
+							has_discrimination_trait = hiadud_heritage
+						}  	
+					}	
+					AND = {
+						pop_weight_modifier_scale < 25
+						standard_of_living >= 5
+						standard_of_living < 10
+					}		
+					AND = {
+						standard_of_living < 5
+						pop_weight_modifier_scale >= 25
+						pop_weight_modifier_scale < 50
+					}		
+				}	
+			}
+		}
+		AND = {
+			exists = scope:character
+			scope:character = {
+				OR = {
+					culture = {
+						OR = {
+
+							AND = {
+								has_discrimination_trait = hiadud_heritage
+
+							}
+						}
+					}  
+				}
+
+			}
+		}
+	}
+
+}
+
+very_underweight_pop_trigger = {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				OR = {
+					culture = {
+						OR = {
+
+							AND = {
+								has_discrimination_trait = goblin_heritage
+								NOT = {
+									has_discrimination_trait = hobgoblin
+								}
+							}
+						}
+					}  
+					culture = cu:nightwalker
+					culture = cu:wastecrawler
+				}
+
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				OR = {
+					culture = {
+						OR = {
+							
+							AND = {
+								has_discrimination_trait = goblin_heritage
+								NOT = {
+									has_discrimination_trait = hobgoblin
+								}
+							}
+						}
+					}  
+					pop_weight_modifier_scale < 25
+					standard_of_living < 5	
+				}
+			}
+		}
+	}
+
+}
+
+slightly_overweight_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			AND = {
+				standard_of_living >= 15
+				standard_of_living < 20
+				pop_weight_modifier_scale >= 90	
+			}
+			AND = {
+				standard_of_living >= 20
+				standard_of_living < 40
+				pop_weight_modifier_scale >= 85	
+				pop_weight_modifier_scale < 90
+			}
+			AND = {
+				standard_of_living >= 40
+				pop_weight_modifier_scale >= 70
+				pop_weight_modifier_scale < 80
+			}					
+		}	
+    }
+}
+
+overweight_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = {
+				has_discrimination_trait = orc_heritage
+			}  
+			AND = {
+				standard_of_living >= 15
+				standard_of_living < 20
+				pop_weight_modifier_scale >= 95
+			}
+			AND = {
+				standard_of_living >= 20
+				standard_of_living < 40
+				pop_weight_modifier_scale >= 90
+				pop_weight_modifier_scale < 95
+			}
+			AND = {
+				standard_of_living >= 40
+				pop_weight_modifier_scale >= 80	
+				pop_weight_modifier_scale < 90
+			}				
+		}	
+    }
+}
+
+very_overweight_pop_trigger = {
+
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				OR = {
+					AND = {
+						culture = {
+							has_discrimination_trait = orc_heritage
+						}  
+						has_trait = expensive_tastes
+					}
+					culture = {
+						OR = {
+							has_discrimination_trait = halfling_heritage
+							has_discrimination_trait = ogre_heritage
+						}
+					}
+				}
+			
+			 }
+		}
+
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				OR = {
+					culture = {
+						OR = {
+							has_discrimination_trait = halfling_heritage
+							has_discrimination_trait = ogre_heritage
+						}
+					}
+					OR = {
+						AND = {
+							standard_of_living >= 20
+							standard_of_living < 40
+							pop_weight_modifier_scale >= 95
+						}
+						AND = {
+							standard_of_living >= 40
+							pop_weight_modifier_scale >= 90
+						}				
+					}	
+				}
+
+			}
+		}
+	}
+
+}
+
+struggling_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		is_in_severe_starvation = yes
+	}
+}
+
+agitator_character_trigger = {
+	scope:character ?= {
+		has_role = agitator
+	}
+}
+
+executive_clothes_trigger = {
+	scope:character ?= {
+		has_role = executive
+	}
+}
+
+should_be_naked_trigger = {
+
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				AND = {
+					culture = {
+						OR = {
+							has_discrimination_trait = monstrous_heritage
+							has_discrimination_trait = naga_heritage_culture
+							has_discrimination_trait = gnoll_heritage
+						}
+					}
+					NOT = { culture = cu:vampire }
+					NOT = { culture = cu:hag }
+					NOT = { culture = cu:sunkissed }
+					NOT = { culture = cu:wastecrawler }
+					NOT = { culture = cu:nightwalker }
+				}
+		
+			}
+		}
+		AND = {
+			exists = scope:character
+			scope:character = {
+				AND = {
+					culture = {
+						OR = {
+							has_discrimination_trait = monstrous_heritage
+							has_discrimination_trait = naga_heritage_culture
+							has_discrimination_trait = gnoll_heritage
+						}
+					}
+					NOT = { culture = cu:vampire }
+					NOT = { culture = cu:hag }
+					NOT = { culture = cu:sunkissed }
+					NOT = { culture = cu:wastecrawler }
+					NOT = { culture = cu:nightwalker }
+				}
+
+			}
+		}
+	}
+
+}
+
+## Can only be checked in the interface since the setting isn't synced
+should_be_fully_naked_portrait_trigger = {
+	should_be_naked_trigger = yes
+}
+#
+#should_be_topless_portrait_trigger = {
+#	exists = scope:pop
+#	has_character_flag = single_combat_stripped_to_waist
+#	should_show_nudity = yes
+#}

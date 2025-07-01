@@ -1,0 +1,298 @@
+﻿pm_default_building_dwarf_tunnels = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	
+	country_modifiers = {
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 11
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_relics_add = 75 #30 == 2250
+		}
+		level_scaled = {
+			building_employment_clerks_add = 750
+			building_employment_machinists_add = 750
+			building_employment_clergymen_add = 500
+			building_employment_shopkeepers_add = 250
+			building_employment_adventurers_add = 1000
+		}
+	}
+}
+
+pm_default_building_lighthouse = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_mages_pol_str_mult = 0.25
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+#		workforce_scaled = {
+#		}
+
+		level_scaled = {
+			building_employment_machinists_add = 500
+		}
+	}
+
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+}
+
+pm_default_building_alvadrum_academy = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 20
+			country_authority_add = 50
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 800
+			building_employment_officers_add = 200
+		}
+	}
+}
+
+pm_default_building_old_illvasaar = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+	
+	unlocking_religions = { draconic_oath ossarian }
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pop_attraction_mult = 0.1
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 200
+		}
+	}
+}
+
+pm_prestige_only_building_old_illvasaar = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+	
+	disallowing_religions = { draconic_oath ossarian } # not a holy site to non-draconics
+
+	country_modifiers = {
+		throughput_scaled = {
+			country_prestige_add = 25
+		}
+	}
+}
+
+pm_default_building_forbidden_city = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 20
+			country_authority_add = 50
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 800
+			building_employment_clergymen_add = 200
+		}
+	}
+}
+
+pm_default_building_castle_dreadmoor = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	unlocking_religions = { lunar_masquerade } # b-b-b-bad to the blood
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_mages_pol_str_mult = 0.25
+			country_influence_add = 100
+			country_authority_add = 100
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_wizards_add = 400
+		}
+	}
+}
+
+pm_prestige_only_building_castle_dreadmoor = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+	
+	disallowing_religions = { lunar_masquerade }
+
+	country_modifiers = {
+		throughput_scaled = {
+			country_prestige_add = 25
+		}
+	}
+}
+
+pm_default_building_cristo_redentor = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.15
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 100
+		}
+	}
+}
+
+
+pm_default_building_asuroth_shrine = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+	
+	unlocking_religions = { xocarakti teomakti lunar_masquerade } # the blood must flow!
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_mages_pol_str_mult = 0.25
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+#		workforce_scaled = {
+#		}
+
+		level_scaled = {
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+pm_prestige_only_building_asurloth_shrine = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+	
+	disallowing_religions = { xocarakti teomakti lunar_masquerade } # sorry, but the human sacrifices will stop
+
+	country_modifiers = {
+		throughput_scaled = {
+			country_prestige_add = 25
+		}
+	}
+}
+
+pm_default_building_hourglass_mausoleum = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.25
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+#		workforce_scaled = {
+#		}
+
+		level_scaled = {
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+pm_default_building_vatican_city = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	unlocking_religions = { cult_of_the_sun church_of_man }
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.25
+			country_influence_add = 100
+			country_authority_add = 100
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+pm_prestige_only_building_vatican_city = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+	
+	disallowing_religions = { cult_of_the_sun church_of_man }
+
+	country_modifiers = {
+		throughput_scaled = {
+			country_prestige_add = 25
+		}
+	}
+}

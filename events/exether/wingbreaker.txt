@@ -1,0 +1,426 @@
+﻿namespace = wingbreaker
+
+wingbreaker.1 = { #onghor first JE success event
+	type = country_event
+	placement = scope:state_argi_wingbreaker
+	title = wingbreaker.1.t
+	desc = wingbreaker.1.d
+	flavor = wingbreaker.1.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "queen_griffon"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		cu:cliffpercher = {
+			save_scope_as = cliffpercher_scope
+		}
+		random_scope_state = {
+			limit = { state_region = s:STATE_ARGI }
+			save_scope_as = state_argi_wingbreaker
+		}
+	}
+
+
+	option = {
+		name = wingbreaker.1.a #we will kill the griffon and consume its power
+		random_scope_state = {
+			limit = { state_region = s:STATE_ARGI }
+			state_region = {
+			 	add_arable_land = 10 
+			 	remove_state_trait = state_trait_great_griffon_of_argi
+			}
+		}
+		add_modifier = {
+				name = studying_griffon_light
+				years = 10
+			}
+		if = {
+			limit = {
+				NOT = {
+					has_technology_researched = mutagens
+				}
+			}
+			add_technology_progress = { progress = 6000 technology = mutagens }
+		}
+		
+		add_journal_entry = {
+			type = je_wingbreaker
+		}
+		add_journal_entry = {
+			type = je_survival_of_the_fattest
+		}
+	}
+
+	option = {
+		name = wingbreaker.1.b #we will kill the griffon and study its wings
+		default_option = yes
+		random_scope_state = {
+			limit = { state_region = s:STATE_ARGI }
+			state_region = {
+			 	add_arable_land = 10 
+			 	remove_state_trait = state_trait_great_griffon_of_argi
+			}
+		}
+		add_modifier = {
+				name =  studying_griffonflight
+				years = 10
+			}
+		add_journal_entry = {
+			type = je_wingbreaker
+		}
+		add_journal_entry = {
+			type = je_survival_of_the_fattest
+		}
+        if = {
+            limit = {
+                is_ai = yes
+            }
+            random_list = {
+                60 = {
+                    add_modifier = {
+                        name = wrath_of_interloper
+                        years = 13
+                    }
+                }
+                40 = {
+
+                }
+            }
+        }
+	}
+
+	option = {
+		name = wingbreaker.1.c #we can study it while it still lives
+        add_modifier = {
+			name = griffon_field_studies
+			years = 10
+		}
+		every_scope_state = {
+			limit = {
+				state_region = s:STATE_ARGI
+			}
+			add_acceptance = { target = scope:cliffpercher_scope value = 20 } #reee the documentation was wrong
+		}
+		ai_chance = {
+			base = 25
+		}
+		add_journal_entry = {
+			type = je_wingbreaker
+		}
+		add_journal_entry = {
+			type = je_survival_of_the_fattest
+		}
+	}
+}
+
+wingbreaker.2 = { #wingbreaker JE success event
+	type = country_event
+	placement = root
+	title = wingbreaker.2.t
+	desc = wingbreaker.2.d
+	flavor = wingbreaker.2.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "queen_griffon"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { #triggered by JE success
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = wingbreaker.2.a #we will integrate these new griffon hunters
+		default_option = yes
+
+		add_modifier = {
+				name = integrated_griffon_hunters	
+		}
+		add_modifier = {
+			name = heart_of_the_griffon
+		}
+		if = {
+			limit = {
+				has_technology_researched = mutagens
+			}
+			add_technology_progress = { progress = 3000 technology = plastics }
+		}
+		else = {
+			add_technology_progress = { progress = 6000 technology = mutagens }
+		}
+		add_journal_entry = {
+			type = je_wingsplicer
+		}
+	}
+
+	option = {
+		name = wingbreaker.2.b #we will reject these griffon hunters
+		default_option = yes
+
+		add_modifier = {
+				name = rejected_private_griffon_hunters
+				
+			}
+		add_modifier = {
+				name = heart_of_the_griffon
+			}
+		if = {
+			limit = {
+				has_technology_researched = mutagens
+			}
+			add_technology_progress = { progress = 4500 technology = plastics }
+		}
+		else = {
+			add_technology_progress = { progress = 6000 technology = mutagens }
+		}
+		add_journal_entry = {
+			type = je_wingsplicer
+		}
+	}
+
+}
+
+
+wingbreaker.3 = { #we got them wings boiii wingsplicer je success event
+	type = country_event
+	placement = root
+	title = wingbreaker.3.t
+	desc = wingbreaker.3.d
+	flavor = wingbreaker.3.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 9
+    }
+	event_image = {
+		video = "ogre_vats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+
+	
+
+	immediate = {
+
+	}
+
+	option = {
+		name = wingbreaker.3.a #we will give wings to our elite guard
+		add_modifier = {
+			name = wings_of_the_griffon
+		}	
+		add_modifier = {
+			name = mutagen_boom
+			years = 10
+		}	
+	}
+   	option = {
+		name = wingbreaker.3.b #we will give wings to all whom we believe can survive the process
+		add_modifier = {
+			name = wings_of_the_griffon_dangerous
+		}	
+		add_modifier = {
+			name = mutagen_boom
+			years = 10
+		}	
+	}
+    
+}
+
+wingbreaker.4 = { #new cultures want to try the mutagen ats
+				type = country_event
+				placement = scope:mutagen_state
+
+				cooldown = { months = 84 }
+
+				title = wingbreaker.4.t
+				desc = wingbreaker.4.d
+				flavor = wingbreaker.4.f
+				dlc = dlc_roe
+				duration = 3
+				
+				event_image = {
+					video = "ogre_vats"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = { 
+					any_scope_state = {
+
+						NOT = { 
+							state_region = { is_homeland = cu:onikoku }  
+						}
+						state_has_building_type_levels = {
+								target = bt:building_mutagen_vats value >= 1
+						}
+						NOT = {
+							has_variable = mutagens_shared
+						}
+					}
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							NOT = { 
+								state_region = { is_homeland = cu:onikoku }  
+							}
+							state_has_building_type_levels = {
+								target = bt:building_mutagen_vats value >= 1
+							}
+							NOT = {
+								has_variable = mutagens_shared
+							}
+						}
+						random_scope_culture = {
+							limit = {
+								NOT = {
+									is_primary_culture_of = ROOT
+									cu:mutant ?= this
+								}
+							}
+							save_scope_as = mutagen_culture
+						}
+						save_scope_as = mutagen_state
+						set_variable = mutagens_shared
+					}
+
+				}
+	
+
+				option = {
+					name = wingbreaker.4.a #well, we are not going to stop them
+					scope:mutagen_state = {
+							kill_population_percent_in_state = {
+                            percent = 0.02
+                            culture = scope:mutagen_culture
+                        }
+						random_list = {
+							50 = {
+									add_modifier = {
+										name = mutagen_malformation
+										years = 5
+									} 
+							}
+							50 = {
+								add_modifier = {
+									name = mutagen_magnanimity
+									years = 5
+								} 
+							}
+						}
+						
+					}
+				}
+				option = {
+					name = wingbreaker.4.b #we are going to stop them
+					scope:mutagen_state = {
+						add_acceptance = { target = scope:mutagen_culture value = -5 }
+						add_modifier = {
+							name =  mutagens_restricted
+							years = 5
+						}
+					}
+
+					}
+			}
+
+wingbreaker.5 = { #ai cheats ai cheats
+				type = country_event
+				placement = ROOT
+
+				hidden = yes
+				trigger =  {
+					is_ai = yes
+					any_scope_state = {
+						state_region = s:STATE_ARGI
+						NOT = {
+							state_has_building_type_levels = {
+								target = bt:building_mutagen_vats 
+							} 
+						}
+					}
+				}
+				title = wingbreaker.5.t
+				desc = wingbreaker.5.d
+				flavor = wingbreaker.5.f
+				dlc = dlc_roe
+				duration = 3
+				
+				event_image = {
+					video = "ogre_vats"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							state_region = s:STATE_ARGI
+						}
+						create_building = {
+          							building="building_mutagen_vats"
+          							level=1
+          							reserves=1
+						}
+					}
+
+				}
+}
+
+wingbreaker.6 = { #onghor survival of the fattest JE success event
+	type = country_event
+	title = wingbreaker.6.t
+	desc = wingbreaker.6.d
+	flavor = wingbreaker.6.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "spirit_witch"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	option = {
+		name = wingbreaker.6.a #they're so fat
+		default_option = yes
+
+		add_modifier = {
+				name = the_fattest_of_mages
+		}
+
+	}
+
+}

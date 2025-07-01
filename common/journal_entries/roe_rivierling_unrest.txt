@@ -1,0 +1,59 @@
+﻿je_rivierling_unrest = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+
+	complete = {
+		cultural_acceptance_base = { target = cu:rivierling value >= acceptance_status_5 }
+		custom_tooltip = {
+			text = ludric_kicked_bucket
+			ruler = {
+				NOT = {
+					has_variable = is_ludric
+				}
+			}
+		}
+	}
+
+	fail = {
+		cu:rivierling = {
+			culture_secession_progress = {
+				target = ROOT
+				value > 0.5
+			}
+		}
+	 }
+	on_fail = {
+		set_variable = ceraun_halfling_fail
+		trigger_event = {
+			id = ceraun_events.1
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = ceraun_events.1
+		}
+	}
+
+	invalid = {
+		OR = {
+			custom_tooltip = {
+				text = ceraun_gladshire_invalid
+				NOT = {
+					any_scope_state = {
+						state_region = {
+							is_homeland = cu:rivierling
+						}
+					}
+				}
+			}
+			NOT = {
+				this = c:CER
+			}
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

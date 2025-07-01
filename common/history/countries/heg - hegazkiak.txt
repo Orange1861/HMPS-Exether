@@ -1,0 +1,18 @@
+﻿COUNTRIES = {
+	c:HEG ?= {
+		effect_starting_technology_tier_4_tech = yes
+		add_technology_researched = academia
+		add_technology_researched = romanticism
+		add_technology_researched = mandatory_service
+		add_technology_researched = mass_communication
+		add_technology_researched = line_infantry
+
+		add_taxed_goods = g:tobacco
+
+		
+		effect_starting_politics_bird_trad = yes
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_professional_army
+	}
+}

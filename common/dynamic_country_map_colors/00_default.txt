@@ -1,0 +1,35 @@
+﻿generic_black_anarchist = {
+	color = "black"
+
+	possible = {
+		coa_def_anarchy_flag_trigger = yes
+	}
+}
+
+generic_red_communist = {
+	color = "red"
+
+	possible = {
+		coa_def_communist_flag_trigger = yes
+	}
+}
+
+ceraun_gladshire = {
+	color = "communist_austria_red"
+
+	possible = {
+		exists = c:CER
+		THIS = c:CER
+		country_has_primary_culture = cu:rivierling
+	}
+}
+
+pnd_anarchist = {
+	color = "black"
+
+	possible = {
+		exists = c:PND
+		THIS = c:PND
+		has_law = law_type:law_anarchy
+	}
+}

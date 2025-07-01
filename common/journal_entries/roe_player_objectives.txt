@@ -1,0 +1,19 @@
+﻿je_exether_start = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/objectives/hegemon.dds"
+	active_update_frequency = 1
+
+	group = je_group_objectives
+
+	complete = {
+		always = yes
+	}
+
+	on_complete = {
+		hidden_effect = {
+		}
+	}
+
+	weight = 1009
+	transferable = yes
+}

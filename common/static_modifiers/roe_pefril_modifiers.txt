@@ -1,0 +1,20 @@
+﻿mimic_campaign = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_colony_growth_speed_mult = 0.75
+}
+
+resettling_the_demesne = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	state_migration_pull_add = 10
+	state_migration_pull_mult = 1
+}
+
+mimic_supplied_with_weapons = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = 0.5
+	unit_defense_mult = 0.5
+}
+
+mimic_slow_down = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+}

@@ -1,0 +1,1735 @@
+﻿POPS = {
+
+  s:STATE_DRAGDA = {
+		region_state:XXG = {
+			  create_pop = {
+					culture = cithrel
+					size = 509521
+			  }		         
+		}
+}
+
+  s:STATE_SOUTIEINS_NEEDLE = {
+		  region_state:EME = {
+			    create_pop = {
+				    culture = enelli
+				    size = 609521
+			    }
+				create_pop = {
+					culture = ocelian 
+					size = 315156
+			  }
+				create_pop = {
+					culture = vozi
+					size = 119311
+				}			             
+	  }
+  }
+
+  s:STATE_IAZIEMAVI = {
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 1442522
+			    }			         
+		  }
+  }
+
+  s:STATE_SEUTE_EPHEI = { 
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian
+				      size = 1764560
+			    } 			    			        
+		  }
+  }
+
+  s:STATE_VANQUEL_CETEDRIN = {
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 1052115
+			    }     
+		  }
+  }
+
+  s:STATE_TROCREUL = {
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 1022557
+			    }     
+		  }
+  }
+
+  s:STATE_JUERVIER = {
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 1407713
+			    }     
+		  }
+  }
+
+  s:STATE_SAINT_MER = {
+	region_state:CER = {
+		create_pop = {
+			culture = cerunite
+			size = 425268
+		}
+		create_pop = {
+			culture = ocelian
+			size = 138612
+		}
+	}
+  }
+
+	s:STATE_SAINT_MER_2 = {
+		region_state:CER = {
+			create_pop = {
+				culture = cerunite
+				size = 572667
+			}
+			create_pop = {
+				culture = ocelian
+				size = 222612
+			}
+		}
+	}
+
+  s:STATE_CAEL_VALEN = {
+	region_state:CER = {
+		create_pop = {
+			culture = cerunite
+			size = 742563
+		}
+		create_pop = {
+			culture = rivierling
+			size = 72846
+		}
+	}
+  }
+
+	s:STATE_CAEL_VALEN_2 = {
+	region_state:CER = {
+		create_pop = {
+			culture = cerunite
+			size = 228050
+		}
+		create_pop = {
+			culture = rivierling
+			size = 59825
+		}
+	}
+  }
+
+  s:STATE_LANDING_AT_SEA = {
+		region_state:CER = {
+			create_pop = {
+				culture = cerunite
+				size = 972382
+			}
+			create_pop = {
+				culture = ralaurian
+				size = 175837
+			}
+		}
+  }
+
+  s:STATE_LANDING_AT_SEA_2 = {
+	region_state:CER = {
+		create_pop = {
+			culture = cerunite
+			size = 700082
+		}
+		create_pop = {
+			culture = ralaurian
+			size = 135237
+		}
+	}
+}  
+
+  s:STATE_VIRULENT_EGRESS = {
+	region_state:ALC = {
+		create_pop = {
+			culture = mutant
+			size = 75597
+		}
+	}
+  }
+
+  s:STATE_VIRULENT_EGRESS_2 = {
+	region_state:ALC = {
+		create_pop = {
+			culture = mutant
+			size = 68597
+		}
+	}
+  }
+
+  s:STATE_VIRULENT_EGRESS_3 = {
+	region_state:ALC = {
+		create_pop = {
+			culture = mutant
+			size = 84697
+		}
+	}
+  }
+
+  s:STATE_THE_CHASM = {
+	region_state:CER = {
+		create_pop = {
+			culture = cerunite
+			size = 1367248
+		}
+		create_pop = { 
+			culture = rivierling
+			size = 70000
+		}
+		create_pop = {
+			culture = rivierling
+			religion = church_of_man
+			size = 35074
+		}
+	}
+  }
+
+  s:STATE_ORCBANE_PASS = {
+	region_state:CER = {
+		create_pop = {
+			culture = rivierling
+			size = 319480
+		}
+		create_pop = {
+			culture = cerunite
+			size = 548797
+		}
+		create_pop = {
+			culture = buramog
+			size = 63700
+		}
+	}
+  }
+
+  s:STATE_ORCBANE_PASS_2 = {
+	region_state:CER = {
+		create_pop = {
+			culture = cerunite
+			size = 36680
+		}
+		create_pop = {
+			culture = buramog
+			size = 53340
+		}
+		create_pop = {
+			culture = rivierling
+			size = 562066
+		create_pop = {
+			culture = rivierling
+			religion = yondallas_guests
+			size = 55589
+		}
+	}
+  	}
+  }
+
+  s:STATE_PENDYM_GWYN = {
+	region_state:CER = {
+		create_pop = {
+			culture = rivierling
+			size = 1439280
+		}
+		create_pop = {
+			culture = rivierling
+			religion = yondallas_guests
+			size = 177888
+		}
+        create_pop = {
+			culture = cerunite
+			size = 52571
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 33880
+		}
+	}
+  }
+
+  s:STATE_PENDYM_GWYN_2 = {
+	region_state:CER = {
+		create_pop = {
+			culture = rivierling
+			religion = church_of_man
+			size = 90020
+		}
+		create_pop = {
+			culture = rivierling
+			size = 1204770
+		}
+                create_pop = {
+			culture = cerunite
+			size = 266980
+		}
+	}
+  }
+  
+  s:STATE_PEARFIELDS = {
+	region_state:GCS = {
+		create_pop = {
+			culture = rivierling
+			size = 244234
+		}
+		create_pop = {
+			culture = rivierling
+			religion = yondallas_guests
+			size = 351458
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 210692
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 14215
+		}
+	}
+	region_state:CER = {
+		create_pop = {
+			culture = rivierling
+			size = 446492
+		}
+                create_pop = {
+			culture = rivierling
+             religion = yondallas_guests
+			size = 123013
+		}
+                create_pop = {
+			culture = coast_halfling
+			size = 202292
+		}
+		create_pop = {
+			culture = cerunite
+			size = 14692
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 28215
+		}
+	}
+  }
+
+  s:STATE_VOZMEAD_BORDERLANDS = {
+	region_state:TLD = {
+		create_pop = {
+			culture = enelli
+			size = 312167
+		}
+		create_pop = {
+			culture = tolorr
+			size = 1472950
+		}
+	}
+  }
+  
+  s:STATE_CRAGGEDWYN = {
+	region_state:CDW = {
+		create_pop = {
+			culture = tolorr
+			size = 70087
+		}
+		create_pop = {
+			culture = cerunite
+			size = 582580
+		}
+		create_pop = {
+			culture = mutant #these will assimilate overnight / Edit: Not anymore! :DDD - Myx
+			size = 39988
+		}
+		create_pop = {
+			culture = buramog
+			size = 33039
+		}
+	}
+  }
+
+  s:STATE_SERBINELLE = {
+	region_state:SEB = {
+		create_pop = {
+			culture = enelli
+			size = 1815859
+		}
+		create_pop = {
+			culture = ocelian
+			size = 210022
+		}
+		create_pop = {
+			culture = tolorr
+			size = 128850
+		}
+	}
+
+  }
+
+  s:STATE_EASTERN_PLAGUEWOOD = {
+	region_state:RTD = {
+		create_pop = {
+			culture = buramog
+			size = 1145267
+		}
+
+	}
+  }
+
+  s:STATE_NORTHERN_EXPANSE = {
+	region_state:RTD = {
+		create_pop = {
+			culture = buramog
+			size = 1958600
+		}
+	}
+  }
+
+  s:STATE_FORESTS_HEART = {
+	region_state:BDB = {
+		create_pop = {
+			culture = buramog
+			size = 1787797
+		}
+		create_pop = {
+			culture = korkaz
+			size = 489168
+		}
+	}
+  }
+
+  s:STATE_BURAMONG = {
+	region_state:BDB = {
+		create_pop = {
+			culture = buramog
+			size = 3051717
+		}
+	}
+  }
+
+  s:STATE_PLAGUEBRUSH = {
+	region_state:BDB = {
+		create_pop = {
+			culture = buramog
+			size = 495600
+		}
+		create_pop = {
+			culture = korkaz
+			size = 313880
+		}
+	}
+  }
+
+  s:STATE_BLACKWOOD = {
+	region_state:RTD = {
+		create_pop = {
+			culture = buramog
+			size = 1638017
+		}
+	}
+  }
+
+  s:STATE_PLAGUEWOOD_HINTERLANDS = {
+	region_state:OCR = {
+		create_pop = {
+			culture = korkaz
+			size = 616697
+		}
+		create_pop = {
+			culture = buramog
+			size = 263200
+		}
+	}
+  }
+
+  s:STATE_SANDWOOD = {
+	region_state:BDB = {
+		create_pop = {
+			culture = buramog
+			size = 411530
+		}
+		create_pop = {
+			culture = korkaz
+			size = 500920
+		}
+	}
+  }
+
+  s:STATE_RIBAGAR = {
+	region_state:BDB = {
+		create_pop = {
+			culture = aridrun
+			size = 69994
+		}
+		create_pop = {
+			culture = buramog
+			size = 469435
+		}
+		create_pop = {
+			culture = korkaz
+			size = 273435
+		}
+	}
+  }
+
+  s:STATE_ASHWICK = {
+	region_state:ASW = {
+		create_pop = {
+			culture = buramog
+			size = 23800
+		}
+	}
+  }
+
+  s:STATE_WICKENWOOD = {
+	region_state:ASW = {
+		create_pop = {
+			culture = buramog
+			size = 39200
+		}
+	}
+  }
+
+  s:STATE_MINUPHOSS = {
+	region_state:DRO = {
+		create_pop = {
+			culture = aridrun
+			size = 71704
+		}
+		create_pop = {
+			culture = korkaz
+			size = 432883
+		}
+		create_pop = {
+			culture = buramog
+			size = 221499
+		}
+	}
+  }
+
+  s:STATE_OUTER_MOORWEALD = {
+	region_state:SMA = {
+		create_pop = {
+			culture = coast_halfling 
+			size = 2396938
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 4209
+		}
+		create_pop = {
+			culture = wealder
+			size = 217513
+		}
+		create_pop = {
+			culture = cerunite
+			size = 2353
+		}
+	}
+	
+
+	region_state:GCS = {
+		create_pop = {
+			culture = coast_halfling 
+			size = 281538
+		}
+	}
+  }
+
+  s:STATE_MOORESHIRE = {
+	region_state:SMA = {
+		create_pop = {
+			culture = coast_halfling
+			size = 1779632
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 39572
+		}
+		create_pop = {
+			culture = wealder
+			size = 282900
+		}
+	}
+  }
+
+  s:STATE_SMALLWOOD = {
+	region_state:SMA = {
+		create_pop = {
+			culture = coast_halfling
+			size = 1541546
+		}
+		create_pop = {
+			culture = wealder
+			size = 147923
+		}
+	}
+  }
+
+  s:STATE_INNER_MOORWEALD = {
+	region_state:MOO = {
+		create_pop = {
+			culture = coast_halfling
+			size = 141400
+		}
+		create_pop = {
+			culture = wealder
+			size = 87500
+		}
+	}
+  }
+
+  s:STATE_DEEPWOODS = {
+	region_state:MOO = {
+		create_pop = {
+			culture = coast_halfling
+			size = 148400
+		}
+		create_pop = {
+			culture = wealder
+			size = 79800
+		}
+	}
+  }
+
+  s:STATE_WHISKER_FIELDS = {
+	region_state:WHI = {
+		create_pop = {
+			culture = mousefolk
+			size = 4601083
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 70209
+		}
+		create_pop = {
+			culture = wealder
+			size = 140779
+		}
+	}
+  }
+	s:STATE_WHISKERWALL = {
+			region_state:WHI = {
+		create_pop = {
+			culture = mousefolk
+			size = 2488003
+		}
+		create_pop = {
+			culture = bossardi
+			size = 56400
+		}
+		create_pop = {
+			culture = wealder
+			size = 165200
+		}
+	}
+	}
+  s:STATE_WAYFARE_MEADOWS = {
+	region_state:PRI = {
+		create_pop = {
+			culture = wealder
+			size = 1269794
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 295397
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 64053
+		}
+		create_pop = {
+			culture = dorite
+			size = 32480
+		}
+	}
+  }
+
+  s:STATE_WAYFARE_MEADOWS_2 = {
+	region_state:SLB = {
+		create_pop = {
+			culture = coast_halfling
+			size = 1258244
+		}
+		create_pop = {
+			culture = wealder
+			size = 491397
+		}
+		create_pop = {
+			culture = dorite
+			size = 73382
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 211053
+		}
+	}
+  }
+
+  s:STATE_THE_AMBER_RUN = {
+		region_state:EMP = {
+			create_pop = {
+				culture = bossardi
+				size = 1479879
+			}
+			create_pop = {
+				culture = bossardi
+				religion = rose_court
+				size = 94460
+			}
+			create_pop = {
+				culture = mousefolk
+				religion = church_of_man
+				size = 151784
+			}
+		}
+  }
+
+  s:STATE_THE_AMBER_RUN_2 = {
+	region_state:EMP = {
+		create_pop = {
+			culture = bossardi
+			size = 659278
+		}
+		create_pop = {
+			culture = bossardi
+			religion = rose_court
+			size = 425061
+		}
+		create_pop = {
+			culture = mousefolk
+			religion = church_of_man
+			size = 92939
+		}
+		create_pop = {
+			culture = buramog
+			size = 150310
+		}
+	}
+}
+
+  s:STATE_THE_AMBER_RUN_3 = {
+	region_state:EMP = {
+		create_pop = {
+			culture = bossardi
+			size = 954894
+		}
+		create_pop = {
+			culture = bossardi
+			religion = rose_court
+			size = 94440
+		}
+		create_pop = {
+			culture = mousefolk
+			religion = church_of_man
+			size = 164310
+		}
+		create_pop = {
+			culture = buramog
+			size = 136310
+		}
+	}
+}
+
+  s:STATE_MISTREACH = {
+		region_state:KRC = {
+			create_pop = {
+				culture = bossardi
+				size = 1225522
+			}
+			create_pop = {
+				culture = bossardi
+				religion = cult_of_commerce
+				size = 281885
+			}
+		}
+  }
+
+  s:STATE_MISTREACH_2 = {
+	region_state:PRI = {
+		create_pop = {
+			culture = bossardi
+			size = 181420
+		}
+		create_pop = {
+			culture = bossardi
+			size = 32015
+		}
+		create_pop = {
+			culture = wealder
+			size = 853403
+		}
+		create_pop = {
+			culture = wealder
+			religion = cult_of_commerce
+			size = 177277
+		}
+		create_pop = {
+			culture = dorite
+			size = 128797
+		}
+	}
+}
+
+  s:STATE_VICEROYS_PEARL = {
+		region_state:ARR = {
+			create_pop = {
+				culture = dorite
+				size = 1472724
+			}
+			create_pop = {
+				culture = coast_halfling
+				size = 244259
+			}
+			create_pop = {
+				culture = clearbough
+				size = 327897
+			}
+			create_pop = {
+				culture = highland_halfling
+				religion = cult_of_commerce
+				size = 162809
+			}
+			create_pop = {
+				culture = vandori
+				size = 31098
+			}
+		}
+  }
+
+  s:STATE_FAR_SHORE = {
+	region_state:LEO = {
+		create_pop = {
+			culture = bossardi
+			religion = rose_court
+			size = 1066268
+		}
+		create_pop = {
+			culture = bossardi
+			religion = cult_of_commerce
+			size = 173578
+		}
+		create_pop = {
+			culture = thiralian
+			size = 348590
+		}
+		create_pop = {
+			culture = vandori
+			size = 25122
+		}
+	}
+}
+
+  s:STATE_FAR_SHORE_2 = {
+	region_state:LEO = {
+		create_pop = {
+			culture = bossardi
+			religion = rose_court
+			size = 816130
+		}
+		create_pop = {
+			culture = bossardi
+			religion = cult_of_commerce
+			size = 80716
+		}
+		create_pop = {
+			culture = thiralian
+			size = 188940
+		}
+	}
+}
+
+  s:STATE_DURANS_LAND = {
+		region_state:DRM = {
+			create_pop = {
+				culture = bossardi
+				size = 305139
+			}
+			create_pop = {
+				culture = bossardi
+				religion = cult_of_commerce
+				size = 592329
+			}
+			create_pop = {
+				culture = bossardi
+				religion = rose_court
+				size = 78041
+			}
+			create_pop = {
+				culture = dorite
+				size = 210253
+			}
+			create_pop = {
+				culture = clearbough
+				size = 35066
+			}
+		}
+  }
+
+  s:STATE_DURANS_LAND_2 = {
+	region_state:DRM = {
+		create_pop = {
+			culture = bossardi
+			size = 342707
+		}
+		create_pop = {
+			culture = bossardi
+			religion = cult_of_commerce
+			size = 559152
+		}
+		create_pop = {
+			culture = bossardi
+			religion = rose_court
+			size = 111466
+		}
+		create_pop = {
+			culture = dorite
+			size = 211653
+		}
+		create_pop = {
+			culture = clearbough
+			size = 200476
+		}
+	}
+}
+
+  s:STATE_FIRST_BOROUGH = {
+	region_state:SLB = {
+		create_pop = {
+			culture = coast_halfling
+			size = 1770075
+		}
+		create_pop = {
+			culture = wealder
+			size = 373815
+		}
+		create_pop = {
+			culture = dorite
+			size = 88224
+		}
+	}
+  }
+
+  s:STATE_BYRIVER = {
+	region_state:ARR = {
+		create_pop = {
+			culture = dorite
+			size = 522859
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 674942
+		}
+		create_pop = {
+			culture = wealder
+			size = 95826
+		}
+	}
+  }
+
+  s:STATE_GREENCOURT = {
+	region_state:ARR = { # 
+		create_pop = {
+			culture = dorite # 'Walloon & French' in census data.
+			size = 1248762
+		}
+		create_pop = {
+			culture = wealder
+			size = 153085
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 221238
+		}
+	}
+  }
+
+  s:STATE_PRILYRA = {
+	region_state:PRI = { # 
+		create_pop = {
+			culture = wealder
+			size = 1560621
+		}
+		create_pop = {
+			culture = wealder
+			religion = cult_of_commerce
+			size = 212812
+		}
+		create_pop = {
+			culture = dorite 
+			size = 70284
+		}
+	}
+  }
+
+  s:STATE_GOLDENACRE = {
+	region_state:ARR = {
+		create_pop = {
+			culture = dorite
+			size = 461281
+		}
+		create_pop = {
+			culture = clearbough
+			size = 236237
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 94559
+		}
+		create_pop = {
+			culture = bossardi
+			religion = cult_of_commerce
+			size = 145965
+		}
+	}
+  }
+
+  s:STATE_SHARPWOOD = {
+	region_state:ARR = {
+		create_pop = {
+			culture = dorite
+			size = 962533
+		}
+		create_pop = {
+			culture = bossardi
+			religion = cult_of_commerce
+			size = 154077
+		}
+		create_pop = {
+			culture = wealder
+			size = 77204
+		}
+		create_pop = {
+			culture = clearbough
+			size = 220390
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 85989
+		}
+	}
+  }
+
+  s:STATE_VERDANT_VALE = {
+	region_state:ARR = {
+		create_pop = {
+			culture = dorite
+			size = 548407
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 314889
+		}
+		create_pop = { 
+			culture = clearbough
+			size = 165346
+		}
+	}
+  }
+
+  s:STATE_TWO_BARREL_COAST = {
+	region_state:ARR = {
+		create_pop = {
+			culture = dorite
+			size = 1125604
+		}
+		create_pop = {
+			culture = eberri
+			size = 92737
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 199394
+		}
+		create_pop = {
+			culture = clearbough
+			size = 145237
+		}
+	}
+  }
+
+  s:STATE_LOWER_GOLDENLEAF = {
+	region_state:ARR = {
+		create_pop = {
+			culture = dorite
+			size = 513612
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 310795
+		}
+		create_pop = {
+			culture = clearbough
+			size = 158600
+		}
+		create_pop = {
+			culture = eberri
+			size = 79815
+		}
+	}
+  }
+
+  s:STATE_THE_MATCHES = {
+	region_state:ARR= {
+		create_pop = {
+			culture = dorite
+			size = 1418556
+		}
+		create_pop = {
+			culture = clearbough
+			size = 155989
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 113737
+		}
+	}
+  }
+
+  s:STATE_RUNEPORT_GALESTRUM = {
+	region_state:EBR = {
+		create_pop = {
+			culture = eberri
+			size = 635597
+		}
+		create_pop = {
+			culture = achonian
+			size = 91280
+		}
+		create_pop = {
+			culture = dorite
+			size = 40460
+		}
+	}
+  }
+
+  s:STATE_TWOTORS = {
+	region_state:EBR = {
+		create_pop = {
+			culture = eberri
+			size = 791636
+		}
+		create_pop = {
+			culture = achonian
+			size = 125236
+		}
+		create_pop = {
+			culture = dorite
+			size = 44824
+		}
+	}
+  }
+
+  s:STATE_ACHONIAN_HIGHLANDS = {
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 807237
+		}
+		create_pop = {
+			culture = eberri
+			size = 99056
+		}
+		create_pop = {
+			culture = changeling
+			size = 3632
+		}
+	}
+  }
+
+  s:STATE_GLIMMERING_COAST = {
+	region_state:AHO = {
+		create_pop = {
+			culture = changeling
+			size = 74200
+		}
+		create_pop = {
+			culture = eberri
+			size = 187676
+		}
+		create_pop = {
+			culture = achonian
+			size = 980860
+		}
+	}
+  }
+
+  s:STATE_LEYLINE_COAST = {
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 1231166
+		}
+		create_pop = {
+			culture = eberri
+			size = 50400
+		}
+		create_pop = {
+			culture = changeling
+			size = 61600
+		}
+	}
+  }
+
+  s:STATE_HORSELORDS_DEMESNE = {
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 838177
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 22400
+		}
+		create_pop = {
+			culture = eberri
+			size = 309680
+		}
+		create_pop = {
+			culture = achonian
+			size = 84000
+		}
+		create_pop = {
+			culture = dorite
+			size = 40600
+		}
+	}
+  }
+
+  s:STATE_ROCHENSTONE = {
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 1090177
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 16800
+		}
+		create_pop = {
+			culture = achonian
+			size = 83448
+		}
+		create_pop = {
+			culture = eberri
+			size = 271600
+		}
+		create_pop = {
+			culture = dorite
+			size = 56000
+		}
+	}
+  }
+
+  s:STATE_SJETTSZCEK_MIRE = {
+	region_state:AHO = {
+		create_pop = {
+			culture = changeling
+			size = 588003
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 238003
+		}
+		create_pop = {
+			culture = eberri
+			size = 19600
+		}
+		create_pop = {
+			culture = achonian
+			size = 901600
+		}
+	}
+  }
+
+  s:STATE_THUNDERSPELL_COAST = {
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 662060
+		}
+		create_pop = {
+			culture = changeling
+			size = 74900
+		}
+	}
+  }
+
+  s:STATE_SOLEMN_STONES = {
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 644560
+		}
+		create_pop = {
+			culture = changeling
+			size = 172760
+		}
+	}
+  }
+
+  s:STATE_VYNDERVOHT = {
+	region_state:VHT = {
+		create_pop = {
+			culture = vynduri
+			size = 1594107
+		}
+		create_pop = {
+			culture = achonian
+			size = 345453
+		}
+	}
+  }
+
+  s:STATE_SHIFTING_SCAR = {
+	region_state:MMD = {
+		create_pop = {
+			culture = changeling
+			size = 262077
+		}
+	}
+  }
+
+  s:STATE_SHIFTING_SCAR_2 = {
+	region_state:MMD = {
+		create_pop = {
+			culture = changeling
+			size = 206427
+		}
+	}
+  }
+
+  s:STATE_OVERBURROW = {
+	region_state:BRB = {
+		create_pop = {
+			culture = highland_halfling
+			size = 1751678
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 353704
+		}
+		create_pop = {
+			culture = dorite
+			size = 305259
+		}
+		create_pop = {
+			culture = changeling
+			size = 112123
+		}
+	}
+  }
+
+  s:STATE_UPPER_GOLDENLEAF = {
+	region_state:GRH = { 
+		create_pop = {
+			culture = highland_halfling
+			size = 1036693
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 197465
+		}
+		create_pop = {
+			culture = dorite
+			size = 309086
+		}
+		create_pop = {
+			culture = clearbough
+			size = 116535
+		}
+		create_pop = {
+			culture = clearbough
+			religion = yondallas_guests
+			size = 315076
+		}
+	}
+  }
+
+  s:STATE_NEWBANKS = {
+	region_state:FTH = {
+		create_pop = {
+			culture = highland_halfling
+			size = 929767
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 91956
+		}
+		create_pop = {
+			culture = dorite
+			size = 112591
+		}
+		create_pop = {
+			culture = clearbough
+			religion = yondallas_guests
+			size = 300924
+		}
+		create_pop = {
+			culture = clearbough
+			size = 89887
+		}
+	}
+  }
+
+  s:STATE_STOUTHEART_BASIN = {
+	region_state:CLR = {
+		create_pop = {
+			culture = highland_halfling
+			size = 195092
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 93934
+		}
+		create_pop = {
+			culture = clearbough
+			religion = yondallas_guests
+			size = 783438
+		}
+		create_pop = {
+			culture = clearbough
+			size = 377211
+		}
+		create_pop = {
+			culture = dorite
+			size = 288432
+		}
+	}
+  }
+
+  s:STATE_CROPHEART_DALE = {
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			religion = yondallas_guests
+			size = 456563
+		}
+		create_pop = {
+			culture = dorite
+			size = 112000
+		}
+		create_pop = {
+			culture = highland_halfling
+			size = 28000
+		}
+		create_pop = {
+			culture = clearbough
+			size = 160414
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 30800
+		}
+	}
+  }
+
+  s:STATE_CLEARBOUGH_ESTATES = {
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			size = 1331681
+		}
+		create_pop = {
+			culture = clearbough
+			religion = yondallas_guests
+			size = 1835476
+		}
+		create_pop = {
+			culture = dorite
+			size = 156846
+		}
+	}
+  }
+
+  s:STATE_GOLDENMOOR = {
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			religion = yondallas_guests
+			size = 479746
+		}
+		create_pop = {
+			culture = clearbough
+			size = 137688
+		}
+		create_pop = {
+			culture = dorite
+			size = 74200
+		}
+	}
+  }
+
+  s:STATE_MOUNT_YELFIS= {
+	region_state:DAR = {
+		create_pop = {
+			culture = yelfi
+			size = 1736624
+		}
+		create_pop = {
+			culture = wealder
+			size = 464964
+		}
+	}
+  }
+
+  s:STATE_RIRGEN = {
+		region_state:DRO = {
+			create_pop = {
+				culture = vozi
+				size = 187773
+			}
+			create_pop = {
+				culture = aridrun
+				size = 223197
+			}
+			create_pop = {
+				culture = buramog
+				size = 66197
+			}
+		}
+  }
+
+  s:STATE_RICHAR_JEDD = {
+		region_state:DRO = {
+
+			create_pop = {
+				culture = aridrun
+				size = 853594
+			}
+
+		}
+  }
+
+  s:STATE_DEPHEL_PATH = {
+	region_state:DRO = {
+		create_pop = {
+			culture = aridrun
+			size = 302585
+		}
+		create_pop = {
+			culture = vozi
+			size = 162585
+		}
+	}
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 383970
+		}
+		create_pop = {
+			culture = aridrun
+			size = 173970
+		}
+
+	}
+  }
+
+  s:STATE_TOPHNATH = {
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 1030756
+			}
+		}
+  }
+
+  s:STATE_CINPHNPHAINN = {
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 1960557
+			}
+		}
+  }
+
+  s:STATE_LHIPH = {
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 1591253
+			}
+		}
+  }
+
+  s:STATE_KAATH_SERINE = {
+		region_state:VOZ = {
+			create_pop = {
+				culture = vozi
+				size = 418970
+			}
+			create_pop = {
+				culture = aridrun
+				size = 267585
+			}
+		}
+  }
+
+  s:STATE_HAZELDEEP = {
+	region_state:EMP = {
+		create_pop = {
+			culture = astreval
+			size = 512406
+		}
+		create_pop = {
+			culture = bossardi
+			religion = rose_court
+			size = 189523
+		}
+		create_pop = {
+			culture = bossardi
+			size = 44983
+		}
+		create_pop = {
+			culture = buramog
+			size = 92400
+		}
+		create_pop = {
+			culture = thiralian
+			size = 2800
+		}
+	}
+  }
+
+  s:STATE_AZURETHORN = {
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 333719
+		}
+		create_pop = {
+			culture = zakonish
+			size = 99683
+		}
+	}
+  }
+
+  s:STATE_FERNSEA = {
+	region_state:CER = {
+		create_pop = {
+			culture = cerunite
+			size = 1189093
+		}
+	}
+  }
+
+  s:STATE_SKYPIERCER_PEAK = {
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 2441047
+		}
+	}
+  }
+
+  s:STATE_CLOUDSILVER_SPINE = {
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 1833482
+		}
+	}
+  }
+
+  s:STATE_VOZMEAD_LOWLANDS = {
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 589953
+		}
+	}
+  }
+
+  s:STATE_SUNKEN_CLIFFS = {
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 476482
+		}
+	}
+  }
+
+  s:STATE_DWARVENHAMMER = {
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 697382
+		}
+	}
+  }
+
+  s:STATE_TARBANK = {
+    region_state:EMP = {
+			create_pop = {
+				culture = bossardi
+				size = 196732
+			}
+			create_pop = {
+				culture = bossardi
+				religion = rose_court
+				size = 896224
+			}
+			create_pop = {
+				culture = thiralian
+				size = 8645
+			}
+		}
+
+  }
+
+  s:STATE_WICKERRYE = {
+
+	region_state:ASW = {
+		create_pop = {
+			culture = buramog
+			size = 24497
+		}
+
+	}
+  }
+
+  s:STATE_SILVERTARGE = {
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			size = 250416
+		}
+		create_pop = {
+			culture = clearbough
+			religion = yondallas_guests
+			size = 735474
+		}
+		create_pop = {
+			culture = highland_halfling
+			size = 149759
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = cult_of_commerce
+			size = 50991
+		}
+		create_pop = {
+			culture = dorite
+			size = 116358
+		}
+	}
+  }
+
+}

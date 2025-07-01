@@ -1,0 +1,254 @@
+﻿je_grey_boar = {
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	group = je_group_historical_content
+
+	scripted_button = end_charade_button
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_grey_boar_status
+			}
+		}
+	}
+
+	modifiers_while_active = {
+		margraves_fist
+	}
+	modifier = {
+		interest_group_ig_armed_forces_pop_attraction_mult = 0.2
+		interest_group_ig_armed_forces_pol_str_mult = 0.35
+		country_officers_pol_str_mult = 0.7
+	}
+
+	should_be_pinned_by_default = yes
+	
+	weight = 2000
+
+	complete = {
+		OR = {
+			custom_tooltip = {
+				text = ludric_kicked_bucket
+				ruler = {
+					NOT = {
+						has_variable = is_ludric
+					}
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				c:BDB ?= {
+					has_truce_with = root
+				}
+			}
+			end_truce = c:BDB
+		}
+		if = {
+			limit = {
+				c:RTD ?= {
+					has_truce_with = root
+				}
+			}
+			end_truce = c:RTD
+		}
+		show_as_tooltip = {
+			end_truce = c:BDB
+			end_truce = c:RTD
+		}
+		
+	}
+}
+
+je_craggedwyn_question = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_historical_content
+
+	modifiers_while_active = {
+		craggedwyn_company
+	}
+	
+	scripted_progress_bar = craggedwyn_control_progress_bar
+
+	scripted_button = shuffle_company_administration_button
+	scripted_button = the_margraves_health_button
+	scripted_button = disband_craggedwyn_company_button
+	scripted_button = seize_domestic_crag_holdings_button
+	scripted_button = grant_crag_overseas_state_button
+
+	should_be_pinned_by_default = yes
+	
+	weight = 2000
+
+	immediate = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			random_list = {
+				60 = {
+					set_variable = evil_zarnak_var
+				}
+				20 = {
+
+				}
+				20 = {
+					c:CDW ?= {
+						add_modifier = {
+						name = reining_in_company
+						years = 10
+					}
+					}
+					
+				}
+			}
+		}
+		c:CDW ?= {
+			save_scope_as = crag_scope
+		}
+	}
+		status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = craggedwyn_in_control_loc
+				trigger = {
+					scope:journal_entry = {
+						"scripted_bar_progress(craggedwyn_control_progress_bar)" <= 3
+					}
+				}
+			}
+			triggered_desc = {
+				desc = craggedwyn_medium_control_loc
+				trigger = {
+					scope:journal_entry = {
+						"scripted_bar_progress(craggedwyn_control_progress_bar)" <= 5
+					}
+				}
+			}
+			triggered_desc = {
+				desc = craggedwyn_out_of_control_loc
+				trigger = {
+					scope:journal_entry = {
+						"scripted_bar_progress(craggedwyn_control_progress_bar)" > 5
+					}
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { 
+						any_subject_or_below = {
+							owning_company ?= {
+								is_company_type = company_type:company_craggedwyn
+							}
+						} 
+					}
+				}
+				remove_company = company_type:company_craggedwyn 
+			}
+		}
+		random_events = {
+			190 = 0
+			100 = ceraun_events.19 #AI event to give plaguewood to crag
+			#60 = ceraun_events.18 #ai event to disband the company if cdw no longer exists
+			130 = ceraun_events.101 #COLLAPSE
+			9 = ceraun_events.14 #lab accident
+			10 = ceraun_events.15 #company wants to alter the charter
+			15 = ceraun_events.16 #friend of the margrave
+			15 = ceraun_events.17 #anti-company slush fund
+			11 = ceraun_events.10 #paying for legislation
+			11 = ceraun_events.6 #news article on the company
+			12 = ceraun_events.5 #refugees by land
+			8 = ceraun_events.3 #stolen prototype
+			8 = ceraun_events.2 #refugees by sea
+		}
+
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			30 = 0
+			10 = ceraun_events.4 #mutant babies
+			10 = ceraun_events.7 #monster on the loose
+			10 = ceraun_events.8 #groundwater allegations
+			10 = ceraun_events.9 #synthetic chimesilt
+			10 = ceraun_events.11 #unpaid labor
+			10 = ceraun_events.12 #captured adventurers
+			10 = ceraun_events.13 #kidnapping unrecognized
+		}
+		effect = {
+			if = {
+				limit = {
+					c:CDW ?= {
+						arable_land_country < 30
+					}
+				}
+				craggedwyn_small_danger_effect = yes
+			} 
+
+			if = {
+				limit = {
+					NOT = { has_variable = recent_danger_tick }
+					any_company = {
+						AND = {
+							is_company_type = company_type:company_craggedwyn
+							company_is_prosperous = yes
+						}
+					}
+				}
+				random_list = {
+					80 = {
+
+					}
+					20 = {
+						craggedwyn_small_danger_effect = yes
+						set_variable = {
+							name = recent_danger_tick
+							months = 13
+						}
+					}
+				}
+			}
+		}
+	}
+
+	fail = {
+		OR = {
+			# custom_tooltip = {
+			# 	text = cdw_exists_tt
+			# 	c:CDW ?= {
+			# 		NOT = { is_subject_of = root }
+			# 	}
+			# }
+			custom_tooltip = {
+				text = craggedwyn_implosion
+				has_variable = craggedwyn_collapse_var
+			}
+		}
+	}
+
+	complete = {
+		NOT = {
+			has_company = company_type:company_craggedwyn
+			custom_tooltip = {
+				text = no_craggedwyn_implosion_tt
+				 has_variable = craggedwyn_collapse_var
+			}
+		}
+
+	}
+
+	on_complete = {
+		trigger_event = ceraun_events.102
+	}
+}

@@ -1,0 +1,49 @@
+﻿
+union_of_the_sands_balance_total = {
+	value = 0
+	add = global_var:vozmead_gdp
+	add = global_var:yavira_gdp
+	min = 1
+}
+
+
+union_of_the_sands_balance_yavira_lead = {
+	value = 0
+	add = global_var:vozmead_gdp
+	divide = union_of_the_sands_balance_total
+
+	max = 1
+	min = 0
+}
+
+
+union_of_the_sands_balance_vozmead_lead = {
+	value = 0
+	add = global_var:yavira_gdp
+	divide = union_of_the_sands_balance_total
+
+	max = 1
+	min = 0
+}
+
+union_of_the_sands_balance= {
+	value = 0
+	if = {
+		limit = {
+			global_var:yavira_gdp > global_var:vozmead_gdp
+		}
+		add = union_of_the_sands_balance_yavira_lead
+		subtract = 1
+		multiply = -1
+	}
+	else = {
+		add = union_of_the_sands_balance_vozmead_lead
+
+	}
+
+	multiply = 100
+
+	max = 100
+	min = 0
+}
+

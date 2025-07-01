@@ -1,0 +1,98 @@
+﻿l_english:
+  # Base IGs
+  ig_mages: "Mages"
+  ig_mages_only_icon: "@mages!"
+  ig_mages_desc: "Powerful spellcasters such as archmages, warlock and sorcerers with an interest in arcane advancement and magical proliferation."
+  ig_clans: "Tribes"
+  ig_clans_only_icon: "@clans!"
+  ig_clans_desc: "Powerful families with widespread influence in the community."
+
+  #Ravencliff IGs
+  ig_blood_court: "Blood Court" 
+  ig_blood_court_desc: "Wealthy Pure-Vampires which typically lord over a notable number of "flesh cattle" and are of the view that the Midnight Court is far too lenient and sympathetic to the uninitiated. The blood tithe is too small and Vampires should not care for maintaining a level semi-consensual rule with the Noric people."
+  ig_fang_court: "Fang Court" 
+  ig_fang_court_desc: "The military arm of Dreadmoor. Comprised of Vampire Commanders and their "flesh cattle" soldiers to which they have secured the loyalty of. Be it through fear, promise of superior status in society, or other such matters. Their concerns are maintaining their influence." 
+  ig_gearheart_court: "Gearheart Court" 
+  ig_gearheart_court_desc: "A majority halfbreed section of the Court with some token Purebreed participation. These Vampires are industry-minded and wish to elevate humans slightly in order to put them to better use in manufactories."
+  ig_whiteheart_court: "Whiteheart Court" 
+  ig_whiteheart_court_desc: "Primarily half-breeds but a select few Purebreed Vampires have also joined this section of the Court. Its entire ideology revolving around reform to elevate humans of particular loyalty and acclaim to political status as a means to drive deeper devotion to their Lords. It is both a charitable approach as well as one carrying ulterior motives."
+  ig_commoner_tribunate: "Commoner Tribunate" 
+  ig_commoner_tribunate_desc: "The assembly of which the majority of society is inside and the one who's voice matters the least. Their presence is a token gesture of limited inclusion into politics of the state."
+  ig_blackheart_society: "Blackheart Society" 
+  ig_blackheart_society_desc: "A recent development in Court politics, the Blackhearts are a collection of halfbreed Vampires who are lumped in with the flesh cattle of which they rabble rouse to push for better working conditions. The halfbreeds primarily using flesh-cattle to fill out their numbers during demonstrations against industry owners."
+  ig_bound_court: "Bound Court" 
+  ig_bound_court_desc: "Those who have become Vampires via infection from Pure Vampires and have managed to secure a stable social position in Dreadmoor society. Their primary interests are ensuring they continue to be able to etch out a secure living under their purebreed Overlords." 
+  ig_avarice_cathedral: "Cathedral of Avarice" 
+  ig_avarice_cathedral_desc: "The ecclestical branch of the Dreadmoor. The cathedral's name evokes fear and terror in the hearts of human and vampires alike. Doling out extreme and draconian punishments such as crucifixion to branded heretics and non-believers." 
+  ig_midnight_court: "Midnight Court" 
+  ig_midnight_court_desc: "The midnight court wants to keep the vampire demense stable, while advancing plans for domination of Noricum. Their numbers consist of the oldest, wisest, and most powerful purebreed Vampires of the Realm. Their power is largely uncontested by all but the Blood Court who still pale in comparison to them. It will take time to grind away at their influence if that is desired." 
+
+  #Thiral IGs
+  ig_bloomwardens: "Bloomwardens"
+  ig_bloomwardens_desc: "The Bloomwardens are protectors of The Rose Court's sacred virtues, upholding chivalry, beauty, and noblesse oblige. Empowered by divine roses, they defend the faith, guide the nobility, and ensure that virtue and beauty prevail against corruption and chaos." 
+
+  #Ravik/Third Crusade IGs
+  ig_hasal: "Templars"
+  ig_hasal_desc: "Within Raviki society there is no higher honor than having directly aided 'The Savior of Gnomekind' in his Crusade against Humanity. The Legion is comprised of Raviki who claim to have served under Hasal himself or beneath another who had. Authority figures within the Legion thus maintain extreme levels of influence in the management of the state...provided they continue to display their unmatched dominance on the battlefield."
+
+  #Country Specific
+
+  ig_astral_consortium: "Astral Consortium"
+  ig_astral_consortium_desc: "The great guilds of the Astral Consortium are international financial behemoths. They have their own political aims, even waging more or less open conflicts against the competition. It's no exaggeration to say that the great guilds are what shapes the reality and life of an ordinary person in eastern Zalaron.  The Astral Consortium was set up to be the guilds' united front, and its name has become synonymous with their supremacy."
+  ig_kinfold: "Kinfold"
+  ig_kinfold_desc: "WIP"
+  ig_magnates: "Magnates"
+  ig_magnates_desc: "WIP"
+  ig_nobility: "Nobility"
+  ig_nobility_desc: "WIP"
+
+  ig_puritan_guard: "[InterestGroup.GetCustom('puritan_guard_devout')]"
+  ig_puritan_guard_desc: "An organized fellowship of true believers, religious patrons, and witch hunters."
+  ig_generic_puritan_guard: "Puritan Guard"
+  ig_generic_puritan_guard_desc: "An organized fellowship of true believers, religious patrons, and witch hunters."
+  ig_faithful_puritan_guard: "True Faithful Puritan Guard"
+  ig_honorable_puritan_guard: "Right Honorable Puritan Guard"
+  ig_independent_puritan_guard: "Prime Independent Puritan Guard"
+
+  # Religious IGs
+  ig_druids: "Druids"
+  ig_druids_desc: "Representing the self-styled protectors of the wilds, Druids present a unified front in their shared defence of the natural order."
+  ig_monks: "Monks"
+  ig_monks_desc: "Across a broad ascetic base, Monks accept all who reject bodily pleasures for spiritual enlightenment."
+  ig_cultists: "Cultists"
+  ig_cultists_desc: "Betwixt smoke-filled backrooms and masked meetings, the Cult finds support with both the elite and the downtrodden."
+  ig_church_of_man: "Church of Man"
+  ig_church_of_man_desc: "The Church of Man originated as an organized form of the various native beliefs of humans in [concept_noricum], incorporating the most worshipped deities and traditions on the continent into a united faith. Since then, the Church of Man has spread through the Dumonian conquests of [concept_zalaron], occasionally integrating new foreign gods into the pantheon."
+  ig_sun_cult: "Cult of the Sun"
+  ig_sun_cult_desc: "Within Urik's pantheon; Kamiros the Radiant is the god of light, justice and hope. His doctrine holds that righteousness is absolute, and that sin must be burned away without mercy. His most zealous followers see the world in stark contrast, virtue and sin. Those who live with unwavering discipline and unblemished conduct are said to ascend to Kamiros' eternal bastion of light"
+  ig_commerce_cult: "Cult of Commerce"
+  ig_commerce_cult_desc: "Within Urik's pantheon; Mavelis the Gilded is the goddess of wealth, commerce, and prosperity. Her most devout followers believe moral acts like generosity are rewarded, with good fortune going to those who display good virtue.  Those who lead virtuous lives join Mavelis' divine domain in the afterlife, such as Saint Caelia the Benevolent."
+  #Rural IGs
+  ig_foragers: "Foragers"
+  ig_foragers_desc: "WIP"
+  ig_independent_smallholders: "Independent Smallholders"
+  ig_independent_smallholders_desc: "The rural populist class who are politically aligned with their agrarian livelihoods and making their voices heard on the national stage."
+
+  ig_captains: "Captains"
+  ig_captains_desc: "WIP"
+
+#Culture Specific
+  ig_runeseers: "Runeseers"
+  ig_runeseers_desc: "WIP"
+  ig_guild_artisans: "Guild Artisans"
+  ig_guild_artisans_desc: "WIP"
+  ig_guildless: "Guildless"
+  ig_guildless_desc: "WIP"
+  ig_alchemists: "Alchemists"
+  ig_alchemists_desc: "WIP"
+  ig_necromancers: "Necromancers"
+  ig_hobgoblin_restaz: "Restaz" #Elite
+  ig_hobgoblin_restaz_desc: "WIP"
+  ig_yernit: "Yernit" #Firearm Masters
+  ig_yernit_desc: "WIP"
+  ig_taskmasters: "Taskmasters"
+  ig_taskmasters_desc: "WIP"
+  human_aristocracy: "Settler Aristocracy"
+  human_aristocracy_desc: "The Settler Aristocracy represents the established noble class of Ceraun, historically awarded with noble titles by the  Dumonian Emperors and Margraves of Ceraun, and possessing great influence within the country."
+  vampire_aristocracy: "Vampire Aristocracy"
+  vampire_aristocracy_desc: "The Aristocracy in this country are vampires, and are very keen to keep the human cattle below down them in the pecking order."

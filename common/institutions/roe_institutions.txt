@@ -1,0 +1,8 @@
+﻿institution_magical_focus = {
+	icon = "gfx/interface/icons/institution_icons/centralization.dds"
+	background_texture = "gfx/interface/illustrations/institutions/centralization.dds"
+	modifier = {
+		country_arcana_pos_add = 100
+		interest_group_ig_mages_pol_str_mult = 0.1
+	}
+}

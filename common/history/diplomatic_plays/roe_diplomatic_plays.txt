@@ -1,0 +1,34 @@
+﻿DIPLOMATIC_PLAYS = {
+	c:RAV = {
+		create_diplomatic_play = {
+			name = third_thalorian_crusade
+		
+			target_state = s:STATE_SNAARGRACHT.region_state:TLE
+			
+			war = yes
+			
+			type = dp_thalorian_crusade
+			
+			add_war_goal = {
+				holder = c:TLE
+				type = return_state
+				target_state = s:STATE_SMEERGOED.region_state:RAV
+			}
+			add_war_goal = {
+				holder = c:TLE
+				type = return_state
+				target_state = s:STATE_FLUITVELD.region_state:RAV
+			}
+			add_war_goal = {
+				holder = c:TLE
+				type = return_state
+				target_state = s:STATE_BELLENBOS.region_state:RAV
+			}
+			add_war_goal = {
+				holder = c:TLE
+				type = return_state
+				target_state = s:STATE_GLIMMERWOUD.region_state:RAV
+			}				
+		}	
+	}
+}

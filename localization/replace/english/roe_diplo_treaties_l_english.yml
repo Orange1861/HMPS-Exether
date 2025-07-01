@@ -1,0 +1,14 @@
+﻿l_english:
+
+license_soulwrought_production: "License Soulwrought Production"
+nice_try_jackass: "[SCOPE.sCountry('target_country').GetName] does not already have a license to produce [GetCulture('soulwrought').GetName]"
+DIPLOMATIC_ACCEPTANCE_LOW_POPULATION: "[SCOPE.sCountry('target').GetName] has a low population"
+DIPLOMATIC_ACCEPTANCE_LOW_POPULATION_OOPS: "[SCOPE.sCountry('actor').GetName] has a low population"
+ACCEPTANCE_FROM_HIGH_POPULATION: "[SCOPE.sCountry('actor').GetName] already has high population"
+ACCEPTANCE_FROM_HIGH_POPULATION_OOPS: "[SCOPE.sCountry('target').GetName] already has high population"
+DIPLOMATIC_ACCEPTANCE_FROM_EXISTING_LICENSE: "[SCOPE.sCountry('target').GetName] is already granting licenses"
+DIPLOMATIC_ACCEPTANCE_LOW_SOL: "[SCOPE.sCountry('target').GetName] is struggling to take care of the [Concept('concept_pop', '$concept_pops$')] it already has"
+DIPLOMATIC_ACCEPTANCE_ANGEL_DOMAIN: "[SCOPE.sCountry('target').GetName]'s religion is within the domain of the [concept_angel]"
+DIPLOMATIC_ACCEPTANCE_FEY_DOMAIN: "[SCOPE.sCountry('target').GetName]'s religion is within the domain of the [concept_fey]"
+DIPLOMATIC_ACCEPTANCE_SOULWROUGHT_ABOMINATION: "[GetCulture('soulwrought').GetName] are an #red #bold abomination#!#!"
+DIPLOMATIC_ACCEPTANCE_TOO_MANY_PEASANTS: "[SCOPE.sCountry('target').GetName] has too many peasants to want more [Concept('concept_pop', '$concept_pops$')]"

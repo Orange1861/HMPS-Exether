@@ -1,0 +1,90 @@
+﻿je_colonial_administration = {
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+	
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		OR = {
+			country_is_in_kailando = no
+			country_is_in_africa = no
+		}
+		country_is_in_africa = no
+		OR = {
+			has_interest_marker_in_region = sr:region_mindrend_sands
+			has_interest_marker_in_region = sr:region_scalethane_realms
+			has_interest_marker_in_region = sr:region_new_dumonia 
+			has_interest_marker_in_region = sr:region_thoughtsmith_ridge
+			has_interest_marker_in_region = sr:region_dreamweaver_jungle
+			has_interest_marker_in_region = sr:region_sarpakshetra
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_is_in_kailando = yes
+				state_is_in_africa = yes
+			}
+		}
+		has_technology_researched = colonization
+	}
+
+	immediate = {
+		random_state = {
+			limit = {
+				region = sr:region_mindrend_sands
+			}
+			save_scope_as = mindrend_sands_region_scope
+		}
+		random_state = {
+			limit = {
+				region = sr:region_scalethane_realms
+			}
+			save_scope_as = scalethane_realms_region_scope
+		}
+		random_state = {
+			limit = {
+				region = sr:region_new_dumonia
+			}
+			save_scope_as = new_dumonia_region_scope
+		}
+		random_state = {
+			limit = {
+				region = sr:region_thoughtsmith_ridge
+			}
+			save_scope_as = thoughtsmith_ridge_region_scope
+		}
+		random_state = {
+			limit = {
+				region = sr:region_dreamweaver_jungle
+			}
+			save_scope_as = dreamweaver_jungle_region_scope
+		}
+		random_state = {
+			limit = {
+				region = sr:region_sarpakshetra
+			}
+			save_scope_as = sarpakshetra_region_scope
+		}
+	}
+	
+	# Establish Colonial Administration
+	scripted_button = je_colonial_administration_button_mindrend_sands
+	scripted_button = je_colonial_administration_button_scalethane_realms
+	scripted_button = je_colonial_administration_button_new_dumonia
+	scripted_button = je_colonial_administration_button_thoughtsmith_ridge
+	scripted_button = je_colonial_administration_button_dreamweaver_jungle
+	scripted_button = je_colonial_administration_button_sarpakshetra
+
+	# Expand Colonial Administration
+	scripted_button = je_colonial_administration_button_expand_mindrend_sands
+	scripted_button = je_colonial_administration_button_expand_scalethane_realms
+	scripted_button = je_colonial_administration_button_expand_new_dumonia
+	scripted_button = je_colonial_administration_button_expand_thoughtsmith_ridge
+	scripted_button = je_colonial_administration_button_expand_dreamweaver_jungle
+	scripted_button = je_colonial_administration_button_expand_sarpakshetra
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

@@ -1,0 +1,32 @@
+﻿namespace = exether_industrial_accident_events
+
+
+exether_industrial_accident_events.1 = {
+	type = country_event
+	title = exether_industrial_accident_events.1.t
+	desc = exether_industrial_accident_events.1.d
+	flavor = exether_industrial_accident_events.1.f
+	dlc = dlc_roe
+	event_image = {
+		video = "asia_factory_accident"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	trigger = {
+		always = no
+	}
+	immediate = {
+
+	}
+
+	option = {
+		name = exether_industrial_accident_events.1.a
+
+	}
+
+}
+

@@ -1,0 +1,298 @@
+﻿has_arcana_gryphon = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = gryphon_domain
+			}
+		}
+		localization_key = custom_loc_gryphon_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = gryphon_domain }
+			}
+		}
+		localization_key = custom_loc_gryphon_heading_not
+	}
+}
+
+has_arcana_justice = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = justice_domain
+			}
+		}
+		localization_key = custom_loc_justice_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = justice_domain }
+			}
+		}
+		localization_key = custom_loc_justice_heading_not
+	}
+}
+
+has_arcana_sphinx = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = sphinx_domain
+			}
+		}
+		localization_key = custom_loc_sphinx_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = sphinx_domain }
+			}
+		}
+		localization_key = custom_loc_sphinx_heading_not
+	}
+}
+
+has_arcana_golem = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = golem_domain
+			}
+		}
+		localization_key = custom_loc_golem_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = golem_domain }
+			}
+		}
+		localization_key = custom_loc_golem_heading_not
+	}
+}
+
+has_arcana_unicorn = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = unicorn_domain
+			}
+		}
+		localization_key = custom_loc_unicorn_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = unicorn_domain }
+			}
+		}
+		localization_key = custom_loc_unicorn_heading_not
+	}
+}
+
+has_arcana_fey = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
+		}
+		localization_key = custom_loc_fey_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = fey_domain }
+			}
+		}
+		localization_key = custom_loc_fey_heading_not
+	}
+}
+
+has_arcana_phoenix = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = phoenix_domain
+			}
+		}
+		localization_key = custom_loc_phoenix_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = phoenix_domain }
+			}
+		}
+		localization_key = custom_loc_phoenix_heading_not
+	}
+}
+
+has_arcana_djinn = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = djinn_domain
+			}
+		}
+		localization_key = custom_loc_djinn_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = djinn_domain }
+			}
+		}
+		localization_key = custom_loc_djinn_heading_not
+	}
+}
+
+has_arcana_siren = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = siren_domain
+			}
+		}
+		localization_key = custom_loc_siren_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = siren_domain }
+			}
+		}
+		localization_key = custom_loc_siren_heading_not
+	}
+}
+
+has_arcana_kraken = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = kraken_domain
+			}
+		}
+		localization_key = custom_loc_kraken_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = kraken_domain }
+			}
+		}
+		localization_key = custom_loc_kraken_heading_not
+	}
+}
+
+has_arcana_fiend = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = fiend_domain
+			}
+		}
+		localization_key = custom_loc_fiend_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = fiend_domain }
+			}
+		}
+		localization_key = custom_loc_fiend_heading_not
+	}
+}
+
+has_arcana_angel = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = angel_domain
+			}
+		}
+		localization_key = custom_loc_angel_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = angel_domain }
+			}
+		}
+		localization_key = custom_loc_angel_heading_not
+	}
+}
+
+has_arcana_dragon = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+		}
+		localization_key = custom_loc_dragon_heading
+	}
+
+	text = {
+		trigger = {
+			religion = {
+				NOT = { has_discrimination_trait = dragon_domain }
+			}
+		}
+		localization_key = custom_loc_dragon_heading_not
+	}
+}

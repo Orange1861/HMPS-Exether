@@ -1,0 +1,65 @@
+﻿country_flavor_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		localization_key = country_flavor_loc_default
+		fallback = yes
+	}
+}
+
+salt_waste_cure_flavor = {
+	type = country
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+		}
+		localization_key = salt_waste_cure_flavor_dragon_domain
+	}
+	text = {
+		trigger = {
+			has_variable = harness_the_salt_waste_curse
+		}
+		localization_key = salt_waste_cure_flavor_harness
+	}
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			NOT = { has_variable = harness_the_salt_waste_curse }
+			religion = {
+				NOT = { has_discrimination_trait = dragon_domain }
+			}
+		}
+		localization_key = salt_waste_cure_flavor_default
+	}
+}
+
+salt_waste_cure_description = {
+	type = country
+	text = {
+		trigger = {
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+		}
+		localization_key = salt_waste_cure_description_dragon_domain
+	}
+	text = {
+		trigger = {
+			has_variable = harness_the_salt_waste_curse
+		}
+		localization_key = salt_waste_cure_description_harness
+	}
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			NOT = { has_variable = harness_the_salt_waste_curse }
+			religion = {
+				NOT = { has_discrimination_trait = dragon_domain }
+			}
+		}
+		localization_key = salt_waste_cure_description_default
+	}
+}

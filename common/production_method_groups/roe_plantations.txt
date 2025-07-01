@@ -1,0 +1,96 @@
+﻿pmg_base_building_songberry_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_songberry_plantation
+		automatic_irrigation_building_songberry_plantation
+	}
+}
+
+pmg_train_automation_building_songberry_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_songberry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_songberry_plantation
+		pm_gizmo_waterwrangler_2_songberry
+	}
+}
+
+
+pmg_base_building_wyrmfruit_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_wyrmfruit_plantation
+		automatic_irrigation_building_wyrmfruit_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_wyrmfruit = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_wyrmfruit_plantation
+		pm_gizmo_waterwrangler_2_wyrmfruit
+	}
+}
+
+
+pmg_train_automation_building_wyrmfruit_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+
+
+pmg_base_building_snowrubber_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_rubber_plantation
+		automatic_irrigation_building_rubber_plantation
+	}
+}
+
+pmg_train_automation_building_snowrubber_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+
+
+pmg_train_automation_building_mint_tea_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_sunweave_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_sunweave_plantation
+		automatic_irrigation_building_sunweave_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_sunweave = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_sunweave_plantation
+		pm_gizmo_waterwrangler_2_sunweave
+	}
+}

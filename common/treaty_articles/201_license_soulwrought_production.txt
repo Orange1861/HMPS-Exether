@@ -1,0 +1,661 @@
+license_soulwrought_production = {
+	kind = directed
+	cost = 50
+
+	relations_progress_per_day = 0.5
+	relations_improvement_max = 25
+
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/foreign_investment_agreement_treaties.dds"
+
+	flags = {
+		can_be_renegotiated
+	}
+
+	maintenance_paid_by = target_country
+	usage_limit = once_per_treaty
+
+	unlocked_by_technologies = {
+		thaumacore_factories
+	}
+
+	target_modifier = {
+		country_treaty_leverage_generation_add = 150
+	}
+
+	source_modifier = {
+		state_soulwrought_assembled_mult = -0.04
+	}
+	visible = {
+		has_technology_researched = gnome_tech
+
+	}
+
+	possible = {
+		custom_tooltip = license_soulwrought_tt
+		# scope:source_country ?= {
+		# 	has_technology_researched = gnome_tech
+		# 	OR = {
+		# 		is_subject = no
+		# 		c:RAV ?= this
+		# 		c:DRI ?= this  #we will come back and make it so Driftwynn requires permission from Ravik to export
+		# 	}
+		# }
+
+		# scope:target_country ?= {
+		# 	NOT = {
+		# 		has_technology_researched = gnome_tech
+		# 	}
+		# }
+	}
+
+	can_ratify = {
+		scope:source_country ?= {
+			has_technology_researched = gnome_tech
+			NOT = { is_country_type = preindustrial }
+			OR = {
+				is_subject = no
+				c:RAV ?= this
+				c:DRI ?= this  #we will come back and maybe make it so Driftwynn requires permission from Ravik to export
+			}
+		}
+		scope:target_country ?= {
+			has_technology_researched = thaumacore_factories
+			custom_tooltip = {
+				text = nice_try_jackass
+				NOT = { has_variable = soulwrought_production_var }
+			}
+		}
+        custom_tooltip = {
+            text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
+            NOT = {
+                scope:target_country = {
+                    any_scope_treaty = {
+						binds = scope:source_country
+                        hidden_trigger = {
+							OR = {
+								scope:treaty = {
+									is_renegotiation = no
+								}
+								scope:treaty.amended_treaty != this
+							}
+						}
+						any_scope_article = {
+							has_type = license_soulwrought_production
+							target_country = scope:target_country
+						}
+                    }
+                }
+            }
+        }
+	}
+
+	on_entry_into_force = {
+		scope:article_options.target_country ?= {
+			set_variable = soulwrought_production_var
+			if = {
+				limit = {
+					any_scope_state = {
+						state_has_building_type_levels = {
+							target = bt:building_soulwrought_assembly_plant value >= 1
+						}
+					}
+				}
+				every_scope_state = {
+					limit = {
+						state_has_building_type_levels = {
+							target = bt:building_soulwrought_assembly_plant value >= 1
+						}
+					}
+					activate_building = {
+						building = building_soulwrought_assembly_plant
+					}
+				}
+				
+			}
+		}
+
+	}
+
+	on_withdrawal = {
+		scope:article_options.target_country ?= {
+			remove_variable = soulwrought_production_var
+			if = {
+				limit = {
+					any_scope_state = {
+						state_has_building_type_levels = {
+							target = bt:building_soulwrought_assembly_plant value >= 1
+						}
+					}
+				}
+				every_scope_state = {
+					limit = {
+						state_has_building_type_levels = {
+							target = bt:building_soulwrought_assembly_plant value >= 1
+						}
+					}
+					deactivate_building = {
+						building = building_soulwrought_assembly_plant
+					}
+				}
+				
+			}
+		}
+	}
+	
+	on_break = {
+		scope:article_options.target_country ?= {
+			remove_variable = soulwrought_production_var
+			if = {
+				limit = {
+					any_scope_state = {
+						state_has_building_type_levels = {
+							target = bt:building_soulwrought_assembly_plant value >= 1
+						}
+					}
+				}
+				every_scope_state = {
+					limit = {
+						state_has_building_type_levels = {
+							target = bt:building_soulwrought_assembly_plant value >= 1
+						}
+					}
+					deactivate_building = {
+						building = building_soulwrought_assembly_plant
+					}
+				}
+				
+			}
+		}
+		scope:withdrawing_country = {
+			change_relations = { country = scope:non_withdrawing_country value = -10 }
+		}
+	}
+
+	ai = {
+
+		treaty_categories = {
+			economy
+		}
+
+		evaluation_chance = {
+			value = 0.05
+
+			add = {
+				value = country_rank
+				multiply = 0.05
+			}
+		}
+
+		article_ai_usage = {
+            request
+        }
+
+		inherent_accept_score = {
+			value = 0
+
+			if = {
+				limit = {
+					scope:target_country ?= this
+				}
+
+				# We are doing this to be able to reuse loc across treaties and diplomatic actions
+				scope:target_country = {
+					save_temporary_scope_as = target
+				}
+				scope:source_country = {
+					save_temporary_scope_as = actor
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
+					value = -10
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								pop_type_percent_country = {
+									pop_type = peasants
+									percent >= 0.25
+								}
+								total_population > 3000000 
+							}
+							pop_type_percent_country = {
+								pop_type = peasants
+								percent >= 0.5
+							}
+						}
+						
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_TOO_MANY_PEASANTS"
+						add = -15
+					}
+				}
+			
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_isolationism
+					}
+					add = {
+						desc = "law_isolationism"
+						add = -100
+					}
+				}
+
+				if = { 
+					limit = {
+						religion = {
+				 			has_discrimination_trait = angel_domain 
+						}
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_ANGEL_DOMAIN"
+						add = 20
+					}
+				}
+
+				if = { 
+					limit = {
+						any_primary_culture = {
+				 			has_discrimination_trait = thalorian_culture_group
+						}
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_SOULWROUGHT_ABOMINATION"
+						add = -1000
+					}
+				}
+				if = { 
+					limit = {
+						religion = {
+				 			has_discrimination_trait = fey_domain 
+						}
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_FEY_DOMAIN"
+						add = -50
+					}
+				}
+				if = {
+					limit = {
+						total_population < 4500000 
+					}
+
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_LOW_POPULATION"
+						value = root.total_population
+						subtract = 4500000 
+						multiply = -4
+						divide = 1000000
+						min = 1
+						max = 30
+					}
+				}
+
+				if = {
+					limit = {
+						average_sol < 12
+					}
+
+					subtract = {
+						desc = "DIPLOMATIC_ACCEPTANCE_LOW_SOL"
+						value = root.average_sol
+						subtract = 12
+						multiply = -3
+						min = 1
+						max = 20
+					}
+				}
+
+				if = {
+					limit = {
+						scope:target_country ?= {
+							total_population > 10000000
+						}
+					}
+					add = {
+						desc = "ACCEPTANCE_FROM_HIGH_POPULATION_OOPS"
+						value = "scope:target_country.total_population"
+						divide = 1000000
+						multiply = -1
+						min = -50
+					}
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_VALUE"
+					value = "mutual_trade_value_with_country(scope:source_country)"
+					multiply = 50000
+					divide = { # We modulate this value by GDP, clamped to a range to ensure it remains relevant for very small/very large economies
+						value = gdp
+						max = scope:source_country.gdp # We use whichever GDP is smaller
+						min = 1000000
+					}
+					max = 10
+				}
+				
+				add = {
+					desc = "ANTI_POLITICAL_LOBBY_ACCEPTANCE"
+					if = {
+						limit = { 
+							any_political_lobby = {
+								is_political_lobby_type = lobby_anti_country
+								target = scope:source_country
+							}
+						}
+						value = -25
+					}
+				}
+
+				add = {
+					desc = "PRO_POLITICAL_LOBBY_ACCEPTANCE"
+					if = {
+						limit = { 
+							any_political_lobby = {
+								is_political_lobby_type = lobby_pro_country
+								target = scope:source_country
+							}
+						}
+						value = 25
+					}
+					
+				}
+				
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:source_country
+									attitude = antagonistic
+								}
+								has_attitude = {
+									who = scope:source_country
+									attitude = belligerent
+								}
+								has_attitude = {
+									who = scope:source_country
+									attitude = rebellious
+								}
+							}
+						}
+						value = -1000
+					}
+				}
+			}
+			else = {
+				scope:target_country = {
+					save_temporary_scope_as = actor
+				}
+				scope:source_country = {
+					save_temporary_scope_as = target
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
+					value = -20
+				}
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_isolationism
+					}
+					add = {
+						desc = "law_isolationism"
+						add = -100
+					}
+				}
+				if = {
+					limit = {
+						scope:target_country ?= {
+							total_population < 2500000
+						}
+					}
+					add = {
+						desc = "ACCEPTANCE_FROM_LOW_POPULATION"
+						add = 10
+					}
+				}
+				if = {
+					limit = {
+						scope:target_country ?= {
+							total_population > 10000000
+						}
+					}
+					add = {
+						desc = "ACCEPTANCE_FROM_HIGH_POPULATION"
+						value = "scope:target_country.total_population"
+						divide = 1000000
+						multiply = -1
+						min = -50
+					}
+				}
+
+				if = {
+					limit = {
+						has_strategy = ai_strategy_economic_imperialism
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_ECONOMIC_IMPERIALISM"
+						add = 25
+					}
+				}
+
+				if = {
+					limit = {
+						any_scope_treaty = {
+							any_scope_article = {
+							has_type = license_soulwrought_production
+							count >= 2
+							}
+						}
+						NOT = { #don't count the source country towards this limit
+							any_scope_treaty = {
+								any_scope_article = {
+									has_type = license_soulwrought_production
+									target_country = scope:source_country
+								}
+							}	
+						}		
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_FROM_EXISTING_LICENSE"
+						add = -30
+					}
+				}
+
+				if = {
+					limit = {
+						any_scope_treaty = {
+							any_scope_article = {
+							has_type = license_soulwrought_production
+							count = 1
+							}
+						}
+						NOT = {	#don't count the source country towards this limit
+							any_scope_treaty = {
+								any_scope_article = {
+									has_type = license_soulwrought_production
+									target_country = scope:source_country
+								}
+							}	
+						}		
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_FROM_EXISTING_LICENSE"
+						add = -15
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_VALUE"
+					value = "mutual_trade_value_with_country(scope:target_country)"
+					multiply = 50000
+					divide = { # We modulate this value by GDP, clamped to a range to ensure it remains relevant for very small/very large economies
+						value = gdp
+						max = scope:target_country.gdp # We use whichever GDP is smaller
+						min = 1000000
+					}
+					max = 25
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					if = {
+						limit = {
+							OR = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = antagonistic
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = domineering
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = belligerent
+								}
+								has_attitude = {
+									who = scope:target_country
+									attitude = rebellious
+								}
+							}
+						}
+						value = -1000
+					}
+				}
+
+				add = {
+					desc = "ANTI_POLITICAL_LOBBY_ACCEPTANCE"
+					if = {
+						limit = { 
+							any_political_lobby = {
+								is_political_lobby_type = lobby_anti_country
+								target = scope:target_country
+							}
+						}
+						value = -25
+					}
+					
+				}
+
+				add = {
+					desc = "PRO_POLITICAL_LOBBY_ACCEPTANCE"
+					if = {
+						limit = { 
+							any_political_lobby = {
+								is_political_lobby_type = lobby_pro_country
+								target = scope:target_country
+							}
+						}
+						value = 25
+					}
+					
+				}
+
+				if = {
+					limit = {
+						exists = power_bloc
+						exists = scope:target_country.power_bloc
+					}
+					if = {
+						limit = {
+							power_bloc = scope:target_country.power_bloc
+						}
+						add = {
+							desc = "DIPLOMATIC_ACCEPTANCE_SAME_POWER_BLOC"
+							value = 25
+						}
+					}
+					else = {
+						add = {
+							desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_POWER_BLOC"
+							value = -25
+						}
+					}
+				}
+			}
+		}
+
+		contextual_accept_score = {
+			
+		}
+
+		# wargoal_score_multiplier = {
+		# 	value = 1
+
+		# 	if = {
+		# 		limit = {
+		# 			scope:source_country = {
+		# 				has_diplomatic_pact = {
+		# 					who = root
+		# 					type = embargo
+		# 				}
+		# 			}
+		# 			can_reach_source_country = yes
+		# 		}
+		# 		add = 1
+		# 	}
+
+		# 	# Not worth doing by or against very small countries
+		# 	if = {
+		# 		limit = {
+		# 			OR = {
+		# 				gdp < 2000000
+		# 				scope:source_country = {
+		# 					gdp < 500000
+		# 				}
+		# 			}
+		# 		}
+		# 		multiply = 0
+		# 	}
+		# }
+	}
+
+	# wargoal = {
+	# 	execution_priority = 3
+
+	# 	contestion_type = control_any_target_incorporated_state
+
+	# 	maneuvers = {
+	# 		value = 0
+
+	# 		add = {
+	# 			desc = "MANEUVERS_BASE_VALUE"
+	# 			value = 2.5
+	# 		}
+
+	# 		scope:source_country = {
+	# 			multiply = {
+	# 				desc = "MANEUVERS_source_country_POPULATION_FACTOR"
+	# 				value = total_population
+	# 				divide = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR
+	# 				multiply = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER
+    #                 max = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+	# 			}
+	# 		}
+	# 	}
+
+	# 	infamy = {
+	# 		value = 0
+
+	# 		add = {
+	# 			desc = "INFAMY_BASE_VALUE"
+	# 			value = 0.25
+	# 		}
+
+	# 		scope:source_country = {
+	# 			multiply = {
+	# 				desc = "INFAMY_source_country_POPULATION_FACTOR"
+	# 				value = total_population
+	# 				divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+	# 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+	# 				max = 50
+	# 			}
+	# 		}
+	# 	}
+	# }
+}

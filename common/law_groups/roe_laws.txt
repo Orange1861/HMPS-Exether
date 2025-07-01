@@ -1,0 +1,42 @@
+﻿# EXETHER LAWS
+
+lawgroup_magic = {
+	law_group_category = power_structure
+
+	progressive_movement_chance = 1
+	regressive_movement_chance = 0.255
+}
+
+lawgroup_environment = {
+	law_group_category = human_rights
+
+	progressive_movement_chance = 1
+	regressive_movement_chance = 0.255
+}
+
+lawgroup_avian_caste_hegemony = {
+	law_group_category = power_structure
+	affected_by_regime_change = yes
+	linked_social_hierarchy = avian_social_hierarchy
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_west_avian_caste_hegemony = {
+	law_group_category = power_structure
+	affected_by_regime_change = yes
+	linked_social_hierarchy = west_avian_social_hierarchy
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
+lawgroup_dwarf_guild_dominance = {
+	law_group_category = economy
+	affected_by_regime_change = yes
+	linked_social_hierarchy = dwarf_social_hierarchy
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}

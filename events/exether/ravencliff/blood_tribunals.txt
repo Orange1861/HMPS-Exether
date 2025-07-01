@@ -1,0 +1,579 @@
+﻿namespace = blood_tribunal
+
+blood_tribunal.1 = {
+	type = country_event
+	placement = root
+	title = blood_tribunal.1.t
+	desc = blood_tribunal.1.d
+	flavor = blood_tribunal.1.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "southamerica_slaves_night"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blood_tribunal.1.a #the weak will tithe
+        show_as_tooltip = {
+            add_journal_entry = {
+                type = je_blood_tribunal
+            }
+        }
+        if = {
+            limit = {
+                is_ai = yes
+            }
+            remove_modifier = lords_of_ravencliff
+            add_modifier = {
+                name = lords_of_ravencliff_ai
+            }
+            random_list = {
+                66 = {
+                    add_modifier = {
+                        name = vampiric_might_ai
+                        years = 13
+                    }
+                }
+                33 = {
+
+                }
+            }
+        }
+	}
+}
+
+blood_tribunal.2 = {
+	type = country_event
+	placement = root
+	title = blood_tribunal.2.t
+	desc = blood_tribunal.2.d
+	flavor = blood_tribunal.2.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_images/dreadmoor.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { #triggered by JE success
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blood_tribunal.2.a #we have taken our rightful place
+        add_modifier = {
+            name = ravencliff_high_tribunal 
+           }
+        set_variable = {
+            name = high_tribunal_variable
+        }
+        add_journal_entry = {
+            type = je_high_courts
+        }
+	}
+}
+
+blood_tribunal.3 = { #event on first tithe
+	type = country_event
+	placement = root
+	title = blood_tribunal.3.t
+	desc = blood_tribunal.3.d
+	flavor = blood_tribunal.3.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blood_tribunal.3.a 
+		set_variable = {
+            name = familiars_handling_tithes
+            years = 10
+        } 
+            add_modifier = {
+                name = uneventful_tithe years = 1
+               }  
+	}
+}
+
+# blood_tribunal.4 = {
+#     type = country_event
+#     placement = root
+
+#     title = blood_tribunal.4.t
+#     desc = blood_tribunal.4.d
+#     flavor = blood_tribunal.4.f
+#     hidden = yes
+#     duration = 3
+# 	event_image = {
+# 		texture = "gfx/event_images/dreadmoor.dds"
+# 	}
+#     trigger = {
+#         this = c:RVC
+#         any_subject_or_below = {
+#             exists = this
+#         }
+#     }
+
+#     immediate = {
+#         every_subject_or_below = {
+#             ordered_scope_state = {
+#                 order_by = state_population
+#                 reverse = yes
+#                 save_scope_as = most_populated_state
+#             }
+
+#             scope:most_populated_state = {
+#                 convert_population = {
+#                     target = rel:dummy_religion 
+#                     value = 0.04
+#                 }
+
+#                 every_scope_pop = {
+#                     limit = {
+#                         religion = rel:dummy_religion
+#                     }
+#                     move_pop = c:RVC.capital
+#                 }
+#             }
+#         }
+
+#         capital = {
+#             every_scope_pop = {
+#                 limit = {
+#                     this = { 
+# 					    religion = rel:dummy_religion 
+# 				    }
+#                 }
+#                 change_pop_religion = {
+#                     target = rel:lunar_masquerade
+#                     value = 1.0
+#                 }
+#             }
+#         }
+#     }
+
+# 	option = {
+# 		name = blood_tribunal.4.a
+# 	}
+# }
+
+blood_tribunal.5 = {
+    type = country_event
+    placement = root
+    title = blood_tribunal.5.t
+    desc = blood_tribunal.5.d
+    flavor = blood_tribunal.5.f
+    hidden = yes
+    duration = 3
+
+    trigger = {
+        this = c:RVC
+        any_subject_or_below = {
+            exists = this
+        }
+    }
+
+    immediate = {
+        every_subject_or_below = {
+            ordered_scope_state = {
+                order_by = state_population
+                save_scope_as = most_populated_state
+            }
+        
+            scope:most_populated_state = {
+                convert_population = {
+                    target = rel:dummy_religion 
+                    value = 0.06
+                }
+
+                every_scope_pop = {
+                    limit = {
+                        religion = rel:dummy_religion
+                    }
+                    move_pop = c:RVC.capital
+                }
+            }
+        }
+
+        capital = {
+            every_scope_pop = {
+                limit = {
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
+                }
+                    change_pop_religion = {
+                        target = rel:lunar_masquerade
+                        value = 1.0
+                    }
+            }
+        }
+        
+    }
+}
+
+blood_tribunal.6 = {
+    type = country_event
+    placement = root
+    hidden = yes
+    title = blood_tribunal.6.t
+    desc = blood_tribunal.6.d
+    flavor = blood_tribunal.6.f
+    orphan = yes
+    duration = 3
+
+    trigger = {
+        this = c:RVC
+        any_subject_or_below = {
+            exists = this
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_scope_state = {
+				    has_decree = decree_special_measures
+			    }
+            }
+            random_scope_state = {
+                limit = {
+                    has_decree = decree_special_measures
+                }
+                save_scope_as = tithe_recipient
+            }
+        }
+        else = {
+            ordered_scope_state = {
+                limit = {
+                    is_incorporated = yes
+                }
+			    order_by = available_jobs
+			    save_scope_as = tithe_recipient
+		    }
+        }
+        every_subject_or_below = { #avoids vampires, or subjects of vampires
+            limit = {
+                NOT = {
+                    OR = {
+                        any_primary_culture = {
+                            has_discrimination_trait = vampiric
+                        }
+                        overlord ?= {
+                            NOT = { this = root }
+                            any_primary_culture = {
+                                has_discrimination_trait = vampiric
+                            }
+                        }
+                    }
+                }
+            }
+            ordered_scope_state = {
+                order_by = state_population
+                save_scope_as = most_populated_state
+            }
+
+            scope:most_populated_state = {
+                convert_population = {
+                    target = rel:dummy_religion 
+                    value = 0.06
+                }
+
+                every_scope_pop = {
+                    limit = {
+                        religion = rel:dummy_religion
+                    }
+                    move_pop = scope:tithe_recipient
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_law = law_type:law_state_atheism
+            }
+            scope:tithe_recipient = {
+                every_scope_pop = {
+                    limit = {
+                            religion = rel:dummy_religion 
+                        }
+                        change_pop_religion = {
+                            target = rel:atheist
+                            value = 1.0
+                        }
+                    }
+                }
+        }
+        else = {
+            random_scope_pop = {
+				limit = {
+					has_state_religion = yes
+				}
+				religion = {
+					save_scope_as = majority_religion
+				}
+			}
+            scope:tithe_recipient = {
+                every_scope_pop = {
+                    limit = {
+                            religion = rel:dummy_religion 
+                        }
+                        change_pop_religion = {
+                            target = scope:majority_religion
+                            value = 1.0
+                        }
+                    }
+                }
+        }
+
+        }
+    
+}
+
+blood_tribunal.7 = {
+    type = country_event
+    placement = root
+    title = blood_tribunal.7.t
+    desc = blood_tribunal.7.d
+    flavor = blood_tribunal.7.f
+    duration = 3
+    hidden = yes
+    trigger = {
+        any_subject_or_below = {
+            exists = this
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_scope_state = {
+				    has_decree = decree_special_measures
+			    }
+            }
+            random_scope_state = {
+                limit = {
+                    has_decree = decree_special_measures
+                }
+                save_scope_as = tithe_recipient
+            }
+        }
+        else = {
+            ordered_scope_state = {
+                limit = {
+                    is_incorporated = yes
+                }
+			    order_by = available_jobs
+			    save_scope_as = tithe_recipient
+		    }
+        }
+
+        every_subject_or_below = {
+            limit = {
+                NOT = {
+                    OR = {
+                        any_primary_culture = {
+                            has_discrimination_trait = vampiric
+                        }
+                        overlord ?= {
+                            NOT = { this = root }
+                            any_primary_culture = {
+                                has_discrimination_trait = vampiric
+                            }
+                        }
+                    }
+                }
+            }
+            ordered_scope_state = {
+                order_by = state_population
+                save_scope_as = most_populated_state
+            }
+
+            scope:most_populated_state = {
+                convert_population = {
+                    target = rel:dummy_religion 
+                    value = 0.04
+                }
+
+                every_scope_pop = {
+                    limit = {
+                        religion = rel:dummy_religion
+                    }
+                    move_pop = scope:tithe_recipient
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_law = law_type:law_state_atheism
+            }
+            scope:tithe_recipient = {
+                every_scope_pop = {
+                    limit = {
+                            religion = rel:dummy_religion 
+                        }
+                        change_pop_religion = {
+                            target = rel:atheist
+                            value = 1.0
+                        }
+                    }
+                }
+        }
+        else = {
+            random_scope_pop = {
+				limit = {
+					has_state_religion = yes
+				}
+				religion = {
+					save_scope_as = majority_religion
+				}
+			}
+            scope:tithe_recipient = {
+                every_scope_pop = {
+                    limit = {
+                            religion = rel:dummy_religion 
+                        }
+                        change_pop_religion = {
+                            target = scope:majority_religion
+                            value = 1.0
+                        }
+                    }
+                }
+        }
+
+        }
+    
+}
+
+blood_tribunal.8 = { #detestable harvest
+	type = country_event
+	placement = root
+	title = blood_tribunal.8.t
+	desc = blood_tribunal.8.d
+	flavor = blood_tribunal.8.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 6
+    }
+	event_image = {
+		video = "haunted_house"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+    
+            has_variable = familiars_handling_tithes
+        
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blood_tribunal.8.a 
+        hidden_effect = {
+            add_modifier = {
+                name = unsavory_tithe years = 1
+               }  
+        }
+        custom_tooltip = cult_1_tt
+        show_as_tooltip = {
+            random_scope_state = {
+                add_modifier = {
+                    name = unsavory_tithe years = 1
+                }
+            }
+
+        }
+
+	}
+}
+
+blood_tribunal.9 = { #seditious rumors
+	type = country_event
+	placement = root
+	title = blood_tribunal.9.t
+	desc = blood_tribunal.9.d
+	flavor = blood_tribunal.9.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 5
+    }
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+    
+            has_variable = familiars_handling_tithes
+        
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blood_tribunal.9.a 
+        default_option = yes
+            add_modifier = {
+                name = seditious_rumors years = 2
+               }  
+       
+
+	}
+
+    option = {
+		name = blood_tribunal.9.b 
+       
+            add_modifier = {
+                name = crackdown_on_rumormongers years = 1
+               }  
+        
+
+	}
+}

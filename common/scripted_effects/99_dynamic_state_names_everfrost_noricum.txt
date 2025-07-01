@@ -1,0 +1,540 @@
+﻿assign_state_name_region_west_everfrost = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_HALSTEAD ?= this
+            }
+        }
+        STATE_HALSTEAD_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SIFSKER ?= this
+            }
+        }
+        STATE_SIFSKER_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_HRAFNSDALR ?= this
+            }
+        }
+        STATE_HRAFNSDALR_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WYRMBONE_CLIFFS ?= this
+            }
+        }
+        STATE_WYRMBONE_CLIFFS_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_NORDFJALL ?= this
+            }
+        }
+        STATE_NORDFJALL_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_DRAGONBANE_TUNDRA ?= this
+            }
+        }
+        STATE_DRAGONBANE_TUNDRA_state_name_assign = yes
+    }
+
+}
+
+STATE_HALSTEAD_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                ocelian_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HALSTEAD_ocelian
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HALSTEAD_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HALSTEAD_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_HRAFNSDALR_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                ocelian_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HRAFNSDALR_ocelian
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                common_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HRAFNSDALR_common
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HRAFNSDALR_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HRAFNSDALR_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_WYRMBONE_CLIFFS_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = giant_heritage
+                        }
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WYRMBONE_CLIFFS_giant
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                ocelian_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WYRMBONE_CLIFFS_ocelian
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WYRMBONE_CLIFFS_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WYRMBONE_CLIFFS_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_SIFSKER_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                common_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SIFSKER_common
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                ocelian_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SIFSKER_ocelian
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SIFSKER_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SIFSKER_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_NORDFJALL_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                common_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NORDFJALL_common
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                ocelian_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NORDFJALL_ocelian
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NORDFJALL_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NORDFJALL_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_DRAGONBANE_TUNDRA_state_name_assign = {
+
+
+   if = {
+        limit = {
+            owner ?= {
+                ocelian_language_trigger = yes
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+        
+        set_state_name = STATE_DRAGONBANE_TUNDRA_ocelian
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_DRAGONBANE_TUNDRA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_DRAGONBANE_TUNDRA_vairia
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}

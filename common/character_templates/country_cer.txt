@@ -1,0 +1,30 @@
+﻿### Australia character template file ###
+
+# South Australia
+
+CER_ludric_zarnak = {
+	first_name = "Ludric"
+	last_name = "Zarnak"
+	historical = yes
+	ruler = yes
+	age = 72
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian
+	dna = dna_ludric_zarnak
+	traits = {
+		war_criminal
+		celebrity_commander
+		direct
+		imposing
+	}
+	on_created = {
+        set_variable = {
+            name = is_ludric
+        }
+
+		set_variable = {
+			name = memento_mori_immunity
+			years = 2
+		}             
+    }
+}	

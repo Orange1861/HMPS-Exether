@@ -1,0 +1,46 @@
+﻿namespace = exether_weather
+
+# exether_weather.1 = {
+# 	type = state_event
+# 	placement = ROOT
+# 	title = exether_weather.1.t
+# 	desc = exether_weather.1.d
+# 	flavor = exether_weather.1.f
+
+# 	duration = 3
+
+
+# 	event_image = {
+# 		video = "asia_farmers_market"
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+# 	trigger = {
+
+# 	}
+
+# 	immediate = {
+# 		s:STATE_SAMIEL = {
+
+# 			scope:region = {
+# 				start_harvest_condition = draconic_submachina
+# 			}
+# 		}	
+# 	}
+
+# 	option = {
+# 		name = exether_weather.1.a 
+# 		default_option = yes
+# 		s:STATE_SAMIEL = {
+
+# 			scope:region = {
+# 				start_harvest_condition = draconic_submachina
+# 			}
+# 		}
+# 	}
+
+# }
+

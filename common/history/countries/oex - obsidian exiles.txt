@@ -1,0 +1,62 @@
+﻿COUNTRIES = {
+	c:OEX = {
+		effect_starting_technology_tier_2_tech = yes
+		add_technology_researched = nationalism
+		add_technology_researched = hydraulic_cranes
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = mechanical_tools
+		add_technology_researched = organized_adventuring
+		add_technology_researched = intensive_agriculture
+		add_technology_researched = skyports
+		add_technology_researched = railways
+		add_technology_researched = cloudsilver_refining
+		
+		# Laws 
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_dwarf_no_guild_privileges
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_colonial_resettlement
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_debt_slavery
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_divine_miracles
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_censorship
+
+		add_taxed_goods = g:trinkets
+		add_taxed_goods = g:liquor
+		
+				ig:ig_intelligentsia= { 
+			add_ideology = ideology_pro_slavery
+			remove_ideology = ideology_anti_slavery
+		}
+
+		ig:ig_devout= { 
+			add_ideology = ideology_pro_slavery
+			remove_ideology = ideology_patriarchal
+		}
+
+		ig:ig_mages= { 
+			add_ideology = ideology_pro_slavery
+		}
+
+		ig:ig_industrialists= { 
+			add_ideology = ideology_pro_slavery
+		}
+
+		ig:ig_petty_bourgeoisie= { 
+			add_ideology = ideology_pro_slavery
+		}
+		
+
+		add_modifier = {
+			name = fire_giant_slaves
+		}
+
+	}
+}

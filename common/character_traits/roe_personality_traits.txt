@@ -1,0 +1,973 @@
+﻿### Starbrands
+
+starbrand_gryphon = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+	
+	character_modifier = {
+		character_popularity_add = 20
+	}
+	command_modifier = {
+		character_supply_route_cost_mult = -0.25
+		character_battle_condition_good_visibility_mult = 1
+	}
+
+	country_modifier = {
+		country_authority_mult = -0.10
+		country_influence_mult = 0.10
+		state_loyalists_from_political_movements_mult = 0.10
+	}
+
+	agitator_modifier = {
+		political_movement_radicalism_mult = 0.20
+	}
+
+	interest_group_modifier = {
+		interest_group_in_opposition_approval_add = -2
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_trade_unions
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = gryphon_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that boost agitators are more common on agitators
+				has_role = agitator
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_justice = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+	}
+	
+	command_modifier = {
+		character_battle_condition_logistics_secured_mult = 1
+		unit_morale_loss_mult = -0.05
+		unit_supply_consumption_mult = -0.05
+	}
+
+	country_modifier = {
+		country_infamy_decay_mult = -0.25
+		country_legitimacy_base_add = 10
+		country_bureaucrats_pol_str_mult = 0.20
+	}
+
+	agitator_modifier = {
+		political_movement_radicalism_add = -0.15
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = -0.05
+		interest_group_pol_str_mult = 0.05
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_rural_folk
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = justice_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that weaken agitators are less common on agitators
+				has_role = agitator
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_sphinx = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_popularity_add = -10
+	}
+	
+	command_modifier = {
+		character_command_limit_mult = 0.20
+		character_battle_condition_careful_maneuver_mult = 1
+	}
+
+	country_modifier = {
+		country_weekly_innovation_mult = 0.1
+		country_tech_spread_mult = -0.1
+		country_academics_pol_str_mult = 0.20
+	}
+
+	agitator_modifier = {
+		political_movement_radicalism_mult = -0.10
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.10
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_petty_bourgeoisie
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = sphinx_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that weaken agitators are less common on agitators
+				has_role = agitator
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_golem = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_popularity_add = -20
+	}
+	command_modifier = {
+		unit_defense_mult = 0.1
+		character_battle_condition_dug_in_mult = 1
+	}
+
+	country_modifier = {
+		country_authority_mult = 0.1
+		country_influence_mult = -0.1
+		state_radicals_from_political_movements_mult = 0.1
+	}
+
+	agitator_modifier = {
+		political_movement_radicalism_mult = -0.20
+	}
+
+	interest_group_modifier = {
+		interest_group_in_government_approval_add = 2
+	}
+
+	possible = {
+		NOR = {
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = golem_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that weaken agitators are less common on agitators
+				has_role = agitator
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_unicorn = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_popularity_add = 30
+	}
+	command_modifier = {
+		unit_kill_rate_add = -0.1
+		unit_morale_loss_mult = -0.25
+	}
+
+	country_modifier = {
+		country_officers_pol_str_mult = -0.20
+		country_infamy_generation_mult = 0.2
+		state_radicalism_increases_violent_hostility_mult = -0.10
+		state_radicalism_increases_cultural_erasure_mult = -0.10
+		state_radicalism_increases_open_prejudice_mult = -0.10
+	}
+
+	agitator_modifier = {
+	}
+
+	interest_group_modifier = {
+		interest_group_approval_add = 1
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_armed_forces
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = unicorn_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_fey = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_health_add = 0.1
+	}
+	command_modifier = {
+		unit_recovery_rate_add = 0.15 #Fey helps casualties recover quicker
+	}
+
+	country_modifier = {
+		country_farmers_pol_str_mult = 0.20 #Debuffing clergy strength doesn't fit Fey
+		country_prestige_mult = -0.05
+		state_birth_rate_mult = 0.02 #Birth seems better than mortality for Fey
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = 0.20
+	}
+
+	interest_group_modifier = {
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_industrialists
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = fey_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that boost agitators are more common on agitators
+				has_role = agitator
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_phoenix = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_health_add = -0.05
+	}
+	command_modifier = {
+		unit_offense_mult = 0.10
+		character_battle_condition_aggressive_maneuver_mult = 1
+	}
+
+	country_modifier = {
+		country_diplomatic_play_maneuvers_add = 20
+		country_prestige_from_army_power_projection_mult = 0.10
+		country_bureaucracy_mult = -0.05
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = 0.10
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = 0.20
+	}
+
+	possible = {
+		NOR = {
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = phoenix_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that boost agitators are more common on agitators
+				has_role = agitator
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_djinn = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+	}
+	
+	command_modifier = {
+		unit_supply_consumption_mult = 0.05
+		unit_morale_damage_mult = 0.05
+		character_battle_condition_surprise_maneuver_mult = 1
+	}
+
+	country_modifier = {
+		country_infamy_decay_mult = 0.25
+		country_legitimacy_base_add = -10
+		country_bureaucrats_pol_str_mult = -0.20
+	}
+
+	agitator_modifier = {
+		political_movement_radicalism_mult = 0.15
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = 0.05
+		interest_group_pol_str_mult = -0.05
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_landowners
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = djinn_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that boost agitators are more common on agitators
+				has_role = agitator
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_siren = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_popularity_add = 10
+	}
+	
+	command_modifier = {
+		unit_morale_recovery_mult = 0.2
+		character_battle_condition_camouflaged_mult = 1
+	}
+
+	country_modifier = {
+		country_weekly_innovation_mult = -0.1
+		country_tech_spread_mult = 0.1
+		country_academics_pol_str_mult = -0.20
+	}
+
+	agitator_modifier = {
+		political_movement_radicalism_mult = 0.10
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = -0.10
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_intelligentsia
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = siren_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that boost agitators are more common on agitators
+				has_role = agitator
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_kraken = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_health_add = 0.05
+	}
+	command_modifier = {
+		character_convoy_raiding_mult = 0.5
+		character_battle_condition_rough_waters_mult = -0.50
+	}
+
+	country_modifier = {
+		country_diplomatic_play_maneuvers_add = -20
+		country_prestige_from_navy_power_projection_mult = 0.10
+		country_bureaucracy_mult = 0.05
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = -0.10
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = -0.20
+	}
+
+	possible = {
+		NOR = {
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_fiend
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = kraken_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that weaken agitators are less common on agitators
+				has_role = agitator
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_fiend = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_popularity_add = -30
+	}
+	command_modifier = {
+		unit_kill_rate_add = 0.1
+		unit_morale_loss_mult = 0.25
+	}
+
+	country_modifier = {
+		country_officers_pol_str_mult = 0.20
+		country_infamy_generation_mult = -0.2
+		state_radicalism_increases_violent_hostility_mult = 0.10
+		state_radicalism_increases_cultural_erasure_mult = 0.10
+		state_radicalism_increases_open_prejudice_mult = 0.10
+	}
+
+	agitator_modifier = {
+	}
+
+	interest_group_modifier = {
+		interest_group_approval_add = -1
+	}
+
+	possible = {
+		NOR = {
+			is_interest_group_type = ig_devout
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_angel
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = fiend_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}
+
+starbrand_angel = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/trait_starsign.dds"
+
+	character_modifier = {
+		character_health_add = -0.1
+	}
+	command_modifier = {
+		battle_casualties_mult = -0.15 #angel reduces overall casualties
+	}
+
+	country_modifier = {
+		country_clergy_pol_str_mult = 0.20 
+		country_prestige_mult = 0.05
+		state_mortality_mult = -0.02
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = -0.20
+	}
+
+	interest_group_modifier = {
+	}
+
+	possible = {
+		NOR = {
+			has_trait = starbrand_gryphon
+			has_trait = starbrand_justice
+			has_trait = starbrand_sphinx
+			has_trait = starbrand_golem
+			has_trait = starbrand_unicorn
+			has_trait = starbrand_fey
+			has_trait = starbrand_phoenix
+			has_trait = starbrand_djinn
+			has_trait = starbrand_siren
+			has_trait = starbrand_kraken
+			has_trait = starbrand_fiend
+		}
+	}
+
+	weight = {
+		value = 0.4 #we should write a system that applies it based on birth year/month
+		if = {
+			limit = { # Starbranded leaders more likely under Magocracies
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = 0.2
+		}
+		if = { #religious alignment
+            limit = {
+                religion = {
+                    has_discrimination_trait = angel_domain
+                }
+            }
+            multiply = 2
+        }
+		if = {
+			limit = { #star signs that weaken agitators are less common on agitators
+				has_role = agitator
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = { #mages more likely to be starbranded
+				is_interest_group_type = ig_mages
+			}
+			multiply = 2
+		}
+	}
+
+	replace = {
+		trait_child #we should also apply it at birth instead
+	}
+
+	value = 1
+}

@@ -1,0 +1,180 @@
+﻿je_dcw_countdown = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_historical_content
+
+	immediate = {
+		set_variable = {
+			name = dcw_progress_var
+			value = 0
+		}
+
+		ig:ig_industrialists = {
+			save_scope_as = consortium_scope
+		}
+
+		random_law = {
+			limit = { type = law_type:law_guild_bondage }
+			save_scope_as = guild_bondage_scope
+		}
+	}
+
+	timeout = 10950
+
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+
+	on_complete = {
+		set_variable = je_dcw_countdown_complete
+		trigger_event = { id = dcw_events.1 days = 0 popup = yes }
+	}
+
+	fail = {
+		OR = {
+			has_civil_war_from_movement_type = movement_type:movement_pro_consortium
+			has_civil_war_from_movement_type = movement_type:movement_romantic
+		}	
+	}
+
+	on_fail = {
+		trigger_event = { id = dcw_events.2 days = 0 popup = yes }
+
+		if = {
+			limit = {
+				has_civil_war_from_movement_type = movement_type:movement_pro_consortium
+				
+			}
+			if = {
+				limit = {
+					has_law = law_type:law_guild_bondage
+				}
+				trigger_event = { id = dcw_events.5 days = 7 popup = yes }
+			}
+		}
+	}
+
+	on_timeout = {
+		trigger_event = { id = dcw_events.3 days = 0 popup = yes }
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					has_law = law_type:law_guild_bondage
+					ig:ig_industrialists = {
+						is_in_government = yes
+					}
+				}
+				change_variable = {
+					name = dcw_progress_var
+					add = 1
+				}
+			}
+		}
+	}
+	on_yearly_pulse = {
+		random_events = {
+			140 = 0
+			20 = dcw_events.10
+			20 = dcw_events.11
+			20 = dcw_events.12
+		}
+	}
+
+	current_value = {
+		value = root.var:dcw_progress_var
+	}
+
+	goal_add_value = {
+		value = 240
+	}
+
+	progressbar = yes
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}
+
+je_dcw_war = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_historical_content
+
+	complete = {
+		custom_tooltip = {
+			text = dcw_war_tt_complete
+			scope:target = { is_country_alive = no }
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				has_law = law_type:law_guild_bondage
+			}
+			trigger_event = { id = dcw_events.1 days = 0 popup = yes }
+		}
+		else = {
+			trigger_event = { id = dcw_events.4 days = 0 popup = yes }
+
+		}
+	}
+
+	on_monthly_pulse = {
+	}
+
+	should_be_pinned_by_default = yes
+	
+	can_revolution_inherit = no
+}
+
+je_vinewell_accords = {
+	icon = "gfx/interface/icons/event_icons/event_accords.dds"
+
+	group = je_group_historical_content
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_vinewell_accords_status
+			}
+		}
+	}
+
+
+	immediate = {
+		c:DUM = {
+			save_scope_as = dumonia_scope
+		}
+	}
+
+
+	complete = {
+		NOR = {
+			has_journal_entry = je_dcw_countdown
+			has_civil_war_from_movement_type = movement_type:movement_pro_consortium
+			has_civil_war_from_movement_type = movement_type:movement_romantic
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = dcw_events.9 days = 14 popup = yes }
+	}
+
+	on_monthly_pulse = {
+	}
+
+	modifiers_while_active = {
+		arrador_consortium_political_ban
+		total_financial_autonomy
+	}
+
+	should_be_pinned_by_default = yes
+	
+	can_revolution_inherit = no
+}

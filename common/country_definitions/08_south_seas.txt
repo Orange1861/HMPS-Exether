@@ -1,0 +1,333 @@
+﻿#Devil's Exile
+DEV = {
+	color = rgb{ 70 0 0 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { jazamandroso } 
+	capital = STATE_VAROTSOA
+}
+
+#Aye-aye Coast
+AYE = {
+	color = rgb{ 70 20 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { jazamandroso lacertian } 
+	capital = STATE_FIANARIVO
+}
+
+#Seraphora
+SPH = {
+	color = rgb{ 60 80 20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lacertian } 
+	capital = STATE_NOLOGO_RULL
+}
+
+#Eldraloori
+EOO = {
+	color = rgb{ 70 0 50 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lacertian } 
+	capital = STATE_BYS_LOWAE
+}
+
+#Lirionthal
+LIR = {
+	color = rgb{  155 155 156 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { cithrel } 
+	capital = STATE_YNTHOLG
+}
+
+#Senlindao
+SEN = {
+	color = rgb{ 60 72 60 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { castaway_dwarf } 
+	capital = STATE_LUMO
+}
+
+#Amanzi
+AZI = {
+	color = rgb{ 60 172 160 } 
+
+	country_type = recognized
+
+	tier = kingdom
+
+
+	cultures = { zemvelo } 
+	capital = STATE_MALANDA
+}
+
+#Bone Tide Raiders
+BTR = {
+	color = rgb{ 120 120 120 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+
+	cultures = { south_sea_ravager } 
+	capital = STATE_ARGYSTSIK
+}
+
+
+#Silver Serpents
+#IMA = {
+#	color = rgb{ 120 120 120 } 
+#
+#	country_type = unrecognized
+#
+#	tier = principality
+#
+#
+#	cultures = { south_sea_ravager } 
+#	capital = STATE_HILOKINI
+#}
+
+#Crimson Corsairs
+#CCO = {
+#	color = rgb{ 100 0 0 } 
+#
+#	country_type = unrecognized
+#
+#	tier = principality
+#
+#
+#	cultures = { south_sea_ravager } 
+#	capital = STATE_ARGYSTSIK
+#}
+
+#Varaescas
+AES = {
+	color = rgb{ 160 72 160 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+
+	cultures = { kailando_lacertian } 
+	capital = STATE_SQUKI_IHI
+}
+
+#Rastejabios
+RAS = {
+	color = rgb{ 160 172 60 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+
+	cultures = { kailando_lacertian } 
+	capital = STATE_MISQISIMI
+}
+
+#Abater
+ABA = {
+	color = rgb{ 0 72 60 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+
+	cultures = { east_lacertian } 
+	capital = STATE_ARGYSTSIK
+}
+
+#Serpovito
+SEP = {
+	color = rgb{ 0 72 240 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+
+	cultures = { kailando_lacertian } 
+	capital = STATE_MOYHOSTUPI
+}
+
+#Rastegran
+RAT = {
+	color = rgb{ 50 122 60 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+
+	cultures = { kailando_lacertian } 
+	capital = STATE_OULOMYSSI
+}
+
+#Noturno
+NOT = {
+	color = rgb{ 200 72 60 } 
+
+	country_type = decentralized
+
+	tier = principality
+	cultures = { kailando_lacertian } 
+	capital = STATE_KIKUHO_KOHIKI
+}
+
+#Vholssieren
+VHO = {
+	color = rgb{ 0 72 160 } 
+
+	country_type = recognized
+
+	tier = principality
+	cultures = { akmuociai } 
+	capital = STATE_JEIBUO
+}
+
+#pioneer's union
+YCH = {
+	color = rgb{ 0 72 160 } 
+
+	country_type = recognized
+
+	tier = kingdom
+	cultures = { akmuociai hulutit } 
+	capital = STATE_KILIMAKAZI
+}
+
+CHF = {
+	color = rgb{ 0 153 204} 
+
+	country_type = recognized
+
+	tier = grand_principality
+	cultures = { hulutit } 
+	capital = STATE_AACHTINT
+}
+
+#Juxjthraaria
+JUX = {
+	color = rgb{ 100 72 160 } 
+
+	country_type = recognized
+
+	tier = principality
+	cultures = { akmuociai hulutit } 
+	capital = STATE_HIJAASCH
+}
+
+#Straesluaar
+SAE = {
+	color = rgb{ 80 132 70 } 
+
+	country_type = recognized
+
+	tier = principality
+	cultures = { akmuociai hulutit } 
+	capital = STATE_LAIVINMAR
+}
+
+
+#Vhaulirb
+VHA = {
+	color = rgb{ 100 132 20 } 
+
+	country_type = recognized
+
+	tier = principality
+	cultures = { hulutit } 
+	capital = STATE_AACHTINT
+}
+
+#Cocochan
+#COC = {
+#	color = rgb{  155 155 156 } 
+#
+#	country_type = unrecognized
+#
+#	tier = principality
+#	cultures = { cithrel } 
+#	capital = STATE_LHEIPH_VA
+#}
+
+#Xochihip
+#XOC = {
+#	color = rgb{ 80 32 20 }
+#
+#	country_type = unrecognized
+#
+#	tier = principality
+#	cultures = { cithrel } 
+#	capital = STATE_BYS_LOWAE
+#}
+
+#Kurme
+KUM = {
+	color = rgb{ 80 32 120 }
+
+	country_type = decentralized
+
+	tier = principality
+	cultures = { west_lacertian } 
+	capital = STATE_PIKY_UHILY
+}
+
+#Laguz
+LAG = {
+	color = rgb{ 80 132 120 }
+
+	country_type = decentralized
+
+	tier = principality
+	cultures = { lacertian } 
+	capital = STATE_LYPIKISQI
+}
+
+#Kailando Cartel
+KAI = {
+	color = rgb{ 110 0 0 }
+
+	country_type = unrecognized
+
+	tier = grand_principality
+	cultures = { south_sea_ravager } 
+	capital = STATE_ONOLYSTU
+}
+
+#Carakoza
+CKA = {
+	color = rgb{ 60 100 140 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { kailando_lacertian } 
+	capital = STATE_KUSTU_MYUNIS
+}

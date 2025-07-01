@@ -1,0 +1,16 @@
+﻿CHARACTERS = {
+	c:VHT = {
+		create_character = {
+			first_name = "Bhimsen"
+			last_name = "Pande"
+			historical = yes
+			ruler = yes
+			age = 30
+			interest_group = ig_mages
+			ideology = ideology_jingoist_leader
+			traits = {
+				tactful
+			}
+		}
+	}
+}

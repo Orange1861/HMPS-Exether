@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:DRO ?= {
+		create_character = {
+			template = DRO_yavira_leader_template
+		}
+		create_character = {
+			template = DRO_yavira_traditional_heir_template
+		}
+	}
+}
+

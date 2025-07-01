@@ -1,0 +1,32 @@
+﻿YAN_pyotr_tuktarev_template = {
+	first_name = "Pyotr"
+	last_name = "Tuktarev"
+	historical = yes
+	ruler = yes
+	age = 39
+	interest_group = ig_armed_forces
+	ideology = ideology_nomadic
+	culture = primary_culture
+	traits = {
+		imperious
+		brave
+		plains_commander
+	}
+
+}	
+
+YAN_shukay_solovyov_template = {
+	first_name = Shukay
+	last_name = Solovyov
+	historical = yes
+	birth_date = 1137.6.4
+	ig_leader = yes
+	interest_group = ig_rural_folk
+	ideology = ideology_nomadic
+	culture = primary_culture
+	religion = rel:skystride
+	traits = {
+		basic_political_operator
+		innovative 
+	}
+}

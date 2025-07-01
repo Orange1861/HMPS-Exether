@@ -1,0 +1,1260 @@
+﻿namespace = everfrost_expedition
+
+# Start Event
+everfrost_expedition.101 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.101.t
+	desc = everfrost_expedition.101.d
+	flavor = everfrost_expedition.101.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "europenorthamerica_antarctica"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = {
+		name = everfrost_expedition.101.a
+		trigger_event = { id = everfrost_expedition.102 days = 0 popup = yes }
+	}
+}
+
+everfrost_expedition.102 = { #Choose commander
+	type = country_event
+	dlc = dlc_roe
+    placement = ROOT
+
+    title = everfrost_expedition.102.t
+    desc = everfrost_expedition.102.d
+    flavor = everfrost_expedition.102.f
+
+    duration = 3
+	
+	event_image = {
+		video = "europenorthamerica_antarctica"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		has_free_retainer = yes
+	}
+
+	immediate = {
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+			}
+			save_scope_as = expedition_leader_1
+		}
+		if = {
+			random_character_in_void = {
+				limit = {
+					is_owned_unassigned_retainer = yes
+					NOT = {
+						scope:expedition_leader_1 ?= this
+					}
+				}
+				save_scope_as = expedition_leader_2
+			}
+		}
+		else = {
+			random_character_in_void = {
+				limit = {
+					is_owned_unassigned_retainer = yes
+					NOT = {
+						scope:expedition_leader_1 ?= this
+					}
+				}
+				save_scope_as = expedition_leader_2
+			}
+		}
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				NOR = {
+					scope:expedition_leader_1 ?= this
+					scope:expedition_leader_2 ?= this
+				}
+			}
+			save_scope_as = expedition_leader_3
+		}
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				NOR = {
+					scope:expedition_leader_1 ?= this
+					scope:expedition_leader_2 ?= this
+					scope:expedition_leader_3 ?= this
+				}
+			}
+			save_scope_as = expedition_leader_4
+		}
+	}
+
+	option = {
+		name = everfrost_expedition.102.a
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_1
+		}
+		default_option = yes
+		highlighted_option = yes
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_1 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+			ROOT = {
+				set_variable = { name = expedition_leader_storage_var value = prev }
+			}
+		}
+		add_journal_entry = {
+			type = je_everfrost_expedition
+		}
+	}
+
+	option = {
+		name = everfrost_expedition.102.b
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_2
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_2 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+			ROOT = {
+				set_variable = { name = expedition_leader_storage_var value = prev }
+			}
+		}
+		add_journal_entry = {
+			type = je_everfrost_expedition
+		}
+	}
+
+	option = {
+		name = everfrost_expedition.102.c
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_3
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_3 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+			ROOT = {
+				set_variable = { name = expedition_leader_storage_var value = prev }
+			}
+		}
+		add_journal_entry = {
+			type = je_everfrost_expedition
+		}
+	}
+	
+	option = {
+		name = everfrost_expedition.102.e
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			NOT = { exists = scope:expedition_leader_1 }
+			exists = scope:expedition_leader_4
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_4 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+			ROOT = {
+				set_variable = { name = expedition_leader_storage_var value = prev }
+			}
+		}
+		add_journal_entry = {
+			type = je_everfrost_expedition
+		}
+	}
+}
+
+# Mountains
+everfrost_expedition.1 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.1.t
+	desc = everfrost_expedition.1.d
+	flavor = everfrost_expedition.1.f
+	
+	duration = 3
+	
+	event_image = {
+		texture = "gfx/event_images/runestone.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 2
+		}
+		NOT = { has_variable = mountains_of_madness }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = mountains_of_madness
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var
+		 }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # Move on
+		name = everfrost_expedition.1.a
+		default_option = yes
+		expedition_minor_progress_effect = yes
+	}
+	
+	option = { # Do some science
+		name = everfrost_expedition.1.b
+		random_list = { 
+			50 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 25
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 100
+					}
+				}
+				scope:expedition_leader = {
+					add_modifier = {
+						name = gruaav_mountains_modifier
+						days = normal_modifier_time
+					}
+				}
+				add_modifier = {
+					name = everfrost_research
+					days = normal_modifier_time
+				}
+				expedition_minor_progress_effect = yes
+			}
+			50 = {
+				add_small_peril_effect = yes
+			}
+		}
+	}
+	option = { # climb Krutum
+		name = everfrost_expedition.1.c
+		random_list = {
+			25 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 12
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 100
+					}
+				}
+				scope:expedition_leader = {
+					add_modifier = {
+						name = gruaav_mountains_modifier
+						days = normal_modifier_time
+						multiplier = 2
+					}
+				}
+				add_modifier = {
+					name = climbed_krutum
+					days = normal_modifier_time
+				}
+				expedition_minor_progress_effect = yes
+			}
+			75 = {
+				add_large_peril_effect = yes
+			}
+		}
+	}
+}
+
+# Discovery Hut
+everfrost_expedition.2 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.2.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = everfrost_expedition.2.d
+				trigger = {
+					NOT = { has_global_variable = discovery_hut }
+				}
+			}
+			triggered_desc = {
+				desc = everfrost_expedition.2.d2
+				trigger = {
+					has_global_variable = discovery_hut
+				}
+			}
+		}
+	}
+	flavor = everfrost_expedition.2.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" = 1
+		}
+		NOT = { has_variable = discovery_hut_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_variable = discovery_hut }
+			}
+			set_global_variable = discovery_hut
+		}
+		set_variable = discovery_hut_var
+	}
+	
+	option = { # make a durable hut and leave supplies
+		name = everfrost_expedition.2.a
+		trigger = {
+			NOT = { has_global_variable = discovery_hut_established }
+		}
+		default_option = yes
+		set_global_variable = discovery_hut_established
+		custom_tooltip = discovery_hut_tt
+		add_small_peril_effect = yes
+	}
+	option = { # make a flimsy base camp, won't last
+		name = everfrost_expedition.2.b
+		trigger = {
+			NOT = { has_global_variable = discovery_hut_established }
+		}
+		expedition_minor_progress_effect = yes
+	}
+	option = { # rest and resupply at the hut
+		name = everfrost_expedition.2.c
+		trigger = {
+			has_global_variable = discovery_hut_established
+		}
+		expedition_minor_progress_effect = yes
+		add_small_peril_effect = yes
+	}
+}
+
+# Overshot and lost
+everfrost_expedition.3 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.3.t
+	desc = everfrost_expedition.3.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					je:je_everfrost_expedition ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" >= 7
+					}
+				}
+				desc = everfrost_expedition.3.f
+			}
+			triggered_desc = {
+				trigger = {
+					je:je_everfrost_expedition ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" < 7
+					}
+				}
+				desc = everfrost_expedition.3.f2
+			}
+		}
+	}	
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" > 3
+		}
+		NOT = { has_variable = antarctic_got_lost }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = antarctic_got_lost
+	}
+	
+	option = { # go back
+		name = everfrost_expedition.3.a
+		default_option = yes
+		random_list = {
+			75 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 40
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 150
+					}
+				}
+				expedition_lose_progress_effect = yes
+			}
+			25 = {
+				add_medium_peril_effect = yes
+			}
+		}
+	}
+	option = {
+		name = everfrost_expedition.3.b
+		random_list = {
+			25 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 12
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 50
+					}
+				}
+				expedition_minor_progress_effect = yes
+			}
+			75 = {
+				add_large_peril_effect = yes
+			}
+		}
+	}
+}
+
+# Doomed
+everfrost_expedition.4 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.4.t
+	desc = everfrost_expedition.4.d
+	flavor = everfrost_expedition.4.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	immediate = {
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var
+		 }
+			save_scope_as = expedition_leader
+		}
+	}
+
+	option = {
+		name = everfrost_expedition.4.a
+		default_option = yes
+		scope:expedition_leader = {
+			handle_retainer_death = yes
+		}
+		remove_variable = on_expedition
+		remove_expedition_events_effect = yes
+	}
+}
+
+# The Pole!
+everfrost_expedition.5 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	gui_window = newspaper_superevent
+	title = everfrost_expedition.5.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = everfrost_expedition.5.d
+				trigger = {
+					NOT = { has_global_variable = ice_wall_reached }
+				}
+			}
+			triggered_desc = {
+				desc = everfrost_expedition.5.d2
+				trigger = {
+					has_global_variable = ice_wall_reached
+				}
+			}
+		}
+	}
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = everfrost_expedition.5.f
+				trigger = {
+					NOT = { has_global_variable = ice_wall_reached }
+				}
+			}
+			triggered_desc = {
+				desc = everfrost_expedition.5.f2
+				trigger = {
+					has_global_variable = ice_wall_reached
+				}
+			}
+		}
+	}
+	
+	duration = 3
+	
+	event_image = {
+		texture = "gfx/event_images/ice_wall.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 6
+		}
+		NOT = { has_variable = first_to_reach_south_pole }
+	}
+	
+	immediate = {
+		save_scope_as = expedition_country
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var 
+			}
+			save_scope_as = expedition_leader
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_variable = first_to_reach_ice_wall
+				}
+			}
+			random_country = {
+				limit = {
+					has_variable = first_to_reach_ice_wall
+				}
+				save_scope_as = pole_winner_country
+			}
+		}
+		set_variable = ice_wall_event_var
+	}
+	
+	option = {
+		name = everfrost_expedition.5.a
+		trigger = {
+			NOT = { has_global_variable = ice_wall_reached }
+		}
+		default_option = yes
+		set_global_variable = { name = ice_wall_reached }
+		set_variable = {
+			name = first_to_reach_ice_wall
+		}
+		expedition_minor_progress_effect = yes
+		# Disables future expeditions, we did the thing.
+	}
+	option = {
+		name = everfrost_expedition.5.b
+		trigger = {
+			has_global_variable = ice_wall_reached
+		}
+		default_option = yes
+		expedition_minor_progress_effect = yes
+	}
+}
+
+# Eating the dogs
+everfrost_expedition.6 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.6.t
+	desc = everfrost_expedition.6.d
+	flavor = everfrost_expedition.6.f
+	
+	duration = 3
+	
+	event_image = {
+		texture = "gfx/event_images/runestone.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {	
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = dog_meat }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = dog_meat
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+			 	has_variable = expedition_leader_var 
+			}
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = {
+		name = everfrost_expedition.6.a
+		default_option = yes
+		scope:expedition_leader = {
+			add_modifier = {
+				name = ate_dogs_modifier
+				days = normal_modifier_time
+			}
+		}
+		expedition_minor_progress_effect = yes
+	}
+	option = {
+		name = everfrost_expedition.6.b
+		custom_tooltip = pet_dog.tt
+		add_medium_peril_effect = yes
+		expedition_minor_progress_effect = yes
+	}
+}
+
+# Returning home - Success event
+everfrost_expedition.7 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.7.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = everfrost_expedition.7.d
+				trigger = {
+					NOT = { has_variable = first_to_reach_ice_wall }
+				}
+			}
+			triggered_desc = {
+				desc = everfrost_expedition.7.d2
+				trigger = {
+					has_variable = first_to_reach_ice_wall
+				}
+			}
+		}
+	}
+	flavor = everfrost_expedition.7.f
+	
+	duration = 3
+	
+	event_image = {
+		texture = "gfx/event_images/runestone.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	immediate = {
+		save_scope_as = expedition_country
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				 has_variable = expedition_leader_var 
+			}
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = {
+		name = everfrost_expedition.7.a
+		trigger = {
+			NOT = { has_variable = first_to_reach_ice_wall }
+		}
+		default_option = yes
+		scope:expedition_leader = {
+			add_trait = explorer
+			set_variable = everfrost_explorer
+			set_character_busy_and_immortal = no
+			add_modifier = {
+				name = succesfull_ice_wall_modifier
+				multiplier = 2
+			}
+		}
+		add_modifier = {
+			name = everfrost_expedition_returned
+			days = normal_modifier_time
+		}
+	}
+	option = {
+		name = everfrost_expedition.7.b
+		trigger = {
+			has_variable = first_to_reach_ice_wall
+		}
+		scope:expedition_leader = {
+			add_trait = explorer
+			set_variable = everfrost_explorer
+			set_character_busy_and_immortal = no
+			add_modifier = {
+				name = succesfull_ice_wall_modifier
+			}
+		}
+		add_modifier = {
+			name = first_beyond_the_wall
+			days = normal_modifier_time
+		}
+	}
+}
+
+# Pack Ice
+everfrost_expedition.8 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.8.t
+	desc = everfrost_expedition.8.d
+	flavor = everfrost_expedition.8.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" <= 1
+		}
+		NOT = { has_variable = pack_ice }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = pack_ice
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var 
+			}
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # Push on!
+		name = everfrost_expedition.8.a
+		default_option = yes
+		random_list = {
+			50 = {
+				trigger_event = { id = everfrost_expedition.9 days = day_until_next_expedition_event }
+				add_small_peril_effect = yes
+			}
+			50 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 25
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 100
+					}
+				}
+				expedition_minor_progress_effect = yes
+			}
+		}
+	}
+	option = { # Leader is good at this somehow?
+		name = everfrost_expedition.8.b
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					has_variable = everfrost_explorer
+					AND = {
+						has_trait = explorer
+						OR = {
+							has_trait = mountain_commander
+							has_trait = expert_naval_commander
+							has_trait = tactful
+						}
+					}
+				}
+			}
+		}
+		highlighted_option = yes
+		expedition_minor_progress_effect = yes
+	}	
+}
+
+# Icebound
+everfrost_expedition.9 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.9.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = everfrost_expedition.9.d
+				trigger = {
+					NOT = { has_variable = icebound_var }
+				}
+			}
+			triggered_desc = { # if you already had this
+				desc = everfrost_expedition.9.d2
+				trigger = {
+					has_variable = icebound_var
+				}
+			}
+		}
+	}
+	flavor = everfrost_expedition.9.f
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	cooldown = { days = short_modifier_time }
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = { # Try to free yourself
+		name = everfrost_expedition.9.a
+		default_option = yes
+		random_list = {
+			20 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 10
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 40
+					}
+				}
+				expedition_minor_progress_effect = yes
+			}
+			80 = {
+				trigger_event = { id = everfrost_expedition.9 days = day_until_next_expedition_event }
+			}
+		}
+		set_variable = icebound_var
+	}
+	option = { # Abandon ship, try to reach a whaling station
+		name = everfrost_expedition.9.b
+		trigger = {
+			has_variable = icebound_var
+		}
+		random_list = {
+			50 = { # everyone lives!
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 25
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 50
+					}
+				}
+				trigger_event = { id = everfrost_expedition.10 days = day_until_next_expedition_event }
+			}
+			50 = { # everyone dies!
+				trigger_event = { id = everfrost_expedition.4 days = day_until_next_expedition_event }
+			}
+			# Either way, this expedition is a failure
+		}
+	}
+}
+
+# Whaling Station
+everfrost_expedition.10 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.10.t
+	desc = everfrost_expedition.10.d
+	flavor = everfrost_expedition.10.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_whaling"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	immediate = {
+		save_scope_as = expedition_country
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var
+			 }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # go home, end expedition
+		name = everfrost_expedition.10.a
+		default_option = yes
+		scope:expedition_leader = {
+			add_trait = explorer
+			set_variable = everfrost_explorer
+			set_character_busy_and_immortal = no
+			add_modifier = {
+				name = safe_everfrost_exp_modifier
+				days = normal_modifier_time
+			}
+		}
+		remove_variable = on_expedition
+		remove_expedition_events_effect = yes
+	}
+}
+
+
+# The Great Ice Barrier
+everfrost_expedition.11 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.11.t
+	desc = everfrost_expedition.11.d
+	flavor = everfrost_expedition.11.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" < 2
+		}
+		NOT = { has_variable = great_ice_barrier_variable }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		save_scope_as = expedition_country
+		set_variable = great_ice_barrier_variable
+	}
+	
+	option = { # beware of fissures
+		name = everfrost_expedition.11.a
+		default_option = yes
+		random_list = {
+			75 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 40
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 150
+					}
+				}
+				expedition_minor_progress_effect = yes
+			}
+			25 = {
+				add_small_peril_effect = yes
+			}
+		}
+	}
+	option = { # take a cautious approach
+		name = everfrost_expedition.11.b
+		custom_tooltip = expedition_event_ongoing_tt
+	}
+}
+
+# The Transantarctic Mountains - find a route, or use an established route if there is one
+
+# Ascend a glacier!
+everfrost_expedition.12 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.12.t
+	desc = everfrost_expedition.12.d
+	flavor = everfrost_expedition.12.f
+	
+	duration = 3
+	
+	event_image = {
+		texture = "gfx/event_images/runestone.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = transantarctic_mountains_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		save_scope_as = expedition_country
+	}
+	
+	option = { # Find a new route
+		name = everfrost_expedition.12.a
+		default_option = yes
+		random_list = {
+			33 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 15
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 33
+					}
+				}
+				expedition_moderate_progress_effect = yes
+			}
+			33 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 15
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 33
+					}
+				}
+				expedition_minor_progress_effect = yes
+			}
+			33 = {
+				add_small_peril_effect = yes
+			}
+		}
+		set_variable = {
+			name = transantarctic_mountains_var
+			days = short_modifier_time
+		}
+	}
+	option = { # Take a known approach
+		name = everfrost_expedition.12.b
+		trigger = {
+			has_variable = transantarctic_mountains_var
+		}
+		custom_tooltip = expedition_event_ongoing_tt
+	}
+}
+
+# Strange rock
+everfrost_expedition.13 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = ROOT
+	
+	title = everfrost_expedition.13.t
+	desc = everfrost_expedition.13.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					je:je_everfrost_expedition ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" >= 7
+					}
+				}
+				desc = everfrost_expedition.13.f2
+			}
+			triggered_desc = {
+				trigger = {
+					je:je_everfrost_expedition ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" < 7
+					}
+				}
+				desc = everfrost_expedition.13.f
+			}
+		}
+	}
+	
+	duration = 3
+	
+	event_image = {
+		texture = "gfx/event_images/runestone.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_everfrost_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = strange_rock_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = strange_rock_var
+	}
+	
+	option = { #study it
+		name = everfrost_expedition.13.a
+		default_option = yes
+		set_variable = took_strange_rock_var #grand exhibition bonus
+		random_list = {
+			33 = {
+				modifier = {
+					if = {
+						limit = {
+							ROOT.modifier:country_expedition_events_explorer_mult > 0
+						}
+						add = 15
+					}
+					if = {
+						limit = {
+							scope:expedition_leader.modifier:character_expedition_events_explorer_mult > 0
+						}
+						add = 33
+					}
+				}
+				expedition_moderate_progress_effect = yes
+			}
+			33 = {
+				custom_tooltip = expedition_event_delayed_tt
+			}
+			33 = {
+				add_small_peril_effect = yes
+			}
+		}
+	}
+	option = { #ignore it
+		name = everfrost_expedition.13.b
+		expedition_minor_progress_effect = yes
+	}
+}

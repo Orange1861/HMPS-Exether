@@ -1,0 +1,1074 @@
+﻿AHO = {
+	pattern = "pattern_solid.tga"
+	color1 = "purple"
+
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "white"
+		instance = { scale = { 0.5 1 } position = { 0.75 0.5 } }	
+	}	
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "white"
+		instance = { scale = { 0.5 1 } position = { 0.25 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_lauburu.dds"
+		color1 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.25 0.25 } }	
+		instance = { scale = { 0.5 0.5 } position = { 0.75 0.75 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_torch.dds"
+		color1 = "brown"
+		color2 = "yellow"
+		instance = { scale = { 0.4 0.4 } position = { 0.75 0.25 } }	
+		instance = { scale = { 0.4 0.4 } position = { 0.25 0.75 } }	
+	}	
+}
+
+XXG = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+}
+
+ARR = {
+	pattern = "pattern_solid.tga"
+	color1 = "sapphire"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "green"
+		instance = { scale = { 0.25 1 } position = { 0.12 0.5 } }	
+		instance = { scale = { 0.25 1 } position = { 0.88 0.5 } }			
+	}	
+    colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.1 1 } position = { 0.22 0.5 } }	
+		instance = { scale = { 0.1 1 } position = { 0.78 0.5 } }			
+	}		
+
+    colored_emblem = {
+		texture = "ce_laurel_circled.dds"
+		color1 = "white"
+		color2 = "green_light"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+	}	
+
+	colored_emblem = {
+		texture = "ce_castle_cajun.dds"
+		color1 = "white"
+		color2 = "black"
+		color3 = "white"
+		instance = { scale = { 0.25 0.25 } position = { 0.5 0.475 } }
+	}	
+}
+
+ARR_REVO = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+    colored_emblem = {
+		texture = "ce_laurel_circled.dds"
+		color1 = "white"
+		color2 = "green_light"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+	}	
+
+	colored_emblem = {
+		texture = "ce_castle_cajun.dds"
+		color1 = "white"
+		color2 = "black"
+		color3 = "white"
+		instance = { scale = { 0.25 0.25 } position = { 0.5 0.475 } }
+	}	
+}
+
+#Vozmead Peaks
+VOZ = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "orange" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		color1 = "white"
+		color2 = "blue_light"
+		instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } }
+	}
+
+	colored_emblem = { #Adds a colored emblem.
+		texture = "ce_clouds_china_02.dds" #From gfx\coat_of_arms\textured_emblems
+		color1 = "white"
+		color2 = "white"
+		color3 = "white"
+		instance = { position = { 0.25 0.75 } rotation=-50deg scale = { 0.45 0.45 } }
+		instance = { position = { 0.5 0.5 } rotation=-50deg scale = { 0.45 0.45 } }
+		instance = { position = { 0.75 0.25 } rotation=-50deg scale = { 0.45 0.45 } }
+	}
+}
+
+#Union of the Sands
+UTS = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "white" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "yellow_dark"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_roe_union.dds"
+		color1 = "red_light"
+		color2 = "sapphire"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
+#Secretkeepers
+VHT = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "black" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_roe_book.dds"
+		color1 = "white"
+		color2 = "grey"
+		color3 = "brown_light"
+		instance = { scale = { 1 1 } position = { 0.45 0.5 } }
+	}
+
+	
+	colored_emblem = {
+		texture = "ce_border_of_3_sikkim.dds"
+		color1 = "purple"
+		color2 = "white"
+		color3 = "grey"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
+#Whiskerfelds
+WHI = {
+    pattern = "pattern_solid.tga"
+        color1 = "white"
+
+    colored_emblem = {
+        texture = "ce_roe_sun_tribal.dds"
+        color1= "yellow_dark"
+        instance = { scale = { 0.5 0.5 } position = { 0.5 0.12 } }
+    }
+
+    colored_emblem = {
+        texture = "ce_bicolor_top.dds"
+        color1= "blue_light"
+        instance = { scale = { 1 1 } position = { 0.5 0.15 } }
+    }
+
+    colored_emblem = { 
+        texture = "ce_wheat_stalk.dds" 
+        color1 = "yellow_dark"
+        instance = { scale = { 0.4 0.4 } position = { 0.1 0.7 } }
+    }
+
+        colored_emblem = { 
+        texture = "ce_wheat_stalk.dds" 
+        color1 = "yellow_dark"
+        instance = { scale = { 0.4 0.4 } position = { 0.3 0.7 } }
+    }
+
+        colored_emblem = { 
+        texture = "ce_wheat_stalk.dds" 
+        color1 = "yellow_dark"
+        instance = { scale = { 0.4 0.4 } position = { 0.7 0.7 } }
+    }
+       
+        colored_emblem = { 
+        texture = "ce_wheat_stalk.dds" 
+        color1 = "yellow_dark"
+        instance = { scale = { 0.4 0.4 } position = { 0.9 0.7 } }
+    }
+        colored_emblem = { 
+        texture = "ce_rat_emblem.dds" 
+        color1 = "brown"
+        instance = { scale = { 0.6 0.6 } position = { 0.525 0.5 } }
+    }
+        colored_emblem = {
+        texture = "ce_bicolor_bottom.dds"
+        color1= "brown_light"
+        instance = { scale = { 1 1 } position = { 0.5 0.8 } }
+    }
+} 
+
+
+#Thiral
+THI = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "white" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_bicolor_left.dds"
+		color1 = "red"
+		instance = { scale = { 0.25 1 } position = { 0.12 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_bicolor_left.dds"
+		color1 = "green"
+		instance = { scale = { 0.25 1 } position = { 0.24 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_bicolor_right.dds"
+		color1 = "white"
+		instance = { scale = { 1.75 1 } position = { 0.25 0.5 } }
+	}
+
+	
+	colored_emblem = {
+		texture = "ce_roe_roses.dds"
+		color1 = "green"
+		color2 = "red"
+		instance = { scale = { 1 1 } position = { 0.585 0.5 } }
+	}
+
+}
+
+#Feylight
+FEY = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "green" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_roe_acorns.dds"
+		color1 = "white"
+		color2 = "black"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+}
+
+#Smallshore
+SMA = {
+    pattern = "pattern_solid.tga"
+    color1 = "orange"
+
+    colored_emblem = {
+        texture = "ce_sun_sikh.dds"
+        color1 = "yellow"
+        instance = { scale = { 1 1 } position = { 0.5 0.75 } }    
+    }
+
+    colored_emblem = {
+        texture = "ce_waves_estonia.dds"
+    color1 = "blue_light"
+        instance = { scale = { 1.25 1.25 } position = { 0.5 1.2 } rotation = 180 }    
+    }   
+}
+
+RTD = {
+    pattern = "pattern_solid.tga"
+    color1 = "feldgrau"
+ 
+}
+
+#Gladcross
+GCS = {
+	pattern = "pattern_solid.tga"
+	color1 = "green" 
+
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "orange"
+		instance = { scale = { 0.5 1 } position = { 0.25 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "orange"
+		instance = { scale = { 0.5 1 } position = { 0.75 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = "white"
+		instance = { scale = { 1 0.5 } position = { 0.5 0.25 } }
+		instance = { scale = { 1 0.5 } position = { 0.5 0.75 } }
+	}
+}
+
+#Gladcross with Smallshore PU
+GCS_subject_SMA = {
+    pattern = "pattern_solid.tga"
+    color1 = "orange"
+
+    colored_emblem = {
+        texture = "ce_bend_dexter.dds"
+        color1 = "green"
+        instance = { scale = { 0.75 0.75 } position = {  0.75 0.25 } }    
+    }   
+
+    colored_emblem = {
+        texture = "ce_bend_sinister.dds"
+        color1 = "green"
+        instance = { scale = { 0.75 0.75 } position = { 0.25 0.25 } }
+    }   
+
+    colored_emblem = {
+        texture = "ce_sun_sikh.dds"
+        color1 = "yellow"
+        instance = { scale = { 1 1 } position = { 0.5 0.75 } }    
+    }
+
+    colored_emblem = {
+        texture = "ce_waves_estonia.dds"
+        color1 = "blue_light"
+        instance = { scale = { 1.25 1.25 } position = { 0.5 1.2 } rotation = 180 }    
+    }   
+}
+
+#Gladshire
+GDS = {
+    pattern = "pattern_solid.tga"
+    color1 = "red"
+
+    colored_emblem = {
+        texture = "ce_frame_square.dds"
+        color1 = "green"
+        instance = { scale = { 1 2.55 } position = { 0.7 1.15 }  rotation = 63 }    
+    }    
+
+    colored_emblem = {
+        texture = "ce_flag_river.dds"
+        color1 = "white"
+        instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } rotation = 135 }    
+    }    
+
+    colored_emblem = {
+        texture = "ce_sun_sikh.dds"
+        color1 = "yellow"
+        color2 = "orange"
+        instance = { scale = { 0.45 0.45 } position = { 0.2 0.25 } }    
+    }
+
+    colored_emblem = {
+        texture = "ce_wheat_garb.dds"
+        color1 = "yellow"
+        instance = { scale = { -0.5 0.5 } position = { 0.825 0.725 } }    
+    }
+}
+
+#Pefril
+PFL = {
+    pattern = "pattern_solid.tga"
+    color1 = "blue" 
+   
+        colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+ 
+        colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "yellow_light"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	} 
+
+        colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "blue_light"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+       } 
+
+       colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "blue"
+		instance = { scale = { 0.4 0.4 } position = { 0.5 0.5 } }
+       } 
+}
+
+#Dushambay
+DSB = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "white" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_roe_flower_bicolor.dds"
+		color1 = "sapphire"
+		color2 = "black"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
+#Ceraun
+CER = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "orange_nice" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_roe_curved_sword_details.dds"
+		color1 = "white"
+		color2 = "black"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_roe_curved_sword_colors.dds"
+		color1 = "yellow"
+		color2 = "blue"
+		color3 = "green"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
+#Emparal
+EMP = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+        colored_emblem = {
+		texture = "ce_stripes_03_middle.dds"
+		color1 = "white"
+                color2 = "yellow"
+		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_coa_rounded_mountain_3c.dds"
+		color1 = "blue"
+		color2 = "red_light"
+		color3 = "brown_light"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }	
+	}		
+
+        colored_emblem = {
+		texture = "ce_RFwreath.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.25 0.25 } position = { 0.5 0.7 } }	
+	}	
+ 
+        colored_emblem = {
+		texture = "ce_emblem_sword_1_3c.dds"
+		color1 = "white"
+		color2 = "brown"
+                color3 = "brown"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.52 } }	
+	}		
+}
+
+#Bossardie
+BOS = {
+	pattern = "pattern_solid.tga"
+	color1 = "red_light"
+  
+        colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		color1 = "blue_light"
+        color2 = "yellow"
+		instance = { scale = { 0.65 0.65 } position = { 0.1 0.2 } rotation = 170 }
+	}
+
+        colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		color1 = "blue_light"
+        color2 = "yellow"
+		instance = { scale = { 0.65 0.65 } position = { 0.9 0.2 } rotation = 280  }
+	}
+
+        colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		color1 = "blue_light"
+        color2 = "yellow"
+		instance = { scale = { 0.65 0.65 } position = { 0.25 0.6 } rotation = 170 }
+	}
+
+        colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		color1 = "blue_light"
+        color2 = "yellow"
+		instance = { scale = { 0.65 0.65 } position = { 0.75 0.6 } rotation = 280  }
+	}
+
+        colored_emblem = {
+		texture = "ce_fess_fimbriated.dds"
+		color1 = "red_light"
+        color2 = "blue_light"
+		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } rotation = 90  }
+	}    
+ 
+        colored_emblem = {
+		texture = "ce_emblem_sword_1_3c.dds"
+		color1 = "white"
+        color2 = "yellow_light"
+        color3 = "white"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.65 } rotation = 180 }	
+	} 
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "blue_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.8 } }
+	}
+
+        colored_emblem = {
+		texture = "ce_crown_ducal.dds"
+		color1 = "yellow_light"
+        color2 = "yellow_light"
+        color3 = "yellow_light"
+		instance = { scale = { 0.35 0.35 } position = { 0.5 0.65 } }
+	}		     		
+}
+
+#Kracia
+KRC = {
+	pattern = "pattern_solid.tga"
+	color1 = "sapphire"
+
+        colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "yellow_light"
+		instance = { scale = { 1 1 } position = { 0.9 0.5 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_castle.dds"
+		color1 = "yellow_light"
+                color2 = "yellow_light" 
+		instance = { scale = { 0.5 0.5 } position = { 0.2 0.5 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "yellow_light"
+		instance = { scale = { 1 1 } position = { 0.9 0.5 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_lion_rampant_forked_crowned.dds"
+		color1 = "red_light"
+                color2 = "yellow"
+                color3 = "yellow_light"
+		instance = { scale = { 0.8 0.8 } position = { 0.7 0.5 } }	
+	}    
+}
+
+#Kracia subject Emparal
+KRC_subject_EMP = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+        colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "blue"
+		instance = { scale = { 1 1 } position = { 0.35 0.2 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "blue"
+		instance = { scale = { 1 1 } position = { 0.35 0.5 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_emblem_sword_1_3c.dds"
+		color1 = "white"
+		color2 = "white"
+        color3 = "white"
+		instance = { scale = { 0.7 0.7 } position = { 0.6 0.6 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_emblem_sword_1_3c.dds"
+		color1 = "white"
+		color2 = "white"
+        color3 = "white"
+		instance = { scale = { 0.7 0.7 } position = { 0.4 0.6 } }	
+	}	
+
+        colored_emblem = {
+		texture = "ce_emblem_sword_1_3c.dds"
+		color1 = "white"
+		color2 = "white"
+        color3 = "white"
+		instance = { scale = { 0.7 0.7 } position = { 0.2 0.6 } }	
+	}
+}
+
+#Durandmarche
+DRM = {
+		pattern = "pattern_solid.tga"
+	    color1 = "yellow"
+
+    colored_emblem = {
+		texture = "ce_emblem_eagle_wenceslas_base.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "white"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
+	}		
+} 
+
+#Durandmarche subject Arrador
+DRM_subject_ARR = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"	
+
+    colored_emblem = {
+		texture = "ce_coa_rounded_quartered.dds"
+		color1 = "yellow"
+		color2 = "sapphire"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }
+	}	
+	
+	colored_emblem = {
+		texture = "ce_emblem_eagle_wenceslas_base.dds"
+		color1 = "red"
+		color2 = "red"
+		color3 = "blue"
+		instance = { scale = { 0.25 0.25 } position = { 0.41 0.33 } }
+		instance = { scale = { 0.25 0.25 } position = { 0.59 0.65 } }
+	}	
+	
+    colored_emblem = {
+		texture = "ce_laurel_circled.dds"
+		color1 = "white"
+		color2 = "green_light"
+		instance = { scale = { 0.25 0.25 } position = { 0.415 0.65 } }
+		instance = { scale = { 0.25 0.25 } position = { 0.595 0.325 } }
+	}	
+	
+
+	colored_emblem = {
+		texture = "ce_castle_cajun.dds"
+		color1 = "white"
+		color2 = "black"
+		color3 = "white"
+		instance = { scale = { 0.1 0.1 } position = { 0.415 0.65 } }
+		instance = { scale = { 0.1 0.1 } position = { 0.597 0.325 } }
+	}	
+}
+
+#Leonceau
+LEO = {
+		pattern = "pattern_solid.tga"
+	    color1 = "yellow_light"
+
+        colored_emblem = {
+		texture = "ce_per_cross.dds"
+		color1 = "blue_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_emblem_sword_1_3c.dds"
+		color1 = "white"
+        color2 = "brown_light"
+        color3 = "red"
+		instance = { scale = { 0.7 0.7 } position = { 0.395 0.5 } rotation = 180 }	
+	}
+	
+        colored_emblem = {
+		texture = "ce_lion_rampant_per_pale_crowned.dds"
+		color1 = "red"
+        color2 = "red"
+        color3 = "black"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }	
+	}	
+}    
+
+#Leonceau subject Thiral
+LEO_subject_THI = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_light"
+
+        colored_emblem = {
+		texture = "ce_bicolor_left.dds"
+		color1 = "red"
+		instance = { scale = { 0.25 1 } position = { 0.12 0.5 } }
+	}
+	    colored_emblem = {
+		texture = "ce_bicolor_left.dds"
+		color1 = "green"
+		instance = { scale = { 0.25 1 } position = { 0.24 0.5 } }
+	}
+
+        colored_emblem = {
+		texture = "ce_bicolor_left.dds"
+		color1 = "red"
+		instance = { scale = { 0.25 1 } position = { 1 0.5 } }
+	}
+	    colored_emblem = {
+		texture = "ce_bicolor_left.dds"
+		color1 = "green"
+		instance = { scale = { 0.25 1 } position = { 0.88 0.5 } }
+	}
+
+        colored_emblem = {
+		texture = "ce_emblem_sword_1_3c.dds"
+		color1 = "white"
+        color2 = "brown_light"
+        color3 = "red"
+		instance = { scale = { 0.7 0.7 } position = { 0.395 0.5 } rotation = 180 }	
+	}
+	
+        colored_emblem = {
+		texture = "ce_lion_rampant_per_pale_crowned.dds"
+		color1 = "red_light"
+        color2 = "red"
+        color3 = "black"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }	
+	}
+}
+
+#Prilyra
+PRI = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"	
+
+        colored_emblem = {
+		texture = "ce_wheat_garb.dds"
+        color1 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.8 0.25 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_wheat_garb.dds"
+        color1 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.2 0.75 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_cross_burgundy2.dds"
+		color1 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+}
+
+#Saltboot Estate
+SLB = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"	
+        
+        colored_emblem = {
+		texture = "ce_checkered_orle.dds"
+		color1 = "yellow"
+        color2 = "brown_light" 
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_beehive.dds"
+		color1 = "yellow_light"
+        color2 = "brown_light"
+		instance = { scale = { 0.65 0.65 } position = { 0.5 0.525 } }	
+	}
+}
+
+#Cherryn
+CHE = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+
+        colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+        color1 = "green"
+        color2 = "orange"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+
+        colored_emblem = {
+		texture = "ce_bend_dexter_fimbriated.dds"
+        color1 = "orange"
+        color2 = "green"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+
+        colored_emblem = {
+        texture = "ce_rhombus.dds"
+        color1 = "yellow"
+        instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }    
+    }	
+
+        colored_emblem = {
+        texture = "ce_rhombus.dds"
+        color1 = "red_light"
+        instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }    
+    }	
+ 
+        colored_emblem = {
+        texture = "ce_sun_sikh.dds"
+        color1 = "yellow_light"
+        instance = { scale = { 0.4 0.4 } position = { 0.5 0.5 } }    
+    }      	
+}
+
+#Greenhand Estate
+GRH = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"	
+        
+        colored_emblem = {
+		texture = "ce_border_orle.dds"
+		color1 = "yellow"
+                color2 = "green"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_wreath_peru.dds"
+		color1 = "yellow"
+                color2 = "red"
+                color3 = "red_light"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }	
+	}
+}
+
+#Clearbough Estate
+CLR = {
+	pattern = "pattern_solid.tga"
+	color1 = "green_light"	
+
+        colored_emblem = {
+		texture = "ce_collar_golden_fleece.dds"
+                color1 = "yellow_light"
+                color2 = "red"
+                color3 = "red_light"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.55 } }	
+	}
+        
+        colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "green_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.78 } }	
+	} 
+        
+        colored_emblem = {
+		texture = "ce_border_checkered.dds"
+		color1 = "yellow_light"
+                color2 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}       
+}
+
+#Serbinelle
+SEB = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"	
+              
+        
+        colored_emblem = {
+		texture = "ce_flag_river.dds"
+		color1 = "blue_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.65 } }	
+	}
+   
+        colored_emblem = {
+		texture = "ce_flags_wave_single_vertical.dds"
+		color1 = "blue_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.46 0.25 } }	
+	}
+ 
+        colored_emblem = {
+		texture = "ce_flags_wave_single_vertical.dds"
+		color1 = "blue_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.48 0.25 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_flags_wave_single_vertical.dds"
+		color1 = "blue_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.25 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_flags_wave_single_vertical.dds"
+		color1 = "blue_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.52 0.25 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_flags_wave_single_vertical.dds"
+		color1 = "blue_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.54 0.25 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_coa_rounded_base_2c.dds"
+                color1 = "blue_light"
+                color2 = "white"
+		instance = { scale = { 0.55 0.55 } position = { 0.50 0.65 } }	
+	}
+
+         colored_emblem = {
+		texture = "ce_fleur_fransaskois.dds"
+                color1 = "white"
+                color2 = "white"
+		instance = { scale = { 0.45 0.45 } position = { 0.50 0.65 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_castle.dds"
+                color1 = "blue_light"
+                color2 = "white"
+		instance = { scale = { 0.35 0.35 } position = { 0.2 0.3 } }	
+	}
+
+        colored_emblem = {
+		texture = "ce_castle.dds"
+                color1 = "blue_light"
+                color2 = "white"
+		instance = { scale = { 0.35 0.35 } position = { 0.8 0.3 } }	
+	}
+}
+
+#Yavira
+DRO = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "white" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_crescent_pale.dds"
+		color1 = "grey"
+		color2 = "black"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+
+	
+	colored_emblem = {
+		texture = "ce_mining_hammers.dds"
+		color1 = "grey"
+		color2 = "black"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.4 } }
+	}
+}
+
+#Emerald League
+EME = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.125 } }	
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }			
+	}		
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		instance = { scale = { 0.28 0.56 } position = { 0.33 0.5 } rotation = 45 }				
+	}	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "algeria_green"
+		color2 = "white"
+		instance = { scale = { 0.25 0.5 } position = { 0.33 0.5 } rotation = 45 }				
+	}
+}
+
+#Ebridor
+EBR = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	
+	colored_emblem = {
+		texture = "ce_roe_diamond_frame.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 1.75 1.75 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_emblem_eagle_wenceslas_base.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }	
+	}	
+}
+
+CDW = {
+	pattern = "pattern_solid.tga"
+	color1 = "orange"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "orange"
+		color3 = "red"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+	colored_emblem = {
+		texture = "ce_crossed_kris_daggers.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 0.5 0.5 } position = { 0.175 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_star_04.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 0.1 0.1 } position = { 0.075 0.5 } }	
+		instance = { scale = { 0.1 0.1 } position = { 0.275 0.5 } }	
+		instance = { scale = { 0.1 0.1 } position = { 0.175 0.35 } }	
+		instance = { scale = { 0.1 0.1 } position = { 0.175 0.7 } }	
+	}	
+}
+
+FTH = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_light"
+
+
+	colored_emblem = {
+		texture = "ce_border_compony.dds"
+		color1 = "red"
+		color2 = "green"
+		color3 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_cornucopias.dds"
+		color1 = "brown_light"
+		color2 = "green"
+		color3 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+}
+
+BRB	 = {
+	pattern = "pattern_border_triangles.dds"
+	color1 = "blue_light"
+	color2 = "grey"
+	color3 = "red_light"
+	
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "grey"
+		instance = { scale = { 0.87 0.85 } position = { 0.5 0.5 } }	
+	}	
+	colored_emblem = {
+		texture = "ce_cup.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }	
+	}	
+}

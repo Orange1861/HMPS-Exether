@@ -1,0 +1,132 @@
+﻿
+company_wolfslayers_guild = {
+	icon = "gfx/interface/icons/company_icons/wolfslayer.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_winter_hunting_lodge
+		building_hunting_lodge
+		building_fur_hunting_lodge
+		building_logging_camp
+	}
+
+	extension_building_types = {  
+		building_arms_industry
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_direwolf_essence
+	}
+	potential = {
+		
+			country_has_primary_culture = cu:zakonish
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+
+					state_region = s:STATE_ZARKI
+
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ZARKI
+		
+			any_scope_building = {
+				OR = {
+					is_building_type = building_hunting_lodge
+					is_building_type = building_fur_hunting_lodge
+				}
+				level >= 3
+			}
+		}		
+		has_technology_researched = organized_adventuring
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_hunting_throughput_add = 0.1
+		unit_kill_rate_add = 0.1
+		state_adventurer_coverage_mult = 0.05
+		state_harvest_condition_direwolf_packs_duration_mult = -0.33
+	}	
+	
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_ZARKI
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_icebreaker_arsenal = { #Basic Shipbuilder replacement for Vairian Culture Group
+	icon = "gfx/interface/icons/company_icons/penguin.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	replaces_company = company_basic_shipyards
+	
+	building_types = {  
+		building_military_shipyards
+		building_shipyards
+	}
+	
+	extension_building_types = {  
+		building_steel_mills
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_icebreaker_ships
+	}
+
+	potential = {
+		any_primary_culture = {
+			has_discrimination_trait = vairia_culture_group
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_military_shipyards
+					is_building_type = building_shipyards
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_navy_defense_mult = 0.05
+		building_port_throughput_add = 0.1
+		building_group_bg_leviathan_outpost_mortality_mult = -0.05 #strong ships sink less to krakens
+	}
+	
+	ai_will_do = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_military_shipyards
+					is_building_type = building_shipyards
+				}
+				level >= 3
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

@@ -1,0 +1,28 @@
+﻿beauty_in_bloom_decree_button = {
+	name = "beauty_in_bloom_decree_button"
+	desc = "beauty_in_bloom_decree_button_desc"
+
+	visible = { always = yes }
+
+	possible = {
+		ig:ig_devout ?= {
+			is_in_government = yes
+			is_powerful = yes
+		}
+		NOT = { has_modifier = beauty_in_bloom_rule_by_decree_modifier }
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = gain_beauty_in_bloom_points
+			change_variable = {
+				name = beauty_in_bloom_var
+				add = 100
+			}
+		}
+		add_modifier = {
+			name = beauty_in_bloom_rule_by_decree_modifier
+			days = normal_modifier_time
+		}
+	}
+}

@@ -1,0 +1,497 @@
+﻿assign_state_name_region_west_aritzakarri = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KHIARHI ?= this
+            }
+        }
+        STATE_KHIARHI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_ERDIGARA ?= this
+            }
+        }
+        STATE_ERDIGARA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KHANOR ?= this
+            }
+        }
+        STATE_KHANOR_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_GORRIMENDIA ?= this
+            }
+        }
+        STATE_GORRIMENDIA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_ARTEAGA ?= this
+            }
+        }
+        STATE_ARTEAGA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KASKOGARA ?= this
+            }
+        }
+        STATE_KASKOGARA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_URRAZPI ?= this
+            }
+        }
+        STATE_URRAZPI_state_name_assign = yes
+    }
+}
+
+assign_state_name_region_vulture_coast = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_MENDARI ?= this
+            }
+        }
+        STATE_MENDARI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_HIRUMENDI ?= this
+            }
+        }
+        STATE_HIRUMENDI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_IHARKHAN ?= this
+            }
+        }
+        STATE_IHARKHAN_state_name_assign = yes
+    }
+}
+
+STATE_GORRIMENDIA_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_GORRIMENDIA_ogre
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_GORRIMENDIA_dwarf
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_ERDIGARA_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_ERDIGARA_ogre
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_ERDIGARA_dwarf
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_KHANOR_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KHANOR_ogre
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KHANOR_dwarf
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_KHIARHI_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KHIARHI_ogre
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KHIARHI_dwarf
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_ARTEAGA_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_ARTEAGA_ogre
+
+    }
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_KASKOGARA_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KASKOGARA_ogre
+
+    }
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_URRAZPI_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_URRAZPI_ogre
+
+    }
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_MENDARI_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_MENDARI_ogre
+
+    }
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_HIRUMENDI_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HIRUMENDI_ogre
+
+    }
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_IHARKHAN_state_name_assign = {
+
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = ogre_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_IHARKHAN_ogre
+
+    }
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}

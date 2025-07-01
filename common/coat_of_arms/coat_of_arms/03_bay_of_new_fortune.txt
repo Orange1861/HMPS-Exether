@@ -1,0 +1,80 @@
+﻿#Horkaa
+HOR = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_roe_orc_triangle.dds"
+		color1 = "black"
+		instance = { scale = { 1 1 } position = { 0.5 0.67 } }
+		instance = { scale = { 1 1 } rotation=135deg position = { 0.33 0.33 } }
+		instance = { scale = { 1 1 } rotation=-135deg position = { 0.67 0.33 } }	
+	}	
+	
+}
+
+#Rustaxe
+RUX = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_roe_axes.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+	
+}
+
+KUN = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+
+	colored_emblem = {
+		texture = "ce_roe_sun_rays.dds"
+		color1 = "yellow"
+		color2 = "red"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+	colored_emblem = {
+		texture = "ce_roe_die.dds"
+		color1 = "red"
+		color2 = "red_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.385 0.5 } }	
+	}	
+	
+
+}
+
+WAQ = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "green_light"
+		color2 = "red"
+		instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "blue"
+		color2 = "red"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+	colored_emblem = {
+		texture = "ce_roe_die.dds"
+		color1 = "yellow"
+		color2 = "red_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }	
+	}	
+	
+
+}

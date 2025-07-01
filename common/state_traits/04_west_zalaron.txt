@@ -1,0 +1,136 @@
+﻿state_trait_salt_wastes = {
+	icon = "gfx/interface/icons/state_trait_icons/poor_soils.dds"
+	
+	disabling_technologies = { "salt_waste_curse_suppressed" }
+	
+	modifier = {
+		state_non_homeland_colony_growth_speed_mult = -0.65
+		state_non_homeland_mortality_mult = 0.1
+		state_migration_pull_add = -20
+		state_migration_pull_mult = -0.25
+		state_adventurer_coverage_add = -10
+	}
+}
+
+state_trait_salt_wastes_extra_evil = {
+	icon = "gfx/interface/icons/state_trait_icons/disaster_zone.dds"
+	
+	modifier = {
+		state_non_homeland_colony_growth_speed_mult = -0.99
+		state_non_homeland_mortality_mult = 0.3
+		state_mortality_mult = 0.1
+		state_migration_pull_add = -40
+		state_migration_pull_mult = -0.5
+	}
+}
+
+state_trait_lake_thalori = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = { state_infrastructure_add = 20 }
+}
+
+state_trait_silverspine_iron = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_iron_mine_throughput_add = 0.15
+    }
+}
+
+state_trait_salt_wastes_wishstone = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_group_bg_wishstone_mining_throughput_add = 0.15
+    }
+}
+
+state_trait_dragon_vein_sulfur_deposits = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_sulfur_mine_throughput_add = 0.20
+    }
+}
+
+state_trait_shipshatter_reef_fisheries = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	
+	modifier = {
+		building_group_bg_fishing_throughput_add = 0.20
+	}
+}
+
+state_trait_ochum_jungles = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		goods_output_hardwood_mult = 0.25
+		building_group_bg_hunting_throughput_add = 0.1
+		state_construction_mult = -0.1
+		state_infrastructure_mult = -0.1
+	}
+}
+
+state_trait_silverspine_lead = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_lead_mine_throughput_add = 0.15
+    }
+}
+
+state_trait_ember_country = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.10
+		building_iron_mine_throughput_add = 0.05
+    }
+}
+
+state_trait_groenveld_coal = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.10
+    }
+}
+
+state_trait_glimmervallei_sulfur_deposits = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_sulfur_mine_throughput_add = 0.20
+    }
+}
+
+state_trait_misery_steppe = {
+    icon = "gfx/interface/icons/building_icons/ectoplasm.dds"  
+	modifier = {
+        building_haunted_grounds_throughput_add = 0.10
+		state_migration_pull_mult = -0.15
+    }
+}
+
+state_trait_prowlhold = {
+    icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+		
+	modifier = {
+		state_building_underways_max_level_add = 5
+		state_infrastructure_mult = 0.10
+		battle_offense_owned_province_mult = 0.15
+		battle_defense_owned_province_mult = 0.15
+	}
+}
+
+state_trait_thessar_jungle = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		goods_output_hardwood_mult = 0.25
+		building_group_bg_hunting_throughput_add = 0.1
+		state_construction_mult = -0.1
+		state_infrastructure_mult = -0.1
+	}
+}
+
+state_trait_waldgnom_forest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.10
+		building_group_bg_hunting_throughput_add = 0.10
+	}
+}

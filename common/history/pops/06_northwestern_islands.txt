@@ -1,0 +1,800 @@
+﻿POPS = {
+	s:STATE_ZYRAS = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 738556
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 105029
+			}
+		}
+	}
+	s:STATE_HADRA = {
+		region_state:TKR = {
+			create_pop = {
+				culture = kotskarvi
+				size = 1073031
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 49700
+			}
+		}
+	}
+	s:STATE_BYRTHAS = {
+		region_state:TKR = {
+			create_pop = {
+				culture = kotskarvi
+				size = 904273
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 40870
+			}
+		}
+	}
+	s:STATE_LEPTHAR = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 556590
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 42701
+			}
+		}
+	}
+	s:STATE_THASPYR = {
+		region_state:DIS = {
+			create_pop = {
+				culture = kotskarvi
+				size = 185436
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 666680
+			}
+		}
+	}
+	s:STATE_LEPTISCA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 644143
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 77664
+			}
+		}
+	}
+	s:STATE_OYRSA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 488690
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 121884
+			}
+		}
+	}
+	s:STATE_THAPSARIS = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 476000
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 175000
+			}
+		}
+	}
+	s:STATE_HADRUMEA = {
+		region_state:DIS= {
+			create_pop = {
+				culture = illvasaari
+				size = 552997
+			}
+			create_pop = {
+				culture = drogori
+				size = 85369
+			}
+		}
+	}
+	s:STATE_CARTHALIA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = kotskarvi
+				size = 41994
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 77778
+			}
+		}
+	}
+	s:STATE_ZAMARA = {
+		region_state:IMR = {
+			create_pop = {
+				culture = kotskarvi
+				size = 1057000
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 29400
+			}
+		}
+	}
+	s:STATE_LEPTORIA = {
+		region_state:IMR = {
+			create_pop = {
+				culture = kotskarvi
+				size = 342637
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 21700
+			}
+		}
+	}
+	s:STATE_GADYRUS = {
+		region_state:SVN = {
+			create_pop = {
+				culture = kotskarvi
+				size = 913366
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 89040
+			}
+		}
+	}
+	s:STATE_EBYSS = {
+		region_state:SVN = {
+			create_pop = {
+				culture = illvasaari
+				size = 58800
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 613200
+			}
+		}
+	}
+	s:STATE_SIGARA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 1005130
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 67900
+			}
+		}
+	}
+	s:STATE_MOTHYA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 593457
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 142100
+			}
+		}
+	}
+	s:STATE_LILYBAEUM = {
+		region_state:DIS = {
+			create_pop = {
+				culture = kotskarvi
+				size = 72635
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 511008
+			}
+		}
+	}
+	s:STATE_RUSARYA = {
+		region_state:IAL = {
+			create_pop = {
+				culture = kotskarvi
+				size = 1309043
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 37517
+			}
+		}
+	}
+	s:STATE_BYSSYRA = {
+		region_state:MVI = {
+			create_pop = {
+				culture = kotskarvi
+				size = 735568
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 34223
+			}
+			create_pop = {
+				culture = florishnom
+				size = 58309
+			}
+		}
+	}
+	s:STATE_CARTHAROS = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 1423097
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 197394
+			}
+		}
+	}
+	s:STATE_THASPIA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 684946
+			}
+			create_pop = {
+				culture = florishnom
+				size = 44294
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 88588
+			}
+
+		}
+	}
+	s:STATE_GADIRIS = {
+		region_state:MVI = {
+			create_pop = {
+				culture = kotskarvi
+				size = 567057
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 68600
+			}
+			create_pop = {
+				culture = florishnom
+				size = 43400
+			}
+		}
+	}
+	s:STATE_ZUCARA = {
+		region_state:MVI = {
+			create_pop = {
+				culture = kotskarvi
+				size = 665126
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 77000
+			}
+			create_pop = {
+				culture = florishnom
+				size = 60900
+			}
+		}
+	}
+	s:STATE_CERNIA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 475098
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 94577
+			}
+			create_pop = { # Laz
+				culture = florishnom
+				size = 28224
+			}
+		}
+	}
+	s:STATE_NEOSCARPIA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 527650
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 11498
+			}
+			create_pop = {
+				culture = florishnom
+				size = 30103
+			}
+		}
+	}
+	s:STATE_KURTHARA = {
+		region_state:RKO = {
+			create_pop = {
+				culture = garagoz
+				size = 763827
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 35700
+			}
+		}
+	}
+	s:STATE_EBYSUS = {
+		region_state:RKO = {
+			create_pop = {
+				culture = garagoz
+				size = 1070861
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 26600
+			}
+		}
+	}
+	s:STATE_KLYPYRA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 428324
+			}
+			create_pop = {
+				culture = garagoz
+				size = 71973
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 128031
+			}
+		}
+	}
+	s:STATE_ZAMARIS = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 628460
+			}
+			create_pop = {
+				culture = garagoz
+				size = 101153
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 156800
+			}
+		}
+	}
+	s:STATE_LEPIDRA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = illvasaari
+				size = 604514
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 168277
+			}
+			create_pop = {
+				culture = garagoz
+				size = 123200
+			}
+		}
+	}
+	# s:STATE_HADRIA = {
+	# 	region_state:KVA = {
+
+	# 	}
+	# }
+	s:STATE_ZARTHOS = {
+		region_state:DIS = {
+			create_pop = {
+				culture = kotskarvi
+				size = 191386
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 628320
+			}
+
+		}
+	}
+	s:STATE_MYSARA = {
+		region_state:GUR = {
+			create_pop = {
+				culture = illvasaari
+				size = 87080
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 897260
+			}
+		}
+	}
+	s:STATE_CYRRA = {
+		region_state:KVA = {
+			create_pop = {
+				culture = kotskarvi
+				size = 2557763
+			}
+			create_pop = {
+				culture = illvasaari
+				size = 75400
+			}
+		}
+	}
+	s:STATE_BYSARIS = {
+		region_state:ORO = {
+			create_pop = {
+				culture = garagoz
+				size = 913201
+			}
+		}
+	}
+	s:STATE_CALTHA = {
+		region_state:DIS = {
+			create_pop = {
+				culture = kotskarvi
+				size = 143366
+			}
+			create_pop = {
+				culture =  illvasaari
+				size = 613200
+			}
+		}
+	}
+	s:STATE_THYRIS = {
+		region_state:GUR = {
+			create_pop = {
+				culture = illvasaari
+				size = 147283
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 952134
+			}
+		}
+	}
+	s:STATE_ZABARA = {
+		region_state:GUR = {
+			create_pop = {
+				culture = illvasaari
+				size = 41331
+			}
+			create_pop = {
+				culture = kotskarvi
+				size = 694340
+			}
+		}
+	}
+	s:STATE_BRESTVARL = {
+		region_state:HEL = {
+			create_pop = {
+				culture = toftir_giant
+				size = 20000
+			}
+		}
+	}
+	s:STATE_RAVGA = {
+		region_state:VAR = {
+			create_pop = {
+				culture = umbradorn
+				size = 838900
+			}
+		}
+	}
+	s:STATE_KJELLORU = {
+		region_state:VAL = {
+			create_pop = {
+				culture = toftir_giant
+				size = 17290
+			}
+		}
+	}
+	s:STATE_SJETADIKK = {
+		region_state:HEL = {
+			create_pop = {
+				culture = toftir_giant
+				size = 12200
+			}
+		}
+	}
+	s:STATE_SYLVARIN = {
+		region_state:ORO = {
+			create_pop = {
+				culture = garagoz
+				size = 974000
+			}
+		}
+	}
+	s:STATE_BRIFTEPLYG = {
+		region_state:DOK = {
+			create_pop = {
+				culture = toftir_giant
+				size = 18000
+			}
+		}
+	}
+	s:STATE_DUODJI = {
+		region_state:DOK = {
+			create_pop = {
+				culture = toftir_giant
+				size = 27000
+			}
+		}
+	}
+	s:STATE_NUWUKUNBRUKT = {
+		region_state:GRD = {
+			create_pop = {
+				culture = toftir_giant
+				size = 21000
+			}
+		}
+	}
+	s:STATE_AHKKU = {
+		region_state:VAL = {
+			create_pop = {
+				culture = toftir_giant
+				size = 20000
+			}
+		}
+	#	region_state:HEL = {
+	#		create_pop = {
+	#			culture = toftir_giant
+	#			size = 7350
+	#		}
+		}
+	s:STATE_GRORBONFOW = {
+		region_state:NRA = {
+			create_pop = {
+				culture = umbradorn
+				size = 102000
+			}
+			create_pop = {
+				culture = blacktalon
+				size = 950000
+			}
+		}
+	}
+	s:STATE_FLULDAURBYM = {
+		region_state:GRD = {
+			create_pop = {
+				culture = toftir_giant
+				size = 42000
+			}
+		}
+	}
+	s:STATE_DASRUGODA = {
+		region_state:ZRA = {
+			create_pop = {
+				culture = blacktalon
+				size = 34000
+			}
+			create_pop = {
+				culture = toftir_giant
+				size = 17800
+			}
+		}
+	}
+	s:STATE_WUTUNWOS = {
+		region_state:VAR = {
+			create_pop = {
+				culture = umbradorn
+				size = 482000
+			}
+		}
+	}
+	s:STATE_BRAATTA = {
+		region_state:HEL = {
+			create_pop = {
+				culture = toftir_giant
+				size = 35000
+			}
+		}
+	}
+	s:STATE_RUAATTA = {
+		region_state:HVR = {
+			create_pop = {
+				culture = toftir_giant
+				size = 45000
+			}
+
+	#		region_state:DOK = {
+	#		create_pop = {
+	#			culture = toftir_giant
+	#			size = 7500
+	#		}
+	#    }
+		}
+	}
+	s:STATE_LUMINEVRA = {
+		region_state:ORO = {
+			create_pop = {
+				culture = blacktalon
+				size = 237000
+			}
+			create_pop = {
+				culture = toftir_giant
+				size = 10500
+			}
+		}
+	}
+	s:STATE_SATBULV = {
+		region_state:VAL = {
+			create_pop = {
+				culture = toftir_giant
+				size = 24500
+			}
+		}
+	}
+	s:STATE_SILENTWISP = {
+		region_state:RKO = {
+			create_pop = {
+				culture = garagoz
+				size = 307000
+			}
+		}
+	}
+	s:STATE_RAHKIS = {
+		region_state:ZRA = {
+
+			create_pop = {
+				culture = blacktalon
+				size = 37000
+			}
+			create_pop = {
+				culture = toftir_giant
+				size = 13000
+			}
+		}
+	}
+	s:STATE_WHIRINAKI = {
+		region_state:QAR = {
+			create_pop = {
+				culture = drogori
+				size = 676300
+			}
+			create_pop = {
+				culture = kealohi
+				size = 62300
+			}
+			create_pop = {
+				culture = vairian
+				size = 18900
+			}
+		}
+		region_state:TPK= {
+			create_pop = {
+				culture = kealohi
+				size = 242300
+			}
+		}
+	}
+	s:STATE_RUMATARI = {
+		region_state:IIS = {
+			create_pop = {
+			  culture = lonolot
+			  size = 394357
+			}
+		}
+	}
+
+	s:STATE_RONGOMARA = {
+		region_state:NAU = {
+			create_pop = {
+			  culture = lonolot
+			  size = 157357
+			}
+		  }
+		  region_state:HUK = {
+			create_pop = {
+			  culture = lonolot
+			  size = 234357
+			}
+		  }
+	}
+	
+	s:STATE_GARPATIA = {
+		region_state:TPK = {
+			create_pop = {
+				culture = kealohi
+				size = 222734
+			}
+			create_pop = {
+				culture = lonolot
+				size = 102033
+			}
+		}
+	}
+	s:STATE_PUCOVATU = {
+		region_state:QAR = {
+			create_pop = {
+			  culture = kealohi
+			  size = 115357
+			}
+			create_pop = {
+			  culture = drogori
+			  size = 311357
+			}
+			create_pop = {
+			  culture = lonolot
+			  size = 191727
+			}
+		}
+		region_state:HUK = {
+			create_pop = {
+			  culture = kealohi
+			  size = 30270
+			}
+			create_pop = {
+			  culture = lonolot
+			  size = 108213
+			}
+		}
+	}
+	s:STATE_TURAKINA = {
+		region_state:TPK = {
+			create_pop = {
+				culture = kealohi
+				size = 420562
+			}
+			create_pop = {
+				culture = lonolot
+				size = 97157
+			}
+		}
+	}
+	s:STATE_RAROMARA = {
+		region_state:QAR = {
+			create_pop = {
+				culture = drogori
+				size = 2165900
+			}
+			create_pop = {
+				culture = kealohi
+				size = 237900
+			}
+			create_pop = {
+				culture = lonolot
+				size = 82617
+			}		
+		}
+	}
+	s:STATE_LUNARATA = {
+		region_state:SKI = {
+			create_pop = {
+			  culture = kealohi
+			  size = 18859
+			}
+			create_pop = {
+			  culture = lonolot
+			  size = 115213
+			}
+		}
+		region_state:GNE = {
+			create_pop = {
+			  culture = kealohi
+			  size = 37482
+			}
+			create_pop = {
+			  culture = lonolot
+			  size = 171024
+			}
+		}
+	}
+}

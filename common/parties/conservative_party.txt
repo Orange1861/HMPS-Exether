@@ -1,0 +1,564 @@
+﻿# Bastion of the Landowners
+# Can also appeal to the Devout, PB, and Industrialists
+
+conservative_party = {
+	color = { 108 64 179 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_conservative
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/conservatism.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			OR = {
+				ig:ig_landowners ?= {
+					is_marginal = no
+				}
+				ig:ig_devout ?= {
+					is_marginal = no
+				}
+				ig:ig_petty_bourgeoisie ?= {
+					is_marginal = no
+				}
+			}
+		}
+		# unions can never be conservative
+		NOT = { is_interest_group_type = ig_trade_unions }
+	}
+
+	# Root - IG considering joining
+	# scope:number - the number of IGs that would join this party before the root IG
+	join_weight = {
+		value = {
+			value = -5
+			desc = "base_value"
+		}
+		if = { # socialists and radicals won't join conservative parties
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_vanguardist
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_nihilist
+					}
+				}
+			}
+			add = {
+				value = -20
+				desc = "from_leftist"
+			}
+		}
+		if = { # conservatives love conservativism
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_traditionalist
+						has_ideology = ideology:ideology_matriarchal_traditionalist
+						has_ideology = ideology:ideology_nomadic
+                		has_ideology = ideology:ideology_ecumenical_traditionalist
+						has_ideology = ideology:ideology_royalist
+						has_ideology = ideology:ideology_theocrat
+						has_ideology = ideology:ideology_slaver
+						has_ideology = ideology:ideology_corporatist_leader
+					}
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_conservative_leader"
+			}
+		}
+		if = { # conservatives love conservativism
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_republican_paternalistic
+					has_ideology = ideology:ideology_papal_paternalistic
+					has_ideology = ideology:ideology_paternalistic_hobgoblin
+					has_ideology = ideology:ideology_magnatial
+					has_ideology = ideology:ideology_stratocratic
+					has_ideology = ideology:ideology_hobgoblin_stratocratic
+					has_ideology = ideology:ideology_goblin_stratocratic
+					has_ideology = ideology:ideology_patriarchal
+					has_ideology = ideology:ideology_chivalrous_conservative
+					has_ideology = ideology:ideology_moralist
+					has_ideology = ideology:ideology_theocratic_moralist
+					has_ideology = ideology:ideology_ancestral_moralist
+					has_ideology = ideology:ideology_goblin_moralist_governorate
+					has_ideology = ideology:ideology_corporatist
+					has_ideology = ideology:ideology_corporatist_druidic
+					has_ideology = ideology:ideology_corporatist_magoclast
+					has_ideology = ideology:ideology_corporatist_knowledge
+					has_ideology = ideology:ideology_corporatist_inventor
+					has_ideology = ideology:ideology_caudillismo
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_conservative_ig"
+			}
+		}
+		if = { # armed forces will join if a more powerful member has jingoist leader
+			limit = {
+				is_interest_group_type = ig_armed_forces
+				exists = owner.py:conservative_party
+				owner = {
+					any_interest_group = {
+						is_member_of_party = owner.py:conservative_party
+						is_powerful = yes
+						leader = {
+							has_ideology = ideology:ideology_jingoist_leader
+						}
+					}
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_jingoist_party_leader"
+			}
+		}
+		if = { # landowners will join if they are even moderately powerful
+			limit = {
+				ig_clout >= 0.15
+				is_interest_group_type = ig_landowners
+			}
+			add = {
+				value = 5
+				desc = "from_powerful_conservative_ig"
+			}
+		}
+		if = { # various progressives dislike conservativism
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_feminist
+						has_ideology = ideology:ideology_pacifist
+						has_ideology = ideology:ideology_reformer
+						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian_royalist
+					}
+				}
+			}
+			add = {
+				value = -5
+				desc = "from_progressive_con"
+			}
+		}
+		if = { # reactionaries like conservatism
+			limit = {
+				has_ideology = ideology:ideology_reactionary
+			}
+			add = {
+				value = 3
+				desc = "from_reactionaries"
+			}
+		}
+		# Abolitionists won't join conservative party
+		if = {
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_abolitionist
+						has_ideology = ideology:ideology_utilitarian_leader
+					}
+				}
+				owner = {
+					NOT = { has_law = law_type:law_slavery_banned }
+				}
+			}
+			add = {
+				value = -20
+				desc = "from_anti_slavery"
+			}
+		}
+		if = { # patriots are inclined towards conservativism
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_patriotic
+					has_ideology = ideology:ideology_patriotic_pb
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_patriot"
+			}
+		}
+		if = { # mages more likely to join conservatives when under traditional precedent
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_power_hungry
+				}
+				owner = {
+					has_law = law_type:law_divine_miracles
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_traditional_precedent"
+			}
+		}
+		if = { # capitalists more likely to join conservatives when the poor can vote
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_plutocratic
+					has_ideology = ideology:ideology_enclavist
+					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_republican_paternalistic
+					has_ideology = ideology:ideology_papal_paternalistic
+					has_ideology = ideology:ideology_paternalistic_hobgoblin
+					has_ideology = ideology:ideology_magnatial
+				}
+				owner = {
+					has_law = law_type:law_universal_suffrage
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_capitalists_suffrage"
+			}
+		}
+		if = { # capitalists and landowners more likely to join with progressive taxation
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_plutocratic
+					has_ideology = ideology:ideology_enclavist
+					has_ideology = ideology:ideology_stratocratic
+					has_ideology = ideology:ideology_hobgoblin_stratocratic
+					has_ideology = ideology:ideology_goblin_stratocratic
+				}
+				owner = {
+					has_law = law_type:law_graduated_taxation
+				}
+			}
+			add = {
+				value = 2
+				desc = "from_capitalists_tax"
+			}
+		}
+		if = { # capitalists more likely to join conservatives with public health
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_individualist
+					has_ideology = ideology:ideology_malthusian
+				}
+				owner = {
+					has_law = law_type:law_public_health_insurance
+				}
+			}
+			add = {
+				value = 2
+				desc = "from_capitalists_health"
+			}
+		}
+		if = { # devout, industrialists more likely to join conservatives with public schools
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_individualist
+					has_ideology = ideology:ideology_malthusian
+					has_ideology = ideology:ideology_pious
+					has_ideology = ideology:ideology_pious_inventor
+				}
+				owner = {
+					has_law = law_type:law_public_schools
+				}
+			}
+			add = {
+				value = 2
+				desc = "from_capitalists_schools"
+			}
+		}
+		if = { # devout more likely to join conservatives with total separation
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_moralist
+					has_ideology = ideology:ideology_theocratic_moralist
+					has_ideology = ideology:ideology_plutocratic_moralist
+					has_ideology = ideology:ideology_ecumenical_moralist
+					has_ideology = ideology:ideology_ancestral_moralist
+					has_ideology = ideology:ideology_hobgoblin_moralist
+				}
+				owner = {
+					has_law = law_type:law_total_separation
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_devout_separation"
+			}
+		}
+		if = { # strict devout more likely to join conservatives with freedom of conscience
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_moralist
+					has_ideology = ideology:ideology_theocratic_moralist
+					has_ideology = ideology:ideology_ancestral_moralist
+					has_ideology = ideology:ideology_hobgoblin_moralist
+				}
+				owner = {
+					has_law = law_type:law_freedom_of_conscience
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_devout_conscience"
+			}
+		}
+		if = { # patriarchs more likely to join conservatives with women's suffrage
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_patriarchal
+					has_ideology = ideology:ideology_chivalrous_conservative
+				}
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_patriarchy"
+			}
+		}
+		if = { # patriarchs more likely to join conservatives with working women
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_patriarchal
+					has_ideology = ideology:ideology_chivalrous_conservative
+				}
+				owner = {
+					has_law = law_type:law_women_in_the_workplace
+				}
+			}
+			add = {
+				value = 2
+				desc = "from_patriarchy_lesser"
+			}
+		}
+		if = { # reactionaries like regressing from multiculturalism
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_reactionary
+					has_ideology = ideology:ideology_anarchical_reactionary
+					has_ideology = ideology:ideology_cerunite_hegemony
+					has_ideology = ideology:ideology_vampire_hegemony
+					has_ideology = ideology:ideology_hobgoblin_hegemony
+					has_ideology = ideology:ideology_hobgoblin_moralist
+					has_ideology = ideology:ideology_kreva_fingo
+					has_ideology = ideology:ideology_ancestral_moralist
+				}
+				owner = {
+					has_law = law_type:law_multicultural
+				}
+			}
+			add = {
+				value = 2
+				desc = "from_multiculturalism"
+			}
+		}
+		# alliance for stricter internal security
+		if = {
+			limit = {
+				OR = {
+					OR = {
+						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_patriotic_pb
+					}
+					leader = { has_ideology = ideology:ideology_authoritarian }
+				}
+				owner = {
+					NOR = {
+						has_law = law_type:law_no_home_affairs
+						has_law = law_type:law_guaranteed_liberties
+					}
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_liberty"
+			}
+		}
+		if = { # conservatives like censorship
+			limit = {
+				owner = {
+					has_technology_researched = law_enforcement
+					OR = {
+						has_law = law_type:law_right_of_assembly
+						has_law = law_type:law_protected_speech
+					}
+				}
+				OR = {
+					has_ideology = ideology:ideology_patriarchal
+					has_ideology = ideology:ideology_patriarchal_suffrage
+					has_ideology = ideology:ideology_chivalrous_conservative
+					has_ideology = ideology:ideology_matriarchal
+					OR = {
+						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_patriotic_pb
+					}
+					leader = { has_ideology = ideology:ideology_authoritarian }
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_no_censorship"
+			}
+		}
+		if = { # conservatives hate republics
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_moralist
+					has_ideology = ideology:ideology_theocratic_moralist
+					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_papal_paternalistic
+					has_ideology = ideology:ideology_paternalistic_hobgoblin
+					has_ideology = ideology:ideology_magnatial
+				}
+				owner = {
+					NOR = {
+						has_law = law_type:law_monarchy
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_magocracy
+					}
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_republic"
+			}
+		}
+		if = { # landowners and industrialists hate labor rights
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_stratocratic
+					has_ideology = ideology:ideology_hobgoblin_stratocratic
+					has_ideology = ideology:ideology_goblin_stratocratic
+					has_ideology = ideology:ideology_laissez_faire
+					has_ideology = ideology:ideology_colonialist
+				}
+				OR = {
+					owner = {
+						has_law = law_type:law_regulatory_bodies
+						has_law = law_type:law_worker_protections
+					}
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_labor_rights"
+			}
+		}
+		if = { # conservatives hate welfare
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_stratocratic
+					has_ideology = ideology:ideology_individualist
+					has_ideology = ideology:ideology_malthusian
+				}
+				OR = {
+					owner = {
+						has_law = law_type:law_wage_subsidies
+						has_law = law_type:law_old_age_pension
+					}
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_welfare"
+			}
+		}
+		if = { # conservatives like police
+			limit = {
+				OR = {
+					has_paternalist_ideology = yes
+					OR = {
+						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_patriotic_pb
+					}
+				}
+				owner = {
+					has_technology_researched = law_enforcement
+					has_law = law_type:law_no_police
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_no_police"
+			}
+		}
+
+		if = {
+			limit = {
+				is_interest_group_type = ig_landowners
+				is_powerful = yes
+			}
+			multiply = {
+				value = 2
+				desc = "from_archetype_party"
+			}
+		}
+		if = {
+			limit = {
+				scope:number = 1
+				is_powerful = no
+				is_marginal = no
+			}
+			multiply = {
+				value = 2
+				desc = "from_influential_supporting_member"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 2
+			}
+			multiply = {
+				value = 0.5
+				desc = "from_two_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 3
+			}
+			multiply = {
+				value = 0.25
+				desc = "from_three_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number > 3
+			}
+			multiply = {
+				value = 0.1
+				desc = "from_more_than_three_prior_members"
+			}
+		}
+		if = {
+			limit = {
+				leader = {
+					has_variable = beauty_in_bloom_conservative
+				}
+			}
+			add = {
+				value = 20
+				desc = "beauty_in_bloom_support"
+			}
+		}
+	}
+}

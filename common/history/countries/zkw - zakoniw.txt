@@ -1,0 +1,47 @@
+﻿COUNTRIES = {
+	c:ZKW = {
+		
+		effect_starting_technology_tier_knowledge_tech = yes
+		
+		activate_law = law_type:law_magocracy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_magical_schools
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_court_mages
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_astrological_studies
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_no_police
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_national_militia
+
+		ig:ig_mages ?= {
+			add_ruling_interest_group = yes
+		}
+
+		set_institution_investment_level = {
+			institution = institution_magical_focus
+			level = 3
+		}
+		
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 2
+		}
+
+		add_company = company_type:company_wolfslayers_guild
+        company:company_wolfslayers_guild = {
+		set_company_establishment_date = 1166.6.6
+		set_company_state_region = s:STATE_ZARKI
+		}
+
+		add_taxed_goods = g:liquor
+
+		set_variable = west_everfrost_subject_var
+	}
+}

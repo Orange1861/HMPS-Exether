@@ -1,0 +1,24 @@
+﻿COUNTRIES = {
+	c:TLD ?= {
+		effect_starting_technology_tier_2_tech = yes
+
+		add_technology_researched = hydraulic_cranes
+
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_wealth_voting
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_elected_bureaucrats
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_mage_hunters
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_dwarf_guild_privileges
+	}
+}

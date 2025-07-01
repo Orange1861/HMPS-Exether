@@ -1,0 +1,591 @@
+types generate_retainer_types
+{
+
+	type assign_retainer_type = default_popup {
+		layer = top
+		blockoverride "header_close_button_visibility" {
+			visible = yes
+		}
+
+		blockoverride "scrollarea_content"
+		{
+			flowcontainer = {
+				block "datamodel" {}
+				resizeparent = yes
+				direction = horizontal
+				spacing = 5
+
+				item = {
+					container = {
+						datacontext = "[Scope.GetCharacter]"
+						datacontext = "[Scope.GetCharacter.GetCountry]"
+
+						using = entry_bg_fancy
+						
+						flowcontainer = {
+							direction = vertical
+							vertical_divider_full = {}
+							
+							### INFO
+							flowcontainer = {
+								direction = vertical
+								spacing = 4
+								margin_bottom = 12
+								margin_left = 2
+								
+								### NAME + ICONS
+								widget = {
+									parentanchor = hcenter
+									size = { 340 35 }
+									scissor = yes
+									
+									background = {
+										using = default_header_bg
+										using = frame_small_mask_top
+									}
+									
+									textbox = {
+										raw_text = "[Character.GetCountry.GetFlagTextIcon] #BOLD  [Character.GetFullNameNoFormatting]#!"
+										size = { 100% 100% }
+										elide = right
+										align = nobaseline
+										using = fontsize_large
+										margin = { 10 0 }
+										parentanchor = vcenter
+									}
+								}
+								
+								### PORTRAIT
+								character_portrait_large_torso = {
+									parentanchor = hcenter
+									blockoverride "show_hat" {}
+									blockoverride "portrait_icons" {}
+									blockoverride "portrait_button" {}
+									blockoverride "tooltip_button_visibility" {
+										visible = no
+									}
+									blockoverride "portrait_size" {
+										size = { 85% 85% }
+									}
+								}
+
+								widget = {
+									parentanchor = hcenter
+									size = { 320 40 }
+
+									# IG
+									flowcontainer = {
+										name = "tutorial_highlight_recruit_commander_interest_group"
+										parentanchor = center|vcenter
+										margin_right = 10
+										#visible = "[Not(Character.IsHeir)]"
+										datacontext = "[Character.AccessInterestGroup]"
+										spacing = 5
+										
+										character_ig_icon = {
+											size = { 30 30 }
+
+											blockoverride "tooltip" {
+												tooltipwidget = {
+													FancyTooltip_IG = {}
+												}
+											}
+										}
+										
+										textbox = {
+											raw_text = "#bold [InterestGroup.GetNameNoIcon]#!"
+											autoresize = yes
+											
+											tooltipwidget = {
+												FancyTooltip_IG = {}
+											}
+											
+											parentanchor = left|vcenter
+											align = left|nobaseline
+										}
+									}
+								}
+
+								divider_clean = {
+									parentanchor = hcenter
+									size = { 310 1 }
+								}
+								
+								# traits + ideology
+								container = {
+									parentanchor = hcenter
+									minimumsize = { 320 110 }
+
+									dynamicgridbox = {
+										datamodel = "[Character.AccessTraits]"
+										maxhorizontalslots = 3
+										datamodel_wrap = 2
+										flipdirection = yes
+										parentanchor = hcenter
+										position = { 0 5 }
+
+										item = {
+											flowcontainer = {
+												margin_right = 5
+												margin_bottom = 5											
+												container = {
+													minimumsize = { 150 45 }
+													maximumsize = { 150 45 }
+													using = tooltip_above
+													background = {
+														using = entry_bg_simple
+													}
+													tooltipwidget = {
+														FancyTooltip_CharacterTrait = {}
+													}
+
+													flowcontainer = {
+														parentanchor = vcenter
+														margin_left = 5
+														icon = {
+															size = { 25 35 }
+															parentanchor = vcenter
+															texture = "[CharacterTrait.GetTexture]"
+														}
+														textbox = {
+															text = "[CharacterTrait.GetNameNoFormatting]"
+															margin_left = 5
+															margin_right = 10
+															maximumsize = { 125 35 }
+															elide = right
+															autoresize = yes
+															parentanchor = vcenter
+															align = left|nobaseline
+															multiline = yes
+															using = fontsize_small
+														}
+													}
+												}	
+											}
+										}
+									}
+								}
+
+								### ASSIGN BUTTON
+								button = {
+									name = "tutorial_highlight_assign_retainer_recruit_button"
+									parentanchor = hcenter
+									using = default_button_action
+									size = { 325 45 }
+									text = "ASSIGN_CHARACTER_BUTTON"
+									datacontext = "[GetScriptedGui('assign_chosen_retainer')]"
+									onclick = "[GetVariableSystem.Toggle('show_assign_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('chosen_retainer', Character.MakeScope).End)]"
+									enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('chosen_retainer', Character.MakeScope).End)]"
+									tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('chosen_retainer', Character.MakeScope).End)]"
+									block "sound" {
+										using = commander_recruit_button_sound
+									}
+								}
+							}
+						}
+					}
+				}
+				}
+		}
+	}
+
+	type generate_retainer_type = default_popup {
+		layer = top
+		blockoverride "header_close_button_visibility" {
+			visible = yes
+		}
+
+		blockoverride "scrollarea_content"
+		{
+			flowcontainer = {
+				block "datamodel" {}
+				resizeparent = yes
+				direction = horizontal
+				spacing = 5
+
+				item = {
+					container = {
+						datacontext = "[Scope.GetCharacter]"
+						datacontext = "[Scope.GetCharacter.GetCountry]"
+
+						using = entry_bg_fancy
+						
+						flowcontainer = {
+							direction = vertical
+							vertical_divider_full = {}
+							
+							### INFO
+							flowcontainer = {
+								direction = vertical
+								spacing = 4
+								margin_bottom = 12
+								margin_left = 2
+								
+								### NAME + ICONS
+								widget = {
+									parentanchor = hcenter
+									size = { 340 35 }
+									scissor = yes
+									
+									background = {
+										using = default_header_bg
+										using = frame_small_mask_top
+									}
+									
+									textbox = {
+										raw_text = "[Character.GetCountry.GetFlagTextIcon] #BOLD  [Character.GetFullNameNoFormatting]#!"
+										size = { 100% 100% }
+										elide = right
+										align = nobaseline
+										using = fontsize_large
+										margin = { 10 0 }
+										parentanchor = vcenter
+									}
+								}
+								
+								### PORTRAIT
+								character_portrait_large_torso = {
+									parentanchor = hcenter
+									blockoverride "show_hat" {}
+									blockoverride "portrait_icons" {}
+									blockoverride "portrait_button" {}
+									blockoverride "tooltip_button_visibility" {
+										visible = no
+									}
+									blockoverride "portrait_size" {
+										size = { 85% 85% }
+									}
+								}
+
+								widget = {
+									parentanchor = hcenter
+									size = { 320 40 }
+
+									# IG
+									flowcontainer = {
+										name = "tutorial_highlight_recruit_commander_interest_group"
+										parentanchor = center|vcenter
+										margin_right = 10
+										#visible = "[Not(Character.IsHeir)]"
+										datacontext = "[Character.AccessInterestGroup]"
+										spacing = 5
+										
+										character_ig_icon = {
+											size = { 30 30 }
+
+											blockoverride "tooltip" {
+												tooltipwidget = {
+													FancyTooltip_IG = {}
+												}
+											}
+										}
+										
+										textbox = {
+											raw_text = "#bold [InterestGroup.GetNameNoIcon]#!"
+											autoresize = yes
+											
+											tooltipwidget = {
+												FancyTooltip_IG = {}
+											}
+											
+											parentanchor = left|vcenter
+											align = left|nobaseline
+										}
+									}
+								}
+
+								divider_clean = {
+									parentanchor = hcenter
+									size = { 310 1 }
+								}
+								
+								# traits + ideology
+								container = {
+									parentanchor = hcenter
+									minimumsize = { 320 110 }
+
+									dynamicgridbox = {
+										datamodel = "[Character.AccessTraits]"
+										maxhorizontalslots = 3
+										datamodel_wrap = 2
+										flipdirection = yes
+										parentanchor = hcenter
+										position = { 0 5 }
+
+										item = {
+											flowcontainer = {
+												margin_right = 5
+												margin_bottom = 5											
+												container = {
+													minimumsize = { 150 45 }
+													maximumsize = { 150 45 }
+													using = tooltip_above
+													background = {
+														using = entry_bg_simple
+													}
+													tooltipwidget = {
+														FancyTooltip_CharacterTrait = {}
+													}
+
+													flowcontainer = {
+														parentanchor = vcenter
+														margin_left = 5
+														icon = {
+															size = { 25 35 }
+															parentanchor = vcenter
+															texture = "[CharacterTrait.GetTexture]"
+														}
+														textbox = {
+															text = "[CharacterTrait.GetNameNoFormatting]"
+															margin_left = 5
+															margin_right = 10
+															maximumsize = { 125 35 }
+															elide = right
+															autoresize = yes
+															parentanchor = vcenter
+															align = left|nobaseline
+															multiline = yes
+															using = fontsize_small
+														}
+													}
+												}	
+											}
+										}
+									}
+								}
+
+								retainer_stats_entry = {
+
+									tooltip = "POPULARITY_BREAKDOWN"
+	
+									blockoverride "animation" {
+										name = commander_panel_show
+										on_finish = "[PdxGuiTriggerAllAnimations('character_panel_stat')]"
+									}
+	
+									blockoverride "icon_texture" {
+										texture = "gfx/interface/icons/generic_icons/popularity.dds"
+									}
+	
+									blockoverride "double_entry_label" {
+										text = "POPULARITY"
+									}
+									blockoverride "double_entry_value" {
+										text = "CHARACTER_POPULARITY"
+									}
+									blockoverride "single_text_entry" {}
+								}
+
+								retainer_stats_entry = {
+
+									blockoverride "animation" {
+										name = commander_panel_show
+										on_finish = "[PdxGuiTriggerAllAnimations('character_panel_stat')]"
+									}
+	
+									blockoverride "icon_texture" {
+										texture = "gfx/interface/icons/character_role_icons/retainer.dds"
+									}
+	
+									blockoverride "double_entry_label" {
+										text = "RETAINER_COST"
+									}
+									blockoverride "double_entry_value" {
+										raw_text =  "#v [Character.MakeScope.ScriptValue('retainer_cost_text')|k]#!"
+									}
+									blockoverride "single_text_entry" {}
+								}
+
+								### RECRUIT BUTTON
+								button = {
+									name = "tutorial_highlight_recruit_retainer_recruit_button"
+									parentanchor = hcenter
+									using = default_button_action
+									size = { 325 45 }
+									text = "RECRUIT_CHARACTER_BUTTON"
+									datacontext = "[GetScriptedGui('recruit_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('recruited_character', Character.MakeScope).End)]"
+									enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('recruited_character', Character.MakeScope).End)]"
+									tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('recruited_character', Character.MakeScope).End)]"
+									block "sound" {
+										using = commander_recruit_button_sound
+									}
+								}
+							}
+						}
+					}
+				}
+				}
+		}
+	}
+
+types character_stats {
+	type retainer_stats_entry = widget {
+		size = { 220 50 }
+		block "parentanchor" {
+			parentanchor = hcenter
+		}
+		block "entire_stat_tooltip" {}
+		block "visibility" {}
+
+		block "divider" {
+			divider_clean = {
+				parentanchor = bottom|hcenter
+				position = { 0 -2 }
+			}
+		}
+		
+		block "icon" {
+			icon = {
+				block "icon_tooltip" {}
+				block "icon_size" {
+					size = { 35 35 }
+				}
+				block "icon_texture" {
+					texture = "gfx/interface/backgrounds/round_button_bg.dds"
+				}
+				parentanchor = left|vcenter
+				position = { 10 0 }
+			}
+		}
+
+		block "double_text_entry" {
+			textbox = {
+				autoresize = yes
+				position = { 55 6 }
+				elide = left
+				parentanchor = left
+				align = left|nobaseline
+				using = fontsize_small
+				block "double_entry_label" {
+					raw_text = "insert_label"
+				}
+			}
+			textbox = {
+				size = { 170 20 }
+				position = { 55 -6 }
+				elide = right
+				fontsize_min = 14
+				align = left|nobaseline
+				parentanchor = left|bottom
+				block "double_entry_value" {
+					raw_text = "insert_text"
+				}
+			}
+		}
+
+		block "single_text_entry" {
+			textbox = {
+				block "single_text_tooltip" {}
+				autoresize = yes
+				position = { 55 0 }
+				elide = left
+				align = left|nobaseline
+				parentanchor = left|vcenter
+				block "single_entry_value" {
+					raw_text = "insert_text"
+				}
+			}
+		}
+
+		block "additional_items" {}
+	}
+
+	type retainer_interest_group_entry = retainer_stats_entry {
+
+		tooltipwidget = {
+		 	FancyTooltip_IG = {}
+		}
+
+		blockoverride "icon" {
+			icon = {
+				visible = "[Not(InterestGroup.IsValid)]"
+				size = { 35 35 }
+				texture = "gfx/interface/icons/ig_icons/politically_unaligned.dds"
+				parentanchor = left|vcenter
+				position = { 10 0 }
+			}
+
+			button_icon_round = {
+				visible = "[InterestGroup.IsValid]"
+				parentanchor = left|vcenter
+				position = { 10 0 }
+
+				blockoverride "size" {
+					size = { 35 35 }
+				}
+				blockoverride "icon_size" {
+					size = { 75% 75% }
+				}
+
+				block "onclick" {
+					onclick = "[InformationPanelBar.OpenInterestGroupPanel(InterestGroup.AccessSelf)]"
+					onrightclick = "[RightClickMenuManager.ShowForIG(InterestGroup.AccessSelf)]"
+				}
+
+
+				blockoverride "icon" {
+					texture = "[InterestGroup.GetTexture]"
+				}			
+			}
+		}
+
+		blockoverride "double_entry_label" {
+			text = "INTEREST_GROUP"
+		}
+		blockoverride "double_entry_value" {
+			raw_text = "#v [InterestGroup.GetNameNoFormatting]#!"
+		}
+		blockoverride "single_text_entry" {}
+	}
+
+	type character_popularity_retainer = flowcontainer {
+			block "datacontext" {}
+			block "visible" {}
+			block "position" {}
+			tooltip = "POPULARITY_BREAKDOWN"
+			parentanchor = hcenter
+			direction = vertical
+			maximumsize = { 110 80 }
+			minimumsize = { 110 80 }
+			margin_top = 12
+			background =  {
+				using = entry_bg_fancy_dark
+				alpha = 1
+			}
+			spacing = 2
+			textbox = {
+				autoresize = yes
+				elide = left
+				parentanchor = hcenter
+				align = hcenter|nobaseline
+				using = fontsize_small
+				text = "FIRST_NAME"
+			}
+			divider_clean = {
+				parentanchor = hcenter
+				visible = "[Character.MakeScope.Var('is_retainer').IsSet]"
+				size = { 55 1 }
+			}
+			textbox = {
+				autoresize = yes
+				elide = left
+				parentanchor = hcenter
+				align = hcenter|nobaseline
+				using = fontsize_small
+				text = "POPULARITY"
+			}	
+			textbox = {
+				autoresize = yes
+				elide = left
+				parentanchor = hcenter
+				align = hcenter|nobaseline
+				using = fontsize_small
+				text = "CHARACTER_POPULARITY"
+			}
+		
+
+		}
+	}
+}

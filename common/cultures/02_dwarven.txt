@@ -1,0 +1,617 @@
+﻿arcthar={
+	color={ 255 178 102 }
+	religion = buried_gods
+	traits = { tunnel_cursed dwarf_heritage }
+	male_common_first_names = {
+		I_Gusti
+		Anak_Agung
+		Tjokorda
+		I_Dewa
+		Ida
+		Jero
+		Ang
+		Norodom
+		Pok
+		Satha
+		Sisowath
+		Thommo
+	}
+	female_common_first_names = {
+		Ngakan
+		Kompyang
+		Sang
+		Si
+	}	
+	noble_last_names = {
+		Kadek
+		Koming
+		Nengah
+		Wayan_Balik
+	}
+	common_last_names = {
+		Wayan
+		Made
+		Nyoman
+		Ketut
+		Putu
+	}
+	ethnicities = {
+		1 = dwarf_dark
+	}
+	graphics = dwarf_graphics
+}
+
+#Dûneshar
+duneshar={
+	color= hsv{ 0.29 0.22 0.51 }
+	religion = kragmorn
+	traits = { embervein_warriors_culture_group cloud_dwarf dwarf_heritage }
+	obsessions = {
+        tobacco
+    }
+	male_common_first_names={
+		Denny
+		Dominggus
+		Edinho
+		Ellyas
+		Ignacio
+		Jordao
+		Jos
+		Levi
+		Michael
+		Sonny
+	}
+	female_common_first_names = {
+		Bellaetrix 
+		Fatimah
+	}	
+	noble_last_names = {
+		Kolano
+		Sjah
+	}
+	common_last_names={
+		Bouma
+		Hafiedz
+		Leiwakabessy
+		Lilipaly
+		Mainaky
+		Palyama
+		Pattinama
+		Pelmelay
+		Weisapy
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = dwarf_graphics
+}
+
+#Lithorin
+lithorin={
+	color= hsv{ 0.29 0.22 0.51 }
+	religion = kragmorn
+	traits = {cloud_dwarf dwarf_heritage }
+	male_common_first_names={
+		Denny
+		Dominggus
+		Edinho
+		Ellyas
+		Ignacio
+		Jordao
+		Jos
+		Levi
+		Michael
+		Sonny
+	}
+	female_common_first_names = {
+		Bellaetrix 
+		Fatimah
+	}	
+	noble_last_names = {
+		Kolano
+		Sjah
+	}
+	common_last_names={
+		Bouma
+		Hafiedz
+		Leiwakabessy
+		Lilipaly
+		Mainaky
+		Palyama
+		Pattinama
+		Pelmelay
+		Weisapy
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = dwarf_graphics
+}
+
+starwoken={
+	color= hsv{ 0.04 0.54 0.86 }
+	religion = old_kragmorn
+	traits = { tunnel_cursed dwarf_heritage }
+	male_common_first_names={
+		Ang
+		Norodom
+		Pok
+		Satha
+		Sisowath
+		Thommo
+		I_Gusti
+		Anak_Agung
+		Tjokorda
+		I_Dewa
+		Ida
+		Jero
+	}
+	female_common_first_names = {
+		Aut
+		Bunlei
+		Di
+		Mey
+		Ros
+		Vanthy
+		Vara
+	}	
+	noble_last_names = {
+		Ang
+		Varman
+	}
+	common_last_names={
+		Chan
+		Em
+		Eng
+		Mey
+		Non
+		Reachea
+		Sieng
+		Sinn
+		Snguon
+		Tong
+	}
+	ethnicities = {
+		1 = dwarf_dark
+	}
+	graphics = dwarf_graphics
+}
+
+yelfi={
+	color= hsv{ 0.24 0.64 0.36 }
+	religion = kragmorn
+    traits = { cloud_dwarf moorwealder_culture_group dwarf_heritage }
+    obsessions = {
+        liquor
+    }
+	male_common_first_names={
+		Ang
+		Norodom
+		Pok
+		Satha
+		Sisowath
+		Thommo
+	}
+	female_common_first_names = {
+		Aut
+		Bunlei
+		Di
+		Mey
+		Ros
+		Vanthy
+		Vara
+	}	
+	noble_last_names = {
+		Ang
+		Varman
+	}
+	common_last_names={
+		Chan
+		Em
+		Eng
+		Mey
+		Non
+		Reachea
+		Sieng
+		Sinn
+		Snguon
+		Tong
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = dwarf_graphics
+}
+
+vozi={
+	color= hsv{ 0.33 0.10 0.74 }
+	religion = kragmorn
+	traits = { nogi_culture_group cloud_dwarf dwarf_heritage }
+	obsessions = {
+		liquor
+	}
+	male_common_first_names={
+		
+		Kiras
+		Nerus
+		Tifatul Terul
+		Egzihk
+		Hulguddeg
+	}
+	female_common_first_names = {
+		Atiqah Asien
+		Fatin
+		Sharena Sari Sedinqeh
+		Olen
+		Shezda
+
+	}	
+	noble_last_names = {
+		Buuljik
+		Crarnok
+		Manisia Marga_Sinambela
+		Odapodap
+		Panglima
+		Jigjilkhazo
+		Kassetann
+		Thirzund
+
+	}
+	common_last_names={
+		Angkat
+		Bako
+		Bangun
+		Berasa
+		Berutu
+		Bintang
+		Buuzrzhaga
+		Capah
+		Cibro
+		Gajah
+		Kesogihen
+		Kaloko
+		Longga
+		Meka
+		Padang Pasi
+		Sinamo Suka Saraan
+		Tendang Tabruzang Turutan Tinendung
+		Zhagager
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = dwarf_graphics
+}
+
+tolorr={
+	color= hsv{ 0.53 0.30 0.74 }
+	religion = kragmorn
+	traits = { sirens_lagoon_culture_group cloud_dwarf dwarf_heritage }
+	male_common_first_names={
+		Kiras
+		Nerus
+		Tifatul
+	}
+	female_common_first_names = {
+		Atiqah
+		Fatin
+		Sari
+		Sharena
+	}	
+	noble_last_names = {
+		Manisia
+		Marga_Sinambela
+		Odapodap
+		Panglima
+	}
+	common_last_names={
+		Angkat
+		Bako
+		Bangun
+		Berasa
+		Berutu
+		Bintang
+		Capah
+		Cibro
+		Gajah
+		Kesogihen
+		Kaloko
+		Longga
+		Meka
+		Padang
+		Pasi
+		Saraan
+		Sinamo
+		Suka
+		Tendang
+		Tinendung
+		Turutan
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = dwarf_graphics
+}
+
+vynduri={
+	color= hsv{ 0.40 0.36 0.70 }
+	religion = cult_of_knowledge
+	traits = {achophone cloud_dwarf dwarf_heritage}
+	male_common_first_names={
+		Amar
+		Bhakti
+		Bhim_Shamsher
+		Bhimsen
+		Bir_Shamsher
+		Chandra_Shamsher
+		Deva_Shamsher
+		Jang
+		Ranjur
+		Renaudip
+		Shamsher
+		Khozr
+	}
+	female_common_first_names = {
+		Anuradha 
+		Divyeshwari
+		Durga
+		Lakshmi
+		Sangita
+		Sunita
+		Yogmaya 
+	}	
+	noble_last_names = {
+		Basnyat
+		Bahadur_Rana
+		Bhandari
+		Chautariya
+		Koirala
+		Kunwar
+		Mahat
+		Pande
+		Singh
+		Singh_Thapa
+		Thapa
+		Rana
+		Rokhrandin
+	}
+	common_last_names={
+		Acharya
+		Ban
+		Das
+		Devi
+		Neupane
+		Sob
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = dwarf_graphics
+}
+
+koshiri={
+	color= hsv{ 0 0 0.5 }
+	religion = kragmorn
+	obsessions = {
+		liquor
+	}
+	traits = { cloud_dwarf dwarf_heritage }
+	male_common_first_names={
+		Akihi
+		Apniainu
+		Menkakush
+		Munkeke
+		Pasekur
+		Petennouk
+		Resaak
+		Seimei
+		Shinriki
+		Shiratekka
+		Shiromainu
+		Shitekka
+		Unayanke
+	}
+	female_common_first_names = {
+		Haru
+		Imekanu
+		Shizue
+		Tahkonanna
+		Umeko
+		Yaeko
+	}	
+	noble_last_names = {
+		Nakamura
+		Peramonkoro
+		Sunazawa
+	}
+	common_last_names={
+		Ando
+		Aterui
+		Harukor
+		Isonash
+		Keutoranke
+		Koshamine
+		Shakushine
+		Turushno
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = dwarf_graphics
+}
+
+castaway_dwarf={
+	color= hsv{ 0.71 0.54 0.78 }
+	religion = animist
+	obsessions = {
+		fish
+	}
+	traits = { cloud_dwarf islander_culture_group dwarf_heritage }
+	male_common_first_names={
+		Bing
+		Chen
+		Du
+		He
+		Hou
+		Lin
+		Qin
+		Sa
+		Shen
+		Tan
+		Wong
+		Wu
+		Xu
+		Xue
+		Yan
+		Zheng
+	}
+	female_common_first_names = {
+		Akew
+		Jin
+		Jinhong
+		Junying
+		Qingtang
+		Sanniang
+		Shanziang
+		Shih
+		Taiqing
+		Xiefen
+		Xiugu
+		Xuanjiao
+		Yu
+		Yunmei
+	}	
+	noble_last_names = {
+		Cui
+		Li
+		Nie
+		Zhang
+	}
+	common_last_names={
+		Baochen
+		Baozhen
+		Debang
+		Fu
+		Huiyin
+		Nai-siong
+		Nee
+		Sen
+		Shu
+		Xin
+		Zexu
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = dwarf_graphics
+}
+
+hornodukh={
+	color= hsv{ 0.16 0.32 0.62 }
+	religion = kragmorn
+	traits = {cloud_dwarf dwarf_heritage locari_cavern_dweller }
+	male_common_first_names={
+		Alexei
+		Andrei
+		Anton
+		Arkadiy
+		Borys
+		Dmitro
+		Fyodor
+		Hryhoriy
+		Ivan
+		Lavr
+		Leonid
+		Lev
+		Mikhail
+		Mykola
+		Nikita
+		Oleksandr
+		Panteleimon 
+		Pavel
+		Petro
+		Roman
+		Semyon
+		Sergiy
+		Valeriy
+		Viktor
+		Vladislav
+		Volodimir
+		Yevhen
+		Yuriy
+	}
+	female_common_first_names = {
+		Darya
+		Dniprova
+		Hrytsko
+		Kolomba
+		Lyubov
+		Lyudmila
+		Maria
+		Nadazhda
+		Nataliya
+		Olena
+		Olha
+		Polina
+		Ruslana
+		Slava
+		Ulyana
+		Valeriya
+		Xenia
+		Yevheniya
+	}	
+	noble_last_names = {
+		Chubynsky
+		Czajkowski
+		Drahomanov
+		Gogol-Yanovsky
+		Hnizdovsky
+		Hrekov
+		Hrushevsky
+		Karaszewicz-Tokarzewski
+		Kobyliansky
+		Konysky
+		Kropyvnytsky
+		Kulish
+		Levytsky
+		Lototsky
+		Ohonovsky
+		Omelianovych-Pavlenko
+		Ortynsky
+		Petrushevych
+		Rodzianko
+		Sas-Kuilovsky
+		Shakhovskoy
+		Sheptytsky
+		Skoropadskyi
+		Vakhnianyn
+		Vitovsky
+		Zubrytsky
+	}
+	common_last_names={
+		Bezruchko
+		Chernyakhovsky
+		Dyachenko
+		Gamula
+		Grigoriev
+		Hrekov
+		Ivanenko
+		Ivanov
+		Kapustiansky
+		Kondratenko
+		Leshchenko
+		Leshchinskiy
+		Paskevich
+		Petliura
+		Radchenko
+		Shevchenko
+		Skoropadskyi
+		Stefaniv
+		Tymoshenko
+		Vitovsky
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = dwarf_graphics
+}

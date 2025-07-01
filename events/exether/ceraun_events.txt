@@ -1,0 +1,2840 @@
+﻿namespace = ceraun_events
+
+ceraun_events.101 = { #collapse of Narathun Chirurgical
+	type = country_event
+	placement = ROOT
+
+	title = ceraun_events.101.t
+	desc = ceraun_events.101.d
+	flavor = ceraun_events.101.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_fire"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	minor_left_icon = c:CER
+	minor_right_icon = c:CDW
+
+	trigger = {
+		scope:journal_entry = {
+			"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 8
+		}
+	}
+
+	immediate = {
+		capital = {
+			save_scope_as = migration_target_state
+		}
+		set_variable = craggedwyn_collapse_var
+		c:CDW ?= {
+			if = {
+				limit = {
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = { this = c:CDW }
+							count >= 2
+						}
+					}
+				}
+				random_scope_state = {
+					limit = {
+						any_neighbouring_state = {
+							owner = { this = c:CDW }
+							count >= 2
+						}
+					}
+					save_scope_as = relevant_state
+					set_variable = collapse_state
+					every_neighbouring_state = {
+						limit = {
+							owner = {
+								c:CDW ?= this
+							}
+						}
+						set_variable = collapse_state
+					}
+				}
+			}
+			else = {
+				random_scope_state = {
+					limit = {
+						is_capital = yes
+					}
+					save_scope_as = relevant_state
+					set_variable = collapse_state
+					every_neighbouring_state = {
+						limit = {
+							owner = {
+								c:CDW ?= this
+							}
+						}
+						set_variable = collapse_state
+					}
+				}
+			}
+			every_scope_state = {
+					limit = {
+						NOT = {
+							has_variable = collapse_state
+						}
+					}
+				set_variable = cdw_state
+			}
+			random_scope_state = {
+				limit = {
+					has_variable = cdw_state
+				}
+				save_scope_as = new_capital_scope
+			}
+		}
+			
+
+			c:CDW ?= {
+				# if = {
+				# 	limit = {
+				# 		any_scope_culture = {
+				# 			NOT = { cu:cerunite ?= this }
+				# 			save_temporary_scope_as = second_culture
+				# 		}
+				# 		culture_percent_country= {
+			    # 			target = scope:second_culture
+			   	# 			value >= 0.1
+				# 		}
+				# 	}
+				# 	random_scope_culture = {
+				# 		limit = {
+				# 			NOT = { cu:cerunite ?= this }
+				# 			root = {
+				# 				culture_percent_country = {
+				# 					target = prev
+				# 					value >= 0.1
+				# 				}
+				# 			}
+							
+				# 		}
+
+				# 	}
+				# 	set_variable = second_culture_var
+				# }
+				owning_company ?= {
+					if = {
+						limit = {
+							is_company_type = company_type:company_craggedwyn
+						}
+						remove_owned_country = c:CDW
+						owner ?= {
+							remove_company = prev.type
+						}
+					}
+				}
+			}
+
+			#annex = c:CDW
+
+			create_dynamic_country = {
+				origin = root
+				country_type = decentralized
+				tier = principality
+				capital = scope:relevant_state
+				cede_state_trigger = {
+					has_variable = collapse_state
+				}
+				on_created = {
+					trigger_event = ceraun_events.103
+					# set_law = law_type:law_no_migration_controls
+					# set_law = law_type:law_no_police
+					# set_law = law_type:law_no_home_affairs
+					# if = {
+					# 	limit = {
+					# 		any_scope_culture = {
+					# 			NOT = { cu:cerunite ?= this }
+					# 			save_temporary_scope_as = second_culture
+					# 		}
+					# 		culture_percent_country= {
+			    	# 			target = scope:second_culture
+			   		# 			value >= 0.1
+					# 		}
+					# 	}
+					# 	random_scope_culture = {
+					# 		limit = {
+					# 			NOT = { cu:cerunite ?= this }
+					# 			owner = {
+					# 				culture_percent_country = {
+					# 					target = prev
+					# 					value >= 0.05
+					# 				}
+					# 			}
+							
+					# 		}
+					# 		save_scope_as = second_culture
+					# 	}
+					# 	set_variable = second_culture_var
+					# }
+
+
+					
+					# save_scope_as = migration_country
+
+					# if = {
+					# 	limit = {
+					# 		any_scope_culture = {
+					# 			cu:cerunite = this
+					# 		}
+					# 	}
+					# 	scope:migration_target_state = {
+					# 		create_mass_migration = {
+					# 			origin = scope:migration_country
+					# 			culture = cu:cerunite
+					# 		}
+
+					# 	}
+					# }
+					# if = {
+					# 	limit = {
+					# 		has_variable = second_culture_var
+					# 	}
+					# 	scope:migration_target_state = {
+					# 	create_mass_migration = {
+					# 		origin = scope:migration_country
+					# 		culture = scope:second_culture
+					# 	}
+
+					# 	}
+					# }
+					every_scope_state = {
+						limit = {
+							has_variable = collapse_state
+						}
+						state_region = {
+							add_state_trait = state_trait_alchemical_runoff
+						}
+						remove_variable = collapse_state
+					}
+					
+				}
+			}
+
+			# if = {
+			# 	limit = {
+			# 		any_scope_state = {
+			# 			has_variable = cdw_state
+			# 		}	
+			# 	}
+			# 	create_country = {
+			# 		tag = CDW
+			# 		origin = root
+			# 		state = scope:new_capital_scope
+			# 		on_created = { 
+			# 			calculate_arcanas = yes
+			# 			save_scope_as = cdw_scope
+			# 			root = {
+			# 				every_scope_state = {
+			# 					limit = {
+			# 						has_variable = cdw_state
+			# 					}
+			# 					set_state_owner = c:CDW
+			# 				}
+			# 			}
+			# 		}
+			# 	}
+			# }
+			if = {
+				limit = {
+					has_modifier = anti_company_fund
+				}
+				remove_modifier = anti_company_fund
+			}
+	
+				c:CDW ?= {
+					c:CER ?= {
+						create_diplomatic_pact = {
+							country = c:CDW
+							type = puppet
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = frivolous_goundwater_allegations
+						}
+						remove_modifier = frivolous_goundwater_allegations
+					}
+					if = {
+						limit = {
+							has_modifier = shut_down_labs
+						}
+						remove_modifier = shut_down_labs
+					}
+					if = {
+						limit = {
+							has_modifier = vetoed_building_codes
+						}
+						remove_modifier = vetoed_building_codes
+					}
+					if = {
+						limit = {
+							has_modifier = black_market_revenues
+						}
+						remove_modifier = black_market_revenues
+					}
+					if = {
+						limit = {
+							has_modifier = black_market_revenues
+						}
+						remove_modifier = black_market_revenues
+					}
+					if = {
+						limit = {
+							has_modifier = restricted_company_autonomy
+						}
+						remove_modifier = restricted_company_autonomy
+					}
+					if = {
+						limit = {
+							has_modifier = fired_administrators
+						}
+						remove_modifier = fired_administrators
+					}
+				}
+			
+		
+		set_variable = craggedwyn_collapse_var	
+	}
+
+	option = {
+		name = ceraun_events.101.a
+		default_option = yes
+		custom_tooltip = company_collapse_tt
+		if = {
+			limit = {
+				exists = c:CDW
+			}
+			show_as_tooltip = { 
+				c:CER ?= {
+					create_diplomatic_pact = {
+						country = c:CDW
+						type = puppet
+					}
+				}
+			}
+			
+		}
+
+
+		add_modifier = {
+			name = craggedwyn_collapse
+			years = 15
+			is_decaying = yes
+		}
+
+		add_modifier = {
+			name = administrative_vacuum
+			years = 5
+		}
+	}
+}
+
+ceraun_events.102 = { #successfully disband the company event
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.102.t
+	desc = ceraun_events.102.d
+	flavor = ceraun_events.102.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		set_variable = craggedwyn_success_var
+		if = {
+			limit = {
+				has_modifier = anti_company_fund
+			}
+			remove_modifier = anti_company_fund
+		}
+		c:CDW ?= {
+			if = {
+				limit = {
+					has_modifier = frivolous_goundwater_allegations
+				}
+				remove_modifier = frivolous_goundwater_allegations
+			}
+			if = {
+				limit = {
+					has_modifier = shut_down_labs
+				}
+				remove_modifier = shut_down_labs
+			}
+			if = {
+				limit = {
+					has_modifier = vetoed_building_codes
+				}
+				remove_modifier = vetoed_building_codes
+			}
+			if = {
+				limit = {
+					has_modifier = black_market_revenues
+				}
+				remove_modifier = black_market_revenues
+			}
+			if = {
+				limit = {
+					has_modifier = restricted_company_autonomy
+				}
+				remove_modifier = restricted_company_autonomy
+			}
+			if = {
+				limit = {
+					has_modifier = fired_administrators
+				}
+				remove_modifier = fired_administrators
+			}
+		}
+	}
+	
+	option = { #let sleeping dogs lie
+		name = ceraun_events.102.a
+		default_option = yes
+		add_modifier = {
+			name = legacy_of_the_craggedwyn_company
+		}
+	}
+
+	option = { #criminal charges
+		name = ceraun_events.102.b
+		add_modifier = {
+			name = craggedwyn_tribunal
+			years = 5
+		}
+
+		add_modifier = {
+			name = legacy_of_the_craggedwyn_tribunal
+		}
+	}
+}
+
+ceraun_events.103 = { #hidden event to force the migration
+	type = country_event
+	placement = ROOT
+	
+	hidden = yes
+	
+	duration = 3
+	
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				any_scope_state = {
+					any_neighbouring_state = {
+						owner = { c:CER = this }
+					}
+				}
+			}
+			c:CER = {
+				random_scope_state = {
+					limit = {
+						any_neighbouring_state = {
+							owner = root
+						}
+					}
+					save_scope_as = migration_target_state
+				}
+			}
+		}
+		else = {
+			c:CER ?= {
+				capital = {
+					save_scope_as = migration_target_state
+				}
+			}
+		}
+		
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_no_police
+		activate_law = law_type:law_no_home_affairs
+			if = {
+				limit = {
+					any_scope_culture = {
+						NOT = { cu:cerunite ?= this }
+						save_temporary_scope_as = second_culture
+					}
+					culture_percent_country= {
+						target = scope:second_culture
+						value >= 0.1
+					}
+				}
+				random_scope_culture = {
+					limit = {
+						NOT = { cu:cerunite ?= this }
+						root = {
+							culture_percent_country = {
+								target = prev
+								value >= 0.05
+							}
+						}
+					
+					}
+					save_scope_as = second_culture
+				}
+				
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							any_neighbouring_state = {
+								owner = { 
+									NOT = { c:CER = this } 
+									NOT = { is_country_type = decentralized } 	
+								}
+							}
+						}
+					}
+					random_scope_state = {
+						random_neighbouring_state = {
+							limit = {
+								owner = { NOT = { c:CER = this } }
+								
+							}
+							
+						save_scope_as = migration_target_state_2
+					}
+						
+					}
+				}
+		
+			save_scope_as = migration_country
+
+			if = {
+				limit = {
+						any_scope_state = {
+							any_neighbouring_state = {
+								owner = { 
+									NOT = { c:CER = this } 
+									NOT = { is_country_type = decentralized } 	
+								}
+							}
+						}
+					}
+				every_scope_state = {
+					convert_population = {
+                    	target = rel:dummy_religion 
+                    	value = 0.3
+                	}
+					every_scope_pop = {
+                    	limit = {
+                    	    religion = rel:dummy_religion
+                   		}
+                    	move_pop = scope:migration_target_state
+                	}
+				}
+				scope:migration_target_state = {
+						owner = {
+							random_scope_pop = {
+								limit = {
+									has_state_religion = yes
+								}
+								religion = {
+									save_scope_as = majority_religion
+								}
+							}
+						}
+						every_scope_pop = {
+                    		limit = {
+                           		 religion = rel:dummy_religion 
+                       			}
+                        	change_pop_religion = {
+                           		target = scope:majority_religion
+                            	value = 1.0
+                        	}
+                   		 }
+                }
+				every_scope_state = {
+					convert_population = {
+                    	target = rel:dummy_religion 
+                    	value = 0.4
+                	}
+					every_scope_pop = {
+                    	limit = {
+                    	    religion = rel:dummy_religion
+                   		}
+                    	move_pop = scope:migration_target_state_2
+                	}
+				}
+				scope:migration_target_state_2 = {
+						owner = {
+							random_scope_pop = {
+								limit = {
+									has_state_religion = yes
+								}
+								religion = {
+									save_scope_as = majority_religion
+								}
+							}
+						}
+						every_scope_pop = {
+                    		limit = {
+                           		 religion = rel:dummy_religion 
+                       			}
+                        	change_pop_religion = {
+                           		target = scope:majority_religion
+                            	value = 1.0
+                        	}
+                   		 }
+                }
+			}
+			else = {
+				every_scope_state = {
+					convert_population = {
+                    	target = rel:dummy_religion 
+                    	value = 0.4
+                	}
+					every_scope_pop = {
+                    	limit = {
+                    	    religion = rel:dummy_religion
+                   		}
+                    	move_pop = scope:migration_target_state
+                	}
+					
+				}
+				scope:migration_target_state = {
+						owner = {
+							random_scope_pop = {
+								limit = {
+									has_state_religion = yes
+								}
+								religion = {
+									save_scope_as = majority_religion
+								}
+							}
+						}
+						every_scope_pop = {
+                    		limit = {
+                           		 religion = rel:dummy_religion 
+                       			}
+                        	change_pop_religion = {
+                           		target = scope:majority_religion
+                            	value = 1.0
+                        	}
+                   		 }
+                }
+			}
+		
+			
+			if = {
+				limit = {
+					any_scope_culture = {
+						cu:cerunite = this
+					}
+				}
+				scope:migration_target_state = {
+					create_mass_migration = {
+						origin = scope:migration_country
+						culture = cu:cerunite
+					}
+				}
+			}
+		if = {
+			limit = {
+				exists = scope:second_culture
+			}
+			scope:migration_target_state = {
+				create_mass_migration = {
+					origin = scope:migration_country
+					culture = scope:second_culture
+				}
+			}
+			scope:migration_target_state_2 = {
+				create_mass_migration = {
+					origin = scope:migration_country
+					culture = scope:second_culture
+				}
+			}
+		}
+		every_scope_pop = {
+			limit = {
+				NOT = {
+					has_pop_culture = mutant
+				}
+			}
+			change_pop_culture = {
+				target = cu:mutant
+				value = 0.25
+			}
+		}
+		every_scope_state = {
+			if = {
+				limit = {
+					has_building = building_gizmo_workshop
+				}
+				remove_building = building_gizmo_workshop
+			}
+			if = {
+				limit = {
+					has_building = building_artifactory
+				}
+				remove_building = building_artifactory
+			}
+			if = {
+				limit = {
+					has_building = building_potion_distillery
+				}
+				remove_building = building_potion_distillery
+			}
+			if = {
+				limit = {
+					has_building = building_thaumacore_foundry
+				}
+				remove_building = building_thaumacore_foundry
+			}
+			if = {
+				limit = {
+					has_building = building_soulwrought_assembly_plant
+				}
+				remove_building = building_soulwrought_assembly_plant
+			}
+			if = {
+				limit = {
+					has_building = building_airshipyards
+				}
+				remove_building = building_airshipyards
+			}
+			if = {
+				limit = {
+					has_building = building_chemical_plants
+				}
+				remove_building = building_chemical_plants
+			}
+			if = {
+				limit = {
+					has_building = building_synthetics_plants
+				}
+				remove_building = building_synthetics_plants
+			}
+			if = {
+				limit = {
+					has_building = building_steel_mills
+				}
+				remove_building = building_steel_mills
+			}
+			if = {
+				limit = {
+					has_building = building_power_plant
+				}
+				remove_building = building_power_plant
+			}
+			if = {
+				limit = {
+					has_building = building_motor_industry
+				}
+				remove_building = building_motor_industry
+			}
+			if = {
+				limit = {
+					has_building = building_electrics_industry
+				}
+				remove_building = building_electrics_industry
+			}
+			if = {
+				limit = {
+					has_building = building_munition_plants
+				}
+				remove_building = building_munition_plants
+			}
+		}
+	}
+
+}
+
+ceraun_events.1 = {
+	type = country_event
+	dlc = dlc_roe
+	title = ceraun_events.1.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = ceraun_events.1.d
+				trigger = {
+					NOT = { has_variable = ceraun_halfling_fail }
+				}
+			}
+			triggered_desc = {
+				desc = ceraun_events.1.d2
+				trigger = {
+					has_variable = ceraun_halfling_fail
+				}
+			}
+		}
+	}
+	flavor = ceraun_events.1.f
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		cu:rivierling = {
+			save_scope_as = rivierling_culture
+		}
+
+		if = {
+			limit = {
+				has_variable = ceraun_halfling_fail
+			}
+			random_scope_state = {
+			limit = {
+				state_region = { is_homeland = cu:rivierling }
+			}
+			save_scope_as = gds_spawn
+		    }
+
+			create_country = {
+				tag = GDS
+				origin = this
+				state = scope:gds_spawn
+			}
+			
+			every_scope_state = {
+				limit = {
+			
+						OR = {
+							state_region = {
+								is_homeland = cu:rivierling
+							}
+						} 
+					 
+				}
+				set_state_owner = c:GDS
+				set_state_type = incorporated
+			}
+
+			c:CER = {
+            create_diplomatic_pact = {
+                    country = c:GDS
+                    type = real_union
+            }
+        }
+		}
+	}
+
+	option = {
+		name = ceraun_events.1.a
+		trigger = {
+			NOT = { has_variable = ceraun_halfling_fail }
+		}
+		ai_chance = {
+			base = 100
+		}
+		default_option = yes
+		custom_tooltip = ceraun_gladshire_tt
+		add_primary_culture = cu:rivierling
+		add_loyalists = {
+			culture = cu:rivierling
+			value = 0.2
+		}
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_cerunite_hegemony
+			hidden_effect = {
+				set_interest_group_name = ig_landowners
+			}
+		}
+	}
+	option = { # accept compromise
+		name = ceraun_events.1.b
+		trigger = {
+			has_variable = ceraun_halfling_fail
+		}
+		ai_chance = {
+			base = 100
+		}
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_cerunite_hegemony
+			hidden_effect = {
+				set_interest_group_name = ig_landowners
+			}
+		}
+		add_radicals = {
+			value = large_radicals
+			culture = cu:cerunite
+			pop_type = aristocrats
+		}
+		# lose prestige
+		add_modifier = {
+			name = rivierling_compromise
+			days = very_long_modifier_time
+		}
+	}
+	option = { #reject compromise
+		name = ceraun_events.1.c
+		trigger = {
+			has_variable = ceraun_halfling_fail
+		}
+		ai_chance = {
+			base = 0
+		}
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:rivierling
+		}
+		# add radicals from discrimination
+		every_scope_state = {
+			limit = {
+				state_region = { is_homeland = cu:rivierling }
+
+			}
+			add_modifier = {
+				name = rivierling_compromise_rejected
+				days = long_modifier_time
+			}
+		}
+
+		create_diplomatic_play = {
+		
+			target_state = s:STATE_PEARFIELDS.region_state:GDS
+			
+			type = dp_reduce_autonomy
+
+			add_war_goal = {
+				holder = c:GDS
+				type = independence
+				target_state = s:STATE_LANDING_AT_SEA.region_state:CER
+			}
+		}
+	}
+	option = { # Cherryn Play as
+		name = ceraun_events.1.e
+		trigger = {
+			has_variable = ceraun_halfling_fail
+		}
+		ai_chance = {
+			base = 0
+		}
+
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_cerunite_hegemony
+			hidden_effect = {
+				set_interest_group_name = ig_landowners
+			}
+		}
+		add_radicals = {
+			value = large_radicals
+			culture = cu:cerunite
+			pop_type = aristocrats
+		}
+		# lose prestige
+		add_modifier = {
+			name = rivierling_compromise
+			days = very_long_modifier_time
+		}
+
+		play_as = c:GDS
+	}
+	option = {
+		name = ceraun_events.1.g
+		trigger = {
+			NOT = { has_variable = ceraun_halfling_fail }
+		}
+		ai_chance = {
+			base = 0
+		}
+		add_radicals = {
+			culture = cu:rivierling
+			value = 0.2
+		}
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_cerunite_hegemony
+			hidden_effect = {
+				set_interest_group_name = ig_landowners
+			}
+		}
+	}
+}
+
+ceraun_events.2 = { #refugees by boat
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.2.t
+	desc = ceraun_events.2.d
+	flavor = ceraun_events.2.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		c:CDW ?= {
+			any_scope_state = {
+				any_sea_node_adjacent_state = {
+					owner = {
+						is_country_type = recognized
+						NOT = { this = root }
+					}
+				}
+			}
+		}	
+		NOT = { has_variable = refugee_boat }
+		NOT = { has_variable = refugee_any }
+	}
+
+	immediate = {
+		set_variable = {
+			name = refugee_boat
+			years = 10
+		}
+		set_variable = {
+			name = refugee_any
+			years = 3
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					any_sea_node_adjacent_state = {
+						owner = {
+							is_country_type = recognized
+							NOT = { this = root }
+						}
+					}
+				}
+			}
+				random_scope_state = {
+					limit = {
+						any_sea_node_adjacent_state = {
+							owner = {
+								is_country_type = recognized
+								NOT = { this = root }
+							}
+						}
+					}
+					random_sea_node_adjacent_state = {
+						limit = {
+							owner = {
+								is_country_type = recognized
+								NOT = { this = root }
+							}
+						}
+					save_scope_as = kidnappings_state
+					owner = { save_scope_as = kidnappings_state_owner }
+					}
+				}
+				
+			}
+	}
+	
+	option = { # pay off the victims
+		name = ceraun_events.2.a
+		default_option = yes
+		add_treasury = -200000
+	}
+
+	option = { #ignore it
+		name = ceraun_events.2.b
+		craggedwyn_medium_danger_effect = yes
+	}
+
+	option = { #silence them
+		name = ceraun_events.2.c
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.3 = { #stolen prototype
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.3.t
+	desc = ceraun_events.3.d
+	flavor = ceraun_events.3.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "ep1_clandestine_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = stolen_prototype }
+		NOT = {
+			c:CDW ?= {
+				any_scope_treaty = {
+						binds = root
+						any_scope_article = {
+							has_type = military_assistance
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		set_variable = {
+			name = stolen_prototype
+			years = 9
+		} 
+	}
+	
+	option = { #increase security around test sites
+		name = ceraun_events.3.a
+		default_option = yes
+		create_treaty = {
+			first_country = ROOT
+			second_country = c:CDW
+			is_draft = no
+			binding_period = { years = 5 }
+
+			articles_to_create = {
+				{ 
+					article = military_assistance
+					source_country = ROOT
+					target_country = c:CDW
+				}
+			}
+		}
+	}
+
+	option = { #ignore it
+		name = ceraun_events.3.b
+		default_option = yes
+		craggedwyn_small_danger_effect = yes
+	}
+
+	option = { #recover the weapon
+		name = ceraun_events.3.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		craggedwyn_small_danger_remove_effect = yes
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		capital = {
+			kill_population_percent_in_state = {
+				percent = 0.001
+				pop_type = soldiers
+			}
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.4 = { #mutant babies
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.4.t
+	desc = ceraun_events.4.d
+	flavor = ceraun_events.4.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "ip2_india_protest"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = mutant_babies }
+	}
+	
+	immediate = {
+		set_variable = {
+			name = mutant_babies
+			years = 11
+		}
+		c:CDW ?= {
+			random_scope_state = {
+				save_scope_as = mutant_baby_state
+				add_modifier = {
+					name = mutant_baby_modifier
+					years = 5
+				}
+			}
+		}
+	}
+	
+	option = { #set aside a health fund for mutant children
+		name = ceraun_events.4.a
+		default_option = yes
+		add_treasury = -300000
+		add_modifier = {
+			name = mutant_health_fund
+			years = 10
+		}
+		craggedwyn_small_danger_remove_effect = yes
+		show_as_tooltip = {
+			scope:mutant_baby_state = {
+				add_modifier = {
+					name = mutant_baby_modifier
+					years = 5
+				}
+			}
+		}
+	}
+
+	option = { #this is a coincidence
+		name = ceraun_events.4.b
+	
+		craggedwyn_small_danger_effect = yes
+		show_as_tooltip = {
+			scope:mutant_baby_state = {
+				add_modifier = {
+					name = mutant_baby_modifier
+					years = 5
+				}
+			}
+		}
+	}
+
+	option = { #launch a smear campaign against the parents
+		name = ceraun_events.4.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		c:CDW ?= {
+			add_radicals = {
+				value = 0.001
+				strata = lower
+			}
+		}
+		show_as_tooltip = {
+			scope:mutant_baby_state = {
+				add_modifier = {
+					name = mutant_baby_modifier
+					years = 5
+				}
+			}
+		}
+		craggedwyn_small_danger_remove_effect = yes
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.5 = { #refugees by land
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.5.t
+	desc = ceraun_events.5.d
+	flavor = ceraun_events.5.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		c:CDW ?= {
+			any_scope_state = {
+				any_neighbouring_state = {
+					owner = {
+						is_country_type = recognized
+						NOT = { this = root }
+					}
+				}
+			}
+		}	
+		NOT = { has_variable = refugee_land }
+		NOT = { has_variable = refugee_any }
+	}
+
+	immediate = {
+		set_variable = {
+			name = refugee_land
+			years = 8
+		}
+		set_variable = {
+			name = refugee_any
+			years = 3
+		} 
+		c:CDW ?= {
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						is_country_type = recognized
+						NOT = { this = root }
+					}
+				}
+				save_scope_as = refugee_state
+				owner = { save_scope_as = refugee_state_owner }
+			}
+		}
+	}
+	
+	option = { # pay off the victims
+		name = ceraun_events.5.a
+		default_option = yes
+		add_treasury = -400000
+	}
+
+	option = { #ignore it
+		name = ceraun_events.5.b
+		craggedwyn_medium_danger_effect = yes
+	}
+
+	option = { #silence them
+		name = ceraun_events.5.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.6 = { #news article on the company
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.6.t
+	desc = ceraun_events.6.d
+	flavor = ceraun_events.6.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "ep1_octopus"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		OR = {
+			c:CDW ?= {
+				any_scope_state = {
+					any_neighbouring_state = {
+						owner = {
+							is_country_type = recognized
+						}
+					}
+				}
+			}	
+			scope:journal_entry = {
+				"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 4
+			}
+		}
+		
+		NOT = { has_variable = bad_news_var }
+	}
+
+	immediate = {
+		set_variable = {
+			name = bad_news_var
+			years = 11
+		}
+	}
+	
+	option = { #issue a public apology
+		name = ceraun_events.6.a
+		default_option = yes
+		add_modifier = {
+			name = admitted_wrongdoing
+			years = 10
+			is_decaying = yes
+		}
+		craggedwyn_small_danger_remove_effect = yes
+	}
+
+	option = { #we will not respond to such obvious lies
+		name = ceraun_events.6.b
+		craggedwyn_small_danger_effect = yes
+	}
+
+	option = { #call our friends down at the Brinewick Times...
+		name = ceraun_events.6.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		craggedwyn_small_danger_remove_effect = yes	
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.7 = { #lost mutagenically-enhanced monster crossed the border ##dean koontz-ahh
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.7.t
+	desc = ceraun_events.7.d
+	flavor = ceraun_events.7.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "queen_griffon"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		c:CDW ?= {
+				any_scope_state = {
+					any_neighbouring_state = {
+						owner = {
+							is_country_type = recognized
+							NOT = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		NOT = { has_variable = runaway_monster }
+	}
+
+	immediate = {
+		set_variable = {
+			name = runaway_monster
+			years = 9
+		}
+		random_neighbouring_state = {
+			limit = {
+				owner = {
+					is_country_type = recognized
+					NOT = {
+						this = root
+					}
+				}
+			}
+			save_scope_as = monster_state
+			owner = { save_scope_as = monster_state_owner }
+		}
+	}
+	
+	option = { #we don't know anything about a monster
+		name = ceraun_events.7.a
+		default_option = yes
+		create_incident = {
+			country = scope:monster_state_owner
+			value = 10
+		}
+		scope:monster_state_owner = {
+			change_relations = {
+				country = root
+				value = -10
+			}
+		}
+	}
+
+	option = { #dispatch a military force
+		name = ceraun_events.7.b
+		capital = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+				pop_type = soldiers
+			}
+		}
+		add_treasury = -150000
+	}
+
+	option = { #hunt it down with a BIGGER monster
+		name = ceraun_events.7.c
+		craggedwyn_medium_danger_effect = yes
+	}
+
+	option = { #call the game warden. The Margrave will handle this personally.
+		name = ceraun_events.7.e
+		
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.8 = { #frivolous allegations
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.8.t
+	desc = ceraun_events.8.d
+	flavor = ceraun_events.8.f #very minute details regarding an alchemical runoff allegation
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		any_neighbouring_state = {
+			owner = {
+				is_country_type = recognized
+				NOT = {	this = root	}
+			}
+		}
+		NOT = { has_variable = groundwater_allegation }
+	}
+
+	immediate = {
+		set_variable = {
+			name = groundwater_allegation
+			years = 9
+		}
+		c:CDW ?= {
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						is_country_type = recognized
+						NOT = { this = root }
+					}
+				}
+			save_scope_as = allegation_state
+			}
+		}
+		scope:allegation_state = {
+			owner = { save_scope_as = allegation_state_owner }
+		}
+	}
+	
+	option = { #you can't be serious
+		name = ceraun_events.8.a
+		default_option = yes
+		create_incident = {
+			country = scope:allegation_state_owner
+			value = 5
+		}
+		scope:allegation_state_owner = {
+			change_relations = {
+				country = root
+				value = -20
+			}
+		}
+	}
+
+	option = { #allow them to bring the case forward
+		name = ceraun_events.8.b
+		c:CDW ?= {
+			add_modifier = {
+				name = frivolous_goundwater_allegations
+				years = 10
+			}
+		}
+		craggedwyn_small_danger_effect = yes
+	}
+
+	option = { #the Margrave will ensure a postive verdict
+		name = ceraun_events.8.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.9 = { #dangerous synthetic chimesilt traced to a crag laboratory
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.9.t
+	desc = ceraun_events.9.d
+	flavor = ceraun_events.9.f #very minute details regarding an alchemical runoff allegation
+	
+	duration = 3
+	
+	event_image = {
+		video = "middleeast_police_breaking_door"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		OR = {
+		c:CDW ?= {
+			any_scope_state = {
+				OR = {
+					any_neighbouring_state = {
+						owner = {
+							is_country_type = recognized
+							NOT = {	this = root	}
+						}
+					}
+					any_sea_node_adjacent_state = {
+						owner = {
+							is_country_type = recognized
+							NOT = {	this = root	}
+						}
+					}
+				}
+			}
+		}	
+		}
+
+		NOT = { has_variable = synth_chimesilt }
+	}
+
+	immediate = {
+		set_variable = {
+			name = synth_chimesilt
+			years = 10
+		}
+		c:CDW ?= {
+			capital = {
+				save_scope_as = cdw_capital_scope
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					any_neighbouring_state = {
+						owner = {
+							is_country_type = recognized
+							NOT = {	this = root	}
+						}
+					}
+				}
+			}
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						is_country_type = recognized
+						NOT = {	this = root	}
+					}
+				}
+				save_scope_as = synth_chimesilt_state
+				owner = { save_scope_as = synth_chimesilt_state_owner }
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					any_scope_state = {
+						any_sea_node_adjacent_state = {
+							owner = {
+								is_country_type = recognized
+								NOT = {	this = root	}
+							}
+						}
+					}
+				}
+				random_scope_state = {
+					limit = {
+						any_sea_node_adjacent_state = {
+							owner = {
+								is_country_type = recognized
+								NOT = {	this = root	}
+							}
+						}
+					}
+					random_sea_node_adjacent_state = {
+						limit = {
+							owner = {
+								is_country_type = recognized
+								NOT = {	this = root	}
+							}
+						}
+					save_scope_as = synth_chimesilt_state
+					owner = { save_scope_as = synth_chimesilt_state_owner }
+					}
+				}
+				
+			}
+		}
+	}
+	
+	option = { #ignore the allegations
+		name = ceraun_events.9.a
+		default_option = yes
+		scope:synth_chimesilt_state_owner = {
+			change_relations = {
+				country = root
+				value = -20
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		c:CDW ?= {
+			add_modifier = {
+				name = black_market_revenues
+				years = 5
+			}
+		}
+	}
+
+	option = { #shut down these clandestine laboratories
+		name = ceraun_events.9.b
+		c:CDW ?= {
+			add_modifier = {
+				name = shut_down_labs
+			}
+		}
+		craggedwyn_small_danger_remove_effect = yes
+	}
+
+	option = { #the margrave will make introductions with talented smugglers
+		name = ceraun_events.9.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		c:CDW ?= {
+			add_modifier = {
+				name = black_market_revenues
+				years = 10
+			}
+		}
+		craggedwyn_small_danger_remove_effect = yes
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.10 = { #craggedwyn company paying for legislation
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.10.t
+	desc = ceraun_events.10.d
+	flavor = ceraun_events.10.f #very minute details regarding an alchemical runoff allegation
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		scope:journal_entry = {
+			"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 4
+		}
+		NOT = { has_variable = building_codes }
+	}
+
+	immediate = {
+		set_variable = {
+			name = building_codes
+			years = 10
+		}
+	}
+	
+	option = { #sign it, this seems fine
+		name = ceraun_events.10.a
+		add_modifier = {
+			name = laxened_company_building_codes
+			years = 6
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					scope:journal_entry = {
+						"scripted_bar_progress(craggedwyn_control_progress_bar)" <= 4
+					}
+				}
+				add = 50
+			}
+		}
+		craggedwyn_small_danger_effect = yes
+	}
+
+	option = { #veto the bill
+		default_option = yes
+		name = ceraun_events.10.b
+		c:CDW ?= {
+			add_modifier = {
+				name = vetoed_building_codes
+				years = 8
+			}
+		}
+		craggedwyn_medium_danger_remove_effect = yes
+	}
+
+	option = { #the margrave knows what they're really asking for
+		name = ceraun_events.10.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		add_modifier = {
+			name = laxened_company_building_codes
+			years = 6
+		}
+		ai_chance = {
+			base = 100
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.11 = { #craggedwyn company caught using unpaid laborers
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.11.t
+	desc = ceraun_events.11.d
+	flavor = ceraun_events.11.f #very minute details regarding an alchemical runoff allegation
+	
+	duration = 3
+	
+	event_image = {
+		video = "rp1_amazon_exploitation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = cragslaves }
+		has_law = law_type:law_slavery_banned
+	}
+
+	immediate = {
+		set_variable = {
+			name = cragslaves
+			years = 15
+		}
+	}
+	
+	option = { #it is the Dorite way!
+		name = ceraun_events.11.a
+		ig:ig_industrialists = {
+			leader = {
+					set_ideology = ideology:ideology_astra
+				}
+		}
+		craggedwyn_medium_danger_effect = yes
+	}
+
+	option = { #we will enforce the law
+		name = ceraun_events.11.b
+		default_option = yes
+		c:CDW ?= {
+			add_modifier = {
+				name = ended_guild_bondage_experiments
+				years = 10
+				is_decaying = yes
+			}
+		}
+		craggedwyn_small_danger_remove_effect = yes
+	}
+
+	# option = { #margrave can't help you here
+	# 	name = ceraun_events.11.c
+	# 	trigger = {
+	# 		custom_tooltip = {
+	# 			text = ludric_tt
+	# 			ruler = {
+	# 				has_variable = is_ludric
+	# 			}
+	# 		}
+			
+	# 		custom_tooltip = {
+	# 			text = ludric_coverup_tt
+	# 			NOT = {
+	# 				has_variable = ludric_coverup
+	# 			}
+	# 		}
+
+	# 	}
+	# 	set_variable = {
+	# 		name = ludric_coverup
+	# 		months = 18
+	# 	}
+	# 	add_modifier = {
+	# 		name = laxened_company_building_codes
+	# 		years = 6
+	# 	}
+	# 	highlighted_option = yes
+	
+	# }
+
+}
+
+ceraun_events.12 = { #adventurers based in [country] caughting leading an expedition to a company lab
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.12.t
+	desc = ceraun_events.12.d
+	flavor = ceraun_events.12.f #very minute details regarding an alchemical runoff allegation
+	
+	duration = 3
+	
+	event_image = {
+		video = "votp_prison"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		c:CDW ?= {
+			any_scope_state = {
+				OR = {
+					any_neighbouring_state = {
+						owner = {
+							is_country_type = recognized
+							NOT = {	this = root	}
+						}
+					}
+					any_sea_node_adjacent_state = {
+						owner = {
+							is_country_type = recognized
+							NOT = {	this = root	}
+						}
+					}
+				}
+			}
+		}
+
+		NOT = { has_variable = lab_expedition }
+	}
+
+	immediate = {
+		set_variable = {
+			name = lab_expedition
+			years = 10
+		}
+		if = {
+			limit = {
+				any_neighbouring_state = {
+					owner = {
+						is_country_type = recognized
+						NOT = {	this = root	}
+					}
+				}
+			}
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						is_country_type = recognized
+						NOT = {	this = root	}
+					}
+				}
+				save_scope_as = adventure_state
+				owner = { 
+					save_scope_as = adventure_state_owner 
+					random_primary_culture = {
+						save_scope_as = adventure_culture
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					any_scope_state = {
+						any_sea_node_adjacent_state = {
+							owner = {
+								is_country_type = recognized
+								NOT = {	this = root	}
+							}
+						}
+					}
+				}
+				random_scope_state = {
+					limit = {
+						any_sea_node_adjacent_state = {
+							owner = {
+								is_country_type = recognized
+								NOT = {	this = root	}
+							}
+						}
+					}
+					random_sea_node_adjacent_state = {
+						limit = {
+							owner = {
+								is_country_type = recognized
+								NOT = {	this = root	}
+							}
+						}
+				
+						save_scope_as = adventure_state
+						owner = { 
+							save_scope_as = adventure_state_owner 
+							random_primary_culture = {
+								save_scope_as = adventure_culture
+							}
+						}	
+					}
+				}
+				
+			}		
+		}
+	}
+	
+	option = { #execute the adventurers, who knows what they've seen
+		name = ceraun_events.12.a
+		default_option = yes
+		scope:adventure_state_owner = {
+			create_incident = {
+			country = scope:adventure_state_owner
+			value = 10
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+
+	}
+
+	option = { #extradite the adventurers
+		name = ceraun_events.12.b
+		add_modifier = {
+			name = extradited_adventurers
+			years = 5
+			is_decaying = yes
+		}
+		scope:adventure_state_owner = { #make this an event
+			add_modifier = {
+				name = craggedwyn_espionage
+				years = 10
+			} 
+		}
+	}
+
+	option = { #wipe their memories and send them back
+		name = ceraun_events.12.c
+		trigger = {
+			OR = {
+				NOT = {
+					custom_tooltip = {
+					text = ludric_tt
+					ruler = {
+						has_variable = is_ludric 
+					}
+				}
+			}
+				custom_tooltip = {
+					text = not_ludric_coverup_tt
+					has_variable = ludric_coverup
+				}
+			}
+
+
+		}
+		craggedwyn_small_danger_effect = yes
+	
+	}
+
+	option = { #wipe their memories and send them back, margrave style
+		name = ceraun_events.12.e
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.13 = { #unrecognized country claims company is kidnapping civilians, but no one cares
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.13.t
+	desc = ceraun_events.13.d
+	flavor = ceraun_events.13.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "votp_prison"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		c:CDW ?= {
+			any_scope_state = {
+				OR = {
+					any_neighbouring_state = {
+						owner = {
+							is_country_type = unrecognized
+							NOT = {	this = root	}
+						}
+					}
+					any_sea_node_adjacent_state = {
+						owner = {
+							is_country_type = unrecognized
+							NOT = {	this = root	}
+						}
+					}
+				}
+			}
+		}
+
+		NOT = { has_variable = unrecognized_kidnappings }
+	}
+
+	immediate = {
+		set_variable = {
+			name = unrecognized_kidnappings
+			years = 12
+		}
+		if = {
+			limit = {
+				any_neighbouring_state = {
+					owner = {
+						is_country_type = unrecognized
+						NOT = {	this = root	}
+					}
+				}
+			}
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						is_country_type = unrecognized
+						NOT = {	this = root	}
+					}
+				}
+			save_scope_as = kidnappings_state
+			owner = { save_scope_as = kidnappings_state_owner }
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					any_scope_state = {
+						any_sea_node_adjacent_state = {
+							owner = {
+								is_country_type = unrecognized
+								NOT = {	this = root	}
+							}
+						}
+					}
+				}
+				random_scope_state = {
+					limit = {
+							any_sea_node_adjacent_state = {
+								owner = {
+									is_country_type = unrecognized
+									NOT = {	this = root	}
+								}
+						}
+					}
+					random_sea_node_adjacent_state = {
+						limit = {
+							owner = {
+								is_country_type = unrecognized
+								NOT = {	this = root	}
+							}
+						}
+					save_scope_as = kidnappings_state
+					owner = { save_scope_as = kidnappings_state_owner }
+					}
+				}
+				
+			}	
+		}
+	}
+	
+	option = { #boast
+		name = ceraun_events.13.a
+		scope:kidnappings_state_owner = {
+			change_relations = {
+				country = root
+				value = -25
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		craggedwyn_small_danger_effect = yes
+		add_modifier = {
+			name = might_makes_right
+			years = 5
+		} 
+	}
+
+	option = { #offer no official response
+		name = ceraun_events.13.b
+
+	}
+
+	option = { #promise to stop
+		name = ceraun_events.13.c
+		add_modifier = {
+			name = cowed_to_unrecognized_powers
+			years = 5
+		}
+		default_option = yes
+		craggedwyn_small_danger_remove_effect = yes
+	
+	}
+
+	option = { #declare it our sovereign right
+		name = ceraun_events.13.e
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		add_modifier = {
+			name = margraves_declaration
+			years = 8
+		}
+		scope:kidnappings_state_owner = {
+			change_relations = {
+				country = root
+				value = -25
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.14 = { #lab accident
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.14.t
+	desc = ceraun_events.14.d
+	flavor = ceraun_events.14.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "asia_factory_accident"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = lab_accident }
+		scope:journal_entry = {
+			"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 4
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = lab_accident
+			years = 8
+		}
+		c:CDW ?= {
+			random_scope_state = {
+				save_scope_as = lab_accident_state
+			}
+		}
+	}
+	
+	option = { #more research opportunities!
+		name = ceraun_events.14.a
+		default_option = yes
+		add_modifier = {
+			name = studying_the_crater
+			years = 10
+		}
+		craggedwyn_small_danger_effect = yes
+	}
+
+	option = { #we will ensure this never happens again
+		name = ceraun_events.14.b
+		add_modifier = {
+			name = restricting_company_automony
+			years = 10
+		}
+		c:CDW ?= {
+			add_modifier = {
+				name = restricted_company_autonomy
+				years = 10
+				is_decaying = yes
+			}
+		}
+		set_variable = {
+			name = lab_accident
+			years = 20
+		}
+		craggedwyn_medium_danger_remove_effect = yes
+	}
+
+	option = { #call up Henri H. Harrington and construct a counter-narrative
+		name = ceraun_events.14.c
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		add_modifier = {
+			name = masterful_counternarrative
+			years = 5
+		}
+		highlighted_option = yes
+	
+	}
+
+}
+
+ceraun_events.15 = { #craggedwyn wants to alter the company charter
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.15.t
+	desc = ceraun_events.15.d
+	flavor = ceraun_events.15.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = altered_charter }
+		scope:journal_entry = {
+			"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 3
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = altered_charter
+			years = 12
+		}
+	}
+	
+	option = { #sure, this looks fine
+		name = ceraun_events.15.a
+		add_modifier = {
+			name = altered_craggedwyn_company_charter
+			years = 10
+		}
+		craggedwyn_medium_danger_effect = yes
+	}
+
+	option = { #we can make some small adjustments
+		name = ceraun_events.15.b
+		add_modifier = {
+			name = slightly_altered_craggedwyn_company_charter
+			years = 10
+		}
+		default_option = yes
+		craggedwyn_small_danger_effect = yes
+	}
+
+	option = { #we will do no such thing
+		name = ceraun_events.15.c
+
+	
+	}
+
+	option = { #the margrave keeps them in line
+		name = ceraun_events.15.e
+		trigger = {
+			custom_tooltip = {
+				text = ludric_tt
+				ruler = {
+					has_variable = is_ludric
+				}
+			}
+			
+			custom_tooltip = {
+				text = ludric_coverup_tt
+				NOT = {
+					has_variable = ludric_coverup
+				}
+			}
+
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_variable = {
+			name = ludric_coverup
+			months = 23
+		}
+		add_modifier = {
+			name = slightly_altered_craggedwyn_company_charter
+			years = 10
+		}
+		highlighted_option = yes
+	
+	}
+}
+
+ceraun_events.16 = { #friend of the margrave warns him about off-the-book purchases
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.16.t
+	desc = ceraun_events.16.d
+	flavor = ceraun_events.16.f 
+	
+	duration = 3
+	
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		scope:journal_entry = {
+			"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 5
+		}
+		ruler = {
+			has_variable = is_ludric
+		}
+		NOT = { has_variable = friendly_warning }
+	}
+
+	immediate = {
+		set_variable = {
+			name = friendly_warning 
+			years = 20
+		}
+	}
+	
+	option = { #well, it is their job after all
+		name = ceraun_events.16.a
+		add_modifier = {
+			name = secret_craggedwyn_experiments
+			years = 5
+		}
+	}
+
+	option = { #we will investigate these reports
+		name = ceraun_events.16.b
+		default_option = yes
+		craggedwyn_medium_danger_remove_effect = yes
+	}
+}
+
+ceraun_events.17 = { #anti-company slush fund
+	type = country_event
+	placement = ROOT
+	
+	title = ceraun_events.17.t
+	desc = ceraun_events.17.d
+	flavor = ceraun_events.17.f 
+	
+	duration = 3
+	
+	event_image = {
+		video = "votp_conspiring"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		scope:journal_entry = {
+			"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 5
+		}
+		ruler = {
+			NOT = { has_variable = is_ludric }
+		}
+		NOT = { has_variable = local_bureaucrats }
+	}
+
+	immediate = {
+		set_variable = {
+			name = local_bureaucrats
+			years = 20
+		}
+	}
+	
+	option = { #we will not corrupt our government like this!
+		name = ceraun_events.17.a
+	
+
+	}
+
+	option = { #we will undercut the company however we can
+		name = ceraun_events.17.b
+		default_option = yes
+		add_modifier = {
+			name = anti_company_fund
+			years = 10
+		}
+		craggedwyn_medium_danger_remove_effect = yes
+	}
+}
+
+# ceraun_events.18 = { #ai debug event for if they annex cdw lands
+# 	type = country_event
+# 	placement = ROOT
+	
+# 	hidden = yes
+
+	
+# 	event_image = {
+# 		video = "votp_conspiring"
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+# 	trigger = {
+# 		NOT = { 
+# 			any_subject_or_below = {
+# 				owning_company ?= {
+# 						is_company_type = company_type:company_craggedwyn
+# 				}
+# 			} 
+# 		}
+# 		is_ai = yes
+# 	}
+
+# 	immediate = {
+# 		remove_company = company_type:company_craggedwyn
+# 	}
+	
+# }
+
+ceraun_events.19 = { #ai event to hand over land
+	type = country_event
+	placement = ROOT
+	
+	hidden = yes
+
+	
+	event_image = {
+		video = "votp_conspiring"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		exists = c:CDW
+		any_subject_or_below = {
+			owning_company ?= {
+				is_company_type = company_type:company_craggedwyn
+			}
+		}
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BLACKWOOD
+				state_region = s:STATE_EASTERN_PLAGUEWOOD
+				state_region = s:STATE_FORESTS_HEART
+				
+			}
+		}
+		is_ai = yes
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_BLACKWOOD
+					state_region = s:STATE_EASTERN_PLAGUEWOOD
+					state_region = s:STATE_FORESTS_HEART
+				}
+			}
+			set_state_owner = c:CDW
+		}
+	}
+	
+}
+
+ceraun_events.20 = { #ai event to hand over land
+	type = country_event
+	placement = ROOT
+	
+	hidden = yes
+
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					ruler = {
+						has_variable = ludric_immortality_variable
+					}
+				}
+			}
+			ruler = {
+				set_character_immortal = no
+			}
+		}
+	}
+	
+}

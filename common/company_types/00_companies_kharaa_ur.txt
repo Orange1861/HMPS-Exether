@@ -1,0 +1,421 @@
+﻿
+company_hlumr_porcelain = {
+	icon = "gfx/interface/icons/company_icons/hlumr_porcelain.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_glassworks
+	}
+	
+	extension_building_types = {
+		building_lead_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_canton_porcelain
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_bataar_kharaal
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAINO
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SAINO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_glassworks
+				level >= 3
+			}
+		}		
+		has_technology_researched = chemical_bleaching
+	}
+	
+	prosperity_modifier = {
+		building_glassworks_throughput_add = 0.1
+		goods_output_porcelain_mult = 0.1
+		country_prestige_mult = 0.1
+	}	
+	
+	ai_construction_targets = {
+		building_glassworks = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_SAINO
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_SAINO
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_erngrixt_mining = {
+	icon = "gfx/interface/icons/company_icons/minecraft.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_coal_mine
+		building_cloudsilver_mine
+		building_sulfur_mine
+	}
+	
+	extension_building_types = {
+		building_lapis_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_sicilian_sulfur
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_valley_of_golden_fields
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_KHORTA
+					state_region = s:STATE_ULDOR
+				}
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_KHORTA
+				state_region = s:STATE_ULDOR
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coal_mine
+				level >= 3
+			}
+		}
+		has_technology_researched = steam_donkey
+	
+	}
+	
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.1
+	}	
+	
+	ai_construction_targets = {
+		building_coal_mine = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_KHORTA
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_KHORTA
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_khor_rail = {
+	icon = "gfx/interface/icons/company_icons/railway_authority.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_steel_mills
+		building_railway
+		building_iron_mine
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+	}
+	potential = {
+		has_interest_marker_in_region = region_valley_of_golden_fields
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KHORTA
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_KHORTA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mills
+					is_building_type = building_railway
+					is_building_type = building_iron_mine
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = bessemer_process
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		building_coal_mine_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_KHORTA
+			is_incorporated = yes
+		}
+	}
+}
+
+company_muumuu = {
+	icon = "gfx/interface/icons/company_icons/muumuu.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_cotton_plantation
+		building_textile_mills
+	}
+	
+	extension_building_types = {
+		building_silk_plantation
+		building_dye_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_clothes
+	}
+
+	potential = {
+		OR = {
+			country_has_primary_culture = cu:onisazae
+			country_has_primary_culture = cu:onghori
+			country_has_primary_culture = cu:onikoku
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KYRGRUK
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_KYRGRUK
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mills
+				}
+				level >= 3
+			}
+		}
+
+	}
+	
+	prosperity_modifier = {
+		building_cotton_plantation_throughput_add = 0.1
+		building_textile_mills_throughput_add = 0.1
+		state_lower_strata_standard_of_living_add = 0.5
+		country_prestige_mult = -0.05
+	}	
+	
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_KYRGRUK
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_bataaji_lantern = { #move ##deserves unique art
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/tashkent_railroad.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_GWITESHIAIA }
+	
+	building_types = {  
+		building_wishstone_reefs
+		building_seasnake_wharf
+	}
+	
+	extension_building_types = {  
+		building_shipyards
+		building_fishing_wharf_glowfish
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_wishstone
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_valley_of_golden_fields
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+					state_region = s:STATE_GWITESHIAIA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_GWITESHIAIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wishstone_reefs
+					is_building_type = building_seasnake_wharf
+				}
+				level >= 3
+			}
+		}		
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		country_adventurers_pol_str_mult = 0.15
+		unit_navy_defense_mult = 0.05
+		building_shipyards_throughput_add = 0.1
+	}
+	
+	ai_construction_targets = {
+		building_wishstone_reefs = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_GWITESHIAIA
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_GWITESHIAIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_shishusm_grocers = {
+	icon = "gfx/interface/icons/company_icons/company_aker_mek.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_SHISHUSM }
+
+	building_types = {
+		building_food_industry
+		building_rice_farm
+	}
+
+	extension_building_types = {
+		building_sugar_plantation
+		building_banana_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_groceries
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_valley_of_golden_fields
+	}
+
+	attainable = {
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_SHISHUSM
+				}
+				
+			}
+	}
+
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_radicals_from_political_movements_mult = -0.05
+		building_banana_plantation_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_SHISHUSM
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry  = {
+			level = 5
+		}
+
+	
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}

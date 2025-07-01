@@ -1,0 +1,273 @@
+﻿ig_clans = {
+	color = hsv{ 0.63 0.0 0.69 }
+	texture = "gfx/interface/icons/ig_icons/clans.dds"
+	layer = "revolution_dynamic_clans"
+	index = 9
+
+	ideologies = {
+		ideology_ig_traditionalist
+		ideology_stratocratic_clans
+		ideology_patriarchal
+	}
+
+	enable = {
+		OR = {
+			is_country_type = preindustrial
+			is_country_type = decentralized
+		}
+	}
+	
+	on_enable = {
+		ig:ig_clans ?= {
+			set_ig_trait = ig_trait:ig_trait_xenophobia
+			set_ig_trait = ig_trait:ig_trait_middle_managers
+			set_ig_trait = ig_trait:ig_trait_solidarity
+		}
+	
+		### Generic
+
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						religion = rel:vurzaratmoda
+						any_primary_culture = {
+							has_discrimination_trait = southern_elf
+						}
+						any_primary_culture = {
+							this = cu:hag
+						}
+						any_primary_culture = {
+							OR = {
+								this = cu:gnoll
+								this = cu:jungle_gnoll
+							}
+							
+						}
+					}
+				}
+				
+			}
+			ig:ig_clans ?= {
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_matriarchal
+			}
+
+		}
+	}
+
+	on_disable = {
+		recalculate_pop_ig_support = yes
+	}
+	on_character_ig_membership = {}
+
+	pop_potential = {
+		is_pop_type = tribesmen
+	}
+
+	pop_weight = {
+		value = 0
+
+		add = {
+			desc = "POP_PEASANTS"
+			if = {
+				limit = {
+					is_pop_type = tribesmen
+				}
+				value = 10000
+			}
+		}
+
+		multiply = {
+			desc = "decentralized_power"
+			value = 1.0
+			if = {
+				limit = {
+					NOR = {
+						is_pop_type = tribesmen
+					}
+				}
+				value = 0
+			}
+		}
+	}
+
+	monarch_weight = {
+		value = 1
+		# Monarch is not likely to adopt a marginal IG
+		if = {
+			limit = {
+				is_marginal = yes
+			}
+			multiply = {
+				value = 0.1
+			}
+		}
+		# Monarch is more likely to adopt a Powerful IG
+		if = {
+			limit = {
+				is_powerful = yes
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		# More likely with Elected Bureaucrats
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_hereditary_bureaucrats
+				}
+			}
+			multiply = {
+				value = 1.5
+			}
+		}
+		# More likely with ethnostate
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_ethnostate
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	agitator_weight = {
+		# Agitators more likely to come from populist IG's rather than elitist
+		value = 1.0
+		# Agitators will never be part of a marginalized IG
+		if = {
+			limit = {
+				owner.ig:ig_petty_bourgeoisie ?= {
+					is_marginal = yes
+				}
+			}
+			multiply = {
+				value = 0
+			}
+		}
+	}
+
+	commander_weight = {
+		value = 1.0
+	}
+
+	noble_chance = {
+		value = 0.1
+	}
+
+	female_commander_chance = {
+		value = 0.0
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 1.0
+			}
+		}
+	}
+
+	female_politician_chance = {
+		value = 0.15
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.825
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+
+			}
+			add = {
+				value = 0.125
+			}
+		}
+	}
+
+	female_agitator_chance = {
+		value = 0.25
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_own_property
+				}
+
+			}
+			add = {
+				value = 0.025
+			}
+		}	
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_in_the_workplace
+				}
+
+			}
+			add = {
+				value = 0.025
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+
+			}
+			add = {
+				value = 0.025
+			}
+		}	
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.7
+			}
+		}
+	}
+
+	# The chance that a commander belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular commander in the IG
+	commander_leader_chance = {
+		value = 0.25
+		if = {
+			limit = {
+				exists = scope:character
+			}
+			multiply = {
+				value = 1
+				add = scope:character.popularity
+				min = 0
+			}
+		}
+	}
+}

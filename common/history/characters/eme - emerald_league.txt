@@ -1,0 +1,28 @@
+﻿CHARACTERS = {
+	c:EME ?= {
+		create_character = {
+			template = EME_emerald_league_leader_template
+		}
+		create_character = {
+			template = EME_emerald_league_petite_ig_template
+		}		
+		create_character = {
+			template = EME_emerald_league_industrial_ig_template
+		}		
+		create_character = {
+			template = EME_emerald_league_military_ig_template
+		}		
+		create_character = {
+			template = EME_emerald_league_rural_ig_template
+		}
+		create_character = {
+			template = EME_emerald_league_landowner_ig_template
+		}
+		create_character = {
+			template = EME_emerald_league_intel_ig_template
+		}		
+		create_character = {
+			template = EME_emerald_league_mage_ig_template
+		}	
+	}
+}

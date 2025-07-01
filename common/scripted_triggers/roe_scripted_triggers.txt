@@ -1,0 +1,208 @@
+﻿any_active_outbreaks = {
+	any_scope_state = {
+	has_modifier = modifier_active_dragonblight_outbreak	
+	}
+}
+
+is_hired_retainer = {
+	OR = {
+		has_variable = is_first_retainer
+		has_variable = is_second_retainer
+		has_variable = is_third_retainer
+		has_variable = is_fourth_retainer
+		has_variable = is_fifth_retainer
+	}
+}
+
+is_owned_unassigned_retainer = {
+	exists = owner
+	owner = root
+	is_hired_retainer = yes
+	NOT = { has_variable = assigned_region }
+}
+
+has_free_retainer = {
+	custom_tooltip = {
+		text = has_unassigned_retainer_tt
+		any_character_in_void = {
+			exists = owner
+			owner = root
+			has_variable = is_retainer
+			is_hired_retainer = yes
+			NOT = {
+				has_variable = assigned_region
+			}
+		}
+	}
+}
+
+is_guild_slave_state = {
+	any_scope_pop = {
+		is_pop_type = guild_bonded
+	}
+}
+
+ideology_astra_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_industrialists
+		is_interest_group_type = ig_mages
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_armed_forces
+	}
+}
+
+ideology_romantic_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_landowners
+		is_interest_group_type = ig_mages
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_intelligentsia
+	}
+}
+
+has_shipyard_company = {
+	custom_tooltip = {
+		text = has_ship_company_tt
+		OR = {
+			has_company = company_type:company_basic_shipyards
+			has_company = company_type:company_skysail
+			has_company = company_type:company_jackie_bilet
+			has_company = company_type:company_el_fl
+			has_company = company_type:company_mhkot_yards
+			has_company = company_type:company_icebreaker_arsenal
+			has_company = company_type:company_rustharvest
+			has_company = company_type:company_rustharvest
+		}
+		
+	}
+
+}
+
+is_shipyard_company = {
+    OR = {
+        type = company_type:company_basic_shipyards
+        type = company_type:company_skysail
+        type = company_type:company_jackie_bilet
+        type = company_type:company_el_fl
+        type = company_type:company_mhkot_yards
+        type = company_type:company_icebreaker_arsenal
+		type = company_type:company_rustharvest
+    }
+}
+
+ideology_magocrat_valid_trigger = {
+	OR = {
+
+		is_interest_group_type = ig_rural_folk
+	 	is_interest_group_type = ig_trade_unions
+		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_landowners
+		is_interest_group_type = ig_devout
+	 	is_interest_group_type = ig_mages
+	}
+}
+
+ideology_druid_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_rural_folk
+		is_interest_group_type = ig_mages
+	}
+}
+
+ideology_mad_scientist_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_industrialists
+		is_interest_group_type = ig_mages
+		is_interest_group_type = ig_petty_bourgeoisie
+	}
+}
+
+ideology_magillismo_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_mages
+	}
+}
+
+ideology_artificer_baron_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_industrialists
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_mages
+	}
+}
+
+common_language_trigger = {
+	any_primary_culture = { 
+		OR = {
+			AND = {
+				has_discrimination_trait = human_heritage
+				has_discrimination_trait = imperial_culture_group
+			}
+			AND = {
+				has_discrimination_trait = settler_coast_culture_group
+				has_discrimination_trait = human_heritage
+			}
+			AND = {
+				has_discrimination_trait = uriks_passage_culture_group
+				has_discrimination_trait = human_heritage
+				NOT = { cu:ocelian ?= this  }
+			}
+
+			
+		} 
+	}
+}
+
+ocelian_language_trigger = { #still includes thiralian
+	OR = {
+		country_has_primary_culture = cu:bakibi
+		any_primary_culture = { 
+			OR = {
+				AND = {
+					has_discrimination_trait = human_heritage
+					has_discrimination_trait = vaythir_culture_group
+				}
+				AND = {
+					has_discrimination_trait = sirens_lagoon_culture_group
+					has_discrimination_trait = human_heritage
+					NOT = { has_discrimination_trait = imperial_culture_group }
+				}
+
+			} 
+		}
+	}
+}
+
+
+thaloria_language_trigger = { # can be extended to other regions and can integrate  draconic renaming if you just duplicate gnome content and replace it with dragon
+	OR = {
+		country_has_primary_culture = cu:littoral_thalorian
+		country_has_primary_culture = cu:lake_thalorian
+		country_has_primary_culture = cu:heartland_thalorian
+		any_primary_culture = {
+			OR = {
+				AND = {
+					has_discrimination_trait = gnome_heritage
+				}
+				AND = {
+					has_discrimination_trait = human_heritage
+				}
+			}
+		}
+	}
+}
+
+locari_language_trigger = {
+	OR = {
+		country_has_primary_culture = cu:naga
+		any_primary_culture = {
+			OR = {
+				has_discrimination_trait = naga_heritage_culture
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+﻿COUNTRIES = {
+	c:BSK = {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_conservative = yes
+
+		add_technology_researched = advanced_contraptions
+		add_technology_researched = thaumacore_factories
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = ectoplasm_engines
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = stock_exchange
+		add_technology_researched = nationalism
+		add_technology_researched = intensive_agriculture
+		add_technology_researched = mechanical_tools
+		add_technology_researched = organized_adventuring
+
+		activate_law = law_type:law_mage_hunters
+		activate_law = law_type:law_no_schools
+		activate_law = law_type:law_wealth_voting
+		activate_law = law_type:law_dwarf_no_guild_privileges
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_national_supremacy
+
+
+		ig:ig_armed_forces = { 
+		}
+		
+		ig:ig_landowners = { 
+		}
+
+		ig:ig_devout = { 
+			remove_ideology = ideology_patriarchal
+			add_ideology = ideology_jingoist
+		}
+
+	}
+}

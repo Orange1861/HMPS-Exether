@@ -1,0 +1,679 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types retainer_panel_types
+{
+	type retainer_character_with_background = widget {
+		
+		# background
+		widget = {
+			size = { 100% 100% }
+			position = { 0 1 }
+			using = Animation_Character_Panel_Refresh
+
+			# Agitator
+			widget = {
+				size = { 100% 100% }
+			
+				background = {
+					texture = "gfx/interface/character_panel/backgrounds/char_role_retainer.dds"
+					fittype = centercrop
+				}
+
+								# VFX
+				vfx = {
+					blockoverride "entity_instance" {
+						entity_instance = vfx_entity_ui_bg_char_politician_godrays
+					}					
+				}
+
+				# VFX birds
+				vfx = {
+					blockoverride "camera_position" {
+						camera_position = { 0 0 15 }
+					}
+					blockoverride "entity_instance" {
+						entity_instance = vfx_entity_ui_bg_char_admiral_seagulls
+					}			
+				}
+
+			}
+
+		}
+
+		# character
+		character_portrait_base_no_mask = {
+			ignore_in_debug_draw = yes
+			parentanchor = left|bottom
+			
+			block "character_layout" {
+				position = { 50 10 }
+				size = { 250 400 }
+			}
+
+			blockoverride "portrait_size" {
+				block "character_portrait_size" {
+					size = { 575 575 }
+				}
+			}
+
+			blockoverride "portrait_texture" {
+				portrait_texture = "[Character.GetAnimatedPortrait('agitator_main_environment', 'camera_leader', 'idle', GetPortraitRenderSize(PdxGuiWidget.Self))]"
+			}
+
+			blockoverride "portrait_icons" {}
+			blockoverride "tooltip" {}
+			blockoverride "show_hat" {}
+		}
+		
+		icon = {
+			using = dark_area
+			parentanchor = bottom|hcenter
+			size = { 100% 40% }
+			alpha = 0.65
+			position = { 0 2 }
+
+			modify_texture = {
+				texture = "gfx/interface/masks/fade_vertical_top.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				blend_mode = alphamultiply
+			}
+		}
+
+		widget = {
+			size = { 100% 100% }
+			
+			background = {
+				texture = "gfx/interface/character_panel/char_bg_frame.dds"
+				margin_left = 18
+				margin_right = 10
+				margin_bottom = 10
+				spriteType = Corneredtiled
+				
+				spriteborder_left = 200
+				spriteborder_right = 60
+				spriteborder_top = 170
+				spriteborder_bottom = 180
+				
+				texture_density = 2
+			}
+		}
+
+		character_interactions_button = {
+			name = "tutorial_highlight_character_panel_interactions_button_1"
+		}
+
+		# Heir Portrait
+		widget = {
+			datacontext = "[Character.AccessInterestGroup.AccessCountry]"
+			visible = "[And(Character.IsRuler, And(Not(Character.IsHeir), Country.AccessHeir.IsValid))]"
+			parentanchor = left|bottom
+			size = { 110 110 }
+			position = { 10 -10 }
+			
+			character_portrait_large = {
+				size = { 100% 100% }
+				datacontext = "[Country.AccessHeir]"
+
+				blockoverride "show_hat" {}
+				blockoverride "highlight" {}
+			}
+		}
+	}
+	
+	type retainer_character_panel = default_block_window_two_lines {
+		name = "retainer_character_panel"
+		visible = "[And(GetPlayer.MakeScope.Var('open_retainer').IsSet, GetVariableSystem.Exists('retainer_character_panel_open'))]"
+		datacontext = "[GetPlayer.MakeScope.GetVariable('open_retainer').GetCharacter]"
+
+		blockoverride "animation_state_block" {
+			datacontext = "[GetPlayer.MakeScope.GetVariable('open_retainer').GetCharacter]"
+
+			state = {
+				name = _show
+
+				on_start = "[PdxGuiTriggerAllAnimations(Select_CString( CommanderPanel.AccessCharacter.IsAgitator, 'agitator', 'not_agitator' ))]"
+			}
+
+			state = {
+				name = not_agitator
+
+				start_sound = {
+					soundeffect = "event:/SFX/DLC/1.3_ip1/UI/open_character_panel"
+				}
+			}
+
+			state = {
+				name = agitator
+
+				on_start = "[PdxGuiTriggerAllAnimations(Select_CString( CommanderPanel.AccessCharacter.IsHistorical, 'historical_agitator', 'generic_agitator' ))]"
+			}
+
+			state = {
+				name = historical_agitator
+
+				start_sound = {
+					soundeffect = "event:/SFX/DLC/1.3_ip1/UI/historical_agitator_stinger"
+				}
+			}
+
+			state = {
+				name = generic_agitator
+
+				start_sound = {
+					soundeffect = "event:/SFX/DLC/1.3_ip1/UI/generic_agitator_stinger"
+				}
+			}
+
+			state = {
+				name = _hide
+				
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/budget_stop"
+				}
+			}
+		}
+
+		blockoverride "header_back_button" {
+            onclick = "[GetVariableSystem.Toggle('retainer_character_panel_open')]"
+			onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'situations')]"
+        }
+
+        blockoverride "header_close_button" {
+            onclick = "[GetVariableSystem.Toggle('retainer_character_panel_open')]"
+			onclick = "[InformationPanelBar.ClosePanel]"
+        }
+
+		blockoverride "window_header_name" {
+			text = "[Character.GetFullName]"
+		}
+
+		blockoverride "window_header_name_line_two" {
+			text = "CHARACTER_PANEL_SUBTITLE"
+		}
+
+		blockoverride "goto_visibility" {
+			visible = "[Not(Character.IsInExilePool)]"
+		}
+		blockoverride "goto_properties" {
+			datacontext = "[Character.GetCountry]"
+			tooltip = "ZOOM_TO_LOCATION"
+			onclick = "[Character.ZoomToLocation]"
+		}
+
+		blockoverride "goto_button" {
+			button_icon_goto = { #All other cases
+				size = { 30 30 }
+				datacontext = "[Character.GetCountry]"
+				tooltip = "GO_TO_BUTTON_COUNTRY"
+				onclick = "[InformationPanelBar.OpenCountryPanel(Character.GetCountry)]"
+				input_action = "go_to_details"
+			}
+		}
+
+		blockoverride "fixed_top"
+		{
+		}
+
+		blockoverride "scrollarea_content" {
+
+			### CHARACTER PANEL
+			flowcontainer = {
+				visible = "[InformationPanel.IsTabSelected('default')]"
+				using = default_content_fade
+				direction = vertical
+				using = default_list_position
+				minimumsize = { @panel_width -1 }
+				margin_top = 5
+
+
+				widget = {
+					size = { @panel_width_plus_14 520 }
+					### TODO: fix the backgrounds to fit the set container size (currently 540 x 600)
+					
+					retainer_character_with_background = {
+						size = { @panel_width_plus_14 520 }
+					}
+
+					widget = {
+						size = { @panel_width 520 }
+
+						flowcontainer = {
+							parentanchor = right|vcenter
+							position = { 0 -15 }
+							margin_left = 5
+							margin_bottom = 7
+							margin_top = 7
+							direction = vertical
+							minimumsize = { 250 -1 }
+
+							background =  {
+								using = entry_bg_fancy_dark
+								alpha = 1
+							}
+
+							### RANK
+							retainer_stats_entry = {
+								visible = "[Character.IsCommander]"
+								datacontext = "[Character.GetCommanderRank]"
+
+								tooltipwidget = {
+									FancyTooltip_CommanderRank = {}
+								}
+
+								blockoverride "icon" {
+									widget = {
+										parentanchor = left|vcenter
+										position = { 10 0 }
+										size = { 35 35 }
+
+										icon = {
+											size = { 40	40 }
+											texture = "gfx/interface/backgrounds/round_button_bg.dds"
+											parentanchor = vcenter|left
+											
+											icon = {
+												size = { 30	30 }
+												parentanchor = center
+												texture = "[Character.GetCommanderRank.GetTexture]"
+											}
+										}
+									}
+								}
+								
+								blockoverride "double_entry_label" {
+									text = "[concept_rank]"
+								}
+								blockoverride "double_entry_value" {
+									raw_text = "#v [Character.GetRankTitleFor(CommanderRank.Self)]#!"
+								}
+								blockoverride "single_text_entry" {}
+							}
+							
+							### ROLE
+							retainer_stats_entry = {
+								visible = "[Character.MakeScope.Var('is_retainer').IsSet]"
+
+								tooltip = "CHARACTER_RETAINER_ROLE_TOOLTIP"
+
+								blockoverride "icon" {
+									retainer_character_role_icon = {
+										parentanchor = left|vcenter
+										position = { 10 0 }
+									}
+								}
+								blockoverride "double_entry_label" {
+									text = "ROLE"
+								}
+								blockoverride "double_entry_value" {
+									visible = "[Character.MakeScope.Var('is_retainer').IsSet]"
+									text = "CHARACTER_RETAINER_ROLE"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							### INTEREST GROUP
+							retainer_interest_group_entry = {
+								datacontext = "[Character.AccessInterestGroup]"
+							}
+
+							### IDEOLOGY
+							retainer_stats_entry = {
+								datacontext = "[Character.GetIdeology]"
+
+								tooltipwidget = {
+									FancyTooltip_Ideology = {}
+								}
+
+								blockoverride "icon_texture" {
+									texture = "[Ideology.GetTexture]"
+								}
+								blockoverride "double_entry_label" {
+									text = "IDEOLOGY_CONCEPT"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_IDEOLOGY"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							#POPULARITY
+							retainer_stats_entry = {
+
+								tooltip = "POPULARITY_BREAKDOWN"
+
+								blockoverride "animation" {
+									name = commander_panel_show
+									on_finish = "[PdxGuiTriggerAllAnimations('character_panel_stat')]"
+								}
+
+								blockoverride "icon_texture" {
+									texture = "gfx/interface/icons/generic_icons/popularity.dds"
+								}
+
+								blockoverride "double_entry_label" {
+									text = "POPULARITY"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_POPULARITY"
+								}
+								blockoverride "single_text_entry" {}
+							}	
+
+							### CULTURE
+							retainer_stats_entry = {
+								datacontext = "[Character.GetCulture]"
+
+								tooltipwidget = {
+									FancyTooltip_Culture = {}
+								}
+
+								blockoverride "icon_texture" {
+									texture = "gfx/interface/backgrounds/round_button_bg.dds"
+									icon = {
+										parentanchor = center
+										size = { 32 32 }
+										texture = "gfx/interface/population/pop_culture.dds"
+									}
+								}
+								blockoverride "double_entry_label" {
+									text = "CHARACTER_PANEL_CULTURE_LABEL"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_CULTURE"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							### AGE
+							retainer_stats_entry = {
+								### This is to not overcrowd the panel when the character is both a General and an Agitator
+								visible = "[Not(And(Character.IsAgitator, Character.IsGeneral))]"
+								tooltip = "CHARACTER_AGE_TOOLTIP"
+
+								blockoverride "icon_texture" {
+									texture = "gfx/interface/icons/generic_icons/age.dds"
+								}
+								blockoverride "double_entry_label" {
+									text = "AGE"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_AGE"
+								}
+								blockoverride "single_text_entry" {}
+
+		
+							}
+
+							### POLITICAL MOVEMENT PREDICTION - WHEN IN EXILE POOL
+							retainer_stats_entry = {
+
+
+								blockoverride "icon" {
+									icon = {
+										datacontext = "[Character.PredictMovementToJoin(GetPlayer.Self)]"
+										visible = "[Character.WillJoinMovementIfInvited(GetPlayer.Self)]"
+										size = { 35 35 }
+										texture = "[PoliticalMovement.GetTexture]"
+										parentanchor = left|vcenter
+										position = { 10 0 }					
+									}
+									icon = {
+										datacontext = "[Character.PredictMovementTypeToStart(GetPlayer.Self)]"
+										visible = "[Character.WillStartMovementIfInvited(GetPlayer.Self)]"
+										size = { 35 35 }
+										texture = "[PoliticalMovementType.GetTexture]"
+										parentanchor = left|vcenter
+										position = { 10 0 }					
+									}									
+								}
+
+								blockoverride "double_entry_label" {}
+								blockoverride "double_entry_value" {}
+								blockoverride "single_text_entry" {}
+
+
+
+								blockoverride "additional_items" {
+									textbox = {
+										datacontext = "[Character.PredictMovementToJoin(GetPlayer.Self)]"
+										visible = "[Character.WillJoinMovementIfInvited(GetPlayer.Self)]"
+										size = { 170 40 }
+										position = { 55 0 }
+										parentanchor = vcenter
+										elide = right
+										fontsize_min = 14
+										multiline = yes
+										align = left|nobaseline
+										text = "AGITATOR_POLITICAL_MOVEMENT_PREDICTION_INVITE_JOIN"
+									}
+									textbox = {
+										datacontext = "[Character.PredictMovementTypeToStart(GetPlayer.Self)]"
+										visible = "[Character.WillStartMovementIfInvited(GetPlayer.Self)]"
+										size = { 170 40 }
+										position = { 55 0 }
+										parentanchor = vcenter
+										elide = right
+										fontsize_min = 14
+										multiline = yes
+										align = left|nobaseline
+										text = "AGITATOR_POLITICAL_MOVEMENT_PREDICTION_INVITE_START"
+									}									
+								}
+								blockoverride "divider" {
+									divider_clean = {
+										visible = "[And(Character.MakeScope.Var('is_retainer').IsSet, Character.MakeScope.Var('assigned_region').IsSet)]"
+										parentanchor = bottom|hcenter
+										position = { 0 -2 }
+									}
+								}
+							}						
+
+							retainer_stats_entry = {
+								visible = "[And(Character.MakeScope.Var('is_retainer').IsSet, Character.MakeScope.Var('assigned_region').IsSet)]"
+								datacontext = "[Character.GetPoliticalMovement]"
+
+								blockoverride "icon" {
+									icon = {
+										size = { 35 35 }
+										texture = "gfx/interface/icons/invention_icons/navigation.dds"
+										parentanchor = left|vcenter
+										position = { 10 0 }
+									}
+								}
+
+								blockoverride "double_entry_label" {}
+								blockoverride "double_entry_value" {}
+								blockoverride "single_text_entry" {}
+
+								blockoverride "additional_items" {
+									textbox = {
+										size = { 170 40 }
+										position = { 55 0 }
+										parentanchor = vcenter
+										elide = right
+										fontsize_min = 14
+										multiline = yes
+										align = left|nobaseline
+										text = "RETAINER_ASSIGNED_REGION"
+									}
+								}
+
+							}
+						}
+					}
+
+					character_interactions_button = {
+						name = "tutorial_highlight_character_panel_interactions_button_2"
+					}
+
+					widget = {
+						size = { @panel_width_plus_14 50 }
+						parentanchor = hcenter|bottom
+						
+						### TIMED MODIFIERS
+						flowcontainer = {
+							parentanchor = right
+							margin_top = 10
+							margin_right = 14
+							margin_left = 14
+							margin_bottom = 10
+							datamodel = "[Character.GetTimedModifiers]"
+							spacing = 5
+							visible = "[Not(IsDataModelEmpty(Character.GetTimedModifiers))]"
+							maximumsize = { @panel_width_minus_10 45 }
+							datamodel_wrap = 2
+
+							item = {
+								icon = {
+									tooltip = "[TimedModifier.GetTooltip]"
+									texture = "[TimedModifier.GetIcon]"
+									size = { 30 30 }
+								}
+							}
+						}
+					}
+				}
+
+				### CHARACTER TRAITS
+				default_header = {
+					blockoverride "text" {
+						datacontext = "[Character]"
+						text = "CHARACTER_PANEL_TRAITS_HEADER"
+					}
+				}
+				character_traits = {}
+
+				widget = { size = { 20 20 }}
+			}
+		}
+		
+		blockoverride "fixed_bottom" {
+				
+			flowcontainer = {
+				minimumsize = { 400 100 }
+				direction = vertical
+				visible = "[Character.IsCommander]"
+				using = default_fade_in_out
+
+				divider_clean = {
+					size = { @panel_width_plus_14 4 }
+				}
+
+				background = {
+					using = dark_area
+				}
+
+				widget = {
+					size = { 5 5 }
+				}
+
+				empty_state = {
+					blockoverride "visible" {
+						visible = "[Not(Character.HasMilitaryFormation)]"
+					}
+					blockoverride "text" {
+						text = "NOT_PART_OF_ANY_MILITARY_FORMATION"
+					}
+				}
+
+				battle_item = {
+					visible = "[Character.IsInBattle]"
+					datacontext = "[Character.GetBattle]"
+				}
+
+				flowcontainer = {
+					visible = "[Character.HasMilitaryFormation]"
+					parentanchor = hcenter
+					margin = { 10 10 }
+					spacing = 20
+					datacontext = "[Character.GetMilitaryFormation]"
+
+					widget = {
+						parentanchor = vcenter
+						size = { 410 80 }
+
+						military_formation_right_click_item = {
+							blockoverride "tooltip" {
+					        	tooltipwidget = {
+					        		FancyTooltip_MilitaryFormation = {}
+					        	}
+					        }
+
+					        blockoverride "name_max_width" {
+								max_width = 255
+							}
+
+							blockoverride "onclick" {
+								onclick = "[InformationPanelBar.OpenMilitaryFormationPanelTab( MilitaryFormation.AccessSelf, 'default' )]"
+								onrightclick = "[RightClickMenuManager.ShowForMilitaryFormation(MilitaryFormation.AccessSelf)]"
+							}
+						}
+					}
+
+					commander_order_button = {
+						parentanchor = vcenter
+						size = { 80 80 }
+
+						blockoverride "special_order_icon_position" {
+							position = { -7 7 }
+						}
+
+						blockoverride "special_order_icon_size" {
+							size = { 30 30 }
+						}
+					}
+			    }
+
+				widget = {
+					size = { 10 10 }
+				}
+			}
+		}
+
+		blockoverride "bottom_spacing" {}
+		
+		blockoverride "pin_visibility" {
+			visible = "[ObjectsEqual(CommanderPanel.AccessCharacter.GetCountry, GetPlayer.Self)]"
+		}
+
+		blockoverride "pin_properties" {
+			visible = "[CommanderPanel.AccessCharacter.IsPinnedInOutliner]"
+			onclick = "[CommanderPanel.AccessCharacter.TogglePinInOutliner]"
+			datacontext = "[CommanderPanel.AccessCharacter]"
+			tooltip = "UNPIN_CHARACTER"
+		}
+
+		blockoverride "unpin_properties" {
+			visible = "[Not(CommanderPanel.AccessCharacter.IsPinnedInOutliner)]"
+			onclick = "[CommanderPanel.AccessCharacter.TogglePinInOutliner]"
+			datacontext = "[CommanderPanel.AccessCharacter]"
+			tooltip = "PIN_CHARACTER"
+		}
+	}
+}
+
+#CHARACTER STATS
+types retainer_character_stats
+{
+	type retainer_character_role_icon = widget {
+		tooltip = "CHARACTER_PRIMARY_ROLE_TOOLTIP"
+		size = { 35 35 }
+		icon = {
+			tooltip = "CHARACTER_RETAINER_ROLE_TOOLTIP"
+			visible = "[Character.MakeScope.Var('is_retainer').IsSet]"
+			size = { 100% 100% }
+			texture = "gfx/interface/icons/character_role_icons/retainer.dds"
+		}
+	}
+}
+

@@ -1,0 +1,1058 @@
+﻿entity = {
+	name = "harvest_condition_sound_entity"
+	cull_radius = 40.0
+
+	# Disease Outbreak (1)
+	state = {
+		name = "disease_outbreak_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/disease_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "disease_outbreak_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/disease_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "disease_outbreak_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/disease_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "disease_outbreak_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/disease_04" trigger_once = yes keep_particle = yes }
+	}
+
+	# Drought (2)
+	state = {
+		name = "drought_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_drought" } keep_sound = yes }
+	}
+	state = {
+		name = "drought_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_drought" } keep_sound = yes }
+	}
+	state = {
+		name = "drought_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_drought" } keep_sound = yes }
+	}
+	state = {
+		name = "drought_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_drought" } keep_sound = yes }
+	}
+
+	# Extreme Winds (3)
+	state = {
+		name = "extreme_winds_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "extreme_winds_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "extreme_winds_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "extreme_winds_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_04" trigger_once = yes keep_particle = yes }
+	}
+
+	# Flood (4)
+	state = {
+		name = "flood_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "flood_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "flood_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "flood_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+
+	# Frost (5)
+	state = {
+		name = "frost_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "frost_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "frost_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "frost_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_04" trigger_once = yes keep_particle = yes }
+	}
+
+	# Hailstorm (6)
+	state = {
+		name = "hailstorm_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_hailstorm" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/hailstorm" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "hailstorm_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_hailstorm" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/hailstorm" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "hailstorm_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_hailstorm" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/hailstorm" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "hailstorm_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_hailstorm" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/hailstorm" trigger_once = yes keep_particle = no  }
+	}
+
+	# Heatwave (7)
+	state = {
+		name = "heatwave_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/heatwave_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "heatwave_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/heatwave_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "heatwave_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/heatwave_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "heatwave_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/heatwave_04" trigger_once = yes keep_particle = yes }
+	}
+
+	# Locust Swarm (8)
+	state = {
+		name = "locust_swarm_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+	}
+	state = {
+		name = "locust_swarm_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+	}
+	state = {
+		name = "locust_swarm_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+	}
+	state = {
+		name = "locust_swarm_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+	}
+
+	# Moderate Rainfall (9)
+	state = {
+		name = "moderate_rainfall_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_moderateRainfall" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/moderate_rainfall_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "moderate_rainfall_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_moderateRainfall" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/moderate_rainfall_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "moderate_rainfall_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_moderateRainfall" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/moderate_rainfall_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "moderate_rainfall_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_moderateRainfall" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/moderate_rainfall_04" trigger_once = yes keep_particle = yes }
+	}
+
+	# Optimal Sunlight (10)
+	state = {
+		name = "optimal_sunlight_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_01" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "optimal_sunlight_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_02" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "optimal_sunlight_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_03" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "optimal_sunlight_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_04" trigger_once = yes keep_particle = no  }
+	}
+
+	# Pollinator Surge (11)
+	state = {
+		name = "pollinator_surge_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/pollinator_surge" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "pollinator_surge_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/pollinator_surge" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "pollinator_surge_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/pollinator_surge" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "pollinator_surge_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/pollinator_surge" trigger_once = yes keep_particle = no  }
+	}
+
+	# Torrential Rains (12)
+	state = {
+		name = "torrential_rains_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/torrential_rain" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "torrential_rains_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/torrential_rain" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "torrential_rains_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/torrential_rain" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "torrential_rains_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/torrential_rain" trigger_once = yes keep_particle = no  }
+	}
+
+	# Wildfire (13)
+	state = {
+		name = "wildfire_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/wildfire_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "wildfire_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/wildfire_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "wildfire_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/wildfire_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "wildfire_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/wildfire_04" trigger_once = yes keep_particle = yes }
+	}
+	# Draconic Submechana (77)
+	state = {
+		name = "draconic_submachina_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "draconic_submachina_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "draconic_submachina_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "draconic_submachina_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+		# Landshark Swarm (78)
+	state = {
+		name = "landshark_swarms_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "landshark_swarms_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "landshark_swarms_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "landshark_swarms_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+		state = {
+		name = "psionic_winds_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_01" trigger_once = yes keep_particle = yes }
+	}
+	# Psionic Winds (79)
+	state = {
+		name = "psionic_winds_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "psionic_winds_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "psionic_winds_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect =  "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_04" trigger_once = yes keep_particle = yes }
+	}
+		# Psionic Winds (80)
+			state = {
+		name = "psionic_storms_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "psionic_storms_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "psionic_storms_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "psionic_storms_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+				state = {
+		name = "dinosaur_attacks_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "dinosaur_attacks_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "dinosaur_attacks_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "dinosaur_attacks_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+					state = {
+		name = "plague_spores_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "plague_spores_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "plague_spores_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "plague_spores_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+
+		# Acid Rain (84)
+	state = {
+		name = "acid_rain_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/torrential_rain" }
+	}
+	state = {
+		name = "acid_rain_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/torrential_rain" }
+	}
+	state = {
+		name = "acid_rain_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/torrential_rain" }
+	}
+	state = {
+		name = "acid_rain_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/torrential_rain" }
+	}
+		# Thiral Blooming (85)
+	state = {
+		name = "thiral_blooming_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "thiral_blooming_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "thiral_blooming_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "thiral_blooming_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	# treacherous whirlpools (86)
+			state = {
+		name = "treacherous_whirlpools_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "treacherous_whirlpools_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "treacherous_whirlpools_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "treacherous_whirlpools_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+		# Magical Hotspots (87)
+	state = {
+		name = "magical_hotspots_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+	}
+	state = {
+		name = "magical_hotspots_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+	}
+	state = {
+		name = "magical_hotspots_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+	}
+	state = {
+		name = "magical_hotspots_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+	}
+	state = {
+		name = "ghost_ships_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+	}
+	state = {
+		name = "ghost_ships_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+	}
+	state = {
+		name = "ghost_ships_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+	}
+	state = {
+		name = "ghost_ships_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+	}
+	# Caelum Radiation (89)
+	state = {
+		name = "caelum_radiation_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_01" trigger_once = yes keep_particle = yes }
+	}
+
+	state = {
+		name = "caelum_radiation_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "caelum_radiation_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "caelum_radiation_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect =  "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_04" trigger_once = yes keep_particle = yes }
+	}
+		# Direwolf Packs (90)
+		state = {
+			name = "direwolf_packs_1"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/frost_01" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "direwolf_packs_2"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/frost_02" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "direwolf_packs_3"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/frost_03" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "direwolf_packs_4"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/frost_04" trigger_once = yes keep_particle = yes }
+		}
+		# Wild Magic: Kraken (91)
+			state = {
+		name = "wild_magic_kraken_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "wild_magic_kraken_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "wild_magic_kraken_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "wild_magic_kraken_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+		# Kisqi Raids (92)
+		state = {
+			name = "kisqi_raids_1"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_01" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "kisqi_raids_2"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_01" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "kisqi_raids_3"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_02" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "kisqi_raids_4"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_03" trigger_once = yes keep_particle = yes }
+		}
+			# Wild Magic: Angel (93)
+	state = {
+		name = "death_hounds_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "death_hounds_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "death_hounds_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "death_hounds_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	# Ghastly Harbingers (94)
+	state = {
+		name = "ghostly_harbingers_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "ghostly_harbingers_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "ghostly_harbingers_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "ghostly_harbingers_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	# Mammoth Migrations (95)
+	state = {
+		name = "mammoth_migrations_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+
+	}
+	state = {
+		name = "mammoth_migrations_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+	
+	}
+	state = {
+		name = "mammoth_migrations_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+	
+	}
+	state = {
+		name = "mammoth_migrations_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+	
+	}
+
+	# Potion Spillage (96)
+	state = {
+		name = "sludgestorms_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_moderateRainfall" } keep_sound = yes }
+	}
+	state = {
+		name = "sludgestorms_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_moderateRainfall" } keep_sound = yes }
+	}
+	state = {
+		name = "sludgestorms_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+	}
+	state = {
+		name = "sludgestorms_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_torrentialRains" } keep_sound = yes }
+	}
+	# Griffon Attacks (97)
+	state = {
+		name = "griffon_attacks_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "griffon_attacks_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "griffon_attacks_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "griffon_attacks_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+		# Gas Leaks (98)
+	state = {
+		name = "gas_leaks_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "gas_leaks_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "gas_leaks_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "gas_leaks_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+		# Cavern Collapse (99)
+	state = {
+		name = "cavern_collapse_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "cavern_collapse_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "cavern_collapse_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "cavern_collapse_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+			# Dark Feeders (100)
+	state = {
+		name = "dark_feeders_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "dark_feeders_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "dark_feeders_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "dark_feeders_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+		# seasnake_infestations (101)
+	state = {
+		name = "seasnake_infestations_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "seasnake_infestations_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "seasnake_infestations_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+	state = {
+		name = "seasnake_infestations_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+	}
+				# Dark Feeders (100)
+	state = {
+		name = "vampire_spawn_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "vampire_spawn_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "vampire_spawn_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "vampire_spawn_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+		# Snail Stampedes (103)
+	state = {
+		name = "snail_stampedes_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+
+	}
+	state = {
+		name = "snail_stampedes_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+	
+	}
+	state = {
+		name = "snail_stampedes_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+	
+	}
+	state = {
+		name = "snail_stampedes_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_heatwave" } keep_sound = yes }
+	
+	}
+	
+	state = {
+		name = "nightmare_brine_contamination_1"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 1 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	state = {
+		name = "nightmare_brine_contamination_2"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 2 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	state = {
+		name = "nightmare_brine_contamination_3"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 3 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	state = {
+		name = "nightmare_brine_contamination_4"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 4 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	
+	state = {
+		name = "salt_mad_elementals_1"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 1 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	state = {
+		name = "salt_mad_elementals_2"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 2 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	state = {
+		name = "salt_mad_elementals_3"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 3 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	state = {
+		name = "salt_mad_elementals_4"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 4 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" }
+			keep_sound = yes
+		}
+	}
+	
+	state = {
+		name = "salt_ghouls_1"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 1 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" }
+			keep_sound = yes
+		}
+		start_event = {
+			particle = "harvestconditions/wildfire_01"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "salt_ghouls_2"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 2 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" }
+			keep_sound = yes
+		}
+		start_event = {
+			particle = "harvestconditions/wildfire_01"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "salt_ghouls_3"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 3 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" }
+			keep_sound = yes
+		}
+		start_event = {
+			particle = "harvestconditions/wildfire_02"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "salt_ghouls_4"
+		event = {
+			soundparameter = { "harvest_condition_intensity_level" = 4 }
+			sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" }
+			keep_sound = yes
+		}
+		start_event = {
+			particle = "harvestconditions/wildfire_03"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	
+	#Rock Elementals (104)
+	state = {
+		name = "rock_elementals_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "rock_elementals_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "rock_elementals_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "rock_elementals_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	# Living Trees (105)
+	state = {
+		name = "living_trees_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "living_trees_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "living_trees_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "living_trees_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_extremeWinds" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/extreme_winds_04" trigger_once = yes keep_particle = yes }
+	}
+			
+	state = {
+		name = "thieves_guild_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "thieves_guild_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "thieves_guild_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "thieves_guild_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	# Kiankstauk Colonies (106)
+	state = {
+		name = "kiankstauk_colonies_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "kiankstauk_colonies_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "kiankstauk_colonies_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+	state = {
+		name = "kiankstauk_colonies_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_diseaseOutbreak" } keep_sound = yes }
+	}
+
+	state = {
+		name = "heptadrone_swarms_negative_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_01" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "heptadrone_swarms_negative_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_02" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "heptadrone_swarms_negative_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_03" trigger_once = yes keep_particle = yes }
+	}
+	state = {
+		name = "heptadrone_swarms_negative_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_frost" } keep_sound = yes }
+		start_event = {	particle = "harvestconditions/frost_04" trigger_once = yes keep_particle = yes }
+	}
+
+	state = {
+		name = "heptadrone_swarms_positive_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "heptadrone_swarms_positive_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "heptadrone_swarms_positive_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+	state = {
+		name = "heptadrone_swarms_positive_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_flood" } keep_sound = yes }
+		event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+	}
+
+	state = {
+		name = "brass_peacock_sightings_1"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_01" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "brass_peacock_sightings_2"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_02" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "brass_peacock_sightings_3"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_03" trigger_once = yes keep_particle = no  }
+	}
+	state = {
+		name = "brass_peacock_sightings_4"
+		event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_optimalSunlight" } keep_sound = yes }
+		start_event = { particle = "harvestconditions/optimal_sunlight_04" trigger_once = yes keep_particle = no  }
+	}
+
+			# wishstone_showers
+		state = {
+				name = "wishstone_showers_1"
+				event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+				event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+		}
+		state = {
+				name = "wishstone_showers_2"
+				event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+				event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+		}
+		state = {
+			name = "wishstone_showers_3"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+			event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+			}
+		state = {
+			name = "wishstone_showers_4"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_pollinatorSurge" } keep_sound = yes }
+			event = { time = 0.0 particle = "harvestconditions/pollinator_surge" }
+		}
+
+		state = {
+			name = "awakened_flora_1"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_01" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "awakened_flora_2"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_02" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "awakened_flora_3"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_03" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "awakened_flora_4"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_wildfire" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_04" trigger_once = yes keep_particle = yes }
+		}
+}

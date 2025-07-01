@@ -1,0 +1,127 @@
+﻿############ PRIVATE INFRASTRUCTURE
+building_airship_dock = {
+	building_group = bg_private_infrastructure
+	city_type = city
+	icon = "gfx/interface/icons/building_icons/airship_dock.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	enable_air_connection = yes
+
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	port = yes
+
+	unlocking_technologies = { skyports }
+
+	production_method_groups = {
+		pmg_base_building_airship_dock
+	}
+
+	required_construction = construction_cost_medium
+	
+	possible = {
+		AND = {
+			state_has_mountain = yes
+			#is_coastal = yes #taking the training wheels off
+		}
+	}
+		ownership_type = self
+
+}
+
+building_magic_carpet_store = {
+	building_group = bg_private_infrastructure
+	city_type = city
+	icon = "gfx/interface/icons/building_icons/magic_carpet_shop.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	enable_air_connection = yes
+
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	port = yes
+
+	unlocking_technologies = { wishstone_machines }
+
+	production_method_groups = {
+		pmg_base_building_magic_carpet_store
+		pmg_tapestries_carpet_store
+	}
+
+	required_construction = construction_cost_low
+
+	potential = {
+		OR = {
+			region = sr:region_south_chin_desert
+			region = sr:region_north_chin_desert
+		}
+		NOT = {
+			state_region = {
+				is_homeland = cu:rahoru
+			}
+		}
+	}
+
+	possible = {
+		OR = {
+			region = sr:region_south_chin_desert
+			region = sr:region_north_chin_desert
+		}
+		NOT = {
+			state_region = {
+				is_homeland = cu:rahoru
+			}
+		}
+	}
+	
+	ownership_type = self
+
+}
+
+building_argentum_rail = {
+	building_group = bg_private_infrastructure	
+	icon = "gfx/interface/icons/building_icons/argentum_rail.dds"
+	
+	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
+	
+	unlocking_technologies = {
+		ectoplasm_engines
+	}
+
+	production_method_groups = {
+		pmg_base_building_argentum_rail
+		pmg_passenger_trains
+	}
+
+	required_construction = construction_cost_very_high
+	
+	ai_value = {
+		value = 2000 # Railways are important
+	}
+	
+	should_auto_expand = { 
+		occupancy >= 0.8
+		OR = {
+			cash_reserves_ratio > 0.5
+			is_subsidized = yes
+		}
+		OR = {
+			state = {
+				sg:transportation = { 
+					state_goods_pricier > 0.5 
+				}
+			}
+			state.market_access < 1
+		}
+		NOT = { is_under_construction = yes }
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = no_argentum_rail_tt
+			has_state_trait = state_trait_rungloam
+		}
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+}

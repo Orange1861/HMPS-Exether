@@ -1,0 +1,53 @@
+﻿satrapy = {
+	can_select_to_break = no
+	groups= {
+		general # for breaking only
+	}
+	potential = { # Only created through diplomatic plays
+		always = no
+	}
+
+	pact = {
+		cost = 25
+	
+		has_junior_participant = yes
+		recipient_pays_maintenance = no
+		income_transfer = -0.20
+		max_paying_country_income_to_transfer = 0.10
+		second_country_gets_income_transfer = yes
+		income_transfer_based_on_second_country = yes
+
+		relations_progress_per_day = 1
+		relations_improvement_max = 50
+		market_owner = second_country
+
+		subject_type = subject_type_satrapy
+		
+		second_modifier = {
+			unit_experience_gain_mult = 0.5
+			building_training_rate_mult = 0.2
+		}
+
+		actor_can_break = {
+			always = no
+		}
+
+		target_can_break = { # Has to use diplomatic play to break
+			always = no
+		}
+
+		manual_break_effect = {
+			create_bidirectional_truce = { country = scope:target_country months = 60 }
+		}
+
+		auto_break_effect = {
+			create_bidirectional_truce = { country = scope:target_country months = 60 }
+		}
+	}
+
+	ai = {
+		will_break = {
+			always = no
+		}
+	}
+}

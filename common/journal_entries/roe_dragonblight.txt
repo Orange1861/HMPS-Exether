@@ -1,0 +1,218 @@
+﻿je_dragonblight = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+	
+
+	scripted_button = dragon_port_lockdown_button
+	#scripted_button = dragon_port_open_button
+	scripted_button = negotiate_kobold_settlements_button
+	
+	modifiers_while_active = {
+		dragonblight_blues
+	}
+	on_monthly_pulse = {
+		effect = {
+			every_scope_state = {
+				limit = {
+					NOT = { 
+						OR = {
+						has_modifier = dragon_sickhouses
+						has_decree = decree_special_measures
+						}
+
+					 }
+				}
+			every_scope_pop = {
+				limit = {
+					culture = cu:illvasaari
+				}
+				change_pop_culture = {
+					target = cu:kotskarvi
+					value = 0.002 ##je failure graph## y = (1 - z)^x where x = months from start, y = proportion of dragonborn population and z = the change pop culture value
+				}
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = root
+				OR = {
+					has_modifier = gave_into_sickhouse_protests
+					has_modifier = active_conversion_cult
+					has_modifier = wealthy_abusing_disease_restrictions
+				}
+				
+
+				
+			}
+		every_scope_pop = {
+			limit = {
+				culture = cu:illvasaari
+			}
+			change_pop_culture = {
+				target = cu:kotskarvi
+				value = 0.002 
+			}
+		}
+		}
+			every_scope_state = {
+				limit = {
+					has_modifier = modifier_active_dragonblight_outbreak
+				}
+				every_scope_pop = {
+					limit = {
+						culture = cu:illvasaari
+					}
+					change_pop_culture = {
+						target = cu:kotskarvi
+						value = 0.004
+					}
+				}
+			}	
+		}
+		random_events = { #this originally all added up to 200 but I'm pretty sure that events whose triggers aren't met aren't included in the calculation and that fucked stuff up
+			140 = 0
+			84 = dragonblight_pulse.22 #the collapse event lmao
+			55 = dragonblight_pulse.14 #punishment for kobold annexation
+			#20 = dragonblight_pulse.13 #punishment for owning kobold homelands, random
+			#3 = dragonblight_pulse.1 #trade route spread
+			4 = dragonblight_pulse.2 #adjacent spread
+			2 = dragonblight_pulse.3 #woe be upon ye
+			6 = dragonblight_pulse.4 #shoulda took the decision lmao nerd
+			7 = dragonblight_pulse.5 #adjacent spread, no health system
+			3 = dragonblight_pulse.10 #adjacent-to-kobolds spread
+			4 = dragonblight_pulse.6 #heal-by-decree
+			7 = dragonblight_pulse.7 #heal, institution + decree
+			14 = dragonblight_pulse.8 #heal, vaccine + institution + decree
+			8 = dragonblight_pulse.9 #heal vaccine + decree
+			6 = dragonblight_pulse.11 #heal, vaccine only
+			6 = dragonblight_pulse.12 #rich guys mistress spread event
+			7 = dragonblight_pulse.15
+			7 = dragonblight_pulse.16
+			7 = dragonblight_pulse.17
+			7 = dragonblight_pulse.18
+			7 = dragonblight_pulse.19
+			7 = dragonblight_pulse.20
+			5 = dragonblight_pulse.21 #kobold pogrom
+		}
+	}
+
+	complete = {
+		NOT= {
+			any_scope_state = {
+				has_modifier = modifier_active_dragonblight_outbreak
+			}
+		}
+		custom_tooltip = {
+			text = je_dragonblight_completion_tt
+			has_variable = dragonblight_vaccine 
+		}
+	}	
+
+	on_complete = {
+		hidden_effect = {
+			remove_modifier = dragonblight_port_controls
+		}
+		#remove_modifier = dragonblight_blues #todo
+		trigger_event = {
+			id = dragonblight.99
+		}
+	}
+	fail = {
+				culture_percent_country = {
+					target = cu:illvasaari
+					value <= 0.4
+				}
+				# s:STATE_KLYPYRA = {
+				# 	any_scope_state = {
+				# 		OR = {
+				# 			AND = {
+				# 				owner = root
+				# 				culture_percent_state = {
+				# 					target = cu:illvasaari
+				# 					value <= 0.4
+				# 				}
+				# 			}
+				# 										NOT = { 
+				# 				is_split_state = yes
+				# 				owner = ROOT 
+				# 			}
+				# 		}
+				# 	}
+				# }
+				
+
+			}
+
+			on_fail = {
+
+				set_country_type = unrecognized
+				custom_tooltip = {
+					text = dragonblight_failure_tt
+					trigger_event = {
+						id = dragonblight.100
+					}
+					remove_modifier = dragonblight_port_controls
+				} 
+				
+			}
+			
+		
+	
+	
+
+	# current_value = {
+	# 	#value = root.var:positivism_progress_var
+	# }
+
+	# goal_add_value = {
+	# 	add = 100
+	# }
+
+	weight = 10000
+
+	should_be_pinned_by_default = yes
+}
+
+je_dragonblight_vaccine = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+	
+	immediate = {
+
+	}
+
+	scripted_progress_bar = dragonblight_vaccine_progress_bar
+	
+
+
+
+
+	on_monthly_pulse = {
+		
+		random_events = {
+			 100 = 0
+			 40 = dragonblight_pulse.23
+
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = dragonblight_vaccine_full_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(dragonblight_vaccine_progress_bar)" >= 5000
+			}
+		}
+	}	
+
+	on_complete = {
+		set_variable = dragonblight_vaccine
+
+	}
+
+	weight = 5000
+
+	should_be_pinned_by_default = yes
+}

@@ -1,0 +1,75 @@
+﻿namespace = gavkhan
+
+# The Great Khan
+gavkhan.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = gavkhan.1.t
+	desc = gavkhan.1.d
+	flavor = gavkhan.1.f
+
+	event_image = {
+		video = "africa_soldiers_breaking_protest"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_global_variable = zulth_var }
+		country_has_primary_culture = cu:xhurlob
+		has_law = law_type:law_monarchy
+		OR = {
+			is_player = yes
+			NOT = {
+				any_country = {
+					country_has_primary_culture = cu:xhurlob
+					is_player = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_global_variable = zulth_var
+	}
+
+	option = {
+		name = gavkhan.1.a
+		default_option = yes
+		create_character = {
+			first_name = Zulth
+			last_name = Qushva
+			historical = yes
+			ruler = yes
+			noble = yes
+			age = 45
+			#dna = dna_emperor_zulth_02
+			interest_group = ig_landowners
+			culture = cu:xhurlob
+			religion = rel:nilbogism
+			ideology = ideology_royalist
+			traits = {
+				scarred
+				ambitious
+				expert_offensive_planner
+			}
+			on_created = {
+				add_modifier = {
+					name = zulth_modifier
+				}
+			}
+		}
+	}
+	option = {
+		name = gavkhan.1.b
+		remove_global_variable = zulth_var
+		add_radicals = {
+			value = small_radicals
+		}
+	}
+}

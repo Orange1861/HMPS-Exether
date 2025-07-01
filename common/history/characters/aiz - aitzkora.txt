@@ -1,0 +1,49 @@
+﻿CHARACTERS = {
+	c:AIZ = {
+		create_character = {
+			first_name = "Arturo"
+			last_name = "Pradera"
+			historical = yes
+			ruler = yes
+			age = 33
+			culture = cu:whitefeather
+			interest_group = ig_landowners
+			ideology = ideology_royalist
+			traits = {
+				erudite
+				experienced_political_operator
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = "Mikaela"
+			last_name = "Pradera"
+			historical = yes
+			heir = yes
+			female = yes
+			age = 11
+			interest_group = ig_landowners
+			ideology = ideology_royalist
+			culture = cu:whitefeather
+			traits = {
+				trait_child
+				starbrand_golem
+			}
+		}
+
+		create_character = {
+			first_name = "Marino"
+			last_name = "Bilbao"
+			historical = yes
+			ig_leader = yes
+			culture = cu:whitefeather
+			age = 44
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
+			traits = {
+				reckless
+				firebrand
+			}
+		}
+	}
+}

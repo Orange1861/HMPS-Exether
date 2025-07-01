@@ -1,0 +1,19 @@
+﻿# Lugzar - lgz
+
+LGZ_priest_template = {
+    first_name = Ishak
+    last_name = Chikova
+    historical = yes
+	  ruler = yes
+    noble = yes
+    birth_date = 1145.2.26
+    dna = dna_queen_soranda
+    culture = cu:varbat
+    interest_group = ig_devout
+    ideology = ideology_theocrat
+    traits = {
+		  ambitious
+		  tactful
+		  political_operator
+    }
+}

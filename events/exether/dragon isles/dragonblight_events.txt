@@ -1,0 +1,4212 @@
+﻿namespace = dragonblight
+namespace = dragonblight_pulse
+
+dragonblight.1 = {
+	type = country_event
+	placement = root
+	title = dragonblight.1.t
+	desc = dragonblight.1.d
+	flavor = dragonblight.1.f
+	dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_images/angry_kobold.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		add_journal_entry = {
+			type = je_dragonblight
+		}
+	}
+
+	option = {
+		name = dragonblight.1.a
+		add_journal_entry = {
+			type = je_dragonblight_vaccine
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_KLYPYRA
+					state_region = s:STATE_ZAMARIS
+				}
+			}
+			add_modifier = modifier_active_dragonblight_outbreak
+		}
+		trigger_event = {
+				id = dragonblight.2
+			}
+	}
+}
+
+dragonblight.2 = { #opening event about closing the borders to people leaving to Thassarcia
+	type = country_event
+	placement = root
+	title = dragonblight.2.t
+	desc = dragonblight.2.d
+	flavor = dragonblight.2.f
+	dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	immediate = {
+		c:SNB ?= {
+            save_scope_as = thassarcia_scope
+        }
+	}
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	option = { #they must be stopped
+		name = dragonblight.2.a 
+		ai_chance = {
+			base = 50
+		}
+		activate_law = law_type:law_closed_borders
+		c:SNB ?= {
+			
+			#trigger_event = { id = persia_events.8 popup = yes } #todo
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		change_relations = {
+			country = c:SNB
+			value = -30
+		}
+	}
+	option = { #perhaps it is for the best...
+		name = dragonblight.2.b
+		default_option = yes
+		ai_chance = {
+			base = 50
+		}
+		c:SNB ?= {
+			trigger_event = { id = dragonblight.3 popup = yes }
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = root
+			}
+		}
+		change_relations = {
+			country = c:SNB
+			value = 25
+		}
+		custom_tooltip = dragonblight_2_tt
+		
+	}
+}
+
+dragonblight.3 = { #event for Thassarcia receiving dragonblight migrants
+	type = country_event
+	placement = root
+	title = dragonblight.3.t
+	desc = dragonblight.3.d
+	flavor = dragonblight.3.f
+	dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "unspecific_factory_closed" #change this
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		c:LPS ?= {
+			save_scope_as = lizard_scope
+		}
+		random_scope_state = {
+			limit = {
+				check_is_coastal = yes
+			}
+			create_mass_migration = {
+				origin = c:DIS
+				culture = cu:illvasaari
+			}
+		}
+	}
+
+	option = {
+		name = dragonblight.3.a
+
+		change_relations = {
+			country = c:DIS
+			value = 15
+		}
+	}
+}
+
+dragonblight.4 = { #hidden event
+	type = country_event
+	placement = root
+	hidden = yes
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				is_split_state = yes
+				state_is_in_dragon_isles = yes
+				NOT = { has_variable = dragon_killswitch_var }
+			}
+			dragonblight_killswitch_engage = yes
+			set_variable = dragon_killswitch_var
+		}
+		if = {
+			limit = {
+				NOT =  { has_variable = kobold_land_secession_lobby }
+			}
+			trigger_event = { id = dragonblight.5 popup = yes }
+		}
+	}
+
+}
+
+dragonblight.5 = { #kobold states receive this event the first time the Dragon Isles clicks the kobold settlement button and give them free land
+	type = country_event
+	placement = root
+	title = dragonblight.5.t
+	desc = dragonblight.5.d
+	flavor = dragonblight.5.f
+	dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "unspecific_factory_closed" #change this
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+		NOT = {
+			has_variable = kobold_land_secession_lobby
+		}
+	}
+
+	immediate = {
+		set_variable = kobold_land_secession_lobby
+		c:DIS?= {
+			save_scope_as = dragon_scope
+		}
+	}
+
+	option = { #gee thanks guys
+		name = dragonblight.5.a
+		default_option = yes
+		ai_chance = {
+			base = 85
+		}
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_positive
+			target = c:DIS
+		}
+		change_relations = {
+			country = c:DIS
+			value = 15
+		}
+	}
+
+	option = { #inshallah we shall take it all
+		name = dragonblight.5.b
+		ai_chance = {
+			base = 15
+		}
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_negative
+			target = c:DIS
+		}
+		change_relations = {
+			country = c:DIS
+			value = -15
+		}
+	}
+}
+dragonblight.99 = { #dragonblight completion event
+	type = country_event
+	placement = root
+	title = dragonblight.99.t
+	desc = dragonblight.99.d
+	flavor = dragonblight.99.f
+	dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "unspecific_factory_closed" #change this
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+
+	}
+
+	immediate = {
+		
+	}
+
+	option = { 
+		name = dragonblight.99.a
+		add_modifier = {
+			name = blighted_yet_triumphant
+			years = 5
+		}
+	}
+}
+
+dragonblight.100 = { 
+	type = country_event
+	placement = root
+	title = dragonblight.100.t
+	desc = dragonblight.100.d
+	flavor = dragonblight.100.f
+	dlc = dlc_roe	
+	duration = 3
+
+	event_image = {
+		video = "unspecific_factory_closed" #change this
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+		
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_power_bloc_leader = yes
+			}
+			random_power_bloc = {
+				limit = {
+					power_bloc_leader = c:DIS
+				}
+				add_modifier = {
+					name = dragonbloc_collapse
+				}
+			}
+		}
+		add_modifier = {
+			name = dragon_collapse
+			years = 6
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					region = sr:region_west_dragon_isles
+					region = sr:region_amethyst_archipelago
+				}
+				NOT = { mainland_dragon_isles_state = yes }
+			}
+			dragonblight_killswitch_engage = yes  #might swap this for a weaker version of this effect, tbd
+			state_region = {
+				remove_homeland = cu:illvasaari
+				add_homeland = cu:kotskarvi
+			}
+		}
+		every_scope_state = {
+			limit = {
+				mainland_dragon_isles_state = yes
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_KLYPYRA
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = klypyra_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:klypyra_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = RKO
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_ZAMARIS
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = zamaris_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:zamaris_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = RKO
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_LEPIDRA
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lepidra_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lepidra_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = RKO
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_ZARTHOS
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = zarthos_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:zarthos_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = RKO
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_CALTHA
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = caltha_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:caltha_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = RKO
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_SIGARA
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = sigara_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:sigara_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:IMR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = SVN
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_MOTHYA
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = mothya_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:mothya_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:IMR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = SVN
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_LILYBAEUM
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lilybaeum_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lilybaeum_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:IMR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = SVN
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_OYRSA
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = orysa_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:orysa_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:IMR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = SVN
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_LEPTHAR
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lepthar_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lepthar_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:TKR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = TKR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_LEPTISCA
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = leptisca_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:leptisca_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:MVI
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = MVI
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_THASPYR
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = thaspyr_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:thaspyr_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:TKR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = TKR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					state_region = s:STATE_ZYRAS
+				}
+				save_scope_as = outbreak_state
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = zyras_secession_scope
+							if = {
+								limit = {
+									has_modifier = modifier_active_dragonblight_outbreak
+								}
+								remove_modifier = modifier_active_dragonblight_outbreak
+								
+							}
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:zyras_secession_scope
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:TKR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:IAL
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = TKR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+		}
+		}
+	option = { #gee thanks guys
+		name = dragonblight.100.a
+		default_option = yes
+		add_primary_culture = cu:kotskarvi
+		remove_primary_culture = cu:illvasaari
+		show_as_tooltip = {
+			add_modifier = {
+				name = dragon_collapse
+				years = 6
+			}
+		}
+	}
+}
+
+#dragonblight 3  event about a local writer declaring that the dragonblight is representative of a moral failing, and that no "true dragonborn" could fall victim to it
+
+	#option 1
+		#of course this is true 
+			#+landowner/clergy/both ig approval  
+			#+lower class radicals
+			#create some shithead clergy or landowner agitator, like the Nigel Farage of the Dragon Isles
+	#option 2
+		#this matter is beneath us
+			# +clergy ig attraction
+	#option 3
+		#we ought to step in and dispell myths like these
+			# +education access per SOL
+			#-bureaucracy
+
+	#dragonblight 9 the hunt for kobold robin hood #####CASTRO???????
+		#COULD MAYBE BE AN EXPEDITION??? idk
+		
+		#option 1 
+			#sounds like a regular folk hero!
+				# -radicals from discrimination
+				# +0.6 sol in state
+				# --mapi prices in state
+				# +upper class radicals
+				# +rural folk attraction
+				# +rural folk clout
+		
+		#option 2 
+			#if we strike him down, he will become more powerful than we could ever imagine
+				# --mapi prices in state
+				# +0.6 sol in state
+				# +rural folk attraction
+
+		#option 3
+			#we must do something about this
+				# +0.2 sol in state
+				# slight -mapi prices in state
+				# +soldier mortality in state
+				# +adventurer mortality in state
+				# +armed forces attraction
+				# +increased adventurer coverage needed in state
+		#all options lead to further events
+
+	#dragonblight 10 kobold robinhood moves to another state
+
+			#option 1 
+				#oh, that RASCAL! requires option 1 from 9
+					#removes effects from 9, applies it to new state
+
+			#option 2
+				#we must be patient
+					#effects from 2 in 9
+			#option 3	
+				#this has gone too far requires 1 or 2 from 9
+					#effects from option 3 in 9
+
+	#dragonblight 11 the hunt begins requires 3 from 9
+		
+		#option 1
+			#we will seek to negotiate
+				#kobold robin hood becomes leader of the rural folk
+				# -radicals from discrimination
+				# +rural folk ig attraction
+				# +rural folk clout
+
+		#option 2
+			#we will destroy him
+				#base 40% of success
+				# +30% if adventurer coverage = 100%
+				# +15% if >5 military bases in state
+				# + additional 10% if >9 military bases in state,
+				# +20% if violent suppression edict active
+				# -30% if state turmoil >20%
+				# - additional 40% if state turmoil >50%
+				# -20% if empowering rural folk
+				## potentially -20% if greater than 20% kobolds in state
+			#leads to either success event 12 or failure event 13.  if killed, the state he died in becomes a kobold homeland.  if he is NOT killed, this state will not,
+			#but every other he enters from now on will become a kobold homeland
+
+
+# dragonblight_pulse.1 = { #trade route event
+# 				type = country_event
+# 				placement = ROOT
+
+# 				cooldown = { months = 40 }
+
+# 				title = dragonblight_pulse.1.t
+# 				desc = dragonblight_pulse.1.d
+# 				flavor = dragonblight_pulse.1.f
+# 				dlc = dlc_roe
+# 				duration = 3
+			
+# 				event_image = {
+# 					video = "europenorthamerica_rich_and_poor"
+# 				}
+			
+# 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+# 				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+# 				trigger = {
+# 					any_trade_route = {
+# 						OR = {
+# 							AND = {	
+# 								importer.owner = root
+# 								exporter.owner = {
+# 									country_has_primary_culture = cu:kotskarvi
+# 								}
+# 								NOT = {actor_market.owner = root}
+# 								actor_market.owner = {
+# 									save_scope_as = disease_exporter
+# 								}
+# 							}
+# 							AND = {	
+# 								importer.owner = {
+# 									country_has_primary_culture = cu:kotskarvi
+# 								}
+# 								NOT = {actor_market.owner = root}
+# 								exporter.owner = root
+# 								actor_market.owner = {
+# 									save_scope_as = disease_exporter
+# 								}
+# 							}
+# 						}
+# 					}	
+# 				}	
+
+# 				immediate = {
+# 					random_trade_route = {
+# 						limit = {
+# 							OR = {
+# 								AND = {	
+# 									importer.owner = root
+# 									exporter.owner = {
+# 										country_has_primary_culture = cu:kotskarvi
+# 									}
+# 									NOT = {actor_market.owner = root}
+# 									actor_market.owner = {
+# 										save_scope_as = disease_exporter
+# 									}
+# 								}
+# 								AND = {	
+# 									importer.owner = {
+# 										country_has_primary_culture = cu:kotskarvi
+# 									}
+# 									NOT = {actor_market.owner = root}
+# 									exporter.owner = root
+# 									actor_market.owner = {
+# 										save_scope_as = disease_exporter
+# 									}
+# 								}
+# 							}
+# 						}
+
+# 					}	
+# 					random_scope_state = {
+# 						limit = {
+# 							NOT = {
+# 								has_modifier = modifier_active_dragonblight_outbreak
+# 							}
+# 						}
+# 						add_modifier = modifier_active_dragonblight_outbreak
+# 					}
+# 				}
+# 				option = {
+# 					name = dragonblight_pulse.1.a #there is nothing we can do
+# 					}
+# 				# option = { #yeah so there's no effect to enable a decree
+# 				# 	name = dragonblight_pulse.1.b #perhaps we should take special measures
+# 				# 	possible = {
+# 				# 		authority >= 100
+# 				# 	}
+# 				# 	}
+# 			}	
+
+dragonblight_pulse.2 = { #adjacent spread
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.2.t
+				desc = dragonblight_pulse.2.d
+				flavor = dragonblight_pulse.2.f
+			
+				duration = 3
+				dlc = dlc_roe
+				event_image = {
+					texture = "gfx/event_images/angry_kobold.dds"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+						any_neighbouring_state = {
+							owner = root
+							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+						}
+							has_modifier = modifier_active_dragonblight_outbreak
+						}
+						
+				}		
+				immediate = {
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								any_neighbouring_state = {
+									owner = root
+									NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+								}
+							}
+							save_scope_as = infected_neighbour
+							random_neighbouring_state = {
+								limit = {
+									owner = root
+									NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+									NOT = { has_decree = decree_special_measures }
+								}
+								
+								add_modifier = modifier_active_dragonblight_outbreak 
+								save_scope_as = neighbour_infection
+							}
+						}
+						
+
+				}
+				option = {
+					name = dragonblight_pulse.2.a #there is nothing we can do
+					}
+				# option = {
+				# 	name = dragonblight_pulse.2.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
+			}
+			
+dragonblight_pulse.3 = { #woe be upon ye
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 180 }
+
+				title = dragonblight_pulse.3.t
+				desc = dragonblight_pulse.3.d
+				flavor = dragonblight_pulse.3.f
+				dlc = dlc_roe
+				duration = 3
+				
+				event_image = {
+					video = "unspecific_sick_in_hospital"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = { #todo add dragonblight cure
+				NOT = {
+					has_variable = dragonblight_vaccine
+				}
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+						}
+						add_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = new_outbreak_state
+					}
+
+				}
+				option = {
+					name = dragonblight_pulse.3.a #there is nothing we can do
+					}
+				# option = {
+				# 	name = dragonblight_pulse.3.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
+			}
+dragonblight_pulse.4 = { #shoulda took the decision lmao nerd
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.4.t
+				desc = dragonblight_pulse.4.d
+				flavor = dragonblight_pulse.4.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					NOT = {
+						has_modifier = dragonblight_port_controls
+					}
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							owner = root
+							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+						}
+						add_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = dragonblight_port 
+					}
+					
+				}
+				option = {
+					name = dragonblight_pulse.4.a #there is nothing we can do
+					}
+				# option = {
+				# 	name = dragonblight_pulse.4.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
+			}
+
+dragonblight_pulse.5 = { #adjacent spread, no health system
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.5.t
+				desc = dragonblight_pulse.5.d
+				flavor = dragonblight_pulse.5.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					texture = "gfx/event_images/sad_kobold.dds"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								any_neighbouring_state = {
+									owner = root
+									NOT = { has_decree = decree_special_measures }
+								}
+								has_modifier = modifier_active_dragonblight_outbreak
+								NOT = {	has_decree = decree_special_measures }
+						}
+					
+						NOR = {
+								has_institution = institution_health_system
+								has_variable = dragonblight_vaccine
+						}
+					} 
+				
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								any_neighbouring_state = {
+									owner = root
+									NOT = { 
+										has_decree = decree_special_measures
+										has_modifier = modifier_active_dragonblight_outbreak }
+									
+								}
+							}
+							save_scope_as = blighter_state
+							random_neighbouring_state = {
+								limit = {
+									owner = root
+									NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+									NOT = { has_decree = decree_special_measures }
+								}
+								
+								add_modifier = modifier_active_dragonblight_outbreak 
+								save_scope_as = blighted_state
+							}
+						}
+
+				}
+				option = {
+					name = dragonblight_pulse.5.a #there is nothing we can do
+					}
+				# option = {
+				# 	name = dragonblight_pulse.5.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
+			
+}
+dragonblight_pulse.6 = { #heal-by-decree
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 30 }
+
+				title = dragonblight_pulse.6.t
+				desc = dragonblight_pulse.6.d
+				flavor = dragonblight_pulse.6.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_london_center"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = decree_special_measures
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = decree_special_measures
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = tide_turned
+					}	
+				}
+				option = {
+					name = dragonblight_pulse.6.a
+					}
+			}
+
+dragonblight_pulse.7 = { #heal-by-decree-and-also-a-health-system
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 30 }
+
+				title = dragonblight_pulse.7.t
+				desc = dragonblight_pulse.7.d
+				flavor = dragonblight_pulse.7.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					video = "unspecific_sick_in_hospital"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					has_institution = institution_health_system
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = decree_special_measures
+								
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = decree_special_measures
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = curve_flat
+					}	
+				}
+				option = {
+					name = dragonblight_pulse.7.a
+					}
+			}
+
+dragonblight_pulse.8 = { #dragonblight cured
+				type = country_event
+				placement = ROOT
+				dlc = dlc_roe
+				cooldown = { months = 12 }
+
+				title = dragonblight_pulse.8.t
+				desc = dragonblight_pulse.8.d
+				flavor = dragonblight_pulse.8.f
+			
+				duration = 3
+			
+				event_image = {
+					texture = "gfx/event_images/sad_kobold.dds"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					has_institution = institution_health_system
+					has_variable = dragonblight_vaccine
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = decree_special_measures
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = decree_special_measures
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = vaccine_drive
+					}	
+				}
+				option = {
+					name = dragonblight_pulse.8.a
+					}
+			}
+
+dragonblight_pulse.9 = { #cure + decree
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 12 }
+
+				title = dragonblight_pulse.9.t
+				desc = dragonblight_pulse.9.d
+				flavor = dragonblight_pulse.9.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+
+					has_variable = dragonblight_vaccine
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = decree_special_measures
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = decree_special_measures
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = vaccine_mandate
+					}	
+				}
+				option = {
+					name = dragonblight_pulse.10.a
+					}
+			}
+
+dragonblight_pulse.10 = { #adjacent spread, from other kobold country
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 48 }
+
+				title = dragonblight_pulse.10.t
+				desc = dragonblight_pulse.10.d
+				flavor = dragonblight_pulse.10.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					texture = "gfx/event_images/sad_kobold.dds"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+							any_neighbouring_state = {
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+
+								}
+							}
+							NOT = { 
+								has_modifier = modifier_active_dragonblight_outbreak 
+								has_decree = decree_special_measures
+							}
+						}
+						NOT = {
+							has_variable = dragonblight_vaccine
+						}
+						
+				}		
+				immediate = {
+					random_scope_state = {
+						limit = {
+							any_neighbouring_state = {
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani								
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+									
+								}
+							}
+							NOT = { 
+								has_decree = decree_special_measures
+								has_modifier = modifier_active_dragonblight_outbreak }
+							}
+
+						add_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = kobold_neighbour_state
+						}	
+				}
+				option = {
+					name = dragonblight_pulse.10.a #there is nothing we can do
+					}
+			}
+dragonblight_pulse.11 = { #cure
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 12 }
+
+				title = dragonblight_pulse.11.t
+				desc = dragonblight_pulse.11.d
+				flavor = dragonblight_pulse.11.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "middleeast_middleclass_cafe"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+
+					has_variable = dragonblight_vaccine
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = herd_immunity
+					}	
+				}
+				option = {
+					name = dragonblight_pulse.11.a
+					}
+			}
+
+
+dragonblight_pulse.12 = { #landowner or industrialist character gets caught violating dragonblight restrictions throwing birthday party for their mistress
+				type = country_event
+				placement = ROOT
+				dlc = dlc_roe
+				cooldown = { months = 180 }
+
+				title = dragonblight_pulse.12.t
+				desc = dragonblight_pulse.12.d
+				flavor = dragonblight_pulse.12.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+							NOT = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							}
+					}
+					OR = {
+					ig:ig_industrialists ?=	{
+						ig_clout >= 0.15
+						}
+						ig:ig_landowners ?=	{
+							ig_clout >= 0.15
+							}
+						}	
+					
+				}
+				immediate = {
+					random_scope_state = {
+						limit = {
+							NOT = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							}
+						}
+						save_scope_as = party_time_state
+					}
+					if = {
+						limit = {
+							ig:ig_industrialists ?=	{ ig_clout >= 0.15 }
+						}
+						random_scope_character = {
+							limit = {
+								is_interest_group_type = ig_industrialists
+								is_ruler = no
+							}
+							save_scope_as = party_time_guy
+							
+						}
+						ig:ig_industrialists ?= { save_scope_as = party_rockers }	
+					}
+					else = {
+						random_scope_character = {
+							limit = {
+								is_interest_group_type = ig_landowners
+								is_ruler = no
+							}
+							save_scope_as = party_time_guy
+							
+						}
+						ig:ig_landowners ?= { save_scope_as = party_rockers }
+					}
+				}
+				option = {
+					name = dragonblight_pulse.12.a #What would we arrest them for?  Having fun?
+					
+						scope:party_rockers = {
+							add_modifier = {
+								name = defended_birthday_party
+								years = 4
+								is_decaying = yes
+							}
+						}
+						ig:ig_intelligentsia ?= {
+							add_modifier = {
+								name = loose_quarantine_enforcement
+								years = 4
+								is_decaying = yes
+							}
+						}
+					scope:party_time_state = {
+						add_modifier = modifier_active_dragonblight_outbreak
+					}	
+					}
+
+				option = {
+					name = dragonblight_pulse.12.b #a mild reprimand will be enough
+					default_option = yes
+					scope:party_rockers = {
+						add_modifier = {
+							name = reprimanded_for_birthday_party
+							years = 4
+							is_decaying = yes
+						}
+					}
+					scope:party_time_state = {
+						add_modifier = {
+							name = wealthy_abusing_disease_restrictions
+							years = 3
+						} 
+						custom_tooltip = conversion_cult_tt
+					}	
+				}	
+				
+				option = {
+					name = dragonblight_pulse.12.c #believe it or not, jail
+					custom_tooltip = kill_party_guy_tt
+					hidden_effect = {
+						scope:party_time_guy = {
+							kill_character = yes
+						}
+					}
+					scope:party_rockers = {
+						add_modifier = {
+							name = arrested_for_birthday_party
+							months = 48
+						}
+					}
+				}
+			}
+			
+			
+			# dragonblight_pulse.13 = { #punishment for taking kobold homelands  ##bureaucrats accidentally bring dragonblight back with them
+			# 	type = country_event
+			# 	placement = ROOT
+
+			# 	cooldown = { months = 18 }
+
+			# 	title = dragonblight_pulse.11.t
+			# 	desc = dragonblight_pulse.11.d
+			# 	flavor = dragonblight_pulse.11.f
+			
+			# 	duration = 3
+			
+			# 	event_image = {
+			# 		video = "europenorthamerica_opium_smoker"
+			# 	}
+			
+			# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+			# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+			# 	trigger = {
+
+					
+			# 		any_state = {
+			# 				owner = c:DIS
+			# 				state_region = {
+			# 					OR = {
+			# 						is_homeland = cu:kotskarvi
+			# 						is_homeland = cu:drogori
+			# 						is_homeland = cu:lomarash
+			# 					}
+			# 				}
+			# 			}
+					
+			# 		}
+	
+					
+
+			# 	immediate = {
+			# 		random_state = {
+			# 			limit = {
+			# 				owner = c:DIS
+			# 				state_region = {
+			# 					OR = {
+			# 						is_homeland = cu:kotskarvi
+			# 						is_homeland = cu:drogori
+			# 						is_homeland = cu:lomarash
+			# 					}
+			# 				}
+			# 			}
+			# 			save_scope_as = unruly_kobold_state
+			# 		}
+			# 		random_scope_state = {
+			# 			limit = {
+			# 				owner = root
+			# 				NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+			# 			}
+			# 			add_modifier = modifier_active_dragonblight_outbreak
+			# 			save_scope_as = new_outbreak_state
+			# 		}
+			# 	}
+			# 	option = {
+			# 		name = dragonblight_pulse.13.a  #this is fine
+			# 		}
+			# 	option = {
+			# 		name = dragonblight_pulse.13.b  #perhaps we should reconsider how we administer this territory#release as a vassal
+			# 		}	
+
+			# }
+dragonblight_pulse.14 = { #punishment for taking kobold homelands  ##dragonblight is spreading from kobold homelands
+			type = country_event
+			placement = ROOT
+
+			cooldown = { months = 12 }
+
+			title = dragonblight_pulse.14.t
+			desc = dragonblight_pulse.14.d
+			flavor = dragonblight_pulse.14.f
+			dlc = dlc_roe
+			duration = 3
+		
+			event_image = {
+				video = "unspecific_vandalized_storefront"
+			}
+		
+			on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+		
+			icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+		
+			trigger = {
+				any_state = {
+						owner = c:DIS
+						state_region = {
+							OR = {
+								is_homeland = cu:kotskarvi
+								is_homeland = cu:drogori
+								is_homeland = cu:lomarash
+								is_homeland = cu:tskharvani
+								is_homeland = cu:aisjie
+								is_homeland = cu:larltri
+							}
+						}
+						}
+					}
+			immediate = {
+				random_state = {
+					limit = {
+						owner = c:DIS
+						state_region = {
+							OR = {
+								is_homeland = cu:kotskarvi
+								is_homeland = cu:drogori
+								is_homeland = cu:lomarash
+								is_homeland = cu:tskharvani
+								is_homeland = cu:aisjie
+								is_homeland = cu:larltri
+							}
+						}
+					}
+					save_scope_as = unruly_kobold_state
+				}
+				scope:unruly_kobold_state = {
+					
+						add_modifier = modifier_active_dragonblight_outbreak
+						save_scope_as = new_outbreak_state
+					}
+				}
+
+			
+			option = {
+				name = dragonblight_pulse.14.a  #this is fine
+				}
+
+		}		
+dragonblight_pulse.15 = { #industrialist builds sickhouses
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.15.t
+				desc = dragonblight_pulse.15.d
+				flavor = dragonblight_pulse.15.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+						}
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							save_scope_as = sickhouse_state
+						}
+				}
+				option = {
+					name = dragonblight_pulse.15.a
+					default_option = yes
+					
+					ig:ig_industrialists ?= {
+						add_modifier = {
+							name = charity_for_the_sick
+							days = short_modifier_time
+						}
+					}
+					scope:sickhouse_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}
+					custom_tooltip = dragonblight_pulse.15.tt
+
+					}
+
+				option = {
+					name = dragonblight_pulse.15.b
+					default_option = yes
+					
+					ig:ig_industrialists ?= {
+						add_modifier = {
+							name = industrialists_sickhouses_ignored
+							days = short_modifier_time
+						}
+					}
+					scope:sickhouse_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}
+					custom_tooltip = dragonblight_pulse.15.tt	
+				}
+				option = {
+					name = dragonblight_pulse.15.c
+					default_option = yes
+					
+					ig:ig_industrialists ?= {
+						add_modifier = {
+							name = dragonblight_forced_charity
+							days = short_modifier_time
+						}
+					}
+					scope:sickhouse_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}
+					random_scope_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}		
+					random_scope_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}
+					custom_tooltip = dragonblight_pulse.15.tt					
+				}
+			}
+
+dragonblight_pulse.16 = { #sailors are intentionally spending extra time at sea to avoid infection
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 60 }
+
+				title = dragonblight_pulse.16.t
+				desc = dragonblight_pulse.16.d
+				flavor = dragonblight_pulse.16.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					video = "unspecific_whaling"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								is_coastal = yes #risky business
+						}
+						
+				}
+				
+				immediate = {
+					random_scope_state = {
+						limit = {						
+						has_modifier = modifier_active_dragonblight_outbreak
+						is_coastal = yes #risky business
+						}
+					save_scope_as = dragon_permpatrol
+				}
+				}
+
+				option = {
+					name = dragonblight_pulse.16.a
+					default_option = yes
+					
+					add_modifier = {
+						name = handling_naval_logistics
+						months = 48	
+					}
+						add_radicals = {
+							value = 0.025
+							strata = poor
+							culture = cu:illvasaari
+						}
+				}
+				option = {
+					name = dragonblight_pulse.16.b
+					
+					add_modifier = {
+						name = sailing_in_fear
+						months = 48	
+					}
+				}
+
+			}
+
+dragonblight_pulse.17 = { #workers are refusing to go to work
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.17.t
+				desc = dragonblight_pulse.17.d
+				flavor = dragonblight_pulse.17.f
+				dlc = dlc_roe
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				immediate = {
+					random_scope_state = {
+								save_scope_as = workers_stay_home_state
+						}
+				}	
+
+
+				option = {
+					name = dragonblight_pulse.17.a
+					default_option = yes
+
+					add_modifier = {
+						name = forced_back_to_work
+						months = 36
+						is_decaying = yes	
+						}
+					
+					scope:workers_stay_home_state = {
+						add_modifier = {
+							name = forced_back_to_work_state
+							months = 36	
+							is_decaying = yes
+						}
+						add_radicals_in_state = {
+							value = 0.1
+							strata = poor
+							culture = cu:illvasaari
+						}
+					}
+				}
+				option = {
+					name = dragonblight_pulse.17.b
+					default_option = yes
+					
+
+					scope:workers_stay_home_state = {
+						add_modifier = {
+							name = dragonborn_staying_home
+							months = 36	
+							}
+						}
+				}
+			
+		}
+
+dragonblight_pulse.18 = { #dragon nimbys mad about a sickhouse
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 40 }
+
+		title = dragonblight_pulse.18.t
+		desc = dragonblight_pulse.18.d
+		flavor = dragonblight_pulse.18.f
+		dlc = dlc_roe
+		duration = 3
+	
+		event_image = {
+			video = "africa_public_protest"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_scope_state = {
+						save_scope_as = not_in_my_backyard
+				}
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.18.a
+			default_option = yes
+
+			add_modifier = {
+				name = managing_hospital_reconstruction
+				months = 36	
+				}
+			
+			scope:not_in_my_backyard = {
+			add_modifier = {
+				name = rebuilding_hospital_network
+				months = 36	
+				}
+			}
+		}
+		option = {
+			name = dragonblight_pulse.18.b
+			default_option = yes
+			
+
+			scope:not_in_my_backyard = {
+				add_radicals_in_state = {
+					value = 0.15
+					strata = middle
+					culture = cu:illvasaari
+				}
+				add_radicals_in_state = {
+					value = 0.05
+					strata = rich
+					culture = cu:illvasaari
+				}
+			}
+		}
+		
+		option = {
+			name = dragonblight_pulse.18.c
+			default_option = yes
+			
+
+			scope:not_in_my_backyard = {
+				add_modifier = {
+					name = gave_into_sickhouse_protests
+					months = 36	
+					}
+					custom_tooltip = conversion_cult_tt
+				add_radicals_in_state = {
+					value = 0.1
+					strata = lower
+					culture = cu:illvasaari
+				}
+				ig:ig_intelligentsia ?= {
+					add_modifier = {
+						name = tore_down_sickhouses
+						years = 4
+						is_decaying = yes
+					}
+				}
+			}
+		}
+}
+
+dragonblight_pulse.19 = { #kobold conversion cult appears
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 40 }
+
+		title = dragonblight_pulse.19.t
+		desc = dragonblight_pulse.19.d
+		flavor = dragonblight_pulse.19.f
+		dlc = dlc_roe
+		duration = 3
+	
+		event_image = {
+			video = "europenorthamerica_opium_smoker"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_scope_state = {
+						save_scope_as = dragon_cultist_state
+				}
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.19.a
+			scope:dragon_cultist_state = {
+				custom_tooltip = conversion_cult_tt
+			add_loyalists_in_state = {
+				value = 0.15
+				culture = cu:kotskarvi
+			}	
+			add_modifier = {
+				name = active_conversion_cult
+				months = 40	
+				}
+			}
+			
+
+					add_modifier = {
+					name = tolerated_conversion_cult_state
+					months = 40	
+					is_decaying = yes
+					}
+				
+			
+			set_variable = conversion_cult_active
+			
+		}
+		option = {
+			name = dragonblight_pulse.19.b
+			default_option = yes
+			custom_tooltip = cult_1_tt
+			show_as_tooltip = {
+				random_scope_state = {
+					limit = {
+						NOT = { state_region = scope:dragon_cultist_state }
+					}
+					add_modifier = {
+						name = crushed_conversion_cult
+						months = 40
+						is_decaying = yes	
+					}
+				}
+			}
+			hidden_effect = {
+				every_scope_state = {
+					add_modifier = {
+						name = crushed_conversion_cult
+						months = 40
+						is_decaying = yes	
+					}
+				}
+			}
+
+			scope:dragon_cultist_state = {
+				add_radicals_in_state = {
+					value = 0.2
+					culture = cu:kotskarvi
+				}
+				kill_population_percent_in_state = {
+					percent = 0.01
+					culture = cu:kotskarvi
+				}
+			}
+		}
+		
+
+}
+			
+dragonblight_pulse.20 = { #dragonborn ig member gets sick
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 48 }
+
+		title = dragonblight_pulse.20.t
+		desc = dragonblight_pulse.20.d
+		flavor = dragonblight_pulse.20.f
+		dlc = dlc_roe
+		duration = 3
+	
+		event_image = {
+			video = "europenorthamerica_opium_smoker"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_interest_group = {
+				save_scope_as = friends_of_the_diseased
+				add_modifier = {
+					name = victims_of_dragonblight
+					months = 36
+					is_decaying = yes	
+					}
+				random_scope_character = {
+					limit = {
+						culture = cu:illvasaari 
+						NOT = { is_ruler = yes }
+					}
+					change_character_culture = cu:kotskarvi
+					save_scope_as = the_diseased_guy
+				}
+			} 
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.20.a #no true dragonborn could ever become a kobold
+
+			scope:friends_of_the_diseased = {
+			add_modifier = {
+				name = scorned_sick_friend
+				months = 36	
+				}
+			}
+			scope:the_diseased_guy = {
+				add_trait = sickly
+			}
+			
+			
+			
+		}
+		option = {
+			name = dragonblight_pulse.20.b #send our regards
+			default_option = yes
+
+			scope:friends_of_the_diseased = {
+				add_modifier = {
+					name = sent_warm_regards
+					months = 36	
+					}
+				}
+		}
+		
+
+}			
+
+dragonblight_pulse.21 = { #kobold pogroms
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 28 }
+
+		title = dragonblight_pulse.21.t
+		desc = dragonblight_pulse.21.d
+		flavor = dragonblight_pulse.21.f
+		dlc = dlc_roe
+		duration = 3
+	
+		event_image = {
+			video = "europenorthamerica_opium_smoker"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_scope_state = {
+						save_scope_as = kobold_pogrom_state
+				}
+			scope:kobold_pogrom_state = {
+				kill_population_percent_in_state = {
+					percent = 0.02
+					culture = cu:kotskarvi
+				   }
+			}
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.21.a #allow the pogroms
+			custom_tooltip = cult_1_tt
+			show_as_tooltip = {
+				random_scope_state = {
+					add_modifier = {
+						name = tolerated_kobold_pogroms
+						months = 36
+						is_decaying = yes	
+					}
+				}		
+			}
+			hidden_effect = {
+				every_scope_state = {
+					add_modifier = {
+						name = tolerated_kobold_pogroms
+						months = 36
+						is_decaying = yes	
+					}
+				}
+			}
+
+			scope:kobold_pogrom_state = {
+				kill_population_percent_in_state = {
+					percent = 0.04
+					culture = cu:kotskarvi
+				   }
+			}
+			
+		}
+		option = {
+			name = dragonblight_pulse.21.b #stop the pogroms
+			default_option = yes
+			custom_tooltip = cult_1_tt
+			show_as_tooltip = {
+				random_scope_state = {
+					add_modifier = {
+						name = stopped_kobold_pogroms
+						months = 36
+						is_decaying = yes	
+					}
+				}
+			}
+			hidden_effect = {
+				every_scope_state = {
+					add_modifier = {
+						name = stopped_kobold_pogroms
+						months = 36
+						is_decaying = yes	
+					}
+				}
+			}
+			scope:kobold_pogrom_state = {
+				add_radicals_in_state = {
+					culture = cu:illvasaari
+					value = 0.15
+					strata = poor
+				}
+				}
+		}
+		
+
+}
+
+dragonblight_pulse.22 = { #secession events
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "africa_soldiers_breaking_protest"
+	}
+	title = dragonblight_pulse.22.t
+	desc = dragonblight_pulse.22.d
+	flavor = dragonblight_pulse.22.f
+	dlc = dlc_roe	
+	trigger = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_KLYPYRA
+				state_region = s:STATE_ZAMARIS
+				state_region = s:STATE_MOTHYA
+				state_region = s:STATE_LEPIDRA
+				state_region = s:STATE_ZARTHOS
+				state_region = s:STATE_CALTHA
+				state_region = s:STATE_SIGARA
+				state_region = s:STATE_LILYBAEUM
+				state_region = s:STATE_ZYRAS
+				state_region = s:STATE_THASPYR
+				state_region = s:STATE_LEPTHAR
+				state_region = s:STATE_LEPTISCA
+			}
+			culture_percent_state = { target = cu:illvasaari value <= 0.5   }
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				culture_percent_state = { target = cu:illvasaari value <= 0.5 }
+				mainland_dragon_isles_state = yes
+			}
+			save_scope_as = outbreak_state
+			if = {
+				limit = {
+					state_region = s:STATE_KLYPYRA
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = klypyra_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:klypyra_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}	
+				else = {
+					create_country = {
+						tag = RKO
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = s:STATE_ZAMARIS
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = zamaris_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:zamaris_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = GUR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = s:STATE_LEPIDRA
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani								country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lepidra_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lepidra_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = GUR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = s:STATE_ZARTHOS
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = zarthos_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:zarthos_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = GUR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = s:STATE_CALTHA
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
+							}
+						}
+						owner = {
+							save_scope_as = caltha_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:caltha_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:GUR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:GUR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:RKO
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:RKO
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = GUR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+		else_if = {
+			limit = {
+					state_region = s:STATE_SIGARA
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani								country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani			
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+								}
+							}
+						}
+						owner = {
+							save_scope_as = sigara_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:sigara_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}						
+		else_if={
+			limit = {
+			#Relevant kobold tag
+			exists = c:SVN
+			}
+			scope:outbreak_state = {
+				dragonblight_killswitch_engage = yes
+				set_state_owner = c:SVN
+			}
+		}
+		else_if={
+			limit = {
+			##Relevant kobold tag
+				exists = c:IAL
+			}
+			scope:outbreak_state = {
+				dragonblight_killswitch_engage = yes
+				set_state_owner = c:IAL
+			}
+		}	
+		else = {
+			scope:outbreak_state = {
+				dragonblight_killswitch_engage = yes
+			}
+			create_country = {
+				tag = SVN
+				origin = this
+				state = scope:outbreak_state.region_state:DIS
+			}
+		}
+		
+	}
+		else_if = {
+		limit = {
+			state_region = s:STATE_MOTHYA
+		}
+		state_region = {
+			remove_homeland = cu:illvasaari
+			add_homeland = cu:kotskarvi
+		}
+		save_scope_as = outbreak_state
+		if={
+			limit = {
+				any_neighbouring_state = {	
+						owner = {
+							OR = {
+								country_has_primary_culture = cu:kotskarvi
+									country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+							}
+						}
+				}	
+			}
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						OR = {
+							country_has_primary_culture = cu:kotskarvi
+								country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani								
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+						}
+					}
+				}
+				owner = {
+					save_scope_as = mothya_secession_scope
+				}
+			}
+			scope:outbreak_state = {
+				dragonblight_killswitch_engage = yes
+				set_state_owner = scope:mothya_secession_scope
+			}
+		}
+		else_if={
+			limit = {
+			#Relevant kobold tag
+			exists = c:SVN
+			}
+			scope:outbreak_state = {
+				dragonblight_killswitch_engage = yes
+				set_state_owner = c:SVN
+			}
+		}
+		else_if={
+			limit = {
+			#Relevant kobold tag
+				exists = c:IAL
+			}
+			scope:outbreak_state = {
+				dragonblight_killswitch_engage = yes
+				set_state_owner = c:IAL
+			}
+		}	
+		else = {
+			scope:outbreak_state = {
+				dragonblight_killswitch_engage = yes
+			}
+			create_country = {
+				tag = SVN
+				origin = this
+				state = scope:outbreak_state.region_state:DIS
+			}
+		}
+	}
+
+		else_if = {
+				limit = {
+					state_region = s:STATE_LILYBAEUM
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani							
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani								country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lilybaeum_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:IAL
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:IAL
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:SVN
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:SVN
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = IAL
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			
+			else_if = {
+				limit = {
+					state_region = s:STATE_ZYRAS
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani							
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani	
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+								}
+							}
+						}
+						owner = {
+							save_scope_as = zyras_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:zyras_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:TKR
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:TKR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:MVI
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:MVI
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = TKR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = s:STATE_LEPTHAR
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani							
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani								country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lepthar_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lepthar_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:TKR
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:TKR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:MVI
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:MVI
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = TKR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+		
+			else_if = {
+				limit = {
+					state_region = s:STATE_OYRSA
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani							
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani			
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lilybaeum_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:TKR
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:TKR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:MVI
+					}
+					scope:outbreak_state = {
+						set_state_owner = c:MVI
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = TKR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+
+			else_if = {
+				limit = {
+					state_region = s:STATE_THASPYR
+				}
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani							
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani							
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lilybaeum_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:TKR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:TKR
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:MVI
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:MVI
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = TKR
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = s:STATE_LEPTISCA
+				}
+				state_region = {
+						remove_homeland = cu:illvasaari
+						add_homeland = cu:kotskarvi
+				}
+				save_scope_as = outbreak_state
+				if={
+					limit = {
+						any_neighbouring_state = {	
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani							
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+									}
+								}
+						}	
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani					
+										country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+								}
+							}
+						}
+						owner = {
+							save_scope_as = lilybaeum_secession_scope
+						}
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+					exists = c:MVI
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:MVI
+					}
+				}
+				else_if={
+					limit = {
+					#Relevant kobold tag
+						exists = c:TKR
+					}
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+						set_state_owner = c:TKR
+					}
+				}	
+				else = {
+					scope:outbreak_state = {
+						dragonblight_killswitch_engage = yes
+					}
+					create_country = {
+						tag = MVI
+						origin = this
+						state = scope:outbreak_state.region_state:DIS
+					}
+				}
+			}
+		}	
+	}
+	option = {
+		name = dragonblight_pulse.22.a
+		show_as_tooltip = {
+			scope:outbreak_state = {
+				state_region = {
+					remove_homeland = cu:illvasaari
+					add_homeland = cu:kotskarvi
+				}
+			}
+		}
+		default_option = yes
+	}
+}
+
+
+dragonblight_pulse.23 = { #a group of doctors presents a list of anti-blight measures
+	type = country_event
+	placement = ROOT
+
+	cooldown = { months = 12 }
+
+	title = dragonblight_pulse.23.t
+	desc = dragonblight_pulse.23.d
+	flavor = dragonblight_pulse.23.f
+	dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		has_technology_researched = medical_degrees
+		NOT = {
+			has_variable = doctors_present_demands
+		}
+
+	}	
+
+	immediate = {
+		set_variable = doctors_present_demands	
+		ig:ig_intelligentsia ?= {
+			save_scope_as = doctor_scope
+		}
+	}
+	option = { #perhaps we should listen
+		name = dragonblight_pulse.23.a
+		random_scope_character = {
+			limit = {
+				is_ruler = yes
+			}
+			set_ideology = ideology:ideology_epidemiologist
+		}
+
+		}	
+		
+	option = { #we will put someone more qualified on this
+		name = dragonblight_pulse.23.b
+		default_option = yes
+		ig:ig_intelligentsia ?= {
+			leader = {
+				set_ideology = ideology:ideology_epidemiologist
+			}
+		}	
+		}
+	option = { #lol no
+		name = dragonblight_pulse.23.c
+		ig:ig_intelligentsia ?= {
+			add_modifier = {
+				name = ignored_expert_advice
+				years = 3
+			}
+		}
+		}
+}
+

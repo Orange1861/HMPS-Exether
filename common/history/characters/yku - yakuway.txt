@@ -1,0 +1,19 @@
+CHARACTERS = {
+	c:YKU = {
+		create_character = {
+			first_name = "Basilio"
+			last_name = "Collahuazo"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 35
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				surveyor
+				charismatic
+				ambitious
+			}
+		}
+	}
+}

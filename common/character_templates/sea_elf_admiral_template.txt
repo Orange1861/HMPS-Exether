@@ -1,0 +1,37 @@
+﻿sea_elf_admiral_template = { 
+	is_admiral = yes
+	female = yes
+	commander_rank = commander_rank_4
+	interest_group = ig_armed_forces
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	traits = {
+	}
+	on_created = {
+		if = { 
+			limit = { 
+				has_trait = basic_naval_commander
+			}
+			remove_trait = basic_naval_commander
+		}
+		else_if = { 
+			limit = { 
+				has_trait = experienced_naval_commander
+			}
+			remove_trait = experienced_naval_commander
+			if = { 
+				limit = { 
+					NOT = { 
+						has_trait = convoy_raider_commander
+					}
+					
+				}
+				add_trait = convoy_raider_commander
+			}
+		}
+		else = { 
+			add_trait = expert_naval_commander
+		}
+		
+	}
+}

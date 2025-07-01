@@ -1,0 +1,67 @@
+﻿je_emerald_sunset = {
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	group = je_group_internal_affairs
+
+	scripted_button = delegate_to_tribes_button
+	scripted_button = promote_magocrats_button
+	complete = {
+		OR = {
+			NOT = {
+				is_country_type = preindustrial
+			}
+			NOT = {
+				is_subject_of = c:EME
+			}
+		}
+		
+	}
+
+	on_complete = {
+		if = {
+			limit = { 
+				NOT = {
+					is_country_type = preindustrial
+				}
+				AND = {
+					exists = c:EME
+					is_subject_of = c:EME
+				}
+			}
+			trigger_event = locari.100
+		}
+		if = {
+			limit = { 
+				NOT = {
+					is_subject_of = c:EME
+				}
+			}
+			trigger_event = locari.102
+		}
+		show_as_tooltip = {
+			trigger_event = locari.100
+		}
+		
+	}
+
+	fail = {
+		AND = {
+			custom_tooltip = {
+				text = not_tallcat_tt
+				ruler = {
+					NOT = { has_variable = is_tallcat }
+				}
+			}
+			has_journal_entry = je_winds_of_change
+		}
+		
+	}
+
+	on_fail = {
+		trigger_event = locari.101
+	}
+
+	should_be_pinned_by_default = yes
+
+	weight = 1000
+}

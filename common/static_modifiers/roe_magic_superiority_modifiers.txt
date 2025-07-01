@@ -1,0 +1,71 @@
+### ATTACKER
+roe_ms_enchanted_weapons= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_offense_mult = 0.007
+    unit_kill_rate_add = 0.0035
+}
+
+roe_ms_arcane_signaling_attacker= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_offense_mult = 0.008
+    unit_kill_rate_add = 0.004
+}
+
+roe_ms_arcane_leyline_mapping_attacker= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_offense_mult = 0.009
+    unit_kill_rate_add = 0.0045
+}
+
+roe_ms_arcane_integrated_systems_attacker= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_offense_mult = 0.01
+    unit_kill_rate_add = 0.005
+}
+
+roe_ms_elemental_munitions= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_morale_damage_mult = 0.007
+}
+
+roe_ms_barrier_disruption= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_morale_damage_mult = 0.008
+}
+
+
+### DEFENDER
+roe_ms_enchanted_armor = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_defense_mult = 0.007
+    unit_kill_rate_add = 0.0035
+}
+
+roe_ms_arcane_signaling_defender {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_defense_mult = 0.008
+    unit_kill_rate_add = 0.004
+}
+
+roe_ms_arcane_leyline_mapping_defender= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_defense_mult = 0.009
+    unit_kill_rate_add = 0.0045
+}
+
+roe_ms_arcane_integrated_systems_defender= {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_defense_mult = 0.010
+    unit_kill_rate_add = 0.005
+}
+
+
+roe_ms_battlefield_illumination = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_morale_loss_mult = -0.007
+}
+
+roe_ms_barrier_creation = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    unit_morale_loss_mult = -0.007
+}

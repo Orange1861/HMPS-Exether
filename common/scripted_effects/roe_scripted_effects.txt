@@ -1,0 +1,1420 @@
+﻿#	Example:
+# 
+#	example_effect = {
+#		x = 100
+#		y = 50
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+remove_retainers_effect = {
+		every_character_in_void = {
+			limit = {
+				OR = {
+					has_variable = is_retainer
+				}
+				NOT = { exists = owner }
+			}
+			free_character_from_void = yes
+		}
+}
+
+dragonblight_killswitch_engage = {
+	every_scope_pop = {
+		limit = {
+			culture = cu:illvasaari
+		}
+		change_pop_culture = {
+			target = cu:kotskarvi
+			value = 0.4
+		}
+	}
+}
+
+bloodtithe_mode_culture_switch = {
+	random_primary_culture = {
+		save_scope_as = original_primary_culture
+	}
+	
+	if = {
+		limit = {
+			country_is_in_settler_coast = yes
+			NOT = {
+				any_primary_culture = {
+					has_discrimination_trait = cloud_dwarf
+				}
+			}
+		}
+		add_primary_culture = cu:settler_coast_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = thoughtsmith_culture_group
+			}
+		}
+		add_primary_culture = cu:awakened_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = vairia_culture_group
+			}
+		}
+		add_primary_culture = cu:vairipire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = gnoll
+			}
+		}
+		add_primary_culture = cu:gnoll_vampire
+	}
+	
+	else_if = {
+		limit = {
+			OR = {
+				c:LUR ?= this
+				c:CRG ?= this
+				c:KCH ?= this
+				c:HIZ ?= this
+				c:GAI ?= this
+				c:POA ?= this
+			}
+		}
+		add_primary_culture = cu:west_avian_vampire
+	}
+	
+	else_if = {
+		limit = {
+			country_is_in_east_locari = yes
+			NOT = {
+				any_primary_culture = {
+					OR = {
+						has_discrimination_trait = cloud_dwarf
+						has_discrimination_trait = kharai_urchu_culture_group
+					}
+				}
+			}
+		}
+		add_primary_culture = cu:awakened_vampire
+	}
+	else_if = {
+		limit = {
+			OR = {
+				c:NRA ?= this
+				AND = {
+					country_is_in_aritzakarri = yes
+					NOT = {
+						any_primary_culture = {
+							OR = {
+								has_discrimination_trait = cloud_dwarf
+								has_discrimination_trait = kharai_oni_culture_group
+							}
+							
+						}
+					}
+				}
+			}
+	
+		}
+		add_primary_culture = cu:avian_vampire
+	}
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = kharai_oni_culture_group
+			}
+		}
+		add_primary_culture = cu:ogre_vampire
+	}
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = chin_culture_group
+			}
+		}
+		add_primary_culture = cu:qiinat_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = kailan_culture_group
+			}
+		}
+		add_primary_culture = cu:kailan_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = new_dumonia_culture_group
+			}
+		}
+		add_primary_culture = cu:hiadud_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = vaythir_culture_group
+			}
+		}
+		add_primary_culture = cu:thiralian_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = khussite_culture_group
+			}
+		}
+		add_primary_culture = cu:khussite_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = southern_elf
+			}
+		}
+		add_primary_culture = cu:dark_elf_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = wood_elf
+			}
+		}
+		add_primary_culture = cu:wood_elf_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = kharai_urchu_culture_group
+			}
+		}
+		add_primary_culture = cu:goblin_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = gavkhani_culture_group
+			}
+		}
+		add_primary_culture = cu:gavkhani_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = tunnel_cursed
+			}
+		}
+		add_primary_culture = cu:dark_dwarven_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = high_elf
+			}
+		}
+		add_primary_culture = cu:high_elf_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = gnome_heritage
+			}
+		}
+		add_primary_culture = cu:gnome_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = dragonborn_culture_group
+			}
+		}
+		add_primary_culture = cu:draconic_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				AND = {
+					has_discrimination_trait = plaguewoods_culture_group
+					has_discrimination_trait = orc_heritage
+				}
+	
+			}
+		}
+		add_primary_culture = cu:buramog_vampire
+	}	
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				AND = {
+					has_discrimination_trait = embervein_warriors_culture_group
+					has_discrimination_trait = orc_heritage
+				}
+	
+			}
+		}
+		add_primary_culture = cu:embervein_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				AND = {
+					has_discrimination_trait = saltwaste_survivor_culture_group
+				}
+	
+			}
+		}
+		add_primary_culture = cu:orc_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				AND = {
+					has_discrimination_trait = uriks_passage_culture_group
+				}
+	
+			}
+		}
+		add_primary_culture = cu:uriki_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				AND = {
+					has_discrimination_trait = moorwealder_culture_group
+				}
+	
+			}
+		}
+		add_primary_culture = cu:mousefolk_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = kobold_culture_group
+			}
+		}
+		add_primary_culture = cu:kobold_vampire
+	}
+	
+	else_if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = cloud_dwarf
+			}
+		}
+		add_primary_culture = cu:dwarven_vampire
+	}
+	
+	else = {
+		add_primary_culture = cu:vampire
+	}
+	remove_primary_culture = scope:original_primary_culture
+	if = {
+		limit = {
+			any_primary_culture = {
+				NOT = {
+					has_discrimination_trait = vampiric
+				}
+			}
+		}
+		random_primary_culture = {
+			limit = {
+				NOT = {
+					has_discrimination_trait = vampiric
+				}
+			}
+			save_scope_as = removed_primary_culture_2
+		}
+		set_variable = two_primary_var
+		remove_primary_culture = scope:removed_primary_culture_2
+	}
+	
+	if = {
+		limit = {
+			any_primary_culture = {
+				NOT = {
+					has_discrimination_trait = vampiric
+				}
+			}
+		}
+		random_primary_culture = {
+			limit = {
+				NOT = {
+					has_discrimination_trait = vampiric
+				}
+			}
+			save_scope_as = removed_primary_culture_3
+		}
+		remove_variable = two_primary_var
+		set_variable = three_primary_var
+		remove_primary_culture = scope:removed_primary_culture_3
+	}
+	
+	if = {
+		limit = {
+			any_primary_culture = {
+				NOT = {
+					has_discrimination_trait = vampiric
+				}
+			}
+		}
+		random_primary_culture = {
+			limit = {
+				NOT = {
+					has_discrimination_trait = vampiric
+				}
+			}
+			save_scope_as = removed_primary_culture_4
+		}
+		remove_variable = two_primary_var
+		remove_variable = three_primary_var
+		set_variable = four_primary_var
+		remove_primary_culture = scope:removed_primary_culture_4
+	}
+
+	set_state_religion = rel:lunar_masquerade
+
+	random_primary_culture = {
+		limit = {
+			has_discrimination_trait = vampiric
+		}
+		save_scope_as = vampire_culture
+	}
+	hidden_effect = {
+		every_scope_character = {
+			limit = {
+				is_historical = no
+			}
+			kill_character = yes
+		}
+	}
+
+	every_scope_character = { #lmao
+	
+	change_character_religion = rel:lunar_masquerade
+	change_character_culture = scope:vampire_culture
+}
+	if = {
+		limit = {
+			has_variable = two_primary_var
+		}
+		every_scope_state = {
+			limit = {
+				state_region = {
+					OR = {
+						is_homeland = scope:original_primary_culture
+						is_homeland = scope:removed_primary_culture_2
+					}
+				}
+			}
+			state_region = {
+				add_homeland = scope:vampire_culture
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = three_primary_var
+		}
+		every_scope_state = {
+			limit = {
+				state_region = {
+					OR = {
+						is_homeland = scope:original_primary_culture
+						is_homeland = scope:removed_primary_culture_2
+						is_homeland = scope:removed_primary_culture_3
+					}
+				}
+			}
+			state_region = {
+				add_homeland = scope:vampire_culture
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = four_primary_var
+		}
+		every_scope_state = {
+			limit = {
+				state_region = {
+					OR = {
+						is_homeland = scope:original_primary_culture
+						is_homeland = scope:removed_primary_culture_2
+						is_homeland = scope:removed_primary_culture_3
+					}
+				}
+			}
+			state_region = {
+				add_homeland = scope:vampire_culture
+			}
+		}
+	}
+	else = {
+		every_scope_state = {
+			limit = {
+				state_region = {
+					OR = {
+						is_homeland = scope:original_primary_culture
+					}
+				}
+			}
+			state_region = {
+				add_homeland = scope:vampire_culture
+			}
+		}
+	}
+
+	every_scope_state = {
+		every_scope_pop = {
+			change_pop_culture = {
+				target = scope:vampire_culture
+				value = 0.07
+			}
+		}
+		every_scope_pop = {
+			change_pop_religion = {
+				target = rel:lunar_masquerade
+				value = 0.13
+			}
+		}
+		
+	}
+
+
+}
+
+trade_federation_unblockade = { #adds trade centers to countries that don't have them
+	if = {
+		limit = {
+			NOT = {
+				any_scope_state = {
+					any_scope_building = {
+						is_building_type = building_trade_center
+					}
+				}
+			}
+			NOT = {	is_country_type = decentralized }
+			NOT = {	has_law = law_type:law_isolationism }
+			
+		}
+		capital = {
+				create_building = {
+        		building="building_trade_center"
+          		level=1
+          		reserves=1
+			}
+		}	
+	}
+}
+
+midnight_enforcement = { #replaces clergy, archmages and aristos with midnight heritage pops
+	if = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = vampiric
+			}
+		}
+		random_primary_culture = {
+			limit = {
+				has_discrimination_trait = vampiric
+			}
+			save_scope_as = midnight_culture
+		}
+		random_scope_pop = {
+			limit = {
+				has_state_religion = yes
+			}
+			religion = {
+				save_scope_as = majority_religion
+			}
+
+
+		}
+		every_scope_pop = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			change_pop_culture = {
+					target = scope:midnight_culture
+					value = 0.9
+			}
+			change_pop_religion = {
+				target = scope:majority_religion
+				value = 1.0
+			}
+		}
+		every_scope_pop = {
+			limit = {
+				is_pop_type = clergymen
+				not = { has_pop_culture = hag }
+			}
+			change_pop_culture = {
+					target = scope:midnight_culture
+					value = 1
+			}
+			change_pop_religion = {
+				target = rel:lunar_masquerade
+				value = 1.0
+			}
+		}
+		every_scope_pop = {
+			limit = {
+				is_pop_type = archmages
+				not = { has_pop_culture = hag }
+			}
+			change_pop_culture = {
+					target = scope:midnight_culture
+					value = 0.9
+			}
+			change_pop_religion = {
+				target = rel:lunar_masquerade
+				value = 1.0
+			}
+		}
+		
+	}
+	
+}
+
+mutagen_vats_powerswitch = {
+	if = {
+		limit = {
+			state_has_building_type_levels = {
+				target = bt:building_mutagen_vats value >= 1
+			}
+			owner = {
+				NOT = {
+					has_law = law_type:law_genetic_testing
+				}
+			}
+		}
+		deactivate_building = {
+			building = building_mutagen_vats
+		}
+	}
+
+	if = {
+		limit = {
+			state_has_building_type_levels = {
+				target = bt:building_mutagen_vats value >= 1
+			}
+			owner = {
+				has_law = law_type:law_genetic_testing
+			}
+		}
+		activate_building = {
+			building = building_mutagen_vats
+		}
+	}
+	if = {
+		limit = {
+			has_modifier = mutagen_central
+			owner = {
+				NOT = {
+					has_law = law_type:law_genetic_testing
+				}
+			}
+		}
+		remove_modifier = mutagen_central
+	}
+	if = {
+		limit = {
+			has_modifier = mutant_communities
+			owner = {
+				NOT = {
+					has_law = law_type:law_genetic_testing
+				}
+			}
+		}
+		remove_modifier = mutant_communities
+		add_acceptance = { target = cu:mutant value = -10 }
+	}
+}
+
+remove_mutagen_central = {
+	if = {
+		limit = {
+			OR = {
+				has_modifier = centralized_mutagenetic_testing
+				has_modifier = heavily_centralized_mutagenetic_testing
+			}
+			NOT = {
+				any_scope_state = {
+					OR = {
+						has_modifier = mutagen_central
+					}
+				}
+			}
+		}
+		remove_modifier = centralized_mutagenetic_testing
+		remove_modifier = heavily_centralized_mutagenetic_testing
+	}
+}
+
+handle_retainer_death = {
+	retire_retainer = yes
+}
+
+retire_retainer = {
+		if = {
+			limit = {
+				has_variable = is_retainer
+			}
+			hidden_effect = {
+			free_character_from_void = yes
+			set_character_busy_and_immortal = no
+			remove_character_role = politician
+			save_scope_as = retired_retainer
+
+			#Remove buffs from region if assigned
+			if = {
+				limit = {
+					exists = scope:retired_retainer.var:assigned_region
+				}
+				scope:retired_retainer.owner = {
+					every_scope_state = {
+						limit = {
+							region = scope:retired_retainer.var:assigned_region
+						}
+						remove_modifier = state_retainer_assigned
+					}
+					scope:retired_retainer = {
+						remove_variable = assigned_region
+					}
+
+				}
+
+			}
+
+			if = {
+				limit = {
+					has_variable = is_available_retainer
+				}
+
+				remove_variable = is_available_retainer
+
+				remove_list_variable = {
+					name = available_retainers_list
+					target = scope:retired_retainer
+				}
+
+				create_character = {
+					template = retainer_template
+				}
+			}
+
+			#Remove retainer position, used in next step
+			if = {
+				limit = { 
+					has_variable = is_first_retainer
+				}
+				remove_variable = is_first_retainer
+				scope:retired_retainer.owner = {
+					remove_variable = first_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_second_retainer
+				}
+				remove_variable = is_second_retainer
+				scope:retired_retainer.owner = {
+					remove_variable = second_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_third_retainer
+				}
+				remove_variable = is_third_retainer
+				scope:retired_retainer.owner = {
+					remove_variable = third_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_fourth_retainer
+				}
+				remove_variable = is_fourth_retainer
+				scope:retired_retainer.owner = {
+					remove_variable = fourth_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_fifth_retainer
+				}
+				remove_variable = is_fifth_retainer
+				scope:retired_retainer.owner = {
+					remove_variable = fifth_retainer
+				}
+			}
+
+			scope:retired_retainer.owner = {
+		
+				#Move up retainer counts
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:retired_retainer.owner
+								has_variable = is_first_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = { 
+							exists = owner
+							owner = scope:retired_retainer.owner
+							has_variable = is_second_retainer
+						}
+						remove_variable = is_second_retainer
+						set_variable = is_first_retainer
+						set_local_variable = {
+							name = replacement_retainer1
+							value = this
+						} 
+						local_var:replacement_retainer1.owner = {
+							remove_variable = second_retainer
+							set_variable = {
+								name = first_retainer
+								value = local_var:replacement_retainer1
+							}
+						}
+					}
+
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:retired_retainer.owner
+								has_variable = is_second_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = { 
+							exists = owner
+							owner = scope:retired_retainer.owner
+							has_variable = is_third_retainer 
+						}
+						remove_variable = is_third_retainer
+						set_variable = is_second_retainer
+						set_local_variable = {
+							name = replacement_retainer2
+							value = this
+						} 
+						local_var:replacement_retainer2.owner = {
+							remove_variable = third_retainer
+							set_variable = {
+								name = second_retainer
+								value = local_var:replacement_retainer2
+							}
+						}
+					}
+
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:retired_retainer.owner
+								has_variable = is_third_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = { 
+							exists = owner
+							owner = scope:retired_retainer.owner
+							has_variable = is_fourth_retainer 
+						}
+						remove_variable = is_fourth_retainer
+						set_variable = is_third_retainer
+						set_local_variable = {
+							name = replacement_retainer3
+							value = this
+						} 
+						local_var:replacement_retainer3.owner = {
+							remove_variable = fourth_retainer
+							set_variable = {
+								name = third_retainer
+								value = local_var:replacement_retainer3
+							}
+						}
+					}
+
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:retired_retainer.owner
+								has_variable = is_fourth_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = {
+							exists = owner 
+							owner = scope:retired_retainer.owner
+							has_variable = is_fifth_retainer 
+						}
+						remove_variable = is_fifth_retainer
+						set_variable = is_fourth_retainer
+						set_local_variable = {
+							name = replacement_retainer4
+							value = this
+						}
+						local_var:replacement_retainer4.owner = {
+							remove_variable = fifth_retainer
+							set_variable = {
+								name = fourth_retainer
+								value = local_var:replacement_retainer4
+							}
+						}
+					}
+				}
+		
+				#Remove from owned retainers
+				remove_list_variable = {
+					name = hired_retainers_list
+					target = scope:retired_retainer
+				}  
+
+					
+			}
+			}
+			add_character_role = agitator
+	}
+}
+
+
+calculate_beauty_in_bloom_progress = {
+	set_variable = { name = beauty_in_bloom_next value = 0 }
+	if = {
+		limit = {
+			ig:ig_devout ?= {
+				is_powerful = yes
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			ig:ig_devout ?= {
+				is_in_government = yes
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_law = law_type:law_autocracy
+				has_law = law_type:law_technocracy
+				has_law = law_type:law_oligarchy
+				has_law = law_type:law_single_party_state
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			ig:ig_devout ?= {
+				is_marginal = yes
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = -1
+		}
+	}
+	if = {
+		limit = {
+			ig:ig_devout ?= {
+				is_in_government = no
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = -1
+		}
+	}
+	if = {
+		limit = {
+			any_scope_character = {
+				OR = {
+					has_role = general
+					has_role = admiral
+				}
+				popularity >= 50 # Loved
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			any_scope_character = {
+				has_role = politician
+				NOT = { has_role = general }
+				popularity >= 50 # Loved
+				interest_group = {
+					is_powerful = yes
+					AND = {
+						law_stance = {
+							law = law_type:law_autocracy
+							value <= neutral
+						}
+						law_stance = {
+							law = law_type:law_technocracy
+							value >= neutral
+						}
+						law_stance = {
+							law = law_type:law_oligarchy
+							value >= neutral
+						}
+						law_stance = {
+							law = law_type:law_single_party_state
+							value >= neutral
+						}
+					}
+				}
+			}
+			NOT = {
+				any_scope_character = {
+					has_role = general
+					popularity >= 50 # Loved
+				}
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = -1
+		}
+	}
+	if = {
+		limit = {
+			any_scope_character = {
+				is_ruler = yes
+				has_ideology = ideology:ideology_authoritarian
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_law = law_type:law_census_voting
+				has_law = law_type:law_universal_suffrage
+			}
+		}
+		change_variable = {
+			name = beauty_in_bloom_next
+			add = -1
+		}
+	}
+}
+
+exether_remove_expedition_effect = {
+	remove_variable = sunstation_storeroom_var
+	remove_variable = rimeroot_got_lost
+	remove_variable = heptajam
+	remove_variable = heptadrone_scouts
+	remove_variable = strange_rune_var
+	remove_variable = heptadrone_buddy
+	remove_variable = heptadrone_buddy_success
+	remove_variable = heptadrone_attack
+	remove_variable = duskmirror_dude
+	remove_variable = shunned_var
+	remove_variable = city_song
+	remove_variable = wander_var
+	remove_variable = sirensong_var
+	remove_variable = nightmare_sands
+	remove_variable = eggstone_var
+	remove_variable = nomad_band_var
+	remove_variable = landslide_var
+	remove_variable = witch_potion
+	remove_variable = desert_oasis
+}
+
+matriachy_enforcement = {
+	every_scope_character = {
+		limit = {
+			is_historical = no
+			OR = {
+				has_role = politician
+				has_role = general
+				has_role = admiral
+			}
+			is_female = no
+		}
+		random_list = {
+			84 = {
+				kill_character = yes
+			}
+			6 = {
+				exile_character = yes #just for funsies
+			}
+			10 = {
+			}
+		}	
+	}
+}
+
+
+assign_kamiran_states = {
+	c:KAX = {
+		create_military_formation = {
+			type = army
+			hq_region = scope:heavenly_kingdom_spawn.region #Because the Kamiran Dominion is not always in South China.
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = scope:heavenly_kingdom_spawn.state_region
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = scope:heavenly_kingdom_spawn.state_region
+				count = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			any_scope_state = {
+				has_variable = cult_center
+			}
+		}
+		every_scope_state = {
+			limit = {
+				has_variable = cult_center
+			}
+			save_scope_as = kam_defector_state
+			custom_tooltip = {
+				text = kamiran_state_defection
+				set_state_owner = c:KAX
+				set_state_type = incorporated
+				add_religion_standard_of_living_modifier = {
+					religion = rel:church_of_man
+					multiplier = -5
+					days = long_modifier_time
+				}
+			}
+		}
+		every_scope_state = {
+			limit = {
+				is_capital = no
+				NOT = { 
+					has_variable = cult_center 
+					state_region = { 
+						OR = {
+							is_homeland = cu:dumonian
+							is_homeland = cu:ralaurian
+							is_homeland = cu:dewaric
+							is_homeland = cu:gelidrumin
+							is_homeland = cu:avalorean
+							is_homeland = cu:uplander
+						}
+					}
+				}
+				any_neighbouring_state = {
+					has_variable = cult_center
+				}
+				turmoil >= 0.1
+			}
+			if = {
+				limit = {
+					this = {
+						state_region = { 
+							OR = {
+								is_homeland = cu:dumonian
+								is_homeland = cu:ralaurian
+								is_homeland = cu:dewaric
+								is_homeland = cu:gelidrumin
+								is_homeland = cu:avalorean
+								is_homeland = cu:uplander
+							}
+						}
+					}
+				}
+				save_scope_as = kam_defector_state
+				custom_tooltip = {
+					text = kamiran_state_defection
+					set_state_owner = c:KAX
+					set_state_type = incorporated
+					add_religion_standard_of_living_modifier = {
+						religion = rel:church_of_man
+						multiplier = -5
+						days = long_modifier_time
+					}
+					c:KAX = {
+						create_military_formation = {
+							type = army
+							hq_region = scope:kam_defector_state.region
+				
+							combat_unit = {
+								type = unit_type:combat_unit_type_irregular_infantry
+								state_region = scope:kam_defector_state.state_region
+								count = 5
+							}
+						}
+					}
+				}
+				
+			}
+			else_if = {
+				random_list = {
+					50 = {
+						save_scope_as = kam_defector_state
+						custom_tooltip = {
+							text = kamiran_state_defection
+							set_state_owner = c:KAX
+							set_state_type = incorporated
+							add_religion_standard_of_living_modifier = {
+								religion = rel:church_of_man
+								multiplier = -5
+								days = long_modifier_time
+							}
+							c:KAX = {
+								create_military_formation = {
+									type = army
+									hq_region = scope:kam_defector_state.region
+						
+									combat_unit = {
+										type = unit_type:combat_unit_type_irregular_infantry
+										state_region = scope:kam_defector_state.state_region
+										count = 5
+									}
+								}
+							}
+						}
+					}
+					50 = {
+						add_radicals_in_state = {
+							value = very_large_radicals
+							religion = rel:cult_of_the_sun
+						}
+						this.state_region = {
+							add_claim = c:KAX
+						}
+					}
+				}
+			}
+		}
+	}
+	hidden_effect = {
+		every_state = {
+			limit = {
+				owner = c:KAX
+			}
+			this.state_region = {
+				add_claim = c:DUM
+			}
+		}	
+	}
+	hidden_effect = {
+		every_state = {
+			limit = {
+				owner = c:KAX
+			}
+			add_modifier = {
+				name = modifier_kamiran_hiring_bonus
+				months = 6
+			}
+		}
+	}
+}
+
+create_kamiran_characters = {
+	create_character = {
+		first_name = Edric
+		last_name = Hugrin
+		historical = yes
+		age = 47
+		culture = cu:sunkissed
+		religion = rel:cult_of_the_sun
+		interest_group = ig_devout
+		ideology = ideology_theocrat
+		is_agitator = yes
+		traits = {
+			inspirational_orator
+			persistent
+			psychological_affliction
+		}
+		on_created = {
+			set_variable = hong_var
+			add_modifier = {
+				name = modifier_famous_paladin
+				days = long_modifier_time
+			}
+		}
+	}
+	create_character = {
+		age = 18
+		culture = cu:sunkissed
+		religion = rel:cult_of_the_sun
+		interest_group = ig_devout
+		heir = yes
+		ideology = ideology_moderate
+		traits = {
+			reserved 
+		}
+	}
+
+	create_character = {
+		age = 20
+		culture = cu:sunkissed
+		religion = rel:cult_of_the_sun
+		is_general = yes
+		ig_leader = yes
+		interest_group = ig_armed_forces
+		hq = region_central_noricum
+		ideology = ideology_theocrat
+		commander_rank = commander_rank_3
+		traits = {
+			grifter
+			expert_political_operator
+			ambitious
+			demagogue
+		}
+	}
+	create_character = {
+		age = 53
+		culture = cu:sunkissed
+		religion = rel:cult_of_the_sun
+		is_general = yes
+		ig_leader = yes
+		interest_group = ig_devout
+		hq = region_central_noricum
+		ideology = ideology_theocrat
+		commander_rank = commander_rank_1
+		traits = {
+			reckless
+			charismatic
+			demagogue
+		}
+	}
+	create_character = {
+		age = 32
+		culture = cu:sunkissed
+		religion = rel:cult_of_the_sun
+		ig_leader = yes
+		interest_group = ig_intelligentsia
+		ideology = ideology_market_liberal
+		traits = {
+			innovative
+			persistent
+			basic_diplomat
+		}
+	}
+}
+
+craggedwyn_medium_danger_remove_effect = {
+	if = {
+		limit = {
+			has_journal_entry = je_craggedwyn_question
+		}
+		je:je_craggedwyn_question ?= {
+			add_progress = { value = -2 name = craggedwyn_control_progress_bar }
+		}
+	}
+	custom_tooltip = craggedwyn_medium_danger_remove_effect_tt
+}
+
+craggedwyn_small_danger_remove_effect = {
+	if = {
+		limit = {
+			has_journal_entry = je_craggedwyn_question
+		}
+		je:je_craggedwyn_question ?= {
+			add_progress = { value = -1 name = craggedwyn_control_progress_bar }
+		}
+	}
+	custom_tooltip = craggedwyn_small_danger_remove_effect_tt
+}
+
+craggedwyn_medium_danger_effect = {
+	if = {
+		limit = {
+			has_journal_entry = je_craggedwyn_question
+		}
+		je:je_craggedwyn_question ?= {
+			add_progress = { value = 2 name = craggedwyn_control_progress_bar }
+		}
+	}
+	custom_tooltip = craggedwyn_medium_danger_effect_tt
+}
+
+craggedwyn_small_danger_effect = {
+	if = {
+		limit = {
+			has_journal_entry = je_craggedwyn_question
+		}
+		je:je_craggedwyn_question ?= {
+			add_progress = { value = 1 name = craggedwyn_control_progress_bar }
+		}
+	}
+	custom_tooltip = craggedwyn_small_danger_effect_tt
+}
+
+craggedwyn_large_danger_effect = {
+	if = {
+		limit = {
+			has_journal_entry = je_craggedwyn_question
+		}
+		je:je_craggedwyn_question ?= {
+			add_progress = { value = 3 name = craggedwyn_control_progress_bar }
+		}
+	}
+	custom_tooltip = craggedwyn_large_danger_effect_tt
+}

@@ -1,0 +1,259 @@
+﻿AHO = {
+	flag_definition = {
+		coa = AHO
+		subject_canton = AHO
+		priority = 1
+	}
+}
+
+XXG = {
+	flag_definition = {
+		coa = XXG
+		subject_canton = XXG
+		priority = 1
+	}
+}
+
+######
+
+ARR = {
+	flag_definition = {
+		coa = ARR
+		subject_canton = ARR
+		priority = 1
+	}
+}
+
+CSA = {
+	flag_definition = {
+		coa = ARR_REVO
+		subject_canton = ARR
+		priority = 1
+	}
+}
+
+ROM = {
+	flag_definition = {
+		coa = ARR_REVO
+		subject_canton = ARR
+		priority = 1
+	}
+}
+
+######
+
+VOZ = {
+	flag_definition = {
+		coa = VOZ
+		subject_canton = VOZ
+		priority = 1
+	}
+}
+
+UTS = {
+	flag_definition = {
+		coa = UTS
+		subject_canton = UTS
+		priority = 1
+	}
+}
+
+VHT = {
+	flag_definition = {
+		coa = VHT
+		subject_canton = VHT
+		priority = 1
+	}
+}
+
+WHI = {
+	flag_definition = {
+		coa = WHI
+		subject_canton = WHI
+		priority = 1
+	}
+}
+
+THI = {
+	flag_definition = {
+		coa = THI
+		subject_canton = THI
+		priority = 1
+	}
+}
+
+EMP = {
+	flag_definition = {
+		coa = EMP
+		subject_canton = EMP
+		priority = 1
+	}
+}
+
+LEO = {
+	flag_definition = {
+		coa = LEO
+		subject_canton = LEO
+		priority = 1
+	}
+	flag_definition = {
+        coa = LEO_subject_THI      
+        priority = 50
+        trigger = { 
+			exists = c:THI
+            c:LEO = {
+				is_subject_of = c:THI
+			}
+        }
+    }    
+}
+
+DRM = {
+	flag_definition = {
+		coa = DRM
+		subject_canton = DRM
+		priority = 1
+	}
+	flag_definition = {
+        coa = DRM_subject_ARR      
+        priority = 50
+        trigger = { 
+			exists = c:ARR
+            c:DRM = {
+				is_subject_of = c:ARR
+			}
+        }
+    }    
+}
+
+SLB = {
+	flag_definition = {
+		coa = SLB
+		subject_canton = SLB
+		priority = 1
+	}
+}
+
+SEB = {
+	flag_definition = {
+		coa = SEB
+		subject_canton = SEB
+		priority = 1
+	}
+}
+
+FEY = {
+	flag_definition = {
+		coa = FEY
+		subject_canton = FEY
+		priority = 1
+	}
+}
+
+PRI = {
+	flag_definition = {
+		coa = PRI
+		subject_canton = PRI
+		priority = 1
+	}
+}
+
+GCS = {
+	flag_definition = {
+		coa = GCS
+		subject_canton = GCS
+		priority = 1
+	}
+	flag_definition = {
+        coa = GCS_subject_SMA       
+        priority = 50
+        trigger = { 
+			exists = c:SMA
+            c:GCS = {
+				is_subject_of = c:SMA
+			}
+        }
+    }    
+}
+
+KRC = {
+	flag_definition = {
+		coa = KRC
+		subject_canton = KRC
+		priority = 1
+	}
+	flag_definition = {
+        coa = KRC_subject_EMP       
+        priority = 50
+        trigger = { 
+			exists = c:EMP
+            c:KRC = {
+				is_subject_of = c:EMP
+			}
+        }
+    }    
+}
+
+GDS = {
+	flag_definition = {
+		coa = GDS
+		subject_canton = GDS
+		priority = 1
+	}
+}
+
+DSB = {
+	flag_definition = {
+		coa = DSB
+		subject_canton = DSB
+		priority = 1
+	}
+}
+
+CER = {
+	flag_definition = {
+		coa = CER
+		subject_canton = CER
+		priority = 1
+	}
+}
+
+DRO = {
+	flag_definition = {
+		coa = DRO
+		subject_canton = DRO
+		priority = 1
+	}
+}
+
+EME = { #Emerald League
+	flag_definition = {
+		coa = EME
+		subject_canton = EME_canton
+		priority = 1
+	}
+}
+
+EBR = {
+	flag_definition = {
+		coa = EBR
+		subject_canton = EBR
+		priority = 1
+	}
+}
+
+CDW = {
+	flag_definition = {
+		coa = CDW
+		subject_canton = CDW
+		priority = 1
+	}
+}
+
+FTH = {
+	flag_definition = {
+		coa = FTH
+		subject_canton = FTH
+		priority = 1
+	}
+}

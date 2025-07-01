@@ -1,0 +1,1764 @@
+﻿STATE_ZYRAS = {
+    id = 3692
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x64C8F2 x7BC0CB x95D2CB x99DCF0 xA0DCB9 xABB0CC xABC1B5 xAFB3EA xBB70F3 xC3F188 xC866E7 xCAE893 xCDBAF8 xCE9CCA xD964E1 xDFEEB8 xE989BD xEB67F1 xF2EAB7 xF416F7 xF9B68D xFA6E9C }
+    port = x64C8F2
+    city = xFA6E9C
+    farm = xF9B68D
+    mine = xE989BD
+    wood = xD964E1
+    arable_land = 55
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 10
+        bg_fishing = 14
+        bg_leviathan_outpost = 10
+        bg_game_hunting = 9
+        bg_squidding = 8
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3089
+}
+STATE_HADRA = {
+    id = 3693
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4AD7DB x74C9C7 x7983FC x81EEAC x88FBDE xCC83E3 xCD65F8 xD59CA5 xDCF6C7 xE5E93C xE9AEA3 xF166CA xF5CA42 }
+    port = x4AD7DB
+    city = xF5CA42
+    farm = xF166CA
+    mine = xE9AEA3
+    wood = xE5E93C
+    arable_land = 85
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 8
+        bg_fishing = 7
+        bg_game_hunting = 9
+        bg_leviathan_outpost = 3
+    }
+    naval_exit_id = 3089
+}
+STATE_BYRTHAS = {
+    id = 3694
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x84A7FC x8DD2E4 x92F4BD xB0F8B4 xCC75FB xCEA3A1 xD15CE3 xD88CAE xDAA3C9 xDFEC52 xF3A8CA xF469A4 xF7F7CD }
+    port = x84A7FC
+    city = xF7F7CD
+    farm = xF469A4
+    mine = xF3A8CA
+    wood = xDFEC52
+    arable_land = 70
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 8
+        bg_sulfur_mining = 14
+        bg_cloudsilver_mining = 22
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3052
+}
+STATE_LEPTHAR = {
+    id = 3695
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x26E7EB x59EDD3 x6EF1CF x7CBCC4 x93CB9F xA7C9E4 xB2E1EC xCEBB93 xE8AA78 xFA98E8 }
+    port = x26E7EB
+    city = xFA98E8
+    farm = xE8AA78
+    mine = xCEBB93
+    wood = xB2E1EC
+    arable_land = 60
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 9
+        bg_lead_mining = 30
+        bg_fishing = 10
+        bg_cloudsilver_mining = 27
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3013
+}
+STATE_THASPYR = {
+    id = 3696
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x4DD294 x6AF1B9 x75F3BD x98F082 xA6D0A1 xA7AFC7 xBA97D6 xD64577 xE7739D xFDE6C6 }
+    port = xE7739D
+    city = xA7AFC7
+    farm = xA6D0A1
+    mine = x98F082
+    wood = x6AF1B9
+    arable_land = 55
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 50
+        bg_sulfur_mining = 29
+        bg_lead_mining = 47
+        bg_coal_mining = 35
+        bg_cloudsilver_mining = 27
+        bg_logging = 15
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3052
+}
+STATE_LEPTISCA = {
+    id = 3698
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x22F8EC x5BCBD2 x6DBAFE x8AB7C4 xA9BE9F xB1A1BA xBDA0B8 xD9BD70 xDCD350 xDCE770 xE09995 xE783AD xEBDCED xF5B37F xF9EE5B }
+    port = x5BCBD2
+    city = xF5B37F
+    farm = xEBDCED
+    mine = xE783AD
+    wood = xE09995
+    arable_land = 55
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 15
+        bg_fishing = 13
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3052
+}
+STATE_OYRSA = {
+    id = 3699
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x83CAEC xB786E8 xCDB5BE xCED3E3 xD09CFC xD486A6 xEAD5A4 xEDDDD1 xF9E664 xFC51AE }
+    port = x83CAEC
+    city = xFC51AE
+    farm = xF9E664
+    mine = xEDDDD1
+    wood = xEAD5A4
+    arable_land = 37
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 23
+        bg_logging = 7
+        bg_fishing = 15
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3052
+}
+STATE_THAPSARIS = {
+    id = 3700
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x61D7E3 x6EEFC0 x7AF2A5 x88EFE3 x99C0AA xD9F94F xDDB79B xE1AE66 xEFEC26 xF7C3CA xF7D6D3 }
+    port = x61D7E3
+    city = xF7D6D3
+    farm = xF7C3CA
+    mine = xEFEC26
+    wood = xE1AE66
+    arable_land = 53
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_songberry_plantations" }
+    capped_resources = {
+        bg_logging = 8
+        bg_fishing = 12
+        bg_squidding = 7
+        bg_wishstone_reefs = 45
+    }
+    naval_exit_id = 3008
+}
+STATE_BLUMETO = {
+    id = 4313
+    traits = { "state_trait_extreme_cold" }
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x40EBF9 x4CD6EA x5CD4D7 x71BDD4 x71C1EC x93BCD0 x9E99F1 x9FCCA9 xA5A5C9 xA9DAA7 xAEABA1 "xBCE766" "xBEFC7F" "xC0A8F7" "xCE88D8" "xDEABC2" "xE28195" "xE4B6FE" "xED7BAF" "xF86DC0" "xFB5DCA" "xFD36FE" }
+    port = x5CD4D7
+    city = xFD36FE
+    farm = xF86DC0
+    mine = xED7BAF
+    wood = xE28195
+    arable_land = 70
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_wyrmfruit_plantations" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 20
+        bg_leviathan_outpost = 4
+        bg_fishing_goldfish = 7
+        bg_squidding = 9
+        bg_game_hunting = 8
+        bg_coal_mining = 25
+        bg_iron_mining = 20
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 17
+    }
+    resource = {
+        type = "bg_gnomish_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 9
+    }
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 1
+    }
+
+    naval_exit_id = 3089
+}
+STATE_HADRUMEA = {
+    id = 3701
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4CE6D3 x72B6F5 x7CEDDF x8ADEB4 x8EC8C8 x90B8E6 x96EBD2 xA1EBEB xA3E776 xB0C2DF xD5C8E4 xDC8AD7 xE127FC xE4DBFE xE6858B xEA9088 xEAE270 xEBAFC7 xED3CD2 xEEF360 xEFC2F4 xF86FCE }
+    port = x7CEDDF
+    city = xF86FCE
+    farm = xEFC2F4
+    mine = xED3CD2
+    wood = xEBAFC7
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 12
+        bg_fishing = 16
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 15
+    }
+    naval_exit_id = 3040
+}
+STATE_CARTHALIA = {
+    id = 3702
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x83F2B6 x8ADFD2 x91ECB1 x97BBAF xD9A3C2 xDCC8ED xE4F72A xF062E2 xFB48D8 xFE72E1 }
+    port = x83F2B6
+    city = xFE72E1
+    farm = xFB48D8
+    mine = xF062E2
+    wood = xE4F72A
+    arable_land = 14
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_fishing_glowfish = 12
+    }
+    naval_exit_id = 3071
+}
+STATE_ZAMARA = {
+    id = 3705
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x44BDF9 x5AFABA x71A7E9 x79D5B1 x7E99F9 x80FDB4 xA4BDBA xADFEDD xB2CCED xBDF184 xC7CAEA xDAA092 xDB7AB2 xDCC7DD xDEBD5B xE3F882 xEDFBBF xF0F8A3 xF218EB xFC6BAC }
+    port = xDEBD5B
+    city = xFC6BAC
+    farm = xF0F8A3
+    mine = xEDFBBF
+    wood = xDB7AB2
+    arable_land = 65
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 13
+        bg_fishing = 15
+        bg_lead_mining = 12
+        bg_sulfur_mining = 18
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3040
+}
+STATE_LEPTORIA = {
+    id = 3706
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x36F1F0 xABC5EF xB3E793 xD6F886 xD8D2A0 xDBA2B9 xE2C0EC xE59D9A xEC9CA4 xF967CF xFC6EEE }
+    port = x36F1F0
+    city = xFC6EEE
+    farm = xF967CF
+    mine = xEC9CA4
+    wood = xE59D9A
+    arable_land = 25
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 8
+        bg_fishing = 7
+    }
+    naval_exit_id = 3071
+}
+STATE_GADYRUS = {
+    id = 3707
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x8AC9DC x9ACEC1 xC3E6A4 xD39D96 xD6B385 xDDE4B1 xEBA1FB xF9926E xFAED1B xFBB5B5 }
+    port = x8AC9DC
+    city = xFBB5B5
+    farm = xFAED1B
+    mine = xF9926E
+    wood = xEBA1FB
+    arable_land = 65
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 8
+        bg_haunted_grounds = 6
+    }
+    naval_exit_id = 3071
+}
+STATE_EBYSS = {
+    id = 3708
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { xAAC8F3 xBA9DA3 xCAE28A xCEE5E5 xCFD18F xEB98CB xEE86BD xF9CE97 }
+    port = xBA9DA3
+    city = xF9CE97
+    farm = xEE86BD
+    mine = xEB98CB
+    wood = xCFD18F
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 9
+        bg_fishing = 3
+        bg_haunted_grounds = 6
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3052
+}
+STATE_SIGARA = {
+    id = 3709
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x2BE7E9 x64F3D1 x65FBBD x69CAD1 x73BAF4 x949AF1 xABF06B xB2DBEA xBF89D3 xC1A4D3 xC6A4A2 xDFEC71 xEACCF3 xEBB0DA xEC97C9 }
+    port = x2BE7E9
+    city = xEC97C9
+    farm = xEBB0DA
+    mine = xEACCF3
+    wood = xDFEC71
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 10
+        bg_fishing = 13
+        bg_haunted_grounds = 6
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 2
+    }
+    naval_exit_id = 3052
+}
+STATE_MOTHYA = {
+    id = 3710
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { xA6B8F8 xC365DE xCD89B9 xCFAB8B xD0FA73 xDBB1FE xDF72F9 xE19BB9 xE9BFD5 xEED85D xEFBC61 xF1F5F7 xF5FC7A }
+    port = xE9BFD5
+    city = xEFBC61
+    farm = xEED85D
+    mine = xD0FA73
+    wood = xE19BB9
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 18
+        bg_fishing = 13
+        bg_sulfur_mining = 20
+        bg_haunted_grounds = 6
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3052
+}
+STATE_LILYBAEUM = {
+    id = 3711
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x8BB1C6 xA4D3D2 xA8C9CB xAACE90 xB3E193 xC376FC xCEA1A5 }
+    port = x8BB1C6
+    city = xCEA1A5
+    farm = xC376FC
+    mine = xB3E193
+    wood = xAACE90
+    arable_land = 65
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 2
+        bg_fishing = 5
+        bg_haunted_grounds = 6
+    }
+    naval_exit_id = 3071
+}
+STATE_RUSARYA = {
+    id = 3713
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x27F5F5 x66EFA5 x71DEE9 x88EF9D x8EDDF8 x9FEB86 xB7DAAF xB99EB2 xC5BEE4 xD26BBC xD8ACC5 xF29F7B xF77EDC xF8B9C9 xFEEFDC }
+    port = x27F5F5
+    city = xFEEFDC
+    farm = xF8B9C9
+    mine = xF77EDC
+    wood = xF29F7B
+    arable_land = 90
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_logging = 4
+        bg_fishing = 12
+        bg_haunted_grounds = 6
+    }
+    naval_exit_id = 3052
+}
+STATE_BYSSYRA = {
+    id = 3716
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { xA0DBAC xA8DD95 xAFC3BB xB5A7C7 xC7BBC0 xC8CCE7 xCFBAA3 xD0B5BB xF0DD67 xF5F0C4 xF6FEBB xFA936B }
+    port = xA0DBAC
+    city = xFA936B
+    farm = xF6FEBB
+    mine = xF5F0C4
+    wood = xF0DD67
+    arable_land = 65
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_songberry_plantations" }
+    capped_resources = {
+        bg_logging = 8
+        bg_coal_mining = 12
+        bg_fishing = 11
+    }
+    naval_exit_id = 3052
+}
+STATE_CARTHAROS = {
+    id = 3717
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x3BDEFE x5DB4FB x63F89E x8ABED4 xA391F0 xBDC2EA xC1D5A2 xC5F67E xC9DB90 xD157E2 xDEA1E6 xECC7FD xF2FC97 xFB6EB1 xFD35E5 }
+    port = x63F89E
+    city = xFD35E5
+    farm = xFB6EB1
+    mine = xF2FC97
+    wood = xECC7FD
+    arable_land = 55
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_monuments = 1
+        bg_logging = 4
+        bg_fishing = 20
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 3
+    }
+    naval_exit_id = 3052
+}
+STATE_THASPIA = {
+    id = 3718
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x3DE6F8 x51FAE2 x53D9F0 x56E0D5 x7DD7DC x7EC0E9 x818FE5 x93F49C xB05BF8 xB096B6 xB9BFCE xCAD1B7 xD0A5B7 xD344EF xDA5DEC xE1F662 xE4CCFE xE8F4B9 xEEC6C9 xEFC69B xF2C5DF xF4D438 xF79DC9 xF7ABF7 xF7ECF7 }
+    port = x53D9F0
+    city = xF4D438
+    farm = xF2C5DF
+    mine = xD0A5B7
+    wood = xB9BFCE
+    arable_land = 52
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_songberry_plantations" }
+    capped_resources = {
+        bg_logging = 18
+        bg_fishing = 14
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 22
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 2
+    }
+
+    naval_exit_id = 3008
+}
+STATE_GADIRIS = {
+    id = 3719
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x72D8F1 x7BFDE4 x80F6C2 x8F7EEB xABB5B3 xB8A0AF xB8FC8A xCABEC8 xCBEA6C xD164E3 xD29DEC xDA51D8 xE2F1BE xE5D4C5 xF7FEB6 }
+    port = x72D8F1
+    city = xF7FEB6
+    farm = xE5D4C5
+    mine = xE2F1BE
+    wood = xDA51D8
+    traits = { "state_trait_natural_harbours" }
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_songberry_plantations" }
+    capped_resources = {
+        bg_logging = 8
+        bg_coal_mining = 13
+        bg_fishing = 11
+    }
+    naval_exit_id = 3008
+}
+STATE_ZUCARA = {
+    id = 3722
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x46FCBC x52FBCC x75EBC7 x7ADCD8 xAD94BF xADECA9 xCCD983 xD4FD45 xDD8DC7 xDDDE50 xF977F5 }
+    port = x46FCBC
+    city = xF977F5
+    farm = xDDDE50
+    mine = xDD8DC7
+    wood = xD4FD45
+    arable_land = 65
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_songberry_plantations" }
+    capped_resources = {
+        bg_logging = 3
+        bg_fishing = 3
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3052
+}
+STATE_CERNIA = {
+    id = 3724
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x5FEDDB xA78EC7 xD6D5D6 xD8B29B xD9C2DA xF064B1 xF0C687 xF7AFC6 }
+    port = x5FEDDB
+    city = xF7AFC6
+    farm = xF0C687
+    mine = xF064B1
+    wood = xD9C2DA
+    arable_land = 50
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_songberry_plantations" }
+    capped_resources = {
+        bg_logging = 8
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 30
+    }
+    naval_exit_id = 3008
+}
+STATE_NEOSCARPIA = {
+    id = 3725
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x62EAD2 xA365ED xC25DF4 xC37FB7 xE289C5 xEA58B4 }
+    port = x62EAD2
+    city = xEA58B4
+    farm = xE289C5
+    mine = xC37FB7
+    wood = xC25DF4
+    arable_land = 45
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_songberry_plantations" }
+    capped_resources = {
+        bg_coal_mining = 72
+        bg_logging = 11
+        bg_fishing = 10
+        bg_squidding = 7
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 17
+    }
+    naval_exit_id = 3008
+}
+STATE_KURTHARA = {
+    id = 3726
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x90F077 x94CFB4 xAFB8B9 xD39EC8 xD4E35E xDD9A81 xDDCDB0 xE7DC7D xE99195 xECB25A xF7BADA xFB86BB }
+    port = x94CFB4
+    city = xFB86BB
+    farm = xF7BADA
+    mine = xECB25A
+    wood = xE99195
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_fishing = 13
+        bg_leviathan_outpost = 3
+        bg_logging = 7
+        bg_game_hunting = 8
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 2
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3047
+}
+STATE_EBYSUS = {
+    id = 3727
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x29FBFB x55FAE5 x66B5F1 x7A94FD x7AE2F8 x9AC5D0 xA86FF5 xD0E154 xDEF5E8 xE0CBBE xF8B3E7 }
+    port = x29FBFB
+    city = xF8B3E7
+    farm = xE0CBBE
+    mine = xDEF5E8
+    wood = xD0E154
+    arable_land = 65
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_fishing = 15
+        bg_logging = 2
+        bg_leviathan_outpost = 2
+        bg_game_hunting = 10
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 1
+    }
+    naval_exit_id = 3047
+}
+STATE_KLYPYRA = {
+    id = 3728
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x8DDF89 x95ACEB xA2D9B2 xB9B8A1 xBDDFA0 xC4F349 xCCEA5F xD280B3 xE5D1DD xE9D1DF xF2DA4B }
+    port = x8DDF89
+    city = xF2DA4B
+    farm = xE9D1DF
+    mine = xE5D1DD
+    wood = xD280B3
+    arable_land = 65
+    arable_resources = { "bg_livestock_ranches" "bg_rye_farms" }
+    capped_resources = {
+        bg_fishing = 11
+        bg_leviathan_outpost = 4
+        bg_game_hunting = 4
+        bg_logging = 2
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 2
+        discovered_amount = 1
+    }
+    naval_exit_id = 3052
+}
+STATE_ZAMARIS = {
+    id = 3729
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x5DC3EE x8AC0BB xA1B4E7 xBFCCFE xC769CF xC9A89F xE69BF8 xF947CB }
+    port = x5DC3EE
+    city = xF947CB
+    farm = xE69BF8
+    mine = xC9A89F
+    wood = xC769CF
+    arable_land = 55
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 15
+        bg_logging = 5
+        bg_fishing = 14
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 2
+    }
+    naval_exit_id = 3040
+}
+STATE_LEPIDRA = {
+    id = 3730
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x58C1F0 x81EDC4 xA67BD5 xB5DCC3 xC6E69C xC8F388 xD958CE xDF8BDA xE39A8F }
+    port = xA67BD5
+    city = xE39A8F
+    farm = xDF8BDA
+    mine = xD958CE
+    wood = xC8F388
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 25
+        bg_logging = 11
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3052
+}
+STATE_ZARTHOS = {
+    id = 3731
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4DDFF6 x54C0F3 x91D2E3 xACE1CE xBEAD9C xBECEF1 xDD91E0 xE2D4FD xE68CCA xE6EABD xE72FF7 }
+    port = x4DDFF6
+    city = xE72FF7
+    farm = xE6EABD
+    mine = xE68CCA
+    wood = xE2D4FD
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 9
+        bg_hunting = 13
+        bg_fishing = 6
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 2
+    }
+    naval_exit_id = 3052
+}
+STATE_MYSARA = {
+    id = 3732
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x81E4D2 x97B5B9 x9B80F1 xCADE81 xD0BEE9 xD348E3 xD9F13B xDBEE6D xE0D9EB }
+    city = xDBEE6D
+    farm = xD9F13B
+    mine = xD348E3
+    wood = xD0BEE9
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 33
+        bg_lead_mining = 18
+        bg_logging = 8
+        bg_cloudsilver_mining = 26
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 6
+        discovered_amount = 1
+    }
+
+}
+STATE_CYRRA = {
+    id = 3733
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x47DDE3 x56F9CA x5FC4D2 x61D8BD x7ADADD x8E8EF7 x8FB6FE x9390F6 x95E1DF x9A9ADB x9AB8D4 x9EF2DB xA0AECC xA892F0 xA981FD xA9D4BB xABFDE3 xAEC4BB xAFE4F8 xB3C5F6 xB9FDEB "xBDC7DD" "xC78CDB" "xC9D5CD" "xCBCCF5" "xCCA6B8" "xCCEF4C" "xD953E3" "xDBDECA" "xE4E249" "xE560FB" "xE5DFB9" "xE742D9" "xE9F5F1" "xF0B29B" "xF8F2BE" "xF9AEE6" "xFEA38A" }
+    port = x56F9CA
+    city = xFEA38A
+    farm = xF9AEE6
+    mine = xF8F2BE
+    wood = xE9F5F1
+    arable_land = 160
+    arable_resources = { "bg_livestock_ranches" "bg_rye_farms" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_game_hunting = 17
+        bg_logging = 23
+        bg_fishing = 13
+        bg_squidding = 20
+        bg_lead_mining = 10
+        bg_leviathan_outpost = 20
+        bg_fishing_goldfish = 6
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 40
+    }
+    naval_exit_id = 3089
+}
+STATE_BYSARIS = {
+    id = 3734
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { xBFCAAC xE662BE xF3DEE2 }
+    port = xBFCAAC
+    city = xF3DEE2
+    farm = xE662BE
+    arable_land = 50
+    arable_resources = { "bg_livestock_ranches" "bg_rye_farms" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_fishing = 15
+        bg_squidding = 5
+        bg_logging = 7
+        bg_leviathan_outpost = 8
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 40
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3040
+}
+STATE_CALTHA = {
+    id = 3735
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x26E1F6 x57E7FA x92A6F2 xA5CAE9 xB594DA xBCE9A5 xBDB09B xDABE85 xE3AEB7 xE540F8 xFAE47E }
+    port = xA5CAE9
+    city = xFAE47E
+    farm = xE540F8
+    mine = xE3AEB7
+    wood = xDABE85
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 11
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+    }
+    naval_exit_id = 3052
+}
+STATE_THYRIS = {
+    id = 3736
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x7EB0F9 xA3F0E2 xA8A0B7 xAA86C7 xAC90EC xB4A0E5 xB75DE1 xC2CFE5 xDA91E4 xE233E3 xF3F5FA xF8D18D xFC94EB }
+    port = xA3F0E2
+    city = xFC94EB
+    farm = xF8D18D
+    mine = xF3F5FA
+    wood = xE233E3
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 8
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3040
+}
+STATE_ZABARA = {
+    id = 3737
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x35F8E9 x3DC8F8 x72DEC9 xB2B6B7 xB8A9B7 xB9F666 xD577BD xDADAAB xEF77CA xF1B1C3 xF57591 }
+    port = x35F8E9
+    city = xF57591
+    farm = xF1B1C3
+    mine = xEF77CA
+    wood = xDADAAB
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3040
+}
+STATE_BRESTVARL = {
+    id = 3738
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x35EFE0 x46F3DA x69D5C3 x6BE6A9 x6DCAD7 x6DFAB1 x84DEE1 x97E095 xB2A1F9 xBBE5C5 xBCE6EC xD788DB xD963D4 xE85ADD xEFF6BD xFA82C7 xFCF53C xFEF304 }
+    port = x35EFE0
+    city = xFEF304
+    farm = xFCF53C
+    mine = xFA82C7
+    wood = xD963D4
+    traits = { "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 35
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 20
+        bg_fishing = 12
+        bg_leviathan_outpost = 7
+        bg_squidding = 9
+        bg_game_hunting = 12
+        bg_haunted_grounds = 7
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3047
+}
+STATE_RAVGA = {
+    id = 3740
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4ED3DC x56E2CB x65D9BD x81AEDC x8AF1EF x8F81EE x90E6CB x91E2E6 x94B3EC x95E5E1 x9B98EC xA6BF90 xB661E9 xBB61E6 xC162F0 xC99EAC xCA81F3 xCAC7CE xD3D198 xD6C6C9 xD8E7A7 xD9E279 xD9FCE6 xDCCFF0 xE79EE2 xE7EB34 xE9F1DA xEBBF70 xEEF3D3 xF1DAA2 xF317F3 xF39A80 xF7F525 xF7F528 xF9E1D5 xFAEFCB xFB70A8 xFC45DF xFDF4E8 }
+    port = x65D9BD
+    city = xFDF4E8
+    farm = xFC45DF
+    mine = x8AF1EF
+    wood = xFB70A8
+    traits = { "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 40
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 20
+        bg_fishing = 20
+        bg_coal_mining = 23
+        bg_iron_mining = 35
+        bg_game_hunting = 15
+        bg_squidding = 18
+        bg_leviathan_outpost = 19
+        bg_haunted_grounds = 33
+    }
+    resource = {
+        type = "bg_giant_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3029
+}
+STATE_KJELLORU = {
+    id = 3741
+    traits = { "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4AF1F4 x4DFBF3 x59030C x65DCE1 x81C284 x9ED1D2 xA0C2A0 xACB0BA xBA7EFC xBBE48E xBEC775 xBECBD3 xC7CBFC xD1B4AD xD9AF8C xDEFA6F xEEF3F3 xF175CE xF1AD6B xF3CDC3 xFB9681 xFBF3D6 }
+    impassable = { x59030C x81C284 xBECBD3 xEEF3F3 }
+    port = xBBE48E
+    city = xFBF3D6
+    farm = xFB9681
+    mine = xF3CDC3
+    wood = xF1AD6B
+    traits = { "state_trait_toftir_mountains" }
+    arable_land = 25
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 6
+        bg_wishstone_mining = 12 #seems out of place
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        bg_haunted_grounds = 20
+        bg_leviathan_outpost = 13
+        bg_coal_mining = 10
+        bg_cloudsilver_mining = 25
+        bg_game_hunting = 5
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 22
+        undiscovered_amount = 7
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
+    }
+    naval_exit_id = 3047
+}
+STATE_SJETADIKK = {
+    id = 3742
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x53C6F6 x7589FA x83EEBA x84B8DD x9423B6 xAFCDA7 xBBAEB6 xC672E5 xC689E3 xCCFB4C xCCFDA3 xCDFD62 xD5DF43 xE1BFE1 xE79895 xE887C0 xF18FB7 xF22FD4 xF4E06B xF5AD5B xF86AB8 xF8CDF8 xFE9664 }
+    impassable = { x9423B6 xCCFB4C xF4E06B }
+    city = xF22FD4
+    farm = xF18FB7
+    mine = xE887C0
+    wood = xE1BFE1
+    traits = { "state_trait_toftir_mountains" "state_trait_extreme_cold" }
+    arable_land = 35
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 12
+        bg_iron_mining = 40
+        bg_coal_mining = 31
+        bg_sulfur_mining = 14
+        bg_game_hunting = 12
+        bg_haunted_grounds = 20
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 85
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 6
+    }
+
+}
+STATE_SYLVARIN = {
+    id = 3743
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x36EFFA x57BDE5 x63F2FE x69F9D9 x6DDEB2 x75F2D8 x7BC4B9 x87A6EA x87D5B0 x96D2B7 xA0CEA2 xA2E7A4 xB4BDB3 xB8D4E8 xC884B3 xCDCAF9 xD2D851 xD2E8AC xD38CBC xD5D083 xD8ECBA xDBABD7 xDBFADA xDFC9DF xE67D9B xE78BE1 xEBCED3 xECB7DF xEDB477 xF0EBD7 xF48F7D xF7ADF4 }
+    port = x57BDE5
+    city = xF7ADF4
+    farm = xEDB477
+    mine = xEBCED3
+    wood = xE78BE1
+    traits = { "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 45
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 15
+        bg_fishing = 20
+        bg_iron_mining = 20
+        bg_leviathan_outpost = 9
+        bg_squidding = 8
+        bg_game_hunting = 10
+        bg_haunted_grounds = 10
+        bg_coal_mining = 36
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 10
+    }
+    naval_exit_id = 3029
+}
+STATE_BRIFTEPLYG = {
+    id = 3744
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x51F7F9 x82B6FD x9CCFE6 xA8F08C xAAE87B xADF7A0 xB1B1F9 xB8A5BE xBE84C0 xC9B9E9 xCAEDA1 xCC4EFE xCD98F4 xDAC463 xDB86B1 xE0F18E xE878A5 xEAEE81 xEFBDAB xFBF30C xFD56F7 }
+    city = xEFBDAB
+    farm = xEAEE81
+    mine = xE878A5
+    wood = xE0F18E
+    traits = { "state_trait_extreme_cold" }
+    arable_land = 35
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 7
+        bg_haunted_grounds = 14
+        bg_iron_mining = 37
+        bg_lead_mining = 29
+        bg_game_hunting = 4
+    }
+    resource = {
+        type = "bg_giant_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+
+}
+STATE_DUODJI = {
+    id = 3746
+    traits = { "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_pastures"
+    provinces = { x0BFEF7 x2CE7EC x39DCFC x58FEFC x69E5C9 xAC9EF7 xC6FC7E xCDA1A8 xCDF7AB xCFDFCD xE27ECF xE494F7 xF4EA5C xF6D99D xF8AAF0 xFB53E9 }
+    city = xF8AAF0
+    farm = xF6D99D
+    mine = xF4EA5C
+    wood = xE494F7
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_wishstone_mining = 17
+        bg_haunted_grounds = 13
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 25
+        undiscovered_amount = 3
+    }
+    resource = {
+        type = "bg_giant_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 9
+    }
+
+}
+STATE_NUWUKUNBRUKT = {
+    id = 3747
+    traits = { "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x60C2E9 x71D3DE x75E6B1 x9EC3EA xB3D8EB xBCC79F xCDFCDB xD3C6CD xD5DB59 xDB79B9 xDD5FE0 xDD7FB9 xE269F9 xE8B184 xF0E0CE xF2CD3E }
+    port = x71D3DE
+    city = xF2CD3E
+    farm = xF0E0CE
+    mine = xE8B184
+    wood = xE269F9
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 8
+        bg_wishstone_mining = 27
+        bg_leviathan_outpost = 10
+        bg_haunted_grounds = 17
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 20
+        undiscovered_amount = 9
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 2
+    }
+    naval_exit_id = 3004
+}
+STATE_AHKKU = {
+    id = 3748
+    traits = { "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x24FC2B x571134 x62FCD9 x63F8FD x68E9E1 x81A2E3 x90EC7E xA1DEF3 xA48FFC xC141F7 xC3E97D xCA97D9 xD7A9C3 xE16EF9 xE27CFA xE6C2B4 xEBB2DB xEBC6D0 xF0C185 xF372B5 }
+    impassable = { x24FC2B x571134 xD7A9C3 }
+    port = x68E9E1
+    city = xF0C185
+    farm = xEBC6D0
+    mine = xEBB2DB
+    wood = xE16EF9
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 10
+        bg_wishstone_mining = 30
+        bg_haunted_grounds = 20
+        bg_leviathan_outpost = 12
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 22
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3004
+}
+STATE_GRORBONFOW = {
+    id = 3749
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x72E9DE x8EE3FE x8FEC96 x94C0DC x95DBB7 x98A5DE xA3A4D7 xA468F0 xAF9DDF xAF9E0B xB1D595 xB677EB xC13CFE xC7C89B xCD6FC8 xCFED81 xD7C7F2 xE3D4CC xFB9B5F xFBE3B9 xFDFA61 }
+    port = x8EE3FE
+    city = xFDFA61
+    farm = xFBE3B9
+    mine = xFB9B5F
+    wood = xE3D4CC
+    traits = { "state_trait_toftir_mountains" "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 9
+        bg_game_hunting = 5
+        bg_leviathan_outpost = 4
+        bg_fishing = 10
+        bg_coal_mining = 40
+        bg_iron_mining = 30
+        bg_squidding = 5
+        bg_haunted_grounds = 11
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
+    }
+    naval_exit_id = 3029
+}
+STATE_FLULDAURBYM = {
+    id = 3751
+    traits = { "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x42EFFC x5D607E x6BF6F6 x70C9FC x7AB4DB x81E4CD x82C3D7 xA0E88B xA8C4FE xACB993 xBFFCAB xC494FD xC838F9 xD0C19B xD8A8AD xD985E0 xDBD07B xEDD385 xF251DB xF2BEF8 xF2F9D6 xF869DA xFB8C81 xFD42EA }
+    port = x42EFFC
+    city = xFD42EA
+    farm = xFB8C81
+    mine = xF869DA
+    wood = xF2F9D6
+    arable_land = 15
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 7
+        bg_logging = 2
+        bg_leviathan_outpost = 5
+        bg_wishstone_mining = 18
+        bg_haunted_grounds = 19
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 30
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "bg_giant_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3004
+}
+STATE_DASRUGODA = {
+    id = 3752
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x2AEEF6 x4FCDED x5BE1D2 x5EEEDF x73D4D1 x83F2A2 x84BEFB x85C5DF x8AFCE9 x997BFC xAFB0F2 xB283D4 xBAC5D0 xBD8BED xC1AFEA xC5ED71 xC76DD8 xD2EB77 xE279FA xE3CBB5 xE5BFDA xF3B0C0 xF5CB4A xFEEB32 }
+    city = xE5BFDA
+    farm = xE279FA
+    mine = xC76DD8
+    wood = xBD8BED
+    traits = { "state_trait_toftir_mountains" "state_trait_extreme_cold" }
+    arable_land = 25
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 10
+        bg_game_hunting = 11
+        bg_cloudsilver_mining = 20
+        bg_haunted_grounds = 7
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+    }
+
+}
+STATE_WUTUNWOS = {
+    id = 3753
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x52FBAC x76DBED x85FA86 xAEED8A xB0A1E6 xB1ED64 xC1E752 xD7E23E xDD2CF6 xDE6EAD xE485AB xEE85C2 xF26BFD xF84EEE xFADB61 }
+    port = x76DBED
+    city = xFADB61
+    farm = xF84EEE
+    mine = xF26BFD
+    wood = xEE85C2
+    traits = { "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 45
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 8
+        bg_fishing = 11
+        bg_leviathan_outpost = 10
+        bg_game_hunting = 5
+        bg_squidding = 8
+        bg_haunted_grounds = 11
+    }
+    naval_exit_id = 3004
+}
+STATE_BRAATTA = {
+    id = 3755
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x041F50 x0FC191 x1973C9 x2A3E2A x4209F6 x52DFCA x54048D x5BFD49 x7CA1E0 x85AB8B x88A4FB x88E4F0 x9DE8EC xA2D7F8 xA3AA58 xA3B0BE xA3C59A xBA65E6 xBCF4A9 xBDBBFB xC2BBB3 xC3EAD0 xC798F8 xCCDED4 xD455F7 xDC60D0 xDEB77B xE5D0D6 xE7EE70 xEF6DF3 xF23AFA }
+    impassable = { x041F50 x0FC191 x1973C9 x2A3E2A x4209F6 x54048D x5BFD49 x85AB8B xA3AA58 xBDBBFB xEF6DF3 }
+    city = xDEB77B
+    farm = xCCDED4
+    mine = xC798F8
+    wood = xBCF4A9
+    impassable = { x0FC191 x54048D x85AB8B xA3AA58 }
+    traits = { "state_trait_toftir_mountains" "state_trait_extreme_cold" }
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 100
+        bg_game_hunting = 17
+        bg_lead_mining = 30
+        bg_cloudsilver_mining = 65
+        bg_haunted_grounds = 30
+        bg_coal_mining = 15
+        bg_iron_mining = 10
+    }
+    resource = {
+        type = "bg_ice_cap"
+        discovered_amount = 30
+        undiscovered_amount = 8
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
+    resource = {
+        type = "bg_giant_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 6
+    }
+
+}
+STATE_RUAATTA = {
+    id = 3757
+    traits = { "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x2BFBEF x49F4EA x67C1E5 x6D80F2 x90EF92 x93B2C8 xA16DFC xA5F675 xA8CB83 xAACBF6 xB08AE9 xB6DD91 xBF7EF2 xC991DA xCBB7EC xCE93DE xD0B380 xD0F442 xD2EC43 xD67BEB xDC71E1 xDCBBF9 xDCBE5E xDCCF4A xE152CD xE2AAFA xE3EA6F xE4B2B2 xE6D999 xE7A2EF xE7CD98 xF0FC37 xF2DA5F xF3F50E xF6FAC1 xF98DEA "xFEAF4F" }
+    impassable = { x6D80F2 xAACBF6 xB08AE9 xC991DA xE4B2B2 xE7A2EF }
+    prime_land = { x49F4EA x67C1E5 }
+    city = xF6FAC1
+    farm = xF3F50E
+    mine = xF2DA5F
+    wood = xF0FC37
+    arable_land = 25
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 3
+        bg_wishstone_mining = 40
+        bg_haunted_grounds = 30
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 25
+        undiscovered_amount = 13
+    }
+    resource = {
+        type = "bg_giant_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 12
+    }
+
+}
+STATE_LUMINEVRA = {
+    id = 3758
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4AFDBC x6EDEC8 x92B8F2 x9CCAAC xA8EA91 xB366DD xB3D9FE xB986E2 xC1E080 xD0C382 xD4EC43 xE394B4 xECD370 xF7E5B8 xFB27DF }
+    port = x6EDEC8
+    city = xFB27DF
+    farm = xF7E5B8
+    mine = xECD370
+    wood = xE394B4
+    traits = { "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 18
+        bg_fishing = 12
+        bg_game_hunting = 6
+        bg_squidding = 8
+        bg_iron_mining = 27
+        bg_haunted_grounds = 6
+        bg_leviathan_outpost = 6
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3029
+}
+STATE_SATBULV = {
+    id = 3763
+    traits = { "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x45F0D3 x6BEBF6 x94A7CC x9CCF99 xA2CB8F xA4BCC0 xA4DD80 xCFF258 xD7F992 xE2A5C3 xE5C0FC xEBEFD0 xF4D289 xF65FB6 }
+    port = x6BEBF6
+    city = xA4DD80
+    farm = xF65FB6
+    mine = xF4D289
+    wood = xEBEFD0
+    arable_land = 15
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 6
+        bg_leviathan_outpost = 10
+        bg_wishstone_mining = 24
+        bg_haunted_grounds = 15
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 25
+        undiscovered_amount = 8
+    }
+    resource = {
+        type = "bg_giant_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3004
+}
+STATE_SILENTWISP = {
+    id = 3764
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4CFECB x61B2F1 x9187FD xBCC6BB xBDA79B xC4F6E6 xDE44F4 xDFF441 xEB70B7 xF76BD0 }
+    port = x4CFECB
+    city = xF76BD0
+    farm = xEB70B7
+    mine = xDFF441
+    wood = xDE44F4
+    traits = { "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 25
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 4
+        bg_game_hunting = 8
+        bg_squidding = 6
+        bg_fishing = 20
+        bg_haunted_grounds = 6
+        bg_leviathan_outpost = 6
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 37
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 2
+    }
+    naval_exit_id = 3047
+}
+STATE_RAHKIS = {
+    id = 3765
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x40F2DC x49DDF1 x70FD92 x75EDA5 x92C4CD xA7CDB3 xA9DFE8 xAEFEE3 xB1DEA3 xCAC283 xDAB185 xE2BA98 xE452EB xE6EF8C xEDC2A4 xEFE06D }
+    port = xA7CDB3
+    city = xEFE06D
+    farm = xEDC2A4
+    mine = xCAC283
+    wood = x75EDA5
+    traits = { "state_trait_leviathan_killers" "state_trait_extreme_cold" }
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 20
+        bg_fishing = 20
+        bg_leviathan_outpost = 10
+        bg_haunted_grounds = 9
+        bg_squidding = 15
+        bg_game_hunting = 13
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3047
+}
+STATE_WHIRINAKI = {
+    id = 3381
+    traits = { "state_trait_extreme_cold" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x53B0F6 x62BADF x83FCE8 x86E2EA x94ED9A xACDF98 xB7CCF9 xB7DE78 xBEC67E xCD9ECC xCE54EA xCFE758 xD4B58D xDCE897 xE7C55E xE8F584 "xEBEFCC" "xEEFE4A" "xEFC6B0" "xF3996E" "xF869FB" "xF8A276" "xFB719F" }
+    prime_land = { xBEC67E }
+    port = x53B0F6
+    city = xFB719F
+    farm = xF8A276
+    mine = xEFC6B0
+    wood = xEEFE4A
+    arable_land = 55
+    arable_resources = { "bg_livestock_ranches" "bg_wyrmfruit_plantations" "bg_rye_farms" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 16
+        bg_squidding = 7
+        bg_fishing = 6
+        bg_sulfur_mining = 20
+        bg_game_hunting = 5
+        bg_fishing_goldfish = 6
+    }
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 1
+    }
+    naval_exit_id = 3089
+}
+STATE_RUMATARI = {
+    id = 3382
+    traits = { "state_trait_rimeroot_jungle" "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x39F5D9 x3CF3F7 x5FF1E3 x6BF7DC x75C5F0 x76E7C4 x7CA4DF x83EDE2 x8FA9CA x9AB6CB "xA4EEAD" "xACF45A" "xADED62" "xB49BAB" "xBFA8F2" "xC366E2" "xC3A0ED" "xCAEBDE" "xCBA492" "xCFB8F2" "xD1CFE7" "xDAB3B4" "xE2DAC1" "xE4E72F" "xF2D0EF" "xF78AC9" "xF9ACE6" "xFCAA99" }
+    port = xA4EEAD
+    city = xF78AC9
+    farm = xF2D0EF
+    mine = xCFB8F2
+    wood = xB49BAB
+    arable_land = 55
+    arable_resources = { "bg_livestock_ranches" "bg_wyrmfruit_plantations" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_iron_mining = 18
+        bg_logging = 27
+        bg_squidding = 16
+        bg_wishstone_mining = 30
+        bg_leviathan_outpost = 16
+        bg_game_hunting = 15
+        bg_haunted_grounds = 13
+    }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 3
+    }
+
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 40
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        undiscovered_amount = 30
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 2
+    }
+    naval_exit_id = 3031
+}
+STATE_RONGOMARA = {
+    id = 3385
+    traits = { "state_trait_rimeroot_jungle" "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x6CD9F0 x73D8E6 x7BD5F7 x82F285 x85E690 x8F95E6 x9EE6E3 xA164F7 xA2F87F xA5A1DE xB7C89A "xBFD965" "xC2E769" "xC3E0CB" "xC7C4D6" "xC893C1" "xD59696" "xE1B7A7" "xE2B18D" "xEBA999" "xF08E97" "xF2D167" "xF843DE" }
+    port = x7BD5F7
+    city = xF08E97
+    farm = xE1B7A7
+    mine = xC893C1
+    wood = xC3E0CB
+    arable_land = 70
+    arable_resources = { "bg_livestock_ranches" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 30
+        bg_squidding = 16
+        bg_fishing_goldfish = 8
+        bg_game_hunting = 10
+        bg_leviathan_outpost = 12
+        bg_wishstone_mining = 30
+        bg_haunted_grounds = 10
+        bg_iron_mining = 36
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 35
+        undiscovered_amount = 13
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        undiscovered_amount = 45
+    }
+    resource = {
+        type = "bg_wyrmfruit_plantations"
+        undiscovered_amount = 9
+        discovered_amount = 3
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
+    }
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 1
+    }
+    naval_exit_id = 3089
+}
+STATE_GARPATIA = {
+    id = 3386
+    traits = { "state_trait_extreme_cold" }
+    subsistence_building = "building_subsistence_pastures"
+    provinces = { x5DE7DB x72E7C7 x8DE2E3 x92C6A0 x99B7B0 x9AC4FD x9AF76B xACBEC6 xAD9EDB xC1CDA1 xC2BADB xCAA4DE xCFCC7B xD26DFE xE18CEC xE1A8E8 xE3FD6C xE8BCBD xEAE777 xEE808C xF08A99 xF4919D xF64CCD xF6C365 xFC48EE xFC5AB0 xFC9AB4 }
+    port = xFC9AB4
+    city = xFC5AB0
+    farm = xFC48EE
+    mine = xF6C365
+    wood = xF64CCD
+    arable_land = 75
+    arable_resources = { "bg_livestock_ranches" "bg_wyrmfruit_plantations" "bg_mint_tea_plantations" "bg_rye_farms" }
+    capped_resources = {
+        bg_logging = 12
+        bg_coal_mining = 40
+        bg_cloudsilver_mining = 38
+        bg_game_hunting = 11
+        bg_wishstone_mining = 15
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        undiscovered_amount = 40
+    }
+    resource = {
+        type = "bg_sunstation"
+        discovered_amount = 1
+    }
+    resource = {
+        type = "bg_gnomish_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 10
+        discovered_amount = 2
+    }
+    naval_exit_id = 3197
+}
+STATE_PUCOVATU = {
+    id = 3389
+    traits = { "state_trait_rimeroot_jungle" "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x4EECC1 x60D9F1 x63FDE9 x68A2ED x82D2DB x83E29C x8CF6EE xADC3CE xC87BD3 xCDE598 xD5A7B1 xDDEDEC "xE9C397" "xE9E44C" "xEAD09F" "xEBDF56" "xEEF580" "xF3ADAC" "xF5E4BC" "xF6AA82" }
+    port = x68A2ED
+    city = xF6AA82
+    farm = xF5E4BC
+    mine = xEBDF56
+    wood = xEAD09F
+    arable_land = 65
+    arable_resources = { "bg_livestock_ranches" "bg_wyrmfruit_plantations" "bg_mint_tea_plantations" "bg_rye_farms" }
+    capped_resources = {
+        bg_iron_mining = 12
+        bg_lead_mining = 35
+        bg_logging = 20
+        bg_squidding = 8
+        bg_game_hunting = 10
+        bg_wishstone_mining = 26
+        bg_haunted_grounds = 13
+        bg_leviathan_outpost = 8
+        bg_fishing_goldfish = 7
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 20
+        undiscovered_amount = 13
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        undiscovered_amount = 55
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 4
+        discovered_amount = 10
+    }
+
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 1
+    }
+
+    naval_exit_id = 3089
+}
+STATE_TURAKINA = {
+    id = 3390
+    traits = { "state_trait_extreme_cold" }
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x7B95FE x7C9FF3 x85D4E8 x8AE5FB x8FE9A6 x90E1FD x9ECAD3 xA278FE xADEFE2 xAFAFF4 xB287CF xC282C7 xC7E896 "xC863EE" "xD3AE93" "xE461BB" "xE7A4D0" "xEFE05C" "xF1A07E" "xFC9AF0" "xFEE3F0" }
+    port = x7B95FE
+    city = xFEE3F0
+    farm = xFC9AF0
+    mine = xF1A07E
+    wood = xE7A4D0
+    arable_land = 70
+    arable_resources = { "bg_livestock_ranches" "bg_mint_tea_plantations" "bg_rye_farms" }
+    capped_resources = {
+        bg_logging = 22
+        bg_coal_mining = 50
+        bg_game_hunting = 13
+        bg_wishstone_mining = 33
+        bg_squidding = 8
+        bg_leviathan_outpost = 6
+        bg_fishing_goldfish = 8
+    }
+    resource = {
+        type = "bg_wyrmfruit_plantations"
+        undiscovered_amount = 20
+        discovered_amount = 5
+    }
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 1
+    }
+
+    naval_exit_id = 3031
+}
+STATE_RAROMARA = {
+    id = 3391
+    traits = { "state_trait_extreme_cold" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x9885E2 xC1D388 xC6F3BA xC8A5A2 xC969EC xCCCBF8 xD4D686 xD5AD81 xD643E7 xDBCABA xDC87D0 xDFD553 xE14FDF xE3C6D4 xE3D267 xE570ED xE6AEE9 xE9E2A4 xEB62FD xF164DB xF4EE58 xFCFC7F xFEBC56 }
+    port = xE3D267
+    city = xE3C6D4
+    farm = xE9E2A4
+    mine = xDBCABA
+    wood = xDBCABA
+    arable_land = 120
+    arable_resources = { "bg_livestock_ranches" "bg_wyrmfruit_plantations" "bg_rye_farms" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 30
+        bg_squidding = 13
+        bg_fishing = 5
+        bg_game_hunting = 10
+        bg_wishstone_mining = 14
+        bg_leviathan_outpost = 5
+        bg_fishing_goldfish = 8
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        undiscovered_amount = 55
+    }
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 1
+    }
+    naval_exit_id = 3089
+}
+STATE_LUNARATA = {
+    id = 3392
+    traits = { "state_trait_rimeroot_jungle" "state_trait_permafrost" }
+    subsistence_building = "building_subsistence_fishing_villages"
+    provinces = { x29FCED x32CBF9 x3DD3F8 x59B3F0 x77EDEA xB6C1B7 xBCE9B4 xD2DF7A xD4BB91 xD674B4 xDA8BBC "xDBD753" "xDFABAE" "xE38DF8" "xE6C5DA" "xE7E574" "xF8B07E" "xFD89F1" "xFDC9F8" }
+    port = x3DD3F8
+    city = xFDC9F8
+    farm = xFD89F1
+    mine = xF8B07E
+    wood = xE7E574
+    arable_land = 75
+    arable_resources = { "bg_livestock_ranches" "bg_wyrmfruit_plantations" "bg_rye_farms" "bg_mint_tea_plantations" }
+    capped_resources = {
+        bg_logging = 15
+        bg_squidding = 8
+        bg_fishing_goldfish = 7
+        bg_game_hunting = 13
+        bg_leviathan_outpost = 4
+        bg_haunted_grounds = 14
+        bg_lead_mining = 16
+        bg_iron_mining = 18
+        bg_wishstone_mining = 23
+    }
+    resource = {
+        type = "bg_ice"
+        discovered_amount = 30
+        undiscovered_amount = 10
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        undiscovered_amount = 45
+    }
+
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "bg_sunstation"
+        undiscovered_amount = 1
+    }
+    naval_exit_id = 3031
+}

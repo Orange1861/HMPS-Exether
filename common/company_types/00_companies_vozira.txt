@@ -1,0 +1,139 @@
+﻿company_baltendo_ltd = {
+	icon = "gfx/interface/icons/company_icons/baltendo.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_airshipyards
+		building_motor_industry
+		building_steel_mills
+	}
+
+	extension_building_types = { 
+		building_cloudsilver_mine
+		building_artillery_foundries
+	}
+
+	possible_prestige_goods = {
+		prestige_good_uncommon_airships
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_nogi_desert
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SKYPIERCER_PEAK
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_SKYPIERCER_PEAK
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mills
+					is_building_type = building_airshipyards
+					is_building_type = building_motor_industry
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = airship
+	}
+	
+	prosperity_modifier = {
+		unit_recovery_rate_add = 0.1
+		building_cloudsilver_mine_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+
+	ai_will_do = { 
+		any_scope_state = {
+			state_region = s:STATE_CLOUDSILVER_SPINE
+			is_incorporated = yes
+		}
+	}
+}
+
+company_murads_sweepers = {
+	icon = "gfx/interface/icons/company_icons/minecraft.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_opium_plantation
+		building_desert_hunting_lodge
+		building_coal_mine
+	}
+
+	extension_building_types = { 
+		building_railway
+		building_trade_center
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_nogi_desert
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_bengal_opium
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RICHAR_JEDD
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_RICHAR_JEDD
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_coal_mine
+					is_building_type = building_opium_plantation
+					is_building_type = building_desert_hunting_lodge
+				}
+				level >= 5
+			}
+		}
+		has_technology_researched = atmospheric_engine
+	}
+	
+	prosperity_modifier = {
+		state_lower_strata_standard_of_living_add = 0.5
+		building_opium_plantation_throughput_add = 0.1
+		building_railway_throughput_add = 0.1
+	}	
+	
+	ai_will_do = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_coal_mine
+					is_building_type = building_opium_plantation
+					is_building_type = building_desert_hunting_lodge
+				}
+				level >= 3
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

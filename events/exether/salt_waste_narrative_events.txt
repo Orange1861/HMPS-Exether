@@ -1,0 +1,1073 @@
+﻿namespace = salt_waste_narrative_events
+
+salt_waste_narrative_events.1 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.1.t
+	desc = salt_waste_narrative_events.1.d
+	flavor = salt_waste_narrative_events.1.f
+
+	event_image = {
+		video = "salt_wastes_orc"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			NOT = { has_modifier = salt_waste_wards }
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_rangers
+				has_modifier = salt_waste_wards
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = water_vampire_assault_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		set_variable = salt_waste_wards_consequences_happening
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = water_vampire_assault_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.1.a
+		trigger = {
+			OR = {
+				NOT = { has_modifier = salt_waste_patrols }
+				AND = {
+					NOT = { has_modifier = salt_waste_rangers }
+					NOT = { has_modifier = salt_waste_wards }
+				}
+			}
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:water_vampire_assault_state = {
+			state_region = {
+				add_devastation = 10
+			}
+			kill_population_percent_in_state = {
+				percent = 0.05
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+			add_modifier = {
+				name = modifier_state_salt_rampaging_monsters
+				years = 5
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_at_least_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.1.ba
+		trigger = {
+			NOT = { has_modifier = salt_waste_rangers }
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:water_vampire_assault_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.1.bb
+		trigger = {
+			has_modifier = salt_waste_rangers
+			NOT = { has_modifier = salt_waste_wards }
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:water_vampire_assault_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.1.c
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = water_vampire_assault_state_handled
+	}
+}
+
+salt_waste_narrative_events.2 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.2.t
+	desc = salt_waste_narrative_events.2.d
+	flavor = salt_waste_narrative_events.2.f
+
+	event_image = {
+		video = "salt_wastes_orc"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			NOT = { has_modifier = salt_waste_wards }
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_rangers
+				has_modifier = salt_waste_wards
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = curse_surge_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		set_variable = salt_waste_wards_consequences_happening
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = curse_surge_state
+		}
+		random_scope_character = {
+			limit = { has_role = politician }
+			save_scope_as = possession_character
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.2.a
+		trigger = {
+			OR = {
+				NOT = { has_modifier = salt_waste_wards }
+				AND = {
+					NOT = { has_modifier = salt_waste_rangers }
+					NOT = { has_modifier = salt_waste_patrols }
+				}
+			}
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		if = {
+			limit = {
+				scope:possession_character = {
+					NOT = { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			scope:possession_character = {
+				set_ideology = ideology:ideology_slaver
+			}
+		}
+		else = {
+			scope:possession_character = {
+				set_ideology = ideology:ideology_traditionalist
+			}
+		}
+		scope:curse_surge_state = {
+			state_region = {
+				add_devastation = 10
+			}
+			kill_population_percent_in_state = {
+				percent = 0.05
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+			add_modifier = {
+				name = modifier_state_salt_curse
+				years = 5
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_at_least_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.2.ba
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			NOT = { has_modifier = salt_waste_patrols }
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:curse_surge_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+			add_modifier = {
+				name = modifier_state_salt_curse
+				years = 2
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.2.bb
+		trigger = {
+			NOT = { has_modifier = salt_waste_rangers }
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:curse_surge_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+			add_modifier = {
+				name = modifier_state_salt_curse
+				years = 2
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.2.c
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = curse_surge_state_handled
+	}
+}
+
+salt_waste_narrative_events.3 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.3.t
+	desc = salt_waste_narrative_events.3.d
+	flavor = salt_waste_narrative_events.3.f
+
+	event_image = {
+		video = "salt_wastes_orc"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			NOT = { has_modifier = salt_waste_wards }
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_rangers
+				has_modifier = salt_waste_wards
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = salt_storm_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		set_variable = salt_waste_wards_consequences_happening
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = salt_storm_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.3.a
+		trigger = {
+			OR = {
+				NOT = { has_modifier = salt_waste_rangers }
+				AND = {
+					NOT = { has_modifier = salt_waste_wards }
+					NOT = { has_modifier = salt_waste_patrols }
+				}
+			}
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:salt_storm_state = {
+			state_region = {
+				add_devastation = 10
+			}
+			kill_population_percent_in_state = {
+				percent = 0.05
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+			add_modifier = {
+				name = modifier_state_salt_raging_storms
+				years = 5
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_at_least_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.3.ba
+		trigger = {
+			has_modifier = salt_waste_rangers
+			NOT = { has_modifier = salt_waste_wards }
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:salt_storm_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.3.bb
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			NOT = { has_modifier = salt_waste_patrols }
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:salt_storm_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.3.c
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = salt_storm_state_handled
+	}
+}
+
+salt_waste_narrative_events.4 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.4.t
+	desc = salt_waste_narrative_events.4.d
+	flavor = salt_waste_narrative_events.4.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_barrens.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		fully_owns_the_salt_wastes = yes
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.4.a
+		add_modifier = {
+			name = salt_waste_cure_ritual_1
+		}
+		add_journal_entry = {
+			type = je_end_the_salt_waste_curse
+		}
+		remove_variable = handle_salt_waste_curse_button_clicked
+	}
+}
+
+salt_waste_narrative_events.5 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.5.t
+	desc = salt_waste_narrative_events.5.d
+	flavor = salt_waste_narrative_events.5.f
+
+	event_image = {
+		video = "salt_wastes_orc"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+	
+	immediate = {
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = ritual_oops_state
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.5.aa
+		default_option = yes
+		trigger = {
+			arcana >= 200
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3
+			months = 6
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.5.ab
+		trigger = {
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3_druids
+			months = 6
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.5.ac
+		trigger = {
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3_mage_hunters
+			months = 6
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.5.b
+		scope:ritual_oops_state = {
+			state_region = {
+				add_devastation = 10
+			}
+			kill_population_percent_in_state = {
+				percent = 0.05
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+		}
+	}
+}
+
+salt_waste_narrative_events.6 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.6.t
+	desc = salt_waste_narrative_events.6.d
+	flavor = salt_waste_narrative_events.6.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_peaceful.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	immediate = {
+		remove_modifier = salt_waste_cure_ritual_1
+		remove_modifier = salt_waste_cure_ritual_2
+		remove_modifier = salt_waste_cure_ritual_2_druids
+		remove_modifier = salt_waste_cure_ritual_2_mage_hunters
+		set_variable = block_clicking_any_salt_waste_buttons
+	}
+
+	option = {
+		name = salt_waste_narrative_events.6.a
+		default_option = yes
+		if = {
+			limit = {
+				religion = {
+					has_discrimination_trait = dragon_domain
+				}
+			}
+			add_technology_researched = salt_waste_curse_suppressed
+		}
+		else_if = {
+			limit = {
+				has_variable = harness_the_salt_waste_curse
+			}
+			add_modifier = {
+				name = salt_waste_extra_evil
+			}
+			custom_tooltip = {
+				text = make_salt_waste_curse_worse
+				every_scope_state = {
+					limit = {
+						has_state_trait = state_trait_salt_wastes
+						is_split_state = no
+						owner = root
+					}
+					state_region = {
+						remove_state_trait = state_trait_salt_wastes
+						add_state_trait = state_trait_salt_wastes_extra_evil
+					}
+				}
+			}
+		}
+		else = {
+			every_scope_state = {
+				limit = {
+					has_state_trait = state_trait_salt_wastes
+					is_split_state = no
+					owner = root
+				}
+				state_region = {
+					remove_state_trait = state_trait_salt_wastes
+				}
+			}
+		}
+		if = {
+			limit = { has_modifier = salt_waste_rangers }
+			remove_modifier = salt_waste_rangers
+		}
+		if = {
+			limit = { has_modifier = salt_waste_wards }
+			remove_modifier = salt_waste_wards
+		}
+		if = {
+			limit = { has_modifier = salt_waste_patrols }
+			remove_modifier = salt_waste_patrols
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_earn_recognition
+			}
+			je:je_earn_recognition ?= {
+				add_progress = { value = 175 name = earn_recognition_progress_bar }
+			}
+		}
+		set_variable = je_salt_waste_curse_resolved
+		remove_variable = block_clicking_any_salt_waste_buttons
+	}
+}
+
+salt_waste_narrative_events.7 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.7.t
+	desc = salt_waste_narrative_events.7.d
+	flavor = salt_waste_narrative_events.7.f
+
+	event_image = {
+		video = "salt_wastes_orc"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+	
+	immediate = {
+		set_variable = harness_the_salt_waste_curse_fired
+	}
+
+	trigger = {
+		religion = {
+			has_discrimination_trait = fiend_domain
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.7.a
+		set_variable = harness_the_salt_waste_curse
+		every_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			kill_population_percent_in_state = {
+				percent = 0.01
+			}
+			add_radicals_in_state = {
+				value = 0.01
+			}
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.7.b
+		default_option = yes
+	}
+}
+
+salt_waste_narrative_events.8 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.8.t
+	desc = salt_waste_narrative_events.8.d
+	flavor = salt_waste_narrative_events.8.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_tea.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		c:TQL ?= THIS
+		NOT = { has_global_variable = has_formed_tql }
+	}
+	
+	immediate = {
+		set_global_variable = has_formed_tql
+		save_scope_as = formation_country
+		cu:rahoru = {
+			save_scope_as = unification_culture
+		}
+		cu:tqalt = {
+			save_scope_as = unification_culture_2
+		}
+		cu:waste_walker = {
+			save_scope_as = unification_culture_3
+		}
+		
+		if = {
+			limit = {
+				exists = c:HOR
+				c:HOR ?= { is_subject_of = ROOT }
+			}
+			annex = c:HOR
+		}
+		if = {
+			limit = {
+				exists = c:BGR
+				c:BGR ?= { is_subject_of = ROOT }
+			}
+			annex = c:BGR
+		}
+		if = {
+			limit = {
+				exists = c:SNL
+				c:SNL ?= { is_subject_of = ROOT }
+			}
+			annex = c:SNL
+		}
+		if = {
+			limit = {
+				exists = c:GMR
+				c:GMR ?= { is_subject_of = ROOT }
+			}
+			annex = c:GMR
+		}
+		if = {
+			limit = {
+				exists = c:BLD
+				c:BLD ?= { is_subject_of = ROOT }
+			}
+			annex = c:BLD
+		}
+		if = {
+			limit = {
+				exists = c:RUX
+				c:RUX ?= { is_subject_of = ROOT }
+			}
+			annex = c:RUX
+		}
+		if = {
+			limit = {
+				exists = c:RSE
+				c:RSE ?= { is_subject_of = ROOT }
+			}
+			annex = c:RSE
+		}
+		
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_three_culture
+		}
+		
+		if = {
+			limit = {
+				rel:skarrakhlot = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_skarrakhlot
+			}
+		} else_if = {
+			limit = {
+				rel:vurzaratmoda = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_vurzaratmoda
+			}
+		} else = {
+			add_journal_entry = {
+				type = je_tql_salt_crucible
+			}
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.8.a
+		default_option = yes
+		
+		add_modifier = {
+			name = unification_prestige
+			days = very_long_modifier_time
+		}
+		unification_claims_effect = yes
+		
+		trigger_event = {
+			id = salt_waste_narrative_events.9
+			days = 3
+			popup = yes
+		}
+	}
+}
+
+salt_waste_narrative_events.9 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.9.t
+	desc = salt_waste_narrative_events.9.d
+	flavor = salt_waste_narrative_events.9.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_tea.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		c:TQL ?= THIS
+	}
+	
+	immediate = {
+		cu:rahoru = {
+			save_scope_as = rahoru_culture
+		}
+		cu:tqalt = {
+			save_scope_as = tqalt_culture
+		}
+		cu:waste_walker = {
+			save_scope_as = waste_walker_culture
+		}
+		s:STATE_TINKUYUQ = {
+			random_scope_state = {
+				save_scope_as = tinkuyuq_state
+			}
+		}
+		s:STATE_BLOODTHORN_WASTES = {
+			random_scope_state = {
+				save_scope_as = bloodthorn_state
+			}
+		}
+		s:STATE_SNAILBANE = {
+			random_scope_state = {
+				save_scope_as = snailbane_state
+			}
+		}
+		add_journal_entry = {
+			type = je_salt_waste_half_orc
+		}
+				
+		remove_primary_culture = cu:rahoru
+		remove_primary_culture = cu:tqalt
+		remove_primary_culture = cu:waste_walker
+	}
+
+	option = {
+		name = salt_waste_narrative_events.9.n
+		default_option = yes
+		
+		capital = {
+			state_region = {
+				add_homeland = cu:atamkumi
+			
+				remove_homeland = cu:rahoru
+				remove_homeland = cu:tqalt
+				remove_homeland = cu:waste_walker
+			}
+			add_modifier = {
+				name = salt_waste_half_orc_birth
+				months = 12
+			}
+			custom_tooltip = {
+				text = fifteen_percent_convert_to_atamkumi
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:rahoru
+							culture = cu:tqalt
+							culture = cu:waste_walker
+						}
+					}
+					change_pop_culture = { 
+						target = cu:atamkumi 
+						value = 0.15
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.9.a
+		trigger = {
+			owns_entire_state_region = STATE_TINKUYUQ
+			NOT = { capital = { state_region = s:STATE_TINKUYUQ } }
+		}
+
+		set_capital = STATE_TINKUYUQ
+		capital = {
+			state_region = {
+				add_homeland = cu:atamkumi
+			
+				remove_homeland = cu:rahoru
+				remove_homeland = cu:tqalt
+				remove_homeland = cu:waste_walker
+			}
+			add_modifier = {
+				name = salt_waste_half_orc_birth
+				months = 12
+			}
+			custom_tooltip = {
+				text = fifteen_percent_convert_to_atamkumi
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:rahoru
+							culture = cu:tqalt
+							culture = cu:waste_walker
+						}
+					}
+					change_pop_culture = { 
+						target = cu:atamkumi 
+						value = 0.15
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.9.b
+		trigger = {
+			owns_entire_state_region = STATE_BLOODTHORN_WASTES
+			NOT = { capital = { state_region = s:STATE_BLOODTHORN_WASTES } }
+		}
+
+		set_capital = STATE_BLOODTHORN_WASTES
+		capital = {
+			state_region = {
+				add_homeland = cu:atamkumi
+			
+				remove_homeland = cu:rahoru
+				remove_homeland = cu:tqalt
+				remove_homeland = cu:waste_walker
+			}
+			add_modifier = {
+				name = salt_waste_half_orc_birth
+				months = 12
+			}
+			custom_tooltip = {
+				text = fifteen_percent_convert_to_atamkumi
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:rahoru
+							culture = cu:tqalt
+							culture = cu:waste_walker
+						}
+					}
+					change_pop_culture = { 
+						target = cu:atamkumi 
+						value = 0.15
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.9.c
+		trigger = {
+			owns_entire_state_region = STATE_SNAILBANE
+			NOT = { capital = { state_region = s:STATE_SNAILBANE } }
+		}
+
+		set_capital = STATE_SNAILBANE
+		capital = {
+			state_region = {
+				add_homeland = cu:atamkumi
+			
+				remove_homeland = cu:rahoru
+				remove_homeland = cu:tqalt
+				remove_homeland = cu:waste_walker
+			}
+			add_modifier = {
+				name = salt_waste_half_orc_birth
+				months = 12
+			}
+			custom_tooltip = {
+				text = fifteen_percent_convert_to_atamkumi
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:rahoru
+							culture = cu:tqalt
+							culture = cu:waste_walker
+						}
+					}
+					change_pop_culture = { 
+						target = cu:atamkumi 
+						value = 0.15
+					}
+				}
+			}
+		}
+	}
+}

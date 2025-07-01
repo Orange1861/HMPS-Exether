@@ -1,0 +1,125 @@
+﻿je_soulwrought_subjects = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+	
+	is_shown_when_inactive = {
+		is_player = yes
+		any_scope_state = {
+			is_incorporated = yes
+			has_building = building_soulwrought_assembly_plant
+		}
+	}
+	
+	possible = {
+		OR = {
+			any_scope_state = {
+					is_incorporated = yes
+					has_building = building_soulwrought_assembly_plant
+					state_region = {
+						is_homeland = cu:soulwrought
+					}
+				count >= 3
+			}
+			any_scope_state = {
+					is_incorporated = yes
+					has_building = building_soulwrought_assembly_plant
+					state_region = {
+						is_homeland = cu:soulwrought
+				}
+				percent >= 0.25 
+			}
+			AND = {
+				any_scope_state = {
+						is_incorporated = yes
+						has_building = building_soulwrought_assembly_plant
+						state_region = {
+							is_homeland = cu:soulwrought
+						}
+				}
+				
+					culture_percent_country = {
+						target = cu:soulwrought
+						value >= 0.25
+					  }
+				}
+
+			}
+		
+		 has_technology_researched = egalitarianism
+		 has_law = law_type:law_slavery_banned 
+		}
+	
+	
+	complete = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_soulwrought_assembly_plant
+				level >= 3
+			}
+			state_region = {
+				is_homeland = cu:soulwrought
+			}
+		}
+		has_law = law_type:law_slavery_banned 
+		OR = {
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
+	}
+	
+	on_monthly_pulse = {
+		random_events = {
+			70 = 0
+			30 = synthetic_dawn.2
+		}
+	}
+	
+	on_complete = {
+		add_primary_culture = cu:soulwrought
+			set_variable = nice_to_soulwrought_var
+			if = {
+				limit = {
+					any_country = {
+						has_variable = nice_to_soulwrought_var
+						count <= 3
+					}
+					any_scope_state = {
+						
+							is_incorporated = yes
+							any_scope_building = {
+								is_building_type = building_soulwrought_assembly_plant
+								level >= 3
+							}
+							state_region = {
+								is_homeland = cu:soulwrought
+							}
+					}
+				}
+				random_scope_state = {
+					limit = {
+						is_incorporated = yes
+						any_scope_building = {
+							is_building_type = building_soulwrought_assembly_plant
+							level >= 3
+						}
+						state_region = {
+							is_homeland = cu:soulwrought
+						}
+					}
+
+				add_cultural_community = cu:soulwrought
+				}
+			}
+			trigger_event = { id = synthetic_dawn.3 }
+			hidden_effect = {
+				remove_modifier = supporting_soulwrought_demonstrations
+			}
+
+		
+	}
+	timeout = 4381 
+	weight = 101
+	transferable = no
+}

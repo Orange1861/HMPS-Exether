@@ -1,0 +1,17 @@
+﻿domains_alert = {
+	script_context = player_country
+	texture = gfx/interface/icons/generic_icons/magic_reserves_icon.dds
+
+	valid = {
+		#TODO: Define a reasonable trigger when this is possible
+		always = no
+	}
+
+	open_panel = domains_window
+
+	type = alert
+
+	color = green
+
+	alert_group = exether_alerts
+}

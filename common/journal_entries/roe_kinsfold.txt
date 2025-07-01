@@ -1,0 +1,160 @@
+﻿je_kinfold = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	group = je_group_historical_content
+
+	scripted_button = je_kinfold_offer_confederation_button
+	scripted_button = je_kinfold_undermine_clan_autonomy
+	scripted_button = je_kinfold_stop_undermine_clan_autonomy
+
+	modifiers_while_active = {
+		modifier_the_kinfold
+	}
+
+	complete = {
+        any_country = {
+				any_scope_state = {
+					OR = {
+					state_region = { is_homeland = cu:gelidrumin }
+					state_region = { is_homeland = cu:uplander }
+					state_region = { is_homeland = cu:ralaurian }
+					state_region = { is_homeland = cu:dewaric }
+					state_region = { is_homeland = cu:avalorean }
+					}
+				}
+				count <= 1
+        }
+	}
+
+	fail = {
+		OR = {
+			NOT = { has_law = law_type:law_monarchy }
+			has_law = law_type:law_ethnostate
+			OR = {
+				is_power_bloc_leader = no
+				power_bloc ?= {
+					NOT = { has_identity = identity:identity_cultural }
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		if = {
+			limit = {
+				exists = c:ABR
+				has_diplomatic_pact = {
+					who = c:ABR
+					type = personal_union
+				}	
+			}
+			remove_diplomatic_pact = {
+				country =  c:ABR
+				type = personal_union
+			}
+		}
+		if = {
+			limit = {
+				exists = c:GED
+				has_diplomatic_pact = {
+					who = c:GED
+					type = personal_union
+				}	
+			}
+			remove_diplomatic_pact = {
+				country =  c:GED
+				type = personal_union
+			}
+		}
+		if = {
+			limit = {
+				exists = c:UPP
+				has_diplomatic_pact = {
+					who = c:UPP
+					type = personal_union
+				}	
+			}
+			remove_diplomatic_pact = {
+				country =  c:UPP
+				type = personal_union
+			}
+		}
+		if = {
+			limit = {
+				exists = c:RAL
+				has_diplomatic_pact = {
+					who = c:RAL
+					type = personal_union
+				}	
+			}
+			remove_diplomatic_pact = {
+				country =  c:RAL
+				type = personal_union
+			}
+		}
+		if = {
+			limit = {
+				exists = c:DEW
+				has_diplomatic_pact = {
+					who = c:DEW
+					type = personal_union
+				}	
+			}
+			remove_diplomatic_pact = {
+				country =  c:DEW
+				type = personal_union
+			}
+		}
+		
+	}
+
+	on_complete = {
+		trigger_event = { id = kinfold.4 popup = yes }
+		set_variable = dumonia_resurgent_var
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			175 = 0
+			10 = kinfold.1
+			10 = kinfold.2
+			5 = kinfold.3
+		}
+	}
+
+	on_yearly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				random_list = {
+					90 = {
+	
+					}
+					10 = {
+						random_country = {
+							limit = {
+								any_primary_culture = {
+									has_discrimination_trait = imperial_culture_group
+								}
+								has_diplomatic_pact = {
+									who = c:DUM
+									type = personal_union
+								}
+							}
+							set_owes_obligation_to = {
+								country = c:DUM
+								setting = yes
+							}
+						}
+	
+					}
+				}
+			}
+		}
+	}
+
+	weight = 1000
+	should_be_pinned_by_default = yes
+}

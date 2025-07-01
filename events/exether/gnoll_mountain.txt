@@ -1,0 +1,503 @@
+﻿namespace = gnoll_mountain
+
+gnoll_mountain.1 = { #prowlhold startup event
+	type = country_event
+	placement = root
+	title = gnoll_mountain.1.t
+	desc = gnoll_mountain.1.d
+	flavor = gnoll_mountain.1.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "gnoll_warcamp"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		c:SNB?= {
+            save_scope_as = thassarcia_scope
+        }
+		c:THK?= {
+            save_scope_as = yingulnado_scope
+        }
+	}
+
+
+	option = {
+		name = gnoll_mountain.1.a #we must stand alone
+		default_option = yes
+        add_journal_entry = {
+			type = je_gnoll_mountain
+		}
+	
+		add_modifier = {
+			name = making_military_overtures
+			years = 10
+		}
+		c:THK ?= {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		trigger_event = gnoll_mountain.3
+		ai_chance = {
+			base = 25
+		}	
+	}
+
+	option = {
+		name = gnoll_mountain.1.b #we must stand alone
+		default_option = yes
+        add_journal_entry = {
+			type = je_gnoll_mountain
+		}
+		
+		add_modifier = {
+			name = making_diplomatic_overtures
+			years = 10
+		}
+
+		c:SNB?= {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = root
+			}
+		}
+		c:THK ?= {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		change_relations = {
+			country = c:SNB
+			value = 25
+		}
+		trigger_event = gnoll_mountain.3
+		ai_chance = {
+			base = 75
+		}	
+	}
+
+	option = {
+		name = gnoll_mountain.1.c #we must move on
+        add_modifier = {
+			name = stifling_rumors
+			years = 10
+		}
+		c:THK ?= {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = root
+			}
+		}
+		change_relations = {
+			country = c:THK
+			value = 35
+		}
+		s:STATE_GUGNOS = {
+			remove_claim = c:PRO
+		}
+		s:STATE_NYOLMAFUM = {
+			remove_claim = c:PRO
+		}
+		s:STATE_TAYIGAMU = {
+			remove_claim = c:PRO
+		}
+		trigger_event = gnoll_mountain.3
+		ai_chance = {
+			base = 25
+		}
+
+	}
+}
+
+gnoll_mountain.2 = { #gnoll mountain JE success event
+	type = country_event
+	placement = root
+	title = gnoll_mountain.2.t
+	desc = gnoll_mountain.2.d
+	flavor = gnoll_mountain.2.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { #triggered by JE success
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = gnoll_mountain.2.a #we shall embrace the mountain
+		add_primary_culture = cu:warren_gnoll
+		custom_tooltip = {
+			text = warren_gnoll_primary_tt
+			every_scope_pop = {
+				limit = {
+					culture = cu:jungle_gnoll
+				}
+				change_pop_culture = {
+					target = cu:warren_gnoll
+					value = 0.8 
+				}
+			}
+		}
+
+
+		custom_tooltip = {
+			text = coast_gnoll_tt
+			every_scope_pop = {
+				limit = {
+					culture = cu:gnoll
+				}
+				change_pop_culture = {
+					target = cu:warren_gnoll
+					value = 0.5 
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = underkaal_tt
+			every_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_GUGNOS
+						state_region = s:STATE_TAYIGAMU
+					}	
+				}
+				every_scope_pop = {
+					limit = {
+						culture = cu:kaalkid
+					}
+					change_pop_culture = {
+						target = cu:underkaal
+						value = 0.5 
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				s:STATE_GUGNOS = {
+					any_scope_state = {
+						owner = ROOT
+					}
+				}
+			}
+			s:STATE_GUGNOS = {
+				remove_homeland = cu:kaalkid
+				add_homeland = cu:underkaal
+				add_homeland = cu:warren_gnoll 
+			}
+		}
+
+		if = {
+			limit = {
+				s:STATE_TAYIGAMU = {
+					any_scope_state = {
+						owner = ROOT
+					}
+				}
+			}
+			s:STATE_TAYIGAMU = {
+				remove_homeland = cu:kaalkid
+				add_homeland = cu:underkaal
+				add_homeland = cu:warren_gnoll 
+			}
+		}
+		if = {
+			limit = {
+				s:STATE_CHITTERKIQ = {
+					any_scope_state = {
+						owner = ROOT
+					}
+				}
+			}
+			s:STATE_CHITTERKIQ = {
+				remove_homeland = cu:jungle_gnoll
+				add_homeland = cu:warren_gnoll 
+			}
+		}
+		
+        add_modifier = {
+            name = embracing_the_mountain
+            years = 7
+        }
+		custom_tooltip = update_placeholder_tt
+	}
+}
+
+gnoll_mountain.3 = { #declaration of 1178
+	type = country_event
+	placement = root
+	title = gnoll_mountain.3.t
+	desc = gnoll_mountain.3.d
+	flavor = gnoll_mountain.3.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 9
+    }
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+
+	
+
+	immediate = {
+		c:SKR?= {
+            save_scope_as = skravend_scope
+        } 
+		s:STATE_DUTAKHAMKU = {
+			every_scope_state = {
+				save_scope_as = dutakhamku_scope
+			}
+		}
+		s:STATE_NYOKSIAPLA = {
+			every_scope_state = {
+				save_scope_as = nyokia_scope
+			}
+		}
+	}
+
+	option = {
+		name = gnoll_mountain.3.a #colonize the frontier
+		ig:ig_landowners ?= {
+			leader = {
+				set_ideology = ideology:ideology_jingoist
+			}
+		}
+
+		default_option = yes
+		ai_chance = {
+			base = 50
+		}
+	}
+    option = {
+		name = gnoll_mountain.3.b #we will not reclaim our old lands
+		c:SKR ?= {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = root
+			}
+		}
+		s:STATE_DUTAKHAMKU = {
+			remove_claim = c:PRO
+		}
+		s:STATE_NYOKSIAPLA = {
+			remove_claim = c:PRO
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+    
+}
+
+gnoll_mountain.4 = { #clearing the cave-in ##TODO event where you could send the pops in the mountain to Khaduras for a bonus of some sort
+	type = country_event
+	placement = root
+	title = gnoll_mountain.4.t
+	desc = gnoll_mountain.4.d
+	flavor = gnoll_mountain.4.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "southamerica_child_labor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {                 
+        
+	}
+
+	immediate = {
+
+	}
+
+	
+	option = {
+		name = gnoll_mountain.4.a #we have cleared the cave-ins
+		default_option = yes
+		s:STATE_GUGNOS = {
+			remove_state_trait = state_trait_cavern_caveins
+		}
+		if = {
+			limit = {
+				OR = { 
+					s:STATE_GUGNOS = {
+						any_scope_state = {
+							owner = ROOT
+						}
+					} 
+					s:STATE_CHITTERKIQ = {
+						any_scope_state = {
+							owner = ROOT
+						}
+					} 
+				}
+
+			}
+			s:STATE_GUGNOS = {
+				set_owner_of_provinces = {
+					country = ROOT
+					provinces = { x0d715f x77963C x977F20 xEE92F3 x1410e7 }
+				}
+			}
+		}	
+	}
+
+    
+}
+
+gnoll_mountain.5 = { #clearing the cave-in ##TODO event where you could send the pops in the mountain to Khaduras for a bonus of some sort
+	type = country_event
+	placement = root
+	title = gnoll_mountain.5.t
+	desc = gnoll_mountain.5.d
+	flavor = gnoll_mountain.5.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "gnoll_warcamp"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {      
+		OR = {
+			has_law = law_type:law_frontier_colonization
+			has_law = law_type:law_colonial_resettlement
+			has_law = law_type:law_colonial_exploitation
+		}           
+       NOT = {
+		has_variable = gnoll_pilgrim_var
+	   }
+	}
+
+	immediate = {
+		capital = {
+			save_scope_as = capital_scope
+		}
+		set_variable = gnoll_pilgrim_var
+	}
+
+
+
+	option = {
+		name = gnoll_mountain.5.a #good luck!
+		default_option = yes
+		add_modifier = {
+			name = reclaiming_hyena_plains
+			years = 9
+		}
+	}
+
+    
+}
+
+gnoll_mountain.6 = { #choosing a general
+	type = country_event
+	placement = root
+	title = gnoll_mountain.6.t
+	desc = gnoll_mountain.6.d
+	flavor = gnoll_mountain.6.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {                 
+        NOT ={
+			has_variable = prowl_general_var
+		}
+	}
+
+	immediate = {
+		set_variable = prowl_general_var
+	}
+
+	
+	option = {
+		name = gnoll_mountain.6.a #This man is a general, like his father before him
+		default_option = yes
+
+		create_character = {
+			# Haruni Kasanda
+			first_name = Yobnesh #363-344 mod 5 =4
+			last_name = Kasanda
+			noble = yes
+			historical = yes
+			is_general = yes
+			female = yes
+			birth_date = 1142.2.8 
+			interest_group = ig_landowners
+			ideology = ideology_matriarchal_traditionalist
+			traits = {
+				experienced_defensive_strategist
+				tactful
+			}
+		}
+	}
+
+	option = {
+		name = gnoll_mountain.6.b #perhaps it is time for some fresh blood
+		create_character = {
+			# Kasim Msemwa
+			first_name = Wema #372-344 mod 5 = 3
+			last_name = Msemwa
+			
+			historical = yes
+			is_general = yes
+			female = yes
+			birth_date = 1153.1.15 
+			interest_group = ig_rural_folk
+			ideology = ideology_land_reformer
+			traits = {
+				basic_offensive_planner
+				charismatic
+				popular_commander
+			}
+		}
+	}
+
+}
+
+    

@@ -1,0 +1,1897 @@
+﻿
+namespace = mindrend
+
+mindrend.101 = {
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.101.t
+	desc = mindrend.101.d
+	flavor = mindrend.101.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			save_scope_as = capital_scope
+		}
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = {
+		name = mindrend.101.a
+		trigger_event = { id = mindrend.102 days = 0 popup = yes }
+	}
+}
+
+mindrend.102 = { #Choose commander
+	type = country_event
+    placement = ROOT
+
+    title = mindrend.102.t
+    desc = mindrend.102.d
+    flavor = mindrend.102.f
+
+    duration = 3
+	
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_variable = is_retainer
+			}
+			
+			is_busy = no
+		}
+	}
+
+	immediate = {
+
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+			}
+			save_scope_as = expedition_leader_1
+		}
+		if = {
+			random_character_in_void = {
+				limit = {
+					is_owned_unassigned_retainer = yes
+					NOT = {
+						scope:expedition_leader_1 ?= this
+					}
+				}
+				save_scope_as = expedition_leader_2
+			}
+		}
+		else = {
+			random_character_in_void = {
+				limit = {
+					is_owned_unassigned_retainer = yes
+					NOT = {
+						scope:expedition_leader_1 ?= this
+					}
+				}
+				save_scope_as = expedition_leader_2
+			}
+		}
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				NOR = {
+					scope:expedition_leader_1 ?= this
+					scope:expedition_leader_2 ?= this
+				}
+			}
+			save_scope_as = expedition_leader_3
+		}
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				NOR = {
+					scope:expedition_leader_1 ?= this
+					scope:expedition_leader_2 ?= this
+					scope:expedition_leader_3 ?= this
+				}
+			}
+			save_scope_as = expedition_leader_4
+		}
+	}
+
+	option = {
+		name = mindrend.102.a
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_1
+		}
+		default_option = yes
+		highlighted_option = yes
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_1 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_mindrend_expedition
+		}
+	}
+
+	option = {
+		name = mindrend.102.b
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_2
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_2 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_mindrend_expedition
+		}
+	}
+
+	option = {
+		name = mindrend.102.c
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_3
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_3 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_mindrend_expedition
+		}
+	}
+	
+	option = {
+		name = mindrend.102.e
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			NOT = { exists = scope:expedition_leader_1 }
+			exists = scope:expedition_leader_4
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_4 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_mindrend_expedition
+		}
+	}
+}
+
+mindrend.103 = {
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.103.t
+	desc = mindrend.103.d
+	flavor = mindrend.103.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+
+	option = {
+		name = mindrend.103.a
+		default_option = yes
+		scope:expedition_leader = {
+			kill_character = yes
+		}
+		remove_variable = on_expedition
+		remove_expedition_events_effect = yes
+		exether_remove_expedition_effect = yes
+	}
+}
+
+mindrend.104 = { #success event
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.104.t
+	desc = mindrend.104.d
+
+	
+	flavor = mindrend.104.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	immediate = {
+		save_scope_as = expedition_country
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = {
+		name = mindrend.104.a
+		default_option = yes
+		scope:expedition_leader = {
+			add_trait = explorer
+			set_variable = polar_explorer
+			set_character_busy_and_immortal = no
+			add_modifier = {
+				name = succesfull_rimeroot_modifier
+				multiplier = 2
+			}
+		}
+		add_modifier = {
+			name = mindrend_expedition_returned
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_country = {
+						has_variable = central_africa_expedition_success_var
+					}
+				}
+			}
+			add_modifier = {
+				name = secrets_of_the_sands
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+            name = secrets_of_the_obelisks
+        }
+		custom_tooltip = locari_obelisk_tt
+
+		remove_expedition_events_effect = yes
+		exether_remove_expedition_effect = yes
+	}
+}
+
+mindrend.1 = { #oasis
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.1.t
+	desc = mindrend.1.d
+	flavor = mindrend.1.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_mindrend_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = desert_oasis }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = desert_oasis
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # Push on!
+		name = mindrend.1.a
+		default_option = yes
+		random_list = {
+			50 = {
+				#trigger_event = { id = sunstation.9 days = day_until_next_expedition_event }
+				add_small_peril_effect = yes
+			}
+			50 = {
+				expedition_minor_progress_effect = yes
+				expedition_peril_decrease_small_effect = yes
+			}
+		}
+	}
+	option = { #ignore it
+		name = mindrend.1.b
+		highlighted_option = yes
+		expedition_minor_progress_effect = yes
+	}
+
+	# option = { #send a scout  #needs starbrand traits
+	# 	name = mindrend.1.c
+	# 	trigger = {
+	# 		scope:expedition_leader = {
+	# 			OR = {
+	# 				AND = {
+	# 					OR = {
+	# 						has_trait = cruel
+	# 						has_trait = wrathful
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	highlighted_option = yes
+	# 	expedition_minor_progress_effect = yes
+	# 	expedition_peril_decrease_small_effect = yes
+	# }
+
+	option = { #send a scout
+		name = mindrend.1.d
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = cruel
+							has_trait = wrathful
+						}
+					}
+				}
+			}
+		}
+		highlighted_option = yes
+		expedition_minor_progress_effect = yes
+		expedition_peril_decrease_small_effect = yes
+	}
+
+
+}
+
+mindrend.2 = { #desert witch
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.2.t
+	desc = mindrend.2.d
+	flavor = mindrend.2.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "salt_wastes_orc"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = witch_potion }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = witch_potion
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # slurp slurp
+		name = mindrend.2.a
+		default_option = yes
+		random_list = {
+			25 = {
+				scope:expedition_leader = {
+					add_trait = sickly
+				}
+			}
+			25 = {
+				scope:expedition_leader = {
+					add_trait = opium_addiction
+				}
+			}
+			25 = {
+				expedition_peril_decrease_small_effect = yes
+			}
+			25 = {
+				add_small_peril_effect = yes
+			}
+		}
+		set_variable = drank_witch_potion
+	}
+	option = { #refuse
+		name = mindrend.2.b
+	}
+	option = { #DEMAND MORE
+		name = mindrend.2.c
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = hedonist
+						}
+					}
+				}
+			}
+		}
+		random_list = {
+			75 = {
+				expedition_peril_decrease_medium_effect = yes
+			}
+
+			25 = {
+				add_medium_peril_effect = yes
+			}
+		}
+	}
+
+	option = { #use alchemy
+		name = mindrend.2.d
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = innovative
+						}
+					}
+				}
+			}
+		}
+		highlighted_option = yes
+		set_variable = drank_witch_potion
+		expedition_peril_decrease_medium_effect = yes
+		random_list = {
+			50 = {
+				scope:expedition_leader = {
+					add_trait = resupply_commander
+				}
+			}
+			50 = {
+				
+			}
+		}
+	}
+	option = { #KILL
+		name = mindrend.2.f
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = cruel
+							has_trait = wrathful
+						}
+					}
+				}
+			}
+		}
+		expedition_minor_progress_effect = yes
+		scope:expedition_leader = {
+					add_trait = pillager
+				}
+	}
+
+	option = { #sell her "ingredients"
+		name = mindrend.2.e
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = grifter
+						}
+					}
+				}
+			}
+		}
+		expedition_minor_progress_effect = yes
+
+	}
+
+}
+
+mindrend.3 = { #landslide
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.3.t
+	desc = mindrend.3.d
+	flavor = mindrend.3.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_mindrend_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 2
+		}
+		NOT = { has_variable = landslide_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = landslide_var
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # save the supplies
+		name = mindrend.3.a
+		default_option = yes
+		expedition_peril_decrease_small_effect = yes
+		expedition_lose_progress_effect = yes
+	}
+
+	option = { #save the crew
+		name = mindrend.3.b
+		add_small_peril_effect = yes
+		expedition_minor_progress_effect = yes
+	}
+	
+
+}
+
+mindrend.4 = { #nomadic hiadud
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.4.t
+	desc = mindrend.4.d
+	flavor = mindrend.4.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_mindrend_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = nomad_band_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = nomad_band_var
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #hang out with them
+		name = mindrend.4.a
+		default_option = yes
+		random_list = {
+			50 = {
+				#trigger_event = { id = sunstation.9 days = day_until_next_expedition_event }
+				add_medium_peril_effect = yes
+			}
+			50 = {
+				expedition_moderate_progress_effect = yes
+			
+			}
+		}
+
+	}
+
+	option = { #refuse
+		name = mindrend.4.b
+		expedition_minor_progress_effect = yes
+	}
+	
+	option = { #speak softly, carry a big stick
+		name = mindrend.4.c
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = cautious
+							has_trait = imposing
+						}
+					}
+				}
+			}
+		}
+		random_list = {
+			25 = {
+				#trigger_event = { id = sunstation.9 days = day_until_next_expedition_event }
+				add_medium_peril_effect = yes
+			}
+			75 = {
+				expedition_moderate_progress_effect = yes
+			
+			}
+		}
+
+	}
+
+	option = { #convince them to help us
+		name = mindrend.4.d
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = charismatic
+						}
+					}
+				}
+			}
+		}
+		expedition_peril_decrease_small_effect = yes
+		expedition_minor_progress_effect = yes
+
+	}
+
+	option = { #sell them some garbage
+		name = mindrend.4.d
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = grifter
+						}
+					}
+				}
+			}
+		}
+		add_investment_pool = 500
+		expedition_minor_progress_effect = yes
+
+	}
+
+}
+
+mindrend.5 = { #dragon egg fossils  ##needs connected to grand gallery or whatever
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.5.t
+	desc = mindrend.5.d
+	flavor = mindrend.5.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "dragonbone"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = eggstone_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = eggstone_var
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #trade 
+		name = mindrend.5.a
+		default_option = yes
+		expedition_minor_progress_effect = yes
+
+	}
+
+	option = { #trade a lot
+		name = mindrend.5.b
+		expedition_minor_progress_effect = yes
+		add_small_peril_effect = yes
+		set_variable = dragon_egg_stones_variable
+	}
+	
+	# option = { #say a prayer over the stones
+	# 	name = mindrend.5.c
+	# 	highlighted_option = yes
+	# 	trigger = {
+	# 		scope:expedition_leader = {
+	# 			OR = {
+	# 				AND = {
+	# 					OR = {
+	# 						has_trait = pious
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	random_list = {
+	# 		25 = {
+	# 			#trigger_event = { id = sunstation.9 days = day_until_next_expedition_event }
+	# 			add_medium_peril_effect = yes
+	# 		}
+	# 		75 = {
+	# 			expedition_moderate_progress_effect = yes
+			
+	# 		}
+	# 	}
+
+	# }
+
+	option = { #those are ours!
+		name = mindrend.5.e
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = ambitious
+							has_trait = arrogant
+						}
+					}
+				}
+			}
+		}
+		set_variable = dragon_egg_stones_variable
+
+	}
+
+	option = { #steal the bitches
+		name = mindrend.5.f
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = grifter
+						}
+					}
+				}
+			}
+		}
+		expedition_minor_progress_effect = yes
+		set_variable = dragon_egg_stones_variable
+	}
+
+}
+
+mindrend.6 = { #nightmare sands
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.6.t
+	desc = mindrend.6.d
+	flavor = mindrend.6.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "southamerica_slaves_night"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_mindrend_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = nightmare_sands }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = nightmare_sands
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #push forward
+		name = mindrend.6.a
+		default_option = yes
+		expedition_minor_progress_effect = yes
+		random_list = {
+			50 = {
+				#trigger_event = { id = sunstation.9 days = day_until_next_expedition_event }
+				add_medium_peril_effect = yes
+			}
+			50 = {
+				expedition_minor_progress_effect = yes
+			
+			}
+		}
+	}
+
+	option = { #just wait
+		name = mindrend.6.b
+
+	random_list = {
+			50 = {
+				
+			}
+			50 = {
+				add_small_peril_effect = yes
+			
+			}
+		}
+	}
+	
+	# option = { #MAKE PROTECTIVE WARD #NEEDS STARBRAND TRAITS
+	# 	name = mindrend.6.c
+	# 	highlighted_option = yes
+	# 	trigger = {
+	# 		scope:expedition_leader = {
+	# 			OR = {
+	# 				AND = {
+	# 					OR = {
+	# 						has_trait = grifter
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	expedition_minor_progress_effect = yes
+	# 	set_variable = dragon_egg_stones_variable
+	# }
+
+	option = { #study the phenomenon
+		name = mindrend.6.g
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = innovative
+						}
+					}
+				}
+			}
+		}
+		random_list = {
+			25 = {
+			
+				add_small_peril_effect = yes
+			}
+			75 = {
+				expedition_peril_decrease_small_effect = yes
+			
+			}
+		}
+
+	}
+
+	option = { #drank the witch potion
+		name = mindrend.6.e
+		highlighted_option = yes
+		trigger = {
+			custom_tooltip = {
+				text = drank_witch_potion_tt
+				has_variable = drank_witch_potion
+			}
+			
+		}
+		expedition_peril_decrease_small_effect = yes
+
+	}
+
+}
+
+mindrend.7 = { #siren song
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.7.t
+	desc = mindrend.7.d
+	flavor = mindrend.7.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = sirensong_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = sirensong_var
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #DIG, BABY
+		name = mindrend.7.a
+		default_option = yes
+		random_list = {
+			90 = {
+				#trigger_event = { id = sunstation.9 days = day_until_next_expedition_event }
+			scope:expedition_leader = {
+				kill_character = yes
+			}
+			hidden_effect = {
+				random_scope_character = {
+					limit = { has_variable = expedition_leader_var }
+					save_scope_as = dead_expedition_leader
+					remove_variable = expedition_leader_var
+				}
+				create_character = {
+					ig_leader = no
+					female = no
+					is_general = yes
+					on_created = {
+						set_variable = expedition_leader_var
+						ROOT = {
+							set_variable = { name = expedition_leader_storage_var value = prev }
+						}
+					}
+				}
+				random_scope_character = {
+					limit = {
+						has_variable = expedition_leader_var
+					}
+					save_scope_as = expedition_leader
+					set_character_busy_and_immortal = yes
+				}
+				set_variable = expedition_new_leader
+			}
+			}
+			10 = {
+				expedition_great_progress_effect = yes
+			
+			}
+		}
+	}
+
+	option = { #snap out of it
+		name = mindrend.7.b
+		add_medium_peril_effect = yes
+	}
+	
+	# option = { #MAKE PROTECTIVE WARD #NEEDS STARBRAND TRAITS
+	# 	name = mindrend.6.c
+	# 	highlighted_option = yes
+	# 	trigger = {
+	# 		scope:expedition_leader = {
+	# 			OR = {
+	# 				AND = {
+	# 					OR = {
+	# 						has_trait = grifter
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	expedition_minor_progress_effect = yes
+	# 	set_variable = dragon_egg_stones_variable
+	# }
+
+	option = { #would NOT
+		name = mindrend.7.e
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = arrogant
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+mindrend.8 = { #all who wander
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.8.t
+	desc = mindrend.8.d
+	flavor = mindrend.8.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "salt_wastes_orc"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = wander_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = wander_var
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #gtfo
+		name = mindrend.8.a
+		default_option = yes
+		expedition_minor_progress_effect = yes
+		add_small_peril_effect = yes
+		random_list = {
+			70 = {
+
+				}	
+			30 = {
+				scope:expedition_leader = {
+					add_trait = alcoholic
+				}
+			}
+		}
+	}
+
+	option = { #wait for them to wake up
+		name = mindrend.8.b
+		expedition_peril_decrease_small_effect = yes
+		random_list = {
+			50 = {
+
+				}
+			25 = {
+				scope:expedition_leader = {
+					add_trait = psychological_affliction
+				}				
+			}
+			
+			25 = {
+				scope:expedition_leader = {
+					add_trait = alcoholic
+				}
+			}
+		}
+	}
+	
+	option = { #fall asleep and go back for them!
+		name = mindrend.6.c
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = brave
+						}
+					}
+				}
+			}
+		}
+		expedition_minor_progress_effect = yes
+		expedition_peril_decrease_medium_effect = yes
+	}
+
+	option = { #WITCH POTION
+		name = mindrend.8.e
+		highlighted_option = yes
+		trigger = {
+			has_variable = drank_witch_potion
+		}
+		expedition_great_progress_effect = yes
+
+	}
+
+}
+
+mindrend.9 = { #city and the song
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.9.t
+	desc = mindrend.9.d
+	flavor = mindrend.9.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "africa_city_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_mindrend_expedition ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = city_song }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = city_song
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #raid that crypt
+		name = mindrend.9.a
+		default_option = yes
+		expedition_minor_progress_effect = yes
+		random_list = {
+			50 = {
+				expedition_moderate_progress_effect = yes
+			}
+			25 = {
+				expedition_lose_progress_effect = yes
+			
+			}
+			25 = { 
+				add_medium_peril_effect = yes
+			}
+		}
+	}
+
+	option = { #rest
+		name = mindrend.9.b
+		expedition_peril_decrease_small_effect = yes
+	}
+	
+	option = { #rest hard
+		name = mindrend.9.c
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = hedonist
+						}
+					}
+				}
+			}
+		}
+		expedition_peril_decrease_medium_effect = yes
+	}
+
+	option = { #convince the audiologue to help restore the  song
+		name = mindrend.9.j
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = charismatic
+							has_trait = romantic
+						}
+					}
+				}
+			}
+		}
+		random_list = {
+			60 = {
+				expedition_great_progress_effect = yes
+			}
+			20 = {
+
+			}
+			20 = { 
+				add_small_peril_effect = yes
+			}
+		}
+
+	}
+
+	option = { #rob the place
+		name = mindrend.9.e
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = cruel
+							has_trait = wrathful
+						}
+					}
+				}
+			}
+		}
+		scope:expedition_leader = {
+			add_modifier = {
+				name = party_foul
+				years = 10
+			}
+		}
+		add_treasury = 375000
+		add_investment_pool = 375000
+
+	}
+
+	option = { #sing them to sleep?
+		name = mindrend.9.j
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = charismatic
+							has_trait = romantic
+						}
+					}
+				}
+			}
+		}
+		random_list = {
+			60 = {
+				expedition_great_progress_effect = yes
+			}
+			20 = {
+
+			}
+			20 = { 
+				add_small_peril_effect = yes
+			}
+		}
+
+	}
+
+		option = { #get a map
+		name = mindrend.9.h
+		highlighted_option = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = grifter
+						}
+					}
+				}
+			}
+		}
+		
+		add_investment_pool = 20000
+		expedition_minor_progress_effect = yes
+	}
+
+}
+
+mindrend.10 = { #The Shunned Land
+	type = country_event
+	placement = ROOT
+	
+	title = mindrend.10.t
+	desc = mindrend.10.d
+	flavor = mindrend.10.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = shunned_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = shunned_var
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #gtfo
+		name = mindrend.10.a
+		default_option = yes
+		expedition_minor_progress_effect = yes
+	
+	}
+
+	option = { #diggy diggy
+		name = mindrend.10.b
+		add_small_peril_effect = yes
+		random_list = {
+
+			30 = {
+				scope:expedition_leader = {
+					add_trait = cancer
+				}				
+			}
+			
+			30 = {
+				scope:expedition_leader = {
+					add_trait = senile
+				}
+			}
+
+			30 = {
+				scope:expedition_leader = {
+					add_trait = psychological_affliction
+				}
+			}
+			10 = {
+				add_treasury = 1000000
+			}
+		}
+	}
+	
+	option = { #hold this shovel for me
+		name = mindrend.10.c
+		highlighted_option = yes
+		add_small_peril_effect = yes
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					AND = {
+						OR = {
+							has_trait = grifter
+						}
+					}
+				}
+			}
+		}
+		add_investment_pool = 600000
+		random_list = {
+
+			30 = {
+				scope:expedition_leader = {
+					add_trait = cancer
+				}				
+			}
+			
+			30 = {
+				scope:expedition_leader = {
+					add_trait = psychological_affliction
+				}
+			}
+
+			10 = {
+				add_treasury = 400000
+			}
+			30 = {
+
+			}
+		}
+	}
+
+}
+
+mindrend.11 = { #Mapping geography
+	type = country_event
+    placement = scope:current_expedition_location
+
+    title = expedition_events.570.t
+    desc = expedition_events.570.d
+    flavor = expedition_events.570.f
+
+    event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+    duration = 3
+
+	trigger = {
+		NOT = { has_variable = expedition_geographic_study }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+
+	immediate = {
+		set_variable = expedition_geographic_study
+	}
+
+	option = {
+		name = expedition_events.570.a
+		default_option = yes
+		custom_tooltip = expedition_event_delayed_tt
+		add_modifier = {
+			name = modifier_expedition_geographic_study
+			days = normal_modifier_time
+		}
+		set_variable = expedition_geographic_var #grand exhibition bonus
+	}
+
+	option = {
+		name = expedition_events.570.b
+		default_option = yes
+		expedition_minor_progress_effect = yes
+	}
+}
+
+mindrend.12 = { #Lost Mules
+	type = country_event
+
+    title = expedition_events.530.t
+    desc = expedition_events.530.d
+    flavor = expedition_events.530.f
+
+    event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+    duration = 3
+	
+	trigger = {
+		NOT = { has_variable = expedition_lost_mules }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+
+	immediate = {
+		set_variable = expedition_lost_mules
+		
+	}
+
+	option = {
+		name = expedition_events.530.a
+		default_option = yes
+		custom_tooltip = expedition_event_delayed_tt
+	}
+
+	option = {
+		name = expedition_events.530.b
+		expedition_minor_progress_effect = yes
+		add_small_peril_effect = yes
+	}
+}
+
+mindrend.13 = { #Beetle in ear
+	type = country_event
+
+    title = expedition_events.550.t
+    desc = expedition_events.550.d
+    flavor = expedition_events.550.f
+
+    event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+    duration = 3
+	
+	trigger = {
+		NOT = { has_variable = expedition_ear_beetle }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+
+	immediate = {
+		set_variable = expedition_ear_beetle
+		
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+
+	option = {
+		name = expedition_events.550.a
+		default_option = yes
+		custom_tooltip = expedition_event_delayed_tt
+	}
+
+	option = {
+		name = expedition_events.550.b
+		expedition_moderate_progress_effect = yes
+		random_list = {
+			10 = {
+				scope:expedition_leader = {
+					add_trait = wounded
+				}
+			}
+			10 = {
+				scope:expedition_leader = {
+					add_trait = beetle_ear
+				}
+			}
+		}
+	}
+}
+
+mindrend.14 = { #Crew ailed with dysentery
+	type = country_event
+
+    title = expedition_events.70.t
+    desc = expedition_events.70.d
+    flavor = expedition_events.70.f
+
+    event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    duration = 3
+	
+	trigger = {
+		NOT = { has_variable = crew_gets_dysentery }
+		NOT = { has_variable = crew_gets_malaria }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+
+	immediate = {
+		set_variable = crew_gets_dysentery
+		if = {
+			limit = { has_variable = congo_river_expedition_var }
+			dreamweaver_expedition_location = yes
+		}
+		else_if = {
+			limit = { has_variable = niger_river_expedition_var }
+			
+		}
+		else_if = {
+			limit = { has_variable = central_africa_expedition_var }
+			
+		}
+	}
+
+	option = {
+		name = expedition_events.70.a
+		default_option = yes
+		add_medium_peril_effect = yes
+		expedition_minor_progress_effect = yes
+	}
+
+	option = {
+		name = expedition_events.70.b
+		expedition_peril_decrease_small_effect = yes
+		custom_tooltip = expedition_event_delayed_tt
+	}
+}
+
+mindrend.15 = { #cancelled expedition
+	type = country_event
+
+    title = expedition_events.160.t
+    desc = expedition_events.160.d
+    flavor = expedition_events.160.f
+
+    event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	duration = 3
+	
+	trigger = {
+		OR = {
+			je:je_dreamweaver_expedition ?= {
+				"scripted_bar_progress(expedition_progress_bar)" <= 3
+			}
+
+			je:je_west_america_expedition ?= {
+				"scripted_bar_progress(expedition_progress_bar)" <= 3
+			}
+		}
+		OR = {
+			je:je_dreamweaver_expedition ?= {
+				"scripted_bar_progress(expedition_peril_progress_bar)" >= 6
+			}
+
+			je:je_west_america_expedition ?= {
+				"scripted_bar_progress(expedition_peril_progress_bar)" >= 6
+			}
+		}
+		NOT = { has_variable = cancelled_expedition_var }
+	}
+	
+	immediate = {
+		set_variable = cancelled_expedition_var
+		if = {
+			limit = { has_variable = congo_river_expedition_var }
+			dreamweaver_expedition_location = yes
+		}
+		else_if = {
+			limit = { has_variable = niger_river_expedition_var }
+			
+		}
+		else_if = {
+			limit = { has_variable = central_africa_expedition_var }
+			
+		}
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #go back
+		name = expedition_events.160.a
+		default_option = yes
+		set_variable = no_extra_expenses_var
+		if = {
+			limit = { has_variable = congo_river_expedition_var }
+			trigger_event = { id = expedition_events.612 days = 3 }
+		}
+		else_if = {
+			limit = { has_variable = niger_river_expedition_var }
+			trigger_event = { id = expedition_events.12 days = 3 }
+		}
+		else_if = {
+			limit = { has_variable = central_africa_expedition_var }
+			trigger_event = { id = expedition_events.512 days = 3 }
+		}
+	}
+	
+	option = { #keep pushing
+		name = expedition_events.160.b
+		expedition_minor_progress_effect = yes
+		expedition_peril_decrease_small_effect = yes
+		add_modifier = {
+			name = expedition_extra_expenses_modifier
+			multiplier = money_amount_multiplier_small
+			days = normal_modifier_time
+		}
+	}
+}
+
+mindrend.16 = { #Grave of previous explorers
+	type = country_event
+
+    title = expedition_events.90.t
+    desc = expedition_events.90.d
+    flavor = expedition_events.90.f
+
+    event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    duration = 3
+	
+	trigger = {
+		OR = {
+
+			je:je_dreamweaver_expedition ?= {
+				"scripted_bar_progress(expedition_progress_bar)" > 2
+			}
+			je:je_mindrend_expedition ?= {
+				"scripted_bar_progress(expedition_progress_bar)" > 2
+			}
+		}
+		OR = {
+			has_variable = failed_dreamweaver_var
+			has_variable = failed_niger_river_var
+			has_variable = failed_central_africa_expedition_var
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+
+	immediate = {
+		set_variable = previous_expedition_grave
+		if = {
+			limit = { has_variable = congo_river_expedition_var }
+			dreamweaver_expedition_location = yes
+		}
+		else_if = {
+			limit = { has_variable = niger_river_expedition_var }
+			
+		}
+		else_if = {
+			limit = { has_variable = central_africa_expedition_var }
+		}
+	}
+
+	option = {
+		name = expedition_events.90.a
+		default_option = yes
+		expedition_moderate_progress_effect = yes
+	}
+}
+
+mindrend.17 = { #Leader dies
+	type = country_event    
+
+    title = expedition_events.110.t
+    desc = expedition_events.110.d
+    flavor = expedition_events.110.f
+
+    event_image = {
+		video = "middleeast_jungle_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+
+    duration = 3
+	
+	trigger = {
+		NOT = { has_variable = expedition_new_leader }
+	}
+	
+	immediate = {
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = dead_expedition_leader
+			remove_variable = expedition_leader_var
+		}
+		create_character = {
+			ig_leader = no
+			female = no
+			is_general = yes
+			on_created = {
+				set_variable = expedition_leader_var
+				ROOT = {
+					set_variable = { name = expedition_leader_storage_var value = prev }
+				}
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = expedition_leader_var
+			}
+			save_scope_as = expedition_leader
+			set_character_busy_and_immortal = yes
+		}
+		set_variable = expedition_new_leader
+		if = {
+			limit = { has_variable = niger_river_expedition_var }
+			
+		}
+		else_if = {
+			limit = { has_variable = central_africa_expedition_var }
+			
+		}
+	}
+
+	option = {
+		name = expedition_events.110.a
+		default_option = yes
+		scope:dead_expedition_leader = {
+			set_character_busy_and_immortal = no
+			kill_character = yes
+		}
+		show_as_tooltip = {
+			scope:current_expedition_location = {
+				create_character = {
+					ig_leader = no
+					female = no
+					is_general = yes
+					on_created = {
+						set_character_busy_and_immortal = yes
+					}
+				}
+			}
+		}
+		scope:expedition_leader = {
+			set_variable = expedition_leader_var 
+			ROOT = {
+				set_variable = { name = expedition_leader_storage_var value = prev }
+			}
+		}
+		add_small_peril_effect = yes
+		expedition_minor_progress_effect = yes
+	}
+}

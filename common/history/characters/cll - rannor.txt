@@ -1,0 +1,40 @@
+﻿CHARACTERS = {
+	c:CLL ?= {
+		create_character = {
+ 			first_name = Ameluanor
+   			last_name = Caellyos
+    		historical = yes
+			ruler = yes
+   			female = yes
+    		age = 67
+    		dna = dna_queen_cazalet
+    		culture = cu:rannorian
+			religion = rel:orthodox_fosirmi
+			interest_group = ig_mages
+   			ideology = ideology_reformer
+    		traits = {
+				tactful
+				masterful_diplomat
+				expert_political_operator
+   	 			}
+		}
+		create_character = {
+			first_name = Semnoru
+			last_name = Caellyos
+			historical = yes
+			heir = yes
+			age = 15
+			dna = dna_heir_cazalet
+			interest_group = ig_industrialists
+			ideology = ideology_artificer_baron
+			culture = cu:rannorian
+			religion = rel:orthodox_fosirmi
+			traits = {
+				trait_child
+				innovative 
+				persistent
+				scarred
+			}
+		}
+	}
+}

@@ -1,0 +1,234 @@
+﻿buramog_alliance_button = {
+	name = "unite_the_plaguewood_tribes"
+	desc = "unite_the_plaguewood_tribes_desc"
+	visible = {
+		is_subject = no
+		OR = {
+			AND = {
+				exists = c:BDB
+				this = c:BDB
+				exists = c:RTD
+				c:RTD ?= {
+					has_journal_entry = je_second_buramog_wars
+				}
+			}
+			AND = {
+				exists = c:RTD
+				this = c:RTD
+				exists = c:BDB
+				c:BDB ?= {
+					has_journal_entry = je_second_buramog_wars
+				}
+			}
+
+		}
+		NOT = {
+			has_variable = invoked_steakamki_var
+		}
+	}
+
+	possible = {
+		is_subject = no
+		OR = {
+			AND = {
+				this = c:BDB
+				c:RTD = {
+					has_journal_entry = je_second_buramog_wars
+				}
+				c:RTD.relations:root > relations_threshold:amicable
+			}
+			AND = {
+				this = c:RTD
+				c:BDB = {
+					has_journal_entry = je_second_buramog_wars
+				}
+				c:BDB.relations:root > relations_threshold:amicable
+			}
+		}
+
+		custom_tooltip = {
+			text = buramog_wars_escalated_tt
+			has_global_variable = buramog_wars_escalated
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = buramog_alliance_effect_tt
+		}
+		if = {
+			limit = {
+				this = c:RTD
+			}
+			c:BDB = {
+				trigger_event = { id = buramog_war.9 }
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:BDB
+			}
+			c:RTD = {
+				trigger_event = { id = buramog_war.9 }
+			}
+		}
+		set_variable = invoked_steakamki_var
+	}  
+
+	ai_chance = {
+		value = 15
+		if = {
+			limit = {
+				AND = {
+					this = c:RTD
+					OR = {
+						c:BDB.relations:root < relations_threshold:neutral
+						c:BDB = {
+							is_player = yes
+						}
+					}
+				}
+			}
+			add = -30
+		}
+		if = {
+			limit = {
+				AND = {
+					this = c:BDB
+					OR = {
+						c:RTD.relations:root < relations_threshold:neutral
+						c:RTD = {
+							is_player = yes
+						}
+					}
+				}
+			}
+			add = -30
+		}
+	}
+}
+
+outsider_escalate_buramog_wars = {
+	name = "invader_escalate_plaguewood_war"
+	desc = "invader_escalate_plaguewood_war_desc"
+	visible = {
+		is_subject = no
+		OR = {
+			AND = {
+					exists = c:RTD
+				any_neighbouring_state = {
+					OR = {
+						owner ?= c:RTD
+					}
+				}
+			
+				has_truce_with = c:RTD
+			}
+			AND = {
+				exists = c:BDB	
+				any_neighbouring_state = {
+					OR = {
+						owner ?= c:BDB
+					}
+				}
+				has_truce_with = c:BDB
+			}
+		}
+        NOT = {
+        	has_variable = escalated_buramog_wars
+        }
+	}
+
+	possible = {
+		any_neighbouring_state = {
+			OR = {
+				owner ?= c:RTD
+				owner ?= c:BDB
+			}
+		}
+		has_technology_researched = rifling
+		has_technology_researched = logistics
+	}
+
+	effect = {
+		set_variable = escalated_buramog_wars
+		set_global_variable = buramog_wars_escalated
+		end_truce = c:RTD
+		end_truce = c:BDB
+	}  
+
+	ai_chance = {
+		value = 15
+	}
+}
+
+
+invader_halt_plaguewood_expulsions = {
+	name = "invader_halt_plaguewood_expulsions"
+	desc = "invader_halt_plaguewood_expulsions_desc"
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_national_supremacy
+				value < neutral
+			}
+		}
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_state_religion
+				value < neutral
+			}
+		}
+		custom_tooltip = {
+			text = halted_expulsions_tt
+			NOT = {
+				has_variable = halted_buramog_deportations
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = halt_buramog_deportations_tt
+			set_variable = halted_buramog_deportations
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					leader = {
+						has_ideology = ideology:ideology_jingoist_leader
+					}
+					law_stance = {
+						law = law_type:law_national_supremacy
+						value > neutral
+					}
+				}
+			}
+			add_modifier = {
+				name = modifier_halted_circassian_expulsions
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 20
+		if = {
+			limit = {
+				OR = {
+					is_at_war = yes
+					in_default = yes
+				}
+			}
+			add = -100
+		}
+	}
+}

@@ -1,0 +1,158 @@
+blue_riband_point = {
+    value = blue_riband_point_base
+    multiply = blue_riband_point_multiplier
+}
+
+blue_riband_point_base = {
+    value = 30
+
+    every_scope_building = {
+        limit = { is_building_type = building_shipyards }
+        add = level
+    }
+
+    if = {
+		limit = { 
+            any_scope_building = {
+                is_building_type = building_shipyards
+                occupancy >= 0.5
+                level >= 3
+            }
+        }
+
+        add = 3
+	}
+
+    if = {
+		limit = { 
+            any_scope_building = {
+                is_building_type = building_shipyards
+                occupancy >= 0.5
+                level >= 5
+            }
+        }
+
+        add = 3
+	}
+
+    if = {
+		limit = { 
+            AND = {
+                any_scope_building = {
+                    is_building_type = building_shipyards
+                    occupancy >= 0.5
+                    level >= 8
+                }
+                has_technology_researched = concrete_dockyards
+            }
+        }
+
+        add = 3
+	}
+
+    if = {
+        limit = {
+            literacy_rate >= 0.35
+        }
+        add = 3
+    }
+
+    if = {
+        limit = {leading_producer_of = g:steamers}
+        add = 2
+
+    }
+
+    if = {
+        limit = { #multiple companies do not stack, otherwise the lines would be too long.
+            has_shipyard_company = yes
+        }
+        add = 3
+
+        if = {
+            limit = {
+                has_technology_researched = mutual_funds
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                has_technology_researched = investment_banks
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                has_technology_researched = corporate_management
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                has_technology_researched = macroeconomics
+            }
+            add = 1
+        }
+    }
+}
+
+blue_riband_point_multiplier = {
+    value = 10
+    if = {
+        limit = {
+            has_technology_researched = gantry_cranes
+        }
+        add = 90
+    }
+    if = {
+        limit = {
+            has_technology_researched = floating_harbor
+        }
+        add = 15
+    }
+
+    if = {
+        limit = {
+            has_technology_researched = self_propelled_torpedoes
+        }
+        add = 5
+    }
+
+    if = {
+        limit = {
+            has_technology_researched = rotary_valve_engine
+        }
+        add = 10
+    }
+
+    if = {
+        limit = {
+            has_technology_researched = steel_railway_cars
+        }
+        add = 10
+    }
+
+    if = {
+        limit = {
+            has_technology_researched = combustion_engine 
+        }
+        add = 25
+    }
+
+    if = {
+        limit = {
+            has_technology_researched = compression_ignition # steam turbine is gone
+        }
+        add = 30
+    }
+
+    if = {
+        limit = {
+            has_technology_researched = arc_welding # gas turbine is gone
+        }
+        add = 55
+    }
+}

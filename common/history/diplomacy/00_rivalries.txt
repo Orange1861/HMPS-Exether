@@ -1,0 +1,146 @@
+﻿DIPLOMACY = {
+	c:FLU ?= {
+	}
+	c:DIS ?= {
+		create_diplomatic_pact = {
+			country = c:VAI
+			type = rivalry
+		}
+	}
+	c:VOZ ?= {
+		create_diplomatic_pact = {
+			country = c:EME
+			type = rivalry
+		}
+	}
+	c:TEF ?= {
+		create_diplomatic_pact = {
+			country = c:THI
+			type = rivalry
+		}
+	}
+	c:THI ?= {
+		create_diplomatic_pact = {
+			country = c:TEF
+			type = rivalry
+		}
+	}
+	c:EME ?= {
+		create_diplomatic_pact = {
+			country = c:VOZ
+			type = rivalry
+		}
+	}
+	c:VAI ?= {
+		create_diplomatic_pact = {
+			country = c:DIS
+			type = rivalry
+		}
+	}
+	c:TLE ?= {
+		create_diplomatic_pact = {
+			country = c:RAV
+			type = rivalry
+		}
+	}
+	c:RVC ?= {
+		create_diplomatic_pact = {
+			country = c:AUM
+			type = rivalry
+		}
+	}	
+	c:RAV ?= {
+		create_diplomatic_pact = {
+			country = c:TLE
+			type = rivalry
+		}
+	}	
+	c:RAV ?= {
+		create_diplomatic_pact = {
+			country = c:VAI
+			type = rivalry
+		}
+	}	
+	c:VAI ?= {
+		create_diplomatic_pact = {
+			country = c:RAV
+			type = rivalry
+		}
+	}	
+	c:SNB ?= {
+		create_diplomatic_pact = {
+			country = c:KHD
+			type = rivalry
+		}
+	}
+	c:KHD ?= {
+		create_diplomatic_pact = {
+			country = c:SNB
+			type = rivalry
+		}
+	}
+	c:XXP ?= {
+		create_diplomatic_pact = {
+			country = c:OPA
+			type = rivalry
+		}
+	}
+	c:OPA ?= {
+		create_diplomatic_pact = {
+			country = c:XXP
+			type = rivalry
+		}
+	}
+	c:PVA ?= {
+		create_diplomatic_pact = {
+			country = c:RLP
+			type = rivalry
+		}
+	}
+	c:RLP ?= {
+		create_diplomatic_pact = {
+			country = c:PVA
+			type = rivalry
+		}
+	}		
+
+	#Ogres
+	c:OGR ?= {
+		create_diplomatic_pact = {
+			country = c:SHJ
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:MOK
+			type = rivalry
+		}
+	}
+	c:SHJ ?= {
+		create_diplomatic_pact = {
+			country = c:OGR
+			type = rivalry
+		}
+	}
+	c:MOK ?= {
+		create_diplomatic_pact = {
+			country = c:OGR
+			type = rivalry
+		}
+	}
+	c:VAE ?= {
+		create_diplomatic_pact = {
+			country = c:ZKW
+			type = rivalry
+		}
+	}
+	c:ZKW ?= {
+		create_diplomatic_pact = {
+			country = c:VAE
+			type = rivalry
+		}
+	}
+}	
+
+
+
+

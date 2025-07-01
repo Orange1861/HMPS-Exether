@@ -1,0 +1,1126 @@
+﻿culture_flavor_loc = {
+	type = culture
+	random_valid = no
+#random_culture
+	text = {
+		localization_key = culture_flavor_loc_default
+		fallback = yes
+	}
+#human_heritage
+	text = {
+		trigger = {
+			this = cu:dumonian
+		}
+		localization_key = dumonian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:vystemian
+		}
+		localization_key = vystemian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:gelidrumin
+		}
+		localization_key = gelidrumin_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:ralaurian
+		}
+		localization_key = ralaurian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:dewaric
+		}
+		localization_key = dewaric_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:uplander
+		}
+		localization_key = uplander_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:avalorean
+		}
+		localization_key = avalorean_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:whiali
+		}
+		localization_key = whiali_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:vairian
+		}
+		localization_key = vairian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:littoral_thalorian
+		}
+		localization_key = littoral_thalorian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:heartland_thalorian
+		}
+		localization_key = heartland_thalorian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:lake_thalorian
+		}
+		localization_key = lake_thalorian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:gnome_thalorian
+		}
+		localization_key = gnome_thalorian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:waste_walker
+		}
+		localization_key = waste_walker_flavor
+	}
+	#Emerald league
+		text = {
+			trigger = {
+				this = cu:ocelian
+			}
+			localization_key = ocelian_flavor
+		}
+
+		text = {
+			trigger = {
+				this = cu:enelli
+			}
+			localization_key = enelli_flavor
+		}
+	#New Khus
+		text = {
+			trigger = {
+				this = cu:qinnaat
+			}
+			localization_key = qinnaat_flavor
+		}
+		text = {
+			trigger = {
+				this = cu:azmaraan
+			}
+			localization_key = azmaraan_flavor
+		}
+
+	text = {
+		trigger = {
+			this = cu:thiralian
+		}
+		localization_key = thiralian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:astreval
+		}
+		localization_key = astreval_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:anwarthi
+		}
+		localization_key = anwarthi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:bintukin
+		}
+		localization_key = bintukin_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:eutrateri
+		}
+		localization_key = eutrateri_flavor
+	}
+	#Sorbian
+		text = {
+			trigger = {
+				this = cu:zakonish
+			}
+			localization_key = zakonish_flavor
+		}
+
+		text = {
+			trigger = {
+				this = cu:glethach
+			}
+			localization_key = glethach_flavor
+		}
+
+	text = {
+		trigger = {
+			this = cu:jalian
+		}
+		localization_key = jalian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:meriwyn
+		}
+		localization_key = meriwyn_flavor
+	}
+	#Quechua
+		text = {
+			trigger = {
+				this = cu:kusichaki
+			}
+			localization_key = kusichaki_flavor
+		}
+
+		text = {
+			trigger = {
+				this = cu:dunaq
+			}
+			localization_key = dunaq_flavor
+		}
+
+	text = {
+		trigger = {
+			this = cu:scordian
+		}
+		localization_key = scordian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:leiner
+		}
+		localization_key = beithaven_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:cerunite
+		}
+		localization_key = cerunite_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:korafri
+		}
+		localization_key = korafri_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:zemvelo
+		}
+		localization_key = zemvelo_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:bakibi
+		}
+		localization_key = bakibi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:achonian
+		}
+		localization_key = achonian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:eberri
+		}
+		localization_key = eberri_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:dorite
+		}
+		localization_key = dorite_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:south_sea_ravager
+		}
+		localization_key = south_sea_ravager_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:nivaskyan
+		}
+		localization_key = nivaskyan_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:varyngi
+		}
+		localization_key = varyngi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:bossardi
+		}
+		localization_key = bossardi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:yanger
+		}
+		localization_key = yanger_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:wealder
+		}
+		localization_key = wealder_flavor
+	}
+#elven_heritage
+	
+	text = {
+		trigger = {
+			this = cu:tefereti
+		}
+		localization_key = tefereti_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:nangarlith
+		}
+		localization_key = nangarlith_flavor
+	}
+	
+	text = {
+		trigger = {
+			this = cu:seleni
+		}
+		localization_key = seleni_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:kashtarnel
+		}
+		localization_key = kashtarnel_flavor
+	}
+	#Volapuk language (Unkown when it starts or stops)
+	text = {
+		trigger = {
+			this = cu:glabrekthorn
+		}
+		localization_key = glabrekthorn_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:lumvareth 
+		}
+		localization_key = lumvareth_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:erdei
+		}
+		localization_key = erdei_flavor
+	}
+	#Drow
+		text = {
+			trigger = {
+				this = cu:aridrun 
+			}
+			localization_key = aridrun_flavor
+		}
+
+		text = {
+			trigger = {
+				this = cu:umbradorn
+			}
+			localization_key = umbradorn_flavor
+		}
+
+	text = {
+		trigger = {
+			this = cu:rannorian
+		}
+		localization_key = rannorian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:kesswenu
+		}
+		localization_key = kesswenu_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:timari 
+		}
+		localization_key = timari_flavor
+	}
+#dwarven_heritage
+	text = {
+		trigger = {
+			this = cu:arcthar
+		}
+		localization_key = arcthar_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:duneshar
+		}
+		localization_key = duneshar_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:lithorin
+		}
+		localization_key = lithorin_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:starwoken
+		}
+		localization_key = starwoken_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:yelfi
+		}
+		localization_key = yelfi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:vozi
+		}
+		localization_key = vozi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:tolorr
+		}
+		localization_key = tolorr_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:vynduri
+		}
+		localization_key = vynduri_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:koshiri
+		}
+		localization_key = koshiri_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:castaway_dwarf
+		}
+		localization_key = castaway_dwarf_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:hornodukh
+		}
+		localization_key = hornodukh_flavor
+	}
+#orc_heritage
+	text = {
+		trigger = {
+			this = cu:buramog
+		}
+		localization_key = buramog_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:korkaz
+		}
+		localization_key = korkaz_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:kaalkid
+		}
+		localization_key = kaalkid_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:tozhi
+		}
+		localization_key = tozhi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:tqalt
+		}
+		localization_key = tqalt_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:rahoru
+		}
+		localization_key = rahoru_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:nuzaptan
+		}
+		localization_key = nuzaptan_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:lonolot
+		}
+		localization_key = lonolot_flavor
+	}
+#goblin_heritage
+
+	text = {
+		trigger = {
+			this = cu:khanaruk
+		}
+		localization_key = khanaruk_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:batukai 
+		}
+		localization_key = batukai_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:varbat
+		}
+		localization_key = varbat_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:xhurlob
+		}
+		localization_key = xhurlobk_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:shkemger
+		}
+		localization_key = shkemger_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:atiukura
+		}
+		localization_key = atiukura_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:yakamimbo
+		}
+		localization_key = yakamimbo_flavor
+	}
+
+		text = {
+		trigger = {
+			this = cu:gobbo_pirate
+		}
+		localization_key = gobbo_pirate_flavor
+	}
+
+			text = {
+		trigger = {
+			this = cu:bird_pirate
+		}
+		localization_key = bird_pirate_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:kojiniu 
+		}
+		localization_key = kojiniu_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:puarfejiin
+		}
+		localization_key = puarfejiin_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:zangedlittuy
+		}
+		localization_key = zangedlittuy_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:sarhbalb
+		}
+		localization_key = sarhbalb_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:morevnamarya
+		}
+		localization_key = morevnamarya_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:rethrashar
+		}
+		localization_key = rethrashar_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:xhuron
+		}
+		localization_key = xhuron_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:dales_togrul
+		}
+		localization_key = dales_togrul_flavor
+	}
+#gnome_heritage
+
+	text = {
+		trigger = {
+			this = cu:ravikian
+		}
+		localization_key = ravikian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:yrian
+		}
+		localization_key = yrian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:florishnom
+		}
+		localization_key = florishnom_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:gachscho
+		}
+		localization_key = gachscho_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:stranfolk
+		}
+		localization_key = stranfolk_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:kealohi
+		}
+		localization_key = kealohi_flavor
+	}
+#halfling_heritage
+
+	text = {
+		trigger = {
+			this = cu:clearbough
+		}
+		localization_key = clearbough_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:highland_halfling
+		}
+		localization_key = highland_halfling_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:coast_halfling
+		}
+		localization_key = coast_halfling_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:rivierling 
+		}
+		localization_key = rivierling_flavor
+	}
+#giant_heritage
+
+	text = {
+		trigger = {
+			this = cu:frost_giant
+		}
+		localization_key = frost_giant_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:toftir_giant
+		}
+		localization_key = toftir_giant_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:fire_giant
+		}
+		localization_key = fire_giant_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:grendleth
+		}
+		localization_key = grendleth_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:cloud_giant
+		}
+		localization_key = cloud_giant_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:wood_giant
+		}
+		localization_key = wood_giant_flavor
+	}
+#monstrous_heritage
+
+	text = {
+		trigger = {
+			this = cu:hag
+		}
+		localization_key = hag_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:gulf_naga
+		}
+		localization_key = gulf_naga_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:jungle_naga
+		}
+		localization_key = jungle_naga_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:nightwalker
+		}
+		localization_key = nightwalker_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:wastecrawler
+		}
+		localization_key = wastecrawler_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:gnoll
+		}
+		localization_key = gnoll_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:jungle_gnoll
+		}
+		localization_key = jungle_gnoll_flavor
+	}
+
+
+	text = {
+		trigger = {
+			this = cu:awakened
+		}
+		localization_key = awakened_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:plundboelka
+		}
+		localization_key = plundboelka_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:praprandgaw
+		}
+		localization_key = praprandgaw_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:awakened_east2
+		}
+		localization_key = awakened_east2_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:vampire
+		}
+		localization_key = vampire_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:sunkissed
+		}
+		localization_key = sunkissed_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:mutant
+		}
+		localization_key = mutant_flavor
+	}
+#dragon_heritage
+	text = {
+		trigger = {
+			this = cu:illvasaari
+		}
+		localization_key = illvasaari_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:lusakaran
+		}
+		localization_key = lusakaran_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:kotskarvi
+		}
+		localization_key = kotskarvi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:drogori
+		}
+		localization_key = drogori_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:lomarash
+		}
+		localization_key = lomarash_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:tskharvani
+		}
+		localization_key = tskharvani_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:aisjie
+		}
+		localization_key = aisjie_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:larltri
+		}
+		localization_key = larltri_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:pabardian
+		}
+		localization_key = pabardian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:jimwanth
+		}
+		localization_key = jimwanth_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:akmuociai
+		}
+		localization_key = akmuociai_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:hulutit
+		}
+		localization_key = hulutit_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:garagoz
+		}
+		localization_key = garagoz_flavor
+	}
+#bird_heritage
+
+	text = {
+		trigger = {
+			this = cu:whitefeather
+		}
+		localization_key = whitefeather_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:plumesong
+		}
+		localization_key = plumesong_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:cliffpercher
+		}
+		localization_key = cliffpercher_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:sandcircler
+		}
+		localization_key = sandcircler_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:blacktalon 
+		}
+		localization_key = blacktalon_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:saglithan
+		}
+		localization_key = saglithan_flavor
+	}
+
+#planetouched_heritage
+
+	text = {
+		trigger = {
+			this = cu:jazamandroso
+		}
+		localization_key = jazamandroso_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:yachaymanchi
+		}
+		localization_key = yachaymanchi_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:vandori
+		}
+		localization_key = vandori_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:changeling
+		}
+		localization_key = changeling_flavor
+	}
+
+#other culture
+
+	text = {
+		trigger = {
+			this = cu:qadimra
+		}
+		localization_key = qadimra_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:taiamican
+		}
+		localization_key = taiamican_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:koquilla
+		}
+		localization_key = koquilla_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:navrozdok
+		}
+		localization_key = navrozdok_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:east_lacertian
+		}
+		localization_key = east_lacertian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:lacertian
+		}
+		localization_key = lacertian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:kailando_lacertian
+		}
+		localization_key = kailando_lacertian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:west_lacertian
+		}
+		localization_key = west_lacertian_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:onikoku
+		}
+		localization_key = onikoku_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:onisazae
+		}
+		localization_key = onisazae_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:onghori
+		}
+		localization_key = onghori_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:mousefolk
+		}
+		localization_key = mousefolk_flavor
+	}
+
+	text = {
+		trigger = {
+			this = cu:soulwrought
+		}
+		localization_key = soulwrought_flavor
+	}
+}

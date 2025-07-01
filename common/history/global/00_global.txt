@@ -1,0 +1,924 @@
+﻿# This is executed last among all history
+GLOBAL = {
+
+	every_state = {
+		if = {
+			limit = {
+				exether_is_inland = yes
+			}
+			set_variable = {
+				name = exe_is_inland
+			}
+		}
+		if = {
+            limit = {
+				state_region = {
+               	 	state_has_argentum_rail = yes
+				}
+				NOT = {
+					has_state_trait = state_trait_rungloam
+				}
+            }
+			state_region = {
+				add_state_trait = state_trait_rungloam
+			}
+        }
+	}
+
+	every_country = {
+		set_variable = {
+			name = south_sea_favor_var
+			value = 0
+		}
+		set_variable = {
+			name = political_engagement_trade_union_pops
+			value = 0.5
+		}
+		if = {
+			limit = {
+				has_technology_researched = labor_movement
+			}
+			set_variable = labor_movement_discovered
+			
+		}
+		if = {
+			limit = {
+				has_technology_researched = political_agitation
+			}
+			set_variable = political_agitation_discovered
+		}
+	}
+
+
+	# Arcane Civics
+	every_country = {
+		trigger_event = {
+            id = civic_setup.1
+        }
+		if = {
+			limit = {
+				NOT = { has_variable = num_arcana }
+			}
+			set_variable = {
+				name = num_arcana
+				value = 0
+			}
+		}
+		every_scope_state = {
+			set_local_variable = {
+				name  = coverage_state
+				value = this
+			}
+            if = {
+                limit = {
+                    state_adventurer_coverage_balance < 0
+                }
+                add_modifier = {
+                    name = coverage_deficit
+                    multiplier = {
+                        value = local_var:coverage_state.state_adventurer_coverage_multiplier 
+                    }
+                }
+            }
+        }
+	}
+
+	#Retainers 
+	every_country = { 
+		create_character = {
+			template = retainer_template
+		}
+		create_character = {
+			template = retainer_template
+		}
+		create_character = {
+			template = retainer_template
+		}
+	}
+
+
+
+	every_country = {
+		limit = {
+			NOR = {
+				has_law = law_type:law_slavery_banned
+				has_law = law_type:law_guild_bondage
+			}
+		}
+		ig:ig_landowners ?= { add_ideology = ideology_pro_slavery }
+	}
+
+	# Jack the ripper, prevents the event from happening every game
+
+	every_country = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+		}
+		random_list = {
+			1 = { set_variable = var_jack_ripper_possible }
+			9 = {
+				#Nothing Happens
+			}
+		}
+	}
+
+	every_country = { #force matriarchies at game start
+		if = {
+			limit = {
+				OR = {
+					has_law = law_type:law_matriarchy
+				}
+			}
+			matriachy_enforcement = yes
+		}
+	}
+	#social hierarchy
+
+	every_country = {
+		if = {
+			limit = {
+				c:GAI ?= this
+			}
+			set_state_religion = rel:sandspeaker_viticist
+		}
+		if = {
+			limit = {
+				OR = {
+					has_law = law_type:law_avian_caste_enforced
+					has_law = law_type:law_avian_caste_codified
+				}
+			}
+			every_scope_character = {
+				limit = {
+					is_historical = no
+					OR = {
+						has_role = politician
+						has_role = general
+						has_role = admiral
+					}
+					OR = {
+						is_interest_group_type = ig_intelligentsia
+						is_interest_group_type = ig_rural_folk
+					}
+				}
+				random_list = {
+					50 = {
+						change_character_culture = cu:whitefeather
+					}
+					35 = {
+						change_character_culture = cu:saglithan
+					}
+					15 = {
+						change_character_culture = cu:cliffpercher
+					}
+				}
+				
+			}
+			every_scope_character = {
+				limit = {
+					is_historical = no
+					OR = {
+						has_role = politician
+						has_role = general
+						has_role = admiral
+					}
+					OR = {
+						is_interest_group_type = ig_devout
+						is_interest_group_type = ig_industrialists
+						is_interest_group_type = ig_petty_bourgeoisie
+					}
+				}
+				random_list = {
+					50 = {
+						change_character_culture = cu:whitefeather
+					}
+					50 = {
+						change_character_culture = cu:saglithan
+					}
+				}
+				
+			}
+			every_scope_character = {
+				limit = {
+					is_historical = no
+					OR = {
+						has_role = politician
+						has_role = general
+						has_role = admiral
+					}
+
+					OR = {
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_mages
+						is_interest_group_type = ig_armed_forces
+					}
+				}
+				change_character_culture = cu:whitefeather
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				change_pop_culture = {
+						target = cu:whitefeather
+						value = 1
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				change_pop_culture = {
+						target = cu:saglithan
+						value = 0.36
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = farmers
+				}
+				change_pop_culture = {
+						target = cu:saglithan
+						value = 0.53
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = slaves
+				}
+				change_pop_culture = {
+						target = cu:blacktalon
+						value = 1
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				change_pop_culture = {
+						target = cu:saglithan
+						value = 0.29
+				}
+				change_pop_culture = {
+						target = cu:cliffpercher
+						value = 0.1
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = machinists
+				}
+				change_pop_culture = {
+						target = cu:blacktalon
+						value = 0.31
+				}
+				change_pop_culture = {
+						target = cu:cliffpercher
+						value = 0.41
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = clerks
+				}
+				change_pop_culture = {
+						target = cu:cliffpercher
+						value = 0.31
+				}
+				change_pop_culture = {
+						target = cu:saglithan
+						value = 0.41
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_law = law_type:law_west_avian_caste_enforced
+					has_law = law_type:law_west_avian_caste_codified
+				}
+			}
+			every_scope_character = {
+				limit = {
+					is_historical = no
+					is_ruler = yes
+				}
+				change_character_culture = cu:cliffpercher
+			}
+			every_scope_character = {
+				limit = {
+					has_culture = cu:whitefeather
+				}
+				random_list = {
+					40 = {}
+					60 = {
+						change_character_religion = rel:sandspeaker_viticist
+					}
+				}
+			}
+			every_scope_character = {
+				limit = {
+					is_historical = no
+					OR = {
+						has_role = politician
+						has_role = general
+						has_role = admiral
+					}
+					OR = {
+						is_interest_group_type = ig_industrialists
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_mages
+						is_interest_group_type = ig_armed_forces
+					}
+				}
+				random_list = {
+					40 = {
+						change_character_culture = cu:whitefeather
+					}
+					60 = {
+						change_character_culture = cu:cliffpercher
+					}
+				}
+			}	
+			every_scope_character = {
+				limit = {
+					is_historical = no
+					OR = {
+						has_role = politician
+						has_role = general
+						has_role = admiral
+					}
+					OR = {
+						is_interest_group_type = ig_industrialists
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_mages
+						is_interest_group_type = ig_armed_forces
+					}
+				}
+				random_list = {
+					40 = {
+						change_character_culture = cu:whitefeather
+					}
+					60 = {
+						change_character_culture = cu:cliffpercher
+					}
+				}
+				
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				change_pop_culture = {
+						target = cu:whitefeather
+						value = 0.35
+				}
+				change_pop_culture = {
+						target = cu:cliffpercher
+						value = 0.65
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				change_pop_culture = {
+						target = cu:whitefeather
+						value = 0.36
+				}
+				change_pop_culture = {
+						target = cu:cliffpercher
+						value = 0.36
+				}
+			}
+			# every_scope_pop = {
+			# 	limit = {
+			# 		is_pop_type = farmers
+			# 	}
+			# 	change_pop_culture = {
+			# 			target = cu:saglithan
+			# 			value = 0.53
+			# 	}
+			# }
+			every_scope_pop = {
+				limit = {
+					is_pop_type = slaves
+				}
+				change_pop_culture = {
+						target = cu:blacktalon
+						value = 1
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				change_pop_culture = {
+						target = cu:whitefeather
+						value = 0.29
+				}
+				change_pop_culture = {
+						target = cu:saglithan
+						value = 0.14
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = machinists
+				}
+				change_pop_culture = {
+						target = cu:blacktalon
+						value = 0.31
+				}
+				change_pop_culture = {
+						target = cu:saglithan
+						value = 0.41
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = clerks
+				}
+				change_pop_culture = {
+						target = cu:sandcircler
+						value = 0.31
+				}
+				change_pop_culture = {
+						target = cu:saglithan
+						value = 0.41
+				}
+			}
+		}
+	}
+
+	#vampire stuff
+
+
+	# Racial Techs
+
+	every_country = {
+		if = {
+			limit = {
+				any_primary_culture = {
+					AND = {
+						has_discrimination_trait = human_heritage
+						NOT = {
+							has_discrimination_trait = half_elf
+						}
+					}
+				}
+			}
+			add_technology_researched = human_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = dwarf_heritage
+				}
+			}
+			add_technology_researched = dwarf_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					AND = {
+						has_discrimination_trait = elf_heritage
+						NOT = {
+							has_discrimination_trait = half_elf
+						}
+					}
+				}
+			}
+			add_technology_researched = elf_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					AND = {
+						has_discrimination_trait = elf_heritage
+						has_discrimination_trait = half_elf
+					}
+				}
+			}
+			add_technology_researched = half_elf_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = gnome_heritage
+				}
+			}
+			add_technology_researched = gnome_tech
+			set_variable = soulwrought_production_var
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = dragon_heritage
+				}
+			}
+			add_technology_researched = dragon_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = planetouched_heritage
+				}
+			}
+			add_technology_researched = planetouched_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = ogre_heritage
+				}
+			}
+			add_technology_researched = ogre_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = goblin_heritage
+				}
+			}
+			add_technology_researched = goblin_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = lizardfolk_heritage
+				}
+			}
+			add_technology_researched = lizard_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = giant_heritage
+				}
+			}
+			add_technology_researched = giant_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = mouse_heritage
+				}
+			}
+			add_technology_researched = mouse_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = orc_heritage
+				}
+			}
+			add_technology_researched = orc_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = halfling_heritage
+				}
+			}
+			add_technology_researched = halfling_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = bird_heritage
+				}
+			}
+			add_technology_researched = bird_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = mechanical_heritage
+				}
+			}
+			add_technology_researched = mechanical_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					AND = {
+						OR = {
+							has_discrimination_trait = monstrous_heritage
+							has_discrimination_trait = gnoll_heritage
+						}
+						
+					}
+					
+				}
+			}
+			add_technology_researched = monster_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+						has_discrimination_trait = awakened_heritage
+				}
+			}
+			add_technology_researched = awakened_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+						has_discrimination_trait = midnight_heritage
+				}
+			}
+			add_technology_researched = midnight_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = naga_heritage_culture
+				}
+			}
+			add_technology_researched = naga_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = hiadud_heritage
+				}
+			}
+			add_technology_researched = hiadud_tech
+		}
+}
+	# International List
+
+	every_country = {
+		limit = {
+			religion = {
+				OR = {
+					has_discrimination_trait = marktarian_heritage
+					has_discrimination_trait = uriks_pantheon
+				}
+				
+			}
+		}
+		
+
+	}
+
+	every_country = {
+		every_interest_group = {
+			leader = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 5
+				}
+			}
+		}
+	}
+
+	every_country = {
+		limit = {
+			top_overlord ?= {
+				is_country_type = organization_tag
+			}
+		}
+		add_to_global_variable_list = {
+			name = drow_tributary_list
+			target = THIS
+		}
+	}
+
+	random_country = {
+		set_global_variable = {
+			name = veil_damage_top_1
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_1_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = veil_damage_top_2
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_2_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = veil_damage_top_3
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_3_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = blue_riband_top_1
+			value = c:XXG
+		}
+		set_global_variable = {
+			name = blue_riband_top_1_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = blue_riband_top_2
+			value = 0
+		}
+		set_global_variable = {
+			name = blue_riband_top_2_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = blue_riband_top_3
+			value = 0
+		}
+		set_global_variable = {
+			name = blue_riband_top_3_value
+			value = 0
+		}
+	}
+
+	#Event Variables
+	
+	set_global_variable = {
+		name = number_of_mega_earthquakes
+		value = 0
+	}
+
+	set_global_variable = {
+		name = number_of_mega_floods
+		value = 0
+	}
+	
+	set_global_variable = {
+		name = number_of_mega_eruptions
+		value = 0
+	}
+
+	set_global_variable = {
+		name = veil_integrity_var
+		value = 0
+	}
+
+	#setup_arcana_active = yes
+	#setup_arcana_unicorn = yes
+	#setup_arcana_golem = yes
+	#setup_arcana_phoenix = yes
+	#setup_arcana_sphinx = yes
+	#setup_arcana_fiend = yes
+	#setup_arcana_justice = yes
+	#setup_arcana_siren = yes
+	#setup_arcana_surplus = yes
+	
+
+	every_country = {
+		limit = {
+			is_major_unifier_candidate = yes
+		}
+		effect_has_major_formable = yes
+
+		if = {
+			limit = {
+				can_form_nation = GAV
+			}
+			effect_has_custom_journals = yes 
+		}
+	}
+
+	every_country = {
+
+		add_modifier = {
+			name = surplus_arcana
+			multiplier 0.1
+		}
+
+		set_variable = {
+			name = veil_damage
+			value = 0
+		}
+
+		set_variable = {
+			name = player_rank
+			value = 99
+		}
+
+		calculate_arcanas = yes
+
+			### Variable Errors Fixing - HACK!  Fix these eventually
+
+			fix_variable_error = {
+				X = napoleon_iii_var
+			}
+
+			fix_variable_error = {
+				X = veil_damage_top_1
+			}
+			fix_variable_error = {
+				X = veil_damage_top_2
+			}
+			fix_variable_error = {
+				X = veil_damage_top_3
+			}
+
+		}
+
+		
+
+		#Union of the Sands JE
+		set_global_variable = {
+			name = yavira_scope
+			value = c:DRO
+		}
+		set_global_variable = {
+			name = vozmead_scope
+			value = c:VOZ
+		}
+		set_global_variable = {
+			name = yavira_gdp
+			value = c:DRO.gdp
+		}
+		set_global_variable = {
+			name = vozmead_gdp
+			value = c:VOZ.gdp
+		}
+
+	#bloodtithe mode
+		# if = {
+		# 	limit = {
+		# 		has_game_rule = bloodtithe_mode_basic
+		# 	}
+		# 	every_country = {
+		# 		add_journal_entry = {
+		# 			type = je_vampire_university
+		# 		}
+		# 	}
+		# }
+
+		# if = {
+		# 	limit = {
+		# 		has_game_rule = bloodtithe_mode_player_basic
+		# 	}
+		# 	every_country = {
+		# 		limit = {
+		# 			is_ai = no
+		# 		}
+		# 		add_journal_entry = {
+		# 			type = je_vampire_university
+		# 		}
+		# 	}
+		# }
+
+		# if = {
+		# 	limit = {
+		# 		has_game_rule = bloodtithe_mode_crazy
+		# 	}
+		# 	every_country = {
+		# 		add_journal_entry = {
+		# 			type = je_vampire_university
+		# 		}
+
+		# 		add_journal_entry = {
+		# 			type = je_blood_tribunal
+		# 		}
+		# 	}
+		# }
+
+		# if = {
+		# 	limit = {
+		# 		has_game_rule = bloodtithe_mode_player_crazy
+		# 	}
+		# 	every_country = {
+		# 		limit = {
+		# 			is_ai = no
+		# 		}
+		# 		bloodtithe_mode_culture_switch = yes
+		# 		midnight_enforcement = yes
+		# 		add_journal_entry = {
+		# 			type = je_vampire_university
+		# 		}
+
+		# 		add_journal_entry = {
+		# 			type = je_blood_tribunal
+		# 		}
+		# 	}
+		# }
+
+		#vampire stuff
+
+		every_country = {
+			midnight_enforcement = yes
+		}
+		#lets us ignore the trade center crash
+		# every_country = {
+		# 	trade_federation_unblockade = yes
+		# }
+
+}

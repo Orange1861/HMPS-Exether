@@ -1,0 +1,46 @@
+﻿CHARACTERS = {
+	c:RAV ?= {
+		create_character = {
+			first_name = "Ronvolf"
+			last_name = "sna_Denzenvui"
+			historical = yes
+			ruler = yes
+			age = 36
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				innovative
+				engineer
+				direct
+			}
+		}
+		create_character = {
+			first_name = Blarmie
+			last_name = Dronge
+			historical = yes
+			ig_leader = yes
+			age = 48
+			interest_group = ig_armed_forces
+			ideology = ideology_positivist
+			traits = {
+				imperious
+				charismatic
+				honorable
+				celebrity_commander
+			}
+		}
+		create_character = {
+			first_name = Norbris
+			last_name = Tonkee
+			historical = yes
+			ig_leader = yes
+			age = 26
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_jingoist_leader
+			traits = {
+				erudite
+				bigoted
+			}
+		}
+	}
+}

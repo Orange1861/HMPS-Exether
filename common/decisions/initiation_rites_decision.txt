@@ -1,0 +1,84 @@
+﻿# initiation_rites_decision = {  ##moved to vampire university
+# 	is_shown = {
+# 		country_has_primary_culture = cu:vampire
+# 		NOT = { has_modifier = recently_performed_initiations }
+# 	}
+	
+# 	possible = {
+# 		custom_tooltip = {
+# 			text = initiations_rites_tt_1
+# 			NOT = { has_modifier = recently_performed_initiations }
+# 		} 
+# 	}
+
+# 	when_taken = {
+# 		add_modifier = {
+# 			name = recently_performed_initiations years = 2
+# 		}
+# 		custom_tooltip = {
+# 			text = initiations_rites_tt_2
+# 			every_scope_state = {
+# 				every_scope_pop = {
+# 					limit = {
+# 						NOT = {
+# 							culture = cu:vampire
+# 						}
+# 					}
+# 					change_pop_culture = {
+# 						target = cu:vampire
+# 						value = 0.03
+# 					}
+# 					}
+# 				}
+# 		}
+
+# 		}
+	
+
+# 	ai_chance = {
+# 		value = 80
+# 	}
+# }
+
+annex_witchwood_decision = {
+	is_shown = {
+		country_has_primary_culture = cu:vampire
+		NOT = {
+			any_scope_state = {
+				state_region = s:STATE_BANCFAN
+			}
+		}
+	}
+	
+	possible = {
+		any_subject_or_below = {
+			any_scope_state = {
+				state_region = s:STATE_BANCFAN
+				is_split_state = no
+			}
+		}
+	}
+
+	when_taken = {
+		custom_tooltip = {
+			text = annex_witchwood_tt
+			s:STATE_BANCFAN = {
+				set_owner_of_provinces = {
+					country = ROOT
+						provinces = { x2DF1DC x80D5F0 x8DC8AD x9DE27E xA68BD1 xA7B8B0 xA8C0CC xAAC8AA xB87FC2 xC3B3C4 xD1FD5E xDEEBD6 xE18BAE xF47BA2 }
+					}	
+			}
+				
+		}
+	}
+
+			
+
+
+
+		
+	
+	ai_chance = {
+		value = 80
+	}
+}

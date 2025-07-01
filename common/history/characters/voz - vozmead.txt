@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:VOZ ?= {
+		create_character = {
+			template = VOZ_vozmead_leader_template
+		}
+		create_character = {
+			template = VOZ_vozmead_traditional_heir_template
+		}
+				
+	}
+}

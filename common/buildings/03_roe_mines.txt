@@ -1,0 +1,107 @@
+﻿## Exether Mines
+
+building_wishstone_mine = {
+	building_group = bg_wishstone_mining
+	icon = "gfx/interface/icons/building_icons/wishstone_vein.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		shaft_mining
+	}
+	
+
+	production_method_groups = {
+		pmg_mining_equipment_building_wishstone_mine
+		pmg_explosives_building_wishstone_mine
+		pmg_magic_automation
+		pmg_steam_automation_building_iron_mine
+		pmg_train_automation_building_iron_mine
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+
+building_wishstone_fields = {
+	building_group = bg_wishstone_fields
+	icon = "gfx/interface/icons/building_icons/wishstone_fields.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		celestial_mapping
+	}
+
+	production_method_groups = {
+		pmg_base_building_wishstone_fields
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+##
+# Native Cloudsilver mining
+#
+building_cloudsilver_mine = {
+    building_group = bg_cloudsilver_mining
+    icon = "gfx/interface/icons/building_icons/cloudsilver_mine.dds"
+    city_type = mine
+    levels_per_mesh = 5
+    required_construction = construction_cost_medium
+    terrain_manipulator = mining
+
+    unlocking_technologies = {
+        shaft_mining
+    }
+
+    production_method_groups = {
+        pmg_mining_equipment_building_cloudsilver_mine
+        pmg_explosives_building_cloudsilver_mine
+		pmg_potions_building_cloudsilver_mine
+        pmg_magic_automation
+        pmg_steam_automation_building_iron_mine
+        pmg_train_automation_building_iron_mine
+    }
+
+    ownership_type = self
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_lapis_mine = {
+	building_group = bg_lapis_mining
+	icon = "gfx/interface/icons/building_icons/lapis_mine.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		shaft_mining
+	}
+    
+    potential = {
+        region = sr:region_yamkhanato
+    }
+
+    possible = { 
+        region = sr:region_yamkhanato
+    }
+	production_method_groups = {
+		pmg_mining_equipment_building_lapis_mine
+		pmg_explosives_building_lapis_mine
+		pmg_magic_automation
+		pmg_steam_automation_building_lead_mine
+		pmg_train_automation_building_lead_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+ }

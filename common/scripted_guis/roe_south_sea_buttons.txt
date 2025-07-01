@@ -1,0 +1,242 @@
+﻿	south_sea_send_gift = {
+		effect = {
+
+			add_treasury = {
+				add = 50
+				divide = 1000
+				multiply = root.gdp
+				multiply = -1
+			}
+
+			custom_tooltip = {
+				text = south_sea_favor_add_100_tt
+			}
+
+			hidden_effect = {
+				set_variable = {
+					name = south_sea_send_gift_cooldown
+					value = yes
+					days = 365
+				}		
+				change_variable = {
+					name = south_sea_favor_var
+					add = 100
+				}
+			}
+	
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > money_amount_multiplier_medium
+					gold_reserves > 0
+	
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_armed_isolationism
+				}
+				add = -1000
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+		is_valid = {
+			scaled_debt <= 0
+
+			custom_tooltip = {
+				text = has_south_sea_send_gift_cooldown_tt
+				NOT = {
+					has_variable = south_sea_send_gift_cooldown
+				}
+			}
+		}
+	}
+
+	south_sea_kowtow = {
+		effect = {
+
+			add_modifier = {
+				name = modifier_south_sea_kowtow
+				months = 60
+			}
+
+			custom_tooltip = {
+				text = south_sea_favor_add_200_tt
+			}
+
+			hidden_effect = {
+				set_variable = {
+					name = south_sea_kowtow_cooldown
+					value = yes
+					days = 1825
+				}		
+				change_variable = {
+					name = south_sea_favor_var
+					add = 200
+				}
+			}
+	
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					NOT = {
+						this.country_rank >= rank_value:great_power
+					}
+				}
+				add = 1
+			}	
+		}
+		is_valid = {
+			country_rank >= rank_value:unrecognized_regional_power
+			NOT = {
+				has_modifier = modifier_south_sea_kowtow
+			}
+		}
+	}
+
+
+	south_sea_recruit_admiral = {
+		effect = {
+			custom_tooltip = {
+				text = south_sea_favor_subtract_500_tt
+			}
+			
+			create_character = {
+				template = sea_elf_admiral_template
+			}
+
+			hidden_effect = {
+				set_variable = {
+					name = south_sea_admiral_cooldown
+					value = yes
+					days = 3650
+				}		
+				change_variable = {
+					name = south_sea_favor_var
+					subtract = 500
+				}
+			}
+	
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					navy_size >= 30
+				}
+				add = 1
+			}
+		}
+		is_valid = {
+			var:south_sea_favor_var >= 500 
+			custom_tooltip = {
+				text = has_south_sea_admiral_cooldown_tt
+				NOT = {
+					has_variable = south_sea_admiral_cooldown
+				}
+			}
+		}
+	}
+
+	south_sea_tech = {
+		effect = {
+			custom_tooltip = {
+				text = south_sea_favor_subtract_1000_tt
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						has_technology_researched = admiralty
+					}
+				}
+				add_technology_progress = { progress = 2500 technology = admiralty }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology_researched = paddle_steamer
+					}
+				}
+				add_technology_progress = { progress = 3500 technology = paddle_steamer }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology_researched = screw_frigate
+					}
+				}
+				add_technology_progress = { progress = 4150 technology = screw_frigate }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology_researched = power_of_the_purse
+					}
+				}
+				add_technology_progress = { progress = 5850 technology = power_of_the_purse }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology_researched = jeune_ecole
+					}
+				}
+				add_technology_progress = { progress = 6000 technology = jeune_ecole }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology_researched = sea_lane_strategies
+					}
+				}
+				add_technology_progress = { progress = 6250 technology = sea_lane_strategies }
+			}
+
+			hidden_effect = {
+				set_variable = {
+					name = south_sea_tech_cooldown
+					value = yes
+					days = 3650
+				}		
+				change_variable = {
+					name = south_sea_favor_var
+					subtract = 1000
+				}
+			}
+	
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					always = yes
+				}
+				add = 1
+			}
+		}
+		is_valid = {
+			var:south_sea_favor_var >= 1000 
+			has_technology_researched = navigation
+			NOT = {
+				has_technology_researched = sea_lane_strategies
+			}
+			custom_tooltip = {
+				text = has_south_tech_cooldown_tt
+				NOT = {
+					has_variable = south_sea_tech_cooldown
+				}
+			}
+		}
+	}

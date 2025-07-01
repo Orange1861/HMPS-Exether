@@ -1,0 +1,56 @@
+﻿DUM_deport_missionaries_button = {
+	name = "DUM_deport_missionaries_button"
+	desc = "DUM_deport_missionaries_button_desc"
+
+	visible = { always = yes }
+
+	possible = {
+		OR = {
+			AND = {
+				c:AUM ?= {
+					relations:root <= relations_threshold:poor
+
+				}
+				ig:ig_devout = {
+						is_powerful = yes
+					}
+			}
+			NOT = {
+				any_neighbouring_state = {
+					owner = {
+						has_law = law_type:law_theocracy
+						country_has_state_religion = rel:cult_of_the_sun
+					}
+				}
+			}
+		}
+		authority >= 200
+	}
+
+	selected = {
+		has_variable = DUM_deported_missionaries
+	}
+
+	effect = {
+		add_modifier = {
+			name = modifier_dum_deporting_missionaries
+			days = normal_modifier_time
+		}
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = root
+				country_has_state_religion = rel:cult_of_the_sun
+				OR = {
+					has_law = law_type:law_state_religion
+					has_law = law_type:law_ecumenical_recognition
+					has_law = law_type:law_freedom_of_conscience
+				}
+			}
+			change_relations = {
+				country = root
+				value = -25
+			}
+		}
+		set_variable = DUM_deported_missionaries
+	}
+}

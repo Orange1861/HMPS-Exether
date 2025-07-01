@@ -1,0 +1,166 @@
+﻿locari_toldek_stop = {
+    is_shown = {
+        has_modifier = toldek_paseb
+    }
+
+    possible = {
+        ig:ig_devout ?= {
+            is_in_government = no
+        }
+        ig:ig_landowners ?= {
+            is_in_government = no
+        }
+        ig:ig_mages ?= {
+            is_in_government = no
+        }
+        government_legitimacy >= 70
+        custom_tooltip = {
+            text = bhimsen_died
+            ruler = {
+                NOT = {
+                    has_variable = is_bhimsen
+                }
+            }
+        }
+    }
+
+    when_taken = {
+        remove_modifier = toldek_paseb
+        add_modifier = {
+            name = abolished_toldek_paseb
+            days = normal_modifier_time
+        }
+	}
+}
+
+locari_jihduk_stop = {
+    is_shown = {
+        has_modifier = jihduk_paseb
+    }
+
+    possible = {
+        ig:ig_devout ?= {
+            is_in_government = no
+        }
+        ig:ig_landowners ?= {
+            is_in_government = no
+        }
+        ig:ig_mages ?= {
+            is_in_government = no
+        }
+        government_legitimacy >= 70
+        custom_tooltip = {
+            text = zokmir_died
+            ruler = {
+                NOT = {
+                    has_variable = is_zokmir
+                }
+            }
+        }
+    }
+
+    when_taken = {
+        remove_modifier = jihduk_paseb
+        add_modifier = {
+            name = abolished_jihduk_paseb
+            days = normal_modifier_time
+        }
+	}	
+}
+
+locari_examine_draconic_carvings = {
+    is_shown = {
+        any_scope_state = {
+                any_scope_building = {
+                    is_building_type = building_dragon_ruins
+			    }
+        }
+        any_primary_culture = {
+            has_discrimination_trait = dragon_heritage
+        }
+        NOT = { has_variable = decision_taken }
+    }
+
+    possible = {
+        any_scope_state = {
+            any_scope_building = {
+                is_building_type = building_dragon_ruins
+                level >= 2
+		    }
+            is_incorporated = yes
+        }
+    }
+
+    when_taken = {
+        set_variable = {
+			name = decision_taken
+		} 
+        add_modifier = {
+            name = examining_dragon_carvings
+            months = 3
+        }
+        trigger_event = {
+            id = locari.1
+            months = 3
+        }
+    }
+}
+
+locari_dragon_tomb_reform = {
+    is_shown = {
+        any_scope_state = {
+            has_modifier = modifier_dragon_tomb_site
+        }
+    }
+
+    possible = {
+        gold_reserves > 10000
+    }
+
+    when_taken = {
+        add_treasury = -10000
+        random_scope_state = {
+            limit = {
+                has_modifier = modifier_dragon_tomb_site
+            }
+            remove_modifier = modifier_dragon_tomb_site
+            state_region = {
+                add_state_trait = state_trait_dragon_tomb
+            }
+            if = {
+                limit = {
+                    state_region = s:STATE_ONOLYSTU
+                    #owner = { c:PAY ?= this }
+                    
+                }
+                trigger_event = {
+                   id = locari.2
+                   days = 10
+                }
+            }
+
+            if = {
+                limit = {
+                    state_region = s:STATE_VAROTSOA
+
+                }
+                trigger_event = {
+                   id = locari.3
+                   days = 10
+                }
+            }
+
+            
+            if = {
+                limit = {
+                    state_region = s:STATE_TSURWA
+                }
+                trigger_event = {
+                   id = locari.4
+                   days = 10
+                }
+            }
+
+        }
+    }
+}

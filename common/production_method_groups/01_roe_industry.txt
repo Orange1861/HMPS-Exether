@@ -1,0 +1,185 @@
+﻿pmg_base_building_gizmo_workshop = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_basic_gizmos
+		pm_basic_gizmos_guild_bonded
+		pm_functional_gizmos
+		pm_functional_gizmos_guild_bonded
+		pm_exciting_gizmos
+		pm_exciting_gizmos_guild_bonded
+		pm_otherworldly_gizmos
+		pm_otherworldly_gizmos_guild_bonded
+	}
+}
+
+pmg_automation_building_gizmo_workshop = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_automation_disabled
+		pm_watertube_boiler_building_gizmo_workshop
+		pm_artificer_watertube_boiler_building_gizmo_workshop
+		pm_rotary_valve_engine_building_gizmo_workshop
+		pm_artificer_rotary_valve_engine_building_gizmo_workshop
+		pm_assembly_lines_building_gizmo_workshop
+		pm_artificer_assembly_lines_building_gizmo_workshop
+	}
+}
+
+pmg_base_building_potion_distillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_simple_potion_production
+		pm_simple_potion_production_guild_bonded
+		pm_early_potion_vat_production
+		pm_early_potion_vat_production_guild_bonded
+		pm_wishtone_potion_process_production
+		pm_wishtone_potion_process_production_guild_bonded
+		pm_cool_name_potion_process_production
+		pm_cool_name_potion_process_production_guild_bonded
+	}
+}
+
+pmg_mix_in_potions = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds" #could maybe use something more flavorful for these
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_mixins
+		pm_functional_mixins
+		pm_sweet_mixins
+	}
+}
+
+pmg_automation_building_potion_distillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_automation_disabled
+		pm_watertube_boiler_building_potion_distillery
+		pm_artificer_watertube_boiler_building_potion_distillery
+		pm_rotary_valve_engine_building_potion_distillery
+		pm_artificer_rotary_valve_engine_building_potion_distillery
+		pm_assembly_line_bottling_blubber_building_potion_distillery
+	}
+}
+
+pmg_base_building_airshipyards = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_basic_airships
+		pm_complex_airships
+		pm_metal_airships
+		pm_arc_welding_airshipbuilding
+	}
+}
+
+pmg_distillery_base_grain = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_basic_distillery
+		pm_pot_stills
+		pm_patent_stills
+	}
+}
+
+pmg_distillery_base_fruit = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_fruit
+		pm_some_fruit
+		pm_more_fruit
+		pm_mostly_fruit
+	}
+}
+
+pmg_distillery_monster = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_spice
+		pm_monster_grapes
+		pm_added_spirits
+	}
+}
+
+pmg_distillery_container = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_barrels
+		pm_bottomless_bottles
+		pm_automated_bottlers
+		
+	}
+}
+
+pmg_base_building_thaumacore_foundry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_basic_thaumacores
+		pm_frankenstien_thaumacores
+		pm_godsblood_thaumacores
+	}
+}
+
+pmg_soulforging_soulwrought_assembly_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_early_soulwrought
+		pm_clockwork_soulwrought
+		pm_streamlined_soulwrought
+	}
+}
+pmg_automation_building_thaumacore_foundry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+	production_methods = {
+		#these are likely temporary until a magical methods can be cobbled together
+		pm_handmade_thaumacores
+		pm_watertube_boiler_building_thaumacore_foundry
+		pm_artificer_watertube_boiler_building_thaumacore_foundry
+		pm_rotary_valve_engine_building_thaumacore_foundry
+		pm_artificer_rotary_valve_engine_building_thaumacore_foundry
+		pm_assembly_line_building_thaumacore_foundry
+		pm_artificer_assembly_line_building_thaumacore_foundry
+	}
+}
+pmg_ice_automation_building_thaumacore_foundry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_nocores
+		pm_frankencores
+		pm_godscores
+		pm_electrocores
+	}
+}
+
+pmg_synthetic_cloudsilver = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_cloudsilver_production
+	}
+}
+
+pmg_cloud_electricity = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_thunderclouds
+		pm_thunderclouds
+	}
+}

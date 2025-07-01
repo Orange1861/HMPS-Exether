@@ -1,0 +1,42 @@
+magic_superiority_sgui = {
+	saved_scopes = { second_country front }
+
+	effect = {
+		set_variable = {
+			name = magic_superiority_value
+			value = 0
+		}
+
+		set_variable = {
+			name = defense_magic_superiority_value
+			value = 0
+		}
+
+		set_variable = {
+			name = resistance_magic_superiority_value
+			value = 0
+		}
+
+
+		scope:second_country = {
+			set_variable = {
+				name = magic_superiority_value
+				value = 0
+			}
+
+			set_variable = {
+				name = defense_magic_superiority_value
+				value = 0
+			}
+
+			set_variable = {
+				name = resistance_magic_superiority_value
+				value = 0
+			}
+		}
+
+		scope:front = {
+			ms_sgui_calculate_superiority_front = yes
+		}
+	}
+}

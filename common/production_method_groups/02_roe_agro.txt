@@ -1,0 +1,221 @@
+﻿pmg_farms_enhancements = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_farms_no_enhancement
+		pm_farms_basic_earth_shaping
+		pm_farms_druid_basic_earth_shaping
+		pm_farms_mass_plant_growth
+		pm_farms_druid_mass_plant_growth
+		pm_farms_druid_mass_plant_growth_2
+	}
+}
+
+pmg_rice_farms_enhancements = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_rice_farms_no_enhancement
+		pm_rice_farms_basic_earth_shaping
+		pm_rice_druid_farms_basic_earth_shaping
+		pm_rice_farms_mass_plant_growth
+		pm_rice_druid_farms_mass_plant_growth
+		pm_rice_druid_farms_mass_plant_growth_2
+	}
+}
+
+pmg_livestock_enhancements = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_livestock_no_enhancement
+		pm_livestock_fertility_rites
+		pm_livestock_magical_selection
+	#	pm_livestock__druid_fertility_rites
+	#	pm_livestock_druid_magical_selection
+	}
+}
+
+pmg_livestock_godsblood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_livestock_no_godsblood
+		pm_livestock_godsblood
+		pm_livestock_godsblood_increased
+	}
+}
+
+pmg_livestock_enhancements_gardenback = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_livestock_gardenback_no_enhancement
+		pm_livestock_gardenback_fertility_rites
+		pm_livestock_gardenback_magical_selection
+	#	pm_livestock__druid_fertility_rites
+	#	pm_livestock_druid_magical_selection
+	}
+}
+
+pmg_livestock_godsblood_gardenback = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_livestock_gardenback_no_godsblood
+		pm_livestock_gardenback_godsblood
+		pm_livestock_gardenback_godsblood_increased
+	}
+}
+
+
+
+##Regionals##
+
+pmg_base_building_mountain_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
+	}
+}
+
+pmg_secondary_building_mountain_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_secondary
+		pm_chimesilt_extraction
+	}
+}
+
+pmg_harvesting_process_building_mountain_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_steam_threshers
+	}
+}
+pmg_mountain_farm_shipping = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_airshipping
+		pm_yes_airshipping
+
+	}
+}
+
+pmg_base_building_leechgardens = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_leeches
+		pm_bigger_leeches
+		pm_apocalyptic_leeches
+	}
+}
+
+pmg_secondary_building_leechgardens = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_secondary
+		pm_stuffed_leeches
+		pm_magic_leeches
+		
+	}
+}
+
+pmg_armed_harvesting_leechgardens = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_arms
+		pm_small_arms
+		pm_big_arms
+	}
+}
+
+pmg_base_beekeeping = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_traditional_beekeeping
+		pm_dedicated_apiaries
+		pm_large_scale_bees
+	}
+}
+
+pmg_beekeeping_mead = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_mead
+		pm_yes_mead
+		pm_magic_mead
+	}
+}
+
+pmg_beekeeping_automation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pet_the_bees
+		pm_centrifuges
+		pm_automagic_assistants
+	}
+}
+pmg_snail_ranch = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_snimple_ranch
+		pm_snail_farms
+		pm_intensive_snailing_ranch
+	}
+}
+
+pmg_base_building_snail_herder_ranch = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_open_air_snailyards
+		pm_salting_tools
+		pm_saltinghouse
+		pm_mechanized_salting
+	}
+}
+
+pmg_snail_godsblood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_regular_snails
+		pm_godsnilla
+		pm_godsnail
+	}
+}
+
+pmg_base_building_shrimp_farms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_shrimp_feeding
+		pm_mass_feeding
+		pm_mechanized_feeding
+	}
+}
+
+pmg_godshrimp = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_nogodshrimp
+		pm_bloodyshrimp
+		pm_shrimpofthegods
+	}
+}
+
+pmg_gardenback_husbandry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_free_range_foraging
+		pm_bushel_shearing_blades
+		pm_brood_garden_pits
+		pm_industrial_beetle_warrens
+	}
+}
+
+pmg_gardenback_cultivation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_natures_course
+		pm_frass_farming
+		pm_mass_mulching
+	}
+}

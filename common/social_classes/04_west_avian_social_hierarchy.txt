@@ -1,0 +1,191 @@
+﻿perfis_2 = { #beggars
+    social_hierarchy = west_avian_social_hierarchy
+    strata = lower
+
+    allowed_professions = {
+        slaves
+		war_slaves
+        peasants
+		laborers
+		soldiers
+        machinists
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = blacktalon
+			has_pop_culture = saglithan
+			has_pop_culture = sandcircler
+		}
+
+       
+    }
+}
+
+guchesgru_2 = { #the unlucky
+    social_hierarchy = west_avian_social_hierarchy
+    strata = lower
+
+    allowed_professions = {
+        peasants
+		laborers
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = cliffpercher
+            has_pop_culture = whitefeather
+		}
+    }
+}
+
+chesgru_2 = { #the lucky
+    social_hierarchy = west_avian_social_hierarchy
+    strata = lower
+
+    allowed_professions = {
+		clerks
+        bureaucrats
+		adventurers
+    }
+
+    pop_criteria = {
+		OR = {
+			 has_pop_culture = saglithan
+             has_pop_culture = sandcircler
+			 
+		}             
+    }
+}
+
+cuoflir_2 = { #knowledgeseekers
+    social_hierarchy = west_avian_social_hierarchy
+    strata = middle
+
+    allowed_professions = {
+		engineers
+		wizards
+		academics
+        clergymen
+    }
+
+    pop_criteria = {
+		OR = {
+            AND = {
+                OR = {
+                    has_pop_culture = saglithan
+			        has_pop_culture = cliffpercher
+                    has_pop_culture = sandcircler
+                }   
+            }
+		}
+        
+    }
+}
+
+gumefir_2 = { #the independent #should maybe add aristocrats
+    social_hierarchy = west_avian_social_hierarchy
+    strata = middle
+
+    allowed_professions = {
+		soldiers	
+		adventurers
+		farmers
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = cliffpercher
+            has_pop_culture = whitefeather
+		}
+       
+        
+    }
+}
+
+adrir_2 = { #the employee ##intentional translation
+    social_hierarchy = west_avian_social_hierarchy
+    strata = middle
+
+    allowed_professions = {
+		clerks
+		machinists
+        shopkeepers
+        bureaucrats
+
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = cliffpercher
+			has_pop_culture = whitefeather
+		}
+
+       
+        
+    }
+}
+
+# emud = { #the virtuous
+#     social_hierarchy = west_avian_social_hierarchy
+#     strata = middle
+
+#     allowed_professions = {
+#         laborers
+#     }
+
+#     pop_criteria = {
+# 		OR = {
+# 			 has_pop_culture = whitefeather
+		
+# 		}
+       
+        
+#     }
+# }
+denoi_2 = { #the strong
+    social_hierarchy = west_avian_social_hierarchy
+    strata = upper
+
+    allowed_professions = {
+		wizards
+		capitalists
+		officers
+        archmages
+    }
+
+    pop_criteria = {
+		OR = {
+            OR = {
+                has_pop_culture = cliffpercher
+                has_pop_culture = whitefeather
+            }        
+			
+		}
+
+    
+    }
+}
+
+dalbe_2 = { #the above
+    social_hierarchy = west_avian_social_hierarchy
+    strata = upper
+
+    allowed_professions = {
+        clergymen
+		aristocrats
+		tribesmen
+		academics
+		engineers
+	
+    }
+
+    pop_criteria = {
+        OR = {
+            has_pop_culture = whitefeather
+            has_pop_culture = cliffpercher
+        }
+    }
+}
+
+

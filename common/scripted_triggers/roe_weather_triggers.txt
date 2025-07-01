@@ -1,0 +1,303 @@
+﻿### State geography triggers
+
+is_vulnerable_to_draconic_submachina = {
+AND = {
+	any_scope_state = { 
+		check_is_coastal = yes 
+	}
+	OR = {
+		
+		
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_TXINPART
+				state_region = s:STATE_KOILARRA
+				state_region = s:STATE_SUTAN
+				state_region = s:STATE_MALKART
+				state_region = s:STATE_XILABA
+				state_region = s:STATE_ARGIA
+				state_region = s:STATE_FLUSTERBEEK
+				state_region = s:STATE_DAUWBLED
+				state_region = s:STATE_REINFALL
+				state_region = s:STATE_DRAAIKUST
+				state_region = s:STATE_TROMMELKUST
+				state_region = s:STATE_RATELKUST
+				state_region = s:STATE_REINFALL
+			}
+		}
+
+		
+		
+
+		OR = {
+			region = sr:region_rimeroot_jungle
+			region = sr:region_thawed_lands
+			region = sr:region_razorwind
+			region = sr:region_south_toftir
+			region = sr:region_west_dragon_isles
+			region = sr:region_amethyst_archipelago
+		}	
+	}
+
+}
+}
+
+is_vulnerable_to_landshark_swarms = {
+	AND = {
+		NOR = {
+	any_scope_state = {
+		state_region = s:STATE_EISENMORA
+		state_region = s:STATE_JOURNEYEND
+		state_region = s:STATE_KUMASKA
+		state_region = s:STATE_SC12
+		state_region = s:STATE_BJERGHOLM
+		state_region = s:STATE_LILLESO
+	}
+		}
+		region = sr:region_shaking_fields	
+	}
+
+
+}
+
+is_vulnerable_to_psionic_winds = {
+	any_scope_state = {
+		OR = {
+			region = sr:region_scalethane_realms
+			region = sr:region_new_dumonia
+			region = sr:region_dreamweaver_jungle
+			region = sr:region_mindrend_sands
+			region = sr:region_sarpakshetra
+			region = sr:region_thoughtsmith_ridge
+		}	
+	}
+}
+
+is_vulnerable_to_rimeroot_harvest_conditions = {
+	any_scope_state = {
+		OR = {
+			region = sr:region_rimeroot_jungle
+			region = sr:region_thawed_lands
+		}
+	}
+}
+
+is_vulnerable_to_kiankstauk_colonies = {
+	any_scope_state = {
+		OR = {
+			region = sr:region_scalethane_realms
+			region = sr:region_new_dumonia
+			region = sr:region_mindrend_sands
+		}	
+	}
+}
+
+is_vulnerable_to_awakened_flora = {
+	any_scope_state = {
+		OR = {
+			region = sr:region_sarpakshetra
+			region = sr:region_dreamweaver_jungle
+			region = sr:region_thoughtsmith_ridge
+		}
+		
+	}
+	undermountain_state_weather = no
+}
+
+is_vulnerable_to_dinosaur_attacks = {
+	any_scope_state = {
+			OR = {
+			region = sr:region_lacertia
+			region = sr:region_elusive_coves
+		}	
+	}
+}
+
+is_vulnerable_to_plague_spores = {
+	any_scope_state = {
+		OR = {
+		state_region = s:STATE_PLAGUEBRUSH
+		state_region = s:STATE_SANDWOOD
+		state_region = s:STATE_FORESTS_HEART
+		state_region = s:STATE_EASTERN_PLAGUEWOOD
+		state_region = s:STATE_NORTHERN_EXPANSE
+		state_region = s:STATE_BLACKWOOD
+		state_region = s:STATE_BURAMONG
+		state_region = s:STATE_RIBAGAR
+		state_region = s:STATE_PLAGUEWOOD_HINTERLANDS
+		state_region = s:STATE_DILAFSHAN
+		state_region = s:STATE_HAZELDEEP
+		state_region = s:STATE_THE_AMBER_RUN_2
+		state_region = s:STATE_WICKENWOOD
+		state_region = s:STATE_ASHWICK
+		state_region = s:STATE_WICKERRYE
+		state_region = s:STATE_CRAGGEDWYN
+		state_region = s:STATE_ORCBANE_PASS
+		state_region = s:STATE_ORCBANE_PASS_2
+		state_region = s:STATE_PLAGUES_END
+		state_region = s:STATE_MINUPHOSS
+		}		
+	}
+}
+is_vulnerable_to_thiral_blooming = {
+	OR = {
+		region = sr:region_thiral
+		any_scope_state = {
+				OR = {
+					state_region = s:STATE_FAR_SHORE
+					state_region = s:STATE_FAR_SHORE_2
+					state_region = s:STATE_GOLDENMOOR
+					state_region = s:STATE_NORTHERN_FEYSTALK
+					state_region = s:STATE_SOUTHERN_FEYSTALK
+				}
+
+		}
+	}
+}
+
+is_vulnerable_to_treacherous_whirlpools = {
+	OR = {
+
+		any_scope_state = {
+				OR = {
+					state_region = s:STATE_HILOKINI
+					state_region = s:STATE_ONOLYSTU
+					state_region = s:STATE_MISQISIMI
+					state_region = s:STATE_SQUKI_IHI
+					state_region = s:STATE_BANGALITVA
+					state_region = s:STATE_PIKY_UHILY
+					state_region = s:STATE_ONOPYNISQI
+					state_region = s:STATE_APLUKACAL
+					state_region = s:STATE_KRIOKLYKATAL
+					state_region = s:STATE_FALKTHAI
+					state_region = s:STATE_CHMACAJ
+					state_region = s:STATE_ODADRUEL
+					state_region = s:STATE_SAWATHONG
+					region = sr:region_fahavalo
+					region = sr:region_lotus_isles
+				}
+				
+
+		}
+	}
+}
+
+is_vulnerable_to_caelum_radiation = {
+	OR = {	
+		
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_AZHARIM
+				state_region = s:STATE_ZAHIDUMO
+				state_region = s:STATE_RAHMANTO
+				state_region = s:STATE_KAJRANDO
+				state_region = s:STATE_NAJMAKULO
+				state_region = s:STATE_ZAHIDUMO
+				state_region = s:STATE_FUNETUN
+				state_region = s:STATE_KALMBIQUIS
+				state_region = s:STATE_SARABENDO
+				region = sr:region_old_khus
+			}
+		}
+	}
+	NOT = { 
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_ALQADIM
+				state_region = s:STATE_GIRAR
+			}
+		}
+	}
+}
+
+is_vulnerable_to_direwolf_packs = {
+	OR = {
+
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_FROSTGATE
+				state_region = s:STATE_CARREGRICE
+				state_region = s:STATE_TYMANS_FOLLY
+				state_region = s:STATE_MIDCLACK
+				state_region = s:STATE_TALNANT
+				state_region = s:STATE_GLASLIESH
+				state_region = s:STATE_URIKS_GIFT
+				state_region = s:STATE_WEST_YANGER_STEPPE
+				region = sr:region_west_everfrost
+				region = sr:region_whisperpine
+				region = sr:region_east_everfrost
+
+			}
+		}
+	}
+	NOT = { 
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_LIGHTSCOURGE
+				state_region = s:STATE_ARCTHARAL
+			}
+		}
+	}
+}
+
+is_vulnerable_to_mammoth_migrations = {
+	undermountain_state_weather = no
+	any_scope_state = {
+		OR = {
+			region = sr:region_west_everfrost
+			region = sr:region_whisperpine
+			region = sr:region_east_everfrost
+		}
+	}
+}
+
+is_vulnerable_to_snail_stampedes = {
+	
+	OR = {
+		
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_URQUNAYUQ
+				state_region = s:STATE_TAYTAQOCHA
+				state_region = s:STATE_NAWIYANU
+				state_region = s:STATE_TINKUYUQ
+				state_region = s:STATE_KUNTURPAMPA
+				state_region = s:STATE_MIKHUYUQ
+				state_region = s:STATE_KUCHUYPATA
+				region = sr:region_salt_wastes
+			}
+		}
+	}
+}
+
+is_vulnerable_to_salt_waste_curse = {
+	any_scope_state = {
+		has_state_trait = state_trait_salt_wastes
+		NOT = { owner = { has_technology_researched = salt_waste_curse_suppressed } }
+	}
+}
+
+is_vulnerable_to_griffon_attacks = {
+	state_is_in_aritzakarri = yes
+}
+
+is_vulnerable_to_kisqi_raids = {
+	OR = {
+
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_SWAHAKLONG
+				state_region = s:STATE_GEBUMI
+				state_region = s:STATE_VITHKUQJA
+				state_region = s:STATE_KIMBHADO
+				state_region = s:STATE_LYPIKISQI
+				state_region = s:STATE_MYCOLGA
+				state_region = s:STATE_SINIKISQI
+				region = sr:region_vindon_narrows
+				region = sr:region_tokalivar
+				region = sr:region_sanbang
+			}
+		}
+	}
+
+}

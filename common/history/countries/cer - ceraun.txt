@@ -1,0 +1,75 @@
+﻿COUNTRIES = {
+	c:CER = {
+		effect_starting_technology_tier_1_tech = yes
+		effect_starting_politics_conservative = yes
+		add_technology_researched = pharmaceuticals
+
+
+		add_taxed_goods = g:liquor
+		add_taxed_goods = g:luxury_potions
+		add_taxed_goods = g:potions
+		
+		set_military_wage_level = high
+		
+		
+		
+		
+		# Laws 
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_national_supremacy 
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_interventionism	
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_genetic_testing	
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_secret_police
+		
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+			add_ideology = ideology_cerunite_hegemony
+			set_interest_group_name = human_aristocracy
+		}
+
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+
+		add_journal_entry = {
+			type = je_grey_boar
+		}
+
+		add_journal_entry = {
+			type = je_craggedwyn_question
+		}
+
+		add_journal_entry = {
+			type = je_rivierling_unrest
+		}
+		add_company = company_type:company_craggedwyn
+		company:company_craggedwyn = {
+			set_company_establishment_date = 1155.12.31
+			set_company_state_region = s:STATE_ORCBANE_PASS
+			add_owned_country = c:CDW #links the country to this company
+		}
+		effect_has_custom_journals = yes
+
+	}
+}

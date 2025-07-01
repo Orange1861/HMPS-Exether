@@ -1,0 +1,56 @@
+﻿COUNTRIES = {
+	c:KHE ?= {
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+		effect_starting_technology_tier_4_tech = yes
+		
+		effect_starting_politics_conservative = yes
+		
+			# Economic
+	add_technology_researched = cotton_gin
+	add_technology_researched = ghost_busters
+	add_technology_researched = wishstone_machines
+	add_technology_researched = alchemy
+
+	# Military
+	add_technology_researched = mandatory_service
+	add_technology_researched = army_reserves
+	add_technology_researched = line_infantry
+	add_technology_researched = paddle_steamer
+	add_technology_researched = hydraulic_cranes
+
+	# Cultural
+	add_technology_researched = romanticism
+	add_technology_researched = empiricism
+	add_technology_researched = academia
+	add_technology_researched = currency_standards
+	add_technology_researched = colonization
+	add_technology_researched = urban_planning
+	add_technology_researched = egalitarianism
+	add_technology_researched = mass_communication
+	add_technology_researched = labor_movement
+	
+
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_no_police
+		activate_law = law_type:law_land_based_taxation	
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_slavery_banned
+
+		add_taxed_goods = g:liquor
+		add_taxed_goods = g:services
+
+		set_tax_level = medium
+
+	}
+}

@@ -1,0 +1,69 @@
+﻿ideology_corporate_sovereignty = {
+	icon = "gfx/interface/icons/ideology_icons/corporate_imperialist.dds"
+
+	lawgroup_slavery = {
+		law_guild_bondage = strongly_approve
+		law_debt_slavery = neutral
+		law_legacy_slavery = disapprove
+		law_slave_trade = disapprove
+		law_slavery_banned = strongly_disapprove
+	}
+}
+
+ideology_corporate_sovereignty_movement = {
+	icon = "gfx/interface/icons/ideology_icons/corporate_imperialist.dds"
+
+	lawgroup_governance_principles = {
+		law_plutocracy = strongly_approve
+		law_monarchy = strongly_disapprove		
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_magocracy = neutral
+		law_corporate_state = neutral
+		law_theocracy = neutral
+		law_council_republic = strongly_disapprove
+	}
+
+	lawgroup_slavery = {
+		law_guild_bondage = strongly_approve
+		law_debt_slavery = neutral
+		law_legacy_slavery = disapprove
+		law_slave_trade = disapprove
+		law_slavery_banned = strongly_disapprove
+	}
+}
+
+ideology_noble_burdens = {
+	icon = "gfx/interface/icons/ideology_icons/noble_burdens.dds"
+
+	lawgroup_slavery = {
+		law_slavery_banned = strongly_approve
+		law_legacy_slavery = disapprove
+		law_slave_trade = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_guild_bondage = strongly_disapprove
+	}
+}
+
+ideology_noble_burdens_movement = {
+	icon = "gfx/interface/icons/ideology_icons/noble_burdens.dds"
+
+	lawgroup_slavery = {
+		law_slavery_banned = strongly_approve
+		law_legacy_slavery = disapprove
+		law_slave_trade = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_guild_bondage = strongly_disapprove
+	}
+
+	lawgroup_governance_principles = {
+		law_plutocracy = strongly_disapprove
+		law_monarchy = strongly_approve		
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_magocracy = neutral
+		law_corporate_state = neutral
+		law_theocracy = neutral
+		law_council_republic = strongly_disapprove
+	}
+}

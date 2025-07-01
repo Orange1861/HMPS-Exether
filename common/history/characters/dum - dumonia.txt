@@ -1,0 +1,16 @@
+﻿CHARACTERS = {
+	c:DUM ?= {
+		create_character = {
+			template = DUM_dumonia_leader_template
+		}
+		create_character = {
+			template = DUM_daelon_waverly
+		}
+		create_character = {
+			template = DUM_sarelo_veseur
+		}
+		create_character = {
+			template = DUM_styrm_bacher
+		}
+	}
+}

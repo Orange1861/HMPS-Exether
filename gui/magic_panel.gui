@@ -1,0 +1,2617 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types magic_panels {
+	type magic_panel = default_block_window {
+		name = "magic_panel"
+		visible = "[GetVariableSystem.Exists('show_magic')]"
+
+		blockoverride "animation_state_block" {
+			state = {
+				name = _show
+				# Close open panel before showing this one
+				on_start = "[InformationPanelBar.ClosePanel]"
+				on_start = "[MapListPanelManager.CloseCurrentPanel]"
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies"
+				}
+			}
+		
+			state = {
+				name = _hide
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies_stop"
+				}
+			}
+		}
+
+		blockoverride "header_back_button" {
+			onclick = "[GetVariableSystem.Toggle('show_magic')]"
+		}
+
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Toggle('show_magic')]"
+		}
+		
+		blockoverride "window_header_name" {
+			raw_text = "MAGIC_PANEL_HEADER"
+		}
+
+		#TOP
+		blockoverride "fixed_top"
+		{
+			### TOP PART
+			top_illu = {
+				blockoverride "illu" {
+					texture = "gfx/interface/illustrations/top_illus/top_illu_budget.dds"
+				}
+				textbox = {
+					name = "tutorial_highlight_magic_reserves"
+					parentanchor = center
+					using = fontsize_mega
+					raw_text = "@magic![AccessPlayer.MakeScope.ScriptValue('arcana')|=+D]"
+					autoresize = yes
+					align = center|nobaseline
+					tooltip = "MAGIC_TOOLTIP"
+				}
+			}
+			
+			widget = { size = { 1 10 }}
+		}
+		
+		blockoverride "scrollarea_content"
+		{
+			flowcontainer = {
+				using = default_list_position
+				direction = vertical
+				minimumsize = { @panel_width_plus_14 -1 }
+				maximumsize = { @panel_width_plus_14 -1 }
+				datacontext = "[AccessPlayer]"
+
+				### ACTIVE ARCANA
+				flowcontainer = {
+					visible = "[Not(GetVariableSystem.Exists('hide_current_companies'))]"
+					parentanchor = hcenter
+					direction = vertical
+					default_header_2texts = {
+						blockoverride "text1" {
+							text = "MAGICAL_RITUALS"
+						}
+						blockoverride "text2" {
+							text = "[AccessPlayer.MakeScope.ScriptValue('num_arcana_active')]"
+						}
+					}
+
+					flowcontainer = {
+						direction = vertical
+						parentanchor = hcenter
+						margin = { 0 10 }
+						spacing = 10
+
+						### COMPANIES
+						flowcontainer = {
+							parentanchor = hcenter
+							direction = vertical
+
+
+							# GRYPHON
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_gryphon_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_gryphon_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_gryphon_item = {}
+								}
+							}
+							# JUSTICE
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_justice_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_justice_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_justice_item = {}
+								}
+							}
+							# SPHINX
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_sphinx_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_sphinx_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_sphinx_item = {}
+								}
+							}
+							# GOLEM
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_golem_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_golem_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_golem_item = {}
+								}
+							}
+							# UNICORN
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_unicorn_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_unicorn_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_unicorn_item = {}
+								}
+							}
+							# FEY
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_fey_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_fey_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_fey_item = {}
+								}
+							}
+							# PHOENIX
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_phoenix_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_phoenix_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_phoenix_item = {}
+								}
+							}
+							# DJINN
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_djinn_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_djinn_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_djinn_item = {}
+								}
+							}
+							# SIREN
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_siren_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_siren_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_siren_item = {}
+								}
+							}
+							# KRAKEN
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_kraken_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_kraken_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_kraken_item = {}
+								}
+							}
+							# FIEND
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_fiend_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_fiend_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_fiend_item = {}
+								}
+							}
+							# ANGEL
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_angel_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_angel_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_angel_item = {}
+								}
+							}
+						}		
+
+
+					}
+				}
+
+				### 1 GRYPHON HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_gryphon')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_gryphon_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_gryphon')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_gryphon'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_gryphon')]"
+					}
+				}
+				### 1 GRYPHON BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_gryphon')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_gryphon_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_gryphon_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_gryphon_item = {}
+						}
+					}
+				}
+				
+				### 2 JUSTICE HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_justice')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_justice_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_justice')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_justice'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_justice')]"
+					}
+				}
+				### 2 JUSTICE BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_justice')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_justice_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_justice_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_justice_item = {}
+						}
+					}
+				}
+				
+				### 3 SPHINX HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_sphinx')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_sphinx_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_sphinx')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_sphinx'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_sphinx')]"
+					}
+				}
+				### 3 SPHINX BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_sphinx')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_sphinx_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_sphinx_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_sphinx_item = {}
+						}
+					}
+				}		
+				
+				### 4 GOLEM HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_golem')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_golem_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_golem')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_golem'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_golem')]"
+					}
+				}
+				### 4 GOLEM BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_golem')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_golem_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_golem_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_golem_item = {}
+						}
+					}
+				}		
+
+				## 5 UNICORN HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_unicorn')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_unicorn_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_unicorn')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_unicorn'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_unicorn')]"
+					}
+				}
+				### 5 UNICORN BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_unicorn')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_unicorn_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_unicorn_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_unicorn_item = {}
+						}
+					}
+				}		
+				
+				### 6 FEY HEADEER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_fey')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_fey_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_fey')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_fey'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_fey')]"
+					}
+				}
+				### 6 FEY BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_fey')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_fey_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_fey_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_fey_item = {}
+						}
+					}
+				}
+
+				### 7 PHOENIX HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_phoenix')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_phoenix_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_phoenix')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_phoenix'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_phoenix')]"
+					}
+				}
+				### 7 PHOENIX BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_phoenix')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_phoenix_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_phoenix_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_phoenix_item = {}
+						}
+					}
+				}		
+			
+				### 8 DJINN HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_djinn')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_djinn_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_djinn')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_djinn'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_djinn')]"
+					}
+				}
+				### 8 DJINN BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_djinn')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_djinn_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_djinn_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_djinn_item = {}
+						}
+					}
+				}
+
+				### 9 SIREN HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_siren')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_siren_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_siren')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_siren'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_siren')]"
+					}
+				}
+				### 9 SIREN BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_siren')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_siren_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_siren_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_siren_item = {}
+						}
+					}
+				}		
+			
+				### 10 KRAKEN
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_kraken')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_kraken_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_kraken')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_kraken'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_kraken')]"
+					}
+				}
+				### 10 KRAKEN
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_kraken')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_kraken_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_kraken_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_kraken_item = {}
+						}
+					}
+				}
+
+				### 11 FIEND HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_fiend')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_fiend_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_fiend')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_fiend'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_fiend')]"
+					}
+				}
+				### 11 FIEND BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_fiend')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_fiend_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_fiend_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_fiend_item = {}
+						}
+					}
+				}				
+
+				### 12 ANGEL
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_angel')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_angel_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_angel')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_angel'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_angel')]"
+					}
+				}
+				### 12 ANGEL
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_angel')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_angel_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_angel_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_angel_item = {}
+						}
+					}
+				}
+			
+				### 12 DRAGON
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "[GetPlayer.GetCustom('has_arcana_dragon')]"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_arcana_id_dragon_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_arcana_id_dragon')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_arcana_id_dragon'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_arcana_id_dragon')]"
+					}
+				}
+				### 12 DRAGON
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_arcana_id_dragon')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_arcana_id_dragon_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_arcana_id_dragon_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							arcana_id_dragon_item = {}
+						}
+					}
+				}	
+			
+			}
+		}
+	}
+
+	# 1 GRYPHON
+	type arcana_id_gryphon_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_GRYPHON"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/gryphon_proclamation.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/gryphon_gale_currents.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/gryphon_rallying_gale.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/gryphon_eye_of_the_storm.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/gryphon_tempest_path.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_gryphon_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_gryphon_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_gryphon_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_gryphon_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_gryphon')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_GRYPHON"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 2 JUSTICE
+	type arcana_id_justice_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_JUSTICE"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/justice_scales.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/justice_axiom.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/justice_crucible.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/justice_verdict.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/justice_progress.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_justice_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_justice_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_justice_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_justice_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_justice')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_JUSTICE"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 3 SPHINX
+	type arcana_id_sphinx_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_SPHINX"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/ext_sphinx_cartographer.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_sphinx_starlight_academia.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_sphinx_guiding_constellations.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_sphinx_stellar_revelation.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_sphinx_cosmology.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_sphinx_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_sphinx_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_sphinx_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_sphinx_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_sphinx')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}	
+
+				textbox = {
+					text = "arcana_card_flavor_SPHINX"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 4 GOLEM
+	type arcana_id_golem_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_GOLEM"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/golem_harmony.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_golem_stoneskin.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_golem_thorns.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/golem_scenic_landscapes.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/golem_heart_of_earth.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_golem_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_golem_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_golem_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_golem_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_golem')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}		
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}	
+
+				textbox = {
+					text = "arcana_card_flavor_GOLEM"
+					using = arcana_item_text
+				}	
+			}		
+		}		
+	}
+
+	# 5 UNICORN
+	type arcana_id_unicorn_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+
+				background = {
+					using = fade_right_simple
+				}
+
+				textbox = {
+					text = "RITUAL_NAME_UNICORN"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+
+		flowcontainer = {
+			spacing = 10
+
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+					texture = "gfx/interface/icons/arcanas/ext_unicorn_swordstoplowshares.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/arcanas/ext_unicorn_right.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/arcanas/ext_unicorn_mercy.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/arcanas/ext_unicorn_grace.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/arcanas/ext_unicorn_purity.dds"
+
+				}
+                container = {
+					visible = "[Not(GetScriptedGui('is_arcana_id_unicorn_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End))]"
+					button = {
+						using = default_button_primary_action
+						size = { 130 40 }
+						text = "CAST_RITUAL"
+						datacontext = "[GetScriptedGui('cast_arcana_id_unicorn_button_effect')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+						tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+					}
+				}
+				container = {
+					visible = "[GetScriptedGui('is_arcana_id_unicorn_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+					button = {
+						using = default_button_primary_action
+						size = { 130 40 }
+						text = "DISPEL_RITUAL"
+						datacontext = "[GetScriptedGui('dispel_arcana_unicorn_button_effect')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+						tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+					}
+				}
+			}
+
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_unicorn')]"
+
+				background = {
+					using = entry_bg_simple
+				}
+
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_UNICORN"
+					using = arcana_item_text
+				}	
+			}		
+		}		
+	}
+
+	# 6 FEY
+	type arcana_id_fey_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_FEY"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/ext_fey_verdant_harvest.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fey_children_of_glade.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fey_glamour.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fey_primordial_rebirth.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fey_wanderlust.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_fey_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_fey_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_fey_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_fey_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_fey')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_FEY"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 7 PHOENIX
+	type arcana_id_phoenix_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_PHOENIX"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/phoenix_resurgent_flames.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/phoenix_cinder_advance.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_phoenix_wonders.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/phoenix_ember_of_creation.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/phoenix_flameforged_tools.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_phoenix_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_phoenix_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_phoenix_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_phoenix_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_phoenix')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}		
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}	
+
+				textbox = {
+					text = "arcana_card_flavor_PHOENIX"
+					using = arcana_item_text
+				}	
+			}		
+		}		
+	}
+
+	# 8 DJINN
+	type arcana_id_djinn_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_DJINN"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/ext_djinn_luxuries.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_djinn_masquerade.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_djinn_shifting_sands.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_djinn_mirage.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_djinn_reality_bend.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_djinn_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_djinn_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_djinn_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_djinn_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_djinn')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_DJINN"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 9 SIREN
+	type arcana_id_siren_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_SIREN"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/siren_mind_over_matter.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/siren_telepathy.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/siren_whispers.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/siren_melodies.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/siren_precognition.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_siren_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_siren_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_siren_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_siren_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_siren')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}	
+
+				textbox = {
+					text = "arcana_card_flavor_SIREN"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 10 KRAKEN
+	type arcana_id_kraken_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_KRAKEN"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/ext_kraken_bounty.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/kraken_tentacles_of_the_trade.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/kraken_safe_passage.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_kraken_maelstrom.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_kraken_tidal_prestige.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_kraken_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_kraken_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_kraken_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_kraken_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_kraken')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_KRAKEN"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 11 FIEND
+	type arcana_id_fiend_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_FIEND"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/ext_fiend_whispers.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fiend_dark_fanatics.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fiend_cults.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fiend_death.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_fiend_pyrrhic_ambition.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_fiend_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_fiend_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_fiend_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_fiend_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_fiend')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}	
+
+				textbox = {
+					text = "arcana_card_flavor_FIEND"
+					using = arcana_item_text
+				}	
+			}		
+		}		
+	}
+
+	# 12 ANGEL
+	type arcana_id_angel_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_ANGEL"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/ext_angel_servitude.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_angel_gifts_for_the_fallen.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_angel_cycle.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_angel_inner_soul.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/ext_angel_reqiuem.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_angel_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_angel_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_angel_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_angel_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_angel')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_ANGEL"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+
+	# 12 DRAGON
+	type arcana_id_dragon_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_DRAGON"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = arcana_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 10
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/arcanas/dragon_chorus.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/dragon_warding_scales.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/dragon_enlightenment.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/dragon_embrace.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/arcanas/dragon_authority.dds"
+			}
+			container = {
+				visible = "[Not(GetScriptedGui('is_arcana_id_dragon_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End))]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_arcana_id_dragon_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			container = {
+				visible = "[GetScriptedGui('is_arcana_id_dragon_active').IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "DISPEL_RITUAL"
+					datacontext = "[GetScriptedGui('dispel_arcana_dragon_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_arcana_description_dragon')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = arcana_item_text
+					margin_top = 5
+				}	
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = arcana_item_text
+				}
+				
+				textbox = {
+					text = "arcana_card_flavor_DRAGON"
+					using = arcana_item_text
+				}		
+			}		
+		}		
+	}
+	
+}
+
+template arcana_item_text {
+	align = nobaseline
+	autoresize = yes
+	maximumsize = { 350 -1 }
+	multiline = yes
+}
+
+template magic_header_texts {
+	minimumsize = { @panel_width_plus_14 -1 }
+	maximumsize = { @panel_width_plus_14 -1 }
+	autoresize = yes
+	multiline = yes
+	align = hcenter|nobaseline
+	parentanchor = hcenter
+}
+

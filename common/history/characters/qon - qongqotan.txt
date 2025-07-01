@@ -1,0 +1,42 @@
+﻿CHARACTERS = {
+	c:QON = {
+		create_character = {
+			first_name = "Gjergj"
+			last_name = "Mjeda"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 40
+			interest_group = ig_rural_folk
+			ideology = ideology_jingoist_leader
+			traits = {
+				meticulous
+				honorable
+				direct
+			}
+		}
+		create_character = {
+			first_name = "Ramush"
+			last_name = "Mjeda"
+			historical = yes
+			heir = yes
+			age = 13
+			interest_group = ig_rural_folk
+			ideology = ideology_reformer
+			traits = {
+				trait_child
+			}
+		}
+		create_character = {
+			historical = yes
+			ig_leader = yes
+			age = 60
+			interest_group = ig_rural_folk
+			ideology = ideology_jingoist_leader
+			traits = {
+				honorable
+				direct
+			}
+		}
+	}
+}

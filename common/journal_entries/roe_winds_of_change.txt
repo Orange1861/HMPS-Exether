@@ -1,0 +1,96 @@
+﻿je_winds_of_change = {
+	icon = "gfx/interface/icons/event_icons/event_centralization.dds"
+	
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		is_country_type = preindustrial
+	}
+
+	modifiers_while_active = {
+		preindustrial_society
+	}
+	
+	possible = {
+		always = yes
+	}
+
+	complete = {
+
+		NOT = {
+			has_law = law_type:law_elder_council
+		}
+
+		NOT = {
+			has_law = law_type:law_chiefdom
+		}
+		ig:ig_clans ?= {
+			is_in_government = no
+			is_powerful = no
+		}
+
+		OR = {
+			ig:ig_clans ?= {
+				is_marginal = yes 
+			}
+			literacy_rate >= 0.30
+			
+			prestige > 100
+
+			custom_tooltip = {
+				text = recognized_overlord_tt
+				top_overlord = {
+					is_country_type = recognized
+				}
+			}
+
+		}
+
+	}
+
+	on_complete = {
+		set_country_type = unrecognized
+		add_modifier = {
+			name = winds_of_change
+			months = 60
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					ruler = {
+						NOT = {
+							has_variable = is_tallcat
+						}
+					}
+				}
+				ruler = {
+					kill_character = yes
+				}
+				if = {
+					limit = {
+						any_scope_character = {
+							is_heir = yes
+						}
+					}
+					heir = {
+						kill_character = yes
+					}
+				}
+			}	
+		}
+	}
+
+	invalid = {
+		NOT = {
+			is_country_type = preindustrial
+		}
+	}
+
+	on_monthly_pulse = {
+		 recalculate_pop_ig_support = yes
+	}
+
+	should_be_pinned_by_default = yes
+
+	weight = 1000
+}

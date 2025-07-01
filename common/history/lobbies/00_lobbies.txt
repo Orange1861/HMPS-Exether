@@ -1,0 +1,223 @@
+﻿LOBBIES = {
+
+
+	c:DUM = {
+		create_political_lobby = {  
+			type = lobby_anti_country  
+			target = c:ARR
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}	
+		create_political_lobby = {  
+			type = lobby_pro_country  
+			target = c:CER
+			add_interest_group = ig:ig_industrialists
+			add_interest_group = ig:ig_devout
+		}	
+		create_political_lobby = {  
+			type = lobby_pro_country  
+			target = c:SSC
+			add_interest_group = ig:ig_armed_forces
+		}	
+	}
+
+	c:CER = {
+		create_political_lobby = {  
+			type = lobby_pro_country  
+			target = c:DUM
+			add_interest_group = ig:ig_industrialists
+			add_interest_group = ig:ig_devout
+		}	
+	}
+
+	c:RVC = {
+		create_political_lobby = {  
+			type = lobby_anti_country  
+			target = c:AUM
+			add_interest_group = ig:ig_mages
+			add_interest_group = ig:ig_landowners
+		}	
+		create_political_lobby = {  
+			type = lobby_pro_country  
+			target = c:AUM
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_devout
+		}	
+	}
+
+	c:OLC = {
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:EME
+			add_interest_group = ig:ig_industrialists
+			add_interest_group = ig:ig_armed_forces
+		}	
+	}
+
+	c:SHJ = {
+		create_political_lobby = {  
+			type = lobby_anti_country  
+			target = c:YUL
+			add_interest_group = ig:ig_armed_forces
+		}	
+	}
+
+	c:THK = {
+		create_political_lobby = {  
+			type = lobby_pro_country  
+			target = c:KHD
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_industrialists
+		}	
+	}
+
+	c:SKR = {
+		create_political_lobby = {  
+			type = lobby_anti_country  
+			target = c:SNB
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_clans
+		}	
+	}
+
+	c:TAH = {
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_industrialists
+		}	
+		create_political_lobby = {  
+			type = lobby_anti_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_trade_unions
+		}		
+	}
+	c:KCN = {
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_industrialists
+		}	
+		create_political_lobby = {  
+			type = lobby_anti_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_trade_unions
+		}		
+	}
+	c:SUN = {
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_industrialists
+		}	
+		create_political_lobby = {  
+			type = lobby_anti_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_trade_unions
+		}		
+	}
+	c:PUA = {
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_industrialists
+		}	
+		create_political_lobby = {  
+			type = lobby_anti_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_trade_unions
+		}		
+	}
+	c:SAI = {
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_industrialists
+		}	
+		create_political_lobby = {  
+			type = lobby_anti_overlord
+			target = c:YUL
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_trade_unions
+		}		
+	}
+	c:EBR = {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:AHO
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_mages
+		}
+	}
+	c:FEY = {
+		create_political_lobby = {
+			type = lobby_anti_overlord
+			target = c:THI
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_devout
+		}
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:THI
+			add_interest_group = ig:ig_mages
+			add_interest_group = ig:ig_landowners
+		}
+	}
+	c:ZKW = {
+		create_political_lobby = {
+			type = lobby_anti_overlord
+			target = c:AHO
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_intelligentsia
+		}
+		create_political_lobby = {  
+			type = lobby_pro_overlord
+			target = c:AHO
+			add_interest_group = ig:ig_mages
+			add_interest_group = ig:ig_devout
+		}
+	}
+	c:LAR = {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:DUM
+			add_interest_group = ig:ig_devout
+		}
+	}
+}	
+
+
+
+
+
+
+

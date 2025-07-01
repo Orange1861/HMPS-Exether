@@ -1,0 +1,110 @@
+﻿#Zakh Zîlkhû
+company_korogun = {
+	icon = "gfx/interface/icons/company_icons/brazier.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_rye_farm
+	}
+	
+	extension_building_types = {
+		building_wheat_farm
+		building_livestock_ranch
+	}
+
+	potential = {
+		country_has_primary_culture = cu:koshiri
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			country_has_primary_culture = cu:koshiri
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_KORO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_arms_industry
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = intensive_agriculture
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_agriculture_throughput_add = 0.10
+		building_training_rate_mult = 0.20
+	}	
+	
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_KORO
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+#
+#Zakh Zîlkhû
+company_korogun2 = {
+	icon = "gfx/interface/icons/company_icons/brazier.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_wheat_farm
+	}
+	
+	extension_building_types = {
+		building_rye_farm
+		building_livestock_ranch
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_shaking_fields
+		NOT = { country_has_primary_culture = cu:koshiri }
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KORO
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_KORO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_arms_industry
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = intensive_agriculture
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

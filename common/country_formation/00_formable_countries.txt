@@ -1,0 +1,677 @@
+﻿TLW = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { always = yes }
+}
+
+TLE = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { always = yes }
+}
+
+JAL = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { always = yes }
+}
+
+UTS = {
+	states = {
+		STATE_RIRGEN
+		STATE_RICHAR_JEDD
+		STATE_TOPHNATH
+		STATE_CINPHNPHAINN
+		STATE_LHIPH
+		STATE_KAATH_SERINE
+		STATE_DEPHEL_PATH
+		STATE_VOZMEAD_LOWLANDS
+		STATE_DWARVENHAMMER
+		STATE_SUNKEN_CLIFFS
+	}
+
+	required_states_fraction = 0.75	
+	
+	possible = {
+		OR = {
+			c:VOZ ?= this
+			c:DRO ?= this
+		}
+		has_technology_researched = pan-nationalism
+		has_law = law_type:law_womens_suffrage
+		cultural_acceptance_base = {  
+			target = cu:vozi
+			value > 50  
+			}
+		cultural_acceptance_base = {  
+			target = cu:aridrun
+			value > 50  
+			}
+	}
+
+	ai_will_do = { always = yes }
+}
+
+#Grand Estate use for even bigger state that requires all halflings,
+# but add new halflings culture in arrador to bridge the gap first
+#GES = {
+#	use_culture_states = yes
+#
+#	required_states_fraction = 0.87
+#
+#	ai_will_do = { always = yes }
+#
+#	possible = {
+#		has_technology_researched = pan-nationalism
+#	}
+#
+#}
+
+#SMALLAND
+SLD = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.9
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+YCH = { 
+	states = { 
+		STATE_SMILTYNECAT
+		STATE_JEIBUO
+		STATE_HIJAASCH
+		STATE_LAIVINMAR
+		STATE_KILIMAKAZI
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { 
+		OR = {
+			country_has_primary_culture = cu:hulutit
+			country_has_primary_culture = cu:akmuociai
+		}
+					
+				}
+
+	possible = {
+			has_technology_researched = nationalism
+	}
+}
+
+BUK = { 
+	states = { 
+		STATE_PULIKOTSK
+		STATE_BORKAGAUW
+		STATE_HABENZUT
+		STATE_LAFUYLAN
+	}
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { 
+		OR = {
+			country_has_primary_culture = cu:praprandgaw
+			country_has_primary_culture = cu:plundboelka
+		}
+					
+				}
+
+	possible = {
+			has_technology_researched = nationalism
+	}
+}
+
+ZET = { 
+	states = { 
+		STATE_TASHKAVSK
+		STATE_NIPOTMIK
+		STATE_MUMHAMOT
+		STATE_TENALMUYLAN
+		STATE_UMKITMUT
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { 
+		OR = {
+			country_has_primary_culture = cu:praprandgaw
+			country_has_primary_culture = cu:bintukin
+		}
+					
+				}
+
+	possible = {
+			has_technology_researched = nationalism
+	}
+}
+
+OTI = { 
+	states = { 
+		STATE_TASHKAVSK
+		STATE_NIPOTMIK
+		STATE_MUMHAMOT
+		STATE_UMKITMUT
+		STATE_TENALMUYLAN
+		STATE_PULIKOTSK
+		STATE_BORKAGAUW
+		STATE_HABENZUT
+		STATE_LAFUYLAN
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { 
+		OR = {
+			country_has_primary_culture = cu:plundboelka
+			country_has_primary_culture = cu:praprandgaw
+			country_has_primary_culture = cu:bintukin
+		}
+					
+				}
+
+	possible = {
+			has_technology_researched = pan-nationalism
+	}
+}
+
+CHF = {
+	use_culture_states = yes
+
+	required_states_fraction = 1
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+#Bossardie
+BOS = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.9
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+#Cherryn
+CHE = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+
+}
+
+
+ORK = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+TQL = {
+	states = {
+		STATE_ANTAQAQA
+		STATE_BLOODAXE_TERRITORY
+		STATE_BLOODTHORN_WASTES
+		STATE_BLOODTHORN_WASTES_2 # Drygrass Badlands
+		STATE_FIERCEHOLD
+		STATE_KUNTURPAMPA
+		STATE_NAWIYANU
+		STATE_ROUGHSTONE_TERRITORY
+		STATE_SALTSHORE
+		STATE_SAVAGE_LANDS
+		STATE_SAVAGE_REACH
+		STATE_SAVAGE_LANDS_2 # Sawtooth Peaks
+		STATE_SALTSHORE_2 # Shalaati
+		STATE_ROUGHSTONE_TERRITORY_2 # Shatterstone Ridge
+		STATE_SNAILBANE
+		STATE_TAYTAQOCHA
+		STATE_THIRSTRIDGE
+		STATE_TINKUYUQ
+		STATE_URQUNAYUQ
+	}
+
+	required_states_fraction = 0.7
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		OR = {
+			country_has_primary_culture = cu:rahoru
+			country_has_primary_culture = cu:tqalt
+			country_has_primary_culture = cu:waste_walker
+		}	
+		any_country = {
+			OR = {
+				country_has_primary_culture = cu:rahoru
+				country_has_primary_culture = cu:tqalt
+				country_has_primary_culture = cu:waste_walker
+			}	
+			has_technology_researched = pan-nationalism	
+		}
+	}
+}
+
+VBT = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+XLB = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+SAN = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = {  #caste-approved triggers
+		NOT = {
+			OR = {
+				country_has_primary_culture = cu:cliffpercher
+				country_has_primary_culture = cu:whitefeather
+				country_has_primary_culture = cu:saglithan
+				country_has_primary_culture = cu:blacktalon
+			}
+		}
+	 }
+
+	possible = {
+		has_technology_researched = nationalism
+		NOT = {
+				country_has_primary_culture = cu:whitefeather
+				country_has_primary_culture = cu:saglithan
+				country_has_primary_culture = cu:blacktalon
+		}
+	}
+
+}
+
+CRT = {
+	states = { 
+		STATE_IHARKHAN
+		STATE_HIRUMENDI
+        STATE_KHANZULO
+        STATE_ARATZIRI
+        STATE_KASKOHARI
+		STATE_KHANBA
+		STATE_BATOHAIN
+		STATE_MENDARI
+		STATE_KIYOMU
+	}
+
+	required_states_fraction = 0.65
+	
+		ai_will_do = {  #caste-approved triggers
+		NOT = {
+			OR = {
+				country_has_primary_culture = cu:cliffpercher
+				country_has_primary_culture = cu:whitefeather
+				country_has_primary_culture = cu:saglithan
+				country_has_primary_culture = cu:blacktalon
+			}
+		}
+	 }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+CLF = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+LOM = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.7
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+KLK = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+DUM = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+MAN = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+
+}
+KLA = {
+	states = { 
+		STATE_KULUWANDU
+		STATE_KURUBBA
+        STATE_KUL_KEDLI
+        STATE_PANTAMOLPO
+		STATE_LAZILKEP
+	}
+
+	required_states_fraction = 0.7
+	
+	ai_will_do = { 
+					country_has_primary_culture = cu:gulf_naga	
+				}
+
+				possible = {
+					has_technology_researched = nationalism
+				}
+
+}
+
+NYO = {
+	states = { 
+		STATE_CHITTERKIQ
+		STATE_NYOKSIAPLA
+		STATE_DUTAKHAMKU
+		STATE_NYOLMAFUM
+		STATE_GUGNOS
+		STATE_TAYIGAMU
+	}
+
+	required_states_fraction = 0.65
+	
+	ai_will_do = { always = yes	}
+
+
+}
+
+MHL = {
+	states = { 
+		STATE_CHEJATAN_DO
+		STATE_MDLEMNO_KETHIN
+		STATE_KIMBHADO
+		STATE_IMKIMPIL
+		STATE_MKHOT_NAF
+		STATE_DEPZWU
+	}
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { always = yes	}
+
+
+}
+
+HOF = {
+	use_culture_states = yes
+
+	required_states_fraction = 1
+	
+	ai_will_do = { always = yes }  #lets come back to this
+
+	possible = {  #wholesome chungus dworc state
+
+		AND = {
+			cultural_acceptance_base = {  
+				target = cu:tozhi 
+				value > 50  
+				}
+			cultural_acceptance_base = {  
+				target = cu:kaalkid
+				value > 50  
+				}
+		}
+	}
+
+}
+
+AST = {
+	states = { 
+		STATE_CAVES_OF_RIMELAC
+		STATE_LILAC_SHORE
+		STATE_AETHELBOSQUE
+		STATE_HAZELDEEP
+		STATE_DUSHAMBAY
+		STATE_WESTERN_EQUINE_PLAIN
+		STATE_CENTRAL_EQUINE_PLAIN
+		STATE_EASTERN_EQUINE_PLAIN
+		STATE_BARIKHARGUL
+		STATE_DILAFSHAN
+	}
+
+	required_states_fraction = 0.9 #intentionally high so you need the rivercrosser lands
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+OEG = { 
+	states = { 
+		STATE_HIMMELSTIM
+		STATE_EKENKUST
+		STATE_SINNEBEAM
+		STATE_GLIMMERWOUD
+		STATE_TIMMERHAVEN
+		STATE_MOONSHADE
+		STATE_STORMWATCH
+		STATE_FARREACH
+		STATE_HAVENSHIRE
+		STATE_GRINWALD
+	}
+
+	required_states_fraction = 0.7
+	
+	ai_will_do = { 
+		OR = {
+			country_has_primary_culture = cu:gachscho
+			country_has_primary_culture = cu:gnome_thalorian
+		}
+					
+				}
+
+	possible = {
+			has_technology_researched = pan-nationalism
+	}
+}
+
+KNG = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.65
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+EOA = {
+    use_culture_states = yes
+
+    required_states_fraction = 0.90
+
+    ai_will_do = { always = yes }
+
+    possible = {
+         has_technology_researched = nationalism
+    }
+}
+
+KAI = {
+	states = { 
+		STATE_HILOKINI
+		STATE_ARGYSTSIK
+		STATE_WIS_POU
+	}
+	use_culture_states = yes
+
+	required_states_fraction = 1
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		cu:south_sea_ravager = {
+			is_primary_culture_of = ROOT
+		}
+	}
+}
+
+GFL = {
+	states = { 
+		STATE_JOURNEYEND
+		STATE_INTOKI
+		STATE_KUNCHI
+		STATE_EISENMORA
+		STATE_RIVER_SOLILOQUE
+		STATE_RIVER_SOLILOQUE_2
+		STATE_LILLESO
+		STATE_SLETTEJUNGEL
+		STATE_BJERGHOLM
+		STATE_HOJLAND
+		STATE_KLIPPEBJERG
+		STATE_CAM_NUALA
+		STATE_CAM_RINNARA
+		STATE_CAM_LIADRINE
+		STATE_SOUTHERN_FEYSTALK
+		STATE_CAM_CALLAIRD
+		STATE_NORTHERN_FEYSTALK
+		STATE_FAOLNA_PASS
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		OR = {
+			c:FLU ?= this
+		}
+		has_technology_researched = nationalism
+	}
+}
+
+SFD = {
+	states = { 
+		STATE_MARZEHZARIN
+		STATE_HIGH_HARAVA
+		STATE_PORCELAINGATE
+		STATE_LAERANELS_DESOLATION
+		STATE_AZHARIM
+		STATE_FARASHIL
+		STATE_SHIRAZAN
+		STATE_PARSIMAH
+		STATE_COBALT_KEEP
+		STATE_ASARSHIR
+		STATE_ANWARTH_VALLEYS
+		STATE_ANWARTH_VALLEYS_2
+		STATE_THINSILVER
+		STATE_BROKENPILLAR
+		STATE_POMMELFALL
+		STATE_POMMELFALL_2
+		STATE_FAOLNA_PASS
+		STATE_AUTUMN_HILLS
+		STATE_ZYRELIANAR
+		STATE_SHIRBIN_LOWLANDS
+		STATE_MARBLEGATE
+		STATE_SHADGOL
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}

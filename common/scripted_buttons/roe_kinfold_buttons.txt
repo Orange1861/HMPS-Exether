@@ -1,0 +1,198 @@
+﻿
+je_kinfold_offer_confederation_button = {
+	name = "je_kinfold_offer_confederation_button"
+	desc = "je_kinfold_offer_confederation_button_desc"
+
+	ai_chance = {
+		value = 100
+	}
+
+	possible = {
+		hidden_trigger = {
+			NOT = { has_variable = recently_pressed_button_dumonia }
+		}
+		has_technology_researched = nationalism
+		any_direct_subject = {
+			custom_tooltip = {
+				text = imperial_group_tt
+				any_primary_culture = {
+					has_discrimination_trait = imperial_culture_group
+				}
+			}
+
+			relations:root >= relations_threshold:cordial
+			OR = {
+				AND = {
+					has_diplomatic_pact = {
+						who = c:DUM
+						type = personal_union
+					}
+					owes_obligation_to = ROOT
+				}
+				has_diplomatic_pact = {
+					who = c:DUM
+					type = puppet
+				}
+			}
+			hidden_trigger = {
+				is_player = no
+			}
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = recently_pressed_button_dumonia
+			days = 1
+		}
+		ordered_direct_subject = {
+			limit = {
+				OR = {
+					AND = {
+						has_diplomatic_pact = {
+							who = c:DUM
+							type = personal_union
+						}
+						owes_obligation_to = ROOT
+					}
+					has_diplomatic_pact = {
+						who = c:DUM
+						type = puppet
+					}
+				}
+				any_primary_culture = {
+					has_discrimination_trait = imperial_culture_group
+				}
+				relations:root >= 20
+				hidden_trigger = {
+					is_player = no
+				}
+			}
+			order_by = gdp
+			owner = {
+				save_temporary_scope_as = to_be_annexed
+			}
+			if = {
+				limit = {
+					scope:to_be_annexed = {
+						any_primary_culture = {
+							NOT = {
+								is_primary_culture_of = ROOT
+							}
+						}
+					}
+				}
+				scope:to_be_annexed = {
+					random_primary_culture = {
+						limit = {
+							NOT = {
+								is_primary_culture_of = ROOT
+							}
+						}
+						save_temporary_scope_as = to_be_annexed_culture
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { exists = scope:to_be_annexed } }
+			custom_tooltip = { text = je_kinfold_offer_confederation_tt }
+		}
+		if = {
+			limit = { exists = scope:to_be_annexed }
+			annex = scope:to_be_annexed
+		}
+		if = {
+			limit = { exists = scope:to_be_annexed_culture }
+			add_primary_culture = scope:to_be_annexed_culture
+			every_scope_state = {
+				limit = {
+					state_region = {
+						is_homeland = scope:to_be_annexed_culture
+					}
+					is_incorporated = no
+				}
+				set_state_type = incorporated
+			}
+		}
+
+
+	}
+}
+
+
+je_kinfold_undermine_clan_autonomy = {
+	name = "je_kinfold_undermine_clan_autonomy_button"
+	desc = "je_kinfold_undermine_clan_autonomy_desc"
+
+	ai_chance = {
+		value = 100
+	}
+
+	visible = {
+		NOT = { has_variable = var_slave_trade_suppression_var }
+	}
+
+	possible = {
+		ig:ig_landowners = {
+			is_in_government = no
+		}
+		custom_tooltip = {
+			text = slave_trade_button_cooldown_tt
+			NOT = {
+				has_variable = slave_trade_button_cooldown_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = var_slave_trade_suppression_var
+		set_variable = {
+			name = slave_trade_button_cooldown_var
+			days = short_modifier_time
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = kinfold_authority_undermined
+			}
+		}
+		add_modifier = {
+			name = undermining_kinfold
+		}
+	}
+}
+
+je_kinfold_stop_undermine_clan_autonomy = {
+	name = "je_kinfold_stop_undermine_clan_autonomy_button"
+	desc = "je_kinfold_stop_undermine_clan_autonomy_desc"
+
+	visible = {
+		has_variable = var_slave_trade_suppression_var
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = slave_trade_button_cooldown_tt
+			NOT = {
+				has_variable = slave_trade_button_cooldown_var
+			}
+		}
+	}
+
+	effect = {
+		remove_variable = var_slave_trade_suppression_var
+		set_variable = {
+			name = slave_trade_button_cooldown_var
+			days = short_modifier_time
+		}
+		every_interest_group = {
+			limit = {
+				has_modifier = kinfold_authority_undermined
+			}
+			remove_modifier = kinfold_authority_undermined
+		}
+		remove_modifier = undermining_kinfold
+
+	}
+}

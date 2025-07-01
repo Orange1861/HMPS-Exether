@@ -1,0 +1,243 @@
+﻿namespace = civic_setup
+
+civic_setup.1 = {
+	type = country_event
+    dlc = dlc_roe
+    placement = ROOT
+	hidden = yes
+    immediate = {
+        if = {
+            limit = {
+                root ?= c:AUM
+            }
+            arcana_unicorn_2 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #JURIAN'S INQUSITION
+        if = {
+            limit = {
+                root ?= c:JUR
+            }
+            arcana_unicorn_2 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }	
+
+        #RAVENCLIFF
+        if = {
+            limit = {
+                root ?= c:RVC
+            }
+            arcana_fiend_3 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #Stagworth
+        if = {
+            limit = {
+                root ?= c:FOX
+            }
+            arcana_justice_4 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #ROSECROFT
+        if = {
+            limit = {
+                root ?= c:ROF
+            }
+            arcana_justice_4 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }	
+
+        #RAVIK
+        if = {
+            limit = {
+                root ?= c:RAV
+            }
+            arcana_angel_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #ARRADOR
+        if = {
+            limit = {
+                root ?= c:ARR
+            }
+            calculate_arcanas = yes
+            arcana_justice_5 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #ACHON
+        if = {
+            limit = {
+                root ?= c:AHO
+            }
+            arcana_sphinx_2 = yes
+            get_cost = yes
+            arcana_sphinx_3 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #SECRET KEEPERS
+        if = {
+            limit = {
+                root ?= c:VHT
+            }
+            arcana_sphinx_2 = yes
+            get_cost = yes
+            arcana_sphinx_3 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #OAZJARO
+        if = {
+            limit = {
+                root ?= c:OAZ
+            }
+            arcana_justice_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #ZAHRATIA
+        if = {
+            limit = {
+                root ?= c:TIZ
+            }
+            arcana_justice_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+        }
+
+        #SOLNOMO
+        if = {
+            limit = {
+                root ?= c:SNM
+            }
+            arcana_justice_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #VERKISIRIO
+        if = {
+            limit = {
+                root ?= c:VER
+            }
+            arcana_sphinx_5 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #ZUBAYRA
+        if = {
+            limit = {
+                root ?= c:ZUB
+            }
+            arcana_sphinx_5 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #LISINIA
+        if = {
+            limit = {
+                root ?= c:LIS
+            }
+            arcana_sphinx_5 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #HOUTBLOM
+        if = {
+            limit = {
+                root ?= c:TTN
+            }
+            arcana_fey_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #SEESKAT
+        if = {
+            limit = {
+                root ?= c:GRO
+            }
+            arcana_fey_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+        #FISKEROER
+        if = {
+            limit = {
+                root ?= c:EKE
+            }
+            arcana_fey_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }	
+
+        #DRIFTWYN
+        if = {
+            limit = {
+                root ?= c:DRI
+            }
+            arcana_angel_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+            #Varalftis
+            if = {
+                limit = {
+                    root ?= c:VAR
+                }
+                arcana_angel_1 = yes
+                get_cost = yes
+                calculate_arcanas = yes
+    
+            }
+
+            #WHISKERFIELDS
+        if = {
+            limit = {
+                root ?= c:WHI
+            }
+            arcana_fey_1 = yes
+            get_cost = yes
+            calculate_arcanas = yes
+
+        }
+
+}

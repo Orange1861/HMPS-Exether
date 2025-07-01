@@ -1,0 +1,330 @@
+﻿namespace = union_of_the_sands
+
+# The Wedding
+ union_of_the_sands.1 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = root
+	title =  union_of_the_sands.1.t
+	desc =  union_of_the_sands.1.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc =  union_of_the_sands.1.f
+				trigger = {
+					c:DRO.gdp >= c:VOZ.gdp
+				}
+			}
+			triggered_desc = {
+				desc =  union_of_the_sands.1.f_dwarf
+			}
+		}
+	}
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	immediate = {
+
+		if = {
+			limit = {
+				c:DRO.gdp >= c:VOZ.gdp
+			}
+			c:DRO = {
+				save_scope_as = dro_scope
+				capital = {
+					save_scope_as = winner_capital_scope
+				}
+			}
+		}
+		else = {
+			c:VOZ = {
+				save_scope_as = voz_scope
+				capital = {
+					save_scope_as = winner_capital_scope
+				}
+			}
+		}
+
+		ruler = {
+			save_scope_as = ruler_scope
+		}
+
+		c:VOZ = {
+			ruler = {
+				save_scope_as = voz_ruler_scope
+			}
+		}
+		c:DRO = {
+			ruler = {
+				save_scope_as = dro_ruler_scope
+			}
+		}
+	}		
+
+	option = {
+		name =  union_of_the_sands.1.a
+		default_option = yes
+	
+		trigger = {
+				OR = {
+					AND = {
+						exists = c:DRO
+						root = c:DRO
+						c:DRO.gdp >= c:VOZ.gdp
+					}
+					AND = {
+						exists = c:VOZ
+						root = c:VOZ
+						c:VOZ.gdp >= c:DRO.gdp
+					}
+				}
+		}
+		if = {
+			limit = {
+				exists = c:DRO
+				c:DRO.gdp >= c:VOZ.gdp
+			}
+			
+			create_character = {
+			heir = yes
+			template = DRO_yavira_wedding_heir_template
+		}
+			create_character = {
+			template = DRO_yavira_traditional_agitator_template
+		}	
+		
+			c:DRO={
+				create_diplomatic_pact = {
+					country = c:VOZ
+					type = personal_union
+				}
+				add_journal_entry = {
+					type = je_union_of_the_sands
+				}
+			}
+			c:VOZ = {
+				add_modifier = union_of_the_sands_junior_partner
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:VOZ
+				c:VOZ.gdp > c:DRO.gdp
+			}
+			
+			create_character = {
+			heir = yes
+			template = VOZ_vozmead_wedding_heir_template
+		}
+			create_character = {
+			template = VOZ_vozmead_traditional_agitator_template
+		}
+		
+			c:VOZ={
+				create_diplomatic_pact = {
+					country = c:DRO
+					type = personal_union
+				}
+				add_journal_entry = {
+					type = je_union_of_the_sands
+				}
+			}
+			c:DRO = {
+				add_modifier = union_of_the_sands_junior_partner
+			}
+		}
+	}
+		option = {
+	
+			trigger = {
+				OR = {
+					AND = {
+						exists = c:DRO
+						root = c:DRO
+						c:VOZ.gdp >= c:DRO.gdp
+					}
+					AND = {
+						exists = c:VOZ
+						root = c:VOZ
+						c:DRO.gdp >= c:VOZ.gdp
+					}
+				}
+
+			}
+		name =  union_of_the_sands.1.b
+		show_as_tooltip = {
+			if = {
+			limit = {
+				exists = c:DRO
+				c:DRO.gdp >= c:VOZ.gdp
+			}	
+			c:DRO={
+				create_diplomatic_pact = {
+					country = c:VOZ
+					type = personal_union
+				}
+				add_journal_entry = {
+					type = je_union_of_the_sands
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:VOZ
+				c:VOZ.gdp > c:DRO.gdp
+			}
+			c:VOZ={
+				create_diplomatic_pact = {
+					country = c:DRO
+					type = personal_union
+				}
+				add_journal_entry = {
+					type = je_union_of_the_sands
+				}
+			}
+		}
+		}
+	}
+}
+
+
+#Union established
+ union_of_the_sands.2 = {
+	type = country_event
+	dlc = dlc_roe
+	placement = root
+	title =  union_of_the_sands.2.t
+	desc =  union_of_the_sands.2.d
+	flavor =  union_of_the_sands.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	immediate = {
+		ruler = {
+			save_scope_as = ruler_scope
+		}
+		c:DRO = {
+			save_scope_as = dro_scope
+			random_primary_culture = {
+				save_scope_as = aridrun_scope
+			}
+			if = {
+				limit = {
+					has_modifier = union_of_the_sands_junior_partner
+				}
+				set_global_variable = voz_form_uts
+			}
+		}
+		c:VOZ = {
+			save_scope_as = voz_scope
+			random_primary_culture = {
+				save_scope_as = vozi_scope
+			}
+			if = {
+				limit = {
+					has_modifier = union_of_the_sands_junior_partner
+				}
+				set_global_variable = dro_form_uts
+			}
+		}
+	}		
+
+	option = {
+		name =  union_of_the_sands.2.a
+		default_option = yes
+		trigger = {
+			root = c:DRO
+		}
+		if = {
+			limit = {
+			exists = c:DRO
+			this = c:DRO
+			exists = c:VOZ
+			}
+			annex = c:VOZ
+		}
+		else = {
+			annex = c:DRO
+		}
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				state_region = {
+					OR = {
+						is_homeland = cu:aridrun
+						is_homeland = cu:vozi
+					}
+				}
+			}
+			set_state_type = incorporated
+		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:vozi
+			}
+			add_primary_culture = cu:aridrun
+		}
+		else = {
+			add_primary_culture = cu:vozi
+		}
+		change_tag = UTS
+	}
+	option = {
+		name =  union_of_the_sands.2.b
+		default_option = yes
+		trigger = {
+			NOT = { root = c:DRO }
+		}
+
+		if = {
+			limit = {
+			exists = c:DRO
+			this = c:DRO
+			exists = c:VOZ
+			}
+			annex = c:VOZ
+		}
+		else = {
+			annex = c:DRO
+		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:vozi
+			}
+			add_primary_culture = cu:aridrun
+		}
+		else = {
+			add_primary_culture = cu:vozi
+		}
+		change_tag = UTS
+
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				state_region = {
+					OR = {
+					is_homeland = cu:aridrun
+					is_homeland = cu:vozi
+					}
+				}
+			}
+			set_state_type = incorporated
+		}
+	}
+}

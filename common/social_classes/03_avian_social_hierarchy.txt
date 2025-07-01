@@ -1,0 +1,187 @@
+﻿perfis = { #beggars
+    social_hierarchy = avian_social_hierarchy
+    strata = lower
+
+    allowed_professions = {
+        slaves
+		war_slaves
+        peasants
+		laborers
+		soldiers
+        machinists
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = blacktalon
+			has_pop_culture = cliffpercher
+			has_pop_culture = sandcircler
+            NOT = { has_pop_religion = viticist }
+		}
+
+       
+    }
+}
+
+guchesgru = { #the unlucky
+    social_hierarchy = avian_social_hierarchy
+    strata = lower
+
+    allowed_professions = {
+        peasants
+		laborers
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = saglithan
+            has_pop_culture = whitefeather
+		}
+       has_pop_religion = viticist
+    }
+}
+
+chesgru = { #the lucky
+    social_hierarchy = avian_social_hierarchy
+    strata = lower
+
+    allowed_professions = {
+		clerks
+        bureaucrats
+		adventurers
+    }
+
+    pop_criteria = {
+		OR = {
+			 has_pop_culture = cliffpercher
+             has_pop_culture = sandcircler
+			 
+		}
+        has_pop_religion = viticist
+       
+        
+    }
+}
+
+cuoflir = { #knowledgeseekers
+    social_hierarchy = avian_social_hierarchy
+    strata = middle
+
+    allowed_professions = {
+		engineers
+		wizards
+		academics
+        clergymen
+    }
+
+    pop_criteria = {
+		OR = {
+			 has_pop_culture = saglithan
+			 has_pop_culture = cliffpercher
+		}
+        has_pop_religion = viticist 
+    }
+}
+
+gumefir = {
+    social_hierarchy = avian_social_hierarchy
+    strata = middle
+
+    allowed_professions = {
+		soldiers	
+		adventurers
+		farmers
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = saglithan
+            has_pop_culture = whitefeather
+		}
+       
+        
+    }
+}
+
+adrir = { #the employee ##intentional translation
+    social_hierarchy = avian_social_hierarchy
+    strata = middle
+
+    allowed_professions = {
+		clerks
+		machinists
+        shopkeepers
+        bureaucrats
+
+    }
+
+    pop_criteria = {
+		OR = {
+			has_pop_culture = saglithan
+			has_pop_culture = whitefeather
+		}
+
+       
+        
+    }
+}
+
+# emud = { #the virtuous
+#     social_hierarchy = avian_social_hierarchy
+#     strata = middle
+
+#     allowed_professions = {
+#         laborers
+#     }
+
+#     pop_criteria = {
+# 		OR = {
+# 			 has_pop_culture = whitefeather
+		
+# 		}
+       
+        
+#     }
+# }
+denoi = { #the strong
+    social_hierarchy = avian_social_hierarchy
+    strata = upper
+
+    allowed_professions = {
+		wizards
+		capitalists
+		officers
+        archmages
+    }
+
+    pop_criteria = {
+		OR = {
+            AND = {
+                has_pop_culture = saglithan
+                has_pop_religion = viticist
+            }        
+			has_pop_culture = whitefeather
+		}
+    }
+}
+
+dalbe = { #the above
+    social_hierarchy = avian_social_hierarchy
+    strata = upper
+
+    allowed_professions = {
+        clergymen
+		aristocrats
+		tribesmen
+		academics
+		engineers
+	
+    }
+
+    pop_criteria = {
+        has_pop_culture = whitefeather
+        has_pop_religion = viticist
+    }
+}
+
+

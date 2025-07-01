@@ -1,0 +1,88 @@
+﻿rimeroot_expedition = {
+	is_shown = {
+		NOT = { has_variable = rimeroot_expedition_success_var }
+		NOT = { has_variable = destroyed_heptadrones_variable }	
+		NOT = { has_variable = on_expedition }		
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}
+
+			has_variable = heptadrone_swarms_variable
+
+		#has_technology_researched = sea_lane_strategies #change this
+	}
+	possible = {
+		is_at_war = no
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_role = admiral
+				custom_tooltip = {
+					text = is_retainer_tt
+					has_variable = is_retainer
+				}
+			}
+			
+			count >= 3
+		}
+
+		custom_tooltip = {
+			text = rimeroot_exp_possible_tt
+			has_variable = sunstation_je_complete_2
+		}
+		
+
+
+	}
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = sunstation.101 popup = yes }
+			set_variable = on_expedition
+		}
+		else = {
+			set_variable = AI_EXPEDITION_RIMEROOT
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}		
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0
+
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_armed_isolationism
+				NOT = {
+					country_is_in_rimeroot = yes
+				}
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+			}
+			multiply = 0
+		}
+	}
+}

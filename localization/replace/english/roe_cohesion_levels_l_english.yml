@@ -1,0 +1,9 @@
+﻿l_english:
+  identity_cultural: "Cultural Union"
+  identity_cultural_desc: "This $concept_power_bloc_identity_extra_short$ focuses on shared cultural heritage. It thrives in cultural homogeneity."
+  POWER_BLOC_COHESION_PETITE_BOURGEOISIE_IG_CLOUT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_petty_bourgeoisie').GetName] [concept_clout] ($identity_religious$)"
+  POWER_BLOC_COHESION_PETITE_BOURGEOISIE_IG_NOT_IN_GOVERNMENT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_petty_bourgeoisie').GetName] is #v not#! in [concept_government] ($identity_religious$)"
+  POWER_BLOC_COHESION_LEADER_CULTURE_WORST_POPULATION_SHARE: "#indent_newline:3 [concept_power_bloc_member] with lowest population following the [concept_power_bloc_leader]'s Cultural Heritage and [concept_rank] ($identity_religious$)\n[SCOPE.GetRootScope.GetCountry.GetPowerBloc.GetParticipantWithLowestLeaderReligionPercentage.GetName] ([SCOPE.GetRootScope.GetCountry.GetPowerBloc.GetParticipantWithLowestLeaderReligionPercentage.GetRank]) with [SCOPE.GetRootScope.GetCountry.GetPowerBloc.GetParticipantWithLowestLeaderReligionPercentage.GetLeaderReligionPercentage|v%]#!"
+  POWER_BLOC_COHESION_PETITE_BOURGEOISIE_IG_CLOUT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_petty_bourgeoisie').GetName] [concept_clout] ($identity_cultural$)"
+  POWER_BLOC_COHESION_PETITE_BOURGEOISIE_IG_NOT_IN_GOVERNMENT: "[SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_petty_bourgeoisie').GetName] is #v not#! in [concept_government] ($identity_cultural$)"
+  POWER_BLOC_COHESION_CITIZENSHIP_INCOMPATIBILITY: "[Concept('concept_power_bloc_member','$concept_power_bloc_members$')] with [GetLawType('law_multicultural').GetName]"

@@ -1,0 +1,32 @@
+﻿CHARACTERS = {
+	c:RSE = {
+		create_character = {
+			first_name = "Dibbiqqa"
+			last_name = "Tmuylutz"
+			historical = yes
+			ruler = yes
+			age = 57
+			interest_group = ig_devout
+			ideology = ideology_traditionalist
+			traits = {
+				inspirational_orator
+				honorable
+				cautious
+			}
+		}
+		create_character = {
+			first_name = "Simiyy"
+			last_name = "Tmuylutz"
+			historical = yes
+			heir = yes
+			age = 25
+			interest_group = ig_devout
+			ideology = ideology_traditionalist
+			traits = {
+				persistent
+				charismatic
+				meticulous
+			}
+		}
+	}
+}

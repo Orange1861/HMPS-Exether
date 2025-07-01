@@ -1,0 +1,193 @@
+﻿state_trait_lake_bossard = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 20
+	}	
+}
+
+state_trait_brindelle_marshes = {
+	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
+	
+	modifier = {
+		state_infrastructure_mult = -0.10
+	}	
+}
+
+state_trait_cauront_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
+		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
+	}	
+}
+
+state_trait_plaguewood = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	disabling_technologies = {
+		"orc_tech"
+	}
+	modifier = {
+		state_construction_mult = -0.2
+		state_infrastructure_mult = -0.2
+		state_migration_pull_mult = -0.7
+	}
+}
+
+state_trait_plaguewood_lumber = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		goods_output_hardwood_mult = 0.25
+		battle_defense_owned_province_mult = 0.05
+	}
+}
+
+state_trait_nogi_sands = {
+    icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+		   
+	modifier = {
+        building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_agriculture_throughput_add = -0.2
+		building_group_bg_plantations_throughput_add = -0.2
+		state_construction_mult = -0.25
+		state_infrastructure_mult = -0.25
+    }
+}
+
+state_trait_whiskerfields = {
+    icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"   
+	modifier = {
+        building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+    }
+}
+
+state_trait_the_chasm_delveroux = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.15
+		building_iron_mine_throughput_add = 0.15
+		state_infrastructure_mult = -0.05
+    }
+}
+
+state_trait_pearl_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
+		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
+	}	
+}
+
+state_trait_pharenconne_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
+		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
+	}	
+}
+
+state_trait_holdfast_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
+		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
+	}	
+}
+
+state_trait_alchemical_runoff = {
+	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
+	modifier = {
+		state_colony_growth_speed_mult = -0.9
+		state_laborers_mortality_mult = 0.25
+		state_migration_pull_mult = -0.5
+	}
+}
+
+state_trait_sirens_lagoon_fisheries = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	
+	modifier = {
+		building_group_bg_fishing_throughput_add = 0.2
+	}
+}
+
+state_trait_moorweald_forest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.1
+		building_group_bg_hunting_throughput_add = 0.1
+	}
+}
+
+state_trait_greencourt_coal = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.10
+    }
+}
+
+state_trait_barrel_coal = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.10
+    }
+}
+
+state_trait_rat_tunnels = {
+    icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+		
+	modifier = {
+		state_birth_rate_mult = 0.15
+		state_infrastructure_mult = 0.10
+		battle_offense_owned_province_mult = 0.20
+		battle_defense_owned_province_mult = 0.20
+	}
+}
+
+state_trait_pearlymeadows= {
+    icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"   
+	modifier = {
+        building_group_bg_agriculture_throughput_add = 0.10
+		building_group_bg_plantations_throughput_add = 0.10
+    }
+}
+
+state_trait_dylon_harbours = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.10
+		building_military_shipyards_throughput_add = 0.10
+		state_building_naval_base_max_level_add = 10
+	}	
+}
+
+state_trait_eberri_forest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.10
+		building_group_bg_hunting_throughput_add = 0.10
+	}
+}

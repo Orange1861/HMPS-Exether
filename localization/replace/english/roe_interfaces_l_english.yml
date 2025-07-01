@@ -1,0 +1,554 @@
+﻿l_english:
+  MAGIC_TOOLTIP: "$MAGIC_BALANCE$[SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'MAGIC_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  MAGIC_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\n[SelectLocalization( GreaterThan_CFixedPoint( AccessPlayer.MakeScope.ScriptValue('arcana'), '(CFixedPoint)0' ), 'MAGIC_EXCESS_EFFECT_HEADER', 'MAGIC_DEFICIT_EFFECT_HEADER')]Your total generation of [AccessPlayer.MakeScope.ScriptValue('arcana_generation')|=+D]@magic![Nbsp][concept_magic_reserves] is due to:\n [AccessPlayer.GetModifier.GetDescFor('country_arcana_pos_add')] [ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_gen_mult') )]\nYour total usage of [AccessPlayer.MakeScope.ScriptValue('total_arcana_usage')|=+D]@magic![Nbsp][concept_magic_reserves] is due to: $MAGIC_COST_VALUE$"
+  MAGIC_BALANCE: "@magic! #bold [concept_magic_reserves]#!\nBalance: [AccessPlayer.MakeScope.ScriptValue('arcana')|=+D]"
+  MAGIC_EXCESS_EFFECT_HEADER: "Effects from #v [AccessPlayer.MakeScope.ScriptValue('normalized_arcana')|%0]#! @magic! [concept_magic_reserves] #g excess#! (generation is higher than usage):\n$MAGIC_SURPLUS_EFFECTS$\n\n"
+  MAGIC_DEFICIT_EFFECT_HEADER: "Effects from #v [Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)-1')|%0]#! @magic! [concept_magic_reserves] #n deficit#! (usage is higher than generation):\n$MAGIC_DEFICIT_EFFECTS$\n\n"
+  MAGIC_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
+  MAGIC_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('arcana_upkeep')|=+D] from [concept_arcana_cards][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_cost_mult') )]"
+  MAGIC_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('magic_institution_bonus')|=+D] from [GetInstitutionType('institution_magical_focus').GetName]"
+  magical_focus_institution_tooltip: "test"
+  MAGIC_SURPLUS_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
+  MAGIC_DEFICIT_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
+
+  RENOWN_TOOLTIP: "$RENOWN_BALANCE$[SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'RENOWN_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  RENOWN_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\n$RENOWN_EXCESS_EFFECT_HEADER$Your total generation of [AccessPlayer.MakeScope.ScriptValue('renown_generation')|=+D] @renown![Nbsp][concept_renown] is due to:\n [AccessPlayer.GetModifier.GetDescFor('country_renown_pos_add')] [ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_gen_mult') )]"
+  RENOWN_BALANCE: "@renown! #bold [concept_renown]#!\nBalance: [AccessPlayer.MakeScope.ScriptValue('renown')|=+D]"
+  RENOWN_EXCESS_EFFECT_HEADER: "Effects from #v [AccessPlayer.MakeScope.ScriptValue('renown')|=+D]#! @renown! [concept_renown]:\n$RENOWN_SURPLUS_EFFECTS$\n\n"
+  RENOWN_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
+  RENOWN_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('renown_upkeep')|=+D] from [Concept('concept_retainer', '$concept_retainers$')][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_cost_mult') )]"
+  RENOWN_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('renown_institution_bonus')|=+D] from [GetInstitutionType('institution_renownal_focus').GetName]"
+  renownal_focus_institution_tooltip: "test"
+  RENOWN_SURPLUS_EFFECTS: "[AccessPlayer.MakeScope.ScriptValue('renown_prestige')|=+D] #yellow [concept_prestige] #!"
+
+  CHARACTER_RETAINER_ROLE: "#v Retainer#!"
+  CHARACTER_RETAINER_ROLE_TOOLTIP: "#header [Character.GetFullName]#! is a #v Retainer#!"
+  CHARACTER_PANEL_SUBTITLE_OTHER: "[SelectLocalization(Character.MakeScope.Var('is_retainer').IsSet, Concept('concept_retainer', '$concept_retainer$'), SelectLocalization(Character.IsRuler, Concept('concept_ruler', Character.GetPrimaryRoleTitle), Character.GetPrimaryRoleName))] [SelectLocalization(Character.IsRuler, 'of','in')] [Character.GetCountry.GetName]"
+
+  BUILDING_POP_CONSTRUCTION_TOOLTIP: "#bold #white Pop Production#!#!\nBuildings in this state are producing [Concept('concept_pop', '$concept_pops$')] in batches.\nOnce the progress bar is filled by outputs from local [Concept('concept_building', '$concept_buildings$')], a new batch will be released and the progress will be reset."
+
+  BUILDING_SUNSTATION_PROGRESS_TOOLTIP: "#bold #white Thawing Progress#!#!\nSunstations convert magic or ethereal materials into [concept_arable_land]."
+
+  HAS_NARRATIVE: "#bold Story Content#!\n[Country.GetCustom('has_journals_loc')]"
+  HAS_FLAVORED_INTEREST_GROUPS: "#bold Interest Groups#!\n[Country.GetCustom('has_flavored_interest_groups_loc')]"
+  HAS_MAJOR_FORMABLE: "#bold Major Formable#!\n[Country.GetCustom('has_major_formable_loc')]"
+  CUSTOM_CONTENT: "Custom Content"
+  ICON_CHECK: "@green_checkmark!"
+  ICON_CROSS: "@red_cross!"
+
+  surplus_arcana: "Balance"
+
+  je_agricultural_development_goal_dummy: "Increase the amount of [concept_buy_orders] for $coffee$ within our market by 150%"
+
+  dlc_roe: "Realms of Exether"
+  dlc_roe_desc: "Total Overhaul mod set in the magical world of Exether"
+
+  DAY_MONDAY: "Moonday"
+  DAY_TUESDAY: "Towerday"
+  DAY_WEDNESDAY: "Wineday"
+  DAY_THURSDAY: "Thunderday"
+  DAY_FRIDAY: "Fireday"
+  DAY_SATURDAY: "Swordsday"
+  DAY_SUNDAY: "Saintsday"
+
+  OH_DEER: "#italic 'Sup Doc, we have#! #bold [ErrorDeer.NumberOrErrors|v]#! #italic error(s)!#!"
+
+  machinists_trade_unions_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] will be more likely to attract $machinists$ in magical industry."
+  machinists_trade_unions_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] will attract fewer $machinists$ in magical industry."
+  archmages_trade_unions_ig_shift_effect_tt: "$archmages$ will invest in mundane industry"
+  archmages_trade_unions_ig_shift_effect_negative_tt: "$archmages$ will no longer invest in mundane industry"
+  wizards_devout_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+  wizards_devout_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+  wizards_rural_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+  wizards_rural_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+  archmages_rural_ig_shift_effect_negative_tt: "$archmages$ will no longer invest in agriculture"
+  archmages_rural_ig_shift_effect_tt: "$archmages$ will invest in agriculture"
+  academics_mages_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will attract $academics$"
+  academics_mages_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will no longer attract $academics$"
+
+  decree_special_measures: "Special Measures"
+  decree_special_measures_desc: "Some irregular situations require special measures to resolve"
+
+  STATE_ADVENTURER_COVERAGE_CONDENSED: "[AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'WARNING')]Using #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|0v]#!#! of #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_value')|0v]#!#! [AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'STATE_ADVENTURER_COVERAGE_INSUFFICIENT')]"
+  ADVENTURER_COVERAGE_USAGE: "#header [concept_tax_capacity] Usage#!\n[State.GetName] uses $USAGE|1v$ [concept_tax_capacity]\n$TOOLTIP_DELIMITER$\nOne point of [concept_tax_capacity] is required per $POPS_PER_CAPACITY|vK$ [Concept('concept_pop', '$concept_pops$')] and [State.GetName] has a total population of $TOTAL_POPS|vK$"
+  STATE_ADVENTURER_COVERAGE: "[concept_adventurer_coverage]\n$STATE_ADVENTURER_COVERAGE_CONDENSED$"
+  STATE_ADVENTURER_COVERAGE_DESC: "#header [concept_adventurer_coverage]#!\nThe $concept_adventurer_coverage$ balance in [State.GetName] is [State.MakeScope.ScriptValue('state_adventurer_coverage_balance')|1+=]\n$TOOLTIP_DELIMITER$\n$concept_adventurer_coverage$: #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_value')|1+]#!#!\n$concept_adventurer_coverage$ Usage: #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_USAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|1-]#!#![SelectLocalization(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'), State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG', '')]"
+  STATE_ADVENTURER_COVERAGE_TOOLTIP: "#bold [concept_adventurer_coverage]#!\n[State.GetName] has an [concept_adventurer_coverage] of #g [State.MakeScope.ScriptValue('state_adventurer_coverage_value')] #!\n$TOOLTIP_DELIMITER$ $ADVENTURER_COVERAGE_BASE_VALUE_BONUS$ [State.GetModifier.GetDescFor('state_adventurer_coverage_add')]\n[State.GetModifier.GetDescFor('state_adventurer_coverage_mult')]"
+  STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP: "#bold [concept_adventurer_coverage]#!\n[State.GetName] has an [concept_adventurer_coverage] Usage of [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|0v] \n$TOOLTIP_DELIMITER$ $ADVENTURER_COVERAGE_DEMAND_BASE_VALUE$ [State.GetCustom('adventurer_coverage_demand_bonus_loc')] [State.GetCustom('adventurer_coverage_demand_urban_bonus_loc')]"
+  ADVENTURER_COVERAGE_DEMAND_BASE_VALUE: "\n#r +[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_arable_land')]#! from Unused Arable Land"
+  ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS: "\n#g -[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_urban_center_reduction')]#! from Urban Center"
+  STATE_ADVENTURER_COVERAGE_INSUFFICIENT: "\n #v -#![State.MakeScope.ScriptValue('state_adventurer_coverage_multiplier')|v] [Concept('concept_sol', '$sol_short$')]"
+  STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG: "\n\n@warning! Because usage is higher than capacity, the following effects are applied to the [concept_state]:\n#v -#![State.MakeScope.ScriptValue('state_adventurer_coverage_multiplier')|v] [concept_sol]"
+  ADVENTURER_COVERAGE_BASE_VALUE_BONUS: "\n#g +50#! from Base Value"
+  ADVENTURER_COVERAGE_BUILDING_BONUS: "\n#g +#![State.GetModifier.GetValueFor('state_adventurer_coverage_add')|D+] from Local Production"
+  ADVENTURER_COVERAGE_POLLUTION: "\n#r +#![State.MakeScope.ScriptValue('state_adventurer_coverage_demand_pollution')|D-] from Pollution"
+
+  ADVENTURER_COVERAGE_TOOLTIP: "The balance of [concept_adventurer_coverage] and usage in a State."
+  ADVENTURER_COVERAGE_TITLE: "A. Cov"
+
+  SETTING_INPUT_ACTION_M: "$MAGIC_OVERVIEW$"
+  MAGIC_OVERVIEW: "Arcana"
+  BUTTON_MAGIC_OVERVIEW: "#header Arcana#!\nShortcut: #V Arcana#! (#V M#!)"
+  MAGIC_PANEL_HEADER: "Arcana Cards"
+
+  MAGICAL_RITUALS: "Played Cards"
+
+  #Rituals
+  country_arcana_card_cooldown: "Recently Changed Card"
+
+  country_arcana_card_upkeep: "Arcana Card Upkeep"
+
+  country_arcana_gryphon_1: "#blue Whispers of the Wandering Winds#!#!#!"
+  country_arcana_gryphon_2: "#blue Gale Currents#!#!#!"
+  country_arcana_gryphon_3: "#blue Rallying Gale#!#!#!"
+  country_arcana_gryphon_4: "#blue Eye of the Storm#!#!#!"
+  country_arcana_gryphon_5: "#blue Skyborne Prosperity#!#!#!"
+
+  country_arcana_justice_1: "#blue Balanced Scales#!#!#!"
+  country_arcana_justice_2: "#blue Axiom Revelation#!#!#!"
+  country_arcana_justice_3: "#blue Crucible of Elemental Order#!#!#!"
+  country_arcana_justice_4: "#blue Impartial Gavel#!#!#!"
+  country_arcana_justice_5: "#blue Harmonious Progress#!#!#!"
+
+  country_arcana_sphinx_1: "#blue Astral Mapping#!#!#!"
+  country_arcana_sphinx_2: "#blue Starlight Academia#!#!#!"
+  country_arcana_sphinx_3: "#blue Guiding Constellations#!#!#!"
+  country_arcana_sphinx_4: "#blue Stellar Revelations#!#!#!"
+  country_arcana_sphinx_5: "#blue Cipher of Acceleration#!#!#!"
+
+  country_arcana_golem_1: "#blue Harmonious Construction#!#!#!"
+  country_arcana_golem_2: "#blue Stone Skin Blessing#!#!#!"
+  country_arcana_golem_3: "#blue Rite of Thorns#!#!#!"
+  country_arcana_golem_4: "#blue Scenic Landscapes#!#!#!"
+  country_arcana_golem_5: "#blue Heart of the Earth#!#!#!"
+
+  country_arcana_unicorn_1: "#blue Swords to Plowshares#!#!#!"
+  country_arcana_unicorn_2: "#blue Ordained Ascension#!#!#!"
+  country_arcana_unicorn_3: "#blue Empathic Resonance#!#!#!"
+  country_arcana_unicorn_4: "#blue Luminous Persuasion#!#!#!"
+  country_arcana_unicorn_5: "#blue Vitality Blessing#!#!#!"
+
+  country_arcana_fey_1: "#blue Verdant Harvest#!#!#!"
+  country_arcana_fey_2: "#blue Kin of the Glade#!#!#!"
+  country_arcana_fey_3: "#blue Glamour#!#!#!"
+  country_arcana_fey_4: "#blue Primordial Rebirth#!#!#!"
+  country_arcana_fey_5: "#blue Midsummer Dream#!#!#!"
+
+  country_arcana_phoenix_1: "#blue Resugent Flames#!#!#!"
+  country_arcana_phoenix_2: "#blue Cinder Advance#!#!#!"
+  country_arcana_phoenix_3: "#blue Wonder#!#!#!"
+  country_arcana_phoenix_4: "#blue Ember of Creation#!#!#!"
+  country_arcana_phoenix_5: "#blue Flame-Forged Tools#!#!#!"
+
+  country_arcana_djinn_1: "#blue Wishful Thinking#!#!#!"
+  country_arcana_djinn_2: "#blue Illusory Masquerade#!#!#!"
+  country_arcana_djinn_3: "#blue Shifting Sands#!#!#!"
+  country_arcana_djinn_4: "#blue Mirage Maker#!#!#!"
+  country_arcana_djinn_5: "#blue Reality Bender#!#!#!"
+
+  country_arcana_siren_1: "#blue Mind Over Matter#!#!#!"
+  country_arcana_siren_2: "#blue Telepathy#!#!#!"
+  country_arcana_siren_3: "#blue Whispers of Contentment#!#!#!"
+  country_arcana_siren_4: "#blue Crystallized Melodies#!#!#!"
+  country_arcana_siren_5: "#blue Precognitive Insight#!#!#!"
+
+  country_arcana_kraken_1: "#blue Kraken Bounty#!#!#!"
+  country_arcana_kraken_2: "#blue Tentacles of the Trade#!#!#!"
+  country_arcana_kraken_3: "#blue Safe Passage#!#!#!"
+  country_arcana_kraken_4: "#blue Abyssal Influence#!#!#!"
+  country_arcana_kraken_5: "#blue Leviathan Dominion#!#!#!"
+
+  country_arcana_fiend_1: "#blue Whispers of the Abyss#!#!#!"
+  country_arcana_fiend_2: "#blue Dark Fanatics#!#!#!"
+  country_arcana_fiend_3: "#blue Corrupting Influence#!#!#!"
+  country_arcana_fiend_4: "#blue Merciless Onslaught#!#!#!"
+  country_arcana_fiend_5: "#blue Pyrrhic Ascendancy#!#!#!"
+
+  country_arcana_angel_1: "#blue Unburial Rites#!#!#!"
+  country_arcana_angel_2: "#blue Gifts for the Fallen#!#!#!"
+  country_arcana_angel_3: "#blue Rhythm of Ages#!#!#!"
+  country_arcana_angel_4: "#blue Echoes of the Dead#!#!#!"
+  country_arcana_angel_5: "#blue Requiem#!#!"
+
+  country_arcana_dragon_1: "#blue Celestial Concord#!#!#!"
+  country_arcana_dragon_2: "#blue Astral Aegis#!#!#!"
+  country_arcana_dragon_3: "#blue Cosmic Enlightenment#!#!#!"
+  country_arcana_dragon_4: "#blue Eternal Flame Embrace#!#!#!"
+  country_arcana_dragon_5: "#blue Sol Sovereignty#!#!"
+
+  arcana_gryphon_1: "Whispers of the Wandering Winds"
+  arcana_gryphon_2: "Gale Currents"
+  arcana_gryphon_3: "Rallying Gale"
+  arcana_gryphon_4: "Eye of the Storm"
+  arcana_gryphon_5: "Skyborne Prosperity"
+
+  arcana_justice_1: "Balanced Scales"
+  arcana_justice_2: "Axiom's Revelation"
+  arcana_justice_3: "Crucible of Elemental Order"
+  arcana_justice_4: "Impartial Gavel"
+  arcana_justice_5: "Harmonious Progress"
+
+  arcana_sphinx_1: "Astral Mapping"
+  arcana_sphinx_2: "Starlight Academia"
+  arcana_sphinx_3: "Guiding Constellations"
+  arcana_sphinx_4: "Stellar Revelations"
+  arcana_sphinx_5: "Cipher of Acceleration"
+
+  arcana_golem_1: "Harmonious Construction"
+  arcana_golem_2: "Stone Skin Blessing"
+  arcana_golem_3: "Rite of Thorns"
+  arcana_golem_4: "Scenic Landscapes"
+  arcana_golem_5: "Heart of the Earth"
+
+  arcana_unicorn_1: "Swords to Plowshares"
+  arcana_unicorn_2: "Ordained Ascension"
+  arcana_unicorn_3: "Empathic Resonance"
+  arcana_unicorn_4: "Luminous Persuasion"
+  arcana_unicorn_5: "Vitality's Blessing"
+
+  arcana_fey_1: "Verdant Awakening"
+  arcana_fey_2: "Kin of the Glade"
+  arcana_fey_3: "Glamour"
+  arcana_fey_4: "Primordial Rebirth"
+  arcana_fey_5: "Midsummer Dream"
+
+  arcana_phoenix_1: "Resugent Flames"
+  arcana_phoenix_2: "Cinder's Advance"
+  arcana_phoenix_3: "Wonder"
+  arcana_phoenix_4: "Ember of Creation"
+  arcana_phoenix_5: "Flame-Forged Tools"
+
+  arcana_djinn_1: "Wishful Thinking"
+  arcana_djinn_2: "Masquerade"
+  arcana_djinn_3: "Shifting Sands"
+  arcana_djinn_4: "Mirage"
+  arcana_djinn_5: "Reality Bend"
+
+  arcana_siren_1: "Mind Over Matter"
+  arcana_siren_2: "Telepathy"
+  arcana_siren_3: "Whispers of Contentment"
+  arcana_siren_4: "Crystallized Melodies"
+  arcana_siren_5: "Precognitive Insight"
+
+  arcana_kraken_1: "Kraken's Bounty"
+  arcana_kraken_2: "Tentacles of the Trade"
+  arcana_kraken_3: "Safe Passage"
+  arcana_kraken_4: "Abyssal Influence"
+  arcana_kraken_5: "Leviathan's Dominion"
+
+  arcana_fiend_1: "Whispers of the Abyss"
+  arcana_fiend_2: "Dark Fanatics"
+  arcana_fiend_3: "Corrupting Influence"
+  arcana_fiend_4: "Merciless Onslaught"
+  arcana_fiend_5: "Pyrrhic Ascendancy"
+
+  arcana_angel_1: "Unburial Rites"
+  arcana_angel_2: "Gifts for the Fallen"
+  arcana_angel_3: "Rhythm of Ages"
+  arcana_angel_4: "Echoes of the Dead"
+  arcana_angel_5: "Requiem"
+
+  arcana_dragon_1: "Celestial Concord"
+  arcana_dragon_2: "Astral Aegis"
+  arcana_dragon_3: "Cosmic Enlightenment"
+  arcana_dragon_4: "Eternal Flame's Embrace"
+  arcana_dragon_5: "Sol Sovereignty"
+
+  arcana_gryphon_flavor_1: "#lore The breath of cosmic winds carries whispers of distant lands, stirring the hearts of those who yearn for new horizons.#!"
+  arcana_gryphon_flavor_2: "#lore Ethereal trade winds weave through reality, forging invisible pathways that transcend mortal boundaries.#!"
+  arcana_gryphon_flavor_3: "#lore Tempered by howling gales and lashed by spectral rain, our forces move with preternatural swiftness.#!"
+  arcana_gryphon_flavor_4: "#lore The fury of the tempest awakens in those who defend their territory, their resolve as unyielding as the eye of the storm.#!"
+  arcana_gryphon_flavor_5: "#lore Cloudsilver dreams take flight on arcane currents, elevating the ambitions of an entire nation to touch the sky.#!"
+
+  arcana_justice_flavor_1: "#lore Reality shimmers as cosmic scales find equilibrium, their gentle chime quelling the tumultuous seas of mortal hearts.#!"
+  arcana_justice_flavor_2: "#lore Stardust coalesces into patterns of divine truth, each gleaming mote a fragment of inspiration illuminating the paths of mortal ingenuity.#!"
+  arcana_justice_flavor_3: "#lore In the depths of celestial forges, primal forces dance to the rhythm of cosmic law, shaping the very foundations of order and possibility.#!"
+  arcana_justice_flavor_4: "#lore The air thrums with unseen authority as a voice of perfect balance reverberates through the corridors of fate, bending chaos to its immutable will.#!"
+  arcana_justice_flavor_5: "#lore Wishstones pulsate in resonance with the grand design of creation, their crystalline structures weaving a symphony of progress that echoes across the tapestry of existence.#!"
+
+  arcana_sphinx_flavor_1: "#lore Ancient secrets unravel, propelling the gears of innovation ever faster.#!"
+  arcana_sphinx_flavor_2: "#lore Knowledge becomes a sword, its guardians rising in influence as wisdom spreads.#!"
+  arcana_sphinx_flavor_3: "#lore Ideas ripple across the realm, each mind a conduit for cosmic understanding.#!"
+  arcana_sphinx_flavor_4: "#lore In the crucible of curiosity, revelations ignite like stars in the night sky.#!"
+  arcana_sphinx_flavor_5: "#lore Time bends to the will of seekers, compressing eons of discovery into mere moments.#!"
+
+  arcana_golem_flavor_1: "#lore The land itself rises to support our endeavors, forging paths where none existed before.#!"
+  arcana_golem_flavor_2: "#lore Blessed by the Golem's touch, our people stand resolute against the tides of decay.#!"
+  arcana_golem_flavor_3: "#lore Thorny guardians sprout from unyielding stone, their vigilance as eternal as the mountains.#!"
+  arcana_golem_flavor_4: "#lore The very bedrock calls to kindred spirits, drawing them to our steadfast shores.#!"
+  arcana_golem_flavor_5: "#lore Deep within the earth's embrace, hidden treasures yield to those who bear the Golem's strength.#!"
+
+  arcana_unicorn_flavor_1: "#lore The Unicorn's horn touches iron and steel, transmuting instruments of strife into tools of peace and prosperity.#!"
+  arcana_unicorn_flavor_2: "#lore Celestial light anoints the worthy, its radiance fortifying the pillars of righteous governance.#!"
+  arcana_unicorn_flavor_3: "#lore Ethereal whispers of compassion soften the harsh edges of toil, easing the burdens of the weary.#!"
+  arcana_unicorn_flavor_4: "#lore Starlight dances on silver tongues, its gentle radiance guiding hearts towards harmonious unity.#!"
+  arcana_unicorn_flavor_5: "#lore Unicorn's tears, each a constellation of healing light, fall gently upon the realm, nurturing the spark of life within all beings.#!"
+
+  arcana_fey_flavor_1: "#lore The land pulses with vibrant energy, coaxing forth bountiful harvests from fields touched by fey magic.#!"
+  arcana_fey_flavor_2: "#lore A gossamer veil of enchantment settles over the realm, inspiring mortals to dance to the rhythm of the fey courts.#!"
+  arcana_fey_flavor_3: "#lore With a beguiling smile and a flick of the wrist, a charming fey weaves a spell of unity, blending cultures in a dance of enchantment.#!"
+  arcana_fey_flavor_4: "#lore Ethereal tendrils of fey magic intertwine with mortal essence, granting arcane practitioners a profound birth in mystical power.#!"
+  arcana_fey_flavor_5: "#lore Whispers of fey realms entice settlers to unexplored frontiers, where mortal dreams take root in enchanted soil.#!"
+
+  arcana_phoenix_flavor_1: "#lore From ashes, warriors rise anew, their spirits blazing with untamed ferocity.#!"
+  arcana_phoenix_flavor_2: "#lore Scorched earth yields to swift rebirth, as flames dance ahead of marching feet.#!"
+  arcana_phoenix_flavor_3: "#lore In the crucible of change, true loyalty is forged, burning away doubt and despair.#!"
+  arcana_phoenix_flavor_4: "#lore The phoenix's flame ignites dormant potential, transforming dreams into tangible reality.#!"
+  arcana_phoenix_flavor_5: "#lore Factories roar with the fury of a thousand suns, the fire of creation burning ever brighter.#!"
+
+  arcana_djinn_flavor_1: "#lore Reality ripples, conjuring desires from thin air.#!"
+  arcana_djinn_flavor_2: "#lore In the grand cosmic ball, identities blur and alliances dance to an ethereal tune.#!"
+  arcana_djinn_flavor_3: "#lore The landscape of possibility morphs ceaselessly, revealing hidden oases of opportunity.#!"
+  arcana_djinn_flavor_4: "#lore Illusory fortifications confound foes, while true strength flows unseen like desert springs.#!"
+  arcana_djinn_flavor_5: "#lore Reality twists and bends, accelerating the tides of revolution and rebirth.#!"
+
+  arcana_siren_flavor_1: "#lore Celestial harmonies reverberate through the foundations of reality, shaping matter with ethereal vibrations.#!"
+  arcana_siren_flavor_2: "#lore Thoughts intertwine like celestial bodies in a cosmic dance, their gravity pulling disparate minds into harmonious orbit.#!"
+  arcana_siren_flavor_3: "#lore A celestial lullaby soothes mortal desires, revealing the beauty in life's simplest moments.#!"
+  arcana_siren_flavor_4: "#lore Echoes of astral melodies crystallize into tangible forms, each a miniature universe of wonder.#!"
+  arcana_siren_flavor_5: "#lore The voices of a thousand realms blend into a transcendent chorus, unlocking hidden potentials of consciousness.#!"
+
+  arcana_kraken_flavor_1: "#lore Depths whisper ancient secrets, guiding fishermen to bountiful catches in calm waters.#!"
+  arcana_kraken_flavor_2: "#lore Sinuous tendrils of commerce weave through bustling ports, their grasp reaching far beyond the shore.#!"
+  arcana_kraken_flavor_3: "#lore Unseen currents cradle vessels, carrying them gently across treacherous seas to distant harbors.#!"
+  arcana_kraken_flavor_4: "#lore Unfathomable currents carry whispers of opportunity, drawing traders to uncharted waters.#!"
+  arcana_kraken_flavor_5: "#lore The world trembles as colossal forms stir beneath the waves, their power echoing across nations.#!"
+
+  arcana_fiend_flavor_1: "#lore Dark whispers from the depths empower those who dare to listen, granting unholy vitality to practitioners of the arcane arts.#!"
+  arcana_fiend_flavor_2: "#lore An aura of relentless malevolence fortifies the resolve of those touched by the Fiend's constellation.#!"
+  arcana_fiend_flavor_3: "#lore The insidious tendrils of shadow seep into the hearts of mortals, swaying beliefs with terrifying efficacy.#!"
+  arcana_fiend_flavor_4: "#lore Under the Fiend's baleful gaze, blows strike with unnatural precision, leaving no room for mercy.#!"
+  arcana_fiend_flavor_5: "#lore As the veil between worlds thins, infernal power surges forth, igniting an insatiable hunger for glory and destruction.#!"
+
+  arcana_angel_flavor_1: "#lore By star-blessed decree, the dead rise to toil once more. The veil between life and labor grows thin.#!"
+  arcana_angel_flavor_2: "#lore Souls find solace in the gentle grasp of inevitability, their fears of the end melting away.#!"
+  arcana_angel_flavor_3: "#lore In the twilight between existence and oblivion, a delicate balance is struck.#!"
+  arcana_angel_flavor_4: "#lore Ancient spirits impart their timeless knowledge, elevating mortal minds beyond their years.#!"
+  arcana_angel_flavor_5: "#lore The crushing weight of eternity bears down, eroding the willpower of the living.#!"
+
+  arcana_dragon_flavor_1: "#lore A radiant call echoes from the heavens, its warmth melting age-old enmities as mortal hearts unite beneath the cosmic aegis.#!"
+  arcana_dragon_flavor_2: "#lore Celestial scales shimmer in the sky, their cosmic resilience seeping into the very bones of those who stand vigilant against chaos.#!"
+  arcana_dragon_flavor_3: "#lore Sunfire ignites mortal minds, searing away ignorance and kindling the flames of potential in hearts young and old.#!"
+  arcana_dragon_flavor_4: "#lore Life's embers burn brighter under the gaze of eternity, each mortal flame shielded from the encroaching void by an unseen guardian's breath.#!"
+  arcana_dragon_flavor_5: "#lore Reality bends to the will of those crowned by celestial light, their decrees echoing with the authority of a sun not extinguished.#!"
+
+  arcana_card_flavor_GRYPHON: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_gryphon_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_gryphon_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_gryphon_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_gryphon_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_gryphon_flavor_5')]"
+
+  arcana_card_flavor_JUSTICE: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_justice_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_justice_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_justice_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_justice_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_justice_flavor_5')]"
+
+  arcana_card_flavor_SPHINX: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_sphinx_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_sphinx_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_sphinx_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_sphinx_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_sphinx_flavor_5')]"
+
+  arcana_card_flavor_GOLEM: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_golem_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_golem_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_golem_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_golem_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_golem_flavor_5')]"
+
+  arcana_card_flavor_UNICORN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_unicorn_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_unicorn_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_unicorn_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_unicorn_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_unicorn_flavor_5')]"
+
+  arcana_card_flavor_FEY: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_fey_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_fey_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_fey_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_fey_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_fey_flavor_5')]"
+
+  arcana_card_flavor_PHOENIX: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_phoenix_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_phoenix_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_phoenix_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_phoenix_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_phoenix_flavor_5')]"
+
+  arcana_card_flavor_DJINN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_djinn_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_djinn_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_djinn_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_djinn_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_djinn_flavor_5')]"
+
+  arcana_card_flavor_SIREN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_siren_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_siren_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_siren_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_siren_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_siren_flavor_5')]"
+
+  arcana_card_flavor_KRAKEN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_kraken_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_kraken_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_kraken_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_kraken_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_kraken_flavor_5')]"
+
+  arcana_card_flavor_FIEND: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_fiend_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_fiend_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_fiend_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_fiend_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_fiend_flavor_5')]"
+
+  arcana_card_flavor_ANGEL: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_angel_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_angel_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_angel_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_angel_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_angel_flavor_5')]"
+
+  arcana_card_flavor_DRAGON: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_dragon_flavor_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_dragon_flavor_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_dragon_flavor_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_dragon_flavor_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_dragon_flavor_5')]"
+
+  RITUAL_NAME_JUSTICE: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_justice_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_justice_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_justice_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_justice_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_justice_5')]"
+
+  RITUAL_NAME_GRYPHON: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_gryphon_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_gryphon_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_gryphon_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_gryphon_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_gryphon_5')]"
+
+  RITUAL_NAME_SPHINX: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_sphinx_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_sphinx_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_sphinx_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_sphinx_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_sphinx_5')]"
+
+  RITUAL_NAME_GOLEM: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_golem_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_golem_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_golem_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_golem_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_golem_5')]"
+
+  RITUAL_NAME_UNICORN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_unicorn_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_unicorn_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_unicorn_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_unicorn_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_unicorn_5')]"
+
+  RITUAL_NAME_FEY: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_fey_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_fey_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_fey_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_fey_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_fey_5')]"
+
+  RITUAL_NAME_PHOENIX: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_phoenix_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_phoenix_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_phoenix_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_phoenix_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_phoenix_5')]"
+
+  RITUAL_NAME_DJINN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_djinn_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_djinn_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_djinn_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_djinn_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_djinn_5')]"
+
+  RITUAL_NAME_SIREN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_siren_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_siren_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_siren_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_siren_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_siren_5')]"
+
+  RITUAL_NAME_KRAKEN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_kraken_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_kraken_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_kraken_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_kraken_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_kraken_5')]"
+
+  RITUAL_NAME_FIEND: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_fiend_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_fiend_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_fiend_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_fiend_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_fiend_5')]"
+
+  RITUAL_NAME_ANGEL: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_angel_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_angel_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_angel_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_angel_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_angel_5')]"
+
+  RITUAL_NAME_DRAGON: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'arcana_dragon_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'arcana_dragon_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'arcana_dragon_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'arcana_dragon_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'arcana_dragon_5')]"
+
+  RITUAL_COST: "Cost: #white #bold [Scope.ScriptValue('arcana_cost')]#!#! @magic! [concept_magic_reserves]"
+
+  CAST_RITUAL: "Play"
+
+  DISPEL_RITUAL: "Discard"
+
+  ARCANAS: "Arcana"
+
+  has_reserves_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have [Scope.ScriptValue('arcana_cost')|0v] @magic! #bold [concept_magic_reserves]"
+  has_low_veil_damage_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have more than [Scope.ScriptValue('dragon_threshold')|0v] @veilneg! [concept_veil_impact]\n"
+
+  VEIL_INTEGRITY_TITLE: "#bold #o Veil Integrity#!"
+  VEIL_INTEGRITY_STATUS: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_STRENGTHENED')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_BALANCED')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_WEAKENED')]"
+  VEIL_INTEGRITY_STATUS_BALANCED: "#v Balanced#!"
+  VEIL_INTEGRITY_STATUS_WEAKENED: "#bold #u Weakened#!#!"
+  VEIL_INTEGRITY_STATUS_STRENGTHENED: "#bold #o Strengthened#!#!"
+
+  VEIL_INTEGRITY_TOOLTIP: "$VEIL_INTEGRITY_BALANCE$[SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'VEIL_INTEGRITY_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nOur Veil Impact:  [AccessPlayer.MakeScope.ScriptValue('country_veil_damage')|1-]\n$TOOLTIP_DELIMITER$\nTop Veil Damage (Past Month):\n1. [GetGlobalVariable('veil_damage_top_1').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_1_value').GetValue|-1]\n2. [GetGlobalVariable('veil_damage_top_2').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_2_value').GetValue|-1]\n3. [GetGlobalVariable('veil_damage_top_3').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_3_value').GetValue|-1]"
+  VEIL_INTEGRITY_BALANCE: "@veil! #bold [concept_veil_integrity]#!\nCurrent integrity: $VEIL_INTEGRITY_STATUS$"
+
+  VEIL_INTEGRITY_VALUE_TEXT: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_GOLD')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_BLUE')]"
+  VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!"
+  VEIL_INTEGRITY_VALUE_GOLD: "#bold #o [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+  VEIL_INTEGRITY_VALUE_BLUE: "#bold #u [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+
+  VEIL_DAMAGE_COUNTRY: "[AccessPlayer.MakeScope.ScriptValue('country_veil_damage')]"
+
+  STATE_VEIL_DAMAGE: "[Concept('concept_veil_integrity', 'Veil Impact')]\n  [State.MakeScope.ScriptValue('state_veil_damage')|1-] "
+  STATE_VEIL_DAMAGE_DESC: "#header [Concept('concept_veil_integrity', 'Veil Impact')]#!: [State.GetModifier.GetFormattedValueFor('state_veil_integrity_contribution')]\n$TOOLTIP_DELIMITER$\n[State.GetModifier.GetDescFor('state_veil_integrity_contribution')][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('state_veil_integrity_contribution_mult') )]\n\nA decrease to @veilneg! [concept_veil_integrity]"
+
+  ASTRAL_CALENDAR_YEAR: "Year of the $ASTRAL_CALENDAR_YEAR_SIGN$"
+
+  ASTRAL_CALENDAR_YEAR_SIGN: "[AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)0'), 'ASTRAL_CALENDAR_SIGN_0')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)1'), 'ASTRAL_CALENDAR_SIGN_1')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)2'), 'ASTRAL_CALENDAR_SIGN_2')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)3'), 'ASTRAL_CALENDAR_SIGN_3')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)4'), 'ASTRAL_CALENDAR_SIGN_4')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)5'), 'ASTRAL_CALENDAR_SIGN_5')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)6'), 'ASTRAL_CALENDAR_SIGN_6')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)7'), 'ASTRAL_CALENDAR_SIGN_7')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)8'), 'ASTRAL_CALENDAR_SIGN_8')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)9'), 'ASTRAL_CALENDAR_SIGN_9')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)10'), 'ASTRAL_CALENDAR_SIGN_10')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)11'), 'ASTRAL_CALENDAR_SIGN_11')]"
+
+  ASTRAL_CALENDAR_SIGN_0: "[concept_gryphon]"
+  ASTRAL_CALENDAR_SIGN_1: "[concept_justice]"
+  ASTRAL_CALENDAR_SIGN_2: "[concept_sphinx]"
+  ASTRAL_CALENDAR_SIGN_3: "[concept_phoenix]"
+  ASTRAL_CALENDAR_SIGN_4: "[concept_unicorn]"
+  ASTRAL_CALENDAR_SIGN_5: "[concept_fey]"
+  ASTRAL_CALENDAR_SIGN_6: "[concept_golem]"
+  ASTRAL_CALENDAR_SIGN_7: "[concept_djinn]"
+  ASTRAL_CALENDAR_SIGN_8: "[concept_siren]"
+  ASTRAL_CALENDAR_SIGN_9: "[concept_kraken]"
+  ASTRAL_CALENDAR_SIGN_10: "[concept_fiend]"
+  ASTRAL_CALENDAR_SIGN_11: "[concept_angel]"
+
+  concept_supply_node: "Supply Node"
+  concept_supply_nodes: "Supply Nodes"
+  concept_supply_node_desc: "An intersection or point along a air or naval [concept_shipping_lane] representing a part of the sky or ocean. $concept_shipping_lanes$ always take the route between two coastal or airship [Concept('concept_state','$concept_states$')] that pass through the fewest number of $concept_supply_nodes$. Each additional $concept_supply_node$ beyond the first adds #v [GetDefine('NEconomy','SHIPPING_LANE_CONVOY_COST_SCALING')|=-%0]#! to the [concept_convoy_cost]."
+
+  SEA_NODE_TOOLTIP_SKY: "Sky Node"
+  SEA_NODE_TOOLTIP_FIND: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are #v $NUM_CONVOYS$#! [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node[ConcatIfNeitherEmpty('\n','$SEA_NODE_DAMAGE$')]\n\n$SUPPLY_NETWORK$[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+  SKY_NODE_TOOLTIP_FIND: "#header [concept_sky_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are #v $NUM_CONVOYS$#! [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node[ConcatIfNeitherEmpty('\n','$SEA_NODE_DAMAGE$')]\n\n$SUPPLY_NETWORK$[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+  SEA_NODE_TOOLTIP_SEA_PART_1: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\n[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+  SEA_NODE_TOOLTIP: "[SelectLocalization(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), 'SEA_NODE_TOOLTIP_SKY', 'SEA_NODE_TOOLTIP_SEA_PART_1')]"
+
+  #COMMAND_CONFIRMATION_DEPLOY_MILITARY_FORMATION_TO_SEA_NODE: "Deploy to Sea Node" Enable if trying to hide sea nodes
+  MDF_MOD_DLC_BUTTON_TOOLTIP: "#T [Dlc.GetName]#!\n[Dlc.GetDesc]\n\n#low;emphasis @information! This DLC has been added by a #blue;bold mod#!#!"
+
+  POWER_BLOC_COHESION_HERITAGE_INCOMPATIBILITY: "Members without shared Heritage"
+  POWER_BLOC_COHESION_HERITAGE_COMPATIBILITY: "Members with shared Heritage"
+  POWER_BLOC_COHESION_LEADER_POPULATION_FRACTION: "Leader population fraction"
+
+  REPUTATION_EFFECTS: "Effects:"
+  RETAINER_ASSIGNED_REGION: "Assigned to [Character.MakeScope.Var('assigned_region').GetStrategicRegion.GetName]"
+  RETAINER_UNASSIGN_TITLE: "Unassign Retainer"
+  RETAINER_UNASSIGN_TEXT: "Do you wish to unassign the [concept_retainer] from this [concept_strategic_region]?"
+  SITUATIONS: "Quests"
+  RETAINERS: "Retainers"
+  RETAINER_SLOTS: "[AccessPlayer.MakeScope.ScriptValue('renown_reputation')|v0] [Concept('concept_retainer', '$concept_retainers$')]"
+  EXPEDITIONS: "Grand Expeditions"
+  concept_quests: "Quests"
+  concept_retainers: "Retainers"
+  NO_SITUATIONS: "Currently no possible [Concept('concept_quest', '$concept_quests$')]"
+  NO_SITUATIONS_OUTLINER: "None Active"
+  ON_RETAINER: "[Concept('concept_retainer', '$concept_retainers$')] on Standby"
+  RECRUIT_CHARACTER_RETAINER: "Recruit additional [concept_retainer]"
+  RECRUIT_CHARACTER_RETAINER_HEADER: "Recruit Retainer"
+  ASSIGN_CHARACTER_RETAINER_HEADER: "Assign Retainer"
+  FIRST_NAME: "#v [Character.GetFirstName]#"
+  RETAINER_COST: "#v Hiring Cost#!"
+  REPUTATION: "Reputation"
+  ASSIGN_CHARACTER_BUTTON: "Assign"
+  sol_short: "Living Standards"
+  ERROR_DEER_TOOLTIP: "#header You fucked up and made some errors. Fix them, or they will #red haunt you in your nightmares.#!#!\n#instruction Left-Click#! to open Error Log\n#instruction Right-Click#! to make it go away (until you upset it again)"
+  SHOW_RETAINER_MM: "Retainer Map Mode"
+  STATE_GENERATED_POLLUTION_TOOLTIP: "#header [concept_generated_pollution]#!\n[State.GetName] is currently generating #b [State.GetPollutionGeneration|R0]#! pollution\n$TOOLTIP_DELIMITER$\n[State.GetPollutionGenerationDesc][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('state_pollution_generation_add_mult') )]"
+
+  undermountain: "Undermountain"
+  undermountain_urban: "Undercity"
+  dreamweaver_jungle: "Dreamweaver Jungle"
+  diseased_forest: "Diseased Forest"
+
+  TOTAL_WIZARD_TOWER: "[GetBuildingType('building_wizard_tower').GetName] size:"
+
+  retire_retainer: "Retire"
+  is_retainer_tt: "Has the #bold [concept_retainer]#! role"
+
+  country_racial_trait_one_line: "[concept_traditions]"
+  country_racial_trait_value: "[Country.GetCustom('country_racial_tech')]"
+  country_racial_trait: "[concept_traditions]:\n[Country.GetCustom('country_racial_tech')]"
+  HUMAN_TECH: "[GetTechnology('human_tech').GetName]"
+  ELF_TECH: "[GetTechnology('elf_tech').GetName]"
+  HALFLING_TECH: "[GetTechnology('halfling_tech').GetName]"
+  ORC_TECH: "[GetTechnology('orc_tech').GetName]"
+  MIDNIGHT_TECH: "[GetTechnology('midnight_tech').GetName]"
+  GOBLIN_TECH: "[GetTechnology('goblin_tech').GetName]"
+  GIANT_TECH: "[GetTechnology('giant_tech').GetName]"
+  AWAKENED_TECH: "[GetTechnology('awakened_tech').GetName]"
+  HALF_ELF_TECH: "[GetTechnology('half_elf_tech').GetName]"
+  HIADUD_TECH: "[GetTechnology('hiadud_tech').GetName]"
+  GNOME_TECH: "[GetTechnology('gnome_tech').GetName]"
+  DRAGON_TECH: "[GetTechnology('dragon_tech').GetName]"
+  DWARF_TECH: "[GetTechnology('dwarf_tech').GetName]"
+  BIRD_TECH: "[GetTechnology('bird_tech').GetName]"
+  MOUSE_TECH: "[GetTechnology('mouse_tech').GetName]"
+  NAGA_TECH: "[GetTechnology('naga_tech').GetName]"
+  MECHANICAL_TECH: "[GetTechnology('mechanical_tech').GetName]"
+  PLANETOUCHED_TECH: "[GetTechnology('planetouched_tech').GetName]"
+  OGRE_TECH: "[GetTechnology('ogre_tech').GetName]"
+  MONSTER_TECH: "[GetTechnology('monster_tech').GetName]"
+  LIZARD_TECH: "[GetTechnology('lizard_tech').GetName]"
+  NO_TECH: "None"
+
+  FACTIONS: "#header Factions#!"
+  DROW_EMPIRE: "South Seas"
+  DROW_EMPIRE_TOOLTIP: "#header [GetGlobalVariable('south_sea_empire_tag_var').GetCountry.GetNameNoFormatting]#!"
+  DROW_EMPIRE_UNLOCK_TOOLTIP: "#header [GetGlobalVariable('south_sea_empire_tag_var').GetCountry.GetNameNoFormatting]#!\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+
+  INTERNATIONAL_ORGANIZATIONS: "Factions"
+  TRIBUTARIES: "Tributaries"
+  GAIN_FAVOR: "Gain Favor"
+  SPEND_FAVOR: "Spend Favor"
+  SOUTH_SEA_GIFT: "Send Gift"
+  SOUTH_SEA_GIFT_FAVOR: "@obligation! #bold #green 100#!#!"
+  SOUTH_SEA_KOWTOW: "Offer Obeisance"
+  SOUTH_SEA_KOWTOW_FAVOR: "@obligation! #bold #green 200#!#!"
+  SOUTH_SEA_ADMIRAL: "Recruit Admiral"
+  SOUTH_SEA_ADMIRAL_FAVOR: "@obligation! #bold #red -500#!#!"
+  SOUTH_SEA_TECH: "Naval Training"
+  SOUTH_SEA_TECH_FAVOR: "@obligation! #bold #red -1000#!#!"
+
+  ROE_ZOOM_TO_CAPITAL_STATE: "Zoom to [Country.GetCapital.GetCityHubName][AddLocalizationIf(Country.GetCapital.IsZoomingToCapital, 'ZOOM_TO_DISABLED')]"
+  ROE_WINDOW_DLC_TOOLTIP: "This window is part of the #v [Dlc.GetName]#! DLC"
+  domains_window_action: "$domains_window_title$ Window"
+  domains_window_title: "Domains"
+  domains_window_sub_title: "domains_window_sub_title"
+  domains_window_description: "domains_window_description"
+  domains_window_flavor: "domains_window_flavor"
+  domains_window_material_plane: "domains_window_material_plane"
+
+  trade_route_import_lens_option_potions_tooltip:0 "Establish a $potions$ import trade route"
+  trade_route_import_lens_option_trinkets_tooltip:0 "Establish a $trinkets$ import trade route"
+  trade_route_import_lens_option_ectoplasm_tooltip:0 "Establish an $ectoplasm$ import trade route"
+  trade_route_import_lens_option_airships_tooltip:0 "Establish an $airships$ import trade route"
+  trade_route_import_lens_option_blubber_tooltip:0 "Establish a $blubber$ import trade route"
+  trade_route_import_lens_option_relics_tooltip:0 "Establish a $relics$ import trade route"
+  trade_route_import_lens_option_wishstone_tooltip:0 "Establish a $wishstone$ import trade route"
+  trade_route_import_lens_option_ice_tooltip:0 "Establish an $ice$ import trade route"
+  trade_route_import_lens_option_thaumacores_tooltip:0 "Establish a $thaumacores$ import trade route"
+  trade_route_import_lens_option_luxury_potions_tooltip:0 "Establish a $luxury_potions$ import trade route"
+  trade_route_import_lens_option_gizmos_tooltip:0 "Establish an $gizmos$ import trade route"
+  trade_route_import_lens_option_monster_essence_tooltip:0 "Establish a $monster_essence$ import trade route"
+  trade_route_import_lens_option_cloudsilver_tooltip:0 "Establish a $cloudsilver$ import trade route"

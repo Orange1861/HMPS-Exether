@@ -1,0 +1,1569 @@
+﻿pm_no_airshipping = {
+	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
+}
+
+pm_yes_airshipping = {
+	texture = "gfx/interface/icons/production_method_icons/steam_powered_threshers.dds"
+
+	unlocking_technologies = {
+		airship
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			goods_input_airships_add = 2
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+
+pm_farms_no_enhancement = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_farms_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	replacement_if_valid = pm_farms_druid_basic_earth_shaping
+	unlocking_technologies = {
+		druidry
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 2				# x50 = 100
+			goods_output_grain_add = 8  				# x20 = 160
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 100
+			building_employment_farmers_add = -350
+		}
+	}
+}
+
+pm_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	replacement_if_valid = pm_farms_druid_mass_plant_growth
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 8 # x50 400
+			goods_output_grain_add = 25 # x20 500
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 150
+			building_employment_farmers_add = -450
+		}
+	}
+}
+
+pm_farms_druid_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_technologies = {
+		druidry
+	}
+
+	
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	unlocking_laws = {
+		law_druidic_circles
+	}
+	
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 2				# x50 = 100
+			goods_output_grain_add = 8  				# x20 = 160
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 450
+			building_employment_farmers_add = -1000
+		}
+	}
+}
+
+pm_farms_druid_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_laws = {
+		law_druidic_circles
+	}
+	disallowing_laws = {
+		law_magic_banned
+	}
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	unlocking_production_methods = {
+		pm_fertilization
+		pm_chemical_fertilizer
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 8 # x50 400
+			goods_output_grain_add = 25 # x20 500
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 950
+			building_employment_farmers_add = -2000
+		}
+	}
+}
+
+pm_farms_druid_mass_plant_growth_2 = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_laws = {
+		law_druidic_circles
+	}
+	disallowing_laws = {
+		law_magic_banned
+	}
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	unlocking_production_methods = {
+		pm_chemical_fertilizer
+	}
+
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 8 # x50 400
+			goods_output_grain_add = 25 # x20 500
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 1450
+			building_employment_farmers_add = -2500
+		}
+	}
+}
+
+pm_rice_farms_no_enhancement = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_rice_farms_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	replacement_if_valid = pm_rice_druid_farms_basic_earth_shaping
+	unlocking_laws = {
+		#druid shit idk
+	}
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 5 # x50 = 250
+			goods_output_grain_add = 16 # x20 = 320
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 200
+			building_employment_laborers_add = -500
+			building_employment_farmers_add = -700
+		}
+	}
+}
+
+pm_rice_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	replacement_if_valid = pm_rice_druid_farms_mass_plant_growth
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 16 # 50x 800
+			goods_output_grain_add = 50 # 20x 1000
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 400
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1400
+		}
+	}
+}
+
+pm_rice_druid_farms_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_laws = {
+		law_druidic_circles
+	}
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 4 # x50 = 200
+			goods_output_grain_add = 16 # x20 = 320
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 950
+			building_employment_laborers_add = -500
+			building_employment_farmers_add = -2000
+		}
+	}
+}
+
+pm_rice_druid_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_laws = {
+		law_druidic_circles
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	unlocking_production_methods = {
+		pm_fertilization_building_rice_farm
+		pm_chemical_fertilizer_building_rice_farm
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 18 # 50x 900
+			goods_output_grain_add = 50 # 20x 1000
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 1950
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -4000
+		}
+	}
+}
+
+pm_rice_druid_farms_mass_plant_growth_2 = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_laws = {
+		law_druidic_circles
+	}
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	unlocking_production_methods = {
+		pm_chemical_fertilizer_building_rice_farm
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 18 # 50x 900
+			goods_output_grain_add = 50 # 20x 1000
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 2950
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -5000
+		}
+	}
+}
+
+pm_livestock_no_enhancement = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_livestock_fertility_rites = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 3 #5 50 150
+			goods_output_fabric_add = 5 #20 100
+			goods_output_meat_add = 5 #30 150 == 100
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 100
+			building_employment_farmers_add = -350
+		}
+	}
+}
+
+pm_livestock_magical_selection = {  #magical selection is a METAL fucking name omg
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 6 #50 300
+			goods_output_fabric_add = 10 #20 200
+			goods_output_meat_add = 10 #30 300 == 200
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 200
+			building_employment_farmers_add = -700
+		}
+	}
+}
+
+pm_livestock_gardenback_no_enhancement = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_livestock_gardenback_fertility_rites = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 3 #5 50 150
+			goods_output_meat_add = 3 #30 90
+			goods_output_fruit_add = 5 #30 150 == 90
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 100
+			building_employment_farmers_add = -350
+		}
+	}
+}
+
+pm_livestock_gardenback_magical_selection = {  #magical selection is a METAL fucking name omg
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_potions_add = 6 #50 300
+			goods_output_fruit_add = 6 #20 180
+			goods_output_meat_add = 10 #30 300 == 180
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 200
+			building_employment_farmers_add = -700
+		}
+	}
+}
+
+# Godsblood Ranching
+pm_livestock_no_godsblood = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_livestock_godsblood = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10
+		}
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 5 #40 200 == 200
+			goods_output_fabric_add = 10 #200
+			goods_output_fertilizer_add = 5 #150
+			goods_output_meat_add = 5 #30 #150 = 500 
+		                                  # Profit:300
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 100
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.25
+			building_machinists_mortality_mult = 0.05
+			building_farmers_mortality_mult = 0.05
+		}
+
+	}
+}
+
+pm_livestock_godsblood_increased = { 
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		mutagens
+	}
+	
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 10 #40 400 == 400
+			goods_output_fabric_add = 20 #400
+			goods_output_fertilizer_add = 10 #300
+			goods_output_meat_add = 10 #30 #300 = 1000 
+		                                  # Profit:600
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 200
+		}
+	}
+}
+
+pm_livestock_gardenback_no_godsblood = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_livestock_gardenback_godsblood = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10
+		}
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 5 #40 200 == 200
+			goods_output_fruit_add = 5 #200
+			goods_output_fertilizer_add = 5 #150
+			goods_output_fruit_add = 5 #30 #150 = 500 
+		                                  # Profit:300
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 100
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.25
+			building_machinists_mortality_mult = 0.05
+			building_farmers_mortality_mult = 0.05
+		}
+
+	}
+}
+
+pm_livestock_gardenback_godsblood_increased = { 
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		mutagens
+	}
+	
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 10 #40 400 == 400
+			goods_output_fruit_add = 10 #300
+			goods_output_fertilizer_add = 10 #300
+			goods_output_meat_add = 10 #30 #300 = 900
+		                                  # Profit:500
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 200
+		}
+	}
+}
+
+pm_regular_snails = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_godsnilla = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 10 #40 400
+			goods_output_iron_add = 15 #40 600
+			goods_output_fertilizer_add = 10 #30 300
+			goods_output_meat_add = 10 #30 #30 300
+		                                  # Total:1200
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 100
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.25
+			building_machinists_mortality_mult = 0.15
+			building_farmers_mortality_mult = 0.1
+		}
+
+	}
+}
+
+pm_godsnail = { 
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		mutagens
+	}
+	
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 25 #40 1000
+			goods_output_iron_add = 25 #40 1000
+			goods_output_fertilizer_add = 10 #30 300
+			goods_output_meat_add = 30 #30 #30 900
+		                                  # Total:2200
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 200
+		}
+	}
+}
+
+pm_nogodshrimp = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_bloodyshrimp = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 10 #40 400
+			goods_output_monster_essence_add = 15 #40 600
+			goods_output_fish_add = 20 #20 400
+		                                  # Total:800
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 100
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.30
+			building_machinists_mortality_mult = 0.20
+		}
+
+	}
+}
+
+pm_shrimpofthegods = { 
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		mutagens
+	}
+	
+	disallowing_laws = {
+		law_magic_banned
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_oil_add = 25 #40 1000
+			goods_output_monster_essence_add = 30 #40 1200
+			goods_output_fish_add = 40 #20 800
+		                                  # Total:2000
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 200
+		}
+	}
+}
+
+pm_no_regional = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+
+}
+
+pm_tree_of_life_orchards_no_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	state_modifiers = {
+		unscaled = {
+			state_mortality_mult = -0.1
+			state_birth_rate_mult = 0.15
+		}
+	}
+}
+
+pm_tree_of_life_orchards_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_luxury_potions_add = 8
+		}
+	}
+
+	state_modifiers = {
+		unscaled = {
+			building_group_bg_subsistence_agriculture_output_mult = -0.04
+		}
+	}
+}
+
+pm_honeybee_justices = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_potions_add = 8.5
+			goods_output_sugar_add = 5
+		}
+	}
+}
+
+pm_songberry_groves = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_fruit_add = 10
+			goods_output_sugar_add = 3
+			goods_output_services_add = 2 
+		}
+	}
+}
+
+pm_sweetsmoke = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_fruit_add = 10
+			goods_output_sugar_add = 3
+			goods_output_tobacco_add = 2
+		}
+	}
+}
+
+pm_i_dont_think_that_was_pipeweed_bro = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_tobacco_add = 7
+			goods_output_fabric_add = 8
+		}
+	}
+}
+
+pm_traditional_cooladjective_herb_gardens = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_tea_add = 9
+			goods_output_potions_add = 3
+		}
+	}
+}
+
+pm_leeches = {
+	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fish_add = 15 		#x20 = 500
+		}
+		level_scaled = {
+			building_employment_laborers_add = 1500
+			building_employment_farmers_add = 500
+		}
+	} 
+}
+
+pm_bigger_leeches = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		rifling
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_potions_add = 3		#x50 = 150
+			goods_input_small_arms_add = 5 #60  300 
+
+			goods_output_fish_add = 60		#x20 = 1200 == 750
+		}
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	} 
+}
+
+pm_apocalyptic_leeches = {
+	texture ="gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+
+	unlocking_technologies = {
+		mutagens
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_potions_add = 5		#x50 = 250
+			goods_input_small_arms_add = 10 #60  600
+
+			goods_output_fish_add = 100		#x20 = 2000
+		}
+		level_scaled = {
+			building_employment_laborers_add = 2500
+			building_employment_farmers_add = 2500
+		}
+	} 
+}
+
+pm_stuffed_leeches = { 
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wishstone_add = 4			#x30 = 120
+
+			goods_output_monster_essence_add = 10	#x40 = 400 == 280
+		}
+	}
+}
+
+pm_magic_leeches = {
+	texture = "gfx/interface/icons/production_method_icons/nitroglycerin.dds"
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 10					#x40 = 400
+
+			goods_output_monster_essence_add = 20	#x40 = 800 == 400
+		}
+	}
+}
+
+pm_no_arms = {
+	texture = "gfx/interface/icons/production_method_icons/no_tool_use.dds"
+}
+
+pm_small_arms = {
+	texture = "gfx/interface/icons/production_method_icons/rifles.dds"
+
+	unlocking_technologies = {
+		rifling
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ammunition_add = 3 #50 150
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1250
+		}
+	}
+}
+
+pm_big_arms = {
+	texture = "gfx/interface/icons/production_method_icons/repeaters.dds"
+
+	unlocking_technologies = {
+		handcranked_machine_gun
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ammunition_add = 5 #50             250
+			goods_input_artillery_add = 2			#x70 = 140 == 390
+		}
+		level_scaled = {
+			building_employment_laborers_add = -2500
+		}
+	}
+}
+
+pm_traditional_beekeeping = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+
+			goods_output_sugar_add = 30		# x30 = 900
+		}
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+pm_dedicated_apiaries = {
+	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
+
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_clothes_add = 5 	# x30 = 150
+			goods_output_sugar_add = 40		# x30 = 1200 == 900
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_farmers_add = 1500
+		}
+	}
+}
+
+pm_large_scale_bees = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+
+	unlocking_technologies = {
+		reinforced_concrete
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_clothes_add = 10            #30 300
+			goods_input_potions_add = 5				# x50 = 250
+
+			goods_output_sugar_add = 60		# x30 = 1800 == 1250
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3250
+			building_employment_farmers_add = 1500
+			building_employment_wizards_add = 250
+		}
+	}
+}
+
+pm_pet_the_bees = {
+	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+}
+
+pm_centrifuges = {
+	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
+
+	unlocking_technologies = {
+		lathe
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 5 #40 200
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1500
+		}
+	}
+}
+
+pm_automagic_assistants = {
+	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
+
+	unlocking_technologies = {
+		advanced_contraptions
+	}
+	unlocking_production_methods = {
+		pm_large_scale_bees
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gizmos_add = 5 #60 300
+		}
+		level_scaled = {
+			building_employment_laborers_add = -2500
+			building_employment_wizards_add = -250
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_no_mead = {
+	texture = "gfx/interface/icons/production_method_icons/no_distillery.dds"
+}
+
+pm_yes_mead = {
+	texture = "gfx/interface/icons/production_method_icons/wine_bar.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_wine_add = 10			# x50 = 500
+			goods_output_sugar_add = -15        #30 450 == 50
+		}
+	}
+}
+
+pm_magic_mead = {
+	texture = "gfx/interface/icons/production_method_icons/cocktail_bar.dds"
+
+	unlocking_technologies = {
+		alchemical_transmutation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_sugar_add = -15        #30   450
+			goods_input_monster_essence_add = 10	# x40 400
+			goods_output_wine_add = 25			# x50 = 1250 == 400
+		}
+	}
+}
+pm_snimple_ranch = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_ranch.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			
+			goods_output_iron_add = 5 #40 200
+		}
+	}
+}
+
+pm_snail_farms = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_farms.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fish_add = 5 #20 100
+			goods_output_iron_add = 15 #40 600
+			goods_output_fertilizer_add = 2 #30 60
+		}
+	}
+}
+
+pm_intensive_snailing_ranch = {
+	texture = "gfx/interface/icons/production_method_icons/large_sheep_ranch.dds"
+
+	unlocking_technologies = {
+		genome_splicing
+	}
+
+	unlocking_production_methods = {
+		pm_salting_tools
+		pm_saltinghouse
+		pm_mechanized_salting
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fish_add = 10 #20 200
+			goods_output_iron_add = 25 #40 1000
+			goods_output_fertilizer_add = 5 #30 150
+		}
+	}
+}
+pm_open_air_snailyards = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"		
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_meat_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}		
+
+pm_salting_tools = {
+	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"			
+	building_modifiers = {				
+		workforce_scaled = {
+			goods_input_tools_add = 5 #40 200
+			goods_output_meat_add = 25 #30 600
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_farmers_add = 1250
+			building_employment_machinists_add = 500
+		}
+	}							
+}
+
+pm_saltinghouse = {
+	texture = "gfx/interface/icons/production_method_icons/slaughterhouses.dds"	
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	unlocking_technologies = {
+		mechanical_tools
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 10
+			goods_output_meat_add = 35
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_farmers_add = 1500
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_mechanized_salting = {
+	texture = "gfx/interface/icons/production_method_icons/mechanized_slaughtering.dds"	
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+
+	unlocking_technologies = {
+		mechanized_farming
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 10 #400
+			goods_input_coal_add = 5 #150
+			goods_output_meat_add = 50
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2250
+			building_employment_farmers_add = 1750
+			building_employment_machinists_add = 1000
+		}
+	}
+}
+
+pm_simple_shrimp_feeding = {
+	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output
+			goods_output_fish_add = 20
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_mass_feeding = {
+	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_tools_add = 3
+			
+			# output
+			goods_output_fish_add = 40
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_mechanized_feeding = {
+	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_technologies = {
+		mechanized_farming
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_tools_add = 10 #40 400
+			
+			
+			
+			# output
+			goods_output_fish_add = 80 #20 1200
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_free_range_foraging = {
+	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"		
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fruit_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}
+}		
+
+pm_bushel_shearing_blades = {
+	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"			
+	building_modifiers = {				
+		workforce_scaled = {
+			goods_input_tools_add = 5
+			goods_output_fruit_add = 20
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 1000
+		}
+	}							
+}
+
+pm_brood_garden_pits = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"	
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	unlocking_technologies = {
+		mechanical_tools
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 10
+			goods_output_fruit_add = 30
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3750
+			building_employment_farmers_add = 1000
+			building_employment_machinists_add = 250
+		}
+	}
+}
+
+pm_industrial_beetle_warrens = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"	
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+
+	unlocking_technologies = {
+		genome_splicing
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 10
+			goods_input_coal_add = 5
+			goods_output_fruit_add = 45
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_farmers_add = 1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_natures_course = {
+	texture = "gfx/interface/icons/production_method_icons/nitrogen_fixation.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_meat_add = 4
+		}
+	}
+}
+
+pm_frass_farming = {
+	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}	
+	unlocking_production_methods = {
+		pm_bushel_shearing_blades
+		pm_brood_garden_pits
+		pm_industrial_beetle_warrens
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_grain_add = 10
+			goods_output_fertilizer_add = 2.5
+			goods_output_meat_add = 10
+		}
+	}
+}
+
+pm_mass_mulching = {
+	texture = "gfx/interface/icons/production_method_icons/mechanized_slaughtering.dds"
+
+	unlocking_technologies = {
+		genome_splicing
+	}
+
+	unlocking_production_methods = {
+		pm_brood_garden_pits
+		pm_industrial_beetle_warrens
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_grain_add = 15
+			goods_output_meat_add = 15
+			goods_output_fertilizer_add = 5
+		}
+	}
+}

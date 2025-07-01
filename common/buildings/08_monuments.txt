@@ -1,0 +1,495 @@
+﻿building_power_bloc_statue = {
+
+	building_group = bg_monuments
+
+	city_type = city
+
+	levels_per_mesh = 1
+
+	expandable = no
+	
+	statue = yes
+
+	production_method_groups = {
+		pmg_base_building_power_bloc_statue
+	}
+
+	icon = "gfx/interface/icons/building_icons/building_powerblock_statue.dds"
+
+	required_construction = construction_cost_monument
+
+	can_build_government = {
+		always = yes
+	}
+
+	can_build_private = {
+		always = no
+	}	
+	
+	potential = {
+		owner ?= {
+			is_in_power_bloc = yes
+		}
+		has_dlc_feature = power_bloc_features
+	}
+
+	ai_value = {
+		value = 0
+		
+		if = {
+			limit = { 
+				is_incorporated = yes	
+				state_population >= 500000
+			}
+			
+			add = {
+				value = state_population
+				divide = 2500
+				max = 5000
+			}
+		}
+
+		if = {
+			limit = { is_capital = yes }
+			add = 2500
+		}		
+					
+		owner = {
+			if = {
+				limit = { is_power_bloc_leader = yes }
+				multiply = 2.0
+			}						
+			
+			if = {
+				limit = { country_rank < rank_value:major_power }
+				multiply = 0.0
+			}
+			else_if = {
+				limit = { country_rank < rank_value:great_power }
+				multiply = 0.5
+			}			
+		}
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_dwarf_tunnels = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/dwarf_halls.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = no
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { }
+	
+	production_method_groups = {
+		pmg_base_building_dwarf_tunnels
+	}
+	
+	possible = {
+		OR = {
+			state_region = s:STATE_LIGHTSCOURGE
+			state_region = s:STATE_SKYPIERCER_PEAK
+			state_region = s:STATE_DER_IBBENN
+			state_region = s:STATE_ELDBERG
+			state_region = s:STATE_VYNDERVOHT
+			state_region = s:STATE_KORO
+			state_region = s:STATE_KEENAVOK
+			state_region = s:STATE_ALQADIM
+			state_region = s:STATE_CHITTERKIQ
+			state_region = s:STATE_TXORI
+		}
+	}
+	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# The Light of Solitude
+building_lighthouse = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/lighthouse.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	
+	production_method_groups = {
+		pmg_base_building_lighthouse
+	}
+	
+	potential = {
+		state_region = s:STATE_NGURULAN
+		s:STATE_NGURULAN = {
+			any_scope_state = {
+				has_modifier = modifier_lighthouse_site
+			}
+		}
+	}
+
+	possible = {
+		s:STATE_NGURULAN = {
+			any_scope_state = {
+				has_modifier = modifier_lighthouse_site
+			}
+		}
+	}
+
+	required_construction = construction_cost_monument
+	
+	ai_value = 10000
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Alvadrum Academy
+building_forbidden_city = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/forbidden_city.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "forbidden_city_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_forbidden_city_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_building_alvadrum_academy
+	}
+	
+	potential = {
+		state_region = s:STATE_KHORTA
+	}
+	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Hourglass Mausoleum
+building_petra = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/angkor_wat.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "petra_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "wonder_petra_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 3
+	}
+
+	potential = {
+		state_region = s:STATE_BROKENPILLAR
+	}
+	
+	production_method_groups = {
+		pmg_base_building_hourglass_mausoleum
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Khoymegass Casino / True Fate Casino
+building_taj_mahal = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/taj_mahal.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "taj_mahal_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_taj_mahal_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 3
+	}
+	
+	production_method_groups = {
+		pmg_base_building_taj_mahal
+	}
+
+	potential = {
+		state_region = s:STATE_NAWI_OASIS
+	}
+	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Castle Dreadmoor
+building_castle_dreadmoor = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/taj_mahal.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "halloween_castledracula_locator"
+	
+	entity_not_constructed = {}
+	entity_under_construction = {}
+	entity_constructed = {"halloween_castledracula_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_building_castle_dreadmoor
+	}
+
+	potential = {
+		state_region = s:STATE_RAVENCLIFF
+	}
+	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Temple of Tulips
+building_saint_basils_cathedral = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/saint_basils_cathedral.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "saint_basils_cathedral_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_saint_basils_cathedral_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_building_saint_basils_cathedral
+	}
+	
+	potential = {
+		state_region = s:STATE_AUBERN_FLOW
+	}
+	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Ealdred the Valorous
+building_cristo_redentor = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/building_cristo_redentor.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "cristo_redentor_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_christ_the_redeemer_01_entity" }
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 3
+	}
+	
+	production_method_groups = {
+		pmg_base_building_cristo_redentor
+	}
+
+	required_construction = construction_cost_monument
+	
+	potential = {
+		state_region = s:STATE_CROWNPEAK
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Highroost
+building_highroost = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "machu_picchu_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "wonder_machu_picchu_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 6
+	}
+
+	production_method_groups = {
+		pmg_base_building_highroost
+	}
+
+	required_construction = construction_cost_monument
+
+	potential = {
+		state_region = s:STATE_LURRA
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Pilokti Kɑbwɑt / Bloody Stone
+building_chichen_itza = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/angkor_wat.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "chichen_itza_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "wonder_chichen_itza_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_building_asuroth_shrine
+	}
+
+		potential = {
+		state_region = s:STATE_LUBVUDOLPA
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Old Illvasaar
+building_temple_of_poseidon = {
+	icon = "gfx/interface/icons/building_icons/vatican_city.dds"
+	building_group = bg_monuments
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "templeofposeidon_locator"
+	
+	entity_not_constructed = {"monument_templeofposeidon_entity"}
+	entity_under_construction = {"monument_templeofposeidon_entity"}
+	entity_constructed = {"monument_templeofposeidon_entity"}
+
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 3
+	}
+	
+	production_method_groups = {
+		pmg_base_building_old_illvasaar
+	}
+
+	potential = {
+		state_region = s:STATE_CARTHAROS
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Cathedral of Dawn
+building_vatican_city = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/vatican_city.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "vatican_city_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_vatican_city_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 6
+	
+	}
+	
+	production_method_groups = {
+		pmg_base_building_vatican_city
+	}
+	
+	potential = {
+		state_region = s:STATE_TEMPLE_HILL
+	}
+	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+# Great Grandfatherclock
+building_big_ben = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/big_ben.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	locator = "big_ben_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_2x2_entity" }
+	entity_constructed = { "wonder_big_ben_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 2
+	}
+	
+	production_method_groups = {
+		pmg_base_building_big_ben
+	}
+	
+	required_construction = construction_cost_monument
+	
+	potential = {
+		state_region = s:STATE_TIKKERHAVEN
+	}
+	
+	ai_value = 10000
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

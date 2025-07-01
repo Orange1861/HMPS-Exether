@@ -1,0 +1,6 @@
+﻿l_english:
+  law_canton_system: "Garkal Accord"
+  law_canton_system_desc: "A variant of $law_isolationism$ where trade is only permitted in a single coastal state."
+  canton_system_trade_center_trigger_tt: "Under the [GetLawType('law_canton_system').GetName] [concept_law], Trade Centers can only be constructed up to level #v 50#! in #v $STATE_GARBOL$#!"
+  country_disallow_trade_outside_canton_bool: "Disable Trade Centers outside $STATE_GARBOL$"
+  country_disallow_trade_outside_canton_bool_desc: "Disallow construction of Trade Centers in $concept_states$ other than #v $STATE_GARBOL$#!"

@@ -1,0 +1,32 @@
+﻿COUNTRIES = {
+	c:ORL = {
+		effect_starting_technology_tier_4_tech = yes
+
+		add_journal_entry = {
+			type = je_winds_of_change
+		}
+
+		add_journal_entry = {
+			type = je_emerald_sunset
+		}
+
+		activate_law = law_type:law_chiefdom
+		activate_law = law_type:law_elder_council
+		activate_law = law_type:law_debt_slavery
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_peasant_levies
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_druidic_circles
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_freedom_of_conscience
+
+		set_ruling_interest_groups = {
+        	ig_devout
+			ig_rural_folk
+			ig_mages
+        }
+	}
+}

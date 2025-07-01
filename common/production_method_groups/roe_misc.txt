@@ -1,0 +1,288 @@
+﻿pmg_rusttails = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_special_fish
+		pm_rusttail_fishing
+		pm_intensified_rusttail_fishing
+		pm_magebred_rusttail_fish_farming
+	}
+}
+
+pmg_glowfish = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_special_fish
+		pm_early_glowfish_harvesting
+		pm_organized_glowfish_harvesting
+	}
+}
+
+pmg_goldfish = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_special_fish
+		pm_early_goldfish_harvesting
+		pm_organized_goldfish_harvesting
+		pm_dedicated_goldfish_harvesting
+	}
+}
+
+pmg_squidlets = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_special_fish
+		pm_early_squidlets_harvesting
+		pm_organized_squidlets_harvesting
+		pm_dedicated_squidlets_harvesting
+	}
+}
+
+pmg_base_building_squid_squad = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_squidding
+		pm_squid_trawlers
+		pm_steam_squid_trawlers
+	}
+}
+
+pmg_monster_hunters_squids = { #HUNTING BIGGER SQUIDS
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_monster_hunters
+		pm_maritime_adventuring_parties
+		pm_squid_squads
+	}
+}
+
+pmg_potion_sap = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_potion_sap
+		pm_potion_sap
+		pm_increased_potion_sap
+	}
+}
+
+pmg_glass_bark = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_glass_bark
+		pm_glass_bark
+		pm_increased_glass_bark
+	}
+}
+
+pmg_base_building_logging_camp_stonewood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_forestry_stonewood
+		pm_saw_mills_stonewood
+		pm_electric_saw_mills_stonewood
+	}
+}
+
+pmg_cactus_fruit = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_cactus_fruit
+		pm_cactus_fruit
+		pm_increased_cactus_fruit
+	}
+}
+
+pmg_base_building_logging_camp_crystalwood= {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_forestry_crystalwood
+		pm_saw_mills_crystalwood
+		pm_electric_saw_mills_crystalwood
+	}
+}
+
+pmg_base_building_haunted_grounds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_ghost_hunters
+		pm_exorcists
+		pm_paranormal_containment_fields
+	}
+}
+
+pmg_equipment_haunted_grounds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_equipment_haunted_grounds
+		pm_revealing_field_generators
+		pm_portable_ethereal_vacuums
+	}
+}
+
+pmg_transportation_haunted_grounds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_building_logging_camp
+		pm_log_carts
+	}
+}
+
+
+pmg_base_building_hunting_lodge = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_hunting
+		pm_firearms_hunting
+		pm_heavy_weapons_hunting
+	}
+}
+
+pmg_hunting_meat = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_hunting_meat
+		pm_hunting_meat
+		pm_increased_hunting_meat
+	}
+}
+
+pmg_hunting_equipment = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_equipment_hunting_lodges
+		pm_beast_divination
+		pm_airship_hunting_lodge
+	}
+}
+
+pmg_transportation_hunting_lodges = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_building_hunting_lodge
+	}
+}
+
+pmg_hunting_dye = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_hunting_dyes
+		pm_hunting_dyes
+		pm_increased_hunting_dyes
+	}
+}
+
+pmg_hunting_blubber = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_hunting_blubber
+		pm_hunting_blubber
+		pm_increased_hunting_blubber
+	}
+}
+
+pmg_base_building_khus_hunting_lodge = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_khus_hunting
+		pm_firearms_khus_hunting
+		pm_heavy_weapons_khus_hunting
+	}
+}
+
+pmg_hunting_khus_chimesilt = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_hunting_khus_chimesilt
+		pm_hunting_khus_chimesilt
+		pm_increased_hunting_khus_chimesilt
+	}
+}
+
+pmg_base_building_hippo_ranches = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_hippo_ranching
+		pm_butchering_tools_hippos
+		pm_slaughterhouses_hippos
+	}
+}
+
+pmg_big_hunts = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_basic_expedition
+		pm_dedicated_expedition
+		pm_massive_expedition 
+	}
+}
+
+pmg_carapace_usage = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_using
+		pm_carapace_basic
+		pm_carapace_increase
+		pm_carapace_focused
+	}
+}
+
+pmg_big_game_hunting_equipment = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_nobfg
+		pm_yesbfg
+		pm_bfg2
+	}
+}
+
+pmg_grubhub = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_grubbing1
+		pm_grubbing2
+		pm_grubbing3
+	}
+}
+
+pmg_monster_wine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wine
+		pm_some_wine
+		pm_extra_wine
+	}
+}
+
+pmg_base_building_underground_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_underfishing
+		pm_underfish_boating
+		pm_steamboat_underfishing
+	}
+}
+
+pmg_base_building_ice_cap = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_ice_cap
+		mechanized_extraction_building_ice_cap
+	}
+}
+
+pmg_base_building_ice_pond = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_ice_pond
+		mechanized_extraction_building_ice_pond
+	}
+}
+
+pmg_automation_ice_pond = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pond_carts
+		pond_donkeys
+	}
+}

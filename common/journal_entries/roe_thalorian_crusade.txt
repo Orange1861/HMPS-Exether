@@ -1,0 +1,331 @@
+﻿je_thalorian_crusade = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_crises
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = thalorian_crusade_status_desc_RAV
+				trigger = {
+					root = c:RAV
+				}
+			}
+			triggered_desc = {
+				desc = thalorian_crusade_status_desc_TLE
+			}
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = won_crusade
+		OR = {
+			AND = {
+				root = c:RAV
+				OR = {
+					exists = c:THY
+				}
+
+			}
+			AND = {
+				exists = c:TLE
+				root = c:TLE
+				ROOT = {
+					has_diplomatic_pact = {
+						who = c:RAV
+						type = humiliation
+						is_initiator = yes
+					}
+				}
+
+			}
+		}
+	}
+	}
+
+	on_complete = {
+		trigger_event = { id = thalorian_crusade.1 popup = yes}
+	}
+
+	invalid = {
+		custom_tooltip = {
+			text = invalid_crusade
+			OR = {
+				OR = {
+					AND = {
+						NOT = {
+							exists = c:TLE
+						} 
+						NOT = {
+							exists = c:THY
+						} 
+					}
+
+					NOT = {
+						exists = c:RAV
+					} 
+				}
+				#White peace
+				AND = {
+					#use is_war_participant properly here
+					AND = {
+						exists = c:TLE
+						c:TLE ?= {
+							is_at_war = no
+							has_diplomatic_pact = {
+								who = c:RAV
+								type = humiliation
+							}
+						}
+					}
+
+					c:RAV = {
+						is_at_war = no
+						NOT = {
+							c:RAV = {
+								has_diplomatic_pact = {
+									who = c:TLE
+									type = humiliation
+								}
+							}
+						}
+					}
+	
+				}
+			}
+		}
+
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = lost_crusade
+			OR = {
+				AND = {
+					exists = c:TLE
+					root = c:TLE
+					c:RAV = {
+						has_diplomatic_pact = {
+							who = c:TLE
+							type = humiliation
+						}
+					}
+				}
+				AND = {
+					root = c:RAV
+					c:TLE ?= {
+						has_diplomatic_pact = {
+							who = c:RAV
+							type = humiliation
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	on_fail = {
+		if = {
+			limit = {
+				exists = c:TLE
+				root = c:TLE
+			}
+			custom_tooltip = {
+				text = thaloria_shatters
+		
+			ruler = {
+				kill_character = yes
+			}
+
+			#Create Dunavara
+			create_country = {
+				tag = DNV
+				origin = c:TLE
+				state = s:STATE_WINDSONG.region_state:TLE
+				on_created = { 
+					calculate_arcanas = yes
+					save_scope_as = dnv_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -80 }
+					set_strategy = ai_strategy_unify_thaloria
+					join_power_bloc = c:TLE
+				}
+			}
+
+			if = {
+				limit = {
+					exists = c:DNV
+				}
+				s:STATE_MOONSHADE = {
+					set_owner_of_provinces = {
+						country = c:DNV
+							provinces = { x75dafe xfdd97a xf9b695 xBDA0F1 x77FAC3 xD476C0 x6EE5E6 }
+						}	
+					}
+				}
+				every_scope_state = {
+					limit = {
+						OR = {
+							state_region = s:STATE_WINDSONG
+							state_region = s:STATE_TIMMERHAVEN
+						}
+					}
+					set_state_owner = c:DNV
+				}
+			}
+
+			#Create Thalrea
+
+			create_country = {
+				tag = THA
+				origin = c:TLE
+				state = s:STATE_STORMWATCH.region_state:TLE
+				on_created = { 
+					calculate_arcanas = yes
+					save_scope_as = tha_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -80 }
+					set_strategy = ai_strategy_unify_thaloria
+					join_power_bloc = c:TLE
+				}
+			}
+			
+			if = {
+				limit = {
+					exists = c:THA
+				}
+				every_scope_state = {
+					limit = {
+						OR = {
+							state_region = s:STATE_FARREACH
+							state_region = s:STATE_HAVENSHIRE
+							state_region = s:STATE_MOONSHADE
+						}
+					}
+					set_state_owner = c:THA
+					set_state_type = incorporated
+				}
+			}
+
+			#Create Oltora
+			create_country = {
+				tag = OLT
+				origin = c:TLE
+				state = s:STATE_SILVERCREST.region_state:TLE
+				on_created = { 
+					calculate_arcanas = yes
+					save_scope_as = olt_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -80 }
+					set_strategy = ai_strategy_unify_thaloria
+					join_power_bloc = c:TLE
+				}
+			}
+
+			if = {
+				limit = {
+					exists = c:OLT
+				}
+				every_scope_state = {
+					limit = {
+						state_region = s:STATE_SILVERCREST
+					}
+					set_state_owner = c:OLT
+				}
+			}
+
+			#Create Vranceana
+			create_country = {
+				tag = VRC
+				origin = c:TLE
+				state = s:STATE_BELLENBERG.region_state:TLE
+				on_created = { 
+					calculate_arcanas = yes
+					save_scope_as = vrc_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -80 }
+					set_strategy = ai_strategy_unify_thaloria
+					join_power_bloc = c:TLE
+				}
+			}
+
+			if = {
+				limit = {
+					exists = c:VRC
+				}
+				every_scope_state = {
+					limit = {
+						OR = {
+							state_region = s:STATE_WHITESTONE
+							state_region = s:STATE_SUNDALE
+						}
+					}
+					set_state_owner = c:VRC
+					set_state_type = incorporated
+				}
+
+			}
+
+
+			change_tag = THY
+				s:STATE_BELLENBERG = { #I did not fuzztest this so do change it if you need
+					set_owner_of_provinces = {
+						country = c:THY
+							provinces = { x4EB1FC x5AF9B8 x94B4B5 xAADEBC xB490C3 xC34EF3 xDF63DF xDF8AE6 xE36CB4 }
+						}	
+					}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_BELLENBERG
+				}
+				set_state_type = incorporated
+			}
+
+			c:RAV ?= {
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:DNV
+				}
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:THA
+				}
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:OLT
+				}
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:VRC
+				}
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:THY
+				}
+			}
+
+
+		}
+
+		trigger_event = { id = thalorian_crusade.2 popup = yes}
+
+	}
+
+	should_be_pinned_by_default = yes
+
+	weight = 1000
+}

@@ -1,0 +1,2593 @@
+﻿ namespace = buramog_war
+
+buramog_war.1 = {
+	type = country_event
+	placement = scope:invasion_base_state
+
+	title = buramog_war.1.t
+	desc = buramog_war.1.d
+	flavor = buramog_war.1.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_sick_in_hospital.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		OR = {
+			exists = c:BDB
+			exists = c:RTD
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = invader_scope
+		}
+
+		random_primary_culture = {
+			save_scope_as = invader_culture
+		}
+
+		random_scope_state = {
+			limit = {
+                any_neighbouring_state = {
+					OR = {
+						owner ?= c:RTD
+						owner ?= c:BDB
+					}
+                   
+                }
+			}
+			save_scope_as = invasion_base_state
+			
+		}	
+		scope:invasion_base_state = {
+			random_neighbouring_state = {
+				limit = {
+					OR = {
+						c:RTD ?= owner
+						c:BDB ?= owner
+					}
+				}
+				owner = {
+					save_scope_as = adversary_scope
+				}
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war.1.a
+		default_option = yes
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_failed_incursion 
+				days = short_modifier_time
+			}	
+			this.state_region = {
+				add_devastation = 15
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				culture = cu:buramog
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_failed_attack_notification
+		}
+	}
+
+	option = {
+		name = buramog_war.1.b
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_failed_incursion 
+				days = short_modifier_time
+			}
+			this.state_region = {
+				add_devastation = 5
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = officers
+				culture = scope:invader_culture
+			}
+			this.region = {
+				random_scope_state = {
+					limit = {
+						owner = ROOT
+						any_scope_building = {
+							is_building_type = building_barracks
+						}	
+					}
+					add_radicals_in_state = {
+						value = small_radicals
+						pop_type = officers
+						culture = scope:invader_culture
+					}
+				}
+			}	
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_failed_to_cover_incursion
+				months = 13
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_failed_attack_notification
+		}
+	}
+}
+
+buramog_war.2 = {
+	type = country_event
+	placement = scope:invasion_base_state
+
+	title = buramog_war.2.t
+	desc = buramog_war.2.d
+	flavor = buramog_war.2.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		OR = {
+			exists = c:BDB
+			exists = c:RTD
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = invader_scope
+		}
+		random_scope_state = {
+			limit = {
+                any_neighbouring_state = {
+					OR = {
+						owner ?= c:RTD
+						owner ?= c:BDB
+					}
+                   
+                }
+			}
+			save_scope_as = invasion_base_state
+			
+		}	
+		scope:invasion_base_state = {
+			random_neighbouring_state = {
+				limit = {
+					OR = {
+						c:RTD ?= owner
+						c:BDB ?= owner
+					}
+				}
+				owner = {
+					save_scope_as = adversary_scope
+				}
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war.2.a
+		default_option = yes
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_attacked_supply_train
+				months = 13
+			}
+			this.state_region = {
+				add_devastation = 10
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_supply_convoy_notification
+		}
+	}
+
+	option = {
+		name = buramog_war.2.b
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_attacked_supply_train
+				months = 13
+				multiplier = 1.5
+			}
+		}	
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_supply_convoy_notification
+		}
+	}
+}
+
+buramog_war.3 = {
+	type = country_event
+	placement = scope:invasion_state
+
+	title = buramog_war.3.t
+	desc = buramog_war.3.d
+	flavor = buramog_war.3.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_fire.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		OR = {
+			exists = c:BDB
+			exists = c:RTD
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = invader_scope
+		}
+		random_scope_state = {
+			limit = {
+                any_neighbouring_state = {
+					OR = {
+						owner ?= c:RTD
+						owner ?= c:BDB
+					}
+                   
+                }
+			}
+			random_neighbouring_state = {
+				limit = {
+					OR = {
+						c:RTD ?= owner
+						c:BDB ?= owner
+					}
+				}
+				owner = {
+					save_scope_as = adversary_scope
+				}
+				save_scope_as = invasion_state
+			}
+		}	
+	}
+
+	option = {
+		name = buramog_war.3.a
+		default_option = yes
+		scope:adversary_scope = {
+			scope:invasion_state = {
+				add_modifier = {
+					name = modifier_villages_burned
+					months = 13
+					multiplier = 1.5
+				}
+			}
+		}
+		scope:invasion_state = {
+			state_region = {
+				add_devastation = 15
+			}
+		}
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:invasion_state
+				}
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_village_burned_notification
+		}
+	}
+
+	option = {
+		name = buramog_war.3.b
+		scope:adversary_scope = {
+			scope:invasion_state = {
+				add_modifier = {
+					name = modifier_villages_burned
+					months = 13
+				}
+			}
+		}
+		scope:invasion_state = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_village_burned_notification
+		}
+	}
+}
+
+buramog_war.4 = {
+	type = country_event
+	placement = scope:invasion_state
+
+	title = buramog_war.4.t
+	desc = buramog_war.4.d
+	flavor = buramog_war.4.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = orc_meeting
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+	
+	trigger = {
+
+		OR = {
+			AND = {
+				exists = c:BDB
+				any_neighbouring_state = {
+					owner ?= c:BDB
+				}
+				NOT = {
+					has_truce_with = c:BDB
+				}
+			}
+
+			AND = {
+				exists = c:RTD
+				any_neighbouring_state = {
+					owner ?= c:RTD
+				}
+				NOT = {
+					has_truce_with = c:RTD
+				}
+			}
+		}
+	}
+
+	immediate = {
+
+		root.religion = { save_scope_as = invader_religion }
+		root.capital.region = { save_scope_as = invader_region }
+		root = {
+			save_scope_as = invader_scope
+		}
+
+		random_primary_culture = {
+			save_scope_as = invader_culture
+		}
+
+		random_scope_state = {
+			limit = {
+                any_neighbouring_state = {
+					OR = {
+						owner ?= c:RTD
+						owner ?= c:BDB
+					}
+                   
+                }
+			}
+			random_neighbouring_state = {
+				limit = {
+					OR = {
+						c:RTD ?= owner
+						c:BDB ?= owner
+					}
+				}
+				owner = {
+					save_scope_as = adversary_scope
+				}
+				save_scope_as = invasion_state
+			}
+		}	
+		scope:adversary_scope = {
+			random_primary_culture = {
+				save_scope_as = defector_culture
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war.4.a
+		default_option = yes
+		scope:adversary_scope = {
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_betrayal_of_tribe
+					}
+				}
+				add_modifier = {
+				name = modifier_betrayal_of_tribe
+				days = short_modifier_time
+				}
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_tribe_defection_notification
+		}
+	}
+
+	option = {
+		name = buramog_war.4.b
+		scope:adversary_scope = {
+			add_modifier = {
+				name = modifier_betrayal_of_tribe
+				days = short_modifier_time
+			}
+		}
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:invasion_state
+				}
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = scope:defector_culture
+				multiplier = 2
+				days = short_modifier_time
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = officers
+				culture = scope:invader_culture
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_tribe_defection_notification
+		}
+	}
+}
+
+buramog_war.5 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war.5.t
+	desc = buramog_war.5.d
+	flavor = buramog_war.5.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		has_journal_entry = je_buramog_raids
+		NOT = {
+			has_variable = plaguewood_directive
+		}
+		OR = {
+			AND = {
+				exists = c:BDB
+				any_neighbouring_state = {
+					owner ?= c:BDB
+				}
+				NOT = {
+					has_truce_with = c:BDB
+				}
+			}
+
+			AND = {
+				exists = c:RTD
+				any_neighbouring_state = {
+					owner ?= c:RTD
+				}
+				NOT = {
+					has_truce_with = c:RTD
+				}
+			}
+		}
+		OR = {
+			cultural_acceptance_base = { target = cu:buramog value < acceptance_status_4 }
+			has_law = law_type:law_state_religion
+		}
+	}
+
+	immediate = {
+		random_primary_culture = {
+			save_scope_as = invader_culture
+		}
+		random_neighbouring_state = {
+			limit = {
+				OR = {
+					c:RTD ?= owner
+					c:BDB ?= owner
+				}
+			}
+			owner = {
+				save_scope_as = adversary_scope
+			}
+		}
+		create_character = {
+			template = anti_buramog_general
+			on_created = {
+				set_variable = milyutin_variable
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = milyutin_variable
+			}
+			save_scope_as = milyutin_scope
+		}
+		cu:buramog = {
+			save_scope_as = buramog_culture
+		}
+		set_variable = plaguewood_directive
+	}
+
+	option = {
+		name = buramog_war.5.a
+		default_option = yes
+		custom_tooltip = {
+			text = milyutin_available_tt
+		}
+		custom_tooltip = will_lead_to_expulsions_tt
+		set_variable = plaguewood_directive_accepted
+		scope:milyutin_scope = {
+			add_trait = war_criminal
+		}
+		scope:adversary_scope = {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}			
+		}
+		c:EME ?= {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		every_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+                    OR = {
+                        owner ?= c:RTD
+                        owner ?= c:BDB
+                    }
+                }
+			}
+			add_modifier = {
+				name = modifier_plaguewood_directive
+				days = long_modifier_time
+			}
+			add_radicals_in_state = {
+				value = very_large_radicals
+				culture = cu:buramog
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war.5.b
+		custom_tooltip = {
+			text = milyutin_available_tt
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_refused_plaguewood_directive
+				days = normal_modifier_time
+			}
+		}
+		add_radicals = {
+			value = very_large_radicals
+			pop_type = officers
+			culture = scope:invader_culture
+		}
+		scope:milyutin_scope = {
+			add_trait = experienced_colonial_administrator
+		}
+	}
+}
+
+buramog_war.6 = {
+	type = country_event
+	placement = scope:invasion_base_state
+
+	title = buramog_war.6.t
+	desc = buramog_war.6.d
+	flavor = buramog_war.6.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		OR = {
+			exists = c:RTD
+			exists = c:BDB
+		}
+		
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = invader_scope
+		}
+		random_scope_state = {
+			limit = {
+                any_neighbouring_state = {
+					OR = {
+						owner ?= c:RTD
+						owner ?= c:BDB
+					}
+                   
+                }
+			}
+			save_scope_as = invasion_base_state
+		}	
+
+				random_neighbouring_state = {
+			limit = {
+				OR = {
+					c:RTD ?= owner
+					c:BDB ?= owner
+				}
+			}
+			owner = {
+				save_scope_as = adversary_scope
+				ruler = {
+					save_scope_as = buramog_leader
+				}
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war.6.a
+		default_option = yes
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_soldiers_deserted
+				days = short_modifier_time
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = soldiers
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = cu:buramog
+				multiplier = -2
+				days = short_modifier_time
+			}
+		}
+		scope:adversary_scope = {
+			if = {
+				limit = {
+					NOT = {
+						has_modifier =  modifier_receiving_invader_deserters
+					}
+				}
+				add_modifier = {
+					name = modifier_receiving_invader_deserters
+					days = short_modifier_time
+				}
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_soldiers_defection_notification
+		}
+	}
+
+	option = {
+		name = buramog_war.6.b
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_soldiers_deserted
+				days = short_modifier_time
+			}
+		}
+		scope:adversary_scope = {
+			add_modifier = {
+				name = modifier_receiving_invader_deserters
+				days = short_modifier_time
+			}
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_rampant_desertions
+				days = short_modifier_time
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = plaguewood_invader_soldiers_defection_notification
+		}
+	}
+}
+
+buramog_war.7 = { 
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war.7.t
+	desc = buramog_war.7.d
+	flavor = buramog_war.7.f
+
+	dlc = dlc_roe
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	event_image = {
+		video = orc_meeting
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		any_country = {
+			has_journal_entry = je_buramog_raids
+			NOT = {
+				has_truce_with = ROOT
+			}
+		}
+		NOT = {
+			has_variable = buramog_council_var
+		}
+		NOT = {
+			is_subject = yes
+		}
+	}
+
+	immediate = {
+		set_variable = buramog_council_var
+		random_country = {
+			limit = {
+				has_journal_entry = je_buramog_raids
+				NOT = {
+					has_truce_with = ROOT
+				}
+			}
+			save_scope_as = invader_scope
+		}
+		capital = {
+			save_scope_as = capital_scope
+		}
+
+		set_global_variable = {
+			name = plaguewood_attacker_var
+			value = scope:invader_scope
+		}
+		set_global_variable = {
+			name = plaguewood_defender_var
+			value = ROOT
+		}
+	}
+
+	option = {
+		name = buramog_war.7.a
+		default_option = yes
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_professional_army
+				}
+			}
+			activate_law = law_type:law_professional_army
+		}
+		add_modifier = {
+			name = modifier_circassian_last_stand
+			days = normal_modifier_time
+		}
+		create_character = {
+			first_name = Hogmog
+			last_name = Kvetz
+			birth_date = 1139.6.1
+			ruler = yes
+			hq = region_plaguewood
+			is_general = yes
+			commander_rank = commander_rank_3
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				persistent
+				brave
+				forest_commander
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war.7.b
+		trigger = {
+			any_country = {
+				country_rank >= rank_value:major_power
+				has_interest_marker_in_region = region_plaguewood
+				NOT = {
+					has_journal_entry = je_buramog_raids
+				}
+			}
+		}
+		create_character = {
+			first_name = Hogmog
+			last_name = Kvetz
+			birth_date = 1139.6.1
+			ruler = yes
+			hq = region_plaguewood
+			is_general = yes
+			commander_rank = commander_rank_3
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				persistent
+				brave
+				forest_commander
+			}
+		}
+		add_modifier = {
+			name = modifier_buramog_diplomacy
+			days = normal_modifier_time
+		}
+		every_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+				NOT = {
+					has_journal_entry = je_buramog_raids
+				}
+				OR = {
+					has_interest_marker_in_region = region_plaguewood
+					has_diplomatic_pact = {
+						who = scope:invader_scope
+						type = rivalry
+					}	
+				}
+			}
+			trigger_event = { id = buramog_war.8 }
+		}
+	}
+
+	option = {
+		name = buramog_war.7.c
+		trigger = {
+			OR = {
+				AND = {
+					exists = c:RCR
+					c:RCR = {
+                        OR = {
+                            relations:root >= relations_threshold:cordial
+                        }
+                    }
+				}
+				AND = {
+					exists = c:OCR
+					c:OCR = {
+                        OR = {
+                            relations:root >= relations_threshold:cordial
+                        }
+                    }
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					country_has_primary_culture = cu:korkaz
+				}
+			}
+			add_primary_culture = cu:korkaz
+		}
+		if = {
+			limit = {
+				c:OCR = {
+                    relations:root >= relations_threshold:cordial
+                }
+				NOT = {
+							c:OCR = {
+								any_scope_treaty = {
+									binds = root
+									any_scope_article = {
+										has_type = alliance
+									}
+								}
+							}
+				}
+			}
+			create_treaty = {
+				first_country = root
+				second_country = c:OCR
+
+				is_draft = no
+				binding_period = { years = 25  }
+
+				articles_to_create = {
+					{ 
+						article = alliance
+					}
+
+
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				c:RCR = {
+                    relations:root >= relations_threshold:cordial
+                }
+				NOT = {
+							c:RCR = {
+								any_scope_treaty = {
+									binds = root
+									any_scope_article = {
+										has_type = alliance
+									}
+								}
+							}
+				}
+			}
+			create_treaty = {
+				first_country = root
+				second_country = c:RCR
+
+				is_draft = no
+				binding_period = { years = 25  }
+
+				articles_to_create = {
+					{ 
+						article = alliance
+					}
+
+
+				}
+			}
+		}
+		if= {
+			limit = {
+				OR = {
+					c:RCR = {
+						any_scope_treaty = {
+							binds = root
+							any_scope_article = {
+								OR = {
+									has_type = alliance
+									has_type = defensive_pact
+								}
+								
+							}
+						}
+					}
+				    c:RCR = {
+						is_subject_of = root
+					}
+				}
+			}
+			c:RCR = {
+				add_modifier = {
+					name = modifier_plaguewood_joint_struggle
+					days = normal_modifier_time
+				}	
+			}
+		}
+		if= {
+			limit = {
+				OR = {
+					c:OCR = {
+						any_scope_treaty = {
+							binds = root
+							any_scope_article = {
+								OR = {
+									has_type = alliance
+									has_type = defensive_pact
+								}
+								
+							}
+						}
+					}
+					c:OCR = {
+						is_subject_of = root
+					}
+				}
+			}
+			c:OCR = {
+				add_modifier = {
+					name = modifier_plaguewood_joint_struggle
+					days = normal_modifier_time
+				}	
+			}
+		}
+
+		if= {
+			limit = {
+				OR = {
+					c:BDB = {
+						any_scope_treaty = {
+							binds = root
+							any_scope_article = {
+								OR = {
+									has_type = alliance
+									has_type = defensive_pact
+								}
+								
+							}
+						}
+					}
+					c:BDB = {
+						is_subject_of = root
+					}
+				}
+			}
+			c:BDB = {
+				add_modifier = {
+					name = modifier_plaguewood_joint_struggle
+					days = normal_modifier_time
+				}	
+			}
+		}
+		if= {
+			limit = {
+				OR = {
+					c:RTD = {
+						any_scope_treaty = {
+							binds = root
+							any_scope_article = {
+								OR = {
+									has_type = alliance
+									has_type = defensive_pact
+								}
+								
+							}
+						}
+					}
+					c:RTD = {
+						is_subject_of = root
+					}
+				}
+			}
+			c:RTD = {
+				add_modifier = {
+					name = modifier_plaguewood_joint_struggle
+					days = normal_modifier_time
+				}	
+			}
+		}
+		add_modifier = {
+			name = modifier_plaguewood_joint_struggle
+			days = normal_modifier_time
+		}
+
+		random_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+				NOT = {
+					has_journal_entry = je_buramog_raids
+				}
+				OR = {
+					has_interest_marker_in_region = region_plaguewood
+					has_diplomatic_pact = {
+						who = scope:invader_scope
+						type = rivalry
+					}	
+				}
+			}
+			trigger_event = { id = buramog_war.8 }
+		}
+	}
+}
+
+buramog_war.8 = { #Message to GPs
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war.8.t
+	desc = buramog_war.8.d
+	flavor = buramog_war.8.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = orc_meeting
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = buramog_war.8.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		custom_tooltip = plaguewood_recognition_tt
+		set_variable = buramog_recognition_seeking
+		change_relations = {
+			country = global_var:plaguewood_defender_var
+			value = 20
+		}
+	}
+
+	option = {
+		name = buramog_war.8.b
+		ai_chance = {
+			base = 0
+		}
+		change_relations = {
+			country = global_var:plaguewood_defender_var
+			value = -10
+		}
+	}
+}
+
+buramog_war.9 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war.9.t
+	desc = buramog_war.9.d
+	flavor = buramog_war.9.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = orc_meeting
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		if={
+			limit = {
+				exists = c:RTD
+				root = c:RTD
+			}
+			c:BDB = {
+				save_scope_as = uniter_scope
+			}
+		}
+		else = {
+			c:RTD = {
+				save_scope_as = uniter_scope
+			}
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = army_scope
+		}
+		root = {
+			save_scope_as = junior_scope
+		}
+	}
+
+	option = {
+		name = buramog_war.9.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_accepted_steakamki
+				days = long_modifier_time
+			}
+		}
+		scope:uniter_scope = {
+			change_relations = {
+				country = scope:junior_scope
+				value = 50
+			}
+			create_diplomatic_pact = {
+				country = scope:junior_scope
+				type = personal_union
+			}
+		}
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_positive
+			target = scope:uniter_scope
+		}
+	}
+
+	option = {
+		name = buramog_war.9.b
+		ai_chance = {
+			base = 0
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_refused_steakamki
+				days = long_modifier_time
+			}
+		}
+		change_relations = {
+			country = scope:uniter_scope
+			value = -25
+		}
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_negative
+			target = scope:uniter_scope
+		}
+	}
+}
+
+buramog_war.10 = { #Darvak Volunteers
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war.10.t
+	desc = buramog_war.10.d
+	flavor = buramog_war.10.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = dwarf_studying
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		any_country = {
+			has_journal_entry = je_buramog_raids
+			NOT = {
+				has_truce_with = ROOT
+			}
+		}
+		exists = c:DAR
+		NOT = {
+			has_variable = dwarf_volunteers_variable
+		}
+	}
+
+	immediate = {
+		cu:yelfi = {
+			save_scope_as = dwarf_culture
+		}
+		cu:mousefolk = {
+			save_scope_as = mousefolk_culture
+		}
+		c:DAR = {
+			save_scope_as = darvak_scope
+		}
+		set_variable = dwarf_volunteers_variable
+	}
+
+	option = {
+		name = buramog_war.10.a
+		default_option = yes
+		create_character = {
+			is_general = yes
+			first_name = Teofil
+			last_name = Lapinski
+			culture = cu:yelfi
+			historical = yes
+			birth_date = 1155.12.19
+			hq = region_plaguewood
+			ideology = ideology_radical
+			interest_group = ig_armed_forces
+			commander_rank = commander_rank_1
+			traits = {
+				persistent
+				explorer
+				celebrity_commander
+			}
+		}
+		capital = {
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barracks
+				}
+				add_modifier = {
+					name = modifier_miracle_expedition
+					days = short_modifier_time
+				}
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war.10.b
+		add_modifier = {
+			name = modifier_dwarven_training
+			days = normal_modifier_time
+		}
+	}
+}
+
+buramog_war.11 = { #Start
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war.11.t
+	desc = buramog_war.11.d
+	flavor = buramog_war.11.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+        if = {
+            limit = {
+                exists = c:RTD
+            }
+            create_unidirectional_truce = {
+                country = c:RTD
+                months = 360
+            }
+        }
+        if = {
+            limit = {
+                exists = c:BDB
+            }
+            create_unidirectional_truce = {
+                country = c:BDB
+                months = 360
+            }
+        }
+
+
+        c:BDB = {
+            save_scope_as = neskmes_scope
+        }
+        c:RTD = {
+            save_scope_as = yevmehol_scope
+        }
+        every_scope_state = {
+            limit = {
+                any_neighbouring_state = {
+                    OR = {
+                        owner ?= c:RTD
+                        owner ?= c:BDB
+                    }
+                }
+            }
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = buramog_wars_attacker
+					}
+				}
+				add_modifier = buramog_wars_attacker
+			}
+            
+        }
+	}
+
+	option = {
+		name = buramog_war.11.a
+		default_option = yes
+		show_as_tooltip = {
+		if = {
+					limit = {
+						exists = c:RTD
+					}
+					create_unidirectional_truce = {
+						country = c:RTD
+						months = 360
+					}
+				}
+				if = {
+					limit = {
+						exists = c:BDB
+					}
+					create_unidirectional_truce = {
+						country = c:BDB
+						months = 360
+					}
+				}
+
+
+				c:BDB = {
+					save_scope_as = neskmes_scope
+				}
+				c:RTD = {
+					save_scope_as = yevmehol_scope
+				}
+				every_scope_state = {
+					limit = {
+						any_neighbouring_state = {
+							OR = {
+								owner ?= c:RTD
+								owner ?= c:BDB
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = buramog_wars_attacker
+							}
+						}
+						add_modifier = buramog_wars_attacker
+					}
+				}
+		}
+		if={
+			limit = {
+				exists = c:RTD
+				any_neighbouring_state = {
+					owner ?= c:RTD
+				}
+			}
+			c:RTD = {
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = ROOT
+				}
+			}
+		}
+		if={
+			limit = {
+				exists = c:BDB
+				any_neighbouring_state = {
+					owner ?= c:BDB
+				}
+			}
+			c:BDB = {
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = ROOT
+				}
+			}
+		}
+
+	}
+
+}
+
+namespace = buramog_war_end
+
+buramog_war_end.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war_end.1.t
+	desc = buramog_war_end.1.d
+	flavor = buramog_war_end.1.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		NOT = {
+			exists = c:BDB
+		}
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BURAMONG
+				state_region = s:STATE_FORESTS_HEART
+				state_region = s:STATE_RIBAGAR
+				state_region = s:STATE_PLAGUEBRUSH
+				state_region = s:STATE_SANDWOOD
+			}
+		}
+		NOT = {
+			has_variable = neskmes_defeated
+		}
+	}
+
+	immediate = {
+		set_variable = neskmes_defeated
+		if= {
+			limit = {
+				any_scope_state = {
+					has_modifier = modifier_plaguewood_directive
+				}
+			}
+			random_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_BURAMONG
+						state_region = s:STATE_FORESTS_HEART
+						state_region = s:STATE_RIBAGAR
+						state_region = s:STATE_PLAGUEBRUSH
+						state_region = s:STATE_SANDWOOD
+					}
+					has_modifier = modifier_plaguewood_directive
+				}
+				save_scope_as = buramog_state
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_BURAMONG
+						state_region = s:STATE_FORESTS_HEART
+						state_region = s:STATE_RIBAGAR
+						state_region = s:STATE_PLAGUEBRUSH
+						state_region = s:STATE_SANDWOOD
+					}
+				}
+				save_scope_as = buramog_state
+			}
+		}
+
+		random_primary_culture = {
+			save_scope_as = invader_culture
+		}
+	}
+
+	option = {
+		name = buramog_war_end.1.a
+		default_option = yes
+		trigger = {
+			scope:buramog_state = {
+				has_modifier = modifier_plaguewood_directive
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = scope:invader_culture
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_BURAMONG
+					state_region = s:STATE_FORESTS_HEART
+					state_region = s:STATE_RIBAGAR
+					state_region = s:STATE_PLAGUEBRUSH
+					state_region = s:STATE_SANDWOOD
+				}
+			}
+			add_modifier = {
+				name = modifier_settlers_privileges
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+			hidden_effect = {
+				remove_modifier = buramog_wars_attacker
+				every_scope_state = {
+					remove_modifier = buramog_wars_attacker
+				}
+			}
+			add_modifier = {
+				name = modifier_plaguewood_war_sol
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+			state_region = {
+				add_homeland = scope:invader_culture
+			}
+		}
+		if = {
+            limit = {
+                has_variable = plaguewood_directive_accepted
+				NOT = {
+					has_journal_entry = je_plaguewood_expulsions
+				}
+				cultural_acceptance_base = { target = cu:buramog value < acceptance_status_4 }
+            }
+            add_journal_entry = { type = je_plaguewood_expulsions }
+        }
+	}
+
+	option = {
+		name = buramog_war_end.1.b
+		trigger = {
+			scope:buramog_state = {
+				NOT = {
+					has_modifier = modifier_plaguewood_directive
+				}
+			}
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_BURAMONG
+					state_region = s:STATE_FORESTS_HEART
+					state_region = s:STATE_RIBAGAR
+					state_region = s:STATE_PLAGUEBRUSH
+					state_region = s:STATE_SANDWOOD
+				}
+			}
+			hidden_effect = {
+				remove_modifier = buramog_wars_attacker
+				every_scope_state = {
+					remove_modifier = buramog_wars_attacker
+				}
+			}
+			add_modifier = {
+				name = modifier_plaguewood_war_sol
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+			state_region = {
+				add_homeland = scope:invader_culture
+			}
+		}
+	}
+}
+
+buramog_war_end.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war_end.2.t
+	desc = buramog_war_end.2.d
+	flavor = buramog_war_end.2.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_military_parade.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+
+	}
+
+	immediate = {
+        if= {
+            limit = {
+                is_country_type = preindustrial
+            }
+            set_country_type = unrecognized
+			if = {
+				limit = {
+					has_modifier = clan_dominance
+				}
+				remove_modifier = clan_dominance
+			}
+			
+        }
+
+		global_var:plaguewood_attacker_var = {
+			save_scope_as = invader_scope
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_variable = plaguewood_recognizer
+				}
+			}
+			random_country = {
+				limit = {
+					has_variable = plaguewood_recognizer
+				}
+				save_scope_as = plaguewood_recognizer_scope
+			}
+		}
+	}
+
+	option = {
+		name = buramog_war_end.2.a
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+		every_scope_state = {
+			limit = {
+				has_modifier = modifier_plaguewood_war_sol
+			}
+			remove_modifier = modifier_plaguewood_war_sol
+		}
+		
+		add_modifier = modifier_plaguewood_peace_sol
+
+		        if= {
+            limit = {
+                exists = c:ASW
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner = c:ASW
+                    }
+                }
+            }
+            annex = c:ASW
+        }
+        if= {
+            limit = {
+                exists = c:BDB
+                NOT = {
+                    this = c:BDB
+                }
+                c:BDB = {
+                    NOT = {
+                        is_player = yes
+                    }
+                    is_subject_of = root
+                }
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner ?= c:BDB
+                    }
+                }
+            }
+            annex = c:BDB
+        }
+        if= {
+            limit = {
+                exists = c:RTD
+                NOT = {
+                    this = c:RTD
+                }
+                c:RTD = {
+                    NOT = {
+                        is_player = yes
+                    }
+                    is_subject_of = root
+                }
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner ?= c:RTD
+                    }
+                }
+            }
+            annex = c:RTD
+        }
+	}
+
+	option = {
+		name = buramog_war_end.2.b
+		ai_chance = {
+			base = 1
+		}
+		every_scope_state = {
+			limit = {
+				has_modifier = modifier_plaguewood_war_sol
+			}
+			remove_modifier = modifier_plaguewood_war_sol
+		}
+		add_modifier = modifier_plaguewood_peace_military
+
+		        if= {
+            limit = {
+                exists = c:ASW
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner = c:ASW
+                    }
+                }
+            }
+            annex = c:ASW
+        }
+        if= {
+            limit = {
+                exists = c:BDB
+                NOT = {
+                    this = c:BDB
+                }
+                c:BDB = {
+                    NOT = {
+                        is_player = yes
+                    }
+                    is_subject_of = root
+                }
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner ?= c:BDB
+                    }
+                }
+            }
+            annex = c:BDB
+        }
+        if= {
+            limit = {
+                exists = c:RTD
+                NOT = {
+                    this = c:RTD
+                }
+                c:RTD = {
+                    NOT = {
+                        is_player = yes
+                    }
+                    is_subject_of = root
+                }
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner ?= c:RTD
+                    }
+                }
+            }
+            annex = c:RTD
+        }
+	}
+
+	option = {
+		name = buramog_war_end.2.c
+		trigger = {
+			any_country = {
+				has_variable = plaguewood_recognizer
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		every_scope_state = {
+			limit = {
+				has_modifier = modifier_plaguewood_war_sol
+			}
+			remove_modifier = modifier_plaguewood_war_sol
+		}
+		set_country_type = recognized
+		scope:plaguewood_recognizer_scope = {
+			change_relations = {
+				country = global_var:plaguewood_defender_var
+				value = 25
+			}
+		}
+
+        if= {
+            limit = {
+                exists = c:ASW
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner = c:ASW
+                    }
+                }
+            }
+            annex = c:ASW
+        }
+        if= {
+            limit = {
+                exists = c:BDB
+                NOT = {
+                    this = c:BDB
+                }
+                c:BDB = {
+                    NOT = {
+                        is_player = yes
+                    }
+                    is_subject_of = root
+                }
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner ?= c:BDB
+                    }
+                }
+            }
+            annex = c:BDB
+        }
+        if= {
+            limit = {
+                exists = c:RTD
+                NOT = {
+                    this = c:RTD
+                }
+                c:RTD = {
+                    NOT = {
+                        is_player = yes
+                    }
+                    is_subject_of = root
+                }
+                any_scope_state = {
+                    any_neighbouring_state = {
+                         owner ?= c:RTD
+                    }
+                }
+            }
+            annex = c:RTD
+        }
+
+	}
+}
+
+
+buramog_war_end.3 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war_end.3.t
+	desc = buramog_war_end.3.d
+	flavor = buramog_war_end.3.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		NOT = {
+			exists = c:RTD
+		}
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_NORTHERN_EXPANSE
+				state_region = s:STATE_EASTERN_PLAGUEWOOD
+				state_region = s:STATE_BLACKWOOD
+			}
+		}
+		NOT = {
+			has_variable = yevmehol_defeated
+		}
+	}
+
+	immediate = {
+		set_variable = yevmehol_defeated
+		if= {
+			limit = {
+				any_scope_state = {
+					has_modifier = modifier_plaguewood_directive
+				}
+			}
+			random_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_NORTHERN_EXPANSE
+						state_region = s:STATE_EASTERN_PLAGUEWOOD
+						state_region = s:STATE_BLACKWOOD
+					}
+					has_modifier = modifier_plaguewood_directive
+				}
+				save_scope_as = buramog_state
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_NORTHERN_EXPANSE
+						state_region = s:STATE_EASTERN_PLAGUEWOOD
+						state_region = s:STATE_BLACKWOOD
+					}
+				}
+				save_scope_as = buramog_state
+			}
+		}
+
+		random_primary_culture = {
+			save_scope_as = invader_culture
+		}
+	}
+
+	option = {
+		name = buramog_war_end.1.a
+		default_option = yes
+		trigger = {
+			scope:buramog_state = {
+				has_modifier = modifier_plaguewood_directive
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = scope:invader_culture
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_NORTHERN_EXPANSE
+					state_region = s:STATE_EASTERN_PLAGUEWOOD
+					state_region = s:STATE_BLACKWOOD
+				}
+			}
+			add_modifier = {
+				name = modifier_settlers_privileges
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+			hidden_effect = {
+				remove_modifier = buramog_wars_attacker
+				every_scope_state = {
+					remove_modifier = buramog_wars_attacker
+				}
+			}
+			add_modifier = {
+				name = modifier_plaguewood_war_sol
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+			state_region = {
+				add_homeland = scope:invader_culture
+			}
+		}
+		if = {
+            limit = {
+                has_variable = plaguewood_directive_accepted
+				NOT = {
+					has_journal_entry = je_plaguewood_expulsions
+				}
+				cultural_acceptance_base = { target = cu:buramog value < acceptance_status_4 }
+            }
+            add_journal_entry = { type = je_plaguewood_expulsions }
+        }
+	}
+
+	option = {
+		name = buramog_war_end.1.b
+		trigger = {
+			scope:buramog_state = {
+				NOT = {
+					has_modifier = modifier_plaguewood_directive
+				}
+			}
+		}
+				every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_NORTHERN_EXPANSE
+					state_region = s:STATE_EASTERN_PLAGUEWOOD
+					state_region = s:STATE_BLACKWOOD
+				}
+			}
+			hidden_effect = {
+				remove_modifier = buramog_wars_attacker
+				every_scope_state = {
+					remove_modifier = buramog_wars_attacker
+				}
+			}
+			add_modifier = {
+				name = modifier_plaguewood_war_sol
+				days = normal_modifier_time
+				is_decaying = yes
+			}
+			state_region = {
+				add_homeland = scope:invader_culture
+			}
+		}
+	}
+}
+
+buramog_war_end.4 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war_end.4.t
+	desc = buramog_war_end.4.d
+	flavor = buramog_war_end.4.f
+
+	dlc = dlc_roe
+
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = buramog_war_end.4.a
+		default_option = yes
+
+		add_modifier = {
+			name = modifier_plaguewood_defeat
+			days = long_modifier_time
+		}
+	}
+}
+
+buramog_war_end.5 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war_end.5.t
+	desc = buramog_war_end.5.d
+	flavor = buramog_war_end.5.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_military_parade.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = buramog_war_end.5.a
+		default_option = yes
+
+		add_modifier = {
+			name = modifier_plaguewood_victory
+			days = long_modifier_time
+		}
+	}
+}
+
+buramog_war_end.6 = {
+	type = country_event
+	placement = ROOT
+
+	title = buramog_war_end.5.t
+	desc = buramog_war_end.5.d
+	flavor = buramog_war_end.5.f
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = buramog_war_end.6.a
+		default_option = yes
+		every_scope_state = {
+			remove_modifier = buramog_wars_attacker
+		}
+		every_subject_or_below = {
+			every_scope_state = {
+				remove_modifier = buramog_wars_attacker
+			}
+		}
+	}
+}
+
+namespace = plaguewood_expulsions
+
+plaguewood_expulsions.1 = {
+	type = country_event
+	placement = scope:plaguewood_expulsion_state
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    event_image = {
+		video = "africa_construction_colony"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = plaguewood_expulsions.1.t
+	desc = plaguewood_expulsions.1.d
+	flavor = plaguewood_expulsions.1.f
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_variable = plaguewood_expulsion_stall }
+		has_journal_entry = je_plaguewood_expulsions
+		any_scope_state = {
+			region = sr:region_plaguewood
+			any_scope_pop = {
+				culture = cu:buramog
+			}
+		}
+		NOT = {
+			has_variable = buramog_events_hidden
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				region = sr:region_plaguewood
+				any_scope_pop = {
+					culture = cu:buramog
+				}
+			}
+			save_scope_as = plaguewood_expulsion_state
+		}
+		random_country = {
+			limit = {
+				any_scope_state = {
+					OR = {
+			            state_region = s:STATE_SEUTE_EPHEI
+						state_region = s:STATE_WINOLYSTU
+					}
+				}
+			}
+			save_scope_as = expulsion_destination_country
+			random_scope_state = {
+				limit = {
+					OR = {
+			            state_region = s:STATE_SEUTE_EPHEI
+						state_region = s:STATE_WINOLYSTU
+					}
+				}
+				save_scope_as = expulsion_destination_state
+			}
+		}
+		cu:buramog = {
+			save_scope_as = buramog_culture_scope
+		}
+		set_variable = {
+			name = plaguewood_expulsion_stall
+			months = 3
+		}
+		ROOT = {
+			save_scope_as = invader_scope
+		}
+	}
+
+	option = {
+		name = plaguewood_expulsions.1.a
+		default_option = yes
+		scope:plaguewood_expulsion_state = {
+			if = {
+				limit = {
+					scope:expulsion_destination_country = {
+						has_variable = refused_circassian_refugees
+					}
+				}
+				kill_population_percent_in_state = {
+					percent = 0.06
+					culture = cu:buramog
+				}
+			}
+			else = {
+				kill_population_percent_in_state = {
+					percent = 0.04
+					culture = cu:buramog
+				}
+			}
+			custom_tooltip = {
+				text = three_pops_deported_tt
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						strata = lower
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						strata = middle
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						strata = upper
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+			}
+		}
+		scope:expulsion_destination_country = {
+			post_notification = plaguewood_buramog_refugees_arrived
+		}
+	}
+
+	option = {
+		name = plaguewood_expulsions.1.b
+		scope:plaguewood_expulsion_state = {
+			kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:buramog
+			}
+			custom_tooltip = {
+				text = three_pops_deported_tt
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						OR = {
+							strata = lower
+							strata = middle
+						}
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						OR = {
+							strata = middle
+							strata = upper
+						}
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+			}
+		}
+		scope:expulsion_destination_country = {
+			post_notification = plaguewood_buramog_refugees_arrived
+		}
+	}
+
+	option = {
+		name = plaguewood_expulsions.1.c
+		set_variable = buramog_events_hidden
+		custom_tooltip = hide_deportation_events_tt
+		scope:plaguewood_expulsion_state = {
+			if = {
+				limit = {
+					scope:expulsion_destination_country = {
+						has_variable = refused_circassian_refugees
+					}
+				}
+				kill_population_percent_in_state = {
+					percent = 0.06
+					culture = cu:buramog
+				}
+			}
+			else = {
+				kill_population_percent_in_state = {
+					percent = 0.04
+					culture = cu:buramog
+				}
+			}
+			custom_tooltip = {
+				text = three_pops_deported_tt
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						strata = lower
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						strata = middle
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+				random_scope_pop = {
+					limit = {
+						culture = cu:buramog
+						strata = upper
+					}
+					move_pop = scope:expulsion_destination_state
+				}
+			}
+		}
+		scope:expulsion_destination_country = {
+			post_notification = plaguewood_buramog_refugees_arrived
+		}
+	}
+}
+
+plaguewood_expulsions.2 = {
+	type = country_event
+	placement = ROOT
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+    event_image = {
+		video = "africa_construction_colony"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = plaguewood_expulsions.2.t
+	desc = plaguewood_expulsions.2.d
+	flavor = plaguewood_expulsions.2.f
+
+	duration = 3
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
+		cu:buramog = {
+			save_scope_as = buramog_culture_scope
+		}
+
+		random_country = {
+			limit = {
+				has_journal_entry = je_plaguewood_expulsions
+			}
+			save_scope_as = invader_scope
+		}
+	}
+
+	option = { # Accept the proposal
+		name = plaguewood_expulsions.2.a
+		default_option = yes
+		custom_tooltip = buramog_refugees_deportations_tt
+		scope:invader_scope = {
+			change_relations = {
+				country = ROOT
+				value = 10
+			}
+		}
+	}
+
+	option = { # Reject the proposal
+		name = plaguewood_expulsions.2.b
+		set_variable = refused_circassian_refugees
+		custom_tooltip = buramog_refugees_deportations_tt
+		custom_tooltip = buramog_refugees_warning_tt
+		scope:invader_scope = {
+			change_relations = {
+				country = ROOT
+				value = -5
+			}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+	}
+}
+
+plaguewood_expulsions.3 = {
+	type = country_event
+	placement = ROOT
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	event_image = {
+		video = "africa_leader_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = plaguewood_expulsions.3.t
+	desc = plaguewood_expulsions.3.d
+	flavor = plaguewood_expulsions.3.f
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		cu:buramog = {
+			save_scope_as = buramog_culture_scope
+		}
+		random_country = {
+			limit = {
+				has_journal_entry = je_plaguewood_expulsions
+			}
+			save_scope_as = invader_scope
+		}
+		ROOT = {
+			save_scope_as = root_scope
+		}
+	}
+
+	cooldown = { days = normal_modifier_time }
+
+	option = { # Send diplomatic protest
+		name = plaguewood_expulsions.3.a
+		default_option = yes
+		change_relations = {
+			country = scope:invader_scope
+			value = -30
+		}
+		scope:invader_scope = {
+			post_notification = plaguewood_protest_notification
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+	}
+
+	option = { # Do nothing
+		name = plaguewood_expulsions.3.b
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:buramog
+		}
+	}
+}

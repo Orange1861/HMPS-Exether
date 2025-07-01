@@ -1,0 +1,76 @@
+﻿religion_flavor_loc = {
+	type = religion
+	random_valid = no
+
+	 text = {
+	 	trigger = {
+	 		this = rel:church_of_man
+	 	}
+	 	localization_key = church_of_man_flavor
+	 }
+	 text = {
+		trigger = {
+			this = rel:orthodox_fosirmi
+		}
+		localization_key = orthodox_fosirmi_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:wild_fosirmi
+		}
+		localization_key = wild_fosirmi_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:southern_fosirmi
+		}
+		localization_key = southern_fosirmi_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:kragmorn
+		}
+		localization_key = kragmorn_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:creed_of_hasal
+		}
+		localization_key = hasal_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:house_of_fate
+		}
+		localization_key = house_of_fate_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:skarrakhlot
+		}
+		localization_key = skarrakhlot_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:vurzaratmoda
+		}
+		localization_key = vurzaratmoda_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:zmikamki
+		}
+		localization_key = zmikamki_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:salt_crucible
+		}
+		localization_key = salt_crucible_flavor
+	}
+
+	text = {
+		localization_key = religion_flavor_loc_default
+		fallback = yes
+	}
+}

@@ -1,0 +1,117 @@
+﻿offer_plaguewood_recognition = {
+	is_shown = {
+		has_global_variable = plaguewood_defender_var
+		exists = global_var:plaguewood_defender_var
+		has_variable = buramog_recognition_seeking
+		country_rank >= rank_value:major_power
+		is_subject = no
+		global_var:plaguewood_defender_var = {
+			has_journal_entry = je_second_buramog_wars
+		}
+		NOT = {
+			any_country = {
+				has_variable = plaguewood_recognizer
+			}
+		}
+	}
+
+	possible = {
+		exists = global_var:plaguewood_defender_var
+		country_rank >= rank_value:major_power
+		is_subject = no
+		global_var:plaguewood_defender_var = {
+			has_journal_entry = je_second_buramog_wars
+		}
+		custom_tooltip = {
+			text = no_country_recognised_circassia_tt
+			NOT = {
+				any_country = {
+					has_variable = plaguewood_recognizer
+				}
+			}
+		}
+		has_interest_marker_in_region = region_plaguewood
+		can_create_treaty = {
+					first_country = root
+					second_country = global_var:plaguewood_defender_var
+					is_draft = no
+					binding_period = { years = 7 }
+					articles_to_create = {
+						{
+							article = military_assistance
+							source_country = root
+							target_country = global_var:plaguewood_defender_var
+						}
+					}
+		}
+	}
+
+	when_taken = {
+		custom_tooltip = {
+			text = plaguewood_recognition_tt
+		}
+		global_var:plaguewood_attacker_var = {
+			change_relations = {
+				country = root
+				value = -30
+			}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		set_variable = plaguewood_recognizer
+		create_treaty = {
+					first_country = root
+					second_country = global_var:plaguewood_defender_var
+					is_draft = no
+					binding_period = { years = 7 }
+					articles_to_create = {
+						{
+							article = military_assistance
+							source_country = root
+							target_country = global_var:plaguewood_defender_var
+						}
+					}
+		}
+		global_var:plaguewood_defender_var = {
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = root
+			}
+			root.power_bloc = {
+				add_leverage = { target = global_var:plaguewood_defender_var value = 25 }
+			}
+		}
+
+		every_country = {
+			limit = {
+				has_variable = buramog_recognition_seeking
+			}
+			remove_variable = buramog_recognition_seeking
+		}
+	}  
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				OR = {
+					has_attitude = { who = global_var:plaguewood_attacker_var attitude = antagonistic }
+					has_attitude = { who = global_var:plaguewood_attacker_var attitude = belligerent }
+					has_attitude = { who = global_var:plaguewood_attacker_var attitude = domineering }
+				}
+			}
+			add = 30
+		}
+		if = {
+			limit = {
+				OR = {
+					has_attitude = { who = global_var:plaguewood_attacker_var attitude = wary }
+					has_attitude = { who = global_var:plaguewood_attacker_var attitude = cautious }
+				}
+			}
+			add = 15
+		}
+	}
+}

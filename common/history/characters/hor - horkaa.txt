@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:HOR = {
+		create_character = {
+			first_name = "Qarod" #Original: Safido 3247-3185+3315=3377 on 03_orcish
+			last_name = "Horkaatai"
+			historical = yes
+			ruler = yes
+			age = 51
+			female = yes
+			interest_group = ig_landowners
+			ideology = ideology_matriarchal_traditionalist
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = "Ituno" #Original: Biyyism 3240-3185+3315=3370 on 03_orcish
+			last_name = "Horkaatai"
+			historical = yes
+			heir = yes
+			age = 19
+			female = yes
+			interest_group = ig_landowners
+			ideology = ideology_abolitionist
+			traits = {
+				cautious
+			}
+		}
+	}
+}

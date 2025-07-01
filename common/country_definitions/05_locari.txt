@@ -1,0 +1,678 @@
+﻿#Paylaz
+PAY = {
+	color = rgb{ 100 0 100 } 
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	cultures = { lusakaran } 
+	capital = STATE_CHMACAJ
+}
+
+#Sarparth
+SAP = {
+	color = rgb{ 0 30 100 } 
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	cultures = { gulf_naga } 
+	capital = STATE_LAZILKEP
+}
+
+KLA = {
+	color = rgb{ 0 20 90 } 
+
+	country_type = preindustrial 
+
+	tier = grand_principality
+
+	cultures = { gulf_naga } 
+	capital = STATE_KUL_KEDLI
+}
+
+#Viprajan
+VIP = {
+	color = rgb{ 100 60 200 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { gulf_naga } 
+	capital = STATE_LUBVUDOLPA
+}
+
+#Manisara
+MAI = {
+	color = rgb{ 200 60 120 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { gulf_naga } 
+	capital = STATE_KULUWANDU
+}
+
+#Bhramarika
+BHR = {
+	color = rgb{ 80 10 60 } 
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	cultures = { gulf_naga } 
+	capital = STATE_UAK_KEDLI
+}
+
+GLI = {
+	color = rgb{ 10 28 82 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { rizraflez } 
+	capital = STATE_KHARGISHABBO
+}
+#Jivranth
+JIV = {
+	color = rgb{ 50 100 100 } 
+
+	country_type = unrecognized
+
+	tier = grand_principality
+
+	cultures = { gulf_naga } 
+	capital = STATE_KUL_KEDLI
+}
+
+#Amritvalli
+AMR = {
+	color = rgb{ 100 200 100 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { gulf_naga } 
+	capital = STATE_UAK_KEDLI
+}
+
+#Yulbashar
+YUB = {
+	color = rgb{ 100 150 150 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_RUKHAM
+}
+
+#Quraysh
+QUR = {
+	color = rgb{ 100 100 100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_KARAKAR
+}
+
+#Orzamin
+ORZ = {
+	color = rgb{ 150 90 100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_HARQOM
+}
+
+#Ziyovar
+ZIY = {
+	color = rgb{ 200 100 30 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_KHUBEK
+}
+
+#Khazrakor
+KHA = {
+	color = rgb{ 130 30 50 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_WUTAK
+}
+
+#Feruqand
+FEQ = {
+	color = rgb{ 200 0 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_STAUSTKRAUL
+}
+
+#Ashkara
+ASR = {
+	color = rgb{ 0 100 100 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_EDLAFIG
+}
+
+#Yaksomir
+YAS = {
+	color = rgb{ 82 10 28 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { bintukin } 
+	capital = STATE_TASHKAVSK
+}
+
+#Dīrududau
+DUD = {
+	color = rgb{ 150 100 0 } 
+
+	country_type = preindustrial	
+
+	tier = principality
+
+	cultures = { qadimra } 
+	capital = STATE_GLIDGRED_RIZRA
+}
+
+#Cove Colony
+COV = {
+	color = rgb{ 105 80 180 } 
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { dumonian }
+	capital = STATE_LISAZISA
+}
+
+#Order of the far lilies
+LAC = {
+	color = rgb{ 105 200 80 } 
+
+	country_type = colonial
+
+	tier = kingdom
+
+	cultures = { bakibi } 
+	capital = STATE_VIANCOTEVE
+}
+
+#South Seas Company
+SSC = {
+	color = rgb{ 75 200 110 } 
+
+	country_type = colonial
+
+	tier = kingdom
+
+	religion = cult_of_the_sun
+	cultures = { vystemian }
+	capital = STATE_GANDNI
+}
+
+#Narawingu
+NWU = {
+	color = rgb{ 75 200 110 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_DANKASEMBE
+}
+
+#Marunari
+MRI = {
+	color = rgb{ 85 130 110 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_TSURWA
+}
+
+#Kooriwati
+KOO = {
+	color = rgb{ 120 150 110 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_STISTRIPLUS
+}
+
+#Wamarayala
+WAM = {
+	color = rgb{ 175 200 110 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_JALAGAMKATTA
+}
+
+#Tjirabinna
+TJI = {
+	color = rgb{ 75 200 10 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_LAUPALLA
+}
+
+#Karkurrami
+KAR = {
+	color = rgb{ 75 100 110 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_KURUBBA
+}
+
+#Arrakanba
+AKB = {
+	color = rgb{ 75 90 40 } 
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	cultures = { jungle_naga } 
+	capital = STATE_SADHANA_MANDAL
+}
+
+#Gurindawaddy
+GDY = {
+	color = rgb{ 105 100 30 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { jungle_naga } 
+	capital = STATE_KUHWUNUKILI
+}
+#Warlura
+WLR = {
+	color = rgb{ 45 80 90 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_CHINTANAGIRI
+}
+
+#Kuliyapi
+KUL = {
+	color = rgb{ 200 100 30 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_GWITESHIAIBHAVA
+}
+
+#Yirawara
+YIR = {
+	color = rgb{ 105 100 230 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_JIVANASUTA 
+}
+#Djarijuta
+DJA = {
+	color = rgb{ 185 100 30 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { east_lacertian } 
+	capital = STATE_SURYANAGARI
+}
+#Malalukara
+MLL = {
+	color = rgb{ 105 160 200 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_ANANTAPURI
+}
+
+#Wunpalyin
+WUN = {
+	color = rgb{ 105 160 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { awakened } 
+	capital = STATE_ANANTAPURI
+}
+
+#Gahon
+GAH = {
+	color = rgb{ 65 120 0 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { navrozdok } 
+	capital = STATE_HASQSTALE
+}
+
+#Irozpa
+IZA = {
+	color = rgb{ 65 120 140 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { navrozdok } 
+	capital = STATE_HASQSTALE
+}
+
+#Seneksera
+SEK = {
+	color = rgb{ 165 120 100 } 
+
+	country_type = preindustrial
+
+	tier = kingdom
+
+	cultures = { navrozdok } 
+	capital = STATE_CHMACAJ
+}
+
+#Tamoqwa
+TQW = {
+	color = rgb{ 5 20 200 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { navrozdok } 
+	capital = STATE_CHMACAJ
+}
+
+#Dakinuru
+DUU = {
+	color = rgb{ 235 20 100 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { taiamican } 
+	capital = STATE_KIT_RAUNAQ
+}
+
+#Ononpa
+ONO = {
+	color = rgb{ 35 20 150 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { navrozdok } 
+	capital = STATE_KHAMOSKIWAN
+}
+
+#Kanorok
+KRK = {
+	color = rgb{ 50 200 180 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { taiamican } 
+	capital = STATE_GANDENASKIY
+}
+
+#Zomur
+ZOM = {
+	color = rgb{ 100 100 10 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { navrozdok } 
+	capital = STATE_KHAMOSKIWAN
+}
+
+#Tulirakai
+TKI = {
+	color = rgb{ 100 100 100 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { taiamican } 
+	capital = STATE_TSURWA
+}
+
+#Tenshorin
+TEN = {
+	color = rgb{ 130 120 100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { taiamican } 
+	capital = STATE_BODHISATTVA
+}
+
+#Dovbush
+DOB = {
+	color = rgb{ 62 80 95 } 
+
+	country_type = unrecognized
+	social_hierarchy = dwarf_social_hierarchy
+	tier = kingdom
+
+	cultures = { hornodukh } 
+	capital = STATE_BORKAGAUW
+}
+
+#Orur Lasa/Banta Durve
+ORL = {
+	color = rgb{ 71 92 40 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	religion = animist
+	cultures = { bintukin } 
+	capital = STATE_NIPOTMIK
+}
+
+#Bukkloy
+BUK = {
+	color = rgb{ 109 49 94 } 
+
+	country_type = unrecognized
+
+	tier = kingdom
+	
+	cultures = { plundboelka praprandgaw } 
+	capital = STATE_BORKAGAUW
+}
+
+#Zetam
+ZET = {
+	color = rgb{ 40 92 92  } 
+
+	country_type = unrecognized
+
+	tier = kingdom
+	
+	cultures = { bintukin praprandgaw } 
+	capital = STATE_NIPOTMIK
+}
+
+OTI = { 
+	color = rgb{ 49 49 109 } 
+
+	country_type = unrecognized
+
+	tier = empire
+	
+	cultures = { bintukin plundboelka praprandgaw } 
+	capital = STATE_NIPOTMIK
+}
+
+#Ayscarin
+AYS = {
+	color = rgb{ 82 120 125 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { praprandgaw } 
+	capital = STATE_LAFUYLAN
+}
+
+#Zarnak
+ZAR = {
+	color = rgb{ 16 100 95 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { plundboelka praprandgaw } 
+	capital = STATE_LAFUYLAN
+}
+
+#Yukag
+YKG = {
+	color = rgb{ 62 80 155 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { plundboelka } 
+	capital = STATE_HABENZUT
+}
+
+
+#Ganstaria
+GAN = {
+	color = rgb{ 50 110 95 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { plundboelka } 
+	capital = STATE_BORKAGAUW
+}
+
+#Nagabumi
+NBI = {
+	color = { 57 91 101 }
+
+	country_type = preindustrial
+
+	tier = empire
+	
+	cultures = { gulf_naga jungle_naga }
+	capital = STATE_LAZILKEP
+}
+
+#Locari Company
+OLC = {
+	color = rgb{ 173 224 208 } 
+
+	country_type = colonial
+
+	tier = grand_principality
+
+	cultures = { pecif } 
+	capital = STATE_JIVANTA
+}
+
+TIS = {
+	color = { 190 133 82 }
+
+	country_type = unrecognized
+
+	tier = empire
+	
+	cultures = { awakened plundboelka praprandgaw bintukin }
+	capital = STATE_DANKASEMBE
+}

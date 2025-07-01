@@ -1,0 +1,66 @@
+﻿kamiran_decision = {
+	is_shown = {
+		exists = c:DUM
+		c:DUM = THIS
+		NOT = { country_has_state_religion = rel:cult_of_the_sun }
+	}
+	possible = {
+		NOT = {
+			has_journal_entry = je_kinfold
+		}
+		ig:ig_devout = {
+			is_marginal = no
+		}
+		has_law = law_type:law_monarchy
+		NOT = { has_law = law_type:law_state_religion }
+		NOT = { has_law = law_type:law_state_atheism }
+	}
+	when_taken = {
+		set_state_religion = rel:cult_of_the_sun
+		state_religion_switch_effect = yes
+		ig:ig_devout = {
+			remove_ideology = ideology_ecumenical_moralist
+			add_ideology = ideology_theocratic_moralist
+			set_interest_group_name = ig_sun_cult 
+			set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
+			set_ig_trait = ig_trait:ig_trait_secular_shrine_theory
+			set_ig_trait = ig_trait:ig_trait_heavenly_sovereign
+			leader ?= {
+				change_character_religion = rel:cult_of_the_sun
+				hidden_effect = {
+					if = {
+						limit = {
+							has_ideology = ideology:ideology_ecumenical_traditionalist
+						}
+						set_ideology = ideology:ideology_traditionalist
+					}
+				}
+			}
+		}
+		random_scope_state = {
+			limit = {
+				owner = ROOT
+				is_capital = yes
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun
+				value = 0.4
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				is_incorporated = yes
+				NOT = { is_capital = yes }
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun
+				value = 0.2
+			}
+		}
+	}
+	ai_chance = {
+		value = 10
+	}
+}
+

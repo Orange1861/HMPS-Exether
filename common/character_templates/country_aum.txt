@@ -1,0 +1,375 @@
+﻿# AUM - Arelon
+
+AUM_arelon_leader_template = {
+			first_name = Aureolanus
+   			last_name = VII
+    		historical = yes
+			ruler = yes
+    		age = 62
+    		dna = dna_arelon_ruler
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_theocrat
+    			traits = {
+				charismatic
+				ruthless
+				tactful
+				masterful_diplomat
+				literary
+    }
+}
+
+AUM_arelon_vamp_template = {
+			first_name = Praevia
+   			last_name = the_Blade_of_Kamiros
+    		historical = yes
+			female = yes
+			is_general = yes
+			ig_leader = yes
+    		age = 33
+    		dna = dna_arelon_vamp
+    		culture = cu:sunkissed
+			religion = rel:cult_of_the_sun
+			interest_group = ig_armed_forces
+   			ideology = ideology_integralist
+    			traits = {
+				brave
+				pious
+				ruthless
+				experienced_offensive_planner		
+    }
+				on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 40
+		}
+	}
+}
+
+AUM_arelon_successor_traditional_1_template = {
+			first_name = Caelivus
+   			last_name = XVI
+    		historical = yes
+			ruler = yes
+    		age = 64
+			dna = dna_arelon_trad_pope_1
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_traditionalist
+    			traits = {
+				cautious
+				pious
+				meticulous
+				basic_political_operator
+    }
+}
+
+AUM_arelon_successor_traditional_2_template = {
+			first_name = Vesturian
+   			last_name = VIII
+    		historical = yes
+			ruler = yes
+    		age = 61
+    		dna = dna_arelon_trad_pope_2
+    		culture = cu:jalian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_corporatist_leader
+    			traits = {
+				romantic
+				arrogant
+				ambitious
+				master_bureaucrat
+    }
+}
+
+AUM_arelon_successor_traditional_3_template = {
+			first_name = Aurephaxes
+   			last_name = II
+    		historical = yes
+			ruler = yes
+    		age = 58
+    		dna = dna_arelon_trad_pope_3
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_fascist
+    			traits = {
+				imposing
+				bigoted
+				ruthless
+				firebrand
+    }
+}
+
+AUM_arelon_successor_traditional_4_template = {
+			first_name = Vesturian
+   			last_name = IX
+    		historical = yes
+			ruler = yes
+    		age = 61
+    		dna = dna_arelon_trad_pope_4
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_fascist
+    			traits = {
+				ruthless
+				imperious
+				direct
+				expert_political_operator
+    }
+}
+
+AUM_arelon_successor_traditional_5_template = {
+			first_name = Heliandros
+   			last_name = V
+    		historical = yes
+			ruler = yes
+    		age = 61
+    		dna = dna_arelon_trad_pope_5 
+    		culture = cu:jalian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_traditionalist
+    			traits = {
+				honorable
+				pious
+				reserved
+				literary
+    }
+}
+
+AUM_arelon_successor_reformer_1_template = {
+			first_name = Verelucian
+   			last_name = XI
+    		historical = yes
+			ruler = yes
+    		age = 63
+    		dna = dna_arelon_lib_pope_1
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_pacifist
+    			traits = {
+				romantic
+				reserved
+				tactful
+				experienced_diplomat
+				literary
+    }
+}
+
+AUM_arelon_successor_reformer_2_template = {
+			first_name = Aurentius
+   			last_name = XIV
+    		historical = yes
+			ruler = yes
+    		age = 58
+    		dna = dna_arelon_lib_pope_2
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_reformer
+    		traits = {
+				tactful
+				honorable
+				cautious
+				charismatic
+				master_bureaucrat
+    }
+}
+
+AUM_arelon_successor_reformer_3_template = {
+			first_name = Solvenarion
+   			last_name = II
+    		historical = yes
+			ruler = yes
+    		age = 62
+    		dna = dna_arelon_lib_pope_3
+    		culture = cu:jalian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_humanitarian
+    		traits = {
+				brave
+				persistent
+				innovative
+				masterful_diplomat
+	}
+}
+
+AUM_arelon_successor_reformer_4_template = {
+			first_name = Caeliraphus
+   			last_name = V
+    		historical = yes
+			ruler = yes
+    		age = 61
+    		dna = dna_arelon_lib_pope_4
+    		culture = cu:jalian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_humanitarian
+    		traits = {
+				direct
+				ambitious
+				imperious
+				experienced_political_operator
+				firebrand
+    }
+}
+
+AUM_arelon_successor_reformer_5_template = {
+			first_name = Verelucian
+   			last_name = XII
+    		historical = yes
+			ruler = yes
+    		age = 60
+    		dna = dna_arelon_lib_pope_5
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_pacifist
+    		traits = {
+				reserved
+				pious
+				meticulous
+				erudite
+				literary
+	}
+}
+
+AUM_arelon_successor_militant_1_template = {
+			first_name = Ignivarus
+   			last_name = IX
+    		historical = yes
+			ruler = yes
+    		age = 61
+    		dna = dna_arelon_army_pope_1
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_jingoist_leader
+    		traits = {
+				direct
+				wrathful
+				persistent
+				experienced_political_operator
+	}
+}
+
+AUM_arelon_successor_militant_2_template = {
+			first_name = Lucenor
+   			last_name = IV
+    		historical = yes
+			ruler = yes
+    		age = 62
+    		dna = dna_arelon_army_pope_2
+    		culture = cu:jalian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_corporatist_leader
+    		traits = {
+				romantic
+				imposing
+				pious
+				tactful
+				erudite
+	}
+}
+
+AUM_arelon_successor_militant_3_template = {
+			first_name = Photarian
+   			last_name = XIII
+    		historical = yes
+			ruler = yes
+    		age = 62
+    		dna = dna_arelon_army_pope_3
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_integralist
+    		traits = {
+				charismatic
+				arrogant
+				direct
+				demagogue
+	}
+}
+
+AUM_arelon_successor_militant_4_template = {
+			first_name = Umbraxis
+   			last_name = III
+    		historical = yes
+			ruler = yes
+    		age = 59
+    		dna = dna_arelon_army_pope_4
+    		culture = cu:jalian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_integralist
+    		traits = {
+				reserved
+				innovative
+				honorable
+				meticulous
+				engineer
+	}
+}
+
+AUM_arelon_successor_militant_5_template = {
+			first_name = Aureolanus
+   			last_name = VIII
+    		historical = yes
+			ruler = yes
+    		age = 61
+    		dna = dna_arelon_army_pope_5
+    		culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_theocrat
+    		traits = {
+				pious
+				reserved
+				tactful
+				masterful_diplomat
+	}
+}
+
+AUM_arelon_successor_traditional_random_template = {
+			first_name = Hemmelfart
+   			last_name = II
+			ruler = yes
+    		age = 53
+    		culture = primary_culture
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_theocrat
+
+}
+
+AUM_arelon_successor_reformer_random_template = {
+			first_name = Gyatso
+   			last_name = II
+			ruler = yes
+    		age = 53
+    		culture = primary_culture
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_theocrat
+
+}
+
+AUM_arelon_successor_militant_random_template = {
+			first_name = Sulyvahn
+   			last_name = II
+			ruler = yes
+    		age = 53
+    		culture = primary_culture
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+   			ideology = ideology_theocrat
+
+}

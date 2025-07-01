@@ -1,0 +1,78 @@
+﻿# DRO - Yavira
+
+DRO_yavira_leader_template = {
+			first_name = Aennansa
+   			last_name = Eiphrusae
+    		historical = yes
+			ruler = yes
+			female = yes
+    		age = 34
+    		dna = dna_yavira_ruler
+    		culture = cu:aridrun
+			religion = rel:southern_fosirmi
+			interest_group = ig_devout
+   			ideology = ideology_reformer
+    			traits = {
+				aesthete
+				tactful
+				romantic
+				experienced_diplomat
+    }
+}
+
+DRO_yavira_wedding_heir_template = {
+			first_name = Rhaephn
+   			last_name = Eiphrusae
+    		historical = yes
+			heir = yes
+    		age = 18
+    		dna = dna_yavira_wedding_heir
+    		culture = cu:aridrun
+			religion = rel:southern_fosirmi
+			interest_group = ig_intelligentsia
+   			ideology = ideology_humanitarian_royalist
+    			traits = {
+				ambitious
+				innovative
+				inexperienced
+				
+    }
+}
+
+DRO_yavira_traditional_heir_template = {
+			first_name = Crigweirn
+   			last_name = Eiphrusae
+    		historical = yes
+			heir = yes
+			female = yes
+    		age = 40
+    		dna = dna_yavira_traditional_heir
+    		culture = cu:aridrun
+			religion = rel:southern_fosirmi
+			interest_group = ig_landowners
+   			ideology = ideology_traditionalist
+    			traits = {
+				arrogant
+				ambitious
+				experienced_political_operator
+    }
+}
+
+DRO_yavira_traditional_agitator_template = {
+			first_name = Crigweirn
+   			last_name = Eiphrusae
+    		historical = yes
+			is_agitator = yes
+			female = yes
+    		age = 50
+    		dna = dna_yavira_traditional_heir
+    		culture = cu:aridrun
+			religion = rel:southern_fosirmi
+			interest_group = ig_landowners
+   			ideology = ideology_traditionalist
+    			traits = {
+				arrogant
+				ambitious
+				experienced_political_operator
+    }
+}

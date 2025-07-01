@@ -1,0 +1,30 @@
+﻿je_dwarf_excavation = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+
+immediate = {
+	add_modifier = {
+		name = excavating_gugnos_cavein
+		multiplier = money_amount_multiplier_small
+		months = 9
+	}
+}
+
+	timeout = 270
+
+	on_timeout = {
+		trigger_event = { id = gnoll_mountain.4 popup = yes }
+	}
+
+	# on_monthly_pulse = {
+	# 	random_events = {
+
+	# 	}
+	# }
+
+	
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

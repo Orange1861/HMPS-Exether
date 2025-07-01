@@ -1,0 +1,663 @@
+﻿movement_romantic = {
+	category = movement_category_ideological
+
+	ideology = ideology_noble_burdens
+	character_ideologies = {
+		ideology_romantic
+	}
+	
+	disband_trigger = {
+		has_law = law_type:law_slavery_banned
+	}
+	on_disbanded = {}
+	
+	creation_trigger = {
+		has_law = law_type:law_guild_bondage
+		has_technology_researched = empiricism
+	}
+	creation_weight = {
+		value = 100
+	}	
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_abolitionist
+			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_humanitarian_royalist
+			has_ideology = ideology:ideology_noble_burdens
+			OR = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_abolitionist
+					has_ideology = ideology:ideology_humanitarian
+					has_ideology = ideology:ideology_humanitarian_royalist
+					has_ideology = ideology:ideology_noble_burdens
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy	
+		movement_support_aristocrats
+		movement_support_academics
+		movement_support_clergymen
+		movement_support_wizards
+		movement_support_bureaucrats
+		movement_support_clerks
+		movement_support_slaves
+		movement_support_guild_bonded
+	}	
+
+	pop_support_weight = {
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 90
+					desc = "POP_ARISTOCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 10
+					desc = "UPPER_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 40
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = clergymen
+				}
+				add = {
+					value = 40
+					desc = "POP_CLERGYMEN"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 40
+					desc = "POP_CLERGYMEN"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 30
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 10
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 40
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = guild_bonded
+				}
+				add = {
+					value = 40
+					desc = "POP_SLAVES"
+				}
+			}
+			else = {
+				add = {
+					value = 10
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+		
+		multiply = {
+			desc = "SLAVE_STATE"
+			value = 1.0
+			
+			if = {
+				limit = {
+					state = { is_guild_slave_state = yes }
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							is_pop_type = capitalists
+							is_pop_type = clergymen
+							is_pop_type = officers
+							is_pop_type = farmers
+						}				
+					}
+					
+					subtract = 0.95
+				}
+				else = {
+					subtract = 0.10
+				}
+			}			
+		}
+		
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+		
+		weight = {
+			value = 100
+		}
+	
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_guild_slave_state = yes
+					NOT = { has_variable = former_free_state }
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {	
+							OR = {
+								has_law = law_type:law_slavery_banned
+								has_variable = slavery_recently_enacted
+							}
+							any_scope_state = {
+								OR = {
+								   is_guild_slave_state = no
+								   has_variable = former_free_state	
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}
+			
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law = law_type:law_slavery_banned } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+
+		forced_tags = {
+			ROM = {
+				trigger = {
+					owner ?= { has_journal_entry = je_dcw_countdown }
+				}
+				weight = 1000
+			}
+		}
+
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}	
+	
+		weight = {
+			value = 50
+		}	
+
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_guild_slave_state = yes
+					NOT = { has_variable = former_free_state }
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {	
+							OR = {
+								has_law = law_type:law_slavery_banned
+								has_variable = slavery_recently_enacted
+							}
+							any_scope_state = {
+								OR = {
+								   is_guild_slave_state = no
+								   has_variable = former_free_state	
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}		
+		}		
+	}	
+	
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner.ruler ?= {
+					has_ideology = ideology:ideology_astra
+				}
+			}
+			
+			add = {
+				value = 0.1
+				desc = "RULER_IS_PRO_SLAVERY"
+			}
+		}
+	}
+}
+
+movement_pro_consortium = {
+	category = movement_category_ideological
+
+	ideology = ideology_corporate_sovereignty_movement
+	character_ideologies = {
+		ideology_astra
+	}
+
+	disband_trigger = {
+		NOT = {
+			has_law = law_type:law_guild_bondage
+		}
+	}
+	
+	on_disbanded = {}
+	
+	creation_trigger = {
+		OR = {
+			has_variable = slavery_recently_abolished
+			has_law = law_type:law_guild_bondage
+		}
+	}	
+	creation_weight = {
+		value = 100
+	}	
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	
+	character_support_trigger = {
+		trigger_if = {
+			limit = {
+				is_in_exile_pool = yes
+			}
+			has_ideology = ideology:ideology_astra
+		}
+		trigger_else = {
+			OR = {
+				has_ideology = ideology:ideology_astra
+			}
+			interest_group ?= {
+				has_ideology = ideology:ideology_astra
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_astra
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_trigger = {
+		state = { is_guild_slave_state = yes }				
+	}
+
+	pop_support_factors = {
+		movement_support_slave_state
+		movement_support_high_literacy
+		movement_support_capitalists
+		movement_support_archmages
+		movement_support_farmers
+		movement_support_clergymen
+		movement_support_officers
+		movement_support_wizards
+	}
+
+	pop_support_weight = {	
+		add = {
+			value = 10
+			desc = "SLAVE_STATE"
+		}	
+	
+		if = {
+			limit = {
+				is_pop_type = capitalists
+			}
+			add = {
+				value = 100
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = archmages
+			}
+			add = {
+				value = 60
+				desc = "POP_ARCHMAGES"
+			}
+		}	
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+		}		
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 40
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 40
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = wizards
+			}
+			add = {
+				value = 40
+				desc = "POP_WIZARDS"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+	}
+	
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+			
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_guild_slave_state = no 
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {											
+							OR = {
+								has_law = law_type:law_legacy_slavery
+								has_variable = slavery_recently_abolished
+							}
+							any_scope_state = {
+								OR = {
+								   is_guild_slave_state = yes 
+								   has_variable = former_slave_state			
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}
+			
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { NOT = { has_law = law_type:law_slavery_banned } } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}		
+		}
+
+		forced_tags = {
+			CSA = {
+				trigger = {
+					owner ?= { has_journal_entry = je_dcw_countdown }
+				}
+				weight = 1000
+			}
+		}
+
+	}
+	
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}	
+	
+		weight = {
+			value = 10
+
+			if = {
+				limit = {
+					OR = {
+						owner ?= {
+							OR = {
+								has_variable = slavery_recently_abolished
+							}						
+						}
+						scope:clout <= 0
+					}
+				}
+				add = 1000
+			}
+		}
+		
+		forced_tags = {
+			CSA = {
+				trigger = {
+					owner ?= { has_journal_entry = je_dcw_countdown }
+				}
+				weight = 1000
+			}
+		}
+		
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_guild_slave_state = no 
+					NOT = { has_variable = former_slave_state }
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {											
+							OR = {
+								has_law = law_type:law_slavery_banned
+								has_variable = slavery_recently_abolished
+							}
+							any_scope_state = {
+								OR = {
+								   is_guild_slave_state = yes 
+								   has_variable = former_slave_state			
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}
+		}	
+	}
+	
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner.ruler ?= { has_ideology = ideology:ideology_romantic }
+			}
+			
+			add = {
+				value = 0.1
+				desc = "RULER_IS_ANTI_SLAVERY"
+			}
+		}
+	
+		if = {
+			limit = { 
+				owner.army_size > 0 
+				owner = { NOT = { has_law = law_type:law_slavery_banned } }
+			}
+			
+			add = {
+				owner = {
+					every_scope_building = {
+						limit = { 
+							is_building_type = building_barracks
+							state = { is_guild_slave_state = yes }
+						}
+						add = this.level
+					}
+				}
+				
+				divide = {
+					value = owner.army_size
+					min = 1
+				}			
+				
+				subtract = 0.5
+				multiply = -1
+				min = 0
+				max = 0.5			
+				desc = "ARMY_FRACTION_IN_SLAVE_STATES"			
+			}			
+		}
+		
+		if = {
+			limit = { 
+				owner.navy_size > 0
+				owner = { NOT = { has_law = law_type:law_slavery_banned } }
+			}		
+
+			add = {
+				owner = {
+					every_scope_building = {
+						limit = { 
+							is_building_type = building_naval_base
+							state = { is_guild_slave_state = yes }
+						}
+						add = this.level
+					}
+				}
+				
+				divide = {
+					value = owner.navy_size
+					min = 1
+				}			
+				
+				subtract = 0.5
+				multiply = -0.5
+				min = 0
+				max = 0.25			
+				desc = "NAVY_FRACTION_IN_SLAVE_STATES"			
+			}	
+		}
+	}
+
+	law_enactment_radicalism_multiplier = 2.0
+}

@@ -1,0 +1,406 @@
+﻿MILITARY_FORMATIONS = {
+	c:LAC ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lacertia
+			name = "Lily Order Knights"
+
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CREUCHE
+				count = 6
+			}
+			save_scope_as = lac_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_lacertia
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = lac_general
+		}
+		scope:lac_general = {
+			transfer_to_formation = scope:lac_army
+		}
+	}
+	
+	c:AZI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lacertia
+			name = "Amanzi People's Militia"
+
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MALANDA
+				count = 10
+			}
+
+			save_scope_as = azi_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_lacertia
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = azi_general
+		}
+		scope:azi_general = {
+			transfer_to_formation = scope:azi_army
+		}
+	}
+
+		c:BTR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_elusive_coves
+			
+			name = "Boarding Parties"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ARGYSTSIK
+				count = 15
+			}
+			save_scope_as = btr_army1
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_elusive_coves
+			save_scope_as = btr_general1
+		}
+		scope:btr_general1 = {
+			transfer_to_formation = scope:btr_army1
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_elusive_coves
+
+			name = "Grand Corsair Fleet"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_ARGYSTSIK
+				count = 17
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ARGYSTSIK
+				count = 18
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_HILOKINI
+				count = 25
+			}
+			save_scope_as = btr_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_elusive_coves
+			commander_rank = commander_rank_3
+			interest_group = ig_armed_forces
+			save_scope_as = btr_admiral
+		}
+		scope:btr_admiral = {
+			transfer_to_formation = scope:btr_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_elusive_coves
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = btr_admiral2
+		}
+		scope:btr_admiral2 = {
+			transfer_to_formation = scope:btr_fleet
+		}
+
+	}
+	
+	c:LIR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_fahavalo
+			
+			name = "Fahavalo Garrison"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_YNTHOLG
+				count = 15
+			}
+			save_scope_as = lir_army1
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_fahavalo
+
+			name = "Ankazobe Garrison"
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_YNTHOLG
+				count = 5
+			}
+			save_scope_as = lir_army2
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_fahavalo
+			save_scope_as = lir_general1
+		}
+		scope:lir_general1 = {
+			transfer_to_formation = scope:lir_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_fahavalo
+			save_scope_as = lir_general2
+		}
+		scope:lir_general2 = {
+			transfer_to_formation = scope:lir_army2
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_fahavalo
+
+			name = "Far Tides Armada"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_YNTHOLG
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_YNTHOLG
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_TSIMIHAVANA
+				count = 30
+			}
+			save_scope_as = lir_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_fahavalo
+			commander_rank = commander_rank_3
+			interest_group = ig_armed_forces
+			save_scope_as = lir_admiral
+		}
+		scope:lir_admiral = {
+			transfer_to_formation = scope:lir_fleet
+		}
+
+	}
+
+	C:DEV ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_fahavalo
+			name = "Devil's Dragoons"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VAROTSOA
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_FIANARIVO
+				count = 15
+			}
+			save_scope_as = dev_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_fahavalo
+			interest_group = ig_armed_forces
+			save_scope_as = dev_gen1
+		}
+		scope:dev_gen1 = {
+			transfer_to_formation = scope:dev_army1
+		}
+	}
+	
+
+	c:JUX ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HIJAASCH
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				service_type = conscript
+				state_region = s:STATE_HIJAASCH
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HIJAASCH
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				service_type = conscript
+				state_region = s:STATE_HIJAASCH
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HIJAASCH
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				service_type = conscript
+				state_region = s:STATE_HIJAASCH
+				count = 5
+			}
+			save_scope_as = juxarmy
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = juxgen
+		}
+		scope:juxgen = {
+			transfer_to_formation = scope:juxarmy
+		}
+	}
+
+	c:VHO ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_JEIBUO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SMILTYNECAT
+				count = 5
+			}
+			save_scope_as = vhoarmy
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = vhogen
+		}
+		scope:vhogen = {
+			transfer_to_formation = scope:vhoarmy
+		}
+	}
+
+	c:SAE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LAIVINMAR
+				count = 10
+			}
+			save_scope_as = saearmy
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = saegen
+		}
+		scope:saegen = {
+			transfer_to_formation = scope:saearmy
+		}
+	}
+
+	c:VHA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_AACHTINT
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_UPESTARR
+				count = 10
+			}
+			save_scope_as = lem_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = lem_general
+		}
+		scope:lem_general = {
+			transfer_to_formation = scope:lem_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_vindon_narrows
+
+			name = "Narrows Patrol Fleet"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_AACHTINT
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_AACHTINT
+				count = 10
+			}
+			save_scope_as = vha_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_vindon_narrows
+			interest_group = ig_armed_forces
+			save_scope_as = vha_admiral
+		}
+		scope:vha_admiral = {
+			transfer_to_formation = scope:vha_fleet
+		}
+
+	}
+	
+}

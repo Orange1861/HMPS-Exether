@@ -1,0 +1,183 @@
+﻿
+seize_domestic_crag_holdings_button = {
+	name = "seize_domestic_crag_holdings_button"
+	desc = "seize_domestic_crag_holdings_button_desc"
+
+	possible = {
+
+		custom_tooltip = {
+			text = danger_level_5_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(craggedwyn_control_progress_bar)" <= 5
+			}
+		}
+		c:CDW = {
+			any_scope_state = {
+				state_is_in_settler_coast = yes
+				count = 1
+			}
+			any_scope_state = {
+				state_is_in_settler_coast = no
+				count >= 1
+			}
+		}
+		custom_tooltip = {
+				text = no_craggedwyn_implosion_tt
+				NOT = { has_variable = craggedwyn_collapse_var } 
+		}
+
+	}
+
+	visible = {
+		c:CDW = {
+			any_scope_state = {
+				state_is_in_settler_coast = yes
+				count = 1
+			}
+			any_scope_state = {
+				state_is_in_settler_coast = no
+				count >= 1
+			}
+		}
+	}
+
+	effect = {
+		
+		c:CDW ?= {
+			random_scope_state = {
+				limit = {
+					state_is_in_settler_coast = yes
+				}
+				set_state_owner = root
+			}
+		}
+		craggedwyn_small_danger_effect = yes
+		
+	}
+	
+
+	ai_chance = {
+		value = 50
+	}
+}
+
+grant_crag_overseas_state_button = {
+	name = "grant_crag_overseas_state_button"
+	desc = "grant_crag_overseas_state_button_desc"
+
+	possible = {
+
+		custom_tooltip = {
+			text = danger_level_5_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(craggedwyn_control_progress_bar)" <= 5
+			}
+		}
+		any_scope_state = {
+			state_is_in_settler_coast = no
+		}
+		
+
+		custom_tooltip = {
+			text = use_special_measures_tt
+			any_scope_state = {
+				state_is_in_settler_coast = no
+				has_decree = decree_special_measures
+			}
+		}
+		
+
+	}
+
+	visible = {
+		NOT = { has_variable = recently_granted_state_var }
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = grant_crag_tt
+			random_scope_state = {
+			limit = {
+				state_is_in_settler_coast = no
+				has_decree = decree_special_measures
+			}
+			set_state_owner = c:CDW
+			set_state_type = incorporated
+			}
+		}
+		
+		
+		set_variable = {
+			name = recently_granted_state_var
+			years = 12
+		}
+		
+	}
+	
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+end_charade_button = {
+	name = "end_charade_button"
+	desc = "end_charade_button_desc"
+
+	possible = {
+
+		custom_tooltip = {
+			text = healthier_than_ever_tt
+			ruler = {
+				has_variable = ludric_immortality_variable
+			}
+			
+		}
+		
+
+	}
+
+	visible = {
+		
+		OR = {
+			AND = {
+				exists = c:RTD
+				any_neighbouring_state = {
+					OR = {
+						owner ?= c:RTD
+					}
+				}
+			
+				has_truce_with = c:RTD
+			}
+			AND = {
+				exists = c:BDB	
+				any_neighbouring_state = {
+					OR = {
+						owner ?= c:BDB
+					}
+				}
+				has_truce_with = c:BDB
+			}
+		}
+	}
+
+	effect = {
+		
+		end_truce = c:BDB
+		end_truce = c:RTD
+		
+		
+	}
+	
+
+	ai_chance = {
+		value = 50
+		if = {
+			limit = {
+				has_variable = evil_zarnak_var
+			}
+			add = 100
+		}
+	}
+}

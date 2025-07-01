@@ -1,0 +1,62 @@
+﻿COUNTRIES = {
+	c:DAR = {
+		effect_starting_technology_tier_1_tech = yes
+
+		ig:ig_industrialists ?= {
+			add_ruling_interest_group = yes
+		}
+		set_ruling_interest_groups = {
+        	ig_industrialists
+        }
+
+
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_private_health_insurance
+		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_ecumenical_recognition
+		activate_law = law_type:law_artificer_guilds
+		activate_law = law_type:law_dwarf_guild_privileges
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_magical_schools
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_restricted_child_labor
+		activate_law = law_type:law_dwarf_guild_privileges
+
+		add_technology_researched = hydraulic_cranes
+		add_technology_researched = airship
+		add_technology_researched = skyports
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = maglev
+
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_magical_focus
+			level = 2
+		}
+
+		add_company = company_type:company_yelfiegun
+        company:company_yelfiegun = {
+      set_company_establishment_date = 1160.1.1
+      set_company_state_region = s:STATE_MOUNT_YELFIS
+		} 
+		
+		add_taxed_goods = g:liquor
+		add_taxed_goods = g:services
+		add_taxed_goods = g:luxury_potions
+
+	}
+}

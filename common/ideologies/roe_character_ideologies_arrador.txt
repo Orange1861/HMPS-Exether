@@ -1,0 +1,467 @@
+ideology_astra = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_astra.dds"
+	
+	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_plutocracy = strongly_approve
+		law_monarchy = strongly_disapprove		
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_magocracy = neutral
+		law_corporate_state = neutral
+		law_theocracy = neutral
+		law_council_republic = strongly_disapprove
+	}
+
+	lawgroup_magic = {
+		law_no_magic = neutral
+		law_divine_miracles = neutral
+		law_druidic_circles = strongly_disapprove
+		law_artificer_guilds = strongly_approve
+		law_astrological_studies = neutral
+		law_mage_hunters = disapprove
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = strongly_approve
+		law_environmental_regulation = disapprove
+		law_magic_banned = strongly_disapprove
+		law_industry_banned = strongly_disapprove
+	}
+
+	lawgroup_slavery = {
+		law_guild_bondage = strongly_approve
+		law_debt_slavery = neutral
+		law_legacy_slavery = disapprove
+		law_slave_trade = disapprove
+		law_slavery_banned = strongly_disapprove
+	}
+
+	country_trigger = {
+		exists = ig:ig_industrialists
+		ig:ig_industrialists = {
+			is_marginal = no
+			has_ideology = ideology:ideology_corporate_sovereignty
+		}
+	}
+
+	interest_group_leader_trigger = {
+		ideology_astra_valid_trigger = yes
+	}
+	
+	non_interest_group_leader_trigger = {
+		# Agitator ideologies should disapprove of a current law
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_child_labor_allowed
+				has_law = law_type:law_free_trade
+				has_law = law_type:law_commercialized_agriculture
+			}
+		}
+		interest_group = {
+			ideology_astra_valid_trigger = yes
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 200
+		if = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+			}
+			add = 1000
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_mages
+					is_interest_group_type = ig_armed_forces
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_artificer_guilds
+						has_law = law_type:law_guild_bondage
+						has_law = law_type:law_free_trade
+						has_law = law_type:law_laissez_faire
+					}
+				}
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_scope_state = {
+							any_scope_building = {
+								is_building_type = building_urban_center
+								level >= 10
+							}
+						}
+					}
+				}
+			}
+			add = -150
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_country_type = unrecognized
+				}
+			}
+			add = -50
+		}
+
+		if = {
+			limit = {
+				owner = {
+					country_rank >= rank_value:great_power
+				}
+			}
+			add = 25
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+			add = -200
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+	
+	non_interest_group_leader_weight = {
+		value = 200
+		if = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+			}
+			add = 1000
+		}
+
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_mages
+					is_interest_group_type = ig_armed_forces
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_artificer_guilds
+						has_law = law_type:law_guild_bondage
+						has_law = law_type:law_free_trade
+						has_law = law_type:law_laissez_faire
+					}
+				}
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_scope_state = {
+							any_scope_building = {
+								is_building_type = building_urban_center
+								level >= 10
+							}
+						}
+					}
+				}
+			}
+			add = -150
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_country_type = unrecognized
+				}
+			}
+			add = -50
+		}
+
+		if = {
+			limit = {
+				owner = {
+					country_rank >= rank_value:great_power
+				}
+			}
+			add = 25
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+			add = -200
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}	
+}
+
+ideology_romantic = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_romantic.dds"
+	
+	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_plutocracy = strongly_disapprove
+		law_monarchy = strongly_approve		
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_magocracy = neutral
+		law_corporate_state = neutral
+		law_theocracy = neutral
+		law_council_republic = strongly_disapprove
+	}
+
+	lawgroup_slavery = {
+		law_slavery_banned = strongly_approve
+		law_legacy_slavery = disapprove
+		law_slave_trade = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_guild_bondage = strongly_disapprove
+	}
+
+	country_trigger = {
+		exists = ig:ig_landowners
+		ig:ig_landowners = {
+			is_marginal = no
+			has_ideology = ideology:ideology_noble_burdens
+		}
+		
+	}
+
+	interest_group_leader_trigger = {
+		ideology_romantic_valid_trigger = yes
+	}
+	
+	non_interest_group_leader_trigger = {
+		# Agitator ideologies should disapprove of a current law
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_slavery_banned
+			}
+		}
+		interest_group = {
+			ideology_romantic_valid_trigger = yes
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 200
+		# more likely for industrialists
+		if = {
+			limit = {
+				is_interest_group_type = ig_landowners
+			}
+			add = 1000
+		}
+		# more likely for PB and Wizards with pro consortium laws
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_mages
+					is_interest_group_type = ig_armed_forces
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_artificer_guilds
+						has_law = law_type:law_guild_bondage
+						has_law = law_type:law_free_trade
+						has_law = law_type:law_laissez_faire
+					}
+				}
+			}
+			add = 100
+		}
+		# very unlikely in countries without a large urban center
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_scope_state = {
+							any_scope_building = {
+								is_building_type = building_urban_center
+								level >= 10
+							}
+						}
+					}
+				}
+			}
+			add = -150
+		}
+		# Less likely for unrecognized countries
+		if = {
+			limit = {
+				owner = {
+					is_country_type = unrecognized
+				}
+			}
+			add = -50
+		}
+		# More likely for GP's
+		if = {
+			limit = {
+				owner = {
+					country_rank >= rank_value:great_power
+				}
+			}
+			add = 25
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+			add = -200
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+	
+	non_interest_group_leader_weight = {
+		value = 200
+		# more likely for industrialists
+		if = {
+			limit = {
+				is_interest_group_type = ig_landowners
+			}
+			add = 1000
+		}
+		# more likely for PB and Wizards with pro consortium laws
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_mages
+					is_interest_group_type = ig_armed_forces
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_artificer_guilds
+						has_law = law_type:law_guild_bondage
+						has_law = law_type:law_free_trade
+						has_law = law_type:law_laissez_faire
+					}
+				}
+			}
+			add = 100
+		}
+		# very unlikely in countries without a large urban center
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_scope_state = {
+							any_scope_building = {
+								is_building_type = building_urban_center
+								level >= 10
+							}
+						}
+					}
+				}
+			}
+			add = -150
+		}
+		# Less likely for unrecognized countries
+		if = {
+			limit = {
+				owner = {
+					is_country_type = unrecognized
+				}
+			}
+			add = -50
+		}
+		# More likely for GP's
+		if = {
+			limit = {
+				owner = {
+					country_rank >= rank_value:great_power
+				}
+			}
+			add = 25
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+			add = -200
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}	
+}

@@ -1,0 +1,103 @@
+﻿namespace = lighthouse
+
+#Survey complete
+lighthouse.1 = {
+    type = country_event
+
+    id = lighthouse.1
+    dlc = dlc_roe
+    title = lighthouse.1.t
+    desc = lighthouse.1.d
+    flavor = lighthouse.1.f
+
+    placement = scope:lighthouse_state_scope
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    trigger = {
+        # Triggered by je_lighthouse_survey
+    }
+
+    immediate = {
+        s:STATE_NGURULAN = {
+            random_scope_state = {
+                save_scope_as = lighthouse_state_scope
+            }
+        }
+    }
+
+    option = {
+		name = lighthouse.1.a
+        default_option = yes
+        scope:lighthouse_state_scope = {
+            add_modifier = {
+                name = modifier_lighthouse_site
+            }
+        }
+        show_as_tooltip = {
+        	remove_modifier = lighthouse_survey
+        }
+        add_journal_entry = {
+        	type = je_lighthouse_construction
+            target = scope:lighthouse_state_scope
+        }
+    }
+}
+
+# Lighthouse complete
+lighthouse.2 = {
+    type = country_event
+
+    id = lighthouse.2
+    dlc = dlc_roe
+    title = lighthouse.2.t
+    desc = lighthouse.2.d
+    flavor = lighthouse.2.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    placement = scope:lighthouse_state_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        s:STATE_NGURULAN = {
+            random_scope_state = {
+                save_scope_as = lighthouse_state_scope
+            }
+        }
+    }
+
+    trigger = {
+        # Triggered by je_lighthouse_construction
+    }
+
+	option = {
+		name = lighthouse.2.a
+        default_option = yes
+        highlighted_option = yes
+        trigger = {
+            custom_tooltip = {
+        		text = lighthouse_built_tooltip
+        	}
+        }
+        add_modifier = {
+            name = lighthouse_built
+            days = normal_modifier_time
+        }
+	}
+}

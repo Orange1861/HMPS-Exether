@@ -1,0 +1,20 @@
+﻿effect_has_custom_journals = {
+	set_variable = {
+		name = has_custom_journals_var
+		value = 0
+	}
+}
+
+effect_has_flavored_interest_groups = {
+	set_variable = {
+		name = has_flavored_interest_groups_var
+		value = 0
+	}
+}
+
+effect_has_major_formable = {
+	set_variable = {
+		name = has_major_formable_var
+		value = 0
+	}
+}

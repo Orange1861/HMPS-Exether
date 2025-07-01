@@ -1,0 +1,37 @@
+je_vae_penal = {
+	icon = "gfx/interface/icons/law_icons/debt_slavery.dds"
+	
+	group = je_group_historical_content
+	
+    scripted_button = je_extend_penal_contracts_button
+	scripted_button = je_cement_penal_contracts_button
+    scripted_button = je_penal_contracts_indep_button
+	
+	#add starting flavor event later
+	
+	complete = {
+        NOR = { 
+            has_modifier = modifier_vae_penal_1
+			has_modifier = modifier_vae_penal_2
+        }
+		has_law = law_type:law_slavery_banned
+    }
+	
+	# add random events later, prison riot, giant prisoners, industrial sabotage, organized crime, writers get on this
+	
+	on_complete = {
+		#add a completion flavor event
+		custom_tooltip = {
+			text = je_vae_penal_button_tt_2
+		}
+		add_modifier = {
+			name = modifier_penal_abolition
+		}
+		hidden_effect = {
+			remove_modifier = modifier_vae_penal_contract_extension_cooldown
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

@@ -1,0 +1,2857 @@
+﻿assign_state_name_region_rimeroot_jungle = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_LUNARATA ?= this
+            }
+        }
+        STATE_LUNARATA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RONGOMARA ?= this
+            }
+        }
+        STATE_RONGOMARA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_PUCOVATU ?= this
+            }
+        }
+        STATE_PUCOVATU_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RUMATARI ?= this
+            }
+        }
+        STATE_RUMATARI_state_name_assign = yes
+    }
+
+}
+
+assign_state_name_region_thawed_lands = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RAROMARA ?= this
+            }
+        }
+        STATE_RAROMARA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TURAKINA ?= this
+            }
+        }
+        STATE_TURAKINA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_GARPATIA ?= this
+            }
+        }
+        STATE_GARPATIA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WHIRINAKI ?= this
+            }
+        }
+        STATE_WHIRINAKI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BLUMETO ?= this
+            }
+        }
+        STATE_BLUMETO_state_name_assign = yes
+    }
+
+}
+
+assign_state_name_region_razorwind = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_NUWUKUNBRUKT ?= this
+            }
+        }
+        STATE_NUWUKUNBRUKT_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KJELLORU ?= this
+            }
+        }
+        STATE_KJELLORU_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_FLULDAURBYM ?= this
+            }
+        }
+        STATE_FLULDAURBYM_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RUAATTA ?= this
+            }
+        }
+        STATE_RUAATTA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SATBULV ?= this
+            }
+        }
+        STATE_SATBULV_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WUTUNWOS ?= this
+            }
+        }
+        STATE_WUTUNWOS_state_name_assign = yes
+    }
+
+}
+assign_state_name_region_south_toftir = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_DASRUGODA ?= this
+            }
+        }
+        STATE_DASRUGODA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_GRORBONFOW ?= this
+            }
+        }
+        STATE_GRORBONFOW_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RAHKIS ?= this
+            }
+        }
+        STATE_RAHKIS_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BRESTVARL ?= this
+            }
+        }
+        STATE_BRESTVARL_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SJETADIKK ?= this
+            }
+        }
+        STATE_SJETADIKK_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BRAATTA ?= this
+            }
+        }
+        STATE_BRAATTA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RAVGA ?= this
+            }
+        }
+        STATE_RAVGA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BRIFTEPLYG ?= this
+            }
+        }
+        STATE_BRIFTEPLYG_state_name_assign = yes
+    }
+
+}
+
+
+STATE_RAHKIS_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RAHKIS_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RAHKIS_ocelian
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RAHKIS_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RAHKIS_high_elf
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RAHKIS_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_NUWUKUNBRUKT_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_NUWUKUNBRUKT_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_NUWUKUNBRUKT_ocelian
+
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NUWUKUNBRUKT_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NUWUKUNBRUKT_high_elf
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NUWUKUNBRUKT_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BRESTVARL_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BRESTVARL_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = giant_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BRESTVARL_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRESTVARL_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRESTVARL_high_elf
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRESTVARL_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BRAATTA_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BRAATTA_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = giant_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BRAATTA_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRAATTA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = elf_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRAATTA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRAATTA_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KJELLORU_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_KJELLORU_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = giant_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_KJELLORU_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KJELLORU_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KJELLORU_elf
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KJELLORU_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_DASRUGODA_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_DASRUGODA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_DASRUGODA_elf
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SYLVARIN_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SYLVARIN_bird
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SYLVARIN_high_elf
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_LUMINEVRA_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_LUMINEVRA_bird
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_LUMINEVRA_high_elf
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SJETADIKK_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SJETADIKK_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SJETADIKK_bird
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SJETADIKK_elf
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_FLULDAURBYM_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_FLULDAURBYM_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = giant_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_FLULDAURBYM_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_FLULDAURBYM_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_FLULDAURBYM_elf
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_FLULDAURBYM_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RUAATTA_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RUAATTA_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = giant_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RUAATTA_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RUAATTA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RUAATTA_high_elf
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RUAATTA_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_GRORBONFOW_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_GRORBONFOW_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = bird_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_GRORBONFOW_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_GRORBONFOW_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = bird_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_GRORBONFOW_high_elf
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RAVGA_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = elf_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RAVGA_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = elf_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RAVGA_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = elf_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RAVGA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = elf_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RAVGA_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_WUTUNWOS_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = elf_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_WUTUNWOS_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = elf_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_WUTUNWOS_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = elf_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WUTUNWOS_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = elf_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WUTUNWOS_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BRIFTEPLYG_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BRIFTEPLYG_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = giant_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BRIFTEPLYG_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRIFTEPLYG_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = elf_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRIFTEPLYG_high_elf
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = bird_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BRIFTEPLYG_bird
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+
+STATE_SATBULV_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SATBULV_settlers
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            has_discrimination_trait = giant_heritage   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SATBULV_ocelian
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = giant_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_SATBULV_dragon
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RONGOMARA_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RONGOMARA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RONGOMARA_settlers
+
+    }
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RONGOMARA_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = gnome_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RONGOMARA_gnome
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_LUNARATA_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_LUNARATA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LUNARATA_settlers
+
+    }
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_LUNARATA_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = gnome_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_LUNARATA_gnome
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RUMATARI_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RUMATARI_dragon
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RUMATARI_settlers
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RUMATARI_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = gnome_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RUMATARI_gnome
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_PUCOVATU_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_PUCOVATU_dragon
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_PUCOVATU_settlers
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_PUCOVATU_vairia
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = gnome_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = orc_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_PUCOVATU_gnome
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_WHIRINAKI_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = gnome_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WHIRINAKI_gnome
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_WHIRINAKI_vairia
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_WHIRINAKI_settlers
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RAROMARA_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = gnome_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RAROMARA_gnome
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_RAROMARA_vairia
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = dragon_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_RAROMARA_settlers
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BLUMETO_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BLUMETO_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_BLUMETO_vairia
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BLUMETO_settlers
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TURAKINA_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_TURAKINA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_TURAKINA_vairia
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_TURAKINA_settlers
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_GARPATIA_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_GARPATIA_dragon
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = vairia_culture_group
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_GARPATIA_vairia
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        has_discrimination_trait = gnome_heritage
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_GARPATIA_settlers
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}

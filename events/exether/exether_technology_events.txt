@@ -1,0 +1,165 @@
+﻿namespace = exether_technology_events
+
+exether_technology_events.1 = { 
+	type = country_event
+	placement = root
+	dlc = dlc_roe
+	title = exether_technology_events.1.t
+	desc = exether_technology_events.1.d
+	flavor = exether_technology_events.1.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_images/halflings_speaking.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {
+		has_technology_researched = baking_powder
+		NOT = {
+			has_variable = halfling_pies
+		}
+		any_primary_culture = {
+			has_discrimination_trait = halfling_heritage
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = halfling_pies
+			value = yes
+		}
+
+	}
+
+	option = { #Restrict them
+		name = exether_technology_events.1.a
+
+		add_modifier = {
+			name = baking_powder_regulations
+			days = normal_modifier_time
+		}
+
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = industrialists_pies_restricted
+				days = normal_modifier_time
+			}
+		}
+
+		ig:ig_rural_folk ?= {
+			add_modifier = {
+				name = rural_folk_pies_restricted
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	option = { #Don't restrict them
+		name = exether_technology_events.1.b
+		default_option = yes
+		add_modifier = {
+			name = modifier_pastry_subsidy_cost
+			multiplier = money_amount_multiplier_medium
+			days = normal_modifier_time
+		}
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = 	industrialists_pie_intervention
+				days = normal_modifier_time
+			}
+		}
+	
+	}
+
+	option = { #Restrict the people
+		name = exether_technology_events.1.c
+
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = industrialists_pies_unrestricted
+				days = normal_modifier_time
+			}
+		}
+		ig:ig_rural_folk ?= {
+			add_modifier = {
+				name = rural_folk_pies_unrestricted
+				days = normal_modifier_time
+			}
+		}
+		random_primary_culture = {
+			limit = {
+				has_discrimination_trait = halfling_heritage
+			}
+			save_scope_as = halfling_culture
+		}
+		add_radicals = {
+			pop_type = peasants
+			culture = scope:halfling_culture
+			value = very_large_radicals
+		}
+	}
+}
+exether_technology_events.2 = {
+	type = country_event
+
+	trigger = {
+	}
+
+	event_image = {
+		video = "ogre_vats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	placement = ROOT
+
+	dlc = dlc_roe
+	title = exether_technology_events.2.t
+	desc = exether_technology_events.2.d
+	flavor = exether_technology_events.2.f
+
+	immediate = {
+	}
+
+	option = { # Selective breeding? How about genetic modification
+		name = exether_technology_events.2.a
+		default_option = yes
+		add_modifier = {
+			name = mutagenic_ranches_modifier 
+			days = normal_modifier_time
+		}
+	}
+
+	option = { # One of the researcher wander deeper
+		name = exether_technology_events.2.b
+		trigger = {
+            ig:ig_mages = {
+				is_marginal = no
+			}
+			ig:ig_mages ?= {
+				leader = {
+					NOT = { has_ideology = ideology:ideology_mad_scientist }
+				}
+			}
+        }
+		create_character = {
+			is_agitator = yes
+			interest_group = ig:ig_mages
+			ideology = ideology_mad_scientist
+		}
+		add_modifier = {
+			name = mutagenic_ranches_modifier 
+			days = short_modifier_time
+		}
+	}
+
+}

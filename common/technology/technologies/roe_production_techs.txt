@@ -1,0 +1,318 @@
+﻿hunting_lodges = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/hunting_lodges.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}		
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+ghost_busters = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/exorcists.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		hunting_lodges
+	}		
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+supernatural_pursuit = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/supernatural_pursuit.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		ghost_busters
+		wishstone_machines
+	}		
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+alchemy = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		distillation
+		hunting_lodges
+	}		
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+cloudsilver_refining = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/cloudsilver_distillation.dds"
+	category = production
+	
+	modifier = {
+		state_building_magic_carpet_store_max_level_add = 3
+	}
+
+	unlocking_technologies = {
+		wishstone_machines
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+synthetic_cloudsilver = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	
+	modifier = {
+		state_building_magic_carpet_store_max_level_add = 3
+	}
+	
+	unlocking_technologies = {
+		cloudsilver_refining
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+celestial_mapping = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/celestial_cartography.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+wishstone_machines = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/wishstone_machines.dds"
+	category = production
+	
+	modifier = {
+		state_building_magic_carpet_store_max_level_add = 3
+	}
+
+	unlocking_technologies = {
+		celestial_mapping
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+advanced_contraptions = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/advanced_contraptions.dds"
+	category = production
+	
+	modifier = {
+		state_building_magic_carpet_store_max_level_add = 3
+	}
+
+	unlocking_technologies = {
+		wishstone_machines
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+thaumacore_factories = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/thaumacores.dds"
+	category = production
+	
+	modifier = {
+		state_building_soulwrought_assembly_plant_max_level_add = 10
+	}
+
+	unlocking_technologies = {
+		
+		supernatural_pursuit
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+ectoplasm_engines = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		thaumacore_factories
+		cloudsilver_refining
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+alchemical_transmutation = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/alchemical_transmutation.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		alchemy
+		fractional_distillation
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+thaumaic_engines = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/thaumaic_engines.dds"
+	category = production
+	
+	modifier = {
+		building_haunted_grounds_throughput_add = 0.25
+		building_ship_graveyard_throughput_add = 0.25
+	}
+
+	unlocking_technologies = {
+		advanced_contraptions
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+mutagens = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/mutagens.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		alchemical_transmutation
+		pumpjacks
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+blubber_engine = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/oil_turbines.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		steam_donkey
+		dynamite
+	}
+	
+	ai_weight = {
+		value = 1
+		
+		if = {
+			limit = { 
+				OR = {
+					 has_strategy = ai_strategy_industrial_expansion
+					 has_strategy = ai_strategy_resource_expansion
+				}
+			}
+			add = 2
+		}	
+	}
+}
+
+maglev = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/cloud_castles.dds"
+	category = production
+	
+	modifier = {
+		building_construction_sector_throughput_add = 0.15
+	}
+
+	unlocking_technologies = {
+		nimbium_tech
+		ectoplasm_engines
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+nimbium_tech = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/nimbium.dds"
+	category = production
+	
+	modifier = {
+		building_construction_sector_throughput_add = 0.20
+	}
+
+	unlocking_technologies = {
+		cloudsilver_refining
+		alchemical_transmutation
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}

@@ -1,0 +1,126 @@
+﻿state_trait_malaria = {
+    icon = "gfx/interface/icons/state_trait_icons/malaria.dds"
+	
+	disabling_technologies = { "pharmaceuticals" }
+	
+	modifier = {
+		state_non_homeland_colony_growth_speed_mult = -0.9
+		state_non_homeland_mortality_mult = 0.15
+	}
+}
+
+state_trait_severe_malaria = {
+    icon = "gfx/interface/icons/state_trait_icons/severe_malaria.dds"
+	
+	required_techs_for_colonization = { "pharmaceuticals" }
+	disabling_technologies = { "malaria_prevention" }
+	
+	modifier = {
+		state_non_homeland_colony_growth_speed_mult = -0.95
+		state_non_homeland_mortality_mult = 0.25
+	}
+}
+
+
+state_trait_psionic_delirium = {
+    icon = "gfx/interface/icons/state_trait_icons/delirium.dds"
+
+	disabling_technologies = { "psionic_theory" }
+	
+	modifier = {
+		state_non_homeland_colony_growth_speed_mult = -0.9
+		state_non_homeland_mortality_mult = 0.15
+	}
+}
+
+state_trait_awakened_wildlife = {
+    icon = "gfx/interface/icons/state_trait_icons/danger.dds"
+	
+	required_techs_for_colonization = {
+		"psionic_theory"
+	}
+
+	disabling_technologies = { "thought_shielding" }
+	
+	modifier = {
+		state_non_homeland_colony_growth_speed_mult = -0.95
+		state_non_homeland_mortality_mult = 0.25
+	}
+}
+
+state_trait_dovbush_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 15
+	}	
+}
+
+state_trait_arrakanba_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 15
+	}	
+}
+
+state_trait_new_dumonian_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}	
+}
+
+state_trait_mythos_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 15
+	}	
+}
+
+state_trait_hellenova_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 15
+	}	
+}
+
+state_trait_dragon_tomb = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	modifier = {
+		state_migration_pull_mult = 0.25
+		goods_output_gold_mult = 0.2
+	}	
+}
+
+state_trait_dreamweaver_jungle = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_exotic.dds"	
+	
+	modifier = {
+		goods_output_hardwood_mult = 0.25
+		building_group_bg_hunting_throughput_add = 0.1
+		state_construction_mult = -0.1
+		state_infrastructure_mult = -0.1
+	}
+}
+
+state_trait_shigatsenipiy_coal = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.10
+    }
+}
+
+state_trait_voiceless_caves = {
+	icon = "gfx/interface/icons/state_trait_icons/voiceless_caves.dds"
+	modifier = {
+		state_building_underways_max_level_add = 5
+		state_harvest_condition_psionic_winds_impact_mult = -0.90
+		state_harvest_condition_psionic_storms_impact_mult = -0.66
+		goods_output_lead_mult = 0.2
+	}	
+}

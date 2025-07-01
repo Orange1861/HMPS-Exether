@@ -1,0 +1,19 @@
+﻿COUNTRIES = {
+	c:XXG = {
+		
+		effect_starting_technology_tier_1_tech = yes
+		effect_starting_politics_traditional = yes
+		set_tax_level = medium
+
+		# Laws 
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_matriarchy
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_isolationism
+		
+		set_global_variable = {
+			name = south_sea_empire_tag_var
+			value = c:XXG
+		}
+	}
+}

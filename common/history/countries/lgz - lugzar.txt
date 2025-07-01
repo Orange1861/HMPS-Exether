@@ -1,0 +1,44 @@
+﻿COUNTRIES = {
+	c:LGZ = {
+		effect_starting_technology_tier_goblin_tech = yes
+
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+
+		add_technology_researched = academia
+		add_technology_researched = gunsmithing
+		add_technology_researched = international_relations
+		add_technology_researched = international_trade
+		add_technology_researched = medical_degrees
+
+		set_ruling_interest_groups = {
+        	ig_devout
+        }
+
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:services
+
+
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_no_home_affairs
+	    activate_law = law_type:law_isolationism
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_mage_hunters
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_censorship
+
+		ig:ig_devout ?= {
+			remove_ideology = ideology_moralist
+			add_ideology = ideology_theocratic_moralist
+		}
+	}
+}

@@ -1,0 +1,55 @@
+﻿excavate_gugnos_cavein = { #gnolls need a way to clear this before pneumatic tools
+	is_shown = {
+
+		OR = {
+			any_scope_state = {
+				AND = {
+					state_region = s:STATE_GUGNOS
+					has_state_trait = state_trait_cavern_caveins
+				}
+			} 
+			AND = {
+				exists = c:DDN
+				any_scope_state = {
+					state_region = s:STATE_CHITTERKIQ
+				}
+			}
+		}
+		NOT = { has_global_variable = gugnos_excavation_var }
+		
+	
+	}
+	
+	possible = {
+		has_technology_researched = nitroglycerin
+		hidden_trigger = {
+			NOT = { has_global_variable = gugnos_excavation_var }
+		}
+		OR = {
+			any_scope_state = {
+				AND = {
+					state_region = s:STATE_GUGNOS
+					has_state_trait = state_trait_cavern_caveins
+				}
+			} 
+			AND = {
+				exists = c:DDN
+				any_scope_state = {
+					state_region = s:STATE_CHITTERKIQ
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		add_journal_entry = {
+			type = je_dwarf_excavation
+		}
+		set_global_variable = gugnos_excavation_var
+		}
+	
+
+	ai_chance = {
+		value = 100
+	}
+}

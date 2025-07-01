@@ -1,0 +1,3421 @@
+﻿# Negative  at some point we should group these into "veil integrity weather/pollution weather" and "adventurer weather"  
+acid_rain = {
+	trigger = {
+		is_vulnerable_to_torrential_rains = yes
+	}
+
+	incompatible_with = drought
+	incompatible_with = wildfire
+	incompatible_with = frost
+	incompatible_with = plague_spores
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.075
+		building_group_bg_plantations_throughput_add = -0.075
+		building_group_bg_ranching_throughput_add = -0.03
+
+		#Infra
+		state_infrastructure_mult = -0.05
+
+		#consumption
+		state_peasants_consumption_multiplier_add = 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0
+
+		if = {
+			limit = {
+			any_scope_state = {
+				state_region = {
+					pollution_amount > 75
+				}
+				}
+
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = {
+						pollution_amount > 160
+					}
+				}
+			}
+			add = 0.008
+		}
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.005
+		}
+				if = {
+			limit = {
+				veil_integrity_total < 25
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_environmental_regulation
+						}
+					}
+				}
+			}
+			multiply = 0.5
+		}
+	}
+
+
+	color = { 51 153 102 } # minty teal green
+	icon = "gfx/interface/icons/harvest_condition_icons/acid_rain.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	graphics = torrential_rains
+}
+
+awakened_flora = { #locari
+	trigger = {
+		is_vulnerable_to_awakened_flora = yes
+	}
+
+	incompatible_with = flood
+	incompatible_with = wildfire
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.025
+		building_group_bg_agriculture_mortality_mult = 0.05
+		building_group_bg_plantations_mortality_mult = 0.05
+		state_mortality_mult = 0.02
+		state_infrastructure_mult = -0.05
+
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.15
+		state_adventurer_coverage_add = -10
+
+		goods_output_monster_essence_mult = 0.05
+
+
+	}
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.03
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.04
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.2
+		}
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.015
+		}
+		if = {
+			limit = {
+				OR = {
+					is_year_of_the_fey = yes
+					is_year_of_the_siren = yes
+				}
+				
+			}
+			multiply = 1.5
+		}
+
+
+	}
+
+	color = { 138 102 66 }
+	icon = "gfx/interface/icons/harvest_condition_icons/awakened_flora.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	graphics = wildfire
+}
+
+caelum_radiation = {
+	trigger = {
+		is_vulnerable_to_caelum_radiation = yes
+	}
+
+
+	incompatible_with = magical_hotspots
+	incompatible_with = extreme_winds
+	incompatible_with = torrential_rains
+	incompatible_with = drought
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.075
+		building_group_bg_plantations_throughput_add = -0.075
+		building_group_bg_ranching_throughput_add = -0.05
+		building_group_bg_fishing_throughput_add = -0.05
+		building_group_bg_magic_manufacturing_throughput_add = 0.1
+		building_group_bg_magic_manufacturing_mortality_mult = 0.1
+		state_pollution_generation_add_mult = 0.125
+		state_non_homeland_mortality_mult = 0.05
+		state_non_homeland_colony_growth_speed_mult = -0.1
+		#Output
+		goods_output_wishstone_mult = 0.05
+		goods_input_wishstone_mult = -0.025
+		goods_output_gizmos_mult = 0.05
+		goods_input_gizmos_mult = -0.025
+		#consumption
+
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.35
+		if = {
+			limit = {
+				veil_integrity_total < 75
+			}
+			add = 0.125
+		}
+				if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.125
+		}
+		if = {
+			limit = {
+				NOT = {
+					region = sr:region_old_khus
+				}
+			}
+			multiply = 0.04
+		}
+	}
+	color = { 102 0 255 }
+	icon = "gfx/interface/icons/harvest_condition_icons/caelum_radiation.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	incompatible_terrain = { wasteland }
+	graphics = drought
+}
+
+cavern_collapse = {
+	trigger = {
+		OR = {
+			undermountain_state_weather = yes
+			any_scope_state = {
+				state_region = s:STATE_NAKOKAIN
+				state_region = s:STATE_YAASKCASCH
+				state_region = s:STATE_KEENAVOK
+				state_region = s:STATE_TAYIGAMU
+				state_region = s:STATE_GUGNOS
+				state_region = s:STATE_CHITTERKIQ
+			}
+		}
+	
+	}
+
+	incompatible_with = gas_leaks
+	incompatible_with = rock_elementals
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_heavy_industry_throughput_add = -0.025
+		building_group_bg_mining_throughput_add = -0.05
+		building_group_bg_extraction_throughput_add = -0.02
+
+		building_group_bg_mining_infrastructure_usage_mult = 0.1
+
+		state_infrastructure_mult = -0.075
+		state_construction_mult = -0.033
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.0075
+		if = {
+			limit = {
+			any_scope_state = {
+				state_region = {
+					pollution_amount > 130
+				}
+				}
+
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				is_year_of_the_golem = yes
+			}
+			multiply = 1.5
+		}
+		if = { #TOO DEEP
+			limit = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+						type  = bg_mining value >= 21
+					}
+				}
+			}
+			add = 0.005
+		}
+				if = { #TOO GREEDY
+			limit = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+						type  = bg_mining value >= 51
+					}
+				}
+			}
+			add = 0.005
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_environmental_regulation
+						}
+					}
+				}
+			}
+			multiply = 0.35
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_worker_protections
+						}
+					}
+				}
+			}
+			multiply = 0.6
+		}
+	}
+
+	color = { 138 102 66 }
+	icon = "gfx/interface/icons/harvest_condition_icons/cavern_collapse.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+dark_feeders = {
+	trigger = {
+		OR = {
+			undermountain_state_weather = yes
+			any_scope_state = {
+				state_region = s:STATE_NAKOKAIN
+				state_region = s:STATE_YAASKCASCH
+				state_region = s:STATE_TAYIGAMU
+				state_region = s:STATE_GUGNOS
+				state_region = s:STATE_CHITTERKIQ
+				state_region = s:STATE_MRAENTWAARSH
+				state_region = s:STATE_KEENAVOK
+			}
+		}
+	
+	}
+
+	incompatible_with = cavern_collapse
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04
+		building_group_bg_ranching_throughput_add = -0.04
+		building_group_bg_mining_throughput_add = -0.05
+		
+		goods_output_monster_essence_mult = 0.075
+		state_mortality_mult = 0.02
+		state_infrastructure_mult = -0.075
+		state_adventurer_coverage_add = -15
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.017
+
+		if = {
+			limit = {
+				is_year_of_the_fiend = yes
+			}
+			multiply = 2
+		}
+
+			if = { #TOO GREEDY
+			limit = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+						type  = bg_mining value >= 51
+					}
+				}
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.025
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.15
+		}
+	}
+
+	color = { 7 7 12 }
+	icon = "gfx/interface/icons/harvest_condition_icons/dark_feeders.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+dinosaur_attacks = {
+	trigger = {
+		is_vulnerable_to_dinosaur_attacks = yes
+	}
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 30
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04
+		building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_ranching_mortality_mult = 0.05
+		state_mortality_mult = 0.02
+
+		#Infra
+		goods_output_monster_essence_mult = 0.05
+
+		state_non_homeland_colony_growth_speed_mult = -0.15
+		state_infrastructure_mult = -0.05
+		state_adventurer_coverage_add = -18
+		#Unit
+		unit_recovery_rate_add = -0.05
+
+		#MAPI
+		state_market_access_price_impact = -0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.01
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -5
+				}
+			}
+			add = 0.012
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.013
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			subtract = 0.005
+		}
+	}
+	color = { 210 45 45 }
+	icon = "gfx/interface/icons/harvest_condition_icons/dinosaur_attacks.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+direwolf_packs = {
+	trigger = {
+		is_vulnerable_to_direwolf_packs = yes
+	}
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04
+		building_group_bg_ranching_throughput_add = -0.09
+		building_group_bg_ranching_mortality_mult = 0.05
+		state_mortality_mult = 0.02
+
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.15
+		state_adventurer_coverage_add = -13
+
+		goods_output_monster_essence_mult = 0.05
+
+
+		#consumption
+		state_peasants_consumption_multiplier_add = 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.01
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -5
+				}
+			}
+			add = 0.01
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.013
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			subtract = 0.007
+		}
+	}
+	color = { 215 244 244 }
+	icon = "gfx/interface/icons/harvest_condition_icons/direwolf_packs.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+draconic_submachina = {
+	trigger = {
+		veil_integrity_total < 75
+		is_vulnerable_to_draconic_submachina = yes
+	}
+
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_fishing_throughput_add = -0.05
+		building_leviathan_outpost_throughput_add = -0.05
+		
+
+		#Output
+		goods_output_relics_mult = 0.05
+		goods_output_trinkets_mult = 0.05
+
+		#Infrastructure
+		state_infrastructure_mult = -0.025
+		state_food_security_add = -0.02
+		state_adventurer_coverage_add = -10
+		building_group_bg_fishing_mortality_mult = 0.05
+		#building_group_bg_hunting_mortality_mult = 0.05
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.008
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.006
+		}
+				if = {
+			limit = {
+				veil_integrity_total < 25
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -5
+				}
+			}
+			add = 0.006
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 0.65
+		}
+
+	}
+
+	color = { 51 153 100 }
+	icon = "gfx/interface/icons/harvest_condition_icons/draconic_submachina.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+gas_leaks = {
+	trigger = {
+		undermountain_state_weather = yes
+	}
+	incompatible_with = cavern_collapse
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.05
+
+		#Infrastructure
+		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
+		building_group_bg_plantations_infrastructure_usage_mult = 0.1
+		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+
+		#Subsistence
+		state_peasants_consumption_multiplier_add= 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.005
+		if = {
+			limit = {
+			any_scope_state = {
+				state_region = {
+					pollution_amount > 130
+				}
+				}
+
+			}
+			multiply = 1.4
+		}
+		if = {
+			limit = {
+				is_year_of_the_djinn = yes
+			}
+			multiply = 1.5
+		}
+			if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_environmental_regulation
+						}
+					}
+				}
+			}
+			multiply = 0.66 #intentionally lower
+		}
+	}
+
+	color = { 0 153 51 }
+	icon = "gfx/interface/icons/harvest_condition_icons/gas_leaks.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+ghost_ships = {
+	trigger = {
+		any_scope_state = {
+			check_is_coastal = yes
+		}
+		
+	}
+
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 42
+			max = 120
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_fishing_throughput_add = -0.05
+		building_leviathan_outpost_throughput_add = -0.05
+		building_port_throughput_add = -0.025
+
+
+		#Output
+		goods_output_ectoplasm_mult = 0.09
+		goods_output_relics_mult = 0.05
+
+		#Infrastructure
+		state_infrastructure_mult = -0.02
+		state_adventurer_coverage_add = -14
+		building_group_bg_fishing_mortality_mult = 0.05
+		#building_group_bg_hunting_mortality_mult = 0.05
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_has_building_type_levels = {
+						target = bt:building_ship_graveyard value > 4
+					}
+				}
+			}
+			add = 0.008
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_has_building_type_levels = {
+						target = bt:building_ship_graveyard value >= 1
+					}
+				}
+			}
+			add = 0.007
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			subtract = 0.007
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50
+				}	
+			}
+			multiply = 1.4
+		}
+
+	}
+
+	color = { 0 204 255 }
+	icon = "gfx/interface/icons/harvest_condition_icons/ghost_ships.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+griffon_attacks = {
+	trigger = {
+		is_vulnerable_to_griffon_attacks = yes
+	}
+
+	incompatible_with = flood
+	incompatible_with = wildfire
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04
+		building_group_bg_ranching_throughput_add = -0.05
+		building_group_bg_ranching_mortality_mult = 0.05
+		state_mortality_mult = 0.02
+		state_infrastructure_mult = -0.05
+
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.1
+		state_adventurer_coverage_add = -12
+
+		goods_output_monster_essence_mult = 0.05
+
+
+		#consumption
+		state_peasants_consumption_multiplier_add = 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.025
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.035
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.2
+		}
+	}
+	color = { 215 244 244 }
+	icon = "gfx/interface/icons/harvest_condition_icons/griffon_attacks.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+heptadrone_swarms_negative = {
+	trigger = {
+		is_vulnerable_to_rimeroot_harvest_conditions = yes
+		has_global_variable = sunstations_awakened
+		any_scope_state = {
+			owner = {
+				NOT = { 
+					OR = {
+						has_variable = destroyed_heptadrones_variable
+						has_variable = rimeroot_expedition_success_var
+					}
+				 }
+			}
+		}
+
+	}
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 40
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		state_sunstation_progress_mult = -0.05 
+		building_group_bg_magic_manufacturing_throughput_add = -0.03
+		building_group_bg_archeology_throughput_add = -0.03
+		building_group_bg_archeology_mortality_mult = 0.05
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.075
+		state_adventurer_coverage_add = -8
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.03
+
+		if = {
+			limit = {
+				any_scope_state = { 
+					state_region = {
+						pollution_amount > 90
+					}
+				}
+			}
+			multiply = 1.3	
+		}
+		if = {
+			limit = {
+				any_scope_state = { 
+					state_region = {
+						pollution_amount > 160
+					}
+				}
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				any_scope_state = { 
+					arable_land > 120
+				}
+			}
+			multiply = 1.5
+		}
+
+		if = { 
+		limit = {
+			any_scope_state = {
+				state_adventurer_coverage_balance > -50
+			}	
+		}
+		multiply = 1.4
+	}
+		if = { 
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 0.35
+		}
+	}
+	color = { 148 102 56 }
+	icon = "gfx/interface/icons/harvest_condition_icons/heptadrone_negative.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+heptadrone_swarms_positive = {
+	trigger = {
+		is_vulnerable_to_rimeroot_harvest_conditions = yes
+		has_global_variable = sunstations_awakened
+		any_scope_state = {
+			owner = { has_variable = rimeroot_expedition_success_var }
+		}
+		
+	}
+
+	incompatible_with = heptadrone_swarms_negative
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 60
+			max = 138
+		}
+	}
+
+	modifier = {
+		# Throughput
+		state_sunstation_progress_mult = 0.05 
+		building_group_bg_magic_manufacturing_throughput_add = 0.03
+		building_group_bg_archeology_throughput_add = 0.05
+		building_group_bg_archeology_mortality_mult = -0.05
+		#Infra
+		state_tax_capacity_mult = 0.05 #they're helpful little guys okay
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 4
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.035
+
+		if = {
+			limit = {
+				any_scope_state = { #indirectly linked to sunstation usage
+					arable_land > 120
+				}
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_artificer_guilds
+						}
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = { #protec
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 1.2
+		}
+	}
+	color = { 180 80 20 }
+	icon = "gfx/interface/icons/harvest_condition_icons/heptadrone_positive.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_good.dds"
+}
+
+brass_peacock_sightings = {
+	trigger = {
+		is_vulnerable_to_rimeroot_harvest_conditions = yes
+		
+	}
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 60
+			max = 138
+		}
+	}
+
+	modifier = {
+		# Throughput
+		state_migration_pull_mult = 0.05 
+		state_migration_pull_add = 3
+		state_loyalists_from_political_movements_mult = 0.05
+		state_conversion_mult = 0.05 #it's a really cool bird
+	
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.008
+
+		if = {
+			limit = {
+				any_scope_state = { #indirectly linked to sunstation usage
+					arable_land > 150
+				}
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				has_global_variable = sunstations_awakened
+			}
+			multiply = 2
+		}
+
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_druidic_circles
+						}
+					}
+				}
+			}
+			multiply = 2
+		}
+		if = { #protec
+		limit = {
+			any_scope_state = {
+				state_adventurer_coverage_balance < -50
+			}	
+		}
+		multiply = 0.4
+	}
+
+		if = { #protec
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 1.2
+		}
+	}
+	color = { 120 80 40 }
+	icon = "gfx/interface/icons/harvest_condition_icons/duskmirror_swan.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_good.dds"
+}
+
+kiankstauk_colonies = { #shellcrab
+	trigger = {
+		is_vulnerable_to_kiankstauk_colonies = yes
+	}
+
+	incompatible_with = rock_elementals
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_mining_throughput_add = -0.06
+		building_group_bg_ranching_throughput_add = -0.03
+		building_group_bg_mining_infrastructure_usage_mult = 0.075
+		building_group_bg_mining_mortality_mult = 0.075
+		state_adventurer_coverage_add = -12
+	}
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.03
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.04
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.15
+		}
+
+	}
+
+	color = { 138 102 66 }
+	icon = "gfx/interface/icons/harvest_condition_icons/kiankstauk_colonies.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+kisqi_raids = {
+	trigger = {
+		is_vulnerable_to_kisqi_raids = yes
+	}
+
+	incompatible_with = locust_swarm
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.04
+		building_group_bg_fishing_throughput_add = -0.04
+		state_mortality_mult = 0.02
+
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.1
+		state_adventurer_coverage_add = -12
+
+
+		#consumption
+		state_peasants_consumption_multiplier_add = 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.0175
+
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.02
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					check_is_coastal = yes
+				}
+			}
+			multiply = 1.4
+		}
+	}
+	color = { 215 244 244 }
+	icon = "gfx/interface/icons/harvest_condition_icons/kisqi_raids.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+landshark_swarms = {
+	trigger = {
+		#veil_integrity_total < 75
+		is_vulnerable_to_landshark_swarms = yes
+	}
+
+	incompatible_with = flood
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.05
+		building_group_bg_extraction_throughput_add = -0.025
+		building_group_bg_mining_throughput_add = 0.05
+		building_group_bg_hunting_throughput_add = 0.05 
+
+		#Infrastructure
+		state_infrastructure_mult = -0.05
+		state_mortality_mult = 0.03
+		state_adventurer_coverage_add = -12
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.009
+		if = {
+			limit = {
+			any_scope_state = {
+				state_adventurer_coverage_balance < -5
+			}
+	
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50
+				}
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			subtract = 0.004
+			min = 1
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					free_arable_land > 30
+				}
+			}
+			add = 0.005
+		}
+	}
+
+	color = { 153 102 51 }
+	icon = "gfx/interface/icons/harvest_condition_icons/draconic_submachina.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+living_trees = {
+	trigger = {
+			OR = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+				type  = bg_logging value >= 1
+				}
+			}
+			veil_integrity_total < 25
+			}
+
+		undermountain_state_weather = no
+	}
+
+	incompatible_with = cavern_collapse
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_logging_throughput_add = -0.06
+		building_group_bg_logging_infrastructure_usage_mult = 0.12
+		building_group_bg_logging_mortality_mult = 0.075
+		state_adventurer_coverage_add = -12
+	}
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.004
+		if = { #living trees can affect anywhere with logging, but will not spawn with an epicenter in any state with less than 6
+			limit = {
+				NOT = {
+					any_scope_state = {
+						state_has_building_group_levels = {
+							type = bg_logging value >= 6
+						}
+					}					
+				}
+			}
+			multiply = 0
+		}
+		else = {
+			if = { 
+			limit = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+						type  = bg_logging value >= 16
+					}
+				}
+			}
+			add = 0.006
+		}
+		if = { 
+			limit = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+						type  = bg_logging value >= 31
+					}
+				}
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < 50
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+			any_scope_state = {
+				state_region = {
+					pollution_amount > 140
+				}
+				}
+
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				is_year_of_the_fey = yes
+			}
+			multiply = 2
+		}
+		if = {
+				limit = {
+					veil_integrity_total < 50
+				}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_environmental_regulation
+						}
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 0.3
+		}
+		}
+
+
+	}
+
+	color = { 46 158 102 }
+	icon = "gfx/interface/icons/harvest_condition_icons/living_trees.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+psionic_winds = {
+	trigger = {
+		
+		is_vulnerable_to_psionic_winds = yes
+	}
+
+	
+
+	incompatible_with = psionic_storms
+	range = {
+		integer_range = {
+			min = 1
+			max = 3
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 40
+			max = 120
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04
+		building_group_bg_extraction_throughput_add = -0.025
+ 
+
+		#Infrastructure
+		state_infrastructure_mult = -0.025
+		state_turmoil_effects_mult = 0.05
+		state_non_homeland_mortality_mult = 0.05
+		state_non_homeland_colony_growth_speed_mult = -0.1
+
+		#Unit
+		unit_recovery_rate_add = -0.05
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.013
+		if = {
+			limit = {
+				OR = {
+					has_harvest_condition = extreme_winds
+				}
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				veil_integrity_total < 75
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = {
+						pollution_amount > 80
+					}
+				}
+
+			}
+			add = 0.005
+		}
+
+	}
+
+	color = { 174 41 153 }
+	icon = "gfx/interface/icons/harvest_condition_icons/psionic_winds.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+psionic_storms = {
+	trigger = {
+		is_vulnerable_to_psionic_winds = yes
+	}
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 40
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.06
+		building_group_bg_plantations_throughput_add = -0.06
+		building_group_bg_ranching_throughput_add = -0.03
+		building_group_bg_manufacturing_throughput_add = -0.03
+		state_non_homeland_mortality_mult = 0.1
+
+		#Infra
+
+		state_non_homeland_colony_growth_speed_mult = -0.2
+		state_infrastructure_mult = -0.05
+		state_turmoil_effects_mult = 0.05
+		#Unit
+		unit_recovery_rate_add = -0.075
+
+		#MAPI
+		state_market_access_price_impact = -0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.005
+		if = {
+			limit = {
+				OR = {
+					has_harvest_condition = psionic_winds
+					has_harvest_condition = extreme_winds
+				}
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				veil_integrity_total < 75
+			}
+			add = 0.004
+		}
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_KHUBEK
+				}
+			}
+			add = 0.7
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = {
+						pollution_amount > 120
+					}
+				}
+
+			}
+			add = 0.003
+		}
+	}
+	color = { 204 51 153 }
+	icon = "gfx/interface/icons/harvest_condition_icons/psionic_storms.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+thiral_blooming = {
+	trigger = {
+		is_vulnerable_to_thiral_blooming = yes
+	}
+
+	incompatible_with = drought
+	incompatible_with = wildfire
+	incompatible_with = frost
+	incompatible_with = hailstorm
+	
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 44
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = 0.08
+		building_group_bg_plantations_throughput_add = 0.08
+		building_group_bg_logging_throughput_add = 0.08
+		building_group_bg_ranching_throughput_add = 0.05
+		building_group_bg_hunting_throughput_add = 0.05
+
+		
+
+		state_birth_rate_mult = 0.05
+		#consumption
+		state_peasants_consumption_multiplier_add = -0.03
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.006
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = {
+						pollution_amount > 90
+					}
+				}
+			}
+			subtract = 0.005
+			min = 1
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = {
+						pollution_amount > 180
+					}
+				}
+
+			}
+			subtract = 0.005
+			min = 1
+		}
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.005
+		}
+				if = {
+			limit = {
+				veil_integrity_total < 25
+			}
+			add = 0.004
+		}
+	}
+
+
+	color = { 51 153 102 } # minty teal green
+	icon = "gfx/interface/icons/harvest_condition_icons/rose_icon.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_good.dds"
+	
+}
+
+treacherous_whirlpools = {
+	trigger = {
+		is_vulnerable_to_treacherous_whirlpools = yes
+	}
+
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_fishing_throughput_add = -0.05
+		building_leviathan_outpost_throughput_add = -0.05
+		building_port_throughput_add = -0.05
+		
+
+		#Output
+
+		#Infrastructure
+		state_infrastructure_mult = -0.025
+		building_group_bg_fishing_mortality_mult = 0.05
+		#building_group_bg_hunting_mortality_mult = 0.05
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.006
+		if = {
+			limit = {
+				veil_integrity_total < 60
+			}
+			add = 0.006
+		}
+				if = {
+			limit = {
+				veil_integrity_total < 30
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				any_scope_state = { 
+				state_region = {
+					pollution_amount > 150
+					}
+				}
+			}
+			add = 0.005
+		}
+
+
+	}
+
+	color = { 0 0 102 }
+	icon = "gfx/interface/icons/harvest_condition_icons/treacherous_whirlpools.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+magical_hotspots = {
+	trigger = {
+		veil_integrity_total < 75
+	}
+
+	incompatible_with = acid_rain
+	incompatible_with = caelum_radiation
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.025
+		building_group_bg_fishing_throughput_add = -0.025
+		building_group_bg_magic_manufacturing_throughput_add = 0.075
+		building_group_bg_magic_manufacturing_mortality_mult = 0.075
+		building_group_bg_manufacturing_throughput_add = 0.025
+		building_group_bg_manufacturing_mortality_mult = 0.025
+		state_pollution_generation_add_mult = 0.125
+
+		#Output
+		goods_output_wishstone_mult = 0.05
+		goods_output_gizmos_mult = 0.05
+
+		#consumption
+		state_peasants_consumption_multiplier_add = 0.025
+
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.002
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			add = 0.004
+		}
+				if = {
+			limit = {
+				veil_integrity_total < 25
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = { 
+					state_region = {
+						pollution_amount > 90
+					}
+				}
+			}
+			add = 0.006	
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_region = {
+						pollution_amount > 180
+					}
+				}
+			}
+			add = 0.009		
+		}
+	}
+
+	color = { 255 153 255 }
+	icon = "gfx/interface/icons/harvest_condition_icons/magical_hotspots.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	graphics = drought
+	
+}
+
+mammoth_migrations = {
+	trigger = {
+		is_vulnerable_to_mammoth_migrations = yes
+	}
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 40
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_ranching_throughput_add = 0.075
+		building_group_bg_ranching_mortality_mult = 0.05
+		building_group_bg_hunting_throughput_add = 0.075
+
+		goods_output_meat_mult = 0.05
+		goods_output_monster_essence_mult = 0.05
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.075
+		state_adventurer_coverage_add = -6
+
+
+		#consumption
+		state_peasants_consumption_multiplier_add = -0.025 #on that ivory grind
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.02
+
+		if = {
+			limit = {
+				any_scope_state = { 
+					state_region = {
+						pollution_amount > 90
+					}
+				}
+			}
+			subtract = 0.008	
+		}
+		if = {
+			limit = {
+				any_scope_state = { 
+					state_region = {
+						pollution_amount > 160
+					}
+				}
+			}
+			subtract = 0.008
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_druidic_circles
+						}
+					}
+				}
+			}
+			multiply = 2
+		}
+		if = { #protec
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 3
+			max = 0.1
+		}
+	}
+	color = { 148 102 56 }
+	icon = "gfx/interface/icons/harvest_condition_icons/mammoth_migrations.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_good.dds"
+}
+
+plague_spores = {
+	trigger = {
+		is_vulnerable_to_plague_spores = yes
+	}
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 100
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.1
+		building_group_bg_plantations_throughput_add = -0.1
+		building_group_bg_ranching_throughput_add = -0.1
+
+		state_mortality_mult = 0.03
+
+		state_adventurer_coverage_add = -12
+		#Unit
+		unit_recovery_rate_add = -0.025
+		#consumption
+		state_peasants_consumption_multiplier_add = 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.006
+
+		if = {
+			limit = {
+		NOT = {
+			any_scope_state = {
+		OR = {
+		state_region = s:STATE_PLAGUEBRUSH
+		state_region = s:STATE_SANDWOOD
+		state_region = s:STATE_FORESTS_HEART
+		state_region = s:STATE_EASTERN_PLAGUEWOOD
+		state_region = s:STATE_NORTHERN_EXPANSE
+		state_region = s:STATE_BLACKWOOD
+		state_region = s:STATE_BURAMONG
+		}		
+	}
+	}
+			}
+			multiply = 0.05
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+						state_adventurer_coverage_balance < -5
+				}
+			
+			}
+			add = 0.01
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50
+				}
+			}
+			add = 0.015
+		}
+		
+	}
+	color = { 0 26 9 }
+	icon = "gfx/interface/icons/harvest_condition_icons/plague_spores.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	graphics = drought
+	
+}
+
+rock_elementals = {
+	trigger = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+				type  = bg_mining value >= 5
+			}
+		}
+	}
+
+	incompatible_with = cavern_collapse
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_mining_throughput_add = -0.06
+		building_group_bg_mining_infrastructure_usage_mult = 0.12
+		building_group_bg_mining_mortality_mult = 0.075
+		state_adventurer_coverage_add = -12
+	}
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.005
+		if = { #TOO DEEP
+			limit = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+						type  = bg_mining value >= 21
+					}
+				}
+			}
+			add = 0.005
+		}
+				if = { #TOO GREEDY
+			limit = {
+				any_scope_state = {
+					state_has_building_group_levels = {
+						type  = bg_mining value >= 51
+					}
+				}
+			}
+			add = 0.005
+		}
+				if = {
+			limit = {
+			any_scope_state = {
+				state_region = {
+					pollution_amount > 90
+				}
+				}
+
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+			any_scope_state = {
+				state_region = {
+					pollution_amount > 180
+				}
+				}
+
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				is_year_of_the_golem = yes
+			}
+			multiply = 2
+		}
+		if = {
+				limit = {
+					veil_integrity_total < 50
+				}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_environmental_regulation
+						}
+					}
+				}
+			}
+			multiply = 0.5
+		}
+						if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 0.3
+		}
+
+	}
+
+	color = { 138 102 66 }
+	icon = "gfx/interface/icons/harvest_condition_icons/rock_elementals.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+seasnake_infestations = {
+	trigger = {
+		any_scope_state = {
+			check_is_coastal = yes
+		}
+		OR = {
+			any_scope_state = {
+				OR = {
+					state_has_building_type_levels = {
+						target = bt:building_seasnake_wharf value >= 1
+				}
+				any_neighbouring_state = {
+					state_has_building_type_levels = {
+						target = bt:building_seasnake_wharf value >= 1
+						}
+					}
+				}
+
+			}
+
+		}
+		
+	}
+
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 42
+			max = 120
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_fishing_throughput_add = -0.05
+		building_port_throughput_add = -0.05
+		building_seasnake_wharf_throughput_add = 0.07
+
+
+		#Infrastructure
+		state_infrastructure_mult = -0.035
+		state_adventurer_coverage_add = -10
+		building_group_bg_fishing_mortality_mult = 0.05
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0
+
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_has_building_type_levels = {
+						target = bt:building_seasnake_wharf value >= 1
+					}
+				}
+			}
+			add = 0.018
+		}
+		if = {
+				limit = {
+					veil_integrity_total < 50
+				}
+			multiply = 1.6
+		}
+				if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 0.2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50
+				}	
+			}
+			multiply = 2
+		}
+				if = {
+			limit = {
+				region = sr:region_dark_morass
+			}
+			multiply = 1.5
+		}
+
+	}
+
+	color = { 5 180 255 }
+	icon = "gfx/interface/icons/harvest_condition_icons/seasnake_infestations.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+sludgestorms = {
+	trigger = {
+			any_scope_state = {
+				OR = {
+					state_has_building_type_levels = {
+						target = bt:building_potion_distillery value >= 1
+					}
+					any_neighbouring_state = {
+						state_has_building_type_levels = {
+							target = bt:building_potion_distillery value >= 1
+						}
+					}
+				}
+			}
+	}
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 100
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.025
+		building_group_bg_plantations_throughput_add = -0.025
+		building_group_bg_ranching_throughput_add = -0.025
+		building_group_bg_manufacturing_throughput_add = -0.025
+		building_group_bg_magic_manufacturing_throughput_add = -0.025
+		building_potion_distillery_throughput_add = -0.04
+		goods_output_monster_essence_mult = 0.05
+		state_mortality_mult = 0.025
+
+		state_adventurer_coverage_add = -12
+
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.009
+
+		if = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						state_has_building_type_levels = {
+							target = bt:building_potion_distillery value >= 1
+						}
+					}
+				}
+			}
+			multiply = 0
+		}
+		else = {
+
+		if = { 
+			limit = {
+				any_scope_state = {
+					state_region = {
+						pollution_amount > 140
+					}
+				}
+
+			}
+			add = 0.005
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_has_building_type_levels = {
+						target = bt:building_potion_distillery value >= 8
+					}
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				is_year_of_the_fey = yes #IT'S ALIVE
+			}
+			multiply = 1.6
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_environmental_regulation
+						}
+					}
+				}
+			}
+			multiply = 0.15
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_worker_protections
+							has_law = law_type:law_regulatory_bodies
+						}
+					}
+				}
+			}
+			multiply = 0.4
+		}
+		}
+		
+		
+	}
+	color = { 51 204 51 }
+	icon = "gfx/interface/icons/harvest_condition_icons/potion_spillage.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	
+}
+
+snail_stampedes = {
+	trigger = {
+		is_vulnerable_to_snail_stampedes = yes
+	}
+
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 40
+			max = 120
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_ranching_throughput_add = 0.075
+		building_group_bg_ranching_mortality_mult = 0.05
+		building_group_bg_hunting_throughput_add = 0.075
+
+		goods_output_meat_mult = 0.05
+		goods_output_monster_essence_mult = 0.05
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.075
+		state_adventurer_coverage_add = -6
+
+
+		#consumption
+		state_peasants_consumption_multiplier_add = -0.025
+
+	}
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.02
+
+		if = {
+			limit = {
+				any_scope_state = { 
+					state_region = {
+						pollution_amount > 90
+					}
+				}
+			}
+			subtract = 0.008	
+		}
+		if = {
+			limit = {
+				any_scope_state = { 
+					state_region = {
+						pollution_amount > 160
+					}
+				}
+			}
+			subtract = 0.008
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						OR = {
+							has_law = law_type:law_druidic_circles
+						}
+					}
+				}
+			}
+			multiply = 2
+		}
+		if = { #protec
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}	
+			}
+			multiply = 3
+			max = 0.1
+		}
+	}
+	color = { 148 102 56 }
+	icon = "gfx/interface/icons/harvest_condition_icons/snail_stampedes.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_good.dds"
+}
+
+nightmare_brine_contamination = {
+	trigger = {
+		is_vulnerable_to_salt_waste_curse = yes
+	}
+
+	incompatible_with = salt_mad_elementals
+	incompatible_with = salt_ghouls
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 42
+			max = 120
+		}
+	}
+
+	modifier = {
+		state_standard_of_living_add = -1
+		state_mortality_mult = 0.05
+		state_adventurer_coverage_add = -36
+		state_peasants_consumption_multiplier_add = 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	chance = {
+		value = 0.2
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = {
+						has_modifier = salt_waste_wards
+					}
+				}
+			}
+			multiply = 0.01
+		}
+	}
+	color = { 241 241 241 }
+	icon = "gfx/interface/icons/harvest_condition_icons/wild_magic_angel.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+salt_mad_elementals = {
+	trigger = {
+		is_vulnerable_to_salt_waste_curse = yes
+	}
+
+	incompatible_with = nightmare_brine_contamination
+	incompatible_with = salt_ghouls
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 42
+			max = 120
+		}
+	}
+
+	modifier = {
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.05
+		state_mortality_mult = 0.005
+		state_adventurer_coverage_add = -6
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 1
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.2
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = {
+						has_modifier = salt_waste_rangers
+					}
+				}
+			}
+			multiply = 0.01
+		}
+	}
+	color = { 121 121 121 }
+	icon = "gfx/interface/icons/harvest_condition_icons/rock_elementals.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+salt_ghouls = {
+	trigger = {
+		is_vulnerable_to_salt_waste_curse = yes
+	}
+
+	incompatible_with = nightmare_brine_contamination
+	incompatible_with = salt_mad_elementals
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 42
+			max = 120
+		}
+	}
+
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = -0.05
+		building_group_bg_service_throughput_add = -0.05
+		state_mortality_mult = 0.005
+		state_adventurer_coverage_add = -6
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 1
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.2
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = {
+						has_modifier = salt_waste_patrols
+					}
+				}
+			}
+			multiply = 0.01
+		}
+	}
+	color = { 166 211 237 }
+	icon = "gfx/interface/icons/harvest_condition_icons/vampire_spawn.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+wishstone_showers = {
+	trigger = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wishstone_reefs
+					is_building_type = building_wishstone_mine
+				}
+				level >= 1
+			}	
+		}
+
+		undermountain_state_weather = no
+	}
+	range = {
+		integer_range = {
+			min = 1
+			max = 3
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 104
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_wishstone_mine_throughput_add = 0.05
+		building_wishstone_reefs_throughput_add = 0.05
+		state_standard_of_living_add = 0.3
+		state_migration_pull_mult =  0.05
+	}
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.005
+
+		if = { 
+			limit = {
+				any_scope_state = {
+					any_scope_building = {
+						OR = {
+							is_building_type = building_wishstone_reefs
+							is_building_type = building_wishstone_mine
+						}
+						level >= 20
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+			any_scope_state = {
+				state_region = {
+					pollution_amount > 140
+				}
+				}
+
+			}
+			multiply = 1.3
+		}
+		if = {
+				limit = {
+					veil_integrity_total < 50
+				}
+			multiply = 1.5
+		}
+	}
+	color = { 217 102 255 }
+	icon = "gfx/interface/icons/harvest_condition_icons/wishstone_showers.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_good.dds"
+}
+
+vampire_spawn = {
+	trigger = {
+			always = yes
+	}
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 100
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_ranching_throughput_add = -0.05
+		building_group_bg_agriculture_throughput_add = -0.033
+		building_group_bg_plantations_throughput_add = -0.033
+		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+		state_mortality_mult = 0.1
+		unit_recovery_rate_add = -0.075
+		unit_offense_mult = -0.025
+		state_adventurer_coverage_add = -15
+
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.055
+
+		if = {
+			limit = {
+				NOT = {
+			any_scope_state = {
+				OR = {
+					owner = { 
+						OR = {
+							any_primary_culture = {
+								has_discrimination_trait = vampiric
+							}
+							any_overlord_or_above = { 
+								any_primary_culture = {
+									has_discrimination_trait = vampiric
+								}
+							}
+						}
+					}
+					any_neighbouring_state = {
+						owner = { 
+							OR = {
+								any_primary_culture = {
+									has_discrimination_trait = vampiric
+								}
+								any_overlord_or_above = { 
+									any_primary_culture = {
+										has_discrimination_trait = vampiric
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+				}
+			}
+			multiply = 0
+		}
+		else = {
+		if = {
+			limit = {
+				is_year_of_the_angel = yes
+				is_year_of_the_fiend = yes
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					owner = { 
+						any_primary_culture = {
+							has_discrimination_trait = vampiric
+						}
+						
+					}
+				}
+			}
+			multiply = 1.8
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50
+				}
+			}
+			multiply = 1.6
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.18
+		}
+		}
+		
+		
+	}
+	color = { 128 153 102 }
+	icon = "gfx/interface/icons/harvest_condition_icons/vampire_spawn.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	
+}
+
+death_hounds = {
+	trigger = {
+		OR = {
+			state_is_in_toftir = yes
+			any_scope_state = {
+				state_has_building_type_levels = {
+					target = bt:building_haunted_grounds value >= 1
+				}
+			}
+			veil_integrity_total < 50
+		}
+
+		
+	}
+	
+	range = {  
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 40
+			max = 100
+		}
+	}
+
+	modifier = {
+		#Throughput
+
+		building_group_bg_ranching_throughput_add = -0.025
+		building_group_bg_hunting_throughput_add = -0.05
+		building_haunted_grounds_throughput_add = -0.075
+		state_mortality_mult = 0.02
+		state_adventurer_coverage_add = -10
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.008
+		if = {
+			limit = {
+				NOT = {
+						OR = {
+							state_is_in_toftir = yes
+							any_scope_state = {
+								state_has_building_type_levels = {
+									target = bt:building_haunted_grounds value >= 1
+								}
+							}
+							veil_integrity_total < 25
+						}
+				}
+			}
+			multiply = 0
+		}
+		else = {
+					if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			multiply = 1.4
+		}
+
+
+		if = {
+			limit = {
+				any_scope_state = {
+					OR = {
+						state_has_building_type_levels = {
+							target = bt:building_ship_graveyard value > 3
+						}
+						state_has_building_type_levels = {
+							target = bt:building_haunted_grounds value > 3
+						}
+						state_has_building_type_levels = {
+							target = bt:building_thaumacore_foundry value > 3
+						}
+					}	
+				}
+			}
+			multiply = 2.1
+		}
+		if = {
+			limit = {
+		
+				 is_year_of_the_angel = yes
+				
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -5
+				}
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50
+				}
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				state_is_in_toftir = yes
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			subtract = 0.008
+		}
+		if = {
+			limit = {
+				OR = {
+					has_harvest_condition = ghostly_harbingers
+				}
+			}
+			add = 0.006
+		}
+		}
+
+ 
+	}
+
+	color = { 7 7 7 }
+	icon = "gfx/interface/icons/harvest_condition_icons/death_hounds.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+ghostly_harbingers = {
+	trigger = {
+		OR = {
+			state_is_in_toftir = yes
+			any_scope_state = {
+				state_has_building_type_levels = {
+					target = bt:building_haunted_grounds value >= 1
+				}
+			} 
+			veil_integrity_total < 75
+		}
+
+		
+	}
+
+	incompatible_with = brass_peacock_sightings
+	incompatible_with = death_hounds
+
+	range = {  
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 40
+			max = 95
+		}
+	}
+
+	modifier = {
+		#Throughput
+
+		building_group_bg_ranching_throughput_add = -0.0375
+		building_group_bg_agriculture_throughput_add = -0.025
+		building_group_bg_plantations_throughput_add = -0.025
+		building_group_bg_hunting_throughput_add = -0.025
+		goods_output_ectoplasm_mult = 0.05
+		state_radicals_from_political_movements_mult = 0.05
+		state_adventurer_coverage_add = -5
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.01
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						state_is_in_toftir = yes
+						any_scope_state = {
+							state_has_building_type_levels = {
+								target = bt:building_haunted_grounds value >= 1
+							}
+						}
+					}
+				}
+			}
+			multiply = 0
+		}
+		else = {
+			if = {
+				limit = {
+					veil_integrity_total < 50
+				}
+			multiply = 1.6
+		}
+
+
+		if = {
+			limit = {
+				any_scope_state = {
+					OR = {
+						state_has_building_type_levels = {
+							target = bt:building_ship_graveyard value > 3
+						}
+						state_has_building_type_levels = {
+							target = bt:building_haunted_grounds value > 3
+						}
+						state_has_building_type_levels = {
+							target = bt:building_thaumacore_foundry value > 3
+						}
+					}	
+				}
+			}
+			multiply = 2.1
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					is_year_of_the_angel = yes
+				}
+			}
+			multiply = 3
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50
+				}
+			}
+			add = 0.006
+		}
+		if = {
+			limit = {
+				state_is_in_toftir = yes
+			}
+			add = 0.004
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.3
+		}
+		}
+			
+		
+
+
+	}
+
+	color = { 7 7 7 }
+	icon = "gfx/interface/icons/harvest_condition_icons/raven_icon.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+} 

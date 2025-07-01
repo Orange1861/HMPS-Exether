@@ -1,0 +1,551 @@
+﻿namespace = stepping_forward
+
+stepping_forward.1 = {
+	type = country_event
+	placement = root
+	title = stepping_forward.1.t
+	desc = stepping_forward.1.d
+	flavor = stepping_forward.1.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "europenorthamerica_russian_serfs"
+    }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+            c:DOV ?= {
+                save_scope_as = dovedale_scope
+            }
+            c:BIE?= {
+                save_scope_as = brackenshire_scope
+            }
+            c:DUM ?= {
+                save_scope_as = dumonia_scope
+            }
+	}
+
+	option = {
+		name = stepping_forward.1.a #Yanger rides again
+        add_modifier = {
+			name = last_of_the_horselords
+		}
+	}
+}
+
+stepping_forward.2 = { #steppe behind JE success event
+	type = country_event
+	placement = root
+	title = stepping_forward.2.t
+	desc = stepping_forward.2.d
+	flavor = stepping_forward.2.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { #triggered by JE success
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = stepping_forward.2.a #we have taken our rightful place
+        add_modifier = {
+            name = horselord_traditions 
+           }
+        add_modifier = {
+            name = enshrined_rural_life
+            years = 6
+        }
+        add_journal_entry = {
+            type = je_a_steppe_forward
+        }  
+	}
+}
+
+ stepping_forward.3 = { #independant brackenshire investors want to fund new buildings in the steppes
+ 	type = country_event
+ 	placement = root
+ 	title = stepping_forward.3.t
+ 	desc = stepping_forward.3.d
+ 	flavor = stepping_forward.3.f
+     dlc = dlc_roe
+ 	duration = 3
+     cooldown = {
+         years = 9
+     }
+ 	event_image = {
+ 		texture = "gfx/event_images/dreadmoor.dds"
+ 	}
+
+ 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+ 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+ 	trigger = {
+        exists = c:BIE
+		any_scope_state = {
+			OR = {
+				AND = {
+					has_potential_resource = bg_iron_mining
+					NOT = {has_building = building_iron_mine}
+				}
+				AND = {
+					has_potential_resource = bg_lead_mining
+					NOT = {has_building = building_lead_mine}
+				}
+				AND = {
+					has_potential_resource = bg_coal_mining
+					NOT = {has_building = building_coal_mine}
+				}
+				AND = {
+					has_potential_resource = bg_sulfur_mining
+					NOT = {has_building = building_sulfur_mine}
+				}
+			}
+		}
+	}
+
+ 	immediate = {
+        c:BIE?= {
+            save_scope_as = brackenshire_scope
+        }
+        random_scope_state = {
+            limit = {
+				OR = {
+					AND = {
+						has_potential_resource = bg_iron_mining
+						NOT = {has_building = building_iron_mine}
+					}
+					AND = {
+						has_potential_resource = bg_lead_mining
+						NOT = {has_building = building_lead_mine}
+					}
+					AND = {
+						has_potential_resource = bg_coal_mining
+						NOT = {has_building = building_coal_mine}
+					}
+					AND = {
+						has_potential_resource = bg_sulfur_mining
+						NOT = {has_building = building_sulfur_mine}
+					}
+				}
+			}
+			save_scope_as = investment_state
+		}
+    }    
+
+ 	option = {
+ 		name = stepping_forward.3.a #we will get them in touch with local investors
+        scope:investment_state = {
+			if = {
+				limit = {
+					AND = {
+						has_potential_resource = bg_iron_mining
+						NOT = {has_building = building_iron_mine} 
+					}
+				}
+				# /!\ this effect will set the level of buildings to the maximum between the current and target levels, i.e. it will never add up levels cumulatively
+				create_building={
+					building="building_iron_mine"
+					add_ownership={ 
+						country = { 
+							# type = "building_financial_district"
+							# region = "STATE_KENLYNE"
+							country = "c:BIE"
+							levels = 1 # this can only be a literal, can't be a variable
+						} 
+					}
+					reserves=1
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						has_potential_resource = bg_lead_mining
+						NOT = {has_building = building_lead_mine} 
+					}
+				}
+				# /!\ this effect will set the level of buildings to the maximum between the current and target levels, i.e. it will never add up levels cumulatively
+				create_building={
+					building="building_lead_mine"
+					add_ownership={ 
+						country = { 
+							# type = "building_financial_district"
+							# region = "STATE_KENLYNE"
+							country = "c:BIE"
+							levels = 1 # this can only be a literal, can't be a variable
+						} 
+					}
+					reserves=1
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						has_potential_resource = bg_coal_mining
+						NOT = {has_building = building_coal_mine} 
+					}
+				}
+				# /!\ this effect will set the level of buildings to the maximum between the current and target levels, i.e. it will never add up levels cumulatively
+				create_building={
+					building="building_coal_mine"
+					add_ownership={ 
+						country = { 
+							# type = "building_financial_district"
+							# region = "STATE_KENLYNE"
+							country = "c:BIE"
+							levels = 1 # this can only be a literal, can't be a variable
+						} 
+					}
+					reserves=1
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						has_potential_resource = bg_sulfur_mining
+						NOT = {has_building = building_sulfur_mine} 
+					}
+				}
+				# /!\ this effect will set the level of buildings to the maximum between the current and target levels, i.e. it will never add up levels cumulatively
+				create_building={
+					building="building_sulfur_mine"
+					add_ownership={ 
+						country = { 
+							# type = "building_financial_district"
+							# region = "STATE_KENLYNE"
+							country = "c:BIE"
+							levels = 1 # this can only be a literal, can't be a variable
+						} 
+					}
+					reserves=1
+				}
+			}
+        }
+
+ 	}
+     option = {
+ 		name = stepping_forward.3.b #we will "get them in touch" with "local investors"
+		default_option = yes
+        add_investment_pool = 400000 # Scaled the money up to the price of mines, hopefully ?
+		change_relations = {
+			country = scope:brackenshire_scope
+			value = -10
+		}
+ 	}
+    
+ }
+
+stepping_forward.4 = { #KIDS THESE DAYS CAN'T RIDE HORSE
+	type = country_event
+	placement = root
+	title = stepping_forward.4.t
+	desc = stepping_forward.4.d
+	flavor = stepping_forward.4.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 10
+    }
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {                 
+        
+	}
+
+	immediate = {
+
+	}
+
+	
+	option = {
+		name = stepping_forward.4.a #this is fine
+		default_option = yes
+        add_modifier = {
+            name = kids_moving_to_cities 
+            years = 4
+            is_decaying = yes
+           }  
+	}
+
+    option = {
+		name = stepping_forward.4.b #they will learn to ride
+        add_modifier = {
+            name = traditional_riding_values 
+            years = 4
+            is_decaying = yes
+           }  
+	}
+    
+}
+
+stepping_forward.5 = { #brackenshire capitalists offer bribes to stop agrarianism
+	type = country_event
+	placement = root
+	title = stepping_forward.5.t
+	desc = stepping_forward.5.d
+	flavor = stepping_forward.5.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 8
+    }
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_agriculture.dds"
+
+	trigger = {            
+        exists = c:BIE      
+        is_enacting_law = law_type:law_agrarianism
+	}
+
+	immediate = {
+        c:BIE?= {
+            save_scope_as = brackenshire_scope
+        }
+	}
+
+	
+	option = {
+		name = stepping_forward.5.a #we can look the other way
+		default_option = yes
+        add_modifier = {
+            name = riders_accepting_bribes 
+            years = 3
+           }  
+        add_investment_pool = 400000
+	}
+
+    option = {
+		name = stepping_forward.5.b #these lies will be made public
+        add_modifier = {
+            name = riders_bribes_rebuffed
+            years = 2
+           }  
+	}
+    
+}
+
+
+stepping_forward.6 = { #hostile takeover JE failure event
+	type = country_event
+	placement = root
+	title = stepping_forward.6.t
+	desc = stepping_forward.6.d
+	flavor = stepping_forward.6.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 10
+    }
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {                 
+        
+	}
+
+	immediate = {
+
+	}
+
+	
+	option = {
+		name = stepping_forward.6.a #big sad 
+        add_modifier = {
+            name = hanging_up_the_saddle
+            years = 5
+           }  
+        show_as_tooltip = {
+            remove_modifier = last_of_the_horselords
+        }
+	}
+
+
+    
+}
+
+stepping_forward.7 = { #steppe behind JE failure event
+	type = country_event
+	placement = root
+	title = stepping_forward.7.t
+	desc = stepping_forward.7.d
+	flavor = stepping_forward.7.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { #triggered by 1st JE failure
+	}
+
+	immediate = {
+        c:DOV ?= {
+            save_scope_as = dovedale_scope
+        }
+        c:BIE?= {
+            save_scope_as = brackenshire_scope
+        }
+	}
+
+	option = {
+		name = stepping_forward.7.a #our children have forgotten how to ride
+        custom_tooltip = has_happened_tt
+        show_as_tooltip = {
+            remove_modifier = last_of_the_horselords
+        }
+	}
+}
+
+stepping_forward.8 = { #hostile takeover JE success event
+	type = country_event
+	placement = root
+	title = stepping_forward.8.t
+	desc = stepping_forward.8.d
+	flavor = stepping_forward.8.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+	}
+
+	immediate = {
+        c:DOV ?= {
+            save_scope_as = dovedale_scope
+        }
+        c:BIE?= {
+            save_scope_as = brackenshire_scope
+        }
+	}
+
+	option = {
+		name = stepping_forward.8.a 
+        add_modifier = {
+            name = stood_up_to_foreign_landowners
+            years = 10
+        }
+	}
+}
+
+stepping_forward.9 = { #about a horse JE success event
+	type = country_event
+	placement = root
+	title = stepping_forward.9.t
+	desc = stepping_forward.9.d
+	flavor = stepping_forward.9.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+	}
+
+	immediate = { 
+        c:YAN?= {
+            save_scope_as = yanger_scope
+        }
+	}
+
+	option = {
+		name = stepping_forward.9.a
+		add_modifier = {
+			name = good_roi
+			years = 6
+		}
+		show_as_tooltip = {
+			add_modifier = {
+				name = brackenshire_investors_guild
+			}
+		}
+
+	}
+}
+
+stepping_forward.10 = { #about a horse JE success event
+	type = country_event
+	placement = root
+	title = stepping_forward.10.t
+	desc = stepping_forward.10.d
+	flavor = stepping_forward.10.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 
+	}
+
+	immediate = { 
+        c:YAN?= {
+            save_scope_as = yanger_scope
+        }
+	}
+
+	option = {
+		name = stepping_forward.10.a
+			add_modifier = {
+				name = bad_investments
+				years = 5
+			}
+
+	}
+}

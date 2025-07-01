@@ -1,0 +1,42 @@
+﻿COUNTRIES = {
+	c:BTR ?= {
+		effect_starting_technology_tier_3_tech = yes
+		effect_starting_politics_traditional = yes
+
+		add_technology_researched = lathe
+		add_technology_researched = empiricism
+		add_technology_researched = mass_communication
+		add_technology_researched = egalitarianism
+		add_technology_researched = labor_movement
+		add_technology_researched = paddle_steamer
+		add_technology_researched = mechanical_tools
+		add_technology_researched = power_of_the_purse
+		add_technology_researched = jeune_ecole
+		add_technology_researched = human_rights
+		add_technology_researched = anarchism
+
+
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_anarchy
+		activate_law = law_type:law_professional_army_corsair
+		
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_consumption_based_taxation_corsair
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_religious_tax
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_no_migration_controls
+
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:furniture
+		add_taxed_goods = g:clothes
+		add_taxed_goods = g:services
+		add_taxed_goods = g:meat
+
+
+	}
+}

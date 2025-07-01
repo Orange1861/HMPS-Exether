@@ -1,0 +1,331 @@
+﻿recruit_retainer = {
+	saved_scopes = { recruited_character }
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_variable = first_retainer }
+			}
+			set_variable = {
+				name = first_retainer
+				value = scope:recruited_character
+			}
+			scope:recruited_character = {
+				set_variable = is_first_retainer
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = second_retainer }
+			}
+			set_variable = {
+				name = second_retainer
+				value = scope:recruited_character
+			}
+			scope:recruited_character = {
+				set_variable = is_second_retainer
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = third_retainer }
+			}
+			set_variable = {
+				name = third_retainer
+				value = scope:recruited_character
+			}
+			scope:recruited_character = {
+				set_variable = is_third_retainer
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = fourth_retainer }
+			}
+			set_variable = {
+				name = fourth_retainer
+				value = scope:recruited_character
+			}
+			scope:recruited_character = {
+				set_variable = is_fourth_retainer
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = fifth_retainer }
+			}
+			set_variable = {
+				name = fifth_retainer
+				value = scope:recruited_character
+			}
+			scope:recruited_character = {
+				set_variable = is_fifth_retainer
+			}
+		}
+
+		scope:recruited_character = {
+			remove_variable = is_available_retainer
+		}
+
+		remove_list_variable = {
+			name = available_retainers_list
+			target = scope:recruited_character
+		}
+
+		add_to_variable_list = {
+			name = hired_retainers_list
+			target = scope:recruited_character
+		}     
+
+		create_character = {
+			template = retainer_template
+		}
+
+		add_treasury = {
+			add = retainer_cost
+			multiply = -1
+		}
+
+
+	}
+	ai_is_valid = {
+		always = no
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+
+		custom_tooltip = {
+			text = retainers_full_tt
+			OR = {
+				AND = {
+					NOT = { has_variable = first_retainer }
+				}
+				AND = {
+					NOT = { has_variable = second_retainer }
+					renown >= 1000
+				}
+				AND = {
+					NOT = { has_variable = third_retainer }
+					renown >= 2000
+				}
+				AND = {
+					NOT = { has_variable = fourth_retainer }
+					renown >= 3000
+				}
+				AND = {
+					NOT = { has_variable = fifth_retainer }
+					renown >= 4000
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = cannot_afford_retainer_tt
+			remaining_money >= retainer_cost
+		}
+
+	
+	}
+}
+
+
+open_retainer = {
+	saved_scopes = { clicked_retainer }
+	effect = {
+		if={
+			limit={
+				exists = scope:clicked_retainer
+			}
+			set_variable = {
+				name = open_retainer
+				value = scope:clicked_retainer
+			}
+		}
+	}
+	ai_is_valid = {
+		always = no
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+assign_retainer = {
+	saved_scopes = { selected_region }
+	effect = {
+		set_variable = {
+			name = open_retainer_region
+			value = scope:selected_region
+		}
+	}
+	is_valid = {
+
+		custom_tooltip = {
+			text = no_state_in_region_tt
+			any_scope_state = {
+				region = scope:selected_region
+			}
+		}
+
+		custom_tooltip = {
+			text = has_retainers_tt
+			has_variable = first_retainer
+		}
+	
+	}
+}
+
+assign_chosen_retainer = {
+	saved_scopes = { chosen_retainer }
+	effect = {
+
+		if = {
+			limit = {
+				exists = scope:chosen_retainer.var:assigned_region
+			}
+			every_scope_state = {
+				limit = {
+					region = scope:chosen_retainer.var:assigned_region
+				}
+				remove_modifier = state_retainer_assigned
+			}
+		}
+
+		custom_tooltip = {
+			text = assign_retainer_tt
+			scope:chosen_retainer = {
+				set_variable = {
+					name = assigned_region
+					value = scope:chosen_retainer.owner.var:open_retainer_region
+				}
+			}
+		}
+
+		scope:chosen_retainer = {
+			add_modifier = {
+				name = recently_moved_retainer
+				months = 12
+			}
+		}
+
+		
+
+		every_scope_state = {
+			limit = {
+				region = scope:chosen_retainer.owner.var:open_retainer_region
+			}
+			add_modifier = {
+				name = state_retainer_assigned
+			}
+		}
+
+
+	}
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		scope:chosen_retainer = {
+			custom_tooltip = {
+				text = retainer_cooldown_tt
+				NOT = {
+					has_modifier = recently_moved_retainer
+				}
+
+			}
+			custom_tooltip = {
+				text = on_expedition_tt
+				NOT = {
+					has_variable = expedition_leader_var
+				}
+			}
+		}
+	}
+}
+
+unassign_chosen_retainer = {
+	saved_scopes = { chosen_retainer }
+	effect = {
+		if = {
+			limit = {
+				exists = scope:chosen_retainer.var:assigned_region
+			}
+			every_scope_state = {
+				limit = {
+					region = scope:chosen_retainer.var:assigned_region
+				}
+				remove_modifier = state_retainer_assigned
+			}
+		}
+
+		custom_tooltip = {
+			text = unassign_retainer_tt
+			scope:chosen_retainer = {
+				remove_variable = assigned_region
+			}
+		}
+	}
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		scope:chosen_retainer = {
+			custom_tooltip = {
+				text = retainer_cooldown_tt
+				NOT = {
+					has_modifier = recently_moved_retainer
+				}
+			}
+		}
+	}
+
+	confirm_title = "RETAINER_UNASSIGN_TITLE"    # adding this will prompt the player to confirm the action
+    confirm_text = "RETAINER_UNASSIGN_TEXT"    # additional text in the confirmation popup
+
+}
+
+retainer_check_region = {
+	saved_scopes = { chosen_retainer chosen_region }
+	is_valid = {
+		AND = {
+			exists = scope:chosen_retainer
+			exists = scope:chosen_retainer.var:assigned_region
+			scope:chosen_retainer.var:assigned_region = scope:chosen_region
+		}
+
+	}
+}
+
+regenerate_retainers = {
+	effect = {
+
+		if={
+			limit = {
+				NOT = {
+					has_variable = new_retainers_cooldown
+				}
+			}
+			set_variable = {
+				name = new_retainers_cooldown
+				value = yes
+				days = 30
+			}	
+
+			clear_variable_list = available_retainers_list
+
+			create_character = {
+				template = retainer_template
+			}
+			create_character = {
+				template = retainer_template
+			}
+			create_character = {
+				template = retainer_template
+			}
+		}
+
+	}
+}
+
+

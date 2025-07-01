@@ -1,0 +1,74 @@
+﻿ig_trait_raider_logistics = {
+	icon = "gfx/interface/icons/ig_trait_icons/veteran_consultation.dds"
+	min_approval = happy
+	
+	modifier = {
+		unit_morale_loss_mult = -0.10
+	}
+}
+
+ig_trait_sparkpowder_legacy = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+	
+	modifier = {
+		country_military_tech_research_speed_mult = 0.1
+	}
+}
+
+ig_trait_red_hand = {
+	icon = "gfx/interface/icons/ig_trait_icons/veteran_consultation.dds"
+	min_approval = happy
+	
+	modifier = {
+		country_authority_mult = 0.1
+	}
+}
+
+#ig_trait_ogre_violence = {
+#	icon = "gfx/interface/icons/ig_trait_icons/veteran_consultation.dds"
+#	min_approval = happy
+#	
+#	modifier = {
+#		unit_kill_rate_add = 0.05
+#		unit_morale_damage_mult = 0.1
+#	}
+#}
+#
+#ig_trait_ogre_greed = {
+#	icon = "gfx/interface/icons/ig_trait_icons/materiel_waste.dds"
+#	max_approval = unhappy
+#	
+#	modifier = {
+#		country_military_wages_mult = 0.2
+#		unit_advancement_speed_mult = -0.10
+#	}
+#}
+
+ig_trait_dwarf_reluctance = {
+	icon = "gfx/interface/icons/ig_trait_icons/materiel_waste.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		country_authority_mult = -0.1
+	}
+}
+
+ig_trait_dwarf_resilience = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+	
+	modifier = {
+		unit_defense_mult = 0.15
+	}
+}
+
+#ig_trait_orcish_fury = {
+#	icon = "gfx/interface/icons/ig_trait_icons/veteran_consultation.dds"
+#	min_approval = happy
+#	
+#	modifier = {
+#		battle_defense_owned_province_mult = 0.1
+#		battle_offense_owned_province_mult = 0.1
+#	}
+#}

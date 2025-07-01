@@ -1,0 +1,71 @@
+﻿objective_settler_coast = {
+	enabled_background = "gfx/interface/icons/objectives/humans.dds"
+	icon = "gfx/interface/icons/objectives/economic_dominance.dds"
+	
+	recommended_tags = { ARR DUM VOZ AHO }	
+
+	objective_subgoals = {
+		sg_start_game
+	}
+	
+	final_subgoal = sg_start_game
+	
+	on_start = {
+		start_tutorial_lesson = { tutorial_lesson = exether_lesson }
+	}
+
+}
+
+objective_wilds_of_locari = {
+	enabled_background = "gfx/interface/icons/objectives/locari.dds"
+	icon = "gfx/interface/icons/objectives/hegemon.dds"
+	
+	recommended_tags = { SSC PAY AZI }	
+
+	objective_subgoals = {
+		sg_start_game
+	}
+	
+	final_subgoal = sg_start_game
+	
+	on_start = {
+		start_tutorial_lesson = { tutorial_lesson = exether_lesson }
+	}
+	
+}
+
+objective_ravik_undead = {
+	enabled_background = "gfx/interface/icons/objectives/soulwrought.dds"
+	icon = "gfx/interface/icons/objectives/egalitarian_society.dds"
+	
+	recommended_tags = { RAV TLE DIS VAI }	
+
+	objective_subgoals = {
+		sg_start_game
+	}
+	
+	final_subgoal = sg_start_game
+	
+	on_start = {
+		start_tutorial_lesson = { tutorial_lesson = exether_lesson }
+	}
+
+}
+
+objective_the_scaletides = {
+	enabled_background = "gfx/interface/icons/objectives/citrus_currents.dds"
+	icon = "gfx/interface/icons/objectives/economic_dominance.dds"
+	
+	recommended_tags = { YUL SNB AIZ ZIX }	
+
+	objective_subgoals = {
+		sg_start_game
+	}
+	
+	final_subgoal = sg_start_game
+	
+	on_start = {
+		start_tutorial_lesson = { tutorial_lesson = exether_lesson }
+	}
+
+}

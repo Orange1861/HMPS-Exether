@@ -1,0 +1,1238 @@
+﻿namespace = kamiran
+
+# Missionary activity in eastern Dumonia
+kamiran.1 = {
+	type = country_event
+	placement = scope:missionary_state
+
+	title = kamiran.1.t
+	desc = kamiran.1.d
+	flavor = kamiran.1.f
+
+	event_image = {
+		video = "human_preacher"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	trigger = {
+		# Fired by journal entry
+	}
+	immediate = {
+		set_variable = { name = missionary_works_counter value = 1 }
+		random_scope_state = {
+			limit = { 
+				is_incorporated = yes
+				any_scope_pop = {
+					NOT = {
+						religion = rel:cult_of_the_sun
+					}
+				}
+				any_neighbouring_state = {
+					owner = {
+						has_law = law_type:law_theocracy
+						country_has_state_religion = rel:cult_of_the_sun
+					}
+				}
+			}
+			save_scope_as = missionary_state
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						has_law = law_type:law_theocracy
+						country_has_state_religion = rel:cult_of_the_sun
+					}
+				}
+				save_scope_as = treaty_port_scope
+				owner = {
+					save_scope_as = treaty_port_owner
+				}
+			}
+		}
+	}
+
+	option = {
+		name = kamiran.1.a
+		default_option = yes
+		scope:missionary_state = {
+			add_modifier = {
+				name = missionary_schools_hospitals
+				days = normal_modifier_time
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun 
+				value = 0.10
+			}
+		}
+	}
+	option = {
+		name = kamiran.1.b
+		change_relations = {
+			country = scope:treaty_port_owner
+			value = -10
+		}
+		scope:missionary_state = {
+			convert_population = {
+				target = rel:cult_of_the_sun
+				value = 0.02
+			}
+		}
+	}
+}
+
+# The God Worshipping Society
+kamiran.2 = {
+	type = country_event
+	placement = scope:cult_state
+
+	title = kamiran.2.t
+	desc = kamiran.2.d
+	flavor = kamiran.2.f
+
+	event_image = {
+		texture = "gfx/event_images/sunkissed.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+	
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_modifier = kamiran_cult
+			}
+			save_scope_as = cult_state
+			set_variable = {
+				name = cult_center
+			}
+		}
+	}
+	option = {
+		name = kamiran.2.a
+		scope:cult_state = {
+			# Already added when the Journal Entry activated, but we're going to remove it and add it again to make it visible to the player
+			hidden_effect = {
+				remove_modifier = kamiran_cult
+			}
+			add_modifier = {
+				name = kamiran_cult
+				days = short_modifier_time
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun value = 0.2
+			}
+		}
+		if = {
+			limit = {
+				empty_agitator_slots >= 1
+			}
+			create_character = {
+				first_name = Edric
+				last_name = Hugrin
+				historical = yes
+				age = 47
+				culture = cu:sunkissed
+				religion = rel:cult_of_the_sun
+				interest_group = ig_devout
+				ideology = ideology_theocrat
+				is_agitator = yes
+				traits = {
+					inspirational_orator
+					persistent
+					psychological_affliction
+				}
+				on_created = {
+					set_variable = hong_var
+					add_modifier = {
+						name = modifier_famous_paladin
+						days = long_modifier_time
+					}
+				}
+			}
+		}
+	}
+}
+
+# Cult Grows
+# Repeatable
+kamiran.3 = {
+	type = country_event
+	placement = scope:cult_growth_state
+
+	title = kamiran.3.t
+	desc = kamiran.3.d
+	flavor = kamiran.3.f
+
+	event_image = {
+		texture = "gfx/event_images/sunkissed.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = 6 }
+
+	trigger = {
+		any_scope_state = {
+			has_variable = cult_center
+			any_scope_pop = {
+				has_pop_religion = cult_of_the_sun
+			}
+			any_neighbouring_state = {
+				owner = ROOT
+				turmoil >= 0.10
+				NOT = {
+					has_variable = cult_center
+				}
+				NOT = { is_capital = yes }
+				state_region = { 
+					OR = {
+						is_homeland = cu:dumonian
+						is_homeland = cu:ralaurian
+						is_homeland = cu:dewaric
+						is_homeland = cu:gelidrumin
+						is_homeland = cu:avalorean
+						is_homeland = cu:uplander
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_variable = cult_center
+				any_scope_pop = {
+					has_pop_religion = cult_of_the_sun
+				}
+				any_neighbouring_state = {
+					owner = ROOT
+					turmoil >= 0.10
+					NOT = {
+						has_variable = cult_center
+					}
+					state_region = { 
+						OR = {
+							is_homeland = cu:dumonian
+							is_homeland = cu:ralaurian
+							is_homeland = cu:dewaric
+							is_homeland = cu:gelidrumin
+							is_homeland = cu:avalorean
+							is_homeland = cu:uplander
+						}
+					}
+					NOT = { is_capital = yes }
+				}
+			}
+			save_scope_as = cult_center
+			random_neighbouring_state = {
+				limit = {
+					owner = ROOT
+					turmoil >= 0.10
+					NOT = {
+						has_variable = cult_center
+					}
+					state_region = { 
+						OR = {
+							is_homeland = cu:dumonian
+							is_homeland = cu:ralaurian
+							is_homeland = cu:dewaric
+							is_homeland = cu:gelidrumin
+							is_homeland = cu:avalorean
+							is_homeland = cu:uplander
+						}
+					}
+					NOT = { is_capital = yes }
+				}
+				save_scope_as = cult_growth_state
+				set_variable = {
+					name = cult_center
+				}
+			}
+		}
+	}
+	option = {
+		name = kamiran.3.a
+		scope:cult_growth_state = {
+			add_modifier = {
+				name = kamiran_cult
+				days = normal_modifier_time
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun value = 0.2
+			}
+		}
+	}
+}
+
+# Kamiran Dominion spawn
+kamiran.4 = {
+	type = country_event
+	placement = ROOT
+
+	title = kamiran.4.t
+	desc = kamiran.4.d
+	flavor = kamiran.4.f
+
+	event_image = {
+		texture = "gfx/event_images/sunkissed.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+	immediate = {
+		hidden_effect = {
+			random_scope_character = {
+				limit = {
+					has_variable = hong_var
+				}
+				kill_character = yes
+			}
+			random_character_in_exile_pool = {
+				limit = {
+					has_variable = hong_var
+				}
+				kill_character = yes
+			}
+		}
+		every_state = {
+			limit = {
+				has_modifier = kamiran_cult
+			}
+			remove_modifier = kamiran_cult
+		}
+		c:DUM = {
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+				}
+				set_variable = saved_incorporated_state
+			}
+		}		
+		random_scope_state = {
+			limit = {
+				has_variable = cult_center
+				any_scope_pop = {
+					has_pop_religion = cult_of_the_sun
+				}
+				radical_fraction = { value >= 0.20 }
+			}
+			save_scope_as = heavenly_kingdom_spawn
+		}
+		create_country = {
+			tag = KAX
+			origin = this
+			state = scope:heavenly_kingdom_spawn
+			on_created = {
+				ig:ig_devout = {
+					remove_ideology = ideology_ecumenical_moralist
+					add_ideology = ideology_theocratic_moralist
+					set_interest_group_name = ig_sun_cult 
+					set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
+					set_ig_trait = ig_trait:ig_trait_secular_shrine_theory
+					set_ig_trait = ig_trait:ig_trait_heavenly_sovereign
+					leader ?= {
+						change_character_religion = rel:cult_of_the_sun
+						hidden_effect = {
+							if = {
+								limit = {
+									has_ideology = ideology:ideology_ecumenical_traditionalist
+								}
+								set_ideology = ideology:ideology_traditionalist
+							}
+						}
+					}
+					add_modifier = {
+						name = kamiran_cult
+						days = very_long_modifier_time
+						is_decaying = yes
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_ruling_interest_group = ig_devout
+						}
+					}
+					ig:ig_devout = {
+						leader = {
+							set_ideology = ideology:ideology_theocrat
+						}
+						add_ruling_interest_group = yes
+					}
+				}
+				every_interest_group = {
+					limit = {
+						OR = {
+							is_interest_group_type = ig_intelligentsia
+							is_interest_group_type = ig_armed_forces
+							is_interest_group_type = ig_rural_folk
+							is_interest_group_type = ig_devout
+						}
+					}
+					add_modifier = {
+						name = kamiran_kamiran_revolution
+						days = long_modifier_time
+					}
+				}
+				add_modifier = {
+					name = kamiran_land_socialization
+					days = long_modifier_time
+					is_decaying = yes
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_theocracy
+						}
+					}
+					activate_law = law_type:law_theocracy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_state_religion
+						}
+					}
+					activate_law = law_type:law_state_religion
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_peasant_levies
+						}
+					}
+					activate_law = law_type:law_peasant_levies
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_national_supremacy
+						}
+					}
+					activate_law = law_type:law_national_supremacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_no_workers_rights
+						}
+					}
+					activate_law = law_type:law_no_workers_rights
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_homesteading
+						}
+					}
+					activate_law = law_type:law_homesteading
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_no_migration_controls
+						}
+					}
+					activate_law = law_type:law_no_migration_controls
+				}
+
+				add_modifier = {
+					name = kamiran_army_modifier
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+		c:KAX = { 
+			save_scope_as = heavenly_kingdom_scope
+			set_variable = { name = gold_transfer value = c:DUM.gold_reserves } #This shouldn't be in the immediate, but it will throw a million errors if you put it somewhere else. DO NOT TOUCH.
+			change_variable = { name = gold_transfer divide = 3 }
+			set_variable = { name = gold_transfer_nil value = var:gold_transfer }
+			change_variable = { name = gold_transfer_nil divide = -1 }
+		}
+		add_modifier = {
+			name = kamiran_kamiran_rebellion
+			days = long_modifier_time
+		}
+		c:KAX = {		
+			add_modifier = {
+				name = kamiran_kamiran_rebellion
+				days = long_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = kamiran.4.a
+		default_option = yes
+		ai_chance = { base = 1 }
+		add_journal_entry = {
+			type = je_kamiran
+		}
+		c:KAX = {
+			add_journal_entry = {
+				type = je_kamiran_revolution
+			}
+		}
+		assign_kamiran_states = yes
+		scope:heavenly_kingdom_scope ?= {		
+			create_diplomatic_play = {
+				name = kamiran_rebellion
+				target_country = c:DUM
+				type = dp_kamiran_rebellion
+			}
+			hidden_effect = { #Why? Because the kamiran Rebellion play grants an insane amount of infamy.
+				change_infamy = -150
+			}
+		}
+		hidden_effect = {
+			c:KAX = {
+				create_kamiran_characters = yes	
+				c:DUM = {
+					add_treasury = prev.var:gold_transfer_nil
+				}
+				add_treasury = var:gold_transfer	
+			}
+			random_diplomatic_play = {
+				limit = {
+					c:KAX = {
+						is_diplomatic_play_initiator = yes
+					}
+					c:DUM = {
+						is_diplomatic_play_target = yes
+					}
+				}
+				add_diplomatic_play_war_support = { target = c:KAX value = 100 }
+			}
+		}	
+	}
+	option = {
+		name = kamiran.4.b
+		ai_chance = { base = 0 }
+		add_journal_entry = {
+			type = je_kamiran
+		}
+		c:KAX = {
+			add_journal_entry = {
+				type = je_kamiran_revolution
+			}
+		}
+		assign_kamiran_states = yes
+		scope:heavenly_kingdom_scope = {		
+			create_diplomatic_play = {
+				name = kamiran_rebellion
+				target_country = c:DUM
+				type = dp_kamiran_rebellion
+			}
+			hidden_effect = {
+				change_infamy = -150
+			}
+		}
+		hidden_effect = {
+			c:KAX = {
+				create_kamiran_characters = yes	
+				c:DUM = {
+					add_treasury = prev.var:gold_transfer_nil
+				}
+				add_treasury = var:gold_transfer	
+			}
+			random_diplomatic_play = {
+				limit = {
+					c:KAX = {
+						is_diplomatic_play_initiator = yes
+					}
+					c:DUM = {
+						is_diplomatic_play_target = yes
+					}
+				}
+				add_diplomatic_play_war_support = { target = c:KAX value = 100 }
+			}
+		}
+		play_as = scope:heavenly_kingdom_scope
+	}
+}
+
+# Aftermath event
+kamiran.5 = {
+	type = country_event
+	placement = ROOT
+
+	title = kamiran.5.t
+	desc = kamiran.5.d
+	flavor = kamiran.5.f
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by journal entry
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				has_variable = saved_incorporated_state
+			}
+			set_state_owner = c:DUM #Just in case.
+			set_state_type = incorporated
+			remove_variable = saved_incorporated_state
+		}
+		root.religion = {
+			save_scope_as = state_religion_scope
+		}
+		root = {
+			save_scope_as = china_scope
+		}
+	}
+
+	option = { # mass re-conversions
+		name = kamiran.5.a
+		default_option = yes
+		custom_tooltip = {
+			text = mass_reconversion_tt
+			every_scope_state = {
+				limit = {
+					any_scope_pop = {
+						religion = rel:cult_of_the_sun
+					}
+				}
+				add_religion_standard_of_living_modifier = {
+					religion = rel:cult_of_the_sun
+					multiplier = -3
+				}
+				convert_population = {
+					target = rel:church_of_man value = 0.1
+				}
+			}
+		}
+		ordered_country = {
+			limit = {
+				is_subject = no
+				religion ?= rel:cult_of_the_sun
+			}
+			order_by = country_rank
+			save_scope_as = christian_gp
+		}
+		create_incident = {
+			country = scope:christian_gp
+			value = 25
+		}
+		every_country = {
+			limit = {
+				religion ?= rel:cult_of_the_sun
+			}
+			change_relations = {
+				country = root
+				value = -25
+			}
+		}
+	}
+	option = { # mercy and pardons
+		name = kamiran.5.b
+		add_loyalists = {
+			value = 0.2
+			religion = rel:cult_of_the_sun
+		}
+	}
+}
+
+# Aftermath event - KAX
+kamiran.6 = {
+	type = country_event
+	placement = ROOT
+
+	title = kamiran.6.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = c:DUM
+				}
+				desc = kamiran.6.d1
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = kamiran.6.d
+			}
+		}
+	}
+	flavor = kamiran.6.f
+
+	event_image = {
+		texture = "gfx/event_images/sunkissed.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by journal entry
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = c:DUM
+			}
+			c:DUM = {
+				save_scope_as = china_scope
+			}
+		}
+		if = {
+			limit = {
+				ig:ig_intelligentsia = {
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_reformer
+							has_ideology = ideology:ideology_market_liberal
+						}
+					}
+				}
+			}
+			ig:ig_intelligentsia = {
+				leader = {
+					save_scope_as = hong_rengan_scope
+				}
+			}
+		}
+		cu:manchu = {
+			save_scope_as = manchu_culture
+		}
+	}
+
+	option = {
+		name = kamiran.6.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_conversion_of_china
+			days = long_modifier_time
+		}
+	}
+	option = {
+		name = kamiran.6.b
+		trigger = {
+			NOT = {
+				ig:ig_intelligentsia = {
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_reformer
+							has_ideology = ideology:ideology_market_liberal
+						}
+					}
+				}
+			}
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = modifier_accepted_new_treatise
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = modifier_new_treatise_on_administration
+			days = long_modifier_time
+		}
+	}
+	option = {
+		name = kamiran.6.b1
+		trigger = {
+			ig:ig_intelligentsia = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_reformer
+						has_ideology = ideology:ideology_market_liberal
+					}
+				}
+			}
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = modifier_accepted_new_treatise
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = modifier_new_treatise_on_administration
+			days = long_modifier_time
+		}
+	}
+	option = {
+		name = kamiran.6.c
+		trigger = {
+			exists = c:DUM
+		}
+		ig:ig_armed_forces = {
+			leader = {
+				set_ideology = ideology:ideology_jingoist
+			}
+			add_modifier = {
+				name = hawkish_neighbor_relations
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = modifier_second_crusade_against_manchu
+			days = long_modifier_time
+		}
+	}
+	option = {
+		name = kamiran.6.e
+		every_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+				religion = {
+					has_discrimination_trait = christian
+				}
+			}
+			change_relations = {
+				country = c:KAX
+				value = 10
+			}
+		}
+		add_modifier = {
+			name = modifier_relations_with_west
+			days = long_modifier_time
+		}
+	}
+}
+
+
+
+# Missionaries
+
+namespace = DUM_missionaries
+
+# Evangelisation in a state
+DUM_missionaries.1 = {
+	type = country_event
+	placement = scope:evangelisation_state
+
+	title = DUM_missionaries.1.t
+	desc = DUM_missionaries.1.d
+	flavor = DUM_missionaries.1.f
+
+	event_image = {
+		video = "human_preacher"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		any_scope_state = {
+			has_variable = open_to_missionaries_state
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_variable = open_to_missionaries_state
+			}
+			save_scope_as = evangelisation_state
+		}
+		change_variable = { name = missionary_works_counter add = 1 }
+	}
+	option = {
+		name = DUM_missionaries.1.a
+		scope:evangelisation_state = {
+			add_modifier = {
+				name = modifier_dumonia_state_evangelisation
+				days = normal_modifier_time
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun 
+				value = 0.06
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				religion = rel:church_of_man
+			}
+		}
+	}
+	option = {
+		name = DUM_missionaries.1.b
+		default_option = yes
+		scope:evangelisation_state = {
+			add_modifier = {
+				name = modifier_dumonia_state_evangelisation
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun 
+				value = 0.02
+			}
+		}
+	}
+}
+
+# Missionaries attempted to go where they shouldn't
+DUM_missionaries.2 = {
+	type = country_event
+	placement = scope:forbidden_state
+
+	title = DUM_missionaries.2.t
+	desc = DUM_missionaries.2.d
+	flavor = DUM_missionaries.2.f
+
+	event_image = {
+		video = "human_preacher"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		NOT = {
+			has_law = law_type:law_closed_borders
+		}
+		any_scope_state = {
+			any_neighbouring_state = {
+				owner = ROOT
+				has_variable = open_to_missionaries_state
+			}
+			NOT = {
+				has_variable = open_to_missionaries_state
+			}
+			NOT = {
+				has_variable = missionary_fear
+			}
+		}
+		any_country = {
+			has_diplomatic_relevance = root
+			is_subject = no
+			religion = rel:cult_of_the_sun
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					owner = ROOT
+					has_variable = open_to_missionaries_state
+				}
+				NOT = {
+					has_variable = open_to_missionaries_state
+				}
+				NOT = {
+					has_variable = missionary_fear
+				}
+			}
+			save_scope_as = forbidden_state
+		}
+		random_country = {
+			limit = {
+				has_diplomatic_relevance = root
+				is_subject = no
+				religion = rel:cult_of_the_sun
+			}
+			save_scope_as = missionary_country
+		}
+		change_variable = { name = missionary_works_counter add = 1 }
+		random_scope_state = {
+			limit = {
+				region = sr:region_yanger_steppe
+			}
+			save_scope_as = deportation_state
+		}
+	}
+	option = {
+		name = DUM_missionaries.2.a
+		scope:missionary_country = {
+			change_relations = {
+				country = ROOT
+				value = -15
+			}
+		}
+		scope:forbidden_state = {
+			custom_tooltip = missionaries_forbidden_10_years_tt
+			set_variable = { name = missionary_fear years = 10 } 
+		}
+	}
+	option = {
+		name = DUM_missionaries.2.b
+		default_option = yes
+		trigger = {
+			any_scope_state = {
+				region = sr:region_yanger_steppe
+			}
+		}
+		custom_tooltip = {
+			text = deport_to_yanger_steppe_tt
+		}
+		scope:missionary_country = {
+			change_relations = {
+				country = ROOT
+				value = -10
+			}
+		}
+		scope:deportation_state = {
+			add_loyalists_in_state = {
+				pop_type = aristocrats
+				value = small_radicals
+			}
+		}
+	}
+	option = {
+		name = DUM_missionaries.2.c
+		scope:forbidden_state = {
+			add_radicals_in_state = {
+				value = medium_radicals
+				religion = rel:church_of_man
+			}
+			custom_tooltip = open_to_missionaries_tt
+			set_variable = open_to_missionaries_state
+		}
+	}
+}
+
+# Missionary schools
+DUM_missionaries.3 = {
+	type = country_event
+	placement = scope:missionary_schools_state
+
+	title = DUM_missionaries.3.t
+	desc = DUM_missionaries.3.d
+	flavor = DUM_missionaries.3.f
+
+	event_image = {
+		video = "human_preacher"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		any_scope_state = {
+			has_variable = open_to_missionaries_state
+			NOT = {
+				has_modifier = modifier_dum_missionary_schools
+			}
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_variable = open_to_missionaries_state
+				NOT = {
+					has_modifier = modifier_dum_missionary_schools
+				}
+			}
+			save_scope_as = missionary_schools_state
+		}
+		change_variable = { name = missionary_works_counter add = 1 }
+	}
+	option = {
+		name = DUM_missionaries.3.a
+		scope:missionary_schools_state = {
+			add_modifier = {
+				name = modifier_dum_missionary_schools
+				days = normal_modifier_time
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun 
+				value = 0.02
+			}
+		}
+	}
+	option = {
+		name = DUM_missionaries.3.b
+		default_option = yes
+		scope:missionary_schools_state = {
+			add_modifier = {
+				name = modifier_dum_rebuked_kamiran_missionaries
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+# Missionary hospitals
+DUM_missionaries.4 = {
+	type = country_event
+	placement = scope:missionary_hospitals_state
+
+	title = DUM_missionaries.4.t
+	desc = DUM_missionaries.4.d
+	flavor = DUM_missionaries.4.f
+
+	event_image = {
+		video = "human_preacher"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		any_scope_state = {
+			has_variable = open_to_missionaries_state
+			NOT = {
+				has_modifier = modifier_dum_missionary_hospitals
+			}
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_variable = open_to_missionaries_state
+				NOT = {
+					has_modifier = modifier_dum_missionary_hospitals
+				}
+			}
+			save_scope_as = missionary_hospitals_state
+		}
+		change_variable = { name = missionary_works_counter add = 1 }
+	}
+	option = {
+		name = DUM_missionaries.4.a
+		scope:missionary_hospitals_state = {
+			add_modifier = {
+				name = modifier_dum_missionary_hospitals
+				days = normal_modifier_time
+			}
+			convert_population = {
+				target = rel:cult_of_the_sun 
+				value = 0.02
+			}
+		}
+	}
+	option = {
+		name = DUM_missionaries.4.b
+		default_option = yes
+		scope:missionary_hospitals_state = {
+			add_modifier = {
+				name = modifier_dum_rebuked_kamiran_missionaries
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+# Missionaries stir social conflict
+DUM_missionaries.5 = {
+	type = country_event
+	placement = scope:missionary_strife_state
+
+	title = DUM_missionaries.5.t
+	desc = DUM_missionaries.5.d
+	flavor = DUM_missionaries.5.f
+
+	event_image = {
+		video = "human_preacher"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		any_scope_state = {
+			has_variable = open_to_missionaries_state
+		}
+		any_country = {
+			has_diplomatic_relevance = root
+			religion = rel:cult_of_the_sun
+			is_subject = no
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_variable = open_to_missionaries_state
+			}
+			save_scope_as = missionary_strife_state
+		}
+		random_country = {
+			limit = {
+				has_diplomatic_relevance = root
+				is_subject = no
+				religion = rel:cult_of_the_sun
+			}
+			save_scope_as = missionary_country
+		}
+		change_variable = { name = missionary_works_counter add = 1 }
+	}
+	option = {
+		name = DUM_missionaries.5.a
+		default_option = yes
+		scope:missionary_strife_state = {
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}
+	}
+	option = {
+		name = DUM_missionaries.5.b
+		scope:missionary_strife_state = {
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}
+		scope:missionary_country = {
+			change_relations = {
+				country = ROOT
+				value = -10
+			}
+		}
+	}
+}

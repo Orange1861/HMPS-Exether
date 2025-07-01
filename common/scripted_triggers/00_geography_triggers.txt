@@ -1,0 +1,1455 @@
+﻿### State geography triggers
+
+state_is_in_settler_coast = {
+	OR = {
+		region = sr:region_achon
+		region = sr:region_arrador
+		region = sr:region_moorweald
+		region = sr:region_lake_bossard
+		region = sr:region_ceraun
+		region = sr:region_lagoon_coast
+		region = sr:region_keystone_peninsula
+		region = sr:region_nogi_desert
+	}
+}
+
+state_is_in_noricum = {
+	OR = {
+		region = sr:region_gulfwatch
+		region = sr:region_southwestern_noricum
+		region = sr:region_dumonian_heartlands
+		region = sr:region_central_noricum
+		region = sr:region_worlds_end
+		region = sr:region_yanger_steppe
+	}
+}
+
+state_is_in_kailando = {
+	OR = {
+		region = sr:region_elusive_coves
+		region = sr:region_lacertia
+	}
+}
+
+state_is_in_locari = {
+	OR = {
+		region = sr:region_mindrend_sands	
+		region = sr:region_scalethane_realms
+		region = sr:region_new_dumonia
+		region = sr:region_thoughtsmith_ridge
+		region = sr:region_dreamweaver_jungle
+		region = sr:region_sarpakshetra
+	}
+}
+
+state_is_in_southern_hemisphere = {
+	OR = {
+		state_is_in_locari = yes
+	}
+}
+
+state_is_in_bay_of_new_fortune = {
+	custom_tooltip = {
+		text = state_in_africa_desc
+		OR = {
+			region = sr:region_north_chin_desert
+			region = sr:region_south_chin_desert
+			region = sr:region_salt_wastes
+			region = sr:region_shaking_fields
+		}
+	}
+}
+
+state_is_in_teferet = {
+	OR = {
+		region = sr:region_starshimmer_pool
+	}
+}
+
+state_is_in_toftir = {
+	OR = {
+		region = sr:region_razorwind
+		region = sr:region_south_toftir
+	}
+}
+
+state_is_in_rimeroot = {
+	OR = {
+		region = sr:region_rimeroot_jungle
+		region = sr:region_thawed_lands
+	}
+}
+
+state_is_in_west_everfrost = {
+	OR = {
+		region = sr:region_west_everfrost
+	}
+}
+
+state_is_in_whisperpine = {
+	OR = {
+		region = sr:region_whisperpine
+	}
+}
+
+state_is_in_east_everfrost = {
+	OR = {
+		region = sr:region_east_everfrost
+	}
+}
+
+state_is_in_northern_colonial = {
+	OR = {
+		region = sr:region_east_everfrost
+		region = sr:region_whisperpine
+		region = sr:region_west_everfrost
+		region = sr:region_thawed_lands
+		region = sr:region_rimeroot_jungle
+		region = sr:region_south_toftir
+		region = sr:region_razorwind
+	}
+}
+
+state_is_in_dragon_isles = {
+	OR = {
+		region = sr:region_west_dragon_isles
+		region = sr:region_amethyst_archipelago
+	}
+}
+state_is_in_west_locari = {
+	OR = {
+		region = sr:region_new_dumonia
+		region = sr:region_mindrend_sands
+		region = sr:region_scalethane_realms
+		region = sr:region_dreamweaver_jungle
+	}
+}
+
+state_is_in_east_locari = {
+	OR = {
+		region = sr:region_sarpakshetra
+		region = sr:region_thoughtsmith_ridge
+	}
+}
+
+state_is_in_kharaa_ur = {
+	OR = {
+		region = sr:region_hirugolaima
+		region = sr:region_yamkhanato
+		region = sr:region_yamkhanato
+		region = sr:region_bataar_kharaal
+		region = sr:region_muru
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_khantar
+	}
+}
+
+state_is_in_yulug = {
+	OR = {
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_bataar_kharaal
+		region = sr:region_muru
+		# not counting manchuria here deliberately
+	}
+}
+
+state_is_in_citrus_currents = {
+	OR = {
+		region = sr:region_sanbang
+		region = sr:region_lotus_isles
+		region = sr:region_vindon_narrows
+	}
+}
+
+state_is_in_northern_zalaron = {
+	OR = {
+		region = sr:region_varinath
+		region = sr:region_varinath
+		region = sr:region_vermillion_thicket
+	}
+}
+
+state_is_in_northwestern_zalaron = {
+	OR = {
+		region = sr:region_ravik
+		region = sr:region_gnomehome
+		region = sr:region_hasals_mirror
+		region = sr:region_old_thaloria
+	}
+}
+
+state_is_in_gavkhan = {
+	OR = {
+		region = sr:region_gavkhan
+		region = sr:region_kengurudal
+		region = sr:region_tokalivar
+	}
+}
+
+state_has_argentum_rail = {
+	OR = {
+		region = sr:region_arrador
+		region = sr:region_smallhills
+		region = sr:region_achon
+		region = sr:region_keystone_peninsula
+		region = sr:region_starshimmer_pool
+		region = sr:region_old_khus
+		region = sr:region_shimmering_coast
+		region = sr:region_geyser_plateau
+		region = sr:region_varinath
+		region = sr:region_vermillion_thicket
+	}
+}
+
+##compat triggers
+
+state_is_in_china = { #these seemingly useless triggers will help us play better with mods like BPM
+	OR = {
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_bataar_kharaal
+		region = sr:region_muru
+		# not counting manchuria here deliberately
+	}
+}
+
+state_is_in_east_asia = { #these seemingly useless triggers will help us play better with mods like BPM
+	OR = {
+		region = sr:region_hirugolaima
+		region = sr:region_yamkhanato
+		region = sr:region_yamkhanato
+		region = sr:region_bataar_kharaal
+		region = sr:region_muru
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_khantar
+	}
+}
+
+state_is_in_europe = { #I did my best
+	OR = {
+		region = sr:region_gulfwatch
+		region = sr:region_southwestern_noricum
+		region = sr:region_dumonian_heartlands
+		region = sr:region_central_noricum
+		region = sr:region_worlds_end
+		region = sr:region_achon
+		region = sr:region_arrador
+		region = sr:region_moorweald
+		region = sr:region_lake_bossard
+		region = sr:region_ceraun
+		region = sr:region_lagoon_coast
+		region = sr:region_keystone_peninsula
+		region = sr:region_ravik
+		region = sr:region_hasals_mirror
+	}
+}
+
+state_is_in_africa = {
+	state_is_in_locari = yes
+}
+
+### Country geography triggers
+# exists = capital checks are necessary only because we may test these triggers and scope switch to capitals before states are initialized properly
+
+country_is_in_settler_coast = {
+	exists = capital
+	capital = {
+		state_is_in_settler_coast = yes
+	}
+}
+
+country_is_in_northern_zalaron = {
+	exists = capital
+	capital = {
+		state_is_in_northern_zalaron = yes
+	}
+}
+
+country_is_in_northwestern_zalaron = {
+	exists = capital
+	capital = {
+		state_is_in_northwestern_zalaron = yes
+	}
+}
+
+country_is_in_noricum= {
+	exists = capital
+	capital = {
+		state_is_in_noricum = yes
+	}
+}
+
+country_is_in_gavkhan = {
+	exists = capital
+	capital = {
+		state_is_in_gavkhan = yes
+	}
+}
+
+country_is_in_bay_of_new_fortune = {
+	exists = capital
+	capital = {
+		state_is_in_bay_of_new_fortune = yes
+	}
+}
+
+country_is_in_teferet = {
+	exists = capital
+	capital = {
+		state_is_in_teferet = yes
+	}
+}
+
+country_is_in_toftir = {
+	exists = capital
+	capital = {
+		state_is_in_toftir = yes
+	}
+}
+
+country_is_in_rimeroot = {
+	exists = capital
+	capital = {
+		state_is_in_rimeroot = yes
+	}
+}
+
+country_is_in_west_everfrost = {
+	exists = capital
+	capital = {
+		state_is_in_west_everfrost = yes
+	}
+}
+
+country_is_in_whisperpine = {
+	exists = capital
+	capital = {
+		state_is_in_whisperpine = yes
+	}
+}
+
+country_is_in_coldreach = {
+	exists = capital
+	capital = {
+		state_is_in_coldreach = yes
+	}
+}
+
+country_is_in_east_everfrost = {
+	exists = capital
+	capital = {
+		state_is_in_east_everfrost = yes
+	}
+}
+
+country_is_in_northern_colonial = {
+    exists = capital
+    capital = {
+        state_is_in_northern_colonial = yes
+    }
+}
+
+country_is_in_west_locari = {
+	exists = capital
+	capital = {
+		state_is_in_west_locari = yes
+	}
+}
+country_is_in_india = {
+	country_is_in_aritzakarri = yes
+}
+
+
+
+country_is_in_east_locari = {
+	exists = capital
+	capital = {
+		state_is_in_east_locari = yes
+	}
+}
+
+country_is_in_kailando = {
+	exists = capital
+	capital = {
+		state_is_in_kailando = yes
+	}
+}
+
+country_is_in_kharaa_ur = {
+	exists = capital
+	capital = {
+		state_is_in_kharaa_ur = yes
+	}
+}
+
+country_is_in_citrus_currents = {
+	exists = capital
+	capital = {
+		state_is_in_citrus_currents = yes
+	}
+}
+
+## almost vanilla
+country_is_in_europe= {
+	exists = capital
+	capital = {
+		state_is_in_europe = yes
+	}
+}
+
+country_is_in_africa= {
+	exists = capital
+	capital = {
+		state_is_in_locari = yes
+	}
+}
+
+country_is_in_east_asia = {
+	custom_description = {
+		text = country_is_in_east_asia_desc
+		subject = this
+
+		capital ?= {
+			state_is_in_east_asia = yes
+		}
+	}
+}
+
+country_is_in_china = {
+	exists = capital
+	capital = {
+		state_is_in_china = yes
+	}
+}
+
+### Climate triggers
+
+is_arabic_farmland = {
+	OR = {
+		region = sr:region_north_chin_desert
+		region = sr:region_south_chin_desert
+		region = sr:region_starshimmer_pool
+		region = sr:region_shimmering_coast
+		region = sr:region_nogi_desert
+	}
+}
+
+is_jungle_hills = {
+	OR = {
+		always = no
+	}
+}
+
+is_asian_farmland = {
+	OR = {
+		region = sr:region_sanbang
+		region = sr:region_kengurudal
+		region = sr:region_tundgara
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_muru
+		region = sr:region_bataar_kharaal
+	}
+}
+
+is_jungle = {
+	OR = {
+		region = sr:region_sanbang
+		region = sr:region_kengurudal
+		region = sr:region_tundgara
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_muru
+		region = sr:region_bataar_kharaal
+		region = sr:region_vindon_narrows
+		region = sr:region_lotus_isles
+		region = sr:region_dreamweaver_jungle
+		region = sr:region_sarpakshetra
+		region = sr:region_elusive_coves
+		region = sr:region_lacertia
+	}
+}
+
+is_subtropic_farmland = {
+	OR = {
+		region = sr:region_sarpakshetra
+		region = sr:region_thoughtsmith_ridge
+		region = sr:region_old_thaloria
+		region = sr:region_skittering_hills
+		region = sr:region_sanbang
+	}
+}
+
+is_rocky_desert = {
+	OR = {
+								region = sr:region_nogi_desert
+								region = sr:region_embervein_arroyo
+								region = sr:region_starshimmer_pool
+								region = sr:region_salt_wastes
+								region = sr:region_gavkhan
+								region = sr:region_yamkhanato
+								region = sr:region_hirugolaima
+								region = sr:region_vulture_coast
+								region = sr:region_rust_gorge
+								region = sr:region_new_dumonia
+								region = sr:region_scalethane_realms
+								region = sr:region_khantar
+						}
+}
+
+is_arid_region = {
+	OR = {
+		region = sr:region_starshimmer_pool
+		region = sr:region_hyena_plains
+		region = sr:region_south_chin_desert
+		region = sr:region_north_chin_desert
+		region = sr:region_salt_wastes
+		region = sr:region_gavkhan
+		region = sr:region_yamkhanato
+		region = sr:region_yamkhanato
+		region = sr:region_hirugolaima
+		region = sr:region_vulture_coast
+		region = sr:region_equine_plains
+		region = sr:region_nogi_desert
+		region = sr:region_embervein_arroyo
+		region = sr:region_rust_gorge
+		region = sr:region_new_dumonia
+		region = sr:region_scalethane_realms
+		region = sr:region_khantar
+		region = sr:region_tokalivar
+		region = sr:region_mindrend_sands	
+	}
+}
+
+state_has_mountain = {
+		OR = {
+			has_state_trait = state_trait_crescent_range
+			has_state_trait = state_trait_sandwall_mountains
+			has_state_trait = state_trait_stormguard_mountains
+			has_state_trait = state_trait_mount_grim
+			has_state_trait = state_trait_mount_yelfis
+			has_state_trait = state_trait_whistling_summits
+			has_state_trait = state_trait_mukhalis_fangs
+			has_state_trait = state_trait_colicier_mountains
+			has_state_trait = state_trait_mount_surriden
+			has_state_trait = state_trait_vitics_roosts
+			has_state_trait = state_trait_misty_peaks
+			has_state_trait = state_trait_mammoth_cliffs
+			has_state_trait = state_trait_gruaav_range
+			has_state_trait = state_trait_wardon_peaks
+			has_state_trait = state_trait_westerly_mountains
+			has_state_trait = state_trait_sulrans_spine
+			has_state_trait = state_trait_scarlet_ridge
+			has_state_trait = state_trait_ambalt_rise
+			has_state_trait = state_trait_mount_gladraine
+			has_state_trait = state_trait_caraly_peak
+			has_state_trait = state_trait_stokeford_heights
+			has_state_trait = state_trait_wynsard_range
+			has_state_trait = state_trait_wakaman_hill
+			has_state_trait = state_trait_ferstone_ridge
+			has_state_trait = state_trait_terforte_slopes
+			has_state_trait = state_trait_baxfil_ridge
+			has_state_trait = state_trait_asrar_peaks
+			has_state_trait = state_trait_asrar_peaks
+			has_state_trait = state_trait_twilan_summit
+			has_state_trait = state_trait_dehistun_mountains
+			has_state_trait = state_trait_mirazara_mountains
+			has_state_trait = state_trait_crescent_range
+			has_state_trait = state_trait_caslinet_highlands
+			has_state_trait = state_trait_valmis_pinnacle
+			has_state_trait = state_trait_faljour_hill
+			has_state_trait = state_trait_silverspine_mountains
+			has_state_trait = state_trait_carboncopy_mountains
+			has_state_trait = state_trait_eorn_mountains
+			has_state_trait = state_trait_gwitiz_mountains
+			has_state_trait = state_trait_lore_mountains
+			has_state_trait = state_trait_gorriamundi_mountain
+			has_state_trait = state_trait_featherpeak_mountains
+			has_state_trait = state_trait_wingpalooza_mountains
+			has_state_trait = state_trait_north_salt_waste_mountains
+			has_state_trait = state_trait_south_salt_waste_mountains
+			has_state_trait = state_trait_toftir_mountains
+			has_state_trait = state_trait_paylaz_mountains
+			has_state_trait = state_trait_mindrend_sands_mountains
+			has_state_trait = state_trait_west_mindrend_sands_mountains
+			has_state_trait = state_trait_dove_mountains
+			has_state_trait = state_trait_anantadesh_mountains
+			has_state_trait = state_trait_the_dirtmound
+		}
+	
+
+}
+
+no_beaches = {  
+#⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
+#⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
+#⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀
+#⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀
+#⠀⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉⠀⠀⠀⠀
+#⠀⠀⠀⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀
+#⠀⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀
+is_coastal = yes
+
+check_is_coastal = no
+}
+
+exether_is_inland = {
+	OR = {
+		state_region = s:STATE_ACHONIAN_HIGHLANDS
+		state_region = s:STATE_ACTUALLY_THIS_STATE_LOOKS_NICE_I_WAS_BEING_MEAN
+		state_region = s:STATE_ADRIANSEN
+		state_region = s:STATE_SJETADIKK
+		state_region = s:STATE_DASRUGODA
+		state_region = s:STATE_ALMAKSURO
+		state_region = s:STATE_ALQADIM
+		state_region = s:STATE_GIRAR
+		state_region = s:STATE_GWITESHAST
+		state_region = s:STATE_ALVEKSADO
+		state_region = s:STATE_ALVEKSKIES
+		state_region = s:STATE_ALZAHRUD
+		state_region = s:STATE_AMETHYST_SEA
+		state_region = s:STATE_ANANTAPURI
+		state_region = s:STATE_ANWARTH_VALLEYS
+		state_region = s:STATE_ANWARTH_VALLEYS_2
+		state_region = s:STATE_ARAKALDE
+		state_region = s:STATE_ARASHIHARA
+		state_region = s:STATE_ARITZA
+		state_region = s:STATE_HAMAZASTINT
+		state_region = s:STATE_ARVAN_SEA
+		state_region = s:STATE_ASHGATE_HEIGHTS
+		state_region = s:STATE_ASHOVER_WINDS
+		state_region = s:STATE_ASHWICK
+		state_region = s:STATE_AUTUMN_HILLS
+		state_region = s:STATE_AZURETHORN_SEA
+		state_region = s:STATE_BALLYNE
+		state_region = s:STATE_BANOKIK
+		state_region = s:STATE_BARIKHARGUL
+		state_region = s:STATE_BARREN_SKIES
+		state_region = s:STATE_BATOKYOAN
+		state_region = s:STATE_BAY_OF_NEW_FORTUNE
+		state_region = s:STATE_BAZKYL
+		state_region = s:STATE_BEANLAKE_SKIES
+		state_region = s:STATE_BEARTZUNGUL
+		state_region = s:STATE_BELLENBERG
+		state_region = s:STATE_BELLENBOS
+		state_region = s:STATE_MOYHOSTUPI
+		state_region = s:STATE_BIRDIE_BAY
+		state_region = s:STATE_BIRDIE_BAY_SKIES
+		state_region = s:STATE_BIZI
+		state_region = s:STATE_BJERGHOLM
+		state_region = s:STATE_BLACKFEATHER_COAST
+		state_region = s:STATE_BLACK_CHANNEL
+		state_region = s:STATE_BLESSED_SHALLOWS
+		state_region = s:STATE_BLOODAXE_TERRITORY
+		state_region = s:STATE_BLOODTHORN_WASTES_2
+		state_region = s:STATE_BODHISATTVA_LANDING
+		state_region = s:STATE_NYOLMAFUM
+		state_region = s:STATE_BROKENPILLAR
+		state_region = s:STATE_BUCCANEER_SEA
+		state_region = s:STATE_BURAMONG
+		state_region = s:STATE_BUYANT_LANDING
+		state_region = s:STATE_CAM_CALLAIRD
+		state_region = s:STATE_CAM_LIADRINE
+		state_region = s:STATE_CAM_NUALA
+		state_region = s:STATE_CAM_RINNARA
+		state_region = s:STATE_CARGOMIRE
+		state_region = s:STATE_CARREGRICE
+		state_region = s:STATE_CASTLECOURT
+		state_region = s:STATE_CASTLECOURT_HEIGHTS
+		state_region = s:STATE_CAVES_OF_RIMELAC
+		state_region = s:STATE_DRAGDA
+		state_region = s:STATE_SHISHUSM
+		state_region = s:STATE_CHANSONBOIS
+		state_region = s:STATE_CHINTANAGIRI
+		state_region = s:STATE_CHRONICLE_SKIES
+		state_region = s:STATE_CITRUS_CURRENTS
+		state_region = s:STATE_CITRUS_WINDS
+		state_region = s:STATE_CLEARBOUGH_ESTATES
+		state_region = s:STATE_CLOUDLESS_SKIES
+		state_region = s:STATE_CLOUDSILVER_SPINE
+		state_region = s:STATE_CRAGGEDWYN
+		state_region = s:STATE_CROPHEART_DALE
+		state_region = s:STATE_CROPHEART_WINDS
+		state_region = s:STATE_CROWNPEAK
+		state_region = s:STATE_CROWNPEAK_HEIGHTS
+		state_region = s:STATE_CROWNSHADE
+		state_region = s:STATE_DALKH
+		state_region = s:STATE_DANKASEMBE
+		state_region = s:STATE_DEAD_SEA_SKIES
+		state_region = s:STATE_DEEPWOODS
+		state_region = s:STATE_DEPHEL_PATH
+		state_region = s:STATE_DER_IBBENN
+		state_region = s:STATE_DILAFSHAN
+		state_region = s:STATE_DINASHIN
+		state_region = s:STATE_DIYINAKHAD
+		state_region = s:STATE_DIYINAKHAD_BASIN_SKIES
+		state_region = s:STATE_DORNO
+		state_region = s:STATE_DOVESFLIGHT
+		state_region = s:STATE_DOVETAIL_LANDING
+		state_region = s:STATE_DRAGON_LANDING
+		state_region = s:STATE_DROWNED_LANDS
+		state_region = s:STATE_DROWNED_SKIES
+		state_region = s:STATE_DRUIDS_CHANT
+		state_region = s:STATE_DRUKYN
+		state_region = s:STATE_DRUKYN_SKIES
+		state_region = s:STATE_DUODJI
+		state_region = s:STATE_DURANS_LAND
+		state_region = s:STATE_DURANS_LAND_2
+		state_region = s:STATE_DWARVENHAMMER
+		state_region = s:STATE_EARTHCHURN
+		state_region = s:STATE_EASTERN_EMBERLAND
+		state_region = s:STATE_EASTERN_PLAGUEWOOD
+		state_region = s:STATE_EAST_AMETHYST_HEIGHTS
+		state_region = s:STATE_EAST_BIRD_SKIES
+		state_region = s:STATE_EAST_HUNDIRS_BANE
+		state_region = s:STATE_EAST_OPALATH_HEIGHTS
+		state_region = s:STATE_EAST_PLAGUEWINDS
+		state_region = s:STATE_EAST_STARSHIMMER_SKIES
+		state_region = s:STATE_EAST_YANGERSKIES
+		state_region = s:STATE_EIREKS_LANDING
+		state_region = s:STATE_EISENMORA
+		state_region = s:STATE_ELBASHTIA
+		state_region = s:STATE_ELENIKAAJ
+		state_region = s:STATE_ELZEKOEPEL
+		state_region = s:STATE_EMBERSKIES
+		state_region = s:STATE_EMPERORS_MARBLES
+		state_region = s:STATE_EQUINE_SEA
+		state_region = s:STATE_EQUINE_SKIES
+		state_region = s:STATE_ERBENS_SEA
+		state_region = s:STATE_ERKHE
+		state_region = s:STATE_ERSEKERA
+		state_region = s:STATE_ESPARASHIM
+		state_region = s:STATE_EVERFROST_COAST
+		state_region = s:STATE_FAERONDALE
+		state_region = s:STATE_FAERONDALE_HEIGHTS
+		state_region = s:STATE_FAOLNA_PASS
+		state_region = s:STATE_FAOLNA_WINDS
+		state_region = s:STATE_GLIDGRED_RIZRA
+		state_region = s:STATE_FARREACH
+		state_region = s:STATE_FAR_SHORE
+		state_region = s:STATE_FAR_SHORE_2
+		state_region = s:STATE_FERNSEA
+		state_region = s:STATE_FIERCEHOLD
+		state_region = s:STATE_FIERCEHOLD_HEIGHTS
+		state_region = s:STATE_FIKOLIK
+		state_region = s:STATE_FLINTERWIIDTE
+		state_region = s:STATE_FLUITBOS
+		state_region = s:STATE_FLUITVELD
+		state_region = s:STATE_FLUSSHOLM_SKIES
+		state_region = s:STATE_FOBAN
+		state_region = s:STATE_FORESTS_HEART
+		state_region = s:STATE_BLACKWOOD
+		state_region = s:STATE_FRIGID_SEA
+		state_region = s:STATE_FRIGID_SEA_02
+		state_region = s:STATE_FRIGID_SHORES
+		state_region = s:STATE_FROSTBITE_BAY
+		state_region = s:STATE_FROSTBITE_DEPTHS
+		state_region = s:STATE_FUNETUN
+		state_region = s:STATE_RUAATTA
+		state_region = s:STATE_GALSHA
+		state_region = s:STATE_GANDENASKIY
+		state_region = s:STATE_GARPATIA
+		state_region = s:STATE_GIANTS_POND
+		state_region = s:STATE_GIFFON_LANDING
+		state_region = s:STATE_GLIMMERDAM
+		state_region = s:STATE_GLIMMERWOUD
+		state_region = s:STATE_GNURKENSHORES
+		state_region = s:STATE_GOLDENACRE
+		state_region = s:STATE_GOLDENMOOR
+		state_region = s:STATE_GOLDENPASS_SKIES
+		state_region = s:STATE_GREENCOURT
+		state_region = s:STATE_DAEOCHAIRB
+		state_region = s:STATE_GRINWALD
+		state_region = s:STATE_GULFSHORES
+		state_region = s:STATE_GULF_OF_DUMONIA
+		state_region = s:STATE_HAFODFAN
+		state_region = s:STATE_HANALLA
+		state_region = s:STATE_HANALLA_2
+		state_region = s:STATE_HARQOM
+		state_region = s:STATE_HAVENSHIRE
+		state_region = s:STATE_HAZEAR_SEA
+		state_region = s:STATE_HAZELDEEP
+		state_region = s:STATE_HAZELFLIGHT
+		state_region = s:STATE_HELLENOVA
+		state_region = s:STATE_HIGHPASS
+		state_region = s:STATE_HIRAKHANJO
+		state_region = s:STATE_HOJLAND
+		state_region = s:STATE_HOKUKHAN
+		state_region = s:STATE_HOOKED_WINDS
+		state_region = s:STATE_HORSELORDS_DEMESNE
+		state_region = s:STATE_HORSEY_LANDING
+		state_region = s:STATE_HYDOBRAN
+		state_region = s:STATE_HYDOBRAN_SKIES
+		state_region = s:STATE_ICAN_SKIES
+		state_region = s:STATE_ICY_EXPANSE
+		state_region = s:STATE_ICY_EXPANSE_02
+		state_region = s:STATE_IDK_PENINSULA_HEIGHTS
+		state_region = s:STATE_INAMGI
+		state_region = s:STATE_INAMGI_2
+		state_region = s:STATE_INAMGI_3
+		state_region = s:STATE_INNER_MOORWEALD
+		state_region = s:STATE_INTIWINA
+		state_region = s:STATE_INVERINGAR
+		state_region = s:STATE_ISTRANA_SKIES
+		state_region = s:STATE_IZOZKI
+		state_region = s:STATE_JALAGAMKATTA
+		state_region = s:STATE_BORKAGAUW
+		state_region = s:STATE_JARGALTSAI
+		state_region = s:STATE_IMKIMPIL
+		state_region = s:STATE_JIVANASUTA
+		state_region = s:STATE_KAJRANDO
+		state_region = s:STATE_KAJRANDO_SKIES
+		state_region = s:STATE_KAMUY_PEAKS
+		state_region = s:STATE_KARAKAR
+		state_region = s:STATE_STISTRIPLUS
+		state_region = s:STATE_KASHAMAD
+		state_region = s:STATE_KASIDA_HEIGHTS
+		state_region = s:STATE_KASKADVIVO_HEIGHTS
+		state_region = s:STATE_KEENAVOK
+		state_region = s:STATE_KHADURAN_SKIES
+		state_region = s:STATE_KHAMOSKIES
+		state_region = s:STATE_KHAMOSKIWAN
+		state_region = s:STATE_KHARGISHABBO
+		state_region = s:STATE_FIRDRUI
+		state_region = s:STATE_KHORTA
+		state_region = s:STATE_MUMHAMOT
+		state_region = s:STATE_KHUBEK
+		state_region = s:STATE_KHULANJO
+		state_region = s:STATE_KHULANJO_SKIES
+		state_region = s:STATE_KHULEKKA
+		state_region = s:STATE_KHURIN
+		state_region = s:STATE_TROBIPPA
+		state_region = s:STATE_KITAYAMAO
+		state_region = s:STATE_KIYOMORIN
+		state_region = s:STATE_KIYOMORIN_SKIES
+		state_region = s:STATE_KIYOMU
+		state_region = s:STATE_KLAQEKS
+		state_region = s:STATE_KLINGELBERG
+		state_region = s:STATE_KLINGELMEER
+		state_region = s:STATE_KLINGELWEIDE
+		state_region = s:STATE_KLINGEL_HEIGHTS
+		state_region = s:STATE_KLIPPEBJERG
+		state_region = s:STATE_ENLUDRAD
+		state_region = s:STATE_KORO
+		state_region = s:STATE_KOTIK
+		state_region = s:STATE_KROVADORAN_SKIES
+		state_region = s:STATE_DAKQOD
+		state_region = s:STATE_KRULWILGEN
+		state_region = s:STATE_KUMASKA
+		state_region = s:STATE_KUMASKA_SKIES
+		state_region = s:STATE_KUNCHI
+		state_region = s:STATE_UMKITMUT
+		state_region = s:STATE_KUNTURPAMPA
+		state_region = s:STATE_KURRADUYARRA
+		state_region = s:STATE_KWETTERDIJK
+		state_region = s:STATE_KYRZUR
+		state_region = s:STATE_KYRZUR_SKIES
+		state_region = s:STATE_KALMBIQUIS
+		state_region = s:STATE_NORTH_BOSSARDI_SKIES
+		state_region = s:STATE_SOUTH_BOSSARDI_SKIES
+		state_region = s:STATE_KIKUHO_KOHIKI
+		state_region = s:STATE_LEVIATHAN_DEEP
+		state_region = s:STATE_KIT_RAUNAQ
+		state_region = s:STATE_LIGHTSCOURGE
+		state_region = s:STATE_LILACSHORES
+		state_region = s:STATE_LILLESO
+		state_region = s:STATE_LLANKAYUQ
+		state_region = s:STATE_LONELY_SKIES
+		state_region = s:STATE_LONELY_WAVES
+		state_region = s:STATE_LONELY_WAVES_1
+		state_region = s:STATE_LOWER_GOLDENLEAF
+		state_region = s:STATE_LUMADHIA
+		state_region = s:STATE_LUMANTAN_HEIGHTS
+		state_region = s:STATE_LURRA
+		state_region = s:STATE_EPUSOTFA
+		state_region = s:STATE_MAPLELAKE_HEIGHTS
+		state_region = s:STATE_MARAMAROVA
+		state_region = s:STATE_MARBLEGATE
+		state_region = s:STATE_MARBLEGATE_HEIGHTS
+		state_region = s:STATE_BRAATTA
+		state_region = s:STATE_DEPZWU
+		state_region = s:STATE_MERCHANTS_LANDING
+		state_region = s:STATE_MIDDLE_WEST_ZALARON_SKIES
+		state_region = s:STATE_MIKHUYUQ
+		state_region = s:STATE_MIKHUYUQ_WINDS
+		state_region = s:STATE_MISTREACH
+		state_region = s:STATE_MISTREACH_2
+		state_region = s:STATE_MISTY_HEIGHTS
+		state_region = s:STATE_GUGNOS
+		state_region = s:STATE_MONTEGO_HEIGHTS
+		state_region = s:STATE_MOONSHADE
+		state_region = s:STATE_MOONVIEW_SKIES
+		state_region = s:STATE_MOORNSHORE
+		state_region = s:STATE_MORASSIAN_HEIGHTS
+		state_region = s:STATE_MOUNTAINNAME_DESMESNE_SKIES
+		state_region = s:STATE_MOUNT_YELFIS
+		state_region = s:STATE_MUSCHELHAVN_LANDING
+		state_region = s:STATE_MYSARA
+		state_region = s:STATE_NAJMAKULO
+		state_region = s:STATE_NAKOKAIN
+		state_region = s:STATE_YITANU_ZMIM
+		state_region = s:STATE_AEMQAA
+		state_region = s:STATE_NAVAKAI
+		state_region = s:STATE_NAWIYANU
+		state_region = s:STATE_NAWI_OASIS
+		state_region = s:STATE_NEWBANKS
+		state_region = s:STATE_NILBOGYURT_SKIES
+		state_region = s:STATE_NOGI_SKIES
+		state_region = s:STATE_NORDFJALL
+		state_region = s:STATE_NORTHERN_EXPANSE
+		state_region = s:STATE_NORTHERN_FEYSTALK
+		state_region = s:STATE_NORTHERN_FEYSTALK_SKIES
+		state_region = s:STATE_NORTH_HIGHLANDS
+		state_region = s:STATE_NORTH_LAKE_SKIES
+		state_region = s:STATE_NORTH_LANTERNSHORE_SKIES
+		state_region = s:STATE_NORTH_PERILOUS_OCEAN_01
+		state_region = s:STATE_NORTH_PERILOUS_OCEAN_02
+		state_region = s:STATE_NORTH_PLAGUEWINDS
+		state_region = s:STATE_NORTH_STARSHIMMER_SKIES
+		state_region = s:STATE_NORTH_YANGERSKIES
+		state_region = s:STATE_BRIFTEPLYG
+		state_region = s:STATE_NYZHNE_SENIA
+		state_region = s:STATE_OASIS_SKIES
+		state_region = s:STATE_OISIALKS_HORIZON
+		state_region = s:STATE_OLDSLOPE_SKIES
+		state_region = s:STATE_OPHIDIAN_SHORE
+		state_region = s:STATE_ORCBANE_PASS
+		state_region = s:STATE_ORCBANE_PASS_2
+		state_region = s:STATE_ORONK
+		state_region = s:STATE_OVERBURROW
+		state_region = s:STATE_PAYLAZI_HEIGHTS
+		state_region = s:STATE_PETAL_HEIGHTS
+		state_region = s:STATE_PETAL_SEA
+		state_region = s:STATE_PIEPERHAVEN
+		state_region = s:STATE_PISQUPATA
+		state_region = s:STATE_PISQUPATA_SKIES
+		state_region = s:STATE_PLAGUEBRUSH
+		state_region = s:STATE_PLAGUEWOOD_HINTERLANDS
+		state_region = s:STATE_PLANTATION_HEIGHTS
+		state_region = s:STATE_PLEASANT_WAVES
+		state_region = s:STATE_POFIKAN
+		state_region = s:STATE_POMMELFALL
+		state_region = s:STATE_POMMELFALL_2
+		state_region = s:STATE_KHREM_YAIQ
+		state_region = s:STATE_PRESPIA
+		state_region = s:STATE_PRILYRA
+		state_region = s:STATE_PUKARAQOCHA
+		state_region = s:STATE_PULIKOTSK
+		state_region = s:STATE_CHITTERKIQ
+		state_region = s:STATE_THACK_MZUNT
+		state_region = s:STATE_QAMARUD
+		state_region = s:STATE_QAQAMANTA
+		state_region = s:STATE_QOMERQOCHA
+		state_region = s:STATE_QOMERQOCHA_SKIES
+		state_region = s:STATE_RAINBOWFISH_LANDING
+		state_region = s:STATE_RAQUARTES_SHIELD
+		state_region = s:STATE_RAQUARTES_SKY
+		state_region = s:STATE_RATELBERG
+		state_region = s:STATE_RAVENCLIFF
+		state_region = s:STATE_RAVENFLIGHT
+		state_region = s:STATE_RAVENWATCH_SKIES
+		state_region = s:STATE_REMNANT_WAVES
+		state_region = s:STATE_RENALPAN_HEIGHTS
+		state_region = s:STATE_RESTLESS_SEA
+		state_region = s:STATE_RIBAGAR
+		state_region = s:STATE_RICHAR_JEDD
+		state_region = s:STATE_RIDERS_MOOT
+		state_region = s:STATE_RIRGEN
+		state_region = s:STATE_RIVERTIDE
+		state_region = s:STATE_RIVER_SOLILOQUE
+		state_region = s:STATE_RIVER_SOLILOQUE_2
+		state_region = s:STATE_ROCHENSTONE
+		state_region = s:STATE_ROUGHSTONE_SKIES
+		state_region = s:STATE_ROUGHSTONE_TERRITORY
+		state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+		state_region = s:STATE_RUGAKAMPO_LANDING
+		state_region = s:STATE_RUKHAM
+		state_region = s:STATE_SADHANA_HEIGHTS
+		state_region = s:STATE_SADHANA_MANDAL
+		state_region = s:STATE_SAINO
+		state_region = s:STATE_SALTGATE_HEIGHTS
+		state_region = s:STATE_SALTY_LANDING
+		state_region = s:STATE_SANDWOOD
+		state_region = s:STATE_SANGARI_SHORES
+		state_region = s:STATE_SANGUINE_OCEAN_01
+		state_region = s:STATE_SANGUINE_OCEAN_02
+		state_region = s:STATE_SANGUINE_OCEAN_03
+		state_region = s:STATE_SANGUINE_OCEAN_04
+		state_region = s:STATE_SANGUINE_OCEAN_05
+		state_region = s:STATE_SAVAGE_LANDS
+		state_region = s:STATE_SAVAGE_LANDS_2
+		state_region = s:STATE_SAVAGE_REACH
+		state_region = s:STATE_SAVAGE_SKIES
+		state_region = s:STATE_DUTAKHAMKU
+		state_region = s:STATE_NYOKSIAPLA
+		state_region = s:STATE_SEA_OF_EYES
+		state_region = s:STATE_SEERSKIES
+		state_region = s:STATE_SEIFU_SEA
+		state_region = s:STATE_SENEKSKIES
+		state_region = s:STATE_SERONTAIN
+		state_region = s:STATE_SERPENTS_EYE
+		state_region = s:STATE_SETTLERS_LANDING
+		state_region = s:STATE_SETTLER_COAST
+		state_region = s:STATE_SHADOWFEN
+		state_region = s:STATE_TAYIGAMU
+		state_region = s:STATE_SHAPESHIFTER_SKIES
+		state_region = s:STATE_SHARPWOOD
+		state_region = s:STATE_SHARPWOOD_HEIGHTS
+		state_region = s:STATE_SHIBADUAI
+		state_region = s:STATE_SHIFTING_SCAR
+		state_region = s:STATE_SHIFTING_SCAR_2
+		state_region = s:STATE_SHINAKHAD
+		state_region = s:STATE_SHINKANBATA
+		state_region = s:STATE_SHINOGOZH
+		state_region = s:STATE_SHIPSHATTER_REEF
+		state_region = s:STATE_SHIPSHATTER_REEF_02
+		state_region = s:STATE_SHIRAFIQ
+		state_region = s:STATE_SHIRAZAN
+		state_region = s:STATE_SHIRBIN_LOWLANDS
+		state_region = s:STATE_SHIRHUAJIAN_SKIES
+		state_region = s:STATE_SHOULDERSKIES
+		state_region = s:STATE_SILVERCREST
+		state_region = s:STATE_SILVERTARGE
+		state_region = s:STATE_SIRENS_LAGOON
+		state_region = s:STATE_SITYU_CIN
+		state_region = s:STATE_SJETTSZCEK_MIRE
+		state_region = s:STATE_SKIES_1
+		state_region = s:STATE_SKIES_3
+		state_region = s:STATE_SKIES_4
+		state_region = s:STATE_SKIES_7
+		state_region = s:STATE_SKIES_OF_CERAUN
+		state_region = s:STATE_SKIES_OF_RIME
+		state_region = s:STATE_SKIES_OF_RIMELAC
+		state_region = s:STATE_SKIES_OF_THE_VOW
+		state_region = s:STATE_SKIES_UPON_CRAG
+		state_region = s:STATE_SKIMERSSKIES
+		state_region = s:STATE_SKRAVEND_SKIES
+		state_region = s:STATE_SKYPIERCER_PEAK
+		state_region = s:STATE_SLETTEJUNGEL
+		state_region = s:STATE_SLITHERSHORE
+		state_region = s:STATE_SMEERGOED
+		state_region = s:STATE_SMILTYNECAT
+		state_region = s:STATE_SNAARGRACHT
+		state_region = s:STATE_SNAILBANE
+		state_region = s:STATE_SOLILOQUE_HEIGHTS
+		state_region = s:STATE_SONGBIENO_LANDING
+		state_region = s:STATE_SORGINAK
+		state_region = s:STATE_SOUTHERN_FEYSTALK
+		state_region = s:STATE_SOUTHERN_FEYSTALK_SKIES
+		state_region = s:STATE_SOUTHWESTERN_SCALETIDES
+		state_region = s:STATE_SOUTHWEST_ZALARON_SKIES
+		state_region = s:STATE_SOUTH_ANWARTH_SKIES
+		state_region = s:STATE_SOUTH_HIGHLANDS
+		state_region = s:STATE_SOUTH_LAKE_SKIES
+		state_region = s:STATE_SOUTH_LEVIATHAN_DEEP
+		state_region = s:STATE_SOUTH_PLAGUEWINDS
+		state_region = s:STATE_SOUTH_SANGUINE_OCEAN_01
+		state_region = s:STATE_SOUTH_SANGUINE_OCEAN_02
+		state_region = s:STATE_SOUTH_SANGUINE_OCEAN_03
+		state_region = s:STATE_SOUTH_SANGUINE_OCEAN_04
+		state_region = s:STATE_SOUTH_STARSHIMMER_SKIES
+		state_region = s:STATE_SOUTH_YANGER_STEPPE
+		state_region = s:STATE_SPRANKEL_SKIES
+		state_region = s:STATE_SPRONKERGROEN
+		state_region = s:STATE_STEEPCLIFF_COAST
+		state_region = s:STATE_STEINZULO
+		state_region = s:STATE_STORMWATCH
+		state_region = s:STATE_STOUTHEART_BASIN
+		state_region = s:STATE_GWITESHIAIBHAVA
+		state_region = s:STATE_SUKONCO_2
+		state_region = s:STATE_SUKONCO_3
+		state_region = s:STATE_JUNGELHEIGHTS
+		state_region = s:STATE_SULLENSKIES
+		state_region = s:STATE_SUNDALE
+		state_region = s:STATE_MRAENTWAARSH
+		state_region = s:STATE_SWAHAILUK
+		state_region = s:STATE_STAUSTKRAUL
+		state_region = s:STATE_TALNANT
+		state_region = s:STATE_TARBANK
+		state_region = s:STATE_TARSHORE
+		state_region = s:STATE_TAR_COAST
+		state_region = s:STATE_TAR_PITS
+		state_region = s:STATE_TASHKAVSK
+		state_region = s:STATE_TAYTAQOCHA
+		state_region = s:STATE_TAYTAQOCHA_SKIES
+		state_region = s:STATE_DUMOKHBED
+		state_region = s:STATE_DUMOKHBED_HEIGHTS
+		state_region = s:STATE_THASSARCIAN_SHORES
+		state_region = s:STATE_THE_AMBER_RUN
+		state_region = s:STATE_THE_AMBER_RUN_2
+		state_region = s:STATE_THE_AMBER_RUN_3
+		state_region = s:STATE_THE_CHASM
+		state_region = s:STATE_THE_FARTHEST_TIDES
+		state_region = s:STATE_THE_MATCHES
+		state_region = s:STATE_THE_NORTHERN_HORIZON
+		state_region = s:STATE_THE_SCALETIDES
+		state_region = s:STATE_THE_SCALETIDES_2
+		state_region = s:STATE_THE_WHITE
+		state_region = s:STATE_THE_WHITE_SKIES
+		state_region = s:STATE_THINSILVER
+		state_region = s:STATE_THIRSTRIDGE
+		state_region = s:STATE_THUNDERSPELL_LANDING
+		state_region = s:STATE_TIDESHIELD
+		state_region = s:STATE_TIKKERHAVEN
+		state_region = s:STATE_TIMMERHAVEN
+		state_region = s:STATE_TIMMERSTEEN
+		state_region = s:STATE_TINKELHOVEN
+		state_region = s:STATE_TINKUYUQ
+		state_region = s:STATE_TREACHEROUS_ABYSS
+		state_region = s:STATE_HASQSTALE
+		state_region = s:STATE_TSENK
+		state_region = s:STATE_TSIDIIYAH_HEIGHTS
+		state_region = s:STATE_TSURWA
+		state_region = s:STATE_GAVQLOMR
+		state_region = s:STATE_ULDOR
+		state_region = s:STATE_UNNAMED_BAY_1
+		state_region = s:STATE_SEA_OF_LANTERNS
+		state_region = s:STATE_UNNAMED_BAY_3
+		state_region = s:STATE_UNNAMED_SEA_2
+		state_region = s:STATE_UNNAMED_SEA_3
+		state_region = s:STATE_UNNAMED_SEA_4
+		state_region = s:STATE_UNNAMED_SEA_5
+		state_region = s:STATE_EAST_CITRUS_CURRENTS
+		state_region = s:STATE_UNNAMED_SEA_7
+		state_region = s:STATE_UNNAMED_SEA_8
+		state_region = s:STATE_UNNAMED_SHEIFU_SEA_1
+		state_region = s:STATE_UPLAND_HEIGHTS
+		state_region = s:STATE_UPPER_GOLDENLEAF
+		state_region = s:STATE_URIKS_PASSAGE
+		state_region = s:STATE_URRIKO
+		state_region = s:STATE_URSHALSI
+		state_region = s:STATE_USTRIZHYVKA
+		state_region = s:STATE_VALENSHORES
+		state_region = s:STATE_VALKURIAN_OCEAN_01
+		state_region = s:STATE_VALKURIAN_OCEAN_02
+		state_region = s:STATE_TROCREUL
+		state_region = s:STATE_VAVULAN
+		state_region = s:STATE_VERDANT_VALE
+		state_region = s:STATE_VERDFALDO
+		state_region = s:STATE_VERDSKIES
+		state_region = s:STATE_VIRULENT_LANDING
+		state_region = s:STATE_VIVARI_SHORES
+		state_region = s:STATE_VOZMEAD_HEIGHTS
+		state_region = s:STATE_VOZMEAD_LANDING
+		state_region = s:STATE_VYNDERVOHT
+		state_region = s:STATE_LAUPALLA
+		state_region = s:STATE_YAASKCASCH
+		state_region = s:STATE_WASTEWALL_HEIGHTS
+		state_region = s:STATE_WAYFARE_MEADOWS
+		state_region = s:STATE_WAYFARE_MEADOWS_2
+		state_region = s:STATE_WESTERN_EMBERLAND
+		state_region = s:STATE_WESTERN_SCALETIDES
+		state_region = s:STATE_WESTERN_SCALETIDES_1
+		state_region = s:STATE_WEST_AMETHYST_HEIGHTS
+		state_region = s:STATE_WEST_ANWARTH_SKIES
+		state_region = s:STATE_WEST_HUNDIRS_BANE
+		state_region = s:STATE_WEST_RAVIK_SKIES
+		state_region = s:STATE_WEST_STARSHIMMER_SKIES
+		state_region = s:STATE_WEST_YANGERSKIES
+		state_region = s:STATE_WEST_YANGER_STEPPE
+		state_region = s:STATE_WHISKERFLIGHT
+		state_region = s:STATE_WHISKER_FIELDS
+		state_region = s:STATE_WHISKERWALL
+		state_region = s:STATE_WHITESTONE
+		state_region = s:STATE_WICKENWOOD
+		state_region = s:STATE_WICKERRYE
+		state_region = s:STATE_WINDMERE
+		state_region = s:STATE_WINDSONG
+		state_region = s:STATE_WOLKARA_HEIGHTS
+		state_region = s:STATE_WOODS_OF_THE_VOW
+		state_region = s:STATE_WUTAK
+		state_region = s:STATE_WYRMMAW_SEA
+		state_region = s:STATE_WESSWUL
+		state_region = s:STATE_YARLUWANDU
+		state_region = s:STATE_YAVIRA_LANDING
+		state_region = s:STATE_YAZHINAVA
+		state_region = s:STATE_YELFIS_WINDS
+		state_region = s:STATE_YELLOW_VALLEY_HEIGHTS
+		state_region = s:STATE_ZAHRAFI
+		state_region = s:STATE_ZALDUA
+		state_region = s:STATE_ZALULIK
+		state_region = s:STATE_ZARGIKS
+		state_region = s:STATE_ZEPHYRSKIES
+		state_region = s:STATE_ZIKAN
+		state_region = s:STATE_ZIKAN_SKIES
+		state_region = s:STATE_ZYRELIANAR
+	}
+}
+			
+check_is_coastal = {
+	AND = {
+		NOT = {
+			has_variable = exe_is_inland
+		}
+		is_coastal = yes
+	}
+}
+
+mainland_dragon_isles_state = {
+	OR = {
+		state_region = s:STATE_KLYPYRA
+		state_region = s:STATE_ZAMARIS
+		state_region = s:STATE_ZARTHOS
+		state_region = s:STATE_CALTHA
+		state_region = s:STATE_SIGARA
+		state_region = s:STATE_LEPTISCA
+		state_region = s:STATE_OYRSA
+		state_region = s:STATE_LEPIDRA
+		state_region = s:STATE_THASPYR
+		state_region = s:STATE_LILYBAEUM
+		state_region = s:STATE_ZYRAS
+		state_region = s:STATE_MOTHYA
+		state_region = s:STATE_LEPTHAR
+	}
+
+}
+
+undermountain_state_weather = {
+	any_scope_state = {
+		OR = {
+			state_region = s:STATE_ALQADIM
+			state_region = s:STATE_GIRAR
+			state_region = s:STATE_ARCTHARAL
+			state_region = s:STATE_DER_IBBENN
+			state_region = s:STATE_GLIDGRED_RIZRA #debatable
+			state_region = s:STATE_KHARGISHABBO
+			state_region = s:STATE_LIGHTSCOURGE
+			state_region = s:STATE_VYNDERVOHT
+		}
+	}
+}
+
+undermountain_state_terrain = {
+	OR = {
+		state_region = s:STATE_ALQADIM
+		state_region = s:STATE_GIRAR
+		state_region = s:STATE_ARCTHARAL
+		state_region = s:STATE_DER_IBBENN
+		state_region = s:STATE_GLIDGRED_RIZRA #debatable
+		state_region = s:STATE_KHARGISHABBO
+		state_region = s:STATE_LIGHTSCOURGE
+		state_region = s:STATE_VYNDERVOHT
+	}
+}
+
+underway_state_trigger = {
+	OR = {
+		state_region = s:STATE_ALQADIM
+		state_region = s:STATE_GIRAR
+		state_region = s:STATE_ARCTHARAL
+		state_region = s:STATE_DER_IBBENN
+		state_region = s:STATE_GLIDGRED_RIZRA #debatable
+		state_region = s:STATE_KHARGISHABBO
+		state_region = s:STATE_LIGHTSCOURGE
+		state_region = s:STATE_VYNDERVOHT
+		state_region = s:STATE_CHITTERKIQ
+		state_region = s:STATE_TAYIGAMU
+		state_region = s:STATE_GUGNOS
+		state_region = s:STATE_WHISKER_FIELDS
+		state_region = s:STATE_WHISKERWALL
+	}
+}
+
+country_is_in_south_sea_empire_range = {
+	custom_tooltip = {
+	text = country_is_in_south_sea_empire_range_tt
+		any_scope_state = {
+			OR = {
+				region = sr:region_vindon_narrows
+				region = sr:region_fahavalo
+				region = sr:region_lotus_isles
+				region = sr:region_hyena_plains
+				region = sr:region_sanbang
+				region = sr:region_scalethane_realms
+				region = sr:region_elusive_coves
+				region = sr:region_vindon_narrows
+				region = sr:region_muru
+				region = sr:region_tundgara
+				region = sr:region_new_dumonia
+			}
+		}
+	}
+}
+
+# Harvest Condition Triggers
+
+is_vulnerable_to_droughts = {
+	OR = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MOTHYA
+				state_region = s:STATE_LILYBAEUM
+				state_region = s:STATE_RUSARYA
+				state_region = s:STATE_SIGARA
+				state_region = s:STATE_EBYSS
+				state_region = s:STATE_GADYRUS
+				state_region = s:STATE_ZAMARA
+				state_region = s:STATE_LEPTORIA
+				state_region = s:STATE_THASPIA
+				state_region = s:STATE_BYSSYRA
+			}
+		}
+
+		NOR = {
+			region = sr:region_west_everfrost
+			region = sr:region_whisperpine
+			region = sr:region_east_everfrost
+			region = sr:region_rimeroot_jungle
+			region = sr:region_south_toftir
+			region = sr:region_west_dragon_isles
+			region = sr:region_amethyst_archipelago
+			region = sr:region_shimmering_coast
+			
+		}
+	}
+	NOT = { undermountain_state_weather = yes }
+}
+
+is_vulnerable_to_floods = {
+	OR = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_SHADGOL
+				state_region = s:STATE_MARZEHZARIN
+				state_region = s:STATE_HIGH_HARAVA
+				state_region = s:STATE_PORCELAINGATE
+				state_region = s:STATE_FARASHIL
+				state_region = s:STATE_PARSIMAH
+			}
+		}
+		
+		NOR = {
+		region = sr:region_south_chin_desert
+		region = sr:region_north_chin_desert
+		region = sr:region_salt_wastes
+		region = sr:region_nogi_desert
+		region = sr:region_yamkhanato
+		region = sr:region_yamkhanato
+		region = sr:region_hirugolaima
+		region = sr:region_mindrend_sands
+		region = sr:region_shaking_fields
+		region = sr:region_starshimmer_pool
+
+	}
+	}
+	
+}
+
+is_vulnerable_to_frosts = {
+	NOR = {
+		region = sr:region_south_chin_desert
+		region = sr:region_north_chin_desert
+		region = sr:region_salt_wastes
+		region = sr:region_nogi_desert
+		region = sr:region_yamkhanato
+		region = sr:region_yamkhanato
+		region = sr:region_hirugolaima
+		region = sr:region_mindrend_sands
+		region = sr:region_scalethane_realms
+		region = sr:region_new_dumonia
+		region = sr:region_dreamweaver_jungle
+		region = sr:region_sarpakshetra
+		region = sr:region_thoughtsmith_ridge
+		region = sr:region_elusive_coves
+		region = sr:region_lacertia
+		region = sr:region_fahavalo
+		region = sr:region_lotus_isles
+		region = sr:region_vindon_narrows
+		region = sr:region_muru
+		region = sr:region_bataar_kharaal
+		region = sr:region_tundgara
+		region = sr:region_sanbang
+		region = sr:region_hyena_plains
+		region = sr:region_hyena_plains
+	}
+}
+
+is_vulnerable_to_wildfires = {
+	NOR = {
+		region = sr:region_south_chin_desert
+		region = sr:region_north_chin_desert
+		region = sr:region_salt_wastes
+		region = sr:region_nogi_desert
+		region = sr:region_yamkhanato
+		region = sr:region_yamkhanato
+		region = sr:region_hirugolaima
+		region = sr:region_mindrend_sands
+	}	
+}
+
+is_vulnerable_to_hailstorm = {
+	is_vulnerable_to_frosts = yes
+	undermountain_state_weather = no
+}
+
+is_vulnerable_to_locust_swarms = {
+	OR = {
+		region = sr:region_north_chin_desert
+		region = sr:region_scalethane_realms
+		region = sr:region_new_dumonia
+		region = sr:region_dreamweaver_jungle
+		region = sr:region_sarpakshetra
+		region = sr:region_thoughtsmith_ridge
+		region = sr:region_elusive_coves
+		region = sr:region_lacertia
+		region = sr:region_dark_morass
+		region = sr:region_misthill_range
+		region = sr:region_shaking_fields
+		region = sr:region_salt_wastes
+		region = sr:region_hyena_plains
+		region = sr:region_embervein_arroyo
+		region = sr:region_gavkhan
+		region = sr:region_kengurudal
+		region = sr:region_vindon_narrows
+		region = sr:region_muru
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_bataar_kharaal
+	}
+}
+
+is_vulnerable_to_heatwaves = {
+	NOR = {
+			region = sr:region_west_everfrost
+			region = sr:region_whisperpine
+			region = sr:region_east_everfrost
+			region = sr:region_rimeroot_jungle
+			region = sr:region_thawed_lands
+			region = sr:region_south_toftir
+			region = sr:region_yanger_steppe
+			region = sr:region_dumonian_heartlands
+			region = sr:region_central_noricum
+			region = sr:region_worlds_end
+	}
+
+	NOT = { undermountain_state_weather = yes }
+
+}
+
+is_vulnerable_to_disease_outbreak = {
+	always = yes
+}
+
+is_vulnerable_to_extreme_winds = {
+	undermountain_state_weather = no
+}
+
+is_vulnerable_to_torrential_rains = {
+	is_arid_region = no
+	undermountain_state_weather = no
+}
+
+has_potential_for_pollinator_surge = {
+	always = yes
+}
+
+has_potential_for_optimal_sunlight = {
+	undermountain_state_weather = no
+}
+
+has_potential_for_moderate_rainfall = {
+	is_arid_region = no
+	undermountain_state_weather = no
+}

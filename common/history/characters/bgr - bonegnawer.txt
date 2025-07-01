@@ -1,0 +1,19 @@
+﻿CHARACTERS = {
+	c:BGR = {
+		create_character = {
+			first_name = "Aqqur"
+			last_name = "Mitlakhif"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 37
+			interest_group = ig_landowners
+			ideology = ideology_slaver
+			traits = {
+				cruel
+				pillager
+				scarred
+			}
+		}
+	}
+}

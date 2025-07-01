@@ -1,0 +1,84 @@
+﻿je_lighthouse_survey = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	group = je_group_technology
+
+	on_monthly_pulse = {
+        effect = {
+			change_variable = {
+				name = lighthouse_var
+				add = 1
+			}
+		}
+	}
+
+	on_invalid = {
+		remove_modifier = lighthouse_survey
+		remove_variable = lighthouse_var
+	}
+
+	possible = {
+	}
+
+	complete = {
+		scope:journal_entry = { is_goal_complete = yes }
+	}
+
+	on_complete = {
+        remove_modifier = lighthouse_survey
+		trigger_event = { id = lighthouse.1 } # survey done
+	}
+
+	current_value = {
+		value = root.var:lighthouse_var
+	}
+
+	goal_add_value = {
+		value = 12
+	}
+
+	progressbar = yes
+
+	weight = 10
+
+	should_be_pinned_by_default = yes
+}
+
+je_lighthouse_construction = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_technology
+
+	complete = {
+		scope:target = {
+			any_scope_building = {
+				is_building_type = building_lighthouse
+				is_under_construction = no
+			}
+		}
+	}
+
+	fail = {
+		NOT = {
+			s:STATE_NGURULAN = {
+				any_scope_state = {
+					has_modifier = modifier_lighthouse_site
+				}
+			}
+		}
+	}
+	
+	on_fail = {
+		remove_variable = lighthouse_var
+	}
+
+	on_complete = {
+		trigger_event = { id = lighthouse.2 popup = yes }
+		remove_variable = lighthouse_var
+		scope:target = {
+			remove_modifier = modifier_lighthouse_site
+		}
+	}
+
+	should_be_pinned_by_default = yes
+}

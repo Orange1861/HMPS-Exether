@@ -1,0 +1,24 @@
+﻿arcana_cost = {
+	value = 200
+}
+
+dragon_threshold = {
+	value = 1000
+}
+
+num_arcana_active = {
+	value = var:num_arcana
+}
+
+veil_damage = {
+	if = {
+		limit = {
+			has_variable = veil_damage
+		}
+		value = var:veil_damage
+	}
+	else = {
+		value = 0
+	}
+	
+}

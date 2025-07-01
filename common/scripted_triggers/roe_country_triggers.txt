@@ -1,0 +1,75 @@
+﻿
+is_vanguardist = {
+	and = {
+		has_law = law_type:law_council_elective
+		or = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_oligarchy
+		}
+	}
+}
+
+country_is_isolationist = {
+	has_law = law_type:law_isolationism
+}
+
+#country_scope
+is_authoritarian = {
+	or = {
+		has_law = law_type:law_oligarchy
+		has_law = law_type:law_autocracy
+	}
+}
+
+fully_owns_the_salt_wastes = {
+	owns_entire_state_region = STATE_SAVAGE_LANDS
+	owns_entire_state_region = STATE_SAVAGE_LANDS_2
+	owns_entire_state_region = STATE_ROUGHSTONE_TERRITORY
+	owns_entire_state_region = STATE_ROUGHSTONE_TERRITORY_2
+	owns_entire_state_region = STATE_FIERCEHOLD
+	owns_entire_state_region = STATE_SAVAGE_REACH
+	owns_entire_state_region = STATE_SNAILBANE
+	owns_entire_state_region = STATE_BLOODTHORN_WASTES
+	owns_entire_state_region = STATE_BLOODTHORN_WASTES_2
+	owns_entire_state_region = STATE_BLOODAXE_TERRITORY
+	owns_entire_state_region = STATE_THIRSTRIDGE
+	any_scope_state = {
+		percent = 1
+		filter = {
+			OR = {
+				state_region = s:STATE_NAWIYANU
+				state_region = s:STATE_SAVAGE_LANDS
+				state_region = s:STATE_SAVAGE_LANDS_2
+				state_region = s:STATE_ROUGHSTONE_TERRITORY
+				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+				state_region = s:STATE_FIERCEHOLD
+				state_region = s:STATE_SAVAGE_REACH
+				state_region = s:STATE_SNAILBANE
+				state_region = s:STATE_BLOODTHORN_WASTES
+				state_region = s:STATE_BLOODTHORN_WASTES_2
+				state_region = s:STATE_BLOODAXE_TERRITORY
+				state_region = s:STATE_THIRSTRIDGE
+			}
+		}
+		turmoil < 0.25
+	}
+}
+
+accept_the_salt_waste_natives = {
+	AND = {
+		OR = {
+			AND = {
+				rel:skarrakhlot = {
+					is_state_religion = ROOT
+				}
+				has_law = law_type:law_freedom_of_conscience
+			}
+			has_law = law_type:law_total_separation
+			has_law = law_type:law_state_atheism
+		}
+		OR = {
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
+	}
+}

@@ -1,0 +1,2135 @@
+﻿assign_state_name_region_lacertia = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_IWO_YUPI ?= this
+            }
+        }
+        STATE_IWO_YUPI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_MOYHOSTUPI ?= this
+            }
+        }
+        STATE_MOYHOSTUPI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KIKUHO_KOHIKI ?= this
+            }
+        }
+        STATE_KIKUHO_KOHIKI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_CREUCHE ?= this
+            }
+        }
+        STATE_CREUCHE_state_name_assign = yes
+    }
+
+}
+
+assign_state_name_region_elusive_coves = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SQUKI_IHI ?= this
+            }
+        }
+        STATE_SQUKI_IHI_state_name_assign = yes
+    }
+    
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WIS_POU ?= this
+            }
+        }
+        STATE_WIS_POU_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_OULOMYSSI ?= this
+            }
+        }
+        STATE_OULOMYSSI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_MISQISIMI ?= this
+            }
+        }
+        STATE_MISQISIMI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KUSTU_MYUNIS ?= this
+            }
+        }
+        STATE_KUSTU_MYUNIS_state_name_assign = yes
+    }
+
+}
+
+assign_state_name_region_vindon_narrows = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BANGALITVA ?= this
+            }
+        }
+        STATE_BANGALITVA_state_name_assign = yes
+    }
+    
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_PIKY_UHILY ?= this
+            }
+        }
+        STATE_PIKY_UHILY_state_name_assign = yes
+    }
+
+}
+
+assign_state_name_region_vindon_narrows = {
+
+    
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BANGALITVA ?= this
+            }
+        }
+        STATE_BANGALITVA_state_name_assign = yes
+    }
+    
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_PIKY_UHILY ?= this
+            }
+        }
+        STATE_PIKY_UHILY_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_ONOPYNISQI ?= this
+            }
+        }
+        STATE_ONOPYNISQI_state_name_assign = yes
+    }
+    
+}
+
+assign_state_name_region_lotus_isles = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_LHEIPH_VA ?= this
+            }
+        }
+        STATE_LHEIPH_VA_state_name_assign = yes
+    }
+    
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BYS_LOWAE ?= this
+            }
+        }
+        STATE_BYS_LOWAE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_NOLOGO_RULL ?= this
+            }
+        }
+        STATE_BYS_LOWAE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_MYCOLGA ?= this
+            }
+        }
+        STATE_MYCOLGA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_LYPIKISQI ?= this
+            }
+        }
+        STATE_LYPIKISQI_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SINIKISQI ?= this
+            }
+        }
+        STATE_SINIKISQI_state_name_assign = yes
+    }
+    
+}
+
+STATE_CREUCHE_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_CREUCHE_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_CREUCHE_city_settlers_coast
+        }
+
+		set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_CREUCHE_farm_settlers_coast
+        }
+
+    }
+    
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_IWO_YUPI_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_IWO_YUPI_settlers
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_IWO_YUPI_city_settlers_coast
+        }
+
+		set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_IWO_YUPI_farm_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_IWO_YUPI_ocelian
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_IWO_YUPI_city_ocelian
+        }
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_IWO_YUPI_farm_ocelian
+        }
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_MOYHOSTUPI_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MOYHOSTUPI_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_MOYHOSTUPI_city_settlers_coast
+        }
+
+		set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_MOYHOSTUPI_mine_settlers_coast
+        }
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bakibi ?= this
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                             
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MOYHOSTUPI_ocelian
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_MOYHOSTUPI_city_ocelian
+        }
+
+		set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_MOYHOSTUPI_mine_ocelian
+        }
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_WIS_POU_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_WIS_POU_dragon
+
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_WIS_POU_settlers_coast
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_WIS_POU_port_settlers_coast
+        }
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_WIS_POU_mine_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_WIS_POU_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_WIS_POU_port_ocelian
+        }
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_WIS_POU_mine_ocelian
+        }
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_OULOMYSSI_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_OULOMYSSI_settlers_coast
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_OULOMYSSI_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_OULOMYSSI_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_OULOMYSSI_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KUSTU_MYUNIS_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_KUSTU_MYUNIS_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_KUSTU_MYUNIS_farm_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_KUSTU_MYUNIS_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_KUSTU_MYUNIS_settlers_coast
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_KUSTU_MYUNIS_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_KUSTU_MYUNIS_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_KUSTU_MYUNIS_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SQUKI_IHI_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SQUKI_IHI_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_SQUKI_IHI_farm_dragon
+        }
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_SQUKI_IHI_city_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SQUKI_IHI_settlers_coast
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_SQUKI_IHI_farm_settlers_coast
+        }
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_SQUKI_IHI_city_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SQUKI_IHI_ocelian
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_SQUKI_IHI_city_ocelian
+        }
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_SQUKI_IHI_farm_ocelian
+        }
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_MISQISIMI_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MISQISIMI_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_MISQISIMI_farm_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MISQISIMI_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MISQISIMI_settlers_coast
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_MISQISIMI_farm_settlers_coast
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MISQISIMI_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MISQISIMI_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MISQISIMI_port_ocelian
+        }
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_MISQISIMI_mine_ocelian
+        }
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KIKUHO_KOHIKI_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_KIKUHO_KOHIKI_settlers_coast
+
+        set_hub_name = {
+            type = wood
+            name = HUB_NAME_STATE_KIKUHO_KOHIKI_wood_settlers_coast
+        }
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_KIKUHO_KOHIKI_mine_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_KIKUHO_KOHIKI_mine_ocelian
+        }
+
+        set_hub_name = {
+            type = wood
+            name = HUB_NAME_STATE_KIKUHO_KOHIKI_wood_ocelian
+        }
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BANGALITVA_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BANGALITVA_dragon
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_BANGALITVA_mine_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_BANGALITVA_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BANGALITVA_settlers_coast
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_BANGALITVA_mine_settlers_coast
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_BANGALITVA_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = settler_coast_culture_group
+                                has_discrimination_trait = human_heritage
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BANGALITVA_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_BANGALITVA_port_ocelian
+        }
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_STATE_BANGALITVA_mine_ocelian
+        }
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_PIKY_UHILY_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_PIKY_UHILY_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_PIKY_UHILY_farm_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_PIKY_UHILY_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_PIKY_UHILY_settlers_coast
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_PIKY_UHILY_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }     
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_PIKY_UHILY_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_PIKY_UHILY_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_ONOPYNISQI_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_ONOPYNISQI_dragon
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_ONOPYNISQI_city_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_ONOPYNISQI_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_ONOPYNISQI_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_ONOPYNISQI_city_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_ONOPYNISQI_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_ONOPYNISQI_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_LYPIKISQI_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LYPIKISQI_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_LYPIKISQI_farm_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_LYPIKISQI_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LYPIKISQI_settlers_coast
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LYPIKISQI_ocelian
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SINIKISQI_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SINIKISQI_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_SINIKISQI_farm_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_SINIKISQI_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SINIKISQI_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_SINIKISQI_city_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = settler_coast_culture_group
+                                has_discrimination_trait = human_heritage
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_SINIKISQI_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_SINIKISQI_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_MYCOLGA_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MYCOLGA_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_MYCOLGA_farm_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MYCOLGA_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MYCOLGA_settlers_coast
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MYCOLGA_port_settlers_coast
+        }
+
+    }
+    
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_MYCOLGA_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MYCOLGA_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BYS_LOWAE_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BYS_LOWAE_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_BYS_LOWAE_farm_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_BYS_LOWAE_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BYS_LOWAE_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_BYS_LOWAE_city_settlers_coast
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_BYS_LOWAE_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_BYS_LOWAE_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_BYS_LOWAE_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_LHEIPH_VA_state_name_assign = {
+
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LHEIPH_VA_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_LHEIPH_VA_farm_dragon
+        }
+
+        set_hub_name = {
+            type = wood
+            name = HUB_NAME_STATE_LHEIPH_VA_wood_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_LHEIPH_VA_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LHEIPH_VA_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_LHEIPH_VA_city_settlers_coast
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_LHEIPH_VA_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LHEIPH_VA_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_LHEIPH_VA_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+
+}
+
+STATE_NOLOGO_RULL_state_name_assign = {
+
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NOLOGO_RULL_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_NOLOGO_RULL_farm_dragon
+        }
+
+        set_hub_name = {
+            type = wood
+            name = HUB_NAME_STATE_NOLOGO_RULL_wood_dragon
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_NOLOGO_RULL_port_dragon
+        }
+
+    }
+
+    else_if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this }
+                        }
+                        
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NOLOGO_RULL_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_NOLOGO_RULL_city_settlers_coast
+        }
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_NOLOGO_RULL_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+            owner ?= {
+                OR = {
+                    country_has_primary_culture = cu:bakibi
+                    any_primary_culture = { 
+                        OR = {
+                            AND = {
+                                has_discrimination_trait = human_heritage
+                                has_discrimination_trait = vaythir_culture_group
+                            }
+                            AND = {
+                                has_discrimination_trait = uriks_passage_culture_group
+                                has_discrimination_trait = human_heritage
+                                NOT = { has_discrimination_trait = imperial_culture_group }
+                            }
+                            
+                        } 
+                    }
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:east_lacertian ?= this 
+                            cu:kailando_lacertian ?= this
+                            cu:west_lacertian ?= this   
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NOLOGO_RULL_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_NOLOGO_RULL_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}

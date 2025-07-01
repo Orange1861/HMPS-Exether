@@ -1,0 +1,702 @@
+﻿# parent_group = parent_group_key		If set, this group is considered a child of the specified group. Default no parent.
+# always_possible = yes/no				If yes, building types in this group are always permitted regardless of resources in state. Default no.
+# economy_of_scale = yes/no				If yes, any non-subsistence buildings in or underneath this group will get an economy of scale throughput modifier for each level > 1. Default no.
+# is_subsistence = yes/no				If yes, buildings of types in this group are considered subsistence buildings that follow special rules. Default no.
+# default_building = building_type_key	Specifies the default building type that will be built unless the state specifies a different one. No default.
+# lens = lens_key						If specified, determines the lens buildings in this group will be sorted under. No default.
+# auto_place_buildings = yes/no
+# capped_by_resources = yes/no
+# discoverable_resource = yes/no
+# depletable_resource = yes/no
+# can_use_slaves = yes/no				Default no, setting yes enables slavery for all contained buildings and groups
+# land_usage = urban/rural				Which type of state resource the building uses. urban = Urbanization, rural = Arable Land. Default no state resource usage.
+#										If unspecified, will return first non-default land usage type found in parent building group tree.
+# cash_reserves_max = number			Maximum amount of £ (per level) that buildings in this group can store into their cash reserves. If unspecified or set to 0, it will use the value from the parent group. Default 0
+# inheritable_construction =  yes/no	If yes, a construction of this building group will survive a state changing hands or a split state merging
+# stateregion_max_level = yes/no		If yes, any building types in this group with the has_max_level property will consider its level restrictions on state-region rather than state level	
+# urbanization = number					The amount of urbanization buildings in this group provides per level
+# should_auto_expand = trigger			Under which condition buildings in this group should auto-expand if auto-expand is toggled on (trigger on more specific group or building type overrides)
+# 										If this trigger has any contents at all, the game will think the building is potentially auto-expandable, so do not write triggers that can never evaluate to true here
+# min_hiring_rate = X					Minimum value for how much of the building's max staffing level can be hired in a single week (default NDefines::NEconomy::DEFAULT_MIN_HIRING_RATE)
+# max_hiring_rate = X					Maximum value for how much of the building's max staffing level can be hired in a single week (default NDefines::NEconomy::DEFAULT_MAX_HIRING_RATE)
+# proportionality_limit = X				How high is the building's tolerance for pop types being out of proportion? default NDefines::NEconomy::EMPLOYMENT_PROPORTIONALITY_LIMIT)
+# hires_unemployed_only = yes			If yes, buildings in this group may only hire from the unemployment pool. Default no.
+
+
+
+#Exether
+
+bg_cloudsilver_mining = {
+	parent_group = bg_magic_resource
+
+	default_building = building_cloudsilver_mine
+
+	can_use_slaves = yes
+}
+
+##
+# TODO: Change
+#
+bg_cloud_collecting = {
+	parent_group = bg_magic_resource
+	
+	default_building = building_cloud_collector
+
+	can_use_slaves = yes
+}
+
+bg_wishstone_mining = { 
+	parent_group = bg_magic_resource
+
+	category = rural
+
+	economy_of_scale = yes
+
+	capped_by_resources = yes
+	
+	discoverable_resource = yes
+	
+	default_building = building_wishstone_mine
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 10
+	infrastructure_usage_per_level = 2
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	can_use_slaves = yes
+
+	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 1.0
+}
+
+bg_wishstone_reefs = {
+	parent_group = bg_magic_resource
+	
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	discoverable_resource = yes
+	
+	default_building = building_wishstone_reefs
+	
+	lens = fishing
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	can_use_slaves = yes
+
+	economy_of_scale_ai_factor = 2.0
+}
+
+bg_ship_graveyard = { 
+	parent_group = bg_magic_resource
+
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	discoverable_resource = yes
+
+	default_building = building_ship_graveyard
+
+	lens = fishing
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	can_use_slaves = yes
+
+	economy_of_scale_ai_factor = 2.0
+}
+
+bg_special_depletables = {  #use with resource_depletion and resource_discovery settings
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	depletable_resource = yes
+	
+	pays_taxes = no
+
+	
+	fired_pops_become_radical = no  #could change this to yes, but we might want to lower depletion amount if we do that so that 25000 people don't get fired all at once
+}
+
+bg_mountain_maize_farms = {
+	parent_group = bg_agriculture
+	
+	default_building = building_mountain_maize_farm
+	
+	cash_reserves_max = 25000
+}
+
+bg_beekeeping = {
+	parent_group = bg_agriculture
+
+	default_building = building_beekeeping
+	can_use_slaves = no
+	
+	cash_reserves_max = 25000
+}
+
+bg_soulwrought_assembly_plant = {
+	parent_group = bg_magic_light_industry
+	default_building = building_soulwrought_assembly_plant
+}
+
+bg_wishstone_mining_depletable = { 
+	parent_group = bg_magic_resource
+
+	category = rural
+
+	default_building = building_wishstone_mine_depletable
+
+	lens = mine
+	discoverable_resource = yes
+	capped_by_resources = yes
+	depletable_resource = yes
+	cash_reserves_max = 25000
+	
+	urbanization = 10
+	infrastructure_usage_per_level = 2
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+
+	can_use_slaves = yes
+
+	economy_of_scale_ai_factor = 2.0
+}
+
+bg_feywild_reserve = {  #represents a feywild area small enough to be dismantled entirely by private enterprise.  Probably should be activated by decision?
+parent_group = bg_special_depletables
+
+	default_building = building_feywild_reserve
+
+	lens = forestry	
+}
+
+bg_special_depletables_taxable = {  #use with resource_depletion and resource_discovery settings
+	auto_place_buildings = no
+
+	discoverable_resource = yes
+	capped_by_resources = yes
+	depletable_resource = yes
+	
+	fired_pops_become_radical = no  #could change this to yes, but we might want to lower depletion amount if we do that so that 25000 people don't get fired all at once
+}
+
+bg_flammable_jellyfish = { #name WIP  godfish maybe?
+	parent_group = bg_special_depletables_taxable
+
+	default_building = building_jellyfish_wharf
+}
+
+bg_wishstone_fields = {
+	parent_group = bg_mining
+
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	#depletable_resource = yes  #this is the final, lowest tier of wishstone accumulation.  Do we want it to deplete?
+
+	default_building = building_wishstone_fields
+	
+	fired_pops_become_radical = no
+}
+
+bg_seasnake_wharf = {  
+	parent_group = bg_hunting
+
+	default_building = building_seasnake_wharf
+}
+
+bg_leviathan_outpost = {
+	parent_group = bg_hunting
+	default_building = building_leviathan_outpost
+}
+
+bg_squidding = {
+	parent_group = bg_fishing
+	
+	default_building = building_squid_squad
+}
+
+bg_fishing_rusttails = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_rusttails
+}
+
+bg_fishing_glowfish = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_glowfish
+}
+
+bg_fishing_goldfish = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_goldfish
+}
+
+bg_plantations_discoverable = {
+	category = rural
+	
+	economy_of_scale = yes
+	
+	lens = plantation
+	
+	can_use_slaves = yes
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 1.25
+
+	discoverable_resource = yes
+}
+
+bg_wyrmfruit_plantations = {
+	parent_group = bg_plantations
+	
+	default_building = building_wyrmfruit_plantation
+}
+
+bg_songberry_plantations = {
+	parent_group = bg_plantations
+	
+	default_building = building_songberry_plantation
+}
+
+bg_cold_rubber = {
+	parent_group = bg_plantations_discoverable
+	default_building = building_snowrubber_plantation
+}
+
+bg_spurge_rubber = {
+	parent_group = bg_plantations_discoverable
+	default_building = building_spurge_plantation
+}
+
+bg_mint_tea_plantations = {
+	parent_group = bg_plantations
+
+	default_building = building_mint_tea_plantation
+}
+
+bg_rice_farms_leechgardens = {
+	parent_group = bg_agriculture
+	
+	default_building = building_rice_farm_leechgardens
+	
+	cash_reserves_max = 25000
+}
+
+bg_hunting = {
+	parent_group = bg_magic_resource
+	
+	default_building = building_hunting_lodge
+}
+bg_desert_hunting = {
+	parent_group = bg_hunting
+	
+	default_building = building_desert_hunting_lodge
+}
+bg_winter_hunting = {
+	parent_group = bg_hunting
+	
+	default_building = building_winter_hunting_lodge
+}
+bg_khus_hunting = {
+	parent_group = bg_hunting
+	
+	default_building = building_khus_hunting_lodge
+}
+bg_game_hunting = {
+	parent_group = bg_trapping
+	
+	default_building = building_fur_hunting_lodge
+}
+
+bg_logging_stonewood = {
+	
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_stonewood
+
+	can_use_slaves = yes
+}
+
+bg_logging_crystalwood = {
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_crystalwood
+
+	can_use_slaves = yes
+}
+
+bg_haunted_grounds = {
+	parent_group = bg_hunting
+
+	default_building = building_haunted_grounds
+}
+
+bg_hippos = {
+	parent_group = bg_hunting
+
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	default_building = building_hippo_ranches
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 0.75
+}
+
+bg_magic_resource = {
+	parent_group = bg_extraction
+	
+	category = rural
+
+	capped_by_resources = yes
+	
+	discoverable_resource = yes
+
+	economy_of_scale = yes
+	
+	can_use_slaves = yes
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.75
+	foreign_investment_ai_factor = 1.0
+}
+
+bg_trapping = {
+	parent_group = bg_extraction
+	
+	category = rural
+
+	capped_by_resources = yes
+	
+	discoverable_resource = yes
+
+	economy_of_scale = yes
+	
+	can_use_slaves = yes
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.75
+	foreign_investment_ai_factor = 1.0
+}
+
+bg_snail_herders = {
+	parent_group = bg_mining
+
+	default_building = building_snail_herder_ranch
+	
+	cash_reserves_max = 25000
+
+	capped_by_resources = yes
+}
+
+bg_shrimp_farms = {
+	parent_group = bg_livestock_ranches
+
+	default_building = building_shrimp_farm
+
+	cash_reserves_max = 25000
+}
+
+bg_cactus_farm = {
+	parent_group = bg_logging
+
+	default_building = building_cactus_farm
+
+	cash_reserves_max = 25000
+
+}
+
+bg_gardenbacks = {
+	parent_group = bg_ranching
+	
+	default_building = building_gardenback_beetle_ranches
+	
+	cash_reserves_max = 25000
+	
+}
+
+#Underground Survival
+bg_underfarms = {
+	parent_group = bg_agriculture
+	
+	default_building = building_underfarm
+	
+	cash_reserves_max = 25000
+}
+
+bg_underground_fishing = {
+	parent_group = bg_fishing
+	
+	default_building = building_underground_wharf
+	
+	cash_reserves_max = 25000
+}
+
+bg_spider_ranch = {
+	parent_group = bg_ranching
+	
+	default_building = building_spider_ranch
+	
+	cash_reserves_max = 25000
+}
+
+bg_mushroom_logging = {
+	parent_group = bg_logging
+	default_building = building_mushroom_logging
+
+	cash_reserves_max = 25000
+}
+	 
+bg_rotfarm = {
+    parent_group = bg_agriculture
+    default_building = building_rotfarm
+	
+	cash_reserves_max = 25000
+}
+
+bg_big_game_hunting = {
+    parent_group = bg_magic_resource
+    default_building = building_big_game_hunts
+}
+
+bg_undertea = {
+   	parent_group = bg_plantations
+    
+    default_building = building_undertea
+    
+    cash_reserves_max = 25000
+}
+
+bg_magic_manufacturing = {
+	category = urban
+
+	always_possible = yes
+	
+	economy_of_scale = yes
+	
+	cash_reserves_max = 25000
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 0.25
+}
+
+bg_magic_light_industry = {
+	parent_group = bg_magic_manufacturing
+
+	lens = light_industry
+	
+	urbanization = 20
+	infrastructure_usage_per_level = 2
+}
+
+bg_magic_heavy_industry = {
+	parent_group = bg_magic_manufacturing
+
+	lens = heavy_industry
+	
+	urbanization = 20
+	infrastructure_usage_per_level = 3
+}
+
+bg_airshipyards = {
+	parent_group = bg_magic_heavy_industry
+	
+	urbanization = 20
+	infrastructure_usage_per_level = 1
+}
+
+bg_entertainment = {
+	parent_group = bg_urban_facilities
+	infrastructure_usage_per_level = 1
+}
+
+bg_taverns = {
+	parent_group = bg_entertainment
+	
+	default_building = building_tavern
+}
+
+bg_underways = {
+	category = development
+	
+	always_possible = yes
+
+	stateregion_max_level = yes
+
+	is_government_funded = yes
+	
+	economy_of_scale = no
+
+	lens = government
+
+	inheritable_construction = yes
+
+	urbanization = 20
+	infrastructure_usage_per_level = 0
+
+	default_building = building_underways
+
+}
+
+bg_sunstation = {
+	category = development
+
+	capped_by_resources = yes
+
+	discoverable_resource = yes
+
+	is_government_funded = yes
+	
+	economy_of_scale = no
+	
+	lens = government
+
+	inheritable_construction = yes
+
+	economy_of_scale = no
+
+	urbanization = 15
+	infrastructure_usage_per_level = 1
+
+	default_building = building_sunstation
+
+
+}
+
+bg_sunweave_plantations = {
+	parent_group = bg_plantations
+	
+	default_building = building_sunweave_plantation
+}
+
+bg_questing = {
+	parent_group = bg_government
+
+	infrastructure_usage_per_level = 0.2
+	
+	urbanization = 5
+	
+	proportionality_limit = 1
+}
+
+bg_lapis_mining = {
+	parent_group = bg_mining
+	
+	default_building = building_lapis_mine
+
+	can_use_slaves = yes
+}
+
+bg_ice = {
+	parent_group = bg_extraction
+
+	can_use_slaves = yes
+	
+	discoverable_resource = yes
+	
+	depletable_resource = no
+	
+	default_building = building_ice_pond
+	
+	lens = forestry	
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 1.0
+}
+
+bg_ice_cap = {
+	parent_group = bg_ice
+	
+	default_building = building_ice_cap
+}
+
+bg_terrace_farms = {
+	parent_group = bg_agriculture
+	
+	default_building = building_terrace_farm
+	
+	cash_reserves_max = 25000
+}

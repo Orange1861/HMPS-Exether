@@ -1,0 +1,53 @@
+﻿CHARACTERS = {
+	c:IHE ?= {
+
+
+		create_character = {
+			first_name = "Carlos"
+			last_name = "Pradera"
+			historical = yes
+			ruler = yes
+			culture = cu:whitefeather
+			age = 47
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				reckless
+				basic_political_operator
+				literary
+			}
+		}
+
+		create_character = {
+			first_name = "Ana"
+			last_name = "Pradera"
+			historical = yes
+			ig_leader = yes
+			female = yes
+			culture = cu:whitefeather
+			age = 35
+			interest_group = ig_mages
+			ideology = ideology_artificer_baron
+			traits = {
+				starbrand_golem
+				experienced_political_operator
+				literary
+			}
+		}
+
+		create_character = {
+			first_name = "Sabino"
+			last_name = "Echave"
+			historical = yes
+			ig_leader = yes
+			culture = cu:saglithan
+			age = 54
+			interest_group = ig_rural_folk
+			ideology = ideology_land_reformer
+			traits = {
+				charismatic
+				honorable
+			}
+		}
+	}
+}

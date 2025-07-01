@@ -1,0 +1,18 @@
+﻿CHARACTERS = {
+	c:SNL = {
+		create_character = {
+			first_name = "Ras"
+			last_name = "Akholah"
+			historical = yes
+			ruler = yes
+			age = 64
+			interest_group = ig_devout
+			ideology = ideology_traditionalist
+			traits = {
+				persistent
+				firebrand
+				imperious
+			}
+		}
+	}
+}

@@ -1,0 +1,7831 @@
+﻿BUILDINGS = {
+	#ALL NORICUM Ownership reviewed
+	s:STATE_CROWNPEAK = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_cristo_redentor"
+				level = 1
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 5
+				reserves = 1
+				activate_production_methods = {
+					"pm_vertical_filing_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_observatory"
+				level = 2
+				reserves = 1
+			}
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 15
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_university"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_scholastic_education"
+				}
+			}
+			create_building = {
+				building = "building_arts_academy"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_traditional_art"
+				}
+			}
+			create_building = {
+				building = "building_ice_cap"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 6
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_airshipping"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 5
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_santa_clause_style"
+					"pm_automation_disabled"
+					"pm_permanent_prestidigitation_furniture"
+					"pm_luxury_furniture"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 5
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_potatoes"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_wishstone_mine"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_CALDAMUS = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_traditional_looms"
+					"pm_no_luxury_clothes"
+				}
+			}
+			create_building = {
+				building = "building_food_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_bakery"
+					"pm_disabled_canning"
+					"pm_manual_dough_processing"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 7
+						region = "STATE_CALDAMUS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DUM"
+						levels = 10
+						region = "STATE_CALDAMUS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_tools_disabled"
+					"pm_simple_farming"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_SERONTAIN = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_government_administration"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_vertical_filing_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+				}
+			}
+			create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_firearms_hunting"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_food_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_sweeteners"
+					"pm_disabled_canning"
+					"pm_manual_dough_processing"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_distillery"
+					"pm_no_fruit"
+					"pm_no_spice"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_tooling_workshops"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_SERONTAIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_NORTH_HIGHLANDS = {
+		region_state:UPP = {
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CALDAMUS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_automation_disabled"
+					"pm_no_luxuries"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:UPP"
+						levels = 9
+						region = "STATE_NORTH_HIGHLANDS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:UPP"
+						levels = 6
+						region = "STATE_NORTH_HIGHLANDS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_HIGHPASS = {
+		region_state:UPP = {
+			create_building = {
+				building = "building_government_administration"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_food_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:UPP"
+						levels = 2
+						region = "STATE_HIGHPASS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_sweeteners"
+					"pm_disabled_canning"
+					"pm_manual_dough_processing"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:UPP"
+						levels = 2
+						region = "STATE_HIGHPASS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_fruit"
+					"pm_no_spice"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:UPP"
+						levels = 6
+						region = "STATE_HIGHPASS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:UPP"
+						levels = 2
+						region = "STATE_HIGHPASS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_SOUTH_HIGHLANDS = {
+		region_state:UPP = {
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_lead_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_lead_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_GULFWATCH = {
+		region_state:GED = {
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:GED"
+						levels = 8
+						region = "STATE_GULFWATCH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_SLUDGE_COAST = {
+		region_state:DEW = {
+			create_building = {
+				building = "building_government_administration"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_chemical_plants"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DEW"
+						levels = 6
+						region = "STATE_SLUDGE_COAST"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_artificial_fertilizers"
+				}
+			}
+			create_building = {
+				building = "building_sulfur_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DEW"
+						levels = 5
+						region = "STATE_SLUDGE_COAST"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_sulfur_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DEW"
+						levels = 4
+						region = "STATE_SLUDGE_COAST"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DEW"
+						levels = 2
+						region = "STATE_SLUDGE_COAST"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_MERCHANT_BAY = {
+		region_state:GED = {
+			create_building = {
+				building = "building_government_administration"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_gold_mine"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_gold_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:GED"
+						levels = 5
+						region = "STATE_MERCHANT_BAY"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:GED"
+						levels = 3
+						region = "STATE_MERCHANT_BAY"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_LAST_HEARTH = {
+		region_state:RAL = {
+			create_building = {
+				building = "building_government_administration"
+				level = 7
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_military_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_military_shipbuilding_wooden"
+				}
+			}
+			create_building = {
+				building = "building_explosives_factory"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_leblanc_process"
+				}
+			}
+			create_building = {
+				building = "building_munition_plants"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_percussion_caps"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 5
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_glassworks"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_forest_glass"
+					"pm_manual_glassblowing"
+					"pm_ceramics"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 16
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_traditional_looms"
+					"pm_no_luxury_clothes"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RAL"
+						levels = 4
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RAL"
+						levels = 2
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 2
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steel"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_ZENDEN = {
+		region_state:RAL = {
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RAL"
+						levels = 2
+						region = "STATE_ZENDEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RAL"
+						levels = 10
+						region = "STATE_ZENDEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_soil_enriching_farming"
+					"pm_no_secondary"
+					"pm_tools"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_ZENDEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_TAR_PITS = {
+		region_state:DEW = {
+			create_building = {
+				building = "building_rice_farm_leechgardens"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DEW"
+						levels = 6
+						region = "STATE_TAR_PITS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_leeches"
+					"pm_stuffed_leeches"
+					"pm_no_arms"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DEW"
+						levels = 1
+						region = "STATE_TAR_PITS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_wishstone_mine"
+					"pm_no_magic_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_sulfur_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DEW"
+						levels = 1
+						region = "STATE_TAR_PITS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_sulfur_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_WEST_YANGER_STEPPE = {
+		region_state:YAN = {
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_WEST_YANGER_STEPPE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_ranch"
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_WEST_YANGER_STEPPE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_EAST_YANGER_STEPPE = {
+		region_state:YAN = {
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 4
+						region = "STATE_EAST_YANGER_STEPPE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_potatoes"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_EAST_YANGER_STEPPE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_ranch"
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					company = {
+						type = company_jollyjumper
+						country = "c:BIE"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_squid_squad"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_squid_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_RIDERS_MOOT = {
+		region_state:YAN = {
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 3
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_potatoes"
+					"pm_tools"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 1
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_wooden_buildings"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 1
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handcrafted_furniture"
+					"pm_automation_disabled"
+					"pm_no_luxuries"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 2
+						region = "STATE_RIDERS_MOOT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+		}
+	}
+	s:STATE_FROSTGATE = {
+		region_state:ABR = {
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 9
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 2
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_ICEWIND = {
+		region_state:ICE = {
+		}
+	}
+	s:STATE_TEMPLE_HILL = {
+		region_state:AUM = {
+						create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 2
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_no_luxuries"
+					"pm_automation_disabled"
+				}
+			}
+						create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 2
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_traditional_looms"
+					"pm_no_luxury_clothes"
+				}
+			}
+						create_building = {
+				building = "building_sunweave_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:AUM"
+						levels = 6
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_sunweave_plantation"
+					"pm_road_carts"
+				}
+			}
+						create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+						create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 2
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:AUM"
+						levels = 2
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 3
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_vatican_city"
+				level = 1
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 5
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:AUM"
+						levels = 7
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_farms_basic_earth_shaping"
+					"pm_potatoes"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 5
+						region = "STATE_TEMPLE_HILL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+		}
+	}
+	s:STATE_ALYEA = {
+		region_state:DEW = {
+		}
+	}
+	s:STATE_OSTREN = {
+		region_state:GED = {
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:GED"
+						levels = 1
+						region = "STATE_OSTREN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_traditional_looms"
+					"pm_no_luxury_clothes"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_NORLEA = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_NORLEA"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_gold_mine"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_gold_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+		}
+	}
+	s:STATE_RAVENCLIFF = {
+		region_state:RVC = {
+			create_building = {
+				building = "building_university"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_scholastic_education"
+				}
+			}
+			create_building = {
+				building = "building_castle_dreadmoor"
+				level = 1
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 7
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_permanent_prestidigitation"
+					"pm_craftsman_sewing"
+					"pm_magical_looms"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_open_air_stockyards"
+					"pm_simple_ranch"
+					"pm_livestock_fertility_rites"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_hunting_parties"
+					"pm_exotic_hides"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_sulfite_pulping"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_lead_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_lead_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_lead_mines_sleep_in_a_bottle"
+					"pm_basic_magic_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_glassworks"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_leaded_glass"
+					"pm_manual_glassblowing"
+					"pm_disabled_ceramics"
+				}
+			}
+			create_building = {
+				building = "building_food_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_disabled_canning"
+					"pm_bakery"
+					"pm_live_spice"
+					"pm_manual_dough_processing"
+				}
+			}
+			create_building = {
+				building = "building_motor_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_engines"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_distillery"
+					"pm_no_fruit"
+					"pm_bottomless_bottles"
+					"pm_added_spirits"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_coal_mines_potions_of_strength"
+					"pm_no_explosives"
+					"pm_basic_magic_automation"
+					"pm_no_steam_automation"
+					"pm_rail_transport_mine"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_wishstone_mine"
+					"pm_basic_magic_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_steel_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_blister_steel_process"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 5
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_stoneskin_potion"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_gizmo_workshop"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_gizmos"
+				}
+			}
+			create_building = {
+				building = "building_arts_academy"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_traditional_art"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RVC"
+						levels = 13
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_basic_magic_automation"
+					"pm_no_steam_automation"
+					"pm_iron_mines_sleep_in_a_bottle"
+					"pm_rail_transport_mine"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steel"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+		}
+		region_state:RVD = {
+			create_building = {
+				building = "building_ice_cap"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_airshipping"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVD"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RVD"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_CROWNSHADE = {
+		region_state:YAN = {
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 1
+						region = "STATE_CROWNSHADE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 3
+						region = "STATE_CROWNSHADE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_ranch"
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_TANISTS_RETREAT = {
+		region_state:BRR = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_EOGHANS_SPEAR = {
+		region_state:SRN = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_MIDCLACK = {
+		region_state:ABR = {
+			create_building = {
+				building = "building_government_administration"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_university"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_scholastic_education"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 1
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 3
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 1
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 3
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 4
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:ABR"
+						levels = 2
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools"
+					"pm_potatoes"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ABR"
+						levels = 1
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 6
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ABR"
+						levels = 3
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_hunting"
+				}
+			}
+			create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ABR"
+						levels = 3
+						region = "STATE_MIDCLACK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+				}
+			}
+		}
+	}
+	s:STATE_DRAGONBANE_TUNDRA = {
+	}
+	s:STATE_WYRMBONE_CLIFFS = {
+		region_state:SDN = {
+		}
+	}
+	s:STATE_BANEKERT = {
+		region_state:RAL = {
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_BANEKERT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 4
+						region = "STATE_BANEKERT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_glassworks"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_BANEKERT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_forest_glass"
+					"pm_disabled_ceramics"
+					"pm_manual_glassblowing"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RAL"
+						levels = 3
+						region = "STATE_BANEKERT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+		}
+	}
+	s:STATE_ELDBERG = {
+		region_state:OEX = {
+			create_building = {
+				building = "building_dwarf_tunnels"
+				level = 1
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_organization"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_underfarm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:OEX"
+						levels = 4
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_goo_infused_underfarming"
+					"pm_tools_building_rice_farm"
+					"pm_no_lichen_dyes"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_no_luxuries"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 2
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_fruit"
+					"pm_monster_grapes"
+				}
+			}
+			create_building = {
+				building = "building_undertea"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:OEX"
+						levels = 2
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_tea_plantation"
+					"pm_steam_rail_transport"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_magical_looms"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:OEX"
+						levels = 7
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_rotfarm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_grubbing2"
+					"pm_tools"
+				}
+			}
+			create_building = {
+				building = "building_big_game_hunts"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:OEX"
+						levels = 2
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dedicated_expedition"
+					"pm_carapace_increase"
+					"pm_yesbfg"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_gizmo_workshop"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_functional_gizmos"
+				}
+			}
+			create_building = {
+				building = "building_artifactory"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 2
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_artifactory_hand_sorting"
+					"pm_artifactory_no_automation"
+				}
+			}
+			create_building = {
+				building = "building_motor_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_engines"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_coal_mines_potions_of_strength"
+					"pm_no_explosives"
+					"pm_basic_magic_automation"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:OEX"
+						levels = 2
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+					"pm_no_mixins"
+				}
+			}
+			create_building = {
+				building = "building_spider_ranch"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:OEX"
+						levels = 3
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_advanced_spiders"
+					"pm_no_spidey_silk"
+					"pm_spider_enlargement"
+					"pm_advanced_warding"
+				}
+			}
+			create_building = {
+				building = "building_mushroom_logging"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:OEX"
+						levels = 5
+						region = "STATE_ELDBERG"
+					}
+				}
+				activate_production_methods = {
+					"pm_mushroom_mills"
+					"pm_no_focus"
+					"pm_rail_transport_building_logging_camp"
+				}
+			}
+			create_building = {
+				building = "building_steel_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_blister_steel_process"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 2
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_basic_magic_automation"
+					"pm_iron_mines_potions_of_strength"
+					"pm_no_steam_automation"
+					"pm_rail_transport_mine"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steel"
+					"pm_automation_disabled"
+				}
+			}
+		}
+	}
+	s:STATE_ADRIANSEN = {
+		region_state:RAL = {
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_ADRIANSEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_motor_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_ADRIANSEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_engines"
+				}
+			}
+			create_building = {
+				building = "building_steel_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 2
+						region = "STATE_ADRIANSEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_blister_steel_process"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_ADRIANSEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 2
+						region = "STATE_ADRIANSEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_food_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 2
+						region = "STATE_ADRIANSEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_bakery"
+					"pm_disabled_canning"
+					"pm_manual_dough_processing"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 1
+						region = "STATE_ADRIANSEN"
+					}
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RAL"
+						levels = 5
+						region = "STATE_ADRIANSEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_no_secondary"
+					"pm_tools_disabled"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 4
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steel"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RAL"
+						levels = 3
+						region = "STATE_LAST_HEARTH"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_ARDSHIEL = {
+		region_state:RAL = {
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RAL"
+						levels = 5
+						region = "STATE_ARDSHIEL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_no_secondary"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RAL"
+						levels = 5
+						region = "STATE_ARDSHIEL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+		}
+	}
+	s:STATE_DRUMAGAR = {
+		region_state:RIS = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+		region_state:CAO = {
+			create_building = {
+				building = "building_fishing_wharf"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_simple_fishing"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_LOCHTYRE = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_no_luxury_clothes"
+					"pm_no_magic_clothes"
+					"pm_magical_looms"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 5
+						region = "STATE_LOCHTYRE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DUM"
+						levels = 15
+						region = "STATE_LOCHTYRE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_soil_enriching_farming"
+					"pm_potatoes"
+					"pm_tools"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_LOCHTYRE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_LOCHTYRE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_MELENLECK = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_MELENLECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_sulfite_pulping"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DUM"
+						levels = 38
+						region = "STATE_MELENLECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_soil_enriching_farming"
+					"pm_tools"
+					"pm_no_secondary"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_MELENLECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_MELENLECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_LOCHTYRE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_BALLYNE = {
+		region_state:DOV = {
+				create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 4
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_some_fruit"
+					"pm_no_spice"
+				}
+			}
+				create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 8
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handcrafted_furniture"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 6
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_apple_orchards"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_sunweave_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 2
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_sunweave_plantation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_coal_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 5
+						region = "STATE_BALLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_wooden_buildings"
+				}
+			}
+		}
+	}
+	s:STATE_URIKS_GIFT = {
+		region_state:YAN = {
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_fruit"
+					"pm_no_spice"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 3
+						region = "STATE_URIKS_GIFT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 4
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_potatoes"
+					"pm_tools"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					company = {
+						type = company_jollyjumper
+						country = "c:BIE"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_increased_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_INVERINGAR = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_INVERINGAR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_INVERINGAR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+				}
+			}
+		}
+	}
+	s:STATE_GLASLIESH = {
+		region_state:MBR = {
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:MBR"
+						levels = 2
+						region = "STATE_GLASLIESH"
+					}
+				}
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:MBR"
+						levels = 4
+						region = "STATE_GLASLIESH"
+					}
+				}
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_potatoes"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_BALATHOUL = {
+		region_state:BFU = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_potatoes"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_LIGHTSCOURGE = {
+		region_state:BCT = {
+			create_building = {
+				building = "building_university"
+				level = 8
+				reserves = 1
+				activate_production_methods = {
+					"pm_scholastic_education"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_dwarf_tunnels"
+				level = 1
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 11
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_underground_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BCT"
+						levels = 5
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_underfish_boating"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_undertea"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:BCT"
+						levels = 4
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_tea_plantation"
+					"pm_steam_rail_transport"
+				}
+			}
+			create_building = {
+				building = "building_artifactory"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 6
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_artifactory_hand_sorting"
+					"pm_artifactory_no_automation"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_sulfite_pulping"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 5
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_sulfur_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 1
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_sulfur_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_rail_transport_mine"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_luxury_furniture"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 6
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_fruit"
+					"pm_monster_grapes"
+				}
+			}
+			create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BCT"
+						levels = 5
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+					"pm_no_mixins"
+				}
+			}
+			create_building = {
+				building = "building_spider_ranch"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BCT"
+						levels = 8
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_advanced_spiders"
+					"pm_no_spidey_silk"
+					"pm_spider_enlargement"
+					"pm_no_warding"
+				}
+			}
+			create_building = {
+				building = "building_mushroom_logging"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BCT"
+						levels = 9
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				activate_production_methods = {
+					"pm_mushroom_mills"
+					"pm_extra_essence"
+					"pm_rail_transport_building_logging_camp"
+				}
+			}
+			create_building = {
+				building = "building_rotfarm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_grubbing2"
+					"pm_tools"
+				}
+			}
+			create_building = {
+				building = "building_big_game_hunts"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BCT"
+						levels = 7
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dedicated_expedition"
+					"pm_carapace_increase"
+					"pm_nobfg"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_underfarm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:BCT"
+						levels = 12
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_goo_infused_underfarming"
+					"pm_tools_building_rice_farm"
+					"pm_no_lichen_dyes"
+				}
+			}
+			create_building = {
+				building = "building_motor_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 1
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_engines"
+				}
+			}
+			create_building = {
+				building = "building_steel_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_blister_steel_process"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 4
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_iron_mine"
+					"pm_no_explosives"
+					"pm_iron_mines_potions_of_strength"
+					"pm_no_steam_automation"
+					"pm_rail_transport_mine"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 5
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steel"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 4
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_coal_mines_potions_of_strength"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 6
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+		}
+	}
+	s:STATE_ARCTHARAL = {
+		region_state:BCT = {
+			create_building = {
+				building = "building_underground_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_ARCTHARAL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_underfish_boating"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_ARCTHARAL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handcrafted_furniture"
+					"pm_no_luxuries"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_mushroom_logging"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_ARCTHARAL"
+					}
+				}
+				activate_production_methods = {
+					"pm_mushroom_mills"
+					"pm_extra_wood"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_MALINMORE = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_government_administration"
+				level = 5
+				reserves = 1
+				activate_production_methods = {
+					"pm_vertical_filing_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 5
+						region = "STATE_MALINMORE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_military_shipyards"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_military_shipbuilding_wooden"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_MALINMORE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_MALINMORE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DUM"
+						levels = 45
+						region = "STATE_MALINMORE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_soil_enriching_farming"
+					"pm_no_secondary"
+					"pm_tools_disabled"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_MALINMORE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_FALNALECK = {
+		region_state:AUM = {
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_FALNALECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:AUM"
+						levels = 3
+						region = "STATE_FALNALECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_farms_no_enhancement"
+					"pm_potatoes"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_sunweave_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:AUM"
+						levels = 3
+						region = "STATE_FALNALECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_sunweave_plantation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_FALNALECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_THORNWALL = {
+		region_state:DOV = {
+					create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_THORNWALL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_some_fruit"
+					"pm_no_spice"
+				}
+			}
+					create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_THORNWALL"
+					}
+				}
+				reserves = 1
+			}
+			    create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 5
+						region = "STATE_THORNWALL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 3
+						region = "STATE_THORNWALL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_THORNWALL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 2
+						region = "STATE_THORNWALL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_apple_orchards"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_sunweave_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 3
+						region = "STATE_THORNWALL"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_sunweave_plantation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_SNOWBREACH = {
+		region_state:ICE = {
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ICE"
+						levels = 1
+						region = "STATE_SNOWBREACH"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_GLENKELD = {
+		region_state:CVE = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_DUNMAFAR = {
+		region_state:CVE = {
+			create_building = {
+				building = "building_fishing_wharf"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_KENLYNE = {
+		region_state:BIE = {
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_hunting_parties"
+					"pm_no_exotic"
+				}
+			}
+			
+			create_building = {
+				building = "building_construction_sector"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_wooden_buildings"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					company = {
+						type = company_jollyjumper
+						country = "c:BIE"
+						levels = 4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_increased_hardwood"
+					"pm_stoneskin_potion"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_military_shipyards"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_military_shipbuilding_wooden"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 3
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_iron_mines_potions_of_strength"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 4
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_hunting"
+				}
+			}
+			create_building = {
+				building = "building_leviathan_outpost"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_manowar_leviathan_ships"
+					"pm_no_krakeneering"
+				}
+			}
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_hunting_parties"
+					"pm_no_exotic"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+					"pm_no_mixins"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_gold_mine"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_gold_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_squid_squad"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_squid_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 2
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 1
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_coal_mine"
+					"pm_no_explosives"
+					"pm_mines_no_potions"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 5
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:BIE"
+						levels = 19
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_potatoes"
+					"pm_tools"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					company = {
+						type = company_jollyjumper
+						country = "c:BIE"
+						levels = 4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_stoneskin_potion"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:BIE"
+						levels = 3
+						region = "STATE_KENLYNE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_luxury_furniture"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+		}
+	}
+	s:STATE_BANCFAN = {
+		region_state:HAG = {
+						create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+						create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:HAG"
+						levels = 5
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+						create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+			}
+						create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+					create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_automation_disabled"
+				}
+			}
+					create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_fruit"
+					"pm_added_spirits"
+				}
+			}
+				create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:HAG"
+						levels = 2
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_no_secondary"
+					"pm_tools_disabled"
+				}
+			}
+				create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+	        create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 2
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_BANCFAN = {
+		region_state:ROF = {
+						create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ROF"
+						levels = 2
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_hunting"
+				}
+			}
+						create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ROF"
+						levels = 2
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+					"pm_no_mixins"
+				}
+			}
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 2
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 2
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 1
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:ROF"
+						levels = 13
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_farms_basic_earth_shaping"
+					"pm_potatoes"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ROF"
+						levels = 5
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 2
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handcrafted_furniture"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ROF"
+						levels = 6
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:ROF"
+						levels = 5
+						region = "STATE_BANCFAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_livestock_fertility_rites"
+					"pm_simple_ranch"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_wooden_buildings"
+				}
+			}
+		}
+	}
+	s:STATE_MAESBELAN = {
+		region_state:HAG = {
+			create_building = {
+				building = "building_government_administration"
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_hunting"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_fruit"
+					"pm_added_spirits"
+				}
+			}
+			create_building = {
+				building = "building_haunted_grounds"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:HAG"
+						levels = 2
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_exorcists"
+					"pm_no_equipment_haunted_grounds"
+				}
+			}
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 2
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_automation_disabled"
+				}
+			}
+						create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:HAG"
+						levels = 13
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 2
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_wishstone_mine"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 5
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_hardwood"
+					"pm_automation_disabled"
+				}
+				}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+						create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 2
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:HAG"
+						levels = 2
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	     s:STATE_MAESBELAN = {
+		region_state:AUM = {
+						create_building = {
+				building = "building_rice_farm_leechgardens"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:AUM"
+						levels = 10
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_leeches"
+					"pm_no_secondary"
+					"pm_no_arms"
+				}
+			}
+						create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_no_explosives"
+					"pm_iron_mines_potions_of_strength"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+						create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 3
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_arts_academy"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_traditional_art"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 2
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 7
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 2
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_no_luxury_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_FALNALECK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:AUM"
+						levels = 4
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_fishing_trawlers"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_arts_academy"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:AUM"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_traditional_art"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+		}
+	}
+	s:STATE_GLYNFFORDD = {
+		region_state:FOX = {
+					create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:FOX"
+						levels = 3
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				activate_production_methods = {
+					"pm_simple_ranch"
+					"pm_butchering_tools"
+					"pm_livestock_fertility_rites"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+				create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:FOX"
+						levels = 1
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_hunting"
+				}
+			}
+					create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:FOX"
+						levels = 2
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+					"pm_functional_mixins"
+				}
+			}
+			    create_building = {
+				building = "building_sunweave_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:FOX"
+						levels = 6
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_sunweave_plantation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 1
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_luxury_clothes"
+					"pm_magical_looms"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:FOX"
+						levels = 10
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_potatoes"
+					"pm_tools"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 4
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_ALLTGLAS = {
+	}
+	s:STATE_HAFODFAN = {
+		region_state:BRR = {
+		}
+	}
+	s:STATE_GWYNWEN = {
+		region_state:FOX = {
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 4
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:FOX"
+						levels = 20
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_soil_enriching_farming"
+					"pm_no_secondary"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 3
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 3
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_no_luxury_clothes"
+					"pm_no_magic_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_pulp_pressing"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_university"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_scholastic_education"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:FOX"
+						levels = 18
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_potatoes"
+					"pm_tools_disabled"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 8
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 5
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 2
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 2
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 1
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 1
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 1
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+		}
+	}
+	s:STATE_CASTELL_DRYSGOLMARK = {
+		region_state:DRK = {
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 2
+						region = "STATE_GWYNWEN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_iron_frame_buildings"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DRK"
+						levels = 3
+						region = "STATE_CASTELL_DRYSGOLMARK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:FOX"
+						levels = 4
+						region = "STATE_GWYNWEN"
+					}
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DRK"
+						levels = 4
+						region = "STATE_CASTELL_DRYSGOLMARK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DRK"
+						levels = 12
+						region = "STATE_CASTELL_DRYSGOLMARK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_secondary"
+					"pm_tools"
+					"pm_soil_enriching_farming"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DRK"
+						levels = 2
+						region = "STATE_CASTELL_DRYSGOLMARK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_lathe"
+					"pm_automation_disabled"
+				}
+			}
+		}
+	}
+	s:STATE_CARREGRICE = {
+		region_state:ABR = {
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 2
+						region = "STATE_CARREGRICE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ABR"
+						levels = 3
+						region = "STATE_CARREGRICE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_TALNANT = {
+		region_state:EVR = {
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:EVR"
+						levels = 10
+						region = "STATE_TALNANT"
+					}
+				}
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools"
+					"pm_potatoes"
+					"pm_farms_no_enhancement"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:EVR"
+						levels = 2
+						region = "STATE_TALNANT"
+					}
+				}
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:EVR"
+						levels = 2
+						region = "STATE_TALNANT"
+					}
+				}
+				activate_production_methods = {
+					"pm_simple_ranch"
+					"pm_open_air_stockyards"
+					"pm_livestock_no_enhancement"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:EVR"
+						levels = 1
+						region = "STATE_TALNANT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_crude_tools"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:EVR"
+						levels = 1
+						region = "STATE_TALNANT"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_wooden_buildings"
+				}
+			}
+		}
+	}
+	s:STATE_BLACKDON = {
+		region_state:RVC = {
+			create_building = {
+				building = "building_government_administration"
+				level = 6
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_university"
+				level = 6
+				reserves = 1
+				activate_production_methods = {
+					"pm_scholastic_education"
+				}
+			}
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_coal_mine"
+					"pm_coal_mines_potions_of_strength"
+					"pm_no_explosives"
+					"pm_basic_magic_automation"
+					"pm_no_steam_automation"
+					"pm_rail_transport_mine"
+				}
+			}
+			create_building = {
+				building = "building_railway"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_steam_trains"
+					"pm_wooden_passenger_carriages"
+				}
+			}
+			create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_early_potion_vat_production"
+					"pm_functional_mixins"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 6
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_no_magic_clothes"
+					"pm_no_luxury_clothes"
+					"pm_magical_looms"
+				}
+			}
+			create_building = {
+				building = "building_sulfur_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_sulfur_mine"
+					"pm_no_explosives"
+					"pm_basic_magic_automation"
+					"pm_no_steam_automation"
+					"pm_sulfur_mines_sleep_in_a_bottle"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_haunted_grounds"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_ghost_hunters"
+					"pm_no_equipment_haunted_grounds"
+				}
+			}
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_hunting_parties"
+					"pm_no_exotic"
+				}
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_distillery"
+					"pm_no_fruit"
+					"pm_added_spirits"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_atmospheric_engine_pump_building_wishstone_mine"
+					"pm_basic_magic_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_sulfite_pulping"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_santa_clause_style"
+					"pm_luxury_furniture"
+					"pm_permanent_prestidigitation_furniture"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RVC"
+						levels = 10
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_no_secondary"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_firearms_hunting"
+				}
+			}
+		}
+		region_state:RVE = {
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:RVE"
+						levels = 6
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_apple_orchards"
+					"pm_farms_basic_earth_shaping"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:RVE"
+						levels = 3
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_food_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVE"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_sweeteners"
+					"pm_disabled_canning"
+					"pm_live_spice"
+					"pm_manual_dough_processing"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:RVE"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_GLASINBLAIR = {
+		region_state:DOV = {
+			create_building = {
+				building = "building_trade_center"
+				activate_production_methods = {
+					"pm_trade_center_trade_quantity_normal"
+				}
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 4
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+			}
+			create_building = {
+				building = "building_ice_cap"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 7
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_airshipping"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 5
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_butchering_tools"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 2
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_tooling_workshops"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_artillery_foundries"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_cannons"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:DOV"
+						levels = 1
+						region = "STATE_GLASINBLAIR"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_increased_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_FALMAKELD = {
+		region_state:ICE = {
+		}
+	}
+	s:STATE_TYMANS_FOLLY = {
+		region_state:MBR = {
+		}
+	}
+	s:STATE_HJELTIAS_GLACIER = {
+		region_state:ICE = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_NORDFJALL = {
+	}
+	s:STATE_ZAWADKA = {
+		region_state:VAE = {
+			create_building = {
+				building = "building_ice_pond"
+				add_ownership = {
+					company = {
+						type = "company_vic"
+						country = "c:VAI"
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building = "building_mint_tea_plantation"
+				add_ownership = {
+					company = {
+						type = "company_vic"
+						country = "c:VAI"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_tea_plantation"
+				}
+			}
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					company = {
+						type = "company_vic"
+						country = "c:VAI"
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_trapping_teams"
+					"pm_no_exotic"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:VAE"
+						levels = 1
+						region = "STATE_ZAWADKA"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_potatoes"
+				}
+			}
+			create_building = {
+				building = "building_tavern"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:VAI"
+						levels = 2
+						region = "STATE_VENTAFALCO"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_watering_hole"
+				}
+			}
+			create_building = {
+				building = "building_leviathan_outpost"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:VAI"
+						levels = 5
+						region = "STATE_VENTAFALCO"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_wooden_leviathan_ships"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building={
+				building="building_arts_academy"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:VAI"
+						levels=2
+						region="STATE_VENTAFALCO"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_ice_sculpture" }
+			}
+		}
+	}
+	s:STATE_HRAFNSDALR = {
+		region_state:SDN = {
+		}
+	}
+	s:STATE_CZERWIONKA = {
+		region_state:ZKW = {
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:ZKW"
+						levels = 2
+						region = "STATE_CZERWIONKA"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_potatoes"
+				}
+			}
+			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AHO"
+						levels = 2
+						region = "STATE_GLIMMERING_COAST"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_handsewn_clothes"
+					"pm_craftsman_sewing"
+					"pm_traditional_looms"
+				}
+			}
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					company = {
+						type = "company_wolfslayers_guild"
+						country = "c:ZKW"
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_trapping_teams"
+					"pm_exotic_hides"
+				}
+			}
+			create_building = {
+				building = "building_tavern"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_CZERWIONKA"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_watering_hole"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_ZARKI = {
+		region_state:ZKW = {
+			create_building = {
+				building = "building_lead_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_ZARKI"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_lead_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					company = {
+						type = "company_wolfslayers_guild"
+						country = "c:ZKW"
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+					"pm_hardwood"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_potion_distillery"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ZKW"
+						levels = 2
+						region = "STATE_ZARKI"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_potion_production"
+					"pm_functional_mixins"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_horizontal_drawer_cabinets"
+				}
+			}
+			create_building = {
+				building = "building_university"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_philosophy_department"
+				}
+			}
+			create_building = {
+				building = "building_arms_industry"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_ZARKI"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_muskets"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AHO"
+						levels = 1
+						region = "STATE_SOLEMN_STONES"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_santa_clause_style"
+					"pm_luxury_furniture"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					company = {
+						type = "company_wolfslayers_guild"
+						country = "c:ZKW"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_hunting_parties"
+					"pm_no_exotic"
+				}
+			}
+			create_building = {
+				building = "building_hunting_lodge"
+				add_ownership = {
+					company = {
+						type = "company_wolfslayers_guild"
+						country = "c:ZKW"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_firearms_hunting"
+					"pm_hunting_meat"
+				}
+			}
+			create_building = {
+				building = "building_iron_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_ZARKI"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_iron_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:ZKW"
+						levels = 6
+						region = "STATE_ZARKI"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+				}
+			}
+			create_building = {
+				building = "building_mint_tea_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_ZARKI"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_tea_plantation"
+					"pm_road_carts"
+				}
+			}
+		}
+	}
+	s:STATE_WHISPERPINE_WOODS = {
+		region_state:ZKW = {
+			create_building = {
+				building = "building_fur_hunting_lodge"
+				add_ownership = {
+					company = {
+						type = "company_wolfslayers_guild"
+						country = "c:ZKW"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_trapping_teams"
+					"pm_no_exotic"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					company = {
+						type = "company_wolfslayers_guild"
+						country = "c:ZKW"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_WHISPERPINE_WOODS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+					"pm_potatoes"
+				}
+			}
+			create_building = {
+				building = "building_wishstone_mine"
+				add_ownership = {
+					company = {
+						type = "company_basic_magic_mining"
+						country = "c:AHO"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_furniture_manufacturies"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AHO"
+						levels = 1
+						region = "STATE_SOLEMN_STONES"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_santa_clause_style"
+					"pm_no_luxuries"
+					"pm_automation_disabled"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_wizard_tower"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_WHISPERPINE_WOODS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_unrefrigerated"
+					"pm_fishing_trawlers"
+				}
+			}
+			create_building = {
+				building = "building_coal_mine"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:ZKW"
+						levels = 1
+						region = "STATE_WHISPERPINE_WOODS"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_picks_and_shovels_building_coal_mine"
+					"pm_no_explosives"
+					"pm_no_steam_automation"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:AHO"
+						levels = 1
+						region = "STATE_SOLEMN_STONES"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_wooden_buildings"
+				}
+			}
+		}
+	}
+	s:STATE_MARAMAROVA = {
+	}
+	s:STATE_POLYNKALA = {
+	}
+	s:STATE_NGURULAN = {
+		region_state:LAR = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+			create_building = {
+				building = "building_fishing_wharf_rusttails"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:LAR"
+						levels = 1
+						region = "STATE_NGURULAN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_no_special_fish"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+	s:STATE_LUMO = {
+		region_state:DUM = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+		}
+	}
+	s:STATE_VIGAKULL = {
+	}
+	s:STATE_HALSTEAD = {
+	}
+	s:STATE_SIFSKER = {
+		region_state:VAE = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+			create_building = {
+				building = "building_ice_pond"
+				add_ownership = {
+					company = {
+						type = "company_vic"
+						country = "c:VAI"
+						levels = 1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+		}
+	}
+	s:STATE_SOLVIK = {
+		region_state:LEL = {
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_anchorage"
+				}
+			}
+			create_building = {
+				building = "building_rye_farm"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:LEL"
+						levels = 1
+						region = "STATE_SOLVIK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_farming"
+					"pm_tools_disabled"
+				}
+			}
+		}
+	}
+	s:STATE_SOUTH_YANGER_STEPPE = {
+		region_state:YAN = {
+			create_building = {
+				building = "building_ice_cap"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:YAN"
+						levels = 1
+						region = "STATE_SOUTH_YANGER_STEPPE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_no_airshipping"
+				}
+			}
+			create_building = {
+				building = "building_logging_camp"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 1
+						region = "STATE_SOUTH_YANGER_STEPPE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_no_equipment"
+					"pm_road_carts"
+				}
+			}
+			create_building = {
+				building = "building_livestock_ranch"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:YAN"
+						levels = 1
+						region = "STATE_SOUTH_YANGER_STEPPE"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_ranch"
+					"pm_butchering_tools"
+					"pm_livestock_no_enhancement"
+					"pm_standard_fences"
+					"pm_unrefrigerated"
+				}
+			}
+		}
+	}
+}

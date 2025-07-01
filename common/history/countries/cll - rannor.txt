@@ -1,0 +1,57 @@
+﻿COUNTRIES = {
+	c:CLL ?= {
+		effect_starting_technology_tier_2_tech = yes
+
+		add_technology_researched = fractional_distillation
+
+		set_military_wage_level = medium
+
+		ig:ig_mages ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_petty_bourgeoisie ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_court_mages
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_druidic_circles
+		activate_law = law_type:law_public_schools
+
+	add_taxed_goods = g:liquor
+	add_taxed_goods = g:services
+
+
+	set_institution_investment_level = {
+		institution = institution_magical_focus
+		level = 2
+	}
+
+	set_institution_investment_level = {
+		institution = institution_schools
+		level = 1
+	}
+}
+}

@@ -1,0 +1,31 @@
+﻿CHARACTERS = {
+	# want them as Destopic Utopian's however is not currently enabled in the mod.
+	c:XXP = {
+		create_character = {
+			first_name = "Gabriel"
+			last_name = "Sayer"
+			historical = yes
+			ruler = yes
+			age = 66
+			interest_group = ig_intelligentsia
+			ideology = ideology_humanitarian_royalist
+			traits = {
+				honorable
+				senile
+			}
+		}
+		create_character = {
+			first_name = "Louis"
+			last_name = "Sayer"
+			historical = yes
+			heir = yes
+			age = 32
+			interest_group = ig_intelligentsia
+			ideology = ideology_humanitarian_royalist
+			traits = {
+				erudite
+				literary
+			}
+		}
+	}
+}

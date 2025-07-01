@@ -1,0 +1,30 @@
+﻿
+state_soulwrought_progress = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = soulwrought_assemble_count
+		}
+		add = var:soulwrought_assemble_count
+	}
+}
+
+state_stonedwarf_progress = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = dwarf_digging_count
+		}
+		add = var:dwarf_digging_count
+	}
+}
+
+state_sunstation_progress_gui = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = sunstation_progress_count
+		}
+		add = var:sunstation_progress_count
+	}
+}

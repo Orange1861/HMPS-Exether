@@ -1,0 +1,406 @@
+﻿halt_tithes_button = {
+	name = "halt_tithes_button"
+	desc = "halt_tithes_button_desc"
+
+	possible = {
+			custom_tooltip = {
+				text = unhalted_tithes_past_tt
+				NOT = {
+					has_variable = halted_tithes_variable
+					has_variable = tithe_cooldown_variable
+				}
+				
+			}
+		
+	}
+
+	visible = {
+		NOT = {
+			has_variable = halted_tithes_variable	
+		}
+	}
+	effect = {
+		custom_tooltip = {
+			text = halt_tithes_tt
+			set_variable = { 
+				name = halted_tithes_variable
+			}
+			set_variable = { 
+				name = tithe_cooldown_variable
+				days = 2
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}
+
+unhalt_tithes_button = {
+	name = "unhalt_tithes_button"
+	desc = "unhalt_tithes_button_desc"
+
+	possible = {
+		custom_tooltip = {
+			text = halted_tithes_past_tt
+			has_variable = halted_tithes_variable
+			NOT = {	has_variable = tithe_cooldown_variable } 
+		}
+		
+	}
+
+	visible = {
+		has_variable = halted_tithes_variable
+	}
+			
+	
+	effect = {
+		custom_tooltip = {
+			text = unhalt_tithes_tt
+			remove_variable = halted_tithes_variable
+			set_variable = { 
+				name = tithe_cooldown_variable
+				days = 2
+			}
+		}
+	}
+	
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+halt_ini_rites_button = {
+	name = "halt_ini_rites_button"
+	desc = "halt_ini_rites_button_desc"
+
+	possible = {
+			custom_tooltip = {
+				text = unhalted_ini_rites_past_tt
+				NOT = {
+					has_variable = halted_ini_rites_variable
+					has_variable = rites_cooldown_variable
+				}
+				
+			}
+		
+	}
+
+	visible = {
+		NOT = {
+			has_variable = halted_ini_rites_variable	
+		}
+	}
+	effect = {
+		custom_tooltip = {
+			text = halt_ini_rites_tt
+			set_variable = { 
+				name = halted_ini_rites_variable
+			}
+			set_variable = { 
+				name = rites_cooldown_variable
+				days = 2
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}
+
+unhalt_ini_rites_button = {
+	name = "unhalt_ini_rites_button"
+	desc = "unhalt_ini_rites_button_desc"
+
+	possible = {
+		custom_tooltip = {
+			text = halted_ini_rites_past_tt
+			has_variable = halted_ini_rites_variable
+			NOT = {	has_variable = rites_cooldown_variable } 
+		}
+		
+	}
+
+	visible = {
+		has_variable = halted_ini_rites_variable
+	}
+			
+	
+	effect = {
+		custom_tooltip = {
+			text = unhalt_ini_rites_tt
+			remove_variable = halted_ini_rites_variable
+			set_variable = { 
+				name = rites_cooldown_variable
+				days = 2
+			}
+		}
+	}
+	
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+shuffle_company_administration_button = {
+	name = "shuffle_company_administration_button"
+	desc = "shuffle_company_administration_button_desc"
+
+	possible = {
+		custom_tooltip = {
+			text = shuffle_company_administration_cooldown_tt
+
+			NOT = {	has_variable = shuffle_company_cooldown_variable } 
+		}
+		custom_tooltip = {
+			text = shuffle_company_administration_minimum_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 2
+			}
+		}
+
+	}
+
+	# visible = {
+	# 	has_variable = halted_ini_rites_variable
+	# }
+			
+	
+	effect = {
+		hidden_effect = {
+			set_variable = { 
+				name = shuffle_company_cooldown_variable
+				years = 10
+			}
+		}
+		c:CDW ?= {
+			add_modifier = {
+				name = fired_administrators
+				years = 10
+				is_decaying = yes
+			}
+		}
+		craggedwyn_medium_danger_remove_effect = yes
+	}
+	
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+the_margraves_health_button = {
+	name = "the_margraves_health_button"
+	desc = "the_margraves_health_button_desc"
+
+	possible = {
+
+		custom_tooltip = {
+			text = margrave_health_cooldown_tt
+			NOT = { has_variable = the_margraves_health_button_cooldown }
+		}
+		
+		hidden_trigger = {
+			NOT = { has_variable = third_extension_var }
+		}
+		custom_tooltip = {
+				text = no_craggedwyn_implosion_tt
+				NOT = { has_variable = craggedwyn_collapse_var } 
+		}
+	}
+
+	visible = {
+		ruler = {
+			has_variable = is_ludric
+		}
+	}
+
+	effect = {
+		ruler = {		
+			set_variable = {
+				name = memento_mori_immunity
+				years = 6
+			}
+			
+			set_variable = {
+				name = ludric_immortality_variable
+				months = 72
+			}
+			set_character_immortal = yes
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = ceraun_events.20
+				months = 73
+			}
+		}	
+		craggedwyn_medium_danger_effect = yes
+		set_variable = { 
+				name = the_margraves_health_button_cooldown
+				years = 5
+		}
+		if = {
+			limit = {
+				has_variable = second_extension_var
+			}
+			set_variable = third_extension_var
+		}
+		else_if = {
+			limit = {
+				has_variable = ludric_immortality_variable
+			}
+			set_variable = second_extension_var
+		}
+		custom_tooltip = margraves_health_tt
+	}
+	
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				has_variable = evil_zarnak_var
+			}
+			add = 100
+		}
+	}
+}
+
+disband_craggedwyn_company_button = {
+	name = "disband_craggedwyn_company_button"
+	desc = "disband_craggedwyn_company_button_desc"
+
+	possible = {
+
+		custom_tooltip = {
+			text = danger_level_3_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(craggedwyn_control_progress_bar)" <= 3
+			}
+		}
+		custom_tooltip = {
+			text = ludric_kicked_bucket
+			ruler = {
+				NOT = {
+					has_variable = is_ludric
+				}
+			}
+		}	
+
+		OR = {
+			ig:ig_mages = {
+				is_marginal = yes
+			}
+			has_law = law_type:law_mage_hunters
+		}
+		
+
+	}
+
+	# visible = {
+	# 	ruler = {
+	# 		has_variable = is_ludric
+	# 	}
+	# }
+
+	effect = {
+		hidden_effect = {
+			c:CDW ?= {
+				owning_company ?= {
+					if = {
+						limit = {
+							is_company_type = company_type:company_craggedwyn
+						}
+						remove_owned_country = c:CDW
+						owner ?= {
+							remove_company = prev.type
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = disband_crag_tt
+		c:CER ?= {
+			create_diplomatic_pact = {
+				country = c:CDW
+				type = puppet
+			}
+		}
+	}
+	
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+delegate_to_tribes_button = {
+	name = "delegate_to_tribes_button"
+	desc = "delegate_to_tribes_button_desc"
+
+	cooldown = { years = 5 }
+
+	possible = {
+		custom_tooltip = {
+				text = is_tallcat_tt
+				ruler = {
+					has_variable = is_tallcat
+				}
+			}
+	}
+
+	effect = {
+		ruler = {
+			add_modifier = {
+				name = taking_it_easy
+				years = 5
+			}
+		}
+		add_modifier = {
+			name = delegating_to_tribes
+			years = 5
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}
+
+promote_magocrats_button = {
+	name = "promote_magocrats_button"
+	desc = "promote_magocrats_button_desc"
+
+	cooldown = { years = 5 }
+
+	possible = {
+		custom_tooltip = {
+				text = is_tallcat_tt
+				ruler = {
+					has_variable = is_tallcat
+				}
+			}
+	}
+
+	effect = {
+		ig:ig_clans ?= {
+			add_modifier = {
+				name = denied_customary_positions
+				years = 5
+			}
+		}
+		add_modifier = {
+			name = promoting_magocrats
+			years = 5
+		}
+
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}

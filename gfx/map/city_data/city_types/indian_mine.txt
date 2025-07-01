@@ -1,0 +1,15 @@
+﻿indian_mine = {
+	city_type = mine
+	center_building_mesh = "mininghub_centerpiece_01_mesh"
+	center_building_size = { 3 3 }
+	
+	trigger = {
+		always = no
+	}
+
+	weight = -1
+
+	min_residential_buildings = 4
+	max_residential_buildings = 150
+	max_residence_points = 200
+}

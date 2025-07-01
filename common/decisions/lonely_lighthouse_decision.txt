@@ -1,0 +1,67 @@
+﻿lonely_lighthouse_decision = {
+	is_shown = {
+        has_interest_marker_in_region = sr:region_lonely_isles
+		NOT = {
+			any_scope_building = {
+				is_building_type = building_lighthouse
+			}
+		}
+		NOT = {
+			any_scope_state = {
+				has_modifier = modifier_lighthouse_site
+			}
+		}
+		NOT = {
+			has_variable = lighthouse_var
+		}
+	}
+
+	possible = {
+        country_or_subject_owns_entire_state_region = STATE_NGURULAN
+        has_technology_researched = civilizing_mission
+        has_interest_marker_in_region = sr:region_lonely_isles
+		produced_bureaucracy > 500
+	}
+	
+	when_taken = {
+		set_variable = {
+			name = lighthouse_var
+			value = 0
+		}
+		add_modifier = {
+			name = lighthouse_survey
+			months = 13
+		}
+		add_journal_entry = {
+			type = je_lighthouse_survey
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { produced_bureaucracy > 2500 }
+			add = 5
+		}	
+		if = {
+			limit = { 
+				produced_bureaucracy > 5000 
+				any_country = {
+					is_ai = no
+					has_variable = lighthouse_var
+				}
+			}
+			add = 50
+		}			
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+			}
+
+			add = -1000
+		}	
+	}
+}

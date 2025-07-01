@@ -1,0 +1,266 @@
+﻿DUM = { # Dumonia
+	dynamic_country_name = { # Dumonia Empire
+	name = dyn_c_dumonia_empire
+	adjective = dyn_c_dumonia_empire_adj
+
+	is_main_tag_only = yes
+	priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy
+			}
+
+		}
+	}
+	dynamic_country_name = { # Dumonia
+		name = dyn_c_dumonia
+		adjective = dyn_c_dumonia
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+		}
+	}
+
+}
+
+OLC = { # Ocelian Locari Company
+	dynamic_country_name = {
+		name = dyn_c_locari_company
+		adjective = dyn_c_locari_company_adj
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+VAE = { 
+	dynamic_country_name = { # Vairian Icebreaker Company
+		name = dyn_c_icebreaker_company
+		adjective = dyn_c_icebreaker_company_adj
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+	dynamic_country_name = { #Icebreaker Republic
+		name = dyn_c_icebreaker_republic
+		adjective = dyn_c_icebreaker_republic_adj
+
+		is_main_tag_only = yes
+		priority = 90
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+}
+
+CER = { # Ceraun
+	dynamic_country_name = {
+		name = dyn_c_ceraun_gladshire
+		adjective = dyn_c_ceraun_gladshire_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { country_has_primary_culture = cu:rivierling }
+			OR = {
+				NOT = { exists = c:CHE }
+				AND = {
+					exists = c:CHE
+					c:CER ?= {
+						has_diplomatic_pact = {
+							who = c:CHE
+							type = real_union
+							is_initiator = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+CSA = { # Consortium States
+	dynamic_country_name = {
+		name = dyn_c_astra
+		adjective = dyn_c_astra_adj
+
+		priority = 100
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				any_scope_state = {
+					count = 1
+				}
+			}
+		}
+	}
+}
+
+PND = { 
+	dynamic_country_name = {
+		name = dyn_c_penurious_band
+		adjective = dyn_c_penurious_band_adj
+
+		priority = 100
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+}
+
+ROM = { # Romantic States
+	dynamic_country_name = {
+		name = dyn_c_romantic
+		adjective = dyn_c_romantic_adj
+
+		priority = 100
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				any_scope_state = {
+					count = 1
+				}
+			}
+		}
+	}
+}
+
+FEY = { 
+	# Feylight Reservation
+	dynamic_country_name = {
+		name = dyn_c_feyres
+		adjective = dyn_c_feyres_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			exists = c:THI
+			scope:actor ?= {
+				is_subject_of = c:THI
+			}
+		}
+	}
+	# Rosewood
+	dynamic_country_name = { 
+		name = dyn_c_feyrose
+		adjective = dyn_c_feyrose_adj
+		
+		is_main_tag_only = yes
+		priority = 1000 #Overrides Resevation
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					country_has_state_religion = rel:rose_court
+				}
+			}
+		}
+	}
+}
+
+YUL = {
+	#Yulug Anarchy Secret Name
+	dynamic_country_name = {
+		name = dyn_c_yulanarch
+		adjective = dyn_c_yulanarch_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+}
+
+OTI = { 
+	dynamic_country_name = {
+		name = dyn_c_otitam_bear
+		adjective = dyn_c_otitam_bear_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					was_formed_from = BUK
+					was_formed_from = GAN
+				}
+			}
+		}
+	}
+}
+
+OEG = { 
+	dynamic_country_name = {
+		name = dyn_c_oeg_human
+		adjective = dyn_c_oeg_human_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					was_formed_from = THA
+					was_formed_from = DNV
+					was_formed_from = OLT
+					was_formed_from = VRC
+					was_formed_from = THY
+				}
+			}
+		}
+	}
+}
+
+LAC = {
+	dynamic_country_name = {
+		name = dyn_c_lac_rose_court
+		adjective = dyn_c_lac_rose_court_adj
+		use_overlord_prefix = no
+
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_theocracy
+				country_has_state_religion = rel:rose_court
+			}
+		}
+	}
+}

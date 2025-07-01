@@ -1,0 +1,25 @@
+﻿state_trait_south_sea_rainforest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"	
+	
+	modifier = {
+		goods_output_hardwood_mult = 0.25
+		building_group_bg_hunting_throughput_add = 0.1
+		state_construction_mult = -0.1
+		state_infrastructure_mult = -0.1
+	}
+}
+
+state_trait_fahavalo_fisheries = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	
+	modifier = {
+		building_group_bg_fishing_throughput_add = 0.20
+	}
+}
+
+state_trait_distant_shores = {
+    icon = "gfx/interface/icons/state_trait_icons/tropical_climate.dds"
+	required_techs_for_colonization = { "drow_tech" }
+	modifier = {
+	}
+}

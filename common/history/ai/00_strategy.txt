@@ -1,0 +1,340 @@
+﻿AI = {
+    every_country = {
+		limit = { is_subject = yes }
+		if = {
+			limit = { liberty_desire >= 60 }
+			set_strategy = ai_strategy_subject_strengthen_self
+		}
+		else_if = {
+			limit = { liberty_desire <= 20 }
+			set_strategy = ai_strategy_subject_overlord_compliance
+		}
+		else = {
+			set_strategy = ai_strategy_subject_maintain_autonomy
+		}
+	}
+
+    every_country = {
+		limit = {
+			country_rank >= rank_value:great_power
+			any_country = {			
+				OR = {
+					country_has_primary_culture = cu:lake_thalorian
+					country_has_primary_culture = cu:littoral_thalorian
+					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:gnome_thalorian
+				}				
+			}
+		}
+			
+		save_scope_as = first_country
+		every_country = {
+			limit = { 
+				NOT = { country_rank >= rank_value:great_power }
+				OR = {
+					country_has_primary_culture = cu:lake_thalorian
+					country_has_primary_culture = cu:littoral_thalorian
+					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:gnome_thalorian
+				}				
+			}
+			effect_set_non_hostile_mutual_secret_goal_power_difference = yes
+		}
+	}
+
+	every_country = {
+		limit = {
+			country_rank >= rank_value:great_power
+			any_country = {			
+				country_has_primary_culture = cu:dorite		
+			}
+		}
+			
+		save_scope_as = first_country
+		every_country = {
+			limit = { 
+				NOT = { country_rank >= rank_value:great_power }
+				OR = {
+					country_has_primary_culture = cu:highland_halfling
+					country_has_primary_culture = cu:clearbough
+					country_has_primary_culture = cu:coast_halfling
+				}				
+			}
+			effect_set_non_hostile_mutual_secret_goal_power_difference = yes
+		}
+	}	
+
+	every_country = {
+		limit = {
+			is_unification_candidate = GAV
+		}
+		set_strategy = ai_strategy_unify_gavkhan
+	}	
+
+	every_country = {
+		limit = {
+			is_unification_candidate = TLA
+		}
+		set_strategy = ai_strategy_unify_thaloria
+	}	
+
+	every_country = {
+		limit = {
+			is_unification_candidate = NBI
+		}
+		set_strategy = ai_strategy_unify_nagabumi
+	}	
+
+	every_country = {
+		limit = {
+			is_unification_candidate = NEK
+		}
+		set_strategy = ai_strategy_unify_khus
+	}	
+
+	every_country = {
+		limit = {
+			is_unification_candidate = GAV
+		}
+		set_strategy = ai_strategy_unify_gavkhan
+	}	
+
+    c:ARR ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_economic_imperialism
+		set_strategy = ai_strategy_progressive_agenda
+	}
+
+    c:DUM ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:EME ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:VAI ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_progressive_agenda
+	}
+
+    c:RAV ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:HAG ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+    c:TLE ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:AHO ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_arcane_agenda
+	}
+
+	c:VHT ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_arcane_agenda
+	}
+
+	c:SNB ?= {
+		set_strategy = ai_strategy_plantation_economy	
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_progressive_agenda
+	}
+
+	c:THI ?= {
+		set_strategy = ai_strategy_agricultural_expansion	
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_reactionary_agenda
+	}	
+
+	c:SSC ?= {
+		set_strategy = ai_strategy_plantation_economy
+		set_strategy = ai_strategy_subject_maintain_autonomy
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:COV ?= {
+		set_strategy = ai_strategy_plantation_economy
+		set_strategy = ai_strategy_subject_maintain_autonomy
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:OLC ?= {
+		set_strategy = ai_strategy_plantation_economy
+		set_strategy = ai_strategy_subject_maintain_autonomy
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:LAC ?= {
+		set_strategy = ai_strategy_plantation_economy
+		set_strategy = ai_strategy_subject_maintain_autonomy
+		set_strategy = ai_strategy_reactionary_agenda
+	}
+
+	c:AZI ?= {
+		set_strategy = ai_strategy_plantation_economy		
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}	
+
+	#c:JUR ?= {
+	#	set_strategy = ai_strategy_resource_expansion	
+	#	set_strategy = ai_strategy_subject_overlord_compliance
+	#	set_strategy = ai_strategy_reactionary_agenda
+	#}	
+
+	c:ABR ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_subject_strengthen_self
+	}	
+
+	c:CER ?= {
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:CLR ?= {
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_armed_isolationism
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:FTH ?= {
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_armed_isolationism
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:GRH ?= {
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_armed_isolationism
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:BRB ?= {
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_armed_isolationism
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:WHI ?= {
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:PUA ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_subject_strengthen_self
+	}
+	
+	c:SAI ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_subject_strengthen_self
+	}
+
+	c:SUN ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_subject_strengthen_self
+	}
+
+	c:TAH ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_subject_strengthen_self
+	}	
+
+	c:KCN ?= {
+		set_strategy = ai_strategy_plantation_economy	
+		set_strategy = ai_strategy_progressive_agenda
+		set_strategy = ai_strategy_subject_strengthen_self
+	}	
+
+	c:RVD ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_progressive_agenda
+		set_strategy = ai_strategy_subject_strengthen_self
+	}	
+
+	c:RVE ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_progressive_agenda
+		set_strategy = ai_strategy_subject_strengthen_self
+	}	
+
+	c:TEM ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_subject_overlord_compliance
+	}	
+	
+	c:FEY ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_subject_strengthen_self
+	}	
+
+	c:RVC ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_vampiric_expansion
+		set_strategy = ai_strategy_reactionary_agenda
+	}
+
+	c:YUL ?= {
+		set_strategy = ai_strategy_placate_population	
+		set_strategy = ai_strategy_armed_isolationism
+		set_strategy = ai_strategy_maintain_mandate_of_heaven
+	}
+
+	c:VOZ ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_economic_imperialism
+		set_strategy = ai_strategy_progressive_agenda
+	}
+
+	c:DRO ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_economic_imperialism
+		set_strategy = ai_strategy_progressive_agenda
+	}
+
+	c:ONG ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}	
+
+	c:DOV ?= {
+		set_strategy = ai_strategy_resource_expansion	
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:ORL ?= {
+		set_strategy = ai_strategy_plantation_economy
+		set_strategy = ai_strategy_embrace_winds_of_change
+	}
+}

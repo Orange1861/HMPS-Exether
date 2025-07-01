@@ -1,0 +1,156 @@
+﻿###cultures with animal portraitswaps get their own file for easier compatibility
+#####################
+
+dumonian={
+	color={ 72 79 127 }
+	religion = church_of_man
+	obsessions = {
+		wine
+	}
+	traits = { central_noric_culture_group imperial_culture_group human_heritage }
+	
+	male_common_first_names = {
+		Ari 
+		Bokk 
+		Breyten 
+		Daen 
+		Dover 
+		Erben 
+		Gavrin 
+		Hagro 
+		Herschem 
+		Huys 
+		Jurian 
+		Killian 
+		Kleris 
+		Reng
+		Retief
+		Riaan 
+		Saal
+		Sarelo 
+		Sithov
+		Tak 
+		Avarin
+		Bronn
+		Caris
+		Daelon
+		Edrik
+		Fendrel
+		Galren
+		Hadran
+		Ilros
+		Jorik
+		Kaelen
+		Lythan
+		Mavrek
+		Norin
+		Orlen
+		Pyrros
+		Quorin
+		Rhaegel
+		Styrm
+		Tavrik
+		Urion
+		Valen
+		Weylin
+		Xarion
+		Zander
+		Draven
+		Edric
+	}
+	female_common_first_names = {
+		Aafki Agate Baltia Batrax Beleth Chantal Fientia Flerentia Gwen Hjeltia
+		Juliona Levini Margana Marloes Sanne Sien Tanneken Vilina 
+		Adalyn
+		Beryth
+		Caelira
+		Delira
+		Elysse
+		Fenria
+		Galatea
+		Hespera
+		Ilyria
+		Jariel
+		Kaela
+		Lysandra
+		Miriel
+		Noritha
+		Olenna
+		Pyrith
+		Quinara
+		Rylin
+		Taryn
+		Ulvaya
+		Velora
+		Wylla
+		Xanthe
+		Zorina
+	}
+	noble_last_names = {
+		Altoran
+		Balderic
+		Barris
+		Breyland
+		Carthin
+		Durand
+		Eldrin
+		Faulkner
+		Fendryk
+		Garvay
+		Penrow
+		Quinald
+		Rendor
+		Selvig
+		Thrain
+		Ulrich
+		Vandar
+		Waverly
+		Weylan
+		Yarwick
+		Zorlan
+		Shreve
+	}
+	common_last_names = {
+		Aarland Acker Adriansen Alyea Arendt Bacher Banekert Bartell Bateu Crudaker Caldamus Corleis Dekker 
+		Ennes Gerlach Haldron Hugrin Jurians Karch Kendig Maartel Mantanye Merchiot Nagel Ostren Petilom
+		Redeker Rhuli 
+		Serontain  Sykes Taumen Thiel Toriun Tullier Valleau Veseur Yanger Zenden Halstein
+	}
+	male_regal_first_names={
+		Alaric
+		Castiel
+		Leander
+		Orion
+		Thalor
+		Valenor
+		Wystan
+		Fluin 
+		Kamiel
+	}
+	female_regal_first_names={
+		Aramelle
+		Caeloria
+		Eirawen
+		Isolde
+		Lirael
+		Seraphina
+		Thalira
+		Valendra
+		Veralyne
+		Zephyra
+	}
+	regal_last_names={
+		Hyland
+		Jarelis
+		Kenlor
+		Lormain
+		Nithor
+		Orlandis
+		Romhaar
+	}	
+	
+	ethnicities = {
+		1 = caucasian
+	}
+	graphics = european
+}

@@ -1,0 +1,284 @@
+﻿#Zhar̈sehich  ## color = hsv360 { 345 72 54 }
+ZIH = {
+	color = rgb{ 54 47 46 } 
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { gobbo_pirate } 
+	capital = STATE_HIRUMENDI
+}
+
+#Lurzoru
+CRG = {
+	color = rgb{ 100 100 100 } 
+	social_hierarchy = west_avian_social_hierarchy
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { cliffpercher sandcircler whitefeather blacktalon } 
+	capital = STATE_ARTEAGA
+}
+
+#Aitzkora
+AIZ = {
+	color = rgb{ 30 20 180 } 
+
+	social_hierarchy = avian_social_hierarchy
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { whitefeather saglithan cliffpercher blacktalon } 
+	capital = STATE_LURRA
+}
+
+#Kolvatch
+KCH = {
+	color = rgb{ 155 155 15 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { sandcircler } 
+	capital = STATE_BATOHAIN
+}
+
+#Sandcircler nationalist formable
+SAN = {
+	color = rgb{ 65 155 30 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { cliffpercher sandcircler } 
+	capital = STATE_BATOHAIN
+}
+
+CRT = {
+	color = rgb{ 65 155 30 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { sandcircler } 
+	capital = STATE_BATOHAIN
+}
+
+#cliffpercher nationalist formable
+CLF = {
+	color = rgb{ 65 155 30 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { whitefeather sandcircler blacktalon cliffpercher } 
+	capital = STATE_BATOHAIN
+}
+
+#Lomara
+LOM = {
+	color = rgb{ 35 115 130 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { lomarash } 
+	capital = STATE_SUTAN
+}
+
+#Pomoria
+POA = {
+	color = rgb{ 200 200 150 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { sandcircler } 
+	capital = STATE_HIRUMENDI
+}
+
+#Kheviwilt
+KHE = {
+	color = rgb{ 154 84 60 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { lomarash } 
+	capital = STATE_LARRIN
+}
+
+#Lazituluk
+LAZ = {
+	color = rgb{ 60 156 40 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { lomarash } 
+	capital = STATE_KOILARRA
+}
+
+#Brynurin
+BRY = {
+	color = rgb{ 150 150 20 } 
+
+	country_type = recognized
+	social_hierarchy = dwarf_social_hierarchy
+	tier = grand_principality
+
+	cultures = { lithorin } 
+	capital = STATE_TXORI
+}
+
+
+#Ulivona
+ULI = {
+	color = rgb{ 250 30 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { saglithan } 
+	capital = STATE_BIZI
+}
+
+#Piumavia
+PIU = {
+	color = rgb{ 150 150 150 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	social_hierarchy = avian_social_hierarchy
+
+	religion = viticist
+	cultures = { saglithan } 
+	capital = STATE_KASKOHARI
+}
+
+#Orakhtia
+OKH = {
+	color = rgb{ 60 156 120 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { tskharvani } 
+	capital = STATE_GIPUZK
+}
+
+
+#Orrazki
+LUR = {
+	color = rgb{ 80 56 120 }
+	social_hierarchy = west_avian_social_hierarchy
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { cliffpercher sandcircler whitefeather } 
+	capital = STATE_ERDIGARA
+}
+
+#Hizkiabar
+HIZ = {
+	color = rgb{ 100 0 20 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { sandcircler } 
+	capital = STATE_UHINAK
+}
+
+#Gailurr
+GAI = {
+	color = rgb{ 200 80 80} 
+	social_hierarchy = west_avian_social_hierarchy
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { sandcircler whitefeather cliffpercher } 
+	capital = STATE_URRAZPI
+}
+
+
+#Ihesara
+IHE = {
+	color = rgb{ 210 250 250 } 
+	social_hierarchy = avian_social_hierarchy
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { whitefeather cliffpercher saglithan blacktalon } 
+	capital = STATE_ARAKALDE
+}
+
+#Borjokob
+BRJ = {
+	color = rgb{ 100 126 80 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { saglithan } 
+	capital = STATE_EGUZKI
+}
+
+#Civettia
+CIV = {
+	color = rgb{ 160 56 140 } 
+
+	country_type = decentralized
+
+	religion = avian_druidism
+
+	tier = principality
+
+	cultures = { blacktalon } 
+	capital = STATE_UHINAK
+}
+
+#Hegazkiak
+HEG = {
+	color = rgb{ 120 30 120 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { cliffpercher } 
+	capital = STATE_ARGI
+}
+
+#Skraggi 
+NIS = {
+	color = rgb{ 120 30 120 } 
+
+	country_type = unrecognized 
+
+	religion = bonepicker
+
+	tier = principality
+
+	cultures = { bird_pirate } 
+	capital = STATE_MUGARA
+}

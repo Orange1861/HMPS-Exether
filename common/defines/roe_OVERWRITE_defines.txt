@@ -1,0 +1,17 @@
+﻿NGame = {
+	START_DATE = "1178.1.1"
+	END_DATE = "1300.1.1"
+}
+NCountry = {
+	COUNTRY_FORMATION_CANDIDATE_MIN_RANK = 5
+}
+NPolitics = {
+	DEFAULT_LAW_ACTIVATION_DATE = "1178.1.1"
+}
+NPops = {
+	LOYALTIES_GAIN_GRACE_PERIOD_SHORT = "1180.1.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Short game rule is applied
+	LOYALTIES_GAIN_GRACE_PERIOD_LONG = "1184.1.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Long game rule is applied
+	LOYALTIES_GAIN_GRACE_PERIOD_EXTRA_LONG = "1188.1.1"	# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Extra Long game rule is applied
+
+	MAX_ACCEPTANCE_VALUE = 140
+}

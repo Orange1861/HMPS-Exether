@@ -1,0 +1,200 @@
+﻿# Confédération générale des vignerons
+company_emerald_vineyard_confederation = {
+	icon = "gfx/interface/icons/company_icons/emerald_icon.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+
+	flavored_company = yes
+	
+	building_types = {  
+		building_vineyard_plantation
+	}
+	
+	extension_building_types = {
+		building_food_industry
+		building_distillery
+	}
+
+	possible_prestige_goods = {
+		prestige_good_champagne
+	}
+
+	potential = {
+			country_has_primary_culture = cu:ocelian
+	}
+	
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_vineyard_plantation
+				level >= 3
+			}
+			count >= 4
+		}
+		has_technology_researched = central_planning
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		building_vineyard_plantation_throughput_add = 0.1
+	}	
+	
+	ai_will_do = {
+		has_technology_researched = central_planning
+		any_scope_state = {
+			is_incorporated = yes
+		}
+	}
+	
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+
+# Manufacture d'armes de Saint-Étienne
+company_arsenal_dephei = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_schneider_et_cie.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_artillery_foundries
+		building_munition_plants
+	}
+
+	extension_building_types = {
+		building_explosives_factory
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_lagoon_coast
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SEUTE_EPHEI
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_SEUTE_EPHEI
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 3
+			}
+		}
+		has_technology_researched = bolt_action_rifles
+	}
+	
+	prosperity_modifier = {
+		unit_offense_mult = 0.05
+		unit_defense_mult = 0.05
+	}	
+	
+	ai_will_do = {
+		has_technology_researched = bolt_action_rifles
+		any_scope_state = {
+			state_region = s:STATE_SEUTE_EPHEI
+			is_incorporated = yes
+		}
+	}
+	
+	ai_construction_targets = {
+		building_arms_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SEUTE_EPHEI
+			}
+		}	
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Forges Lagoon
+company_el_fl = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_forges_et_chantiers_de_la_méditerranée.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_JUERVIER }
+
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+		building_automotive_industry
+	}
+	
+	extension_building_types = {
+		building_steel_mills
+	}
+	potential = {
+		has_interest_marker_in_region = region_lagoon_coast
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_JUERVIER
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_JUERVIER
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = ironclad_tech
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+		unit_combat_unit_type_heavy_tank_offense_mult = 0.1
+	}	
+	
+	ai_will_do = {
+		has_technology_researched = ironclad_tech
+		any_scope_state = {
+			state_region = s:STATE_JUERVIER
+			is_incorporated = yes
+		}
+	}
+	
+	ai_construction_targets = {
+		building_shipyards = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_JUERVIER
+			}
+		}
+		building_military_shipyards = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_JUERVIER
+			}
+		}			
+	}	
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

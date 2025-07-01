@@ -1,0 +1,682 @@
+﻿# Dwarf
+ 
+country_ezd_zol_acceptance_min_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_thoma_acceptance_min_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_udat_acceptance_min_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_nisnar_acceptance_min_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_udat_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_nisnar_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_sassat_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_jaguda_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_udat_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_thoma_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_ezd_zol_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_nisnar_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_sassat_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_jaguda_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_udat_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_nisnar_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_sassat_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_jaguda_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_denoi_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_dalbe_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_cuoflir_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_perfis_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_chesgru_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_guchesgru_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_adrir_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_gumefir_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_denoi_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_dalbe_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_cuoflir_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_perfis_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_chesgru_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_guchesgru_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_adrir_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_gumefir_2_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_udat_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_nisnar_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_sassat_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_jaguda_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_udat_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_nisnar_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_sassat_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_jaguda_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_udat_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_nisnar_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_sassat_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_jaguda_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_udat_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_nisnar_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_sassat_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_jaguda_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_ezd_zol_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_thoma_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_udat_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_nisnar_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_sassat_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_jaguda_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_ezd_zol_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_thoma_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_udat_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_nisnar_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_sassat_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_jaguda_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+
+# Indian
+
+country_brahmins_acceptance_min_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_kshatriyas_acceptance_min_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_vaishyas_acceptance_min_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_kshatriyas_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_vaishyas_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_shudras_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_dalit_acceptance_max_add = {
+	decimals = 0
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+		tags = { cultural_acceptance }
+	}
+}
+
+country_kshatriyas_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_vaishyas_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_shudras_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_dalit_cultural_acceptance_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_kshatriyas_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_vaishyas_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_shudras_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_dalit_cultural_acceptance_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_kshatriyas_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_vaishyas_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_shudras_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_dalit_education_access_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_kshatriyas_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_vaishyas_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_shudras_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_dalit_education_access_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_kshatriyas_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_vaishyas_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_shudras_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_dalit_qualification_growth_add = {
+	decimals = 0
+	color = good
+	percent = no
+}
+
+country_kshatriyas_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_vaishyas_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_shudras_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_dalit_qualification_growth_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_brahmins_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_kshatriyas_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_vaishyas_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_shudras_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_dalit_qualification_growth_same_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_brahmins_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_kshatriyas_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_vaishyas_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_shudras_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}
+
+country_dalit_qualification_growth_other_class_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+}

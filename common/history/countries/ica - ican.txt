@@ -1,0 +1,37 @@
+﻿COUNTRIES = {
+	c:ICA = {
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+		effect_starting_technology_tier_orc_tech = yes
+
+		add_technology_researched = steelworking
+		add_technology_researched = lathe
+		add_technology_researched = intensive_agriculture
+		add_technology_researched = academia
+		add_technology_researched = empiricism
+		add_technology_researched = supernatural_studies
+		add_technology_researched = international_relations
+		add_technology_researched = colonization
+		add_technology_researched = international_trade
+
+		add_taxed_goods = g:liquor
+		
+		effect_starting_politics_traditional = yes
+
+
+		add_journal_entry = {
+			type = je_winds_of_change
+		}
+
+		activate_law = law_type:law_elder_council
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_druidic_circles
+		activate_law = law_type:law_women_own_property
+
+		set_tax_level = medium
+	}
+}

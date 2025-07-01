@@ -1,0 +1,80 @@
+je_mutagenic_trials = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		NOT = { has_variable = mutagenic_trials_public }
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+        ig:ig_mages = {
+			is_marginal = no
+		}
+        has_technology_researched = pumpjacks
+	}
+
+	possible = {
+		market_capital.market = {
+			mg:oil = { 
+				market_goods_pricier < -0.25 
+			}
+		}
+		NOT = {has_law = law_type:law_no_health_system}
+		country_has_building_type_levels = {
+  			target = bt:building_livestock_ranch   value >= 6
+		}
+        OR = {
+            ig:ig_industrialists = {
+                is_powerful = yes
+                is_in_government = yes
+            }
+            ig:ig_mages = {
+                is_powerful = yes
+                is_in_government = yes
+            }
+        }
+        has_technology_researched = mutagens
+	}
+
+	complete = {
+		any_scope_building = {
+			filter = {
+				is_building_type = building_livestock_ranch
+			}
+			percent > 0.75
+			OR = {
+			    has_active_production_method = pm_livestock_godsblood
+			    has_active_production_method = pm_livestock_godsblood_increased
+            }
+			cash_reserves_ratio > 0.25
+			weekly_profit > 0
+			occupancy > 0.75
+		}
+        country_has_building_type_levels = {
+  			target = bt:building_livestock_ranch   value >= 8
+		}
+        market_capital.market = {
+			mg:oil = { 
+				market_goods_pricier < -0.1
+			}
+		}
+	}
+
+	on_complete = {
+		set_variable = mutagenic_trials_public
+		trigger_event = { id = exether_technology_events.2 }
+	}
+
+	#on_monthly_pulse = {
+		#random_events = {
+			#100 = 0
+			#10 = corn_laws.2
+			#10 = corn_laws.3
+			#10 = corn_laws.4
+		#}
+	#}
+
+	weight = 100
+    timeout = 3650
+}

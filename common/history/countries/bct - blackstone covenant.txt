@@ -1,0 +1,41 @@
+﻿COUNTRIES = {
+	c:BCT = {
+		effect_starting_technology_tier_2_tech = yes
+
+		add_taxed_goods = g:trinkets
+		add_taxed_goods = g:services
+
+		effect_starting_politics_conservative = yes
+
+		add_technology_researched = nationalism
+		add_technology_researched = hydraulic_cranes
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = mechanical_tools
+		add_technology_researched = organized_adventuring
+		add_technology_researched = intensive_agriculture
+		add_technology_researched = skyports
+		add_technology_researched = railways
+		add_technology_researched = cloudsilver_refining
+
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_astrological_studies
+		activate_law = law_type:law_dwarf_guild_privileges
+
+		ig:ig_devout = { 
+			remove_ideology = ideology_patriarchal
+			remove_ideology = ideology_moralist
+			add_ideology = ideology_jingoist
+			add_ideology = ideology_theocratic_moralist
+		}
+		
+	}
+}

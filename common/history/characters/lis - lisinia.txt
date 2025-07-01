@@ -1,0 +1,18 @@
+﻿CHARACTERS = {
+	c:LIS = {
+		create_character = {
+			first_name = "Jangir"
+			last_name = "Boryak"
+			historical = yes
+			ruler = yes
+			age = 54
+			ig_leader = yes
+			interest_group = ig_mages
+			ideology = ideology_magocrat
+			traits = {
+				ambitious
+				literary
+			}
+		}
+	}
+}

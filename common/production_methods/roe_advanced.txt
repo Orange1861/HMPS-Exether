@@ -1,0 +1,792 @@
+﻿pm_watering_hole = {
+	texture = "gfx/interface/icons/production_method_icons/watering_hole.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_furniture_add = 3 #30 90 
+			goods_output_services_add = 10          #30 = 300 == 210
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 250
+			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1500
+		}
+	}
+}
+
+pm_glass_taverns = {
+	texture = "gfx/interface/icons/production_method_icons/dive_bar.dds"
+
+	unlocking_technologies = {
+		modern_sewerage
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_furniture_add = 1 #30 60
+			goods_input_luxury_furniture_add = 2 #60 120 == 210
+
+			goods_output_services_add = 15          #30 450 == 270
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 250
+			building_employment_clerks_add = 1000
+			building_employment_laborers_add = 1250
+		}
+	}
+}
+
+pm_steel_bar = {
+	texture = "gfx/interface/icons/production_method_icons/wine_bar.dds"
+
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_luxury_furniture_add = 2 #60 120
+			goods_input_porcelain_add = 2 #70 140
+
+			goods_output_services_add = 20 	     #30  600 == 340
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 250
+			building_employment_clerks_add = 1250
+			building_employment_laborers_add = 1000
+		}
+	}
+
+}
+
+pm_skyscraper_bar = {
+	texture = "gfx/interface/icons/production_method_icons/cocktail_bar.dds"
+
+	unlocking_technologies = {
+		elevator
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_luxury_furniture_add = 2 #60 120
+			goods_input_porcelain_add = 2 #70 140
+			goods_input_electricity_add = 5 #30 150
+
+			goods_output_services_add = 30 #30 900 == 490
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 250
+			building_employment_clerks_add = 1500
+			building_employment_laborers_add = 750
+		}
+	}
+}
+
+pm_no_meals = {
+	texture = "gfx/interface/icons/production_method_icons/dive_bar.dds"
+	building_modifiers = {
+
+		workforce_scaled = { 
+		}
+	}
+}
+
+pm_fish_food = {
+	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+
+	unlocking_production_methods = {
+		pm_glass_taverns
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+	building_modifiers = {
+		workforce_scaled = { 
+			goods_input_fish_add = 3 #20 60
+
+			goods_output_services_add = 10 #30 300 == 240
+		}
+	}
+}
+
+pm_meat_n_mead = {
+	texture = "gfx/interface/icons/production_method_icons/bakeries.dds"
+
+	unlocking_production_methods = {
+		pm_glass_taverns
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+	building_modifiers = {
+		workforce_scaled = { 
+			goods_input_meat_add = 2 #30 60
+
+			goods_output_services_add = 10 #30 300 == 240
+		}
+	}
+}
+
+pm_restaraunts = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	unlocking_production_methods = {
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_groceries_add = 2 #30 60
+
+			goods_output_services_add = 15 #30 450 == 390
+		}
+	}
+}
+
+pm_no_luxury_drink = {
+	texture = "gfx/interface/icons/production_method_icons/watering_hole.dds"
+	building_modifiers = {
+		workforce_scaled = { 
+			goods_input_liquor_add = 2 #30 60
+			goods_output_services_add = 2 #30 60
+		}
+
+	}
+}
+
+pm_tea = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	unlocking_production_methods = {
+		pm_glass_taverns
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_tea_add = 2 #50 110
+			goods_input_liquor_add = 2 #30 60
+
+			goods_output_services_add = 7 #30 210 == 40
+		}
+	}
+}
+
+pm_coffee = {
+	texture = "gfx/interface/icons/production_method_icons/dive_bar.dds"
+	unlocking_production_methods = {
+		pm_glass_taverns
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_coffee_add = 2 #50 100
+			goods_input_liquor_add = 2 #30 60
+
+			goods_output_services_add = 7 #30 150 == 40
+		}
+	}
+}
+
+pm_wine = {
+	texture = "gfx/interface/icons/production_method_icons/wine_bar.dds"
+	unlocking_production_methods = {
+		pm_glass_taverns
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_wine_add = 2 #50 100
+			goods_input_liquor_add = 2 #30 60
+
+			goods_output_services_add = 7 #30 150 == 40
+		}
+	}
+}
+
+pm_luxury_potion = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+	unlocking_production_methods = {
+		pm_glass_taverns
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+	building_modifiers = {
+
+		workforce_scaled = { 
+			goods_input_liquor_add = 2 #30 60
+			goods_input_luxury_potions_add = 1 #80 40
+
+			goods_output_services_add = 7 #30 150 == 50
+		}
+	}
+}
+
+pm_anchorage_airship = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	
+	low_pop_method = yes # AI will activate this method for states with low population
+
+	unlocking_technologies = {
+		skyports
+	}
+	
+	building_modifiers = {
+
+		workforce_scaled = {	
+			goods_input_cloudsilver_add = 5 #40
+			goods_input_fabric_add = 5 #100
+			goods_output_merchant_marine_add = 10 
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 900
+			building_employment_bureaucrats_add = 100
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 20
+			
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 5
+		}
+	}
+}	
+
+pm_carpet_enchanting_posts = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	
+	
+	building_modifiers = {
+
+		workforce_scaled = {	
+			goods_input_wishstone_add = 6 #30 180
+			goods_input_fabric_add = 5 #100
+			goods_output_merchant_marine_add = 10 
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 25
+			
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 5
+		}
+	}
+}
+
+pm_carpet_enchanting_stations = {
+	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
+	
+	unlocking_technologies = {
+		cloudsilver_refining
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = {	
+			goods_input_wishstone_add = 12 #30 360
+			goods_input_fabric_add = 10 #200
+			goods_output_merchant_marine_add = 20
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_machinists_add = 400
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 75
+			
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 7.5
+		}
+	}
+}
+
+pm_carpet_enchanting_emporium = {
+	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
+	
+	unlocking_technologies = {
+		synthetic_cloudsilver
+	}
+
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_wishstone_add = 14 #30 420
+			goods_input_fabric_add = 10 #200
+			goods_input_silk_add = 2 #80 
+			goods_output_merchant_marine_add = 30
+		}
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_machinists_add = 200
+			building_employment_wizards_add = 200
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 180
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 12.5
+		}
+	}
+}
+
+pm_no_tapestries = {
+	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
+}
+
+pm_basic_tapestries = {
+	texture = "gfx/interface/icons/production_method_icons/traditional_art.dds"
+
+	unlocking_technologies = {
+		romanticism
+	}
+	unlocking_production_methods = {
+		pm_carpet_enchanting_stations
+		pm_carpet_enchanting_emporium
+	}
+
+	building_modifiers = {
+		workforce_scaled = { 
+			goods_input_silk_add = 5      #200
+			goods_output_fine_art_add = 2 # 400
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -200
+			building_employment_academics_add = 200
+
+		}
+	}
+		
+}
+
+pm_exotic_tapestries = {
+	texture = "gfx/interface/icons/production_method_icons/realist_art.dds"
+
+	unlocking_technologies = {
+		realism
+	}
+	unlocking_production_methods = {
+		pm_carpet_enchanting_emporium
+	}
+	building_modifiers = {
+
+		workforce_scaled = { #480 profit
+			goods_input_silk_add = 13 # 520
+			goods_output_fine_art_add = 5 # 1000
+		}
+		level_scaled = {
+			building_employment_laborers_add = -400
+			building_employment_academics_add = 400
+
+		}
+	}
+}
+
+pm_basic_port_airship = {
+	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
+	
+	unlocking_technologies = {
+		airship
+	}
+
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_airships_add = 6
+			goods_output_merchant_marine_add = 15
+		}
+		level_scaled = {
+			building_employment_laborers_add = 900
+			building_employment_bureaucrats_add = 100
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 150
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+}		
+
+pm_industrial_port_airship = {
+	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
+
+	unlocking_technologies = {
+		zeppelins
+	}
+
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_airships_add = 8
+			goods_output_merchant_marine_add = 30
+		}
+		level_scaled = {
+			building_employment_laborers_add = 800
+			building_employment_machinists_add = 100
+			building_employment_bureaucrats_add = 100
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 175
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 12
+		}
+	}	
+}
+
+pm_modern_port_airship = {
+	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
+	unlocking_technologies = {
+		sky_cruisers
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_airships_add = 10
+			goods_output_merchant_marine_add = 60
+		}
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_machinists_add = 300
+			building_employment_bureaucrats_add = 100
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 225
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 15
+		}
+	}
+}
+
+pm_magocrats = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+	
+	unlocking_laws = {
+		law_court_mages
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_wizards_add = 250
+			building_employment_bureaucrats_add = 250
+		}
+	}			
+}
+
+pm_before_sunrise = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
+
+	unlocking_technologies = {
+		thaumacore_factories
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_sunstation_progress_add = 30
+			state_pollution_generation_add = 10
+			state_harvest_condition_hailstorm_impact_mult = -0.25
+			state_harvest_condition_frost_impact_mult = -0.25
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 0.1
+		}
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gizmos_add = 5 #30 300
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 250
+			building_employment_machinists_add = 500
+			building_employment_laborers_add = 1750
+		}
+	}
+}
+pm_before_sunset = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
+
+	unlocking_technologies = {
+		ectoplasm_engines
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_sunstation_progress_add = 40
+			state_pollution_generation_add = 20
+			state_harvest_condition_hailstorm_impact_mult = -0.25
+			state_harvest_condition_frost_impact_mult = -0.25
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 0.2
+		}
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gizmos_add = 5 #60 300
+			goods_input_thaumacores_add = 2 #150 300
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 250
+			building_employment_machinists_add = 750
+			building_employment_laborers_add = 1500
+		}
+	}
+}
+pm_before_midnight = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_sunstation_progress_add = 55
+			state_pollution_generation_add = 20
+			state_harvest_condition_hailstorm_impact_mult = -0.25
+			state_harvest_condition_frost_impact_mult = -0.25
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 0.3
+		}
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 15 #30 450
+			goods_input_gizmos_add = 5 #60 300
+			goods_input_thaumacores_add = 2 #150 300
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 250
+			building_employment_machinists_add = 1000
+			building_employment_laborers_add = 1250
+		}
+	}
+
+	required_input_goods = electricity
+}
+
+pm_underway_dummy = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
+
+	state_modifiers = {
+		level_scaled = {
+			state_arable_land_dummy_add = 4
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 0.1
+		}
+	}
+
+}
+
+pm_basic_obelisk = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
+
+	state_modifiers = {
+		level_scaled = {
+			state_harvest_condition_psionic_winds_impact_mult = -0.25
+			state_harvest_condition_psionic_storms_impact_mult = -0.1
+			state_pollution_generation_add_mult = -0.05
+			state_adventurer_coverage_mult = 0.1
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 0.1
+		}
+	}	
+
+}
+
+pm_simple_mutagen_vats = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+		state_modifiers = {
+			workforce_scaled = {
+				state_pollution_generation_add = 5
+				state_birth_rate_mult = 0.1
+				state_mutant_conversion = 0.003
+			}
+		}
+
+		building_modifiers = {
+			workforce_scaled = {
+				# input
+				goods_input_oil_add = 5
+			}
+
+			level_scaled = {
+				# employment
+				building_employment_laborers_add = 3000
+				building_employment_machinists_add = 1000
+				building_employment_wizards_add = 750
+			}
+		}
+
+}
+
+pm_advanced_mutagen_vats = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+		unlocking_technologies = {
+			alchemical_transmutation
+		}
+
+		state_modifiers = {
+			workforce_scaled = {
+				state_pollution_generation_add = 10
+				state_birth_rate_mult = 0.15
+				state_mutant_conversion = 0.0045
+			}
+		}
+
+		building_modifiers = {
+			workforce_scaled = {
+				# input
+				goods_input_oil_add = 10
+			}
+
+			level_scaled = {
+				# employment
+				building_employment_laborers_add = 2000
+				building_employment_machinists_add = 1500
+				building_employment_wizards_add = 1125
+			}
+		}
+
+}
+
+pm_griffonblood_mutagen_vats = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	unlocking_technologies = {
+		aniline
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_oil_add = 15
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2000
+			building_employment_wizards_add = 1500
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+			state_birth_rate_mult = 0.25
+			state_mutant_conversion = 0.006
+		}
+	}
+}
+
+pm_no_potions_mutagen = {
+	texture = "gfx/interface/icons/production_method_icons/NO_potion_sap.dds"
+}
+
+pm_potions_mutagen = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {
+		mutagens
+	}
+
+	unlocking_production_methods = {
+		pm_advanced_mutagen_vats
+		pm_griffonblood_mutagen_vats
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_luxury_potions_add = 5
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_standard_of_living_add = 0.5
+		}
+	}
+}
+
+pm_griffonblood_potions_mutagen = {
+	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
+	unlocking_technologies = {
+		aniline
+	}
+
+	unlocking_production_methods = {
+		pm_griffonblood_mutagen_vats
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_luxury_potions_add = 10
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_standard_of_living_add = 1
+		}
+	}
+}

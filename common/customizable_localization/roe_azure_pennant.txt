@@ -1,0 +1,10 @@
+﻿azure_pennant_ship_name = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+		}
+		localization_key = azure_pennant_default_ship
+	}
+}

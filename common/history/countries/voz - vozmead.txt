@@ -1,0 +1,57 @@
+﻿COUNTRIES = {
+	c:VOZ = {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_conservative = yes
+
+		activate_law = law_type:law_dwarf_guild_privileges
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_laissez_faire
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_mage_hunters
+
+		add_technology_researched = hydraulic_cranes
+		add_technology_researched = airship
+		add_technology_researched = skyports
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = stock_exchange
+		add_technology_researched = organized_adventuring
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = mechanical_tools
+		add_technology_researched = railways
+		add_technology_researched = canneries
+		add_technology_researched = corporate_charters
+
+		add_taxed_goods = g:tea
+		add_taxed_goods = g:services
+		add_taxed_goods = g:opium
+
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+
+		
+		add_company = company_type:company_murads_sweepers
+        company:company_murads_sweepers = {
+      set_company_establishment_date = 1165.1.1
+      set_company_state_region = s:STATE_DWARVENHAMMER
+		} 
+
+
+
+		
+		
+		
+		
+
+		add_journal_entry = {
+			type = je_purpur_wedding
+		}
+		effect_has_custom_journals = yes
+	}
+}

@@ -1,0 +1,188 @@
+﻿namespace = mutant_mayhem
+
+mutant_mayhem.1 = { #mutant homeland event
+	type = state_event
+	dlc = dlc_roe
+	placement = ROOT
+	title = mutant_mayhem.1.t
+	desc = mutant_mayhem.1.d
+	flavor = mutant_mayhem.1.f
+
+	duration = 3
+
+
+	event_image = {
+		video = "ogre_vats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {
+		OR = {
+			AND = {
+				any_scope_building = {
+					is_building_type = building_mutagen_vats
+				}
+				culture_percent_state = {     
+					target = cu:mutant     
+					value >= 0.2   
+				}
+			}
+			culture_percent_state = {     
+				target = cu:mutant     
+				value >= 0.3   
+			}
+		}
+
+		NOT = {
+			owner = {
+				has_modifier = rejecting_mutant_homelands
+			}
+		}
+		state_region = {
+			NOT = { is_homeland = mutant }
+		}
+	}
+
+	immediate = {
+		state_region = {
+			add_homeland = cu:mutant
+		}
+	}
+
+	option = {
+		name = mutant_mayhem.1.a #that's cool
+		default_option = yes
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_modifier = accepting_mutant_homelands
+					}
+				}
+			}
+			owner = {
+				add_modifier = {
+					name = accepting_mutant_homelands
+					days = normal_modifier_time
+				}
+			}
+		}
+		add_modifier = {
+			name = mutagen_hotspot
+			days = normal_modifier_time
+		}
+		add_acceptance = { target = cu:mutant value = 10 }
+		show_as_tooltip = {
+			state_region = {
+				add_homeland = cu:mutant
+			}
+		}
+	}
+
+	option = {
+		name = mutant_mayhem.1.b #gross bro
+
+		show_as_tooltip = {
+			state_region = {
+				add_homeland = cu:mutant
+			}
+		}
+		owner = {
+			add_modifier = {
+				name = rejecting_mutant_homelands
+				days = normal_modifier_time
+			}
+		}
+		custom_tooltip = no_mutant_homeland_tt
+	}
+	
+	
+
+}
+
+mutant_mayhem.2 = { #mutant homeland event
+	type = state_event
+	dlc = dlc_roe
+	placement = ROOT
+	title = mutant_mayhem.2.t
+	desc = mutant_mayhem.2.d
+	flavor = mutant_mayhem.2.f
+
+	duration = 3
+
+
+	event_image = {
+		video = "ogre_vats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {
+		AND = {
+			any_scope_building = {
+				is_building_type = building_mutagen_vats
+			}
+			culture_percent_state = {     
+				target = cu:mutant     
+				value >= 0.1   
+			}
+			owner = {
+				has_law = law_type:law_genetic_testing
+			}
+		}
+		
+
+		NOT = {
+			owner = {
+				has_variable = mutant_homeland_var
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = mutant_state
+		owner = {
+			set_variable = mutant_homeland_var	
+		}
+		
+	}
+
+	option = {
+		name = mutant_mayhem.2.a #yeah sure bro, +acceptance option
+		owner = {
+			add_modifier = {
+				name = centralized_mutagenetic_testing
+			}
+		}
+		add_modifier = {
+			name = mutant_communities
+		}
+		add_acceptance = { target = cu:mutant value = 10 }
+	}
+
+	option = {
+		name = mutant_mayhem.2.b #yeah sure bro, -state_mutant_conversion option
+		default_option = yes
+		owner = {
+			add_modifier = {
+				name = heavily_centralized_mutagenetic_testing
+			}
+		}
+		
+		add_modifier = {
+			name = mutagen_central
+		}
+	}
+
+	option = {
+		name = mutant_mayhem.2.c #naw bro
+	}
+	
+	
+
+}

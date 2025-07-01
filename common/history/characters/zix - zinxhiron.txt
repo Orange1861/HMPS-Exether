@@ -1,0 +1,19 @@
+﻿CHARACTERS = {
+	c:ZIX = {
+		create_character = {
+			first_name = "Gargant"
+			last_name = "Kurrul"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 27
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
+			traits = {
+				ambitious
+				imperious
+				persistent
+			}
+		}
+	}
+}

@@ -1,0 +1,206 @@
+namespace = pope_succession
+
+
+pope_succession.1 = { 
+	dlc = dlc_roe
+	type = country_event
+	placement = root
+	
+	title = pope_succession.1.a
+	desc = pope_succession.1.b
+	flavor = pope_succession.1.c
+	
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+	
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	duration = 1
+	
+	trigger = {
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = pope_event.1.a
+			if = {
+				limit = {
+				NOT = { has_variable = traditional_pope_1_var }
+				}  
+				set_variable = traditional_pope_1_var
+				create_character = {
+				template = AUM_arelon_successor_traditional_1_template 
+					on_created = {
+						set_character_as_ruler = yes
+					}				
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = traditional_pope_2_var }
+				}  
+				set_variable = traditional_pope_2_var
+				create_character = {
+				template = AUM_arelon_successor_traditional_2_template 
+					on_created = {
+						set_character_as_ruler = yes
+					}				
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = traditional_pope_3_var }
+				}  
+				set_variable = traditional_pope_3_var
+				create_character = {
+				template = AUM_arelon_successor_traditional_3_template
+					on_created = {
+						set_character_as_ruler = yes
+					}					
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = traditional_pope_4_var }
+				}  
+				set_variable = traditional_pope_4_var
+				create_character = {
+				template = AUM_arelon_successor_traditional_4_template
+					on_created = {
+						set_character_as_ruler = yes
+					}					
+				}  
+			}		
+			else_if = {
+				limit = {
+				NOT = { has_variable = traditional_pope_5_var }
+				}  
+				set_variable = traditional_pope_5_var
+				create_character = {
+				template = AUM_arelon_successor_traditional_5_template
+					on_created = {
+						set_character_as_ruler = yes
+					}					
+				}  
+			}
+			else_if = {
+				create_character = {
+				template = AUM_arelon_successor_traditional_random_template      
+				}  
+			}			
+		}
+
+	option = {
+		name = pope_event.1.b
+		default_option = yes	
+			if = {
+				limit = {
+				NOT = { has_variable = reformer_pope_1_var }
+				}  
+				set_variable = reformer_pope_1_var
+				create_character = {
+				template = AUM_arelon_successor_reformer_1_template      
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = reformer_pope_2_var }
+				}  
+				set_variable = reformer_pope_2_var
+				create_character = {
+				template = AUM_arelon_successor_reformer_2_template       
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = reformer_pope_3_var }
+				}  
+				set_variable = reformer_pope_3_var
+				create_character = {
+				template = AUM_arelon_successor_reformer_3_template       
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = reformer_pope_4_var }
+				}  
+				set_variable = reformer_pope_4_var
+				create_character = {
+				template = AUM_arelon_successor_reformer_4_template       
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = reformer_pope_5_var }
+				}  
+				set_variable = reformer_pope_5_var
+				create_character = {
+				template = AUM_arelon_successor_reformer_5_template      
+				}  
+			}
+			else_if = {
+				create_character = {
+				template = AUM_arelon_successor_reformer_random_template      
+				}  
+			}			
+		}
+
+	option = {
+		name = pope_event.1.c		
+			if = {
+				limit = {
+				NOT = { has_variable = militant_pope_1_var }
+				}  
+				set_variable = militant_pope_1_var
+				create_character = {
+				template = AUM_arelon_successor_militant_1_template        
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = militant_pope_2_var }
+				}  
+				set_variable = militant_pope_2_var
+				create_character = {
+				template = AUM_arelon_successor_militant_2_template      
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = militant_pope_3_var }
+				}  
+				set_variable = militant_pope_3_var
+				create_character = {
+				template = AUM_arelon_successor_militant_3_template      
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = militant_pope_4_var }
+				}  
+				set_variable = militant_pope_4_var
+				create_character = {
+				template = AUM_arelon_successor_militant_4_template      
+				}  
+			}
+			else_if = {
+				limit = {
+				NOT = { has_variable = militant_pope_5_var }
+				}  
+				set_variable = militant_pope_5_var
+				create_character = {
+				template = AUM_arelon_successor_militant_5_template      
+				}  
+			}
+			else_if = {
+				create_character = {
+				template = AUM_arelon_successor_militant_random_template      
+				}  
+			}			
+		}
+	}

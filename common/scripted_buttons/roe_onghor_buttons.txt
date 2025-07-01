@@ -1,0 +1,249 @@
+﻿arrola_skeleton_harvest_button = {
+	name = "arrola_skeleton_harvest_button"
+	desc = "arrola_skeleton_harvest_button_desc"
+
+	selected = {
+		has_variable = harvested_arrola_skeleton
+	}
+
+	possible = {
+		OR = {
+   			any_scope_state = {
+      			state_region = s:STATE_ARROLA
+ 			}
+  		custom_tooltip = {
+    	text = can_build_in_arrola_tt
+    		OR = {
+				any_scope_treaty = {
+					binds = scope:arrola_owner_scope
+					any_scope_article = {
+						has_type = foreign_investment_rights
+					}
+				}
+			}
+
+        		any_country = {
+            		
+               		is_direct_subject_of = root
+            		
+            		any_scope_state = {
+            			state_region = s:STATE_ARROLA
+            		}
+        		}
+    		}
+  		}
+		OR = {
+            has_free_retainer = yes
+           		AND = {
+                	any_scope_state = {
+                    	state_region = s:STATE_ARROLA
+                    	has_modifier = state_retainer_assigned
+                	}
+            	}
+        	}
+	}
+
+	selected = {
+		has_variable = harvested_arrola_skeleton
+	}
+	effect = {
+		custom_tooltip = {
+			text = arrola_skeleton_tt
+			set_variable = { 
+			name = harvested_arrola_skeleton
+		}
+		}
+		
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+khiarhi_squid_fight_button = {
+	name = "khiarhi_squid_fight_button"
+	desc = "khiarhi_squid_fight_button_desc"
+
+	selected = {
+		has_variable = fought_the_squid
+	}
+
+	possible = {
+		OR = {
+   			any_scope_state = {
+      			state_region = s:STATE_KHIARHI
+ 			}
+  			custom_tooltip = {
+    		text = can_build_in_khiarhi_tt
+    			OR = {
+						any_scope_treaty = {
+							binds = scope:khiarhi_owner_scope
+							any_scope_article = {
+								has_type = foreign_investment_rights
+							}
+						}
+       	 			any_country = {
+        	       		is_direct_subject_of = root
+
+        	    		any_scope_state = {
+        	    			state_region = s:STATE_KHIARHI
+        	    		}
+       	 			}
+    			}
+  			}
+		}
+		OR = {
+            has_free_retainer = yes
+           	AND = {
+                any_scope_state = {
+                	state_region = s:STATE_KHIARHI
+                	has_modifier = state_retainer_assigned
+            	}
+			}
+		}
+	}
+
+	# visible = {
+	# 	NOT = {
+	# 			OR = {
+	# 				has_variable = fought_the_squid
+	# 			}
+			
+	# 	}
+	# }
+	effect = {
+		custom_tooltip = {
+			text = squid_fighter_tt
+			set_variable = { 
+			name = fought_the_squid
+		}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+olabegi_tba_monsterfight = {
+	name = "olabegi_tba_monsterfight"
+	desc = "olabegi_tba_monsterfight_desc"
+
+	selected = {
+		has_variable = olabegi_tba_monsterfight
+	}
+
+	possible = {
+		AND = {
+			OR = {
+   				any_scope_state = {
+      				state_region = s:STATE_OLABEGI
+ 				}
+  				custom_tooltip = {
+    			text = can_build_in_olabegi_tt
+    				OR = {
+						any_scope_treaty = {
+							binds = scope:olabegi_owner_scope
+							any_scope_article = {
+								has_type = foreign_investment_rights
+							}
+						}
+    		    		any_country = {
+    		           		is_direct_subject_of = root
+    		        		any_scope_state = {
+    		        			state_region = s:STATE_OLABEGI
+    		        		}
+    		    		}
+    				}
+  				}
+			}
+			OR = {
+            	has_free_retainer = yes
+           		AND = {
+                	any_scope_state = {
+                    	state_region = s:STATE_OLABEGI
+                    	has_modifier = state_retainer_assigned
+                	}
+            	}
+        	}
+		}
+
+	}
+
+	selected = {
+		has_variable = olabegi_tba_monsterfight
+	}
+	effect = {
+		custom_tooltip = {
+			text = olabegi_well_tt
+			set_variable = { 
+			name = olabegi_tba_monsterfight
+		}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}
+
+khanba_centipede_button = {
+	name = "khanba_centipede_button"
+	desc = "khanba_centipede_button_desc"
+
+	possible = {
+		OR = {
+   			any_scope_state = {
+      			state_region = s:STATE_KHANBA
+ 			}
+  		custom_tooltip = {
+    	text = can_build_in_khanba_tt
+    		OR = {
+						any_scope_treaty = {
+							binds = scope:khanba_owner_scope
+							any_scope_article = {
+								has_type = foreign_investment_rights
+							}
+						}
+        		any_country = {
+            		OR = {
+               		is_direct_subject_of = root
+            		}
+            		any_scope_state = {
+            			state_region = s:STATE_KHANBA
+            		}
+        		}
+    		}
+  		}
+		}
+		OR = {
+            has_free_retainer = yes
+           		AND = {
+                	any_scope_state = {
+                    	state_region = s:STATE_KHANBA
+                    	has_modifier = state_retainer_assigned
+                	}
+            	}
+        	}
+	}
+	selected = {
+		has_variable = fought_khanba_centipede
+	}
+	effect = {
+		custom_tooltip = {
+			text = centipede_fight_tt
+			set_variable = { 
+			name = fought_khanba_centipede
+		}
+		
+		}
+
+		
+		
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}

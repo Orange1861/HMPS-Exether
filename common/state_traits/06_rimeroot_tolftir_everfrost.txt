@@ -1,0 +1,89 @@
+﻿state_trait_rimeroot_jungle = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	
+	modifier = {
+		goods_output_hardwood_mult = 0.20
+		goods_output_wood_mult = 0.25
+		goods_output_coal_mult = 0.15
+	}
+}
+
+state_trait_leviathan_killers = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_whales.dds"
+	
+	modifier = {
+		building_leviathan_outpost_throughput_add = 0.15
+
+	}
+}
+
+state_trait_eldberg_sulfur_deposits = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+	
+	modifier = { 
+        building_sulfur_mine_throughput_add = 0.20
+    }
+}
+
+state_trait_squid_breeding_grounds = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	
+	modifier = {
+		building_group_bg_fishing_throughput_add = 0.20
+	}
+}
+
+state_trait_firbolg_forest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.10
+		building_group_bg_trapping_throughput_add = 0.10
+	}
+}
+
+state_trait_pyreshale_deposits = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+	# Rimeroot but only for coal
+	modifier = { 
+		goods_output_coal_mult = 0.15
+	}
+}
+
+state_trait_thousandford = {
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	#Halfway between a river and a natural harbour
+	modifier = { 
+		building_shipyards_throughput_add = 0.05
+		building_military_shipyards_throughput_add = 0.05
+		state_building_naval_base_max_level_add = 10
+		state_infrastructure_add = 5
+	}
+}
+
+state_trait_iceghosts = {
+	icon = "gfx/interface/icons/state_trait_icons/rungloam.dds"
+	# Ecto and Anima for the late game
+	modifier = {
+		building_haunted_grounds_throughput_add = 0.05
+		goods_output_electricity_mult = 0.20
+	}
+}
+
+state_trait_dragonbane_glacier = {
+	icon = "gfx/interface/icons/state_trait_icons/voiceless_caves.dds"
+	#you know that sequence from the first ice age movie with the frozen cave?
+	modifier = {
+		goods_output_ice_mult = 0.10
+		goods_output_wishstone_mult = 0.10
+	}
+}
+
+state_trait_azurethorn = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	#A smaller combined whale/fish bonus
+	modifier = {
+		building_group_bg_fishing_throughput_add = 0.20
+		building_leviathan_outpost_throughput_add = 0.05
+	}
+}

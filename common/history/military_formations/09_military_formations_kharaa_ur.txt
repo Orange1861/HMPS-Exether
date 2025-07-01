@@ -1,0 +1,760 @@
+﻿MILITARY_FORMATIONS = {
+
+	c:HIR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ORONAKA
+				count = 40
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_VAHGRAK
+				count = 25
+			}
+
+			save_scope_as = hir_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_khantar
+			save_scope_as = hir_general
+		}
+		scope:hir_general = {
+			transfer_to_formation = scope:hir_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_khantar
+			save_scope_as = hir_general2
+		}
+		scope:hir_general2 = {
+			transfer_to_formation = scope:hir_army
+		}
+	}
+
+	c:PUA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_muru
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GURVA
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_OROGOO
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_OROGOO
+				count = 5
+			}
+
+			save_scope_as = pua_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_muru
+			save_scope_as = pua_general
+		}
+		scope:pua_general = {
+			transfer_to_formation = scope:pua_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_muru
+			save_scope_as = pua_general2
+		}
+		scope:pua_general2 = {
+			transfer_to_formation = scope:pua_army
+		}
+
+	}
+
+	c:TAH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_bataar_kharaal
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JARGALTSAI
+				count = 30
+			}
+
+			save_scope_as = tah_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_bataar_kharaal
+			save_scope_as = tah_general
+		}
+		scope:tah_general = {
+			transfer_to_formation = scope:tah_army
+		}
+
+	}
+
+	c:SAI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_bataar_kharaal
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SAINO
+				count = 20
+			}
+
+			save_scope_as = sai_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_bataar_kharaal
+			save_scope_as = sai_general
+		}
+		scope:sai_general = {
+			transfer_to_formation = scope:sai_army
+		}
+	}
+
+	c:KCN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_muru
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BATSI
+				count = 20
+			}
+			save_scope_as = kcn_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_muru
+			save_scope_as = kcn_general
+		}
+		scope:kcn_general = {
+			transfer_to_formation = scope:kcn_army
+		}
+	}
+
+	c:SUN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHANGAWA
+				count = 10
+			}
+			save_scope_as = sun_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_khantar
+			save_scope_as = sun_general
+		}
+		scope:sun_general = {
+			transfer_to_formation = scope:sun_army
+		}
+	}
+
+	c:ZHU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_URTHOR
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				service_type = conscript
+				state_region = s:STATE_URTHOR
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KYRGRIM
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				service_type = conscript
+				state_region = s:STATE_KYRGRIM
+				count = 20
+			}
+
+			save_scope_as = zhu_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_khantar
+			save_scope_as = zhu_general
+		}
+		scope:zhu_general = {
+			transfer_to_formation = scope:zhu_army
+		}
+	}
+
+	c:YUL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_valley_of_golden_fields
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KHORTA
+				count = 35
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GAVQLOMR
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_GAVQLOMR
+				count = 25
+			}
+
+			save_scope_as = yul_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = yul_general
+		}
+
+		scope:yul_general = {
+			transfer_to_formation = scope:yul_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_valley_of_golden_fields
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GARBOL
+				count = 15
+			}
+			save_scope_as = yul_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			save_scope_as = yul_admiral
+		}
+		scope:yul_admiral = {
+			transfer_to_formation = scope:yul_fleet
+		}
+	}
+
+	c:TEM ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NISHIGUCHI
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NISHIGUCHI
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_NISHIGUCHI
+				count = 10
+			}
+
+			save_scope_as = tem_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = tem_general
+		}
+
+		scope:tem_general = {
+			transfer_to_formation = scope:tem_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_NISHIGUCHI
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_NISHIGUCHI
+				count = 4
+			}
+			save_scope_as = tem_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			save_scope_as = tem_admiral
+		}
+		scope:yul_admiral = {
+			transfer_to_formation = scope:tem_fleet
+		}
+	}
+
+	c:MOK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HAHKDRAD
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GROMMOK
+				count = 30
+			}
+
+			save_scope_as = mok_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = mok_general
+		}
+
+		scope:mok_general = {
+			transfer_to_formation = scope:mok_army
+		}
+	}
+
+	c:ZHU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KYRGRIM
+				count = 50
+			}
+			
+
+			save_scope_as = zhu_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = zhu_general
+		}
+
+		scope:zhu_general = {
+			transfer_to_formation = scope:zhu_army
+		}
+	}
+
+	c:RUG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HARUGAWASAI
+				count = 30
+			}
+
+			save_scope_as = rug_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = rug_general
+		}
+
+		scope:rug_general = {
+			transfer_to_formation = scope:rug_army
+		}
+	}
+
+	c:KOJ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSUKHANJUKU
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSUKHANJUKU
+				service_type = conscript
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSUKHANJUKU
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSUKHANJUKU
+				service_type = conscript
+				count = 25
+			}
+
+			save_scope_as = koj_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = koj_general
+		}
+
+		scope:koj_general = {
+			transfer_to_formation = scope:koj_army
+		}
+	}
+
+	c:GOL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yamkhanato
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHULEKKA
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KIYOMORIN
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BATOKYOAN
+				count = 10
+			}
+
+			save_scope_as = gol_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = gol_general
+		}
+
+		scope:gol_general = {
+			transfer_to_formation = scope:gol_army
+		}
+	}
+
+	c:SHJ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BAZKYL
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BALDBAN
+				count = 30
+			}
+
+			save_scope_as = shj_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_shkumbdash
+			save_scope_as = shj_general
+		}
+		scope:shj_general = {
+			transfer_to_formation = scope:shj_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_DALSHTOK
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_DALSHTOK
+				count = 10
+			}
+			save_scope_as = shj_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_shkumbdash
+			save_scope_as = shj_admiral
+		}
+		scope:shj_admiral = {
+			transfer_to_formation = scope:shj_fleet
+		}
+	}
+
+	c:OGR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KAZTHOK
+				count = 45
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_GROMKYL
+				count = 25
+			}
+
+			save_scope_as = ogr_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_shkumbdash
+			save_scope_as = ogr_general
+		}
+		scope:ogr_general = {
+			transfer_to_formation = scope:ogr_army
+		}
+	}
+
+	c:YOK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yamkhanato
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KHULEKI
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HAYAKHAMURA
+				count = 30
+			}
+
+			save_scope_as = yok_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_yamkhanato
+			save_scope_as = yok_general
+		}
+		scope:yok_general = {
+			transfer_to_formation = scope:yok_army
+		}
+	}
+
+	c:QON ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_tundgara
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KRAGKYL
+				count = 40
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KYRTHOR
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ERKBALB
+				count = 25
+			}
+
+			save_scope_as = qon_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_tundgara
+			save_scope_as = qon_general
+		}
+		scope:qon_general = {
+			transfer_to_formation = scope:qon_army
+		}
+	}
+
+	c:ONG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vulture_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ONGHOR
+				count = 32
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mages_one
+				state_region = s:STATE_ONGHOR
+				count = 3
+			}
+			save_scope_as = ong_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_vulture_coast
+			save_scope_as = ong_general
+		}
+		scope:ong_general = {
+			transfer_to_formation = scope:ong_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_vulture_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ONGHOR
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_ONGHOR
+				count = 5
+			}
+
+			save_scope_as = ong_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_vulture_coast
+			save_scope_as = ong_admiral
+		}
+		scope:ong_admiral = {
+			transfer_to_formation = scope:ong_fleet
+		}
+
+	}
+
+	c:HEG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vulture_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ARGI
+				count = 16
+			}
+
+			save_scope_as = heg_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_vulture_coast
+			save_scope_as = heg_general
+		}
+		scope:heg_general = {
+			transfer_to_formation = scope:heg_army
+		}
+
+	}
+
+}

@@ -1,0 +1,162 @@
+je_blue_riband = {
+	icon = "gfx/interface/icons/event_icons/event_naval.dds"
+
+	group = je_group_technology
+
+	is_shown_when_inactive = {
+		has_variable = completed_oceanliner_je
+
+		#OR = {
+		#	NOT = {exists = global_var:blue_riband_top_1}
+		#	OR = {
+		#		global_var:blue_riband_top_1 ?= this
+		#		global_var:blue_riband_top_2 ?= this
+		#		global_var:blue_riband_top_3 ?= this
+		#	}
+		#}
+	}
+
+	modifiers_while_active = {
+	    blue_riband_leader
+	}
+
+	possible = {
+
+    OR = {
+        custom_tooltip = {
+            text = blue_riband_je_lead_tt
+			global_var:blue_riband_top_1 ?= this
+        }
+        
+        custom_tooltip = {
+            text = blue_riband_je_no_riband_tt
+            NOT = {exists = global_var:blue_riband_top_1}
+        }
+    }
+
+    }
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = held_riband
+				}
+			}
+			set_variable = held_riband
+			trigger_event = { id = blue_riband.2 days = 0 popup = yes}
+		}
+	}
+
+	
+	status_desc = {
+		first_valid = {
+            triggered_desc = {
+				desc = je_blueriband_deactivate
+                trigger = {
+                    NOT = {exists = global_var:blue_riband_top_1}
+                }
+			}
+			triggered_desc = {
+				desc = je_blueriband_scoreonly
+			}
+		}
+	}
+	
+	on_monthly_pulse = {
+		random_events = {
+			95 = 0
+            5 = blue_riband.3
+		}
+	}
+
+
+    can_deactivate = yes
+}
+
+je_oceanliner = {
+
+	icon = "gfx/interface/icons/event_icons/event_naval.dds"
+
+	group = je_group_technology
+
+	is_shown_when_inactive = {
+		NOT = { has_variable = completed_oceanliner_je }
+		has_technology_researched = screw_frigate
+		any_scope_building = {
+            is_building_type = building_shipyards
+        }
+
+		#OR = {
+		#	NOT = {exists = global_var:blue_riband_top_1}
+		#	OR = {
+		#		global_var:blue_riband_top_1 ?= this
+		#		global_var:blue_riband_top_2 ?= this
+		#		global_var:blue_riband_top_3 ?= this
+		#	}
+		#}
+	}
+
+	possible = {
+		has_technology_researched = gantry_cranes
+       	any_scope_building = {
+			is_building_type = building_shipyards
+			#level >= 3
+		}
+        #custom_tooltip = {
+            #text = blue_riband_je_tt
+		    #has_global_variable = blue_riband
+        #}
+
+		#OR = {
+		#   custom_tooltip = {
+		#       text = blue_riband_je_lead_tt
+		#        global_var:blue_riband_top_1 ?= this
+		#    }
+		#    
+		#    custom_tooltip = {
+		#        text = blue_riband_je_no_riband_tt
+		#        NOT = {exists = global_var:blue_riband_top_1}
+		#    }
+		#}
+
+    }
+
+	immediate = {
+		set_variable = {
+			name = blue_riband_score
+			value = 300
+		}
+	}
+
+	complete = {
+            OR = {
+                leading_producer_of = g:steamers
+                has_shipyard_company = yes
+            }
+		any_scope_building = {
+			is_building_type = building_shipyards
+			has_active_production_method = pm_metal_shipbuilding
+			 level >= 3
+		}
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			95 = 0
+            5 = blue_riband.42 #paid shipyard event 1
+		}
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = oceanliners_complete_modifier
+			months = 60
+			is_decaying = yes
+		}
+		set_variable = {
+			name = completed_oceanliner_je
+		}
+	}
+
+}

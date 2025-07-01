@@ -1,0 +1,70 @@
+﻿ezd_zol = {
+	social_hierarchy = dwarf_social_hierarchy
+	strata = upper
+
+	allowed_professions = {
+		aristocrats
+		tribesmen
+	}
+}
+
+thoma = {
+	social_hierarchy = dwarf_social_hierarchy
+	strata = upper
+
+	allowed_professions = {
+		clergymen
+		archmages
+	}
+}
+
+nisnar = {
+	social_hierarchy = dwarf_social_hierarchy
+	strata = middle
+
+	allowed_professions = {
+		academics
+		bureaucrats
+		capitalists
+		officers
+	}
+}
+
+udat = {
+	social_hierarchy = dwarf_social_hierarchy
+	strata = middle
+
+	allowed_professions = {
+		engineers
+		machinists
+		adventurers
+		wizards
+	}
+}
+
+sassat = {
+	social_hierarchy = dwarf_social_hierarchy
+	strata = lower
+
+	allowed_professions = {
+		clerks
+		soldiers
+		shopkeepers
+	}
+}
+
+
+jaguda = {
+	social_hierarchy = dwarf_social_hierarchy
+	strata = lower
+
+	allowed_professions = {
+		farmers
+		laborers
+		peasants
+		slaves
+		war_slaves
+	}
+}
+
+

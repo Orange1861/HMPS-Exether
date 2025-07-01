@@ -1,0 +1,573 @@
+﻿MILITARY_FORMATIONS = {
+	c:PRO ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			name = "Prowlhold Militia"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CHITTERKIQ
+				count = 35
+			}
+
+			save_scope_as = pro_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 35
+			traits = {
+				mountain_commander
+				expert_defensive_strategist
+			}
+			save_scope_as = pro_general
+		}
+		scope:pro_general = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:pro_army
+		}
+	}
+
+	c:SKR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			name = "Reformed Army of Skravend"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UTSOCUKU
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_UTSOCUKU
+				count = 12
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UTSOCUKU
+				service_type = conscript
+				count = 10
+			}
+
+			save_scope_as = skr_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 32
+			traits = {
+				plains_commander
+				surveyor
+			}
+			save_scope_as = skr_general
+		}
+		scope:skr_general = {
+			transfer_to_formation = scope:skr_army
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			name = "Gnoll Hunting Packs"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_DENYICUNU
+				count = 20
+			}
+
+				save_scope_as = kvgarmy2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 30
+			traits = {
+				plains_commander
+				surveyor
+			}
+			save_scope_as = kvggen2
+		}
+		
+		scope:kvggen2 = {
+			transfer_to_formation = scope:kvgarmy2
+		}
+	}
+	c:GPK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_chin_desert
+
+			name = "Navakai Pass Guards"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_MRAENTWAARSH
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MRAENTWAARSH
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_NAVAKAI
+				count = 20
+			}
+
+			save_scope_as = gpk_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_south_chin_desert
+			interest_group = ig_devout
+			age = 30
+			traits = {
+				mountain_commander
+				stalwart_defender
+				surveyor
+			}
+			save_scope_as = gpk_general
+		}
+		scope:gpk_general = {
+			transfer_to_formation = scope:gpk_army
+		}
+	}
+	c:HOR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+
+			name = "Royal Army of Raihouro"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				service_type = conscript
+				state_region = s:STATE_TAYTAQOCHA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TINKUYUQ
+				count = 25
+			}
+			save_scope_as = hor_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			interest_group = ig_landowners
+			age = 50
+			traits = {
+				romantic
+			}
+			save_scope_as = hor_general
+		}
+		scope:hor_general = {
+			transfer_to_formation = scope:hor_army
+		}
+	}
+	c:RUX ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			name = "Rustaxe Warriors"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SAVAGE_REACH
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_THIRSTRIDGE
+				count = 20
+			}
+
+			save_scope_as = rux_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 32
+			traits = {
+				brave
+				persistent
+			}
+			save_scope_as = rux_general
+		}
+
+		scope:rux_general = {
+			transfer_to_formation = scope:rux_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 45
+			traits = {
+				innovative
+				charismatic
+			}
+			save_scope_as = rux2
+		
+		}
+		scope:rux2 = {
+			transfer_to_formation = scope:rux_army
+		}
+	}
+	c:BLD ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			name = "Bloodthorn Ravagers"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BLOODTHORN_WASTES
+				count = 35
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BLOODTHORN_WASTES_2
+				count = 15
+			}
+
+			save_scope_as = bld_army
+		}
+		
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 34
+			traits = {
+				cruel
+				expert_offensive_planner
+			}
+			save_scope_as = bld_general
+		}
+		scope:bld_general = {
+			transfer_to_formation = scope:bld_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 38
+			traits = {
+				surveyor
+				plains_commander
+			}
+			save_scope_as = bld_general2
+		}
+		scope:bld_general2 = {
+			transfer_to_formation = scope:bld_army
+		}
+	}
+	c:RSE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			name = "Guardians of Roughstone"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SAVAGE_LANDS_2
+				count = 20
+			}
+
+			save_scope_as = rse_army
+		}
+		
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 37
+			traits = {
+				mountain_commander
+				experienced_defensive_strategist
+			}
+			save_scope_as = rse_general
+		}
+		scope:rse_general = {
+			transfer_to_formation = scope:rse_army
+		}
+	}
+	c:GMR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+
+			name = "Wastewalker Ambush Parties"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NAWIYANU
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SAVAGE_REACH
+				count = 2
+			}
+			save_scope_as = gmr_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			interest_group = ig_armed_forces
+			age = 28
+			traits = {
+				stalwart_defender
+				expert_defensive_strategist
+			}
+			save_scope_as = gmr_general
+		}
+		scope:gmr_general = {
+			transfer_to_formation = scope:gmr_army
+		}
+	}
+	c:SNL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			name = "Snailbane Snail Shepards"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SNAILBANE
+				count = 5
+			}
+
+			save_scope_as = snl_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 28
+			traits = {
+				stalwart_defender
+				expert_defensive_strategist
+			}
+			save_scope_as = snl_general
+		}
+		scope:snl_general = {
+			transfer_to_formation = scope:snl_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 28
+			traits = {
+				pillager
+				plains_commander
+			}
+			save_scope_as = snl_general2
+		}
+		scope:snl_general2 = {
+			transfer_to_formation = scope:snl_army
+		}
+
+	}
+	c:BGR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			name = "Wastewalker Raiders"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+				count = 10
+			}
+		}
+	}
+	c:YKU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			name = "Yakuway Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ANTAQAQA
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SALTSHORE_2
+				count = 20
+			}
+			save_scope_as = yku_army
+		}
+		
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 37
+			traits = {
+				mountain_commander
+			}
+			save_scope_as = ykugen
+		}
+		scope:ykugen = {
+			transfer_to_formation = scope:yku_army
+		}
+	}
+	c:KUN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_chin_desert
+			name = "Gnoll Land Raiders"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MALLKIYAKU
+				count = 30
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MALLKIYAKU
+				service_type = conscript
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PACHAQULLU
+				count = 30
+			}
+			save_scope_as = kun_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_south_chin_desert
+			save_scope_as = kun_general_1
+		}
+		scope:kun_general_1 = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:kun_army_1
+		}
+	}
+	c:TIT ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+			name = "Raider Defence Force"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MALLKIYAKU
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TIKAQULLU
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MALLKIYAKU
+				service_type = conscript
+				count = 10
+			}
+			save_scope_as = tit_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			save_scope_as = tit_general_1
+		}
+		scope:tit_general_1 = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:tit_army_1
+		}
+	}
+	c:PAC ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+			name = "Raider Defence Force"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KUCHUYPATA
+				count = 25
+			}
+			save_scope_as = pac_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			save_scope_as = pac_general_1
+		}
+		scope:pac_general_1 = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:pac_army_1
+		}
+	}
+	c:WAQ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_chin_desert
+			name = "The Oasis Guards"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NAWI_OASIS
+				count = 25
+			}
+			save_scope_as = waq_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_south_chin_desert
+			save_scope_as = waq_general_1
+		}
+		scope:waq_general_1 = {
+			transfer_to_formation = scope:waq_army_1
+		}
+	}
+}

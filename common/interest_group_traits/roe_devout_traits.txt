@@ -1,0 +1,26 @@
+ig_trait_shield_of_humanity = {
+	icon = "gfx/interface/icons/ig_trait_icons/xenophobia.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		state_assimilation_mult = -0.1
+	}
+}
+
+ig_trait_secular_church_theory = {
+	icon = "gfx/interface/icons/ig_trait_icons/veteran_consultation.dds"
+	min_approval = happy
+	
+	modifier = {
+		country_loyalists_from_legitimacy_mult = 0.1
+	}
+}
+
+ig_trait_indulgences = {
+	icon = "gfx/interface/icons/ig_trait_icons/tax_avoidance.dds"
+		max_approval = unhappy
+	
+		modifier = {
+			country_minting_mult = -0.1
+	}
+}

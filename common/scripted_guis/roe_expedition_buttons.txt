@@ -1,0 +1,309 @@
+﻿	start_everfrost_expedition = {
+
+
+
+		effect = {
+
+			custom_tooltip = {
+				text = everfrost_expedition_lore_tt
+			}
+
+			if = {
+				limit = {
+					is_player = yes
+				}
+				trigger_event = { id = everfrost_expedition.101 popup = yes }
+				set_variable = {
+					name = on_expedition
+					value = yes
+				}
+			}
+			else = {
+				set_variable = AI_EXPEDITION_EVERFROST
+				ai_expedition_simulator_start = yes
+			}
+			hidden_effect = {
+				set_variable = {
+					name = ai_expedition_cooldown
+					value = yes
+					days = 1825
+				}		
+			}
+	
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > money_amount_multiplier_medium
+					gold_reserves > 0
+	
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_armed_isolationism
+				}
+				add = -1000
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+		is_valid = {
+	
+			has_interest_marker_in_region = region_west_everfrost
+			custom_tooltip = {
+				text = ice_wall_found_tt
+				NOT = { has_global_variable = ice_wall_reached }
+			}
+			custom_tooltip = {
+				text = has_expedition_tt
+				NOT = { has_variable = on_expedition }	
+			}
+					
+			OR = {
+				is_ai = no
+				NOT = { has_variable = ai_expedition_cooldown }
+			}
+			has_technology_researched = trench_works
+			is_at_war = no
+
+			has_free_retainer = yes
+
+			custom_tooltip = {
+				text = not_giant_tt
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait = giant_heritage
+					}
+				}
+			}
+
+
+	
+	
+		
+		}
+	}
+
+	start_dreamweaver_expedition = {
+		effect = {
+	
+		}
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > money_amount_multiplier_medium
+					gold_reserves > 0
+	
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_armed_isolationism
+				}
+				add = -1000
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+		is_valid = {
+		
+			custom_tooltip = {
+				text = coming_soon_tt
+				always = no
+			}
+
+			is_at_war = no		
+			has_interest_marker_in_region = region_dreamweaver_jungle
+			has_free_retainer = yes
+			has_technology_researched = psionic_theory
+	
+		
+		}
+	}
+
+
+	start_mindrend_expedition = {
+		effect = {
+			if = {
+				limit = {
+					is_player = yes
+				}
+				trigger_event = { id = mindrend.101 popup = yes }
+				set_variable = on_expedition
+			}
+			else = {
+				set_variable = AI_EXPEDITION_MINDREND
+				ai_expedition_simulator_start = yes
+			}
+			hidden_effect = {
+				set_variable = {
+					name = ai_expedition_cooldown
+					value = yes
+					days = 1825
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > money_amount_multiplier_medium
+					gold_reserves > 0
+	
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_armed_isolationism
+				}
+				add = -1000
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+		is_valid = {
+			custom_tooltip = {
+				text = has_expedition_tt
+				NOT = { has_variable = on_expedition }	
+			}
+					
+			OR = {
+				is_ai = no
+				NOT = { has_variable = ai_expedition_cooldown }
+			}
+			has_technology_researched = thought_shielding
+			has_interest_marker_in_region = region_mindrend_sands
+			is_at_war = no
+
+			has_free_retainer = yes
+
+			hidden_trigger = {
+				NOT = { has_variable = central_africa_expedition_success_var }
+			}
+
+			custom_tooltip = {
+				text = not_hiadud_tt
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait = hiadud_heritage
+					}
+				}
+			}
+		}
+	}
+
+	start_iaslesh_expedition = {
+		effect = {
+
+	
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > money_amount_multiplier_medium
+					gold_reserves > 0
+	
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_armed_isolationism
+				}
+				add = -1000
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+		is_valid = {
+			custom_tooltip = {
+				text = coming_soon_tt
+				always = no
+			}
+
+			has_interest_marker_in_region = region_fahavalo
+			custom_tooltip = {
+				text = has_expedition_tt
+				NOT = { has_variable = on_expedition }	
+			}
+					
+			OR = {
+				is_ai = no
+				NOT = { has_variable = ai_expedition_cooldown }
+			}
+			has_technology_researched = sea_lane_strategies
+			is_at_war = no
+
+			has_free_retainer = yes
+		
+		}
+	}
+
+	start_khus_expedition = {
+		effect = {
+
+	
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > money_amount_multiplier_medium
+					gold_reserves > 0
+	
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_armed_isolationism
+				}
+				add = -1000
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+		is_valid = {
+			
+			custom_tooltip = {
+				text = coming_soon_tt
+				always = no
+			}
+
+		
+		}
+	}

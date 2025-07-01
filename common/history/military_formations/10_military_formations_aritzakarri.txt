@@ -1,0 +1,702 @@
+﻿MILITARY_FORMATIONS = {
+
+	c:AIZ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vitics_roosts
+
+			name = "Royal Lurran Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LURRA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_LURRA
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_IRAURBE
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ZUBEROA
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_URRIKO
+				count = 20
+			}
+			save_scope_as = aiz_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vitics_roosts
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = aiz_general
+		}
+		scope:aiz_general = {
+			transfer_to_formation = scope:aiz_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vitics_roosts
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = aiz_general2
+		}
+		scope:aiz_general2 = {
+			transfer_to_formation = scope:aiz_army
+		}
+	}
+
+	c:IHE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_skittering_hills
+
+			name = "Arikugi Garrison"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_UDABERRI
+				count = 21
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ARAKALDE
+				count = 21
+			}
+
+			save_scope_as = ihe_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_skittering_hills
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = ihe_general
+		}
+		scope:ihe_general = {
+			transfer_to_formation = scope:ihe_army
+		}
+	}
+
+	c:OKH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vitics_roosts
+
+			name = "Forest Stalkers"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TIHAR
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ARROLA
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GIPUZK
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ACTUALLY_THIS_STATE_LOOKS_NICE_I_WAS_BEING_MEAN
+				count = 10
+			}
+
+			save_scope_as = okh_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vitics_roosts
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = okh_general
+		}
+		scope:okh_general = {
+			transfer_to_formation = scope:okh_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vitics_roosts
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = okh_general2
+		}
+		scope:okh_general2 = {
+			transfer_to_formation = scope:okh_army
+		}
+	}
+
+	c:LAZ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vitics_roosts
+
+			name = "Coastwatch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MALKART
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SUTAN
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TXINPART
+				count = 10
+			}
+
+			save_scope_as = laz_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vitics_roosts
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = laz_general
+		}
+		scope:laz_general = {
+			transfer_to_formation = scope:laz_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vitics_roosts
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = laz_general2
+		}
+		scope:laz_general2 = {
+			transfer_to_formation = scope:laz_army
+		}
+	}
+
+	c:KHE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vitics_roosts
+
+			name = "Aritzakarri Invasion Force"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LARRIN
+				count = 30
+			}
+
+			save_scope_as = khe_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vitics_roosts
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = khe_general
+		}
+		scope:khe_general = {
+			transfer_to_formation = scope:khe_army
+		}
+	}
+
+	c:GAI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_aritzakarri
+
+			name = "Badlands Skirmishers"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MIZPIRIKA
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_URRAZPI
+				count = 20
+			}
+
+			save_scope_as = gai_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_aritzakarri
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = gai_general
+		}
+		scope:gai_general = {
+			transfer_to_formation = scope:gai_army
+		}
+	}
+
+	c:CRG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_aritzakarri
+
+			name = "Lurzorun Republican Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ARTEAGA
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KASKOGARA
+				count = 25
+			}
+
+			save_scope_as = crg_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_aritzakarri
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = crg_general
+		}
+		scope:crg_general = {
+			transfer_to_formation = scope:crg_army
+		}
+	}
+
+	c:LUR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_aritzakarri
+
+			name = "Coastline Watchers"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GORRIMENDIA
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHANOR
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ERDIGARA
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHIARHI
+				count = 20
+			}
+
+
+			save_scope_as = lur_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_aritzakarri
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = lur_general
+		}
+		scope:lur_general = {
+			transfer_to_formation = scope:lur_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_aritzakarri
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = lur_general2
+		}
+		scope:lur_general2 = {
+			transfer_to_formation = scope:lur_army
+		}
+	}
+
+	c:PIU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_skittering_hills
+
+			name = "Forest Watch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_OLABEGI
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_OLABEGI_2
+				count = 15
+			}
+
+			save_scope_as = piu_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_skittering_hills
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = piu_general
+		}
+		scope:piu_general = {
+			transfer_to_formation = scope:piu_army
+		}
+	}
+
+	c:BRJ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_skittering_hills
+
+			name = "Roost Wasters"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_EGUZKI
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NABARR
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ITXAROPEN
+				count = 10
+			}
+
+			save_scope_as = brj_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_skittering_hills
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = brj_general
+		}
+		scope:brj_general = {
+			transfer_to_formation = scope:brj_army
+		}
+	}
+
+	c:KCH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vulture_coast
+
+			name = "Slayers of the Sands"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BATOHAIN
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MENDARI
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KIYOMU
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHANBA
+				count = 15
+			}
+
+			save_scope_as = kch_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vulture_coast
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = kch_general
+		}
+		scope:kch_general = {
+			transfer_to_formation = scope:kch_army
+		}
+	}
+
+	c:ZIH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vulture_coast
+
+			name = "Peninsula Piercers"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_IHARKHAN
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HIRUMENDI
+				count = 10
+			}
+
+			save_scope_as = zih_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vulture_coast
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			save_scope_as = zih_general
+		}
+		scope:zih_general = {
+			transfer_to_formation = scope:zih_army
+		}
+
+				create_military_formation = {
+			type = fleet
+			hq_region = sr:region_vulture_coast
+
+			name = "Strait Hunters"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_HIRUMENDI
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_HIRUMENDI
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_IHARKHAN
+				count = 10
+			}
+			save_scope_as = zih_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_vulture_coast
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = zih_admiral2
+		}
+		scope:zih_admiral2 = {
+			transfer_to_formation = scope:zih_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_vulture_coast
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = zih_admiral
+		}
+		scope:zih_admiral = {
+			transfer_to_formation = scope:zih_fleet
+		}
+
+	}
+
+		c:NIS ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			name = "Island Garrisons"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MUGARA
+				count = 5
+			}
+
+			save_scope_as = nis_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_khantar
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = nis_general
+		}
+		scope:nis_general = {
+			transfer_to_formation = scope:nis_army
+		}
+
+				create_military_formation = {
+			type = fleet
+			hq_region = sr:region_khantar
+
+			name = "Scaletides Ravagers"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_MUGARA
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_NISHIGARRA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_MUGARA
+				count = 5
+			}
+			save_scope_as = zih_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_vulture_coast
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = zih_admiral2
+		}
+		scope:zih_admiral2 = {
+			transfer_to_formation = scope:zih_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_vulture_coast
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = zih_admiral
+		}
+		scope:zih_admiral = {
+			transfer_to_formation = scope:zih_fleet
+		}
+
+	}
+
+	c:BRY ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_aritzakarri
+
+			name = "Royal Hold Forces"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TXORI
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_ERDI
+				count = 10
+			}
+
+			save_scope_as = bry_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_aritzakarri
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = bry_general
+		}
+		scope:bry_general = {
+			transfer_to_formation = scope:bry_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_aritzakarri
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = bry_general2
+		}
+		scope:bry_general2 = {
+			transfer_to_formation = scope:bry_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_west_aritzakarri
+
+			name = "Wavebreaker Armada"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ERDI
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_ERDI
+				count = 5
+			}
+			save_scope_as = bry_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_west_aritzakarri
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			save_scope_as = bry_admiral
+		}
+		scope:bry_admiral = {
+			transfer_to_formation = scope:bry_fleet
+		}
+	}
+
+}

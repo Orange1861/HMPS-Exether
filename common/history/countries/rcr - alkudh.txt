@@ -1,0 +1,27 @@
+﻿COUNTRIES = {
+	c:RCR = {
+		effect_starting_technology_tier_orc_tech = yes
+
+		effect_starting_politics_traditional = yes
+
+
+		add_journal_entry = {
+			type = je_winds_of_change
+		}
+
+		activate_law = law_type:law_chiefdom
+		activate_law = law_type:law_elder_council
+
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_professional_army
+
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:meat
+
+
+		
+	}
+}

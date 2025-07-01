@@ -1,0 +1,44 @@
+﻿modifier_state_salt_rampaging_monsters = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_standard_of_living_add = -1
+	building_throughput_add = -0.1
+	state_mortality_mult = 0.15
+	state_infrastructure_mult = -0.1
+}
+
+modifier_state_salt_raging_storms = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_negative.dds
+	state_standard_of_living_add = -1
+	building_throughput_add = -0.15
+	state_mortality_mult = 0.1
+	state_infrastructure_mult = -0.1
+}
+
+modifier_state_salt_curse = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	state_standard_of_living_add = -2
+	building_throughput_add = -0.1
+	state_infrastructure_mult = -0.3
+}
+
+salt_waste_half_orc_birth = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	state_birth_rate_mult = 0.02
+}
+
+modifier_lighthouse_site = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+}
+
+modifier_dragon_tomb_site = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds
+}
+
+state_retainer_assigned = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds
+	state_adventurer_coverage_mult = 0.2
+}
+
+recently_moved_retainer = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_negative.dds
+}

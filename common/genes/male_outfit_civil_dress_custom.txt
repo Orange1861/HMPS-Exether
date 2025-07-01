@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_outfits3 = {
+			inheritable = no
+			
+			european_civil_dress = {
+				index = 1
+				male = {
+						1 = male_coat_european_civil_dress_uniform_custom
+				}
+								
+				female = {
+						1 = female_outfit_african_common_1
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

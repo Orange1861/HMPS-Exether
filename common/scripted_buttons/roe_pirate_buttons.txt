@@ -1,0 +1,100 @@
+﻿#Intensify raids!
+pirate_start_raids_button = {
+
+    name = "pirate_start_raids_button_name"
+    desc = "pirate_start_raids_button_desc"
+
+    visible = {
+        always = yes
+    }
+    possible = {
+        AND = {
+            NOT = {
+                has_variable = pirates_raiding
+            }
+            0 > {
+                value = c:DUM.navy_size
+			    add = c:COV.navy_size
+		    	add = c:SSC.navy_size
+			    multiply = 0.25
+			    subtract = 1
+			    subtract = c:BTR.navy_size
+			    subtract = c:IMA.navy_size
+			    subtract = c:CCO.navy_size
+            }
+        }
+    }
+
+    effect = {
+        if = {
+            limit ={
+                NOT = {
+                    has_variable = first_raid_done
+                }
+            }
+            trigger_event = {
+			id = pirate_raid.2
+			popup = yes
+		    }
+            set_variable = {
+                name = first_raid_done 
+            }
+        }
+        set_variable = {
+            name = pirates_raiding
+        }
+    }
+}
+
+#Coodinate raids
+pirate_consolidation_1_button = {
+    name = "pirate_consolidation_1_button_name"
+    desc = "pirate_consolidation_1_button_desc"
+
+    visible = {
+        has_variable = pirates_raiding
+    }
+    possible = {
+        NOT = {
+                has_variable = cove_raided
+        }
+        OR = {
+            AND = {
+                scope:minor_pirate_1 = {
+                    relations:root >= 35
+                    is_subject = no
+                }
+                scope:minor_pirate_2 = {
+                    relations:root >= 35
+                    is_subject = no
+                }
+            }
+            scope:main_pirate.navy_size > {
+                value = scope:minor_pirate_1.navy_size
+                add = scope:minor_pirate_2.navy_size
+            }
+        }
+
+    }
+    effect = {
+        trigger_event = {
+            id = pirate_raid.3
+            popup = yes
+        }
+        set_variable = {
+            name = cove_raided
+        }
+        root = {
+            create_diplomatic_pact = {
+            country = scope:minor_pirate_1
+            type = vassal
+            }
+        }
+        root = {
+            create_diplomatic_pact = {
+            country = scope:minor_pirate_2
+            type = vassal
+            }
+        }
+    }
+}
