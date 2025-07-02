@@ -8,9 +8,9 @@
 	disallowing_laws = {
 		law_compulsory_primary_school
 	}
-
+	
 	modifier = {}
-
+	
 	can_enact = {
 		custom_tooltip = {
 			modifier:country_disallow_law_no_schools_bool = no
@@ -22,7 +22,7 @@
 	ai_will_do = {
 		always = no
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -41,25 +41,25 @@ law_religious_schools = {
 	progressiveness = 25
 	
 	unlocking_technologies = {
-		rationalism
+		academia
 	}
 
 	disallowing_laws = {
 		law_total_separation
 		law_state_atheism
-		law_serfdom
 	}
-
+	
 	modifier = {
-		country_institution_cost_institution_schools_mult = -0.2
+		country_institution_cost_institution_schools_mult = -0.15
 	}
 
 	institution = institution_schools
 	institution_modifier = {
 		state_conversion_mult = 0.2
-		state_education_access_add = 0.1
+		state_education_access_wealth_add = 0.0025
+		state_education_access_add = 0.05
 		interest_group_ig_devout_pol_str_mult = 0.1
-	}
+	}	
 	
 	can_impose = {
 		OR = {
@@ -73,39 +73,21 @@ law_religious_schools = {
 			can_impose_law_default = yes
 		}
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}		
-			
-	}
-
-	ai_impose_chance = {
-		value = 0
+		}
 		
 		if = {
-			limit = {
-				has_law = law_type:law_religious_schools
-				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
+			limit = { 
+				has_law = law_type:law_no_schools
 			}
-			add = base_impose_law_weight
-		}
-
-		if = {
-			limit = {
-				has_law = law_type:law_religious_schools
-				scope:target_country = {
-					has_law = law_type:law_no_schools
-				}
-				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
-			}
-			add = 10
-		}
-			
+			add = 500
+		}				
 	}
 }
 
@@ -117,23 +99,24 @@ law_private_schools = {
 	progressiveness = 25
 	
 	unlocking_technologies = {
-		academia
+		empiricism
 	}
 
 	disallowing_laws = {
-		law_state_religion
+		law_serfdom
 	}
-
+	
 	modifier = {
-		country_institution_cost_institution_schools_mult = -0.4
+		country_institution_cost_institution_schools_mult = -0.30
 	}
 	
 	institution = institution_schools
 	institution_modifier = {
-		state_education_access_wealth_add = 0.005
+		state_education_access_add = 0.015
+		state_education_access_wealth_add = 0.006
 		interest_group_ig_intelligentsia_pol_str_mult = 0.1
 	}
-
+	
 	can_impose = {
 		OR = {
 			AND = {
@@ -146,38 +129,14 @@ law_private_schools = {
 			can_impose_law_default = yes
 		}
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}
-		
-	}
-
-	ai_impose_chance = {
-		value = 0
-		
-		if = {
-			limit = {
-				has_law = law_type:law_private_schools
-				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
-			}
-			add = base_impose_law_weight
-		}
-
-		if = {
-			limit = {
-				has_law = law_type:law_private_schools
-				scope:target_country = {
-					has_law = law_type:law_no_schools
-				}
-				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
-			}
-			add = 10
-		}
+		}		
 	}
 }
 
@@ -189,20 +148,21 @@ law_public_schools = {
 	progressiveness = 50
 	
 	unlocking_technologies = {
-		empiricism
+		dialectics
 	}
 
 	disallowing_laws = {
-		law_state_religion
 		law_serfdom
+		law_extraction_economy
 	}
 	
 	institution = institution_schools
 	institution_modifier = {
-		state_assimilation_mult = 0.125
-		state_education_access_add = 0.125
+		state_assimilation_mult = 0.05
+		state_education_access_add = 0.055
+		state_education_access_wealth_add = 0.005
 	}
-
+	
 	can_impose = {
 		OR = {
 			AND = {
@@ -215,36 +175,13 @@ law_public_schools = {
 			can_impose_law_default = yes
 		}
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}		
-	}
-
-	ai_impose_chance = {
-		value = 0
-		
-		if = {
-			limit = {
-				has_law = law_type:law_public_schools
-				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
-			}
-			add = base_impose_law_weight
-		}
-
-		if = {
-			limit = {
-				has_law = law_type:law_public_schools
-				scope:target_country = {
-					has_law = law_type:law_no_schools
-				}
-				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
-			}
-			add = 10
-		}
+		}			
 	}
 }
