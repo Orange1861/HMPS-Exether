@@ -1,0 +1,45 @@
+Ported over HMPS Decrees common/decrees
+Ported over HMPS z_HMPS_ultilty to make devastation decree work
+Ported over HMPS Code Static Modifiers common/static_modifiers
+
+- Base Authority changed from 100 to 250
+- Decreased Base MAPI from 75 to 70
+- Increased Max Construction from 10 to 20
+- Made Defaulting worse and Bankruptcy less terrible
+- Removed infastructure gain from market capital
+- Added construction and infastructure from capital
+- Made very low and low taxes give less legitimacy
+- Made high and very high taxes give less penalties
+- Low government wages gives negative bureaucracy and construction
+- High government wages gives positive bureaucracy and authority
+- Low mil wages harms mil tech spread and makes army more sad
+- Excess bureaucracy gives double (10 -> 20%) construction bonus
+- Reduced low bureaucracy penalties
+- High authority gives opposition ig approval and low authority is more painful
+- High diplo mana gives prestige
+- Added HMPS buffed infamy penalties
+- Devastation kills less people but is worse otherwise
+- Polution adjusted to HMPS values (less death, lower SOL, and less births)
+- Innovation is now linked to max innovation
+- Forced market opening, slavery ban, and regime change are worse
+- Refusing obligations is more painful
+
+Ported over a version of the Orange Test Branch for Universities (No innovation, instead they give education access to wealth, quals, and migration attraction). 
+Added specialization PMs, and added a uni cap. (Needs to be localized)
+
+Files modified:
+
+common\production_method_groups\07_government.txt
+common\buildings\07_government.txt
+common\technology\technologies\30_society.txt
+
+Ported over HMPS common/laws/bureaucracy
+
+- Moved over HMPS modifiers for bureaucracy
+- Added -10% institution bureaucracy reduction to starbranded bureacrats (might adjust)
+
+TODO:
+
+Laws
+Defines
+Tech Cost?
