@@ -11,7 +11,7 @@
 	ai_will_do = {
 		always = no
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -30,18 +30,17 @@ law_charitable_health_system = {
 	
 	unlocking_technologies = {
 		medical_degrees
-	}
-
+	}	
+	
 	modifier = {
-		country_institution_cost_institution_health_system_mult = -0.2
+		country_institution_cost_institution_health_system_mult = -0.15
 	}
 
 	institution = institution_health_system
 	institution_modifier = {
-		state_mortality_mult = -0.03
+		state_mortality_mult = -0.005
 		interest_group_ig_devout_pol_str_mult = 0.1
-		state_pollution_reduction_health_mult = -0.1
-		state_food_security_add = 0.02
+		state_food_security_add  = 0.02
 	}
 	
 	# Don't return to charity if we have something more advanced
@@ -70,21 +69,20 @@ law_private_health_insurance = {
 	
 	unlocking_technologies = {
 		pharmaceuticals
-	}
+	}	
 	
 	modifier = {
-		country_institution_cost_institution_health_system_mult = -0.4
-		country_institution_health_system_max_investment_add = 2
-	}	
+		country_institution_cost_institution_health_system_mult = -0.30
+	}
 	
 	institution = institution_health_system
 	institution_modifier = {
+		state_mortality_wealth_mult = -0.00100
 		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
-		state_mortality_wealth_mult = -0.002
-		state_pollution_reduction_health_mult = -0.1
 		state_upper_strata_standard_of_living_add = 0.5
+		state_middle_strata_standard_of_living_add = 0.25
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -102,20 +100,16 @@ law_public_health_insurance = {
 	progressiveness = 100
 	
 	unlocking_technologies = {
-		pharmaceuticals
-	}
-	
-	modifier = {
-		country_institution_health_system_max_investment_add = 2
-	}		
+		socialism
+	}	
 	
 	institution = institution_health_system
 	institution_modifier = {
-		state_mortality_mult = -0.05
-		state_pollution_reduction_health_mult = -0.15
+		state_mortality_mult = -0.02
+		state_mortality_wealth_mult = -0.0002
 		state_standard_of_living_add = 0.5
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -239,9 +233,7 @@ law_genetic_testing = {
 	institution_modifier = {
 		interest_group_ig_mages_pol_str_mult = 0.1
 		state_mutant_conversion = 0.0015
-		state_mortality_mult = -0.02
-		state_mortality_wealth_mult = -0.001
-		state_pollution_reduction_health_mult = -0.1
+		state_mortality_wealth_mult = -0.002
 		character_health_add = 0.25
 	}
 
