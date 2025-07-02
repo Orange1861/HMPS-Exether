@@ -33,6 +33,10 @@ common\production_method_groups\07_government.txt
 common\buildings\07_government.txt
 common\technology\technologies\30_society.txt
 
+Major themes of HMPS Laws:
+
+More liberal laws gives migration attraction, more conservative ones give authority
+
 Ported over HMPS common/laws/bureaucracy
 
 - Moved over HMPS modifiers for bureaucracy
@@ -66,6 +70,10 @@ Ported over HMPS common/laws/00_health_system
 
 - HMPS health systems are nerfed compared to vanilla
 - (ROE) Genetic Testing no longer gives pollution reduction or base mortality reduction. Doubled mortality reduction from wealth
+
+Ported over HMPS common/laws/00_internal_security
+
+- HMPS versions of internal security laws are slightly stronger
 
 Ported over HMPS common/law_groups/00_laws
 
