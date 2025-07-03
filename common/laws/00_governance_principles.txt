@@ -259,19 +259,6 @@ law_republic = {
 				remove_ideology = ideology_constitutionalist
 				add_ideology = ideology_republican
 			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					game_date > 1178.1.1
-					NOT = { has_journal_entry = je_abolish_monarchy }
-					ig:ig_landowners ?= { 
-						NOT = { has_ideology = ideology:ideology_republican_paternalistic }
-					}
-				}
-				add_journal_entry = { type = je_abolish_monarchy }
-			}
-		}
 	}
 	
 	ai_will_do = {
