@@ -35,7 +35,7 @@ law_slavery_banned = {
 		hidden_effect = {
 			if = {
 				limit = {
-					game_date > 1836.01.01
+					game_date > 1178.01.01
 					NOT = {
 						has_journal_entry = je_abolish_slavery
 					}
