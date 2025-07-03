@@ -10,8 +10,20 @@ institution_social_security = {
 	icon = "gfx/interface/icons/institution_icons/social_security.dds"
 	background_texture = "gfx/interface/illustrations/institutions/social_security.dds"
 	modifier = {
-		state_welfare_payments_add = 0.2
+		state_welfare_payments_add = 0.4
 		state_food_security_add = 0.02
+	}
+}
+
+institution_environmental_regulations = {
+	icon = "gfx/interface/icons/institution_icons/environment.dds"
+	background_texture = "gfx/interface/illustrations/institutions/environment.dds"
+	modifier = {
+		state_pollution_reduction_health_mult = -0.15
+		building_group_bg_manufacturing_throughput_add = -0.04
+		building_group_bg_mining_throughput_add = -0.04
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04	
 	}
 }
 
