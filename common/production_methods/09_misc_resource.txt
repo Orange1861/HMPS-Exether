@@ -105,16 +105,14 @@ pm_no_equipment = {
 pm_steam_donkey_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
 
+	replacement_if_valid = pm_steam_donkey_building_logging_camp_stigveldio
+
 	unlocking_technologies = {
 		steam_donkey
 	}
 
 	disallowing_laws = {
 		law_industry_banned
-	}
-
-	disallowing_religions = {
-		stigveldio
 	}
 
 	building_modifiers = {

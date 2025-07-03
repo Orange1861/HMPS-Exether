@@ -5,10 +5,10 @@ je_mutagenic_trials = {
 
 	is_shown_when_inactive = {
 		NOT = { has_variable = mutagenic_trials_public }
-		ig:ig_industrialists = {
+		ig:ig_industrialists ?= {
 			is_marginal = no
 		}
-        ig:ig_mages = {
+        ig:ig_mages ?= {
 			is_marginal = no
 		}
         has_technology_researched = pumpjacks
@@ -25,11 +25,11 @@ je_mutagenic_trials = {
   			target = bt:building_livestock_ranch   value >= 6
 		}
         OR = {
-            ig:ig_industrialists = {
+            ig:ig_industrialists ?= {
                 is_powerful = yes
                 is_in_government = yes
             }
-            ig:ig_mages = {
+            ig:ig_mages ?= {
                 is_powerful = yes
                 is_in_government = yes
             }

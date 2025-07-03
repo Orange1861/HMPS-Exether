@@ -32,21 +32,6 @@ law_slavery_banned = {
 				days = 1825
 			}			
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					game_date > 1836.01.01
-					NOT = {
-						has_journal_entry = je_abolish_slavery
-					}
-				}
-				set_variable = {
-					name = abolishing_slavery_var
-					value = 0
-				}
-				add_journal_entry = { type = je_abolish_slavery }
-			}
-		}
 		custom_tooltip = {
 			text = liberate_slaves_tt
 			liberate_slaves = yes
@@ -200,8 +185,8 @@ law_debt_slavery = {
 	}
 	
 	modifier = {
-		interest_group_ig_landowners_pol_str_mult = 0.5
-		#Add if conortium ideology interest_group_ig_industrialists_pol_str_mult = 0.5
+		interest_group_ig_landowners_pol_str_mult = 0.25
+		#Add if conortium ideology interest_group_ig_industrialists_pol_str_mult = 0.25
 	}
 	
 	# AI should never enact debt slavery
@@ -277,7 +262,7 @@ law_slave_trade = {
 	}
 
 	modifier = {
-		interest_group_ig_landowners_pol_str_mult = 0.6
+		interest_group_ig_landowners_pol_str_mult = 0.5
 	}	
 	
 	ai_will_do = {
@@ -337,7 +322,7 @@ law_legacy_slavery = {
 	}	
 		
 	modifier = {
-		interest_group_ig_landowners_pol_str_mult = 0.3
+		interest_group_ig_landowners_pol_str_mult = 0.25
 	}	
 
 	ai_enact_weight_modifier = {

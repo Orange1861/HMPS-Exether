@@ -8,7 +8,6 @@
 	modifier = {
 		state_bureaucracy_population_base_cost_factor_mult = -0.25
 		country_aristocrats_pol_str_mult = 0.25
-		political_movement_radicalism_add = -0.25
 	}
 
 	on_enact = {
@@ -60,10 +59,8 @@ law_appointed_bureaucrats = {
 	progressiveness = 0
 	
 	modifier = {
-		country_legitimacy_headofstate_add = 10
-		state_tax_capacity_mult = 0.25
-		country_authority_add = 150
 		country_bureaucrats_pol_str_mult = 0.25
+		state_tax_capacity_mult = 0.25
 	}
 
 	on_enact = {
@@ -128,9 +125,7 @@ law_elected_bureaucrats = {
 	}
 	
 	modifier = {
-		country_legitimacy_govt_total_votes_add = 10
 		country_bureaucracy_investment_cost_factor_mult = -0.15
-		state_migration_pull_mult = 0.1
 	}
 
 	ai_enact_weight_modifier = { #Petitions

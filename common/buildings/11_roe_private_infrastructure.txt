@@ -6,8 +6,6 @@ building_airship_dock = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	enable_air_connection = yes
 
-	has_max_level = yes
-	ignore_stateregion_max_level = yes
 	port = yes
 
 	unlocking_technologies = { skyports }
@@ -35,8 +33,6 @@ building_magic_carpet_store = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	enable_air_connection = yes
 
-	has_max_level = yes
-	ignore_stateregion_max_level = yes
 	port = yes
 
 	unlocking_technologies = { wishstone_machines }

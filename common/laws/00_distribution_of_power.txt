@@ -2,136 +2,17 @@
 # icon = graphical icon shown in-game
 # modifier = {} modifier on country for having adopted this law
 
-law_vanguardism = {	
-	group = lawgroup_distribution_of_power
-	
-	icon = "gfx/interface/icons/law_icons/vladimir_illyich_lenin.dds"
-	
-	progressiveness = -125
-
-	unlocking_technologies = {
-		socialism
-	}
-	
-	can_enact = {
-		OR = {
-			custom_tooltip = {
-				text = ruler_in_party_tt
-				exists = ruler
-				OR = {
-					ruler = {
-						this.interest_group = {
-							has_party = yes
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = sps_no_party_tt
-				country_has_voting_franchise = no
-			}
-		}
-	}
-	
-	disallowing_laws = {
-		law_chiefdom
-	}
-
-	modifier = {
-		country_legitimacy_govt_total_votes_add = 100
-		country_voting_power_base_add = 10
-		country_bureaucrats_pol_str_mult = 0.5
-		country_academics_pol_str_mult = 0.5
-		country_authority_add = 400
-		country_authority_mult = 0.25
-	}
-	
-	on_activate = {
-		if = {
-			limit = {
-				game_date > 1836.01.01
-			}
-			activate_law = law_type:law_no_legislature
-			activate_law = law_type:law_no_voting
-			activate_law = law_type:law_single_party_state
-			
-			set_only_legal_party_from_ig = ruler.interest_group
-			
-			custom_tooltip = {
-				text = sps_government_reshuffle_tt
-				every_interest_group = {
-					limit = {
-						is_in_government = yes
-						NOT = { #Removes all IGs from government that aren't in your party
-							has_party = yes
-						}
-					}
-					remove_ruling_interest_group = yes
-				}
-				every_interest_group = {
-					limit = { #Adds all IGs that are in your party to the government
-						is_in_government = no
-						has_party = yes
-					}
-					add_ruling_interest_group = yes
-				}
-			}
-		}
-	}
-	
-	on_deactivate = {
-		unset_only_legal_party = yes
-		update_party_support = yes
-	}
-	
-	can_impose = {
-		OR = {
-			AND = {
-				is_in_same_power_bloc = scope:target_country
-				AND = {
-					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
-					has_law = scope:law
-				}
-			}
-			AND = { # modification of the standard trigger, only other vanguardist countries can impose vanguardism on their subjects
-				has_law = scope:law
-				can_impose_law_default = yes
-			}
-		}
-	}
-	
-	ai_enact_weight_modifier = { #Petitions
-		value = 0
-		
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
-	}
-	
-	ai_impose_chance = {
-		value = 0
-		
-		if = {
-			limit = {
-				has_law = law_type:law_single_party_state
-				"ai_ideological_opinion(scope:target_country)" >= 25 # Only want to do this on ideologically similar countries
-				scope:target_country = { # Is their law different enough from what we want to impose?
-					NOT = { has_law = law_type:law_technocracy }
-				}				
-			}
-			
-			add = base_impose_law_weight
-		}
-	}
-}
-
 law_autocracy = {	
 	group = lawgroup_distribution_of_power
 	
 	icon = "gfx/interface/icons/law_icons/autocracy.dds"
 	
 	progressiveness = -100
+	
+	# Has major legitimacy issues with parliamentary republic, they should be oligarchy instead
+	disallowing_laws = {
+		law_parliamentary_republic
+	}
 
 	on_activate = {
 		if = {
@@ -140,7 +21,7 @@ law_autocracy = {
 				has_law = law_type:law_monarchy
 			}
 			deactivate_law = law_type:law_elected_bureaucrats
-			activate_law = law_type:law_hereditary_bureaucrats
+			activate_law = law_type:law_appointed_bureaucrats
 		}
 		else_if = {
 			limit = {
@@ -150,11 +31,8 @@ law_autocracy = {
 				}
 			}
 			deactivate_law = law_type:law_elected_bureaucrats
-			activate_law = law_type:law_appointed_bureaucrats
+			activate_law = law_type:law_hereditary_bureaucrats
 		}
-		activate_law = law_type:law_no_legislature
-		activate_law = law_type:law_no_voting
-		activate_law = law_type:law_independent_executive
 		scripted_effect_parties_disappearence = yes
 		if = {
 			limit = {
@@ -165,16 +43,15 @@ law_autocracy = {
 	}
 
 	modifier = {
-		country_legitimacy_headofstate_add = 40
-		country_legitimacy_govt_total_clout_add = 90
-		country_legitimacy_ideological_incoherence_mult = 0.05
-		country_aristocrats_pol_str_mult = 1.0
+		country_legitimacy_headofstate_add = 30
+		country_legitimacy_govt_total_clout_add = 120
+		country_legitimacy_ideological_incoherence_mult = 0.5
+		country_aristocrats_pol_str_mult = 0.5
 		country_officers_pol_str_mult = 0.5
 		country_archmages_pol_str_mult = 0.5
-		country_authority_add = 300
-		country_authority_mult = 0.20
+		country_authority_add = 200
 	}
-	
+
 	can_impose = {
 		OR = {
 			AND = {
@@ -187,7 +64,9 @@ law_autocracy = {
 			can_impose_law_default = yes
 		}
 	}
+
 	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -234,6 +113,99 @@ law_autocracy = {
 	}
 }
 
+law_technocracy = {
+	group = lawgroup_distribution_of_power
+	
+	icon = "gfx/interface/icons/law_icons/technocracy.dds"
+	
+	can_enact = {
+		NOR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
+	}
+
+	is_visible = {
+		NOR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
+	}
+	
+	progressiveness = -50
+
+	on_activate = {
+		if = {
+			limit = {
+				has_law = law_type:law_elected_bureaucrats
+			}
+			deactivate_law = law_type:law_elected_bureaucrats
+			activate_law = law_type:law_appointed_bureaucrats
+		}
+		scripted_effect_parties_disappearence = yes
+		if = {
+			limit = {
+				has_modifier = missouri_compromise
+			}
+			remove_modifier = missouri_compromise
+		}
+	}
+	
+	modifier = {
+		country_legitimacy_headofstate_add = 10
+		country_legitimacy_govt_total_clout_add = 120
+		country_legitimacy_govt_size_add = 2
+		country_legitimacy_ideological_incoherence_mult = -0.1
+		country_academics_pol_str_mult = 0.33
+		country_engineers_pol_str_mult = 0.33
+		country_officers_pol_str_mult = 0.33
+		country_archmages_pol_str_mult = 0.33
+		country_authority_add = 100
+	}
+
+	unlocking_technologies = {
+		central_archives 
+	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_technocracy
+				"ai_ideological_opinion(scope:target_country)" >= 25 # Only want to do this on ideologically similar countries
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOT = { has_law = law_type:law_single_party_state }
+				}
+			}
+			
+			add = base_impose_law_weight
+		}
+	}	
+}
+
 law_oligarchy = {
 	group = lawgroup_distribution_of_power
 	
@@ -248,7 +220,7 @@ law_oligarchy = {
 				has_law = law_type:law_monarchy
 			}
 			deactivate_law = law_type:law_elected_bureaucrats
-			activate_law = law_type:law_hereditary_bureaucrats
+			activate_law = law_type:law_appointed_bureaucrats
 		}
 		else_if = {
 			limit = {
@@ -258,11 +230,8 @@ law_oligarchy = {
 				}
 			}
 			deactivate_law = law_type:law_elected_bureaucrats
-			activate_law = law_type:law_appointed_bureaucrats
+			activate_law = law_type:law_hereditary_bureaucrats
 		}
-		activate_law = law_type:law_no_legislature
-		activate_law = law_type:law_no_voting
-		activate_law = law_type:law_independent_executive
 		scripted_effect_parties_disappearence = yes
 		if = {
 			limit = {
@@ -274,16 +243,15 @@ law_oligarchy = {
 	
 	modifier = {
 		country_legitimacy_headofstate_add = 10
-		country_legitimacy_govt_total_clout_add = 105
+		country_legitimacy_govt_total_clout_add = 120
 		country_legitimacy_govt_size_add = 2
-		country_legitimacy_ideological_incoherence_mult = -0.40
+		country_legitimacy_ideological_incoherence_mult = -0.1
 		country_officers_pol_str_mult = 0.5
-		country_aristocrats_pol_str_mult = 0.75
-		country_capitalists_pol_str_mult = 0.5
-		country_authority_add = 200
-		country_authority_mult = 0.15
+		country_aristocrats_pol_str_mult = 0.5
+		country_capitalists_pol_str_mult = 0.25
+		country_authority_add = 100
 	}
-	
+
 	can_impose = {
 		OR = {
 			AND = {
@@ -341,128 +309,6 @@ law_oligarchy = {
 	}		
 }
 
-law_technocracy = {
-	group = lawgroup_distribution_of_power
-
-	icon = "gfx/interface/icons/law_icons/technocracy.dds"
-		
-	can_enact = {
-		NOR = {
-			is_country_type = decentralized
-			is_country_type = preindustrial
-		}
-	}
-
-	is_visible = {
-		NOR = {
-			is_country_type = decentralized
-			is_country_type = preindustrial
-		}
-	}
-
-	progressiveness = -50
-	
-	#unlocking_laws = {
-	#	law_republic
-	#}
-
-	on_activate = {
-		activate_law = law_type:law_no_legislature
-		activate_law = law_type:law_no_voting
-		activate_law = law_type:law_single_party_state
-		if = {
-			limit = {
-				OR = {
-					has_law = law_type:law_hereditary_bureaucrats
-					has_law = law_type:law_elected_bureaucrats
-				}
-			}
-			activate_law = law_type:law_appointed_bureaucrats
-		}
-		scripted_effect_parties_disappearence = yes
-		if = {
-			limit = {
-				has_modifier = missouri_compromise
-			}
-			remove_modifier = missouri_compromise
-		}
-	}
-
-	modifier = {
-		country_legitimacy_headofstate_add = 10
-		country_legitimacy_govt_total_clout_add = 115
-		country_legitimacy_govt_size_add = 2
-		country_legitimacy_ideological_incoherence_mult = -0.1
-		country_academics_pol_str_mult = 0.50
-		country_capitalists_pol_str_mult = 0.50
-		country_engineers_pol_str_mult = 0.33
-		country_officers_pol_str_mult = 0.33
-		country_archmages_pol_str_mult = 0.33
-		#country_authority_add = 100
-		#country_authority_mult = 0.10
-	}
-
-	unlocking_technologies = {
-		central_archives 
-	}
-	
-	ai_enact_weight_modifier = { #Petitions
-		value = 0
-		
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
-
-				# AI should really try to get out of elder council under the right circumstances
-		if = {
-			limit = {
-				has_law = law_type:law_elder_council
-				has_strategy = ai_strategy_embrace_winds_of_change			
-			}
-			add = 750
-		}
-	}
-	
-	ai_impose_chance = {
-		value = 0
-		
-		if = {
-			limit = {
-				has_law = law_type:law_oligarchy
-				OR = {
-					AND = {
-						power_bloc ?= { has_identity = identity:identity_ideological_union }
-						has_strategy = ai_strategy_conservative_agenda					
-					}
-					has_strategy = ai_strategy_reactionary_agenda
-				}
-				scope:target_country = { 
-					NOR = { # Is their law different enough from what we want to impose?
-						has_law = law_type:law_autocracy
-						has_law = law_type:law_landed_voting
-					}
-				}
-			}
-			
-			add = base_impose_law_weight
-		}
-	}	
-	
-	can_impose = {
-		OR = {
-			AND = {
-				is_in_same_power_bloc = scope:target_country
-				AND = {
-					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
-					has_law = scope:law
-				}
-			}
-			can_impose_law_default = yes
-		}
-	}
-}
-
 law_elder_council = {
 	group = lawgroup_distribution_of_power
 	
@@ -481,7 +327,6 @@ law_elder_council = {
 		}
 	}
 	
-	
 	on_activate = {
 		if = {
 			limit = {
@@ -489,7 +334,7 @@ law_elder_council = {
 				has_law = law_type:law_monarchy
 			}
 			deactivate_law = law_type:law_elected_bureaucrats
-			activate_law = law_type:law_hereditary_bureaucrats
+			activate_law = law_type:law_appointed_bureaucrats
 		}
 		else_if = {
 			limit = {
@@ -499,15 +344,9 @@ law_elder_council = {
 				}
 			}
 			deactivate_law = law_type:law_elected_bureaucrats
-			activate_law = law_type:law_appointed_bureaucrats
+			activate_law = law_type:law_hereditary_bureaucrats
 		}
 		scripted_effect_parties_disappearence = yes
-		if = {
-			limit = {
-				has_law = law_type:law_single_party_state
-			}
-			activate_law = law_type:law_independent_executive
-		}
 		if = {
 			limit = {
 				has_modifier = missouri_compromise
@@ -520,68 +359,12 @@ law_elder_council = {
 		country_legitimacy_base_add = 20
 		country_legitimacy_govt_total_clout_add = 100
 		country_legitimacy_govt_size_add = 2
-		country_legitimacy_ideological_incoherence_mult = -0.2
+		country_legitimacy_ideological_incoherence_mult = -0.1
 		country_tribesmen_pol_str_mult = 0.25
 		country_officers_pol_str_mult = 0.25
 		country_authority_add = 200
 	}
-}
 
-law_clerical_voting = {
-	group = lawgroup_distribution_of_power
-	
-	icon = "gfx/interface/icons/law_icons/clerical_voting.dds"
-	
-	progressiveness = -25
-
-	unlocking_technologies = {
-		democracy
-	}
-	
-	unlocking_laws = {
-		law_theocracy
-	}
-
-	is_visible = {
-		has_law = law_type:law_theocracy
-	}
-	
-	on_activate = {
-		if = {
-			limit = {
-				has_law = law_type:law_single_party_state
-			}
-			activate_law = law_type:law_independent_executive
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_legislature
-			}
-			activate_law = law_type:law_unicameralism
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_voting
-			}
-			activate_law = law_type:law_plurality
-		}
-		scripted_effect_parties_emergence = yes
-	}
-
-	disallowing_laws = {
-		law_chiefdom
-		law_monarchy
-		law_republic
-	}
-
-	modifier = {
-		country_legitimacy_govt_total_votes_add = 40
-		country_legitimacy_govt_total_clout_add = 100
-		country_aristocrats_voting_power_add = 25
-		country_clergymen_voting_power_add = 50
-		country_authority_add = 200
-	}
-	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -603,49 +386,30 @@ law_landed_voting = {
 		democracy
 	}
 
-	is_visible = {
-		NOT = { has_law = law_type:law_theocracy }
-	}
-	
-	on_activate = {
-		if = {
-			limit = {
-				has_law = law_type:law_single_party_state
-			}
-			activate_law = law_type:law_independent_executive
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_legislature
-			}
-			activate_law = law_type:law_unicameralism
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_voting
-			}
-			activate_law = law_type:law_plurality
-		}
-		scripted_effect_parties_emergence = yes
-	}
-
 	disallowing_laws = {
 		law_chiefdom
-		law_theocracy
+		law_command_economy
 	}
 
 	modifier = {
 		country_legitimacy_govt_total_votes_add = 40
 		country_legitimacy_govt_total_clout_add = 100
+		country_legitimacy_govt_size_add = 1
+		country_legitimacy_ideological_incoherence_mult = 0.2
 		country_aristocrats_voting_power_add = 50
 		country_officers_voting_power_add = 25
 		country_clergymen_voting_power_add = 25
 		country_capitalists_voting_power_add = 25
 		country_archmages_voting_power_add = 25
-		country_authority_add = 200
+		country_authority_add = 100
+	}
+
+	on_activate = {
+		scripted_effect_parties_emergence = yes
 	}
 	
 	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
 		OR = {
 			AND = {
 				is_in_same_power_bloc = scope:target_country
@@ -657,7 +421,7 @@ law_landed_voting = {
 			can_impose_law_default = yes
 		}
 	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -712,44 +476,28 @@ law_wealth_voting = {
 	unlocking_technologies = {
 		democracy
 	}
-	
-	on_activate = {
-		if = {
-			limit = {
-				has_law = law_type:law_single_party_state
-			}
-			activate_law = law_type:law_independent_executive
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_legislature
-			}
-			activate_law = law_type:law_unicameralism
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_voting
-			}
-			activate_law = law_type:law_plurality
-		}
-		scripted_effect_parties_emergence = yes
-	}
 
 	disallowing_laws = {
 		law_chiefdom
-		law_theocracy
-		law_outlawed_dissent
+		law_command_economy
 	}
 	
 	modifier = {
 		country_legitimacy_govt_total_votes_add = 65
 		country_legitimacy_govt_total_clout_add = 75
+		country_legitimacy_govt_size_add = 1
+		country_legitimacy_ideological_incoherence_mult = 0.2
 		country_voting_power_base_add = 40
 		country_voting_power_wealth_threshold_add = 25
 		country_authority_add = 100
 	}
+
+	on_activate = {
+		scripted_effect_parties_emergence = yes
+	}
 	
 	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
 		OR = {
 			AND = {
 				is_in_same_power_bloc = scope:target_country
@@ -761,7 +509,7 @@ law_wealth_voting = {
 			can_impose_law_default = yes
 		}
 	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -788,7 +536,7 @@ law_wealth_voting = {
 			
 			add = base_impose_law_weight
 		}
-	}
+	}	
 }
 
 law_census_voting = {
@@ -801,47 +549,29 @@ law_census_voting = {
 	unlocking_technologies = {
 		democracy
 	}
-	
-	on_activate = {
-		if = {
-			limit = {
-				has_law = law_type:law_single_party_state
-			}
-			activate_law = law_type:law_independent_executive
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_legislature
-			}
-			activate_law = law_type:law_unicameralism
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_voting
-			}
-			activate_law = law_type:law_plurality
-		}
-		scripted_effect_parties_emergence = yes
-	}
 
 	disallowing_laws = {
 		law_chiefdom
-		law_theocracy
-		law_outlawed_dissent
-		law_extraction_economy
+		law_command_economy
 	}
 
 	modifier = {
 		country_legitimacy_govt_total_votes_add = 85
 		country_legitimacy_govt_total_clout_add = 55
-		country_voting_power_base_add = 30
+		country_legitimacy_govt_size_add = 1
+		country_legitimacy_ideological_incoherence_mult = 0.1
 		country_voting_power_wealth_threshold_add = 15
 		country_voting_power_from_literacy_add = 30
-		state_migration_pull_mult = 0.05
 		country_authority_add = 50
+	}
+
+
+	on_activate = {
+		scripted_effect_parties_emergence = yes
 	}
 	
 	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
 		OR = {
 			AND = {
 				is_in_same_power_bloc = scope:target_country
@@ -893,44 +623,25 @@ law_universal_suffrage = {
 	unlocking_technologies = {
 		egalitarianism
 	}
-	
-	on_activate = {
-		if = {
-			limit = {
-				has_law = law_type:law_single_party_state
-			}
-			activate_law = law_type:law_independent_executive
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_legislature
-			}
-			activate_law = law_type:law_unicameralism
-		}
-		if = {
-			limit = {
-				has_law = law_type:law_no_voting
-			}
-			activate_law = law_type:law_plurality
-		}
-		scripted_effect_parties_emergence = yes
-	}
 
 	disallowing_laws = {
 		law_chiefdom
-		law_theocracy
-		law_outlawed_dissent
-		law_extraction_economy
+		law_command_economy
 	}
 	
 	modifier = {
 		country_legitimacy_govt_total_votes_add = 110
 		country_legitimacy_govt_total_clout_add = 25
 		country_voting_power_base_add = 20
-		state_migration_pull_mult = 0.15
+		country_legitimacy_govt_size_add = 1
+	}
+
+	on_activate = {
+		scripted_effect_parties_emergence = yes
 	}
 	
 	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
 		OR = {
 			AND = {
 				is_in_same_power_bloc = scope:target_country
@@ -986,69 +697,23 @@ law_anarchy = {
 	}
 	
 	unlocking_laws = {
-		law_council_republic
 	}
 	
+	modifier = {
+		state_pop_pol_str_add = 1
+		country_legitimacy_govt_total_clout_add = 100
+		state_political_strength_from_wealth_mult = -0.75
+		country_authority_mult = -0.5
+		country_legitimacy_govt_size_add = 2
+	}
+
 	on_activate = {
-		if = {
-			limit = {
-				NOT = { has_law = law_type:law_no_police }
-			}
-			activate_law = law_type:law_no_police
-		}
-		if = {
-			limit = {
-				NOT = { has_law = law_type:law_no_home_affairs }
-			}
-			activate_law = law_type:law_no_home_affairs
-		}
-		if = {
-			limit = {
-				OR = {
-					has_law = law_type:law_peasant_levies
-					has_law = law_type:law_mass_conscription
-				}
-			}
-			activate_law = law_type:law_national_militia
-		}
 		scripted_effect_parties_disappearence = yes
 		if = {
 			limit = {
 				has_modifier = missouri_compromise
 			}
 			remove_modifier = missouri_compromise
-		}
-	}
-
-	disallowing_laws = {
-		law_chiefdom
-		law_theocracy
-		law_outlawed_dissent
-		law_extraction_economy
-		law_the_company
-	}
-	
-	modifier = {
-		country_legitimacy_govt_total_clout_add = 200
-		state_political_strength_from_wealth_mult = -0.75
-		country_authority_mult = -1
-		country_legitimacy_govt_size_add = 7
-		state_migration_pull_mult = 0.15
-	}
-	
-	can_impose = {
-		OR = {
-			AND = {
-				is_in_same_power_bloc = scope:target_country
-				AND = {
-					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
-					has_law = scope:law
-				}
-			}
-			AND = { # modification of the standard trigger, only other anarchic countries can impose anarchy on their subjects
-				has_law = scope:law
-				can_impose_law_default = yes
-			}
 		}
 	}
 	
@@ -1118,10 +783,10 @@ law_anarchy_bandit = {
 	}
 	
 	modifier = {
-		country_legitimacy_govt_total_clout_add = 200
-		country_authority_mult = -1
-		country_legitimacy_govt_size_add = 7
-		state_migration_pull_mult = 0.15
+		state_pop_pol_str_add = 1
+		country_legitimacy_govt_total_clout_add = 100
+		country_authority_mult = -0.5
+		country_legitimacy_govt_size_add = 2
 	}
 
 	on_activate = {
@@ -1191,3 +856,141 @@ law_anarchy_bandit = {
 		}
 	}
 }
+
+
+law_single_party_state = {
+	group = lawgroup_distribution_of_power
+	
+	icon = "gfx/interface/icons/law_icons/single_party_state.dds"
+	
+	progressiveness = 0
+
+	is_visible = {
+		NOR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
+	}
+
+	can_enact = {
+
+		NOR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
+
+		OR = {
+			custom_tooltip = {
+				text = ruler_in_party_tt
+				exists = ruler
+				OR = {
+					ruler = {
+						this.interest_group = {
+							has_party = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = sps_no_party_tt
+				country_has_voting_franchise = no
+			}
+		}
+	}
+
+	unlocking_technologies = {
+		political_agitation 
+	}
+	
+	modifier = {
+		country_legitimacy_govt_total_votes_add = 100
+		country_legitimacy_ideological_incoherence_mult = -0.25
+		country_authority_add = 250
+		country_voting_power_base_add = 20
+		interest_group_in_government_attraction_mult = 0.20
+	}
+
+	on_activate = {
+		set_only_legal_party_from_ig = ruler.interest_group
+		
+		custom_tooltip = {
+			text = sps_government_reshuffle_tt
+			every_interest_group = {
+				limit = {
+					is_in_government = yes
+					NOT = { #Removes all IGs from government that aren't in your party
+						has_party = yes
+					}
+				}
+				remove_ruling_interest_group = yes
+			}
+			every_interest_group = {
+				limit = { #Adds all IGs that are in your party to the government
+					is_in_government = no
+					has_party = yes
+				}
+				add_ruling_interest_group = yes
+			}
+		}
+	}
+	
+	on_deactivate = {
+		unset_only_legal_party = yes
+		update_party_support = yes
+	}
+	
+	ai_will_do = {
+		exists = ruler
+		ruler = {
+			interest_group = {
+				has_party = yes
+			}
+			law_stance = {
+				law = law_type:law_single_party_state
+				value > neutral
+			}
+		}
+	}
+	
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			AND = { # modification of the standard trigger, only other single-party states countries can impose single-party states on their subjects
+				has_law = scope:law
+				can_impose_law_default = yes
+			}
+		}
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_single_party_state
+				"ai_ideological_opinion(scope:target_country)" >= 25 # Only want to do this on ideologically similar countries
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOT = { has_law = law_type:law_technocracy }
+				}				
+			}
+			
+			add = base_impose_law_weight
+		}
+	}
+}
+

@@ -138,10 +138,8 @@ decree_emergency_relief = {
 	}
 	modifier = {
 		state_tax_collection_mult = -0.5
-		#weekly_devastation_add has no effect on its own
-		#It is purely for aesthetics
-		#Check z_HMPS_utility JE to see how this works
-		weekly_devastation_add = -0.007	
+		state_infrastructure_mult = 0.1
+		state_market_access_price_impact = 0.05
 		state_food_security_add = 0.05
 		state_adventurer_coverage_add = 10
 		state_adventurer_coverage_mult = 0.25
@@ -213,8 +211,8 @@ decree_promote_social_mobility = {
 	}
 
 	modifier = {
-		state_education_access_add = 0.1
-		state_pop_qualifications_mult = 0.5
+		state_education_access_add = 0.25
+		state_pop_qualifications_mult = 0.25
 	}
 
 	cost = 100
@@ -278,8 +276,8 @@ decree_promote_national_values = {
 		}
 	}
 	modifier = {
-		state_assimilation_mult = 0.3
-		state_conversion_mult = 0.3
+		state_assimilation_mult = 1
+		state_conversion_mult = 1
 	}
 	cost = 100
 
@@ -347,12 +345,16 @@ decree_encourage_manufacturing_industry = {
 	unlocking_technologies = {
 		manufacturies
 	}
+	state_trigger = {
+		NOR = {
+			has_decree = decree_encourage_agricultural_industry
+			has_decree = decree_encourage_resource_industry
+		}
+	}
 	modifier = {
-		building_group_bg_manufacturing_throughput_add = 0.25
-		building_group_bg_service_throughput_add = 0.25
-		building_group_bg_magic_manufacturing_throughput_add = 0.25
-		building_group_bg_manufacturing_standard_of_living_add = -1
-		building_group_bg_service_standard_of_living_add = -1
+		building_group_bg_manufacturing_throughput_add = 0.2
+		building_group_bg_service_throughput_add = 0.2
+		building_group_bg_magic_manufacturing_throughput_add = 0.2
 	}
 	cost = 100
 
@@ -426,13 +428,16 @@ decree_encourage_agricultural_industry = {
 	unlocking_technologies = {
 		enclosure
 	}
+	state_trigger = {
+		NOR = {
+			has_decree = decree_encourage_manufacturing_industry
+			has_decree = decree_encourage_resource_industry
+		}
+	}
 	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.25
-		building_group_bg_ranching_throughput_add  = 0.25
-		building_group_bg_plantations_throughput_add = 0.25
-		building_group_bg_agriculture_standard_of_living_add = -1
-		building_group_bg_ranching_standard_of_living_add = -1
-		building_group_bg_plantations_standard_of_living_add = -1
+		building_group_bg_agriculture_throughput_add = 0.2
+		building_group_bg_plantations_throughput_add = 0.2
+		building_group_bg_ranching_throughput_add = 0.2
 	}
 	cost = 100
 
@@ -495,21 +500,20 @@ decree_encourage_resource_industry = {
 	unlocking_technologies = {
 		shaft_mining
 	}
+	state_trigger = {
+		NOR = {
+			has_decree = decree_encourage_manufacturing_industry
+			has_decree = decree_encourage_agricultural_industry
+		}
+	}
 	modifier = {
-		building_group_bg_mining_throughput_add = 0.25
-		building_group_bg_logging_throughput_add = 0.25
-		building_group_bg_fishing_throughput_add = 0.25
-		building_group_bg_whaling_throughput_add = 0.25
-		building_group_bg_magic_resource_throughput_add  = 0.25
-		building_group_bg_oil_extraction_throughput_add = 0.25
-		building_group_bg_rubber_throughput_add = 0.25
-		building_group_bg_mining_standard_of_living_add = -1
-		building_group_bg_logging_standard_of_living_add = -1
-		building_group_bg_fishing_standard_of_living_add = -1
-		building_group_bg_whaling_standard_of_living_add = -1
-		building_group_bg_bg_magic_resource_of_living_add = -1
-		building_group_bg_oil_extraction_standard_of_living_add = -1
-		building_group_bg_rubber_standard_of_living_add = -1
+		building_group_bg_mining_throughput_add = 0.2
+		building_group_bg_logging_throughput_add = 0.2
+		building_group_bg_fishing_throughput_add = 0.2
+		building_group_bg_whaling_throughput_add = 0.2
+		building_group_bg_magic_resource_throughput_add  = 0.2
+		building_group_bg_oil_extraction_throughput_add = 0.2
+		building_group_bg_rubber_throughput_add = 0.2
 	}
 	cost = 100
 
@@ -525,7 +529,6 @@ decree_encourage_resource_industry = {
 						is_building_group = bg_whaling
 						is_building_group = bg_oil_extraction
 						is_building_group = bg_magic_resource
-						is_building_group = bg_rubber
 					}				
 				}
 			}
@@ -580,7 +583,8 @@ decree_greener_grass_campaign = {
 		is_isolated_from_market = no
 	}
 	modifier = {
-		state_migration_pull_mult = 0.3
+		state_migration_pull_add = 20
+		state_migration_pull_mult = 0.25
 	}
 	unlocking_technologies = {
 		romanticism
@@ -635,8 +639,8 @@ decree_greener_grass_campaign = {
 decree_enlistment_efforts = {
 	texture = "gfx/interface/icons/decree/decree_enlistment_efforts.dds"
 	modifier = {
-		state_conscription_rate_add = 0.01
-		building_training_rate_mult = 0.30
+		state_conscription_rate_add = 0.05
+		building_training_rate_mult = 0.25
 	}
 	unlocking_technologies = {
 		mandatory_service

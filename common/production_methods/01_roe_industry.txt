@@ -164,6 +164,8 @@ pm_watertube_boiler_building_gizmo_workshop = {
 pm_rotary_valve_engine_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	
+	replacement_if_valid = pm_rotary_valve_engine_building_gizmo_workshop_guild_bonded
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -182,7 +184,6 @@ pm_rotary_valve_engine_building_gizmo_workshop = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -1500
 			building_employment_laborers_add = -1500
 
 		}
@@ -191,6 +192,9 @@ pm_rotary_valve_engine_building_gizmo_workshop = {
 
 pm_assembly_lines_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+
+	replacement_if_valid = pm_assembly_lines_building_gizmo_workshop_guild_bonded
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 15  #change to magic pollution
@@ -210,7 +214,6 @@ pm_assembly_lines_building_gizmo_workshop = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -2000
 			building_employment_laborers_add = -2000
 
 		}
@@ -1063,6 +1066,8 @@ pm_artificer_watertube_boiler_building_tooling_workshops = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
 	is_hidden_when_unavailable = yes
 
+	replacement_if_valid = pm_artificer_watertube_boiler_building_tooling_workshops_guild_bonded
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 5
@@ -1088,7 +1093,6 @@ pm_artificer_watertube_boiler_building_tooling_workshops = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1500
-			building_employment_guild_bonded_add = -1500
 		}
 	}
 }
@@ -1096,6 +1100,8 @@ pm_artificer_watertube_boiler_building_tooling_workshops = {
 pm_artificer_rotary_valve_engine_building_tooling_workshops = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	is_hidden_when_unavailable = yes
+
+	replacement_if_valid = pm_artificer_rotary_valve_engine_building_tooling_workshops_guild_bonded
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -1122,7 +1128,6 @@ pm_artificer_rotary_valve_engine_building_tooling_workshops = {
 
 		level_scaled = {
 			building_employment_laborers_add = -2000
-			building_employment_guild_bonded_add = -2000
 		}
 	}
 }
@@ -1130,6 +1135,8 @@ pm_artificer_rotary_valve_engine_building_tooling_workshops = {
 pm_artificer_assembly_lines_building_tooling_workshops = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	is_hidden_when_unavailable = yes
+
+	replacement_if_valid = pm_artificer_assembly_lines_building_tooling_workshops_guild_bonded
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -1157,7 +1164,6 @@ pm_artificer_assembly_lines_building_tooling_workshops = {
 
 		level_scaled = {
 			building_employment_laborers_add = -3000
-			building_employment_guild_bonded_add = -3000
 		}
 	}
 
@@ -1167,6 +1173,8 @@ pm_artificer_watertube_boiler_building_steel_mills = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
 	is_hidden_when_unavailable = yes
 	
+	replacement_if_valid = pm_artificer_watertube_boiler_building_steel_mills_guild_bonded
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 5
@@ -1194,7 +1202,6 @@ pm_artificer_watertube_boiler_building_steel_mills = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1500
-			building_employment_guild_bonded_add = -1500
 		}
 	}
 }
@@ -1203,6 +1210,8 @@ pm_artificer_rotary_valve_engine_building_steel_mills = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	is_hidden_when_unavailable = yes
 	
+	replacement_if_valid = pm_artificer_rotary_valve_engine_building_steel_mills_guild_bonded
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 10
@@ -1230,7 +1239,6 @@ pm_artificer_rotary_valve_engine_building_steel_mills = {
 
 		level_scaled = {
 			building_employment_laborers_add = -2000
-			building_employment_guild_bonded_add = -2000
 		}
 	}
 }
@@ -1239,6 +1247,8 @@ pm_artificer_assembly_lines_building_furniture_manufacturies = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	is_hidden_when_unavailable = yes
 	
+	replacement_if_valid = pm_artificer_assembly_lines_building_furniture_manufacturies_guild_bonded
+
 	unlocking_technologies = {
 		aniline
 	}
@@ -1266,7 +1276,6 @@ pm_artificer_assembly_lines_building_furniture_manufacturies = {
 
 		level_scaled = {
 			building_employment_laborers_add = -3000
-			building_employment_guild_bonded_add = -3000
 		}
 	}
 
@@ -1346,6 +1355,8 @@ pm_artificer_assembly_lines_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	is_hidden_when_unavailable = yes
 
+	replacement_if_valid = pm_artificer_assembly_lines_building_gizmo_workshop_guild_bonded
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 10
@@ -1372,7 +1383,6 @@ pm_artificer_assembly_lines_building_gizmo_workshop = {
 
 		level_scaled = {
 			building_employment_laborers_add = -2000
-			building_employment_guild_bonded_add = -2000
 		}
 	}
 
@@ -1450,6 +1460,7 @@ pm_artificer_assembly_line_building_thaumacore_foundry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	is_hidden_when_unavailable = yes
 
+	replacement_if_valid = pm_artificer_assembly_line_building_thaumacore_foundry_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 10
@@ -1474,7 +1485,6 @@ pm_artificer_assembly_line_building_thaumacore_foundry = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1500
-			building_employment_guild_bonded_add = -1500
 			building_employment_machinists_add = -500
 		}
 	}

@@ -9,9 +9,8 @@ law_no_workers_rights = {
 	
 	progressiveness = 0
 	
-	modifier = {	
-	}
-	
+	modifier = {}
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -34,7 +33,7 @@ law_regulatory_bodies = {
 	}
 
 	institution = institution_workplace_safety
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -58,9 +57,9 @@ law_worker_protections = {
 	
 	institution = institution_workplace_safety
 	institution_modifier = {
-		state_working_adult_ratio_add = 0.01
+		building_minimum_wage_mult = 0.15
 	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
