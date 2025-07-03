@@ -11,7 +11,16 @@ law_magocracy = {
 		country_legitimacy_headofstate_add = 20
 		country_legitimacy_ideological_incoherence_mult = 0.1
 		interest_group_ig_mages_pol_str_mult = 0.25
-		country_authority_add = 200
+		country_authority_add = 100
+		country_authority_mult = 0.10
+	}
+	
+	on_activate = {
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_independent_executive
+		activate_law = law_type:law_no_legislature
+		activate_law = law_type:law_no_voting
+		scripted_effect_parties_disappearence = yes
 	}
 
 	can_impose = {
