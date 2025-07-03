@@ -35,6 +35,7 @@ pmg_automation_building_food_industry = {
 	production_methods = {
 		pm_manual_dough_processing
 		pm_automated_bakery
+		pm_automated_bakery_guild_bonded
 	}
 }
 
@@ -75,9 +76,13 @@ pmg_automation_building_textile_mills = {
 	production_methods = {
 		pm_traditional_looms
 		pm_mechanized_looms
+		pm_mechanized_looms_guild_bonded
 		pm_magical_looms
+		pm_magical_looms_guild_bonded
 		pm_automatic_power_looms
+		pm_automatic_power_looms_guild_bonded
 		pm_mechamagic_looms
+		pm_mechamagic_looms_guild_bonded
 	}
 }
 
@@ -120,11 +125,16 @@ pmg_automation_building_furniture_manufacturies = {
 	production_methods = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_furniture_manufacturies
+		pm_watertube_boiler_building_furniture_manufacturies_guild_bonded
 		pm_artificer_watertube_boiler_building_steel_mills
+		pm_artificer_watertube_boiler_building_steel_mills_guild_bonded
 		pm_rotary_valve_engine_building_furniture_manufacturies
+		pm_rotary_valve_engine_building_furniture_manufacturies_guild_bonded
 		pm_artificer_rotary_valve_engine_building_steel_mills
+		pm_artificer_rotary_valve_engine_building_steel_mills_guild_bonded
 		pm_assembly_lines_building_furniture_manufacturies
 		pm_artificer_assembly_lines_building_furniture_manufacturies
+		pm_artificer_assembly_lines_building_furniture_manufacturies_guild_bonded
 	}
 }
 
@@ -147,11 +157,17 @@ pmg_automation_building_tooling_workshops = {
 	production_methods = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_tooling_workshops
+		pm_watertube_boiler_building_tooling_workshops_guild_bonded
 		pm_artificer_watertube_boiler_building_tooling_workshops
+		pm_artificer_watertube_boiler_building_tooling_workshops_guild_bonded
 		pm_rotary_valve_engine_building_tooling_workshops
+		pm_rotary_valve_engine_building_tooling_workshops_guild_bonded
 		pm_artificer_rotary_valve_engine_building_tooling_workshops
+		pm_artificer_rotary_valve_engine_building_tooling_workshops_guild_bonded
 		pm_assembly_lines_building_tooling_workshops
+		pm_assembly_lines_building_tooling_workshops_guild_bonded
 		pm_artificer_assembly_lines_building_tooling_workshops
+		pm_artificer_assembly_lines_building_tooling_workshops_guild_bonded
 	}
 }
 
@@ -193,6 +209,7 @@ pmg_glassblowing = {
 	production_methods = {
 		pm_manual_glassblowing
 		pm_automatic_bottle_blowers
+		pm_automatic_bottle_blowers_guild_bonded
 	}
 }
 
@@ -213,9 +230,13 @@ pmg_automation_building_paper_mills = {
 	production_methods = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_paper_mills
+		pm_watertube_boiler_building_paper_mills_guild_bonded
 		pm_artificer_watertube_boiler_building_steel_mills
+		pm_artificer_watertube_boiler_building_steel_mills_guild_bonded
 		pm_rotary_valve_engine_building_paper_mills
+		pm_rotary_valve_engine_building_paper_mills_guild_bonded
 		pm_artificer_rotary_valve_engine_building_steel_mills
+		pm_artificer_rotary_valve_engine_building_steel_mills_guild_bonded
 	}
 }
 
@@ -287,9 +308,13 @@ pmg_automation_building_steel_mills = {
 	production_methods = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_steel_mills
+		pm_watertube_boiler_building_steel_mills_guild_bonded
 		pm_artificer_watertube_boiler_building_steel_mills
+		pm_artificer_watertube_boiler_building_steel_mills_guild_bonded
 		pm_rotary_valve_engine_building_steel_mills
+		pm_rotary_valve_engine_building_steel_mills_guild_bonded
 		pm_artificer_rotary_valve_engine_building_steel_mills
+		pm_artificer_rotary_valve_engine_building_steel_mills_guild_bonded
 	}
 }
 
@@ -311,10 +336,13 @@ pmg_automation_building_motor_industry = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_motor_industry
 		pm_artificer_watertube_boiler_building_steel_mills
+		pm_artificer_watertube_boiler_building_steel_mills_guild_bonded
 		pm_rotary_valve_engine_building_motor_industry
 		pm_artificer_rotary_valve_engine_building_steel_mills
 		pm_assembly_lines_building_motor_industry
+		pm_assembly_lines_building_motor_industry_guild_bonded
 		pm_artificer_assembly_lines_building_furniture_manufacturies
+		pm_artificer_assembly_lines_building_furniture_manufacturies_guild_bonded
 	}
 }
 
@@ -386,6 +414,7 @@ pmg_automation_building_automotive_industry = {
 	production_methods = {
 		pm_automation_disabled
 		pm_assembly_lines_building_automotive_industry
+		pm_assembly_lines_building_automotive_industry_guild_bonded
 	}
 }
 
@@ -425,9 +454,13 @@ pmg_automation_building_arms_industry = {
 	production_methods = {
 		pm_automation_disabled
 		pm_rotary_valve_engine_building_arms_industry
+		pm_rotary_valve_engine_building_arms_industry_guild_bonded
 		pm_artificer_rotary_valve_engine_building_tooling_workshops
+		pm_artificer_rotary_valve_engine_building_tooling_workshops_guild_bonded
 		pm_assembly_lines_building_arms_industry
+		pm_assembly_lines_building_arms_industry_guild_bonded
 		pm_artificer_assembly_lines_building_tooling_workshops
+		pm_artificer_assembly_lines_building_tooling_workshops_guild_bonded
 	}
 }
 
@@ -476,8 +509,12 @@ pmg_automation_building_munition_plants = {
 	production_methods = {
 		pm_automation_disabled
 		pm_rotary_valve_engine_building_munition_plants
+		pm_rotary_valve_engine_building_munition_plants_guild_bonded
 		pm_artificer_rotary_valve_engine_building_tooling_workshops
+		pm_artificer_rotary_valve_engine_building_tooling_workshops_guild_bonded
 		pm_assembly_lines_building_munition_plants
+		pm_assembly_lines_building_munition_plants_guild_bonded
 		pm_artificer_assembly_lines_building_tooling_workshops
+		pm_artificer_assembly_lines_building_tooling_workshops_guild_bonded
 	}
 }

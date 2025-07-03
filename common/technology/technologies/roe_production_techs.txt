@@ -73,7 +73,7 @@ cloudsilver_refining = {
 	category = production
 	
 	modifier = {
-		state_building_magic_carpet_store_max_level_add = 3
+
 	}
 
 	unlocking_technologies = {
@@ -89,10 +89,6 @@ synthetic_cloudsilver = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
 	category = production
-	
-	modifier = {
-		state_building_magic_carpet_store_max_level_add = 3
-	}
 	
 	unlocking_technologies = {
 		cloudsilver_refining
@@ -124,10 +120,6 @@ wishstone_machines = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/wishstone_machines.dds"
 	category = production
-	
-	modifier = {
-		state_building_magic_carpet_store_max_level_add = 3
-	}
 
 	unlocking_technologies = {
 		celestial_mapping
@@ -143,10 +135,6 @@ advanced_contraptions = {
 	texture = "gfx/interface/icons/invention_icons/advanced_contraptions.dds"
 	category = production
 	
-	modifier = {
-		state_building_magic_carpet_store_max_level_add = 3
-	}
-
 	unlocking_technologies = {
 		wishstone_machines
 	}
