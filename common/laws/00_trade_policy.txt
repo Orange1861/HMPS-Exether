@@ -162,6 +162,12 @@ law_isolationism = {
 		country_disallow_trade_bool = yes
 	}
 
+	on_activate = {
+		custom_tooltip = {
+			text = isolationism_force_single_market_tt
+			force_single_market = yes
+		}
+	}
 	ai_will_do = {
 		ruler = {
 			OR = {
