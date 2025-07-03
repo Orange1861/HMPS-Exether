@@ -21,8 +21,7 @@ law_magical_schools = {
 	institution = institution_schools
 	institution_modifier = {
 		interest_group_ig_mages_pol_str_mult = 0.1
-		state_education_access_add = 0.05
-		state_education_access_wealth_add = 0.004
+		state_education_access_add = 0.1
 		country_institution_cost_institution_magical_focus_mult = -0.1
 	}
 	

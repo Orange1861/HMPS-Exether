@@ -6,8 +6,8 @@
 	
 	modifier = {
 		country_leverage_resistance_mult = -0.25
-	}
-	
+	}	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -24,18 +24,21 @@ law_migration_controls = {
 	
 	modifier = {
 		country_migration_restrictiveness_add = 60
-		country_tech_spread_mult = -0.05
 	}
 	
 	progressiveness = 0
-	
+
+	on_enact = {
+
+	}
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}		
+		}
 	}
 }
 
@@ -47,11 +50,14 @@ law_closed_borders = {
 		country_migration_restrictiveness_add = 101
 		country_disallow_agitator_invites_bool = yes
 		country_leverage_resistance_mult = 0.25
-		country_tech_spread_mult = -0.15
 	}
 	
 	progressiveness = -50
-	
+
+	on_enact = {
+
+	}
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
