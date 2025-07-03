@@ -38,6 +38,7 @@ Major themes of HMPS Laws:
 More liberal laws gives migration attraction, more conservative ones give authority
 
 Ported over HMPS common/laws/bureaucracy
+Modified common/laws/roe_bureaucracy
 
 - Moved over HMPS modifiers for bureaucracy
 - Added -10% institution bureaucracy reduction to starbranded bureacrats (might adjust)
@@ -56,6 +57,7 @@ Ported over HMPS common/laws/00_education_system
 
 - Allows nations with serfdom to have religious schools
 - Added HMPS tweaks to education (private buffed, public more dependent on wealth)
+- Magic school numbers are weaker public schools in terms of literacy
 
 Ported over HMPS common/laws/00_free_speech
 
@@ -131,6 +133,7 @@ Ported over HMPS gfx/interface/icons/law_icons
 
 TODO:
 
-Laws
+Go through ROE laws for balance
+Localize ROE laws
 Defines
 Tech Cost?
