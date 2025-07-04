@@ -138,6 +138,18 @@ Ported over new HMPS laws
 - HMPS new systems of voting and government structures
 - HMPS min wage and work hour laws
 
+Ported over HMPS defines
+
+- Some stability and law changes
+- Min construction increased to 0.33
+- Economoy of scale starts at 11
+- Removed GDP impact on debt to fix MP exploits
+- Increased bureaucracy cost of owning buildings from 1 to 3
+- Default general order is defend
+- Min organization increased from 0 to 25
+- Sway to become a subject is blocked
+- Ported over HMPS war exhausation mechanics where ticks are monthly and more dependent on war goals
+
 Ported over HMPS gfx/interface/icons/law_icons
 
 - HMPS law icons appear in game, I just pulled both folders together
@@ -146,5 +158,10 @@ TODO:
 
 Go through ROE laws for balance
 Localize HMPS laws
-Defines
 Tech Cost?
+
+Possible:
+
+HMPS Infamy (Defines?)
+Readd retooling?
+Readd HMPS boosted radicals?

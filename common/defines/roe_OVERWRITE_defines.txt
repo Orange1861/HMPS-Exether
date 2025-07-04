@@ -1,12 +1,14 @@
 ﻿NGame = {
 	START_DATE = "1178.1.1"
 	END_DATE = "1300.1.1"
+	MP_LAG_TICKS_BOUNDS = 84 # Host will advance up to a week ahead of players ( 7 * 4 ) [ *3 ]
 }
 NCountry = {
 	COUNTRY_FORMATION_CANDIDATE_MIN_RANK = 5
 }
 NPolitics = {
 	DEFAULT_LAW_ACTIVATION_DATE = "1178.1.1"
+	TAX_LAW_GROUP = "lawgroup_poll_tax"	# Law from this group is shown to player as their tax law
 }
 NPops = {
 	LOYALTIES_GAIN_GRACE_PERIOD_SHORT = "1180.1.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Short game rule is applied
@@ -14,4 +16,35 @@ NPops = {
 	LOYALTIES_GAIN_GRACE_PERIOD_EXTRA_LONG = "1188.1.1"	# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Extra Long game rule is applied
 
 	MAX_ACCEPTANCE_VALUE = 140
+}
+
+NEconomy = {
+	MIN_CONSTRUCTION_EFFICIENCY = 0.33					# Construction efficiency cannot go below this amount
+
+	ECONOMY_OF_SCALE_START_LEVEL = 11					# Level at which buildings start getting economy of scale bonuses. Levels lower than this value provide no bonus [>=1]
+	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0.50	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+	
+	COUNTRY_MIN_CREDIT_SCALED = 0.0001 			# Added to the total Building Cash Reserves to determine credit limit (multiplied by GDP)
+	
+	BUILDING_LEVEL_BUREAUCRACY_COST = 3					# Cost of owning one level of the goverment building
+}
+
+NMilitary = {
+	DEFAULT_ORDER_GENERAL = "defend"						# Default order for generals
+	MILITARY_FORMATION_ORGANIZATION_MIN = 25										# The minimum amount of Organization a Military Formation will always retain despite exceeding their Command Limit
+}
+
+NDiplomacy = {
+	SWAY_OFFER_BECOME_SUBJECT_MANEUVERS_COST = 10000
+}
+
+NWar = {
+	DEVASTATION_DECAY_RATE = -0.05 # Per day, when there are no occupations
+	DEVASTATION_FROM_BATTLES = 2 # For each battle
+
+	DAYS_BETWEEN_WAR_EXHAUSTION = 28 # Every this many days war support will be reduced by the war exhaustion formula
+	WAR_EXHAUSTION_TURMOIL_FACTOR = 2.0 # At 100% turmoil
+	WAR_EXHAUSTION_CONTESTED_ENEMY_WARGOALS = 10.0
+	OCCUPATION_STATE_BASE_WEIGHT = 0.5
+	OCCUPATION_STATE_POP_WEIGHT = 5
 }
