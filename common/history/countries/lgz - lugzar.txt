@@ -1,6 +1,7 @@
 ﻿COUNTRIES = {
 	c:LGZ = {
 		effect_starting_technology_tier_goblin_tech = yes
+		effect_starting_land_tax = yes
 
 		ig:ig_devout ?= {
 			add_ruling_interest_group = yes

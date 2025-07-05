@@ -1,6 +1,9 @@
 ﻿COUNTRIES = {
 	c:OEX = {
 		effect_starting_technology_tier_2_tech = yes
+		
+		effect_starting_per_capita_tax = yes
+				
 		add_technology_researched = nationalism
 		add_technology_researched = hydraulic_cranes
 		add_technology_researched = atmospheric_engine

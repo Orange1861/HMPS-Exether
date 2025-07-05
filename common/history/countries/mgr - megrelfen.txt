@@ -1,6 +1,7 @@
 ﻿COUNTRIES = {
 	c:MGR ?= {
 		effect_starting_technology_tier_3_tech = yes
+		effect_starting_per_capita_tax = yes
 
 		activate_law = law_type:law_mercantilism	
 		activate_law = law_type:law_slavery_banned
