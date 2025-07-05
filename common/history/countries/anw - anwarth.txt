@@ -1,6 +1,7 @@
 ﻿COUNTRIES = {
 	c:ANW = {
 		effect_starting_technology_tier_knowledge_tech = yes
+		effect_starting_per_capita_tax = yes
 
 		activate_law = law_type:law_theocracy
 		activate_law = law_type:law_national_supremacy
@@ -13,7 +14,7 @@
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_religious_schools
 		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_clerical_voting
 		activate_law = law_type:law_magical_schools	
         activate_law = law_type:law_astrological_studies
         activate_law = law_type:law_court_mages

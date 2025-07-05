@@ -2,6 +2,7 @@
 	c:CDW ?= {
 		effect_starting_technology_tier_1_tech = yes
 		add_technology_researched = pharmaceuticals
+		effect_starting_per_capita_tax = yes
 		
 		activate_law = law_type:law_slavery_banned
 		activate_law = law_type:law_technocracy
