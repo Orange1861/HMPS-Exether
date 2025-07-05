@@ -630,7 +630,6 @@ law_landed_voting = {
 	}
 
 	disallowing_laws = {
-		law_chiefdom
 		law_theocracy
 	}
 
@@ -736,7 +735,6 @@ law_wealth_voting = {
 	}
 
 	disallowing_laws = {
-		law_chiefdom
 		law_theocracy
 		law_outlawed_dissent
 	}
@@ -825,7 +823,6 @@ law_census_voting = {
 	}
 
 	disallowing_laws = {
-		law_chiefdom
 		law_theocracy
 		law_outlawed_dissent
 		law_extraction_economy
