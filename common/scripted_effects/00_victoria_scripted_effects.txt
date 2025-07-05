@@ -1616,23 +1616,23 @@ enact_preferred_governance_principle = {
 		limit = {
 			scope:ruling_ig ?= {
 				law_stance = {
-					law = law_type:law_parliamentary_republic
+					law = law_type:law_parliamentary_system
 					value = strongly_approve
 				}
 			}
 		}
-		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_parliamentary_system
 	}
 	else_if = {
 		limit = {
 			scope:ruling_ig ?= {
 				law_stance = {
-					law = law_type:law_presidential_republic
+					law = law_type:law_republic
 					value = strongly_approve
 				}
 			}
 		}
-		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_republic
 	}
 	else_if = {
 		limit = {
@@ -1671,23 +1671,23 @@ enact_preferred_governance_principle = {
 		limit = {
 			scope:ruling_ig ?= {
 				law_stance = {
-					law = law_type:law_parliamentary_republic
+					law = law_type:law_parliamentary_system
 					value = approve
 				}
 			}
 		}
-		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_parliamentary_system
 	}
 	else_if = {
 		limit = {
 			scope:ruling_ig ?= {
 				law_stance = {
-					law = law_type:law_presidential_republic
+					law = law_type:law_republic
 					value = approve
 				}
 			}
 		}
-		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_republic
 	}
 	else_if = {
 		limit = {
@@ -1701,7 +1701,7 @@ enact_preferred_governance_principle = {
 		activate_law = law_type:law_theocracy
 	}
 	else = {
-		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_republic
 		if = {
 			limit = {
 				civil_war_origin_country ?= {
@@ -1743,8 +1743,7 @@ enact_preferred_governance_principle_new = {
 			OR = {
 				type = law_type:law_chiefdom
 				type = law_type:law_monarchy
-				type = law_type:law_presidential_republic
-				type = law_type:law_parliamentary_republic
+				type = law_type:law_republic
 				type = law_type:law_theocracy
 				type = law_type:law_council_republic
 			}
@@ -1771,8 +1770,7 @@ enact_preferred_governance_principle_new = {
 				OR = {
 					type = law_type:law_chiefdom
 					type = law_type:law_monarchy
-					type = law_type:law_presidential_republic
-					type = law_type:law_parliamentary_republic
+					type = law_type:law_republic
 					type = law_type:law_theocracy
 					type = law_type:law_council_republic
 				}
@@ -1800,8 +1798,7 @@ enact_preferred_governance_principle_new = {
 				OR = {
 					type = law_type:law_chiefdom
 					type = law_type:law_monarchy
-					type = law_type:law_presidential_republic
-					type = law_type:law_parliamentary_republic
+					type = law_type:law_republic
 					type = law_type:law_theocracy
 					type = law_type:law_council_republic
 				}	
@@ -1958,84 +1955,6 @@ set_communism_vars = {
 clear_communism_vars = {
 	remove_variable = communism_progress_from_laws
 	remove_variable = communism_progress_var_add
-}
-
-restore_peruvian_constitution = {
-	# Made by Hansi
-	# the Constitution of 1834 was largely a hotfix of the Constitution of 1828 and was also swept aside with the Peru-Bolivian Confederation
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_presidential_republic
-			}
-		}
-		activate_law = law_type:law_presidential_republic
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_state_religion
-			}
-		}
-		activate_law = law_type:law_state_religion # Article 2 of the 1834 consitution: "[Peru's] Religion is Catholic, Apostolic, Roman, The Nation protects it by all means [...] and does not allow the exercise of any other."
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_census_voting
-			}
-		}
-		activate_law = law_type:law_census_voting # Political rights for citizens had no land ownership requirement 
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_racial_segregation
-			}
-		}
-		activate_law = law_type:law_racial_segregation
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_mercantilism
-			}
-		}
-		activate_law = law_type:law_mercantilism
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_interventionism
-			}
-		}
-		activate_law = law_type:law_interventionism
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_right_of_assembly
-			}
-		}
-		activate_law = law_type:law_right_of_assembly # Article 147 of the 1834 constitution: "Everyone can communicate their thoughts [...] or publish them through the printing press without prior censorship; but under the responsibility determined by law."
-	}
-	if = {
-		limit = {
-			NOR = {
-				has_law = law_type:law_legacy_slavery
-				has_law = law_type:law_slavery_banned
-			}
-		}
-		activate_law = law_type:law_legacy_slavery # Slavery was legal, but the slave trade was restricted
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_per_capita_based_taxation
-			}
-		}
-		activate_law = law_type:law_per_capita_based_taxation
-	}
 }
 
 # National Identity
@@ -2346,7 +2265,7 @@ generate_pro_lobby_diplomatic_pact_opportunity = {
 					}
 				}
 			}
-			set_variable = pro_lobby_proposal_trade_agreement
+			set_variable = pro_lobby_proposal_trade_privilege
 		}
 		20 = {
 			trigger = {
@@ -2500,7 +2419,7 @@ generate_pro_lobby_diplomatic_pact_proposal = {
 					}
 				}
 			}
-			set_variable = pro_lobby_proposal_break_trade_agreement
+			set_variable = pro_lobby_proposal_break_trade_privilege
 		}
 		20 = { # Break a defensive pact
 			trigger = {
@@ -2567,7 +2486,7 @@ generate_anti_lobby_diplomatic_pact_opportunity = {
 					}
 				}
 			}
-			set_variable = anti_lobby_proposal_trade_agreement
+			set_variable = anti_lobby_proposal_trade_privilege
 		}
 		20 = {
 			trigger = {
@@ -2722,7 +2641,7 @@ generate_anti_lobby_diplomatic_pact_proposal = {
 					}
 				}
 			}
-			set_variable = anti_lobby_proposal_break_trade_agreement
+			set_variable = anti_lobby_proposal_break_trade_privilege
 		}
 		20 = { # Break a defensive pact
 			trigger = {
@@ -2765,7 +2684,7 @@ generate_anti_lobby_diplomatic_pact_proposal = {
 
 clear_anti_lobby_vars = {
 	remove_variable = anti_lobby_proposal_break_alliance
-	remove_variable = anti_lobby_proposal_break_trade_agreement
+	remove_variable = anti_lobby_proposal_break_trade_privilege
 	remove_variable = anti_lobby_proposal_break_defensive_pact
 	remove_variable = anti_lobby_proposal_rivalry
 	remove_variable = anti_lobby_proposal_embargo
@@ -2785,7 +2704,7 @@ clear_anti_lobby_vars = {
 clear_pro_lobby_vars = {
 	remove_variable = pro_lobby_proposal_defensive_pact
 	remove_variable = pro_lobby_proposal_alliance
-	remove_variable = pro_lobby_proposal_trade_agreement
+	remove_variable = pro_lobby_proposal_trade_privilege
 	remove_variable = pro_lobby_proposal_power_bloc
 	remove_variable = pro_lobby_proposal_power_bloc_invite
 	remove_variable = pro_lobby_proposal_military_assistance

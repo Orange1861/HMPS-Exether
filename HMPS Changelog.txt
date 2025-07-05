@@ -146,6 +146,8 @@ Ported over the political setup changes (00_political_setup and 01_political_set
 - Bird poltiics law ported over
 
 Partial ported over HMPS government types to handle the new government system
+Overrode common/government_types
+Overrode common/scripted_effects_/00_victoria_scripted_effects
 
 - Probably needs to get looked at in the future
 
