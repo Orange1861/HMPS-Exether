@@ -1,5 +1,7 @@
 ﻿COUNTRIES = {
 	c:EKA = {
+	
+		effect_starting_per_capita_tax = yes
 		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes
 		}

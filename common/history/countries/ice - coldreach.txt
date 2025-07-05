@@ -1,9 +1,11 @@
 ﻿COUNTRIES = {
 	c:ICE = {
 		effect_starting_technology_tier_4_tech = yes
+		effect_starting_land_tax = yes
 		
 		# Laws 
-		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_republic
+		activate_law = law_type:law_parliamentary_system
 		activate_law = law_type:law_landed_voting
 		activate_law = law_type:law_no_workers_rights
 		activate_law = law_type:law_land_based_taxation
