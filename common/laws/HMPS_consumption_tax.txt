@@ -17,6 +17,10 @@ law_no_consumption_taxes = {
 		country_legitimacy_base_add = 5
 	}
 	
+	disallowing_laws = {
+		law_consumption_based_taxation_corsair
+	}
+	
 	ai_will_do = {
 		always = no
 	}
@@ -31,6 +35,10 @@ law_low_consumption_tax = {
 	
 	can_enact = {
 		always = yes
+	}
+	
+	disallowing_laws = {
+		law_consumption_based_taxation_corsair
 	}
 
 	modifier = {
@@ -76,6 +84,10 @@ law_moderate_consumption_tax = {
 	modifier = {
 		country_consumption_tax_cost_mult = -0.20
 		state_tax_capacity_mult = -0.05
+	}
+	
+	disallowing_laws = {
+		law_consumption_based_taxation_corsair
 	}
 	
 	tax_modifier_very_low = {

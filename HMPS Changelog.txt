@@ -111,7 +111,7 @@ Ported over HMPS common/laws/00_slavery
 
 Removed common/laws/00_taxation
 
-- TODO: Get the Corsair tax law working, it was put in HMPS poll tax for now
+- Corsair land tax changed to per capita tax values, adjusted modifiers to work well with high consumption taxes
 
 Ported over HMPS common/law/00_trade_policy
 
@@ -140,8 +140,12 @@ Ported over new HMPS laws
 
 Ported over the political setup changes
 
-- All countries (with certain exceptions) start on low income and med consumption taxes
+- All countries (except for corsairs) start on low income and med consumption taxes
 - HMPS laws are ported over
+
+Modified common\history\countries\btr - bonetide raiders, common\history\countries\nis - parrot pirates, and ommon\history\countries\zih - Zhar̈sehich
+
+- They have correct corsair tax laws
 
 Ported over HMPS defines
 

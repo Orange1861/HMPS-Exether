@@ -2,6 +2,7 @@ COUNTRIES = {
 	c:ZIH = {
 		effect_starting_technology_tier_goblin_tech = yes
 		effect_starting_politics_traditional = yes
+		effect_starting_consumption_based_taxation_corsair = yes
 
 		add_technology_researched = international_relations
 		add_technology_researched = colonization
@@ -22,7 +23,6 @@ COUNTRIES = {
 		activate_law = law_type:law_slave_trade
 		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_no_police
-		activate_law = law_type:law_consumption_based_taxation_corsair
 		activate_law = law_type:law_tenant_farmers
 		activate_law = law_type:law_no_magic
 		activate_law = law_type:law_mercantilism
