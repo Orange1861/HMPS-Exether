@@ -21,6 +21,18 @@
 	activate_law = law_type:law_homesteading
 }
 
+effect_starting_per_capita_tax = {
+	activate_law = law_type:law_per_capita_based_taxation
+	activate_law = law_type:law_low_income_tax
+	activate_law = law_type:law_moderate_consumption_tax
+}
+
+effect_starting_land_tax = {
+	activate_law = law_type:law_land_based_taxation
+	activate_law = law_type:law_low_income_tax
+	activate_law = law_type:law_moderate_consumption_tax
+}
+
 effect_starting_consumption_based_taxation_corsair = {
 	activate_law = law_type:law_consumption_based_taxation_corsair
 	activate_law = law_type:law_no_income_taxes
