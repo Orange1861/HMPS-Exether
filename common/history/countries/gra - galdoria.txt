@@ -1,7 +1,8 @@
 ﻿COUNTRIES = {
 	c:GRA ?= {
 		effect_starting_technology_tier_3_tech = yes
-
+		effect_starting_per_capita_tax = yes
+		
 		set_ruling_interest_groups = {
         	ig_petty_bourgeoisie
         }
