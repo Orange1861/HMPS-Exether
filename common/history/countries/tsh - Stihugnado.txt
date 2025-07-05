@@ -20,9 +20,11 @@
 		
 		effect_starting_technology_tier_orc_tech = yes
 		effect_starting_politics_reactionary = yes
+		
+		effect_starting_per_capita_tax = yes
 
 		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_republic
 		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_slavery_banned
 		activate_law = law_type:law_national_guard

@@ -3,6 +3,8 @@ COUNTRIES = {
 
 		effect_starting_technology_tier_2_tech = yes
 		
+		effect_starting_land_tax = yes
+		
 		add_technology_researched = screw_frigate
 		add_technology_researched = power_of_the_purse
 		add_technology_researched = hydraulic_cranes
@@ -12,7 +14,7 @@ COUNTRIES = {
 		add_technology_researched = central_archives
 		add_technology_researched = organized_adventuring
 
-		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_republic
 		activate_law = law_type:law_ecumenical_recognition
 		activate_law = law_type:law_tenant_farmers
 		activate_law = law_type:law_cultural_exclusion # English & Anglo-Indian supremacy; no Indians served in the upper echelons of government
