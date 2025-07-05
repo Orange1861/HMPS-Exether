@@ -5,7 +5,10 @@
 	female_ruler = "RULER_TITLE_CHIEF_ENGINEER"
 	
 	possible = {
-		has_law = law_type:law_parliamentary_republic
+		AND = {
+			has_law = law_type:law_republic
+			has_law = law_type:law_parliamentary_system
+		}
 		has_law = law_type:law_technocracy
 	}
 
@@ -24,7 +27,10 @@ gov_parliamentary_dictatorship = {
 	female_ruler = "RULER_TITLE_LADY_PROTECTOR"
 	
 	possible = {
-		has_law = law_type:law_parliamentary_republic
+		AND = {
+			has_law = law_type:law_republic
+			has_law = law_type:law_parliamentary_system
+		}
 		has_law = law_type:law_autocracy 
 	}
 
@@ -36,46 +42,36 @@ gov_parliamentary_dictatorship = {
 	}
 }
 
-gov_parliamentary_oligarchy = {
+gov_oligarchy = {
 	transfer_of_power = dictatorial
-
-	male_ruler = "RULER_TITLE_CHANCELLOR"
-	female_ruler = "RULER_TITLE_CHANCELLOR"
-	
-	possible = {
-		has_law = law_type:law_parliamentary_republic
-		country_has_voting_franchise = no
-	}
-
-	on_government_type_change = {
-		change_to_dictatorial = yes
-	}
-	on_post_government_type_change = {
-		post_change_to_dictatorial = yes
-	}
-}
-
-gov_parliamentary_single_party_state = {
-	transfer_of_power = presidential_elective
 	new_leader_on_reform_government = yes
 
 	male_ruler = "RULER_TITLE_CHANCELLOR"
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_parliamentary_republic
-		has_law = law_type:law_single_party_state
+		has_law = law_type:law_republic
+		has_law = law_type:law_oligarchy 
+		has_law = law_type:law_parliamentary_system
+		country_has_voting_franchise = no
+		NOT = {
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_dominion
+			}
+		}
 	}
-
+	
 	on_government_type_change = {
-		change_to_presidential_elective = yes
+		change_to_dictatorial = yes
 	}
+	
 	on_post_government_type_change = {
-		post_change_to_presidential_elective = yes
+		post_change_to_dictatorial = yes
 	}
 }
 
-gov_parliamentary_democracy = {
+gov_parliamentary_democracy_aristocratic = {
 	transfer_of_power = parliamentary_elective
 	new_leader_on_reform_government = yes
 
@@ -83,16 +79,83 @@ gov_parliamentary_democracy = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_parliamentary_republic
+		has_law = law_type:law_republic
+		has_law = law_type:law_parliamentary_system
+		has_law = law_type:law_hereditary_bureaucrats
 		country_has_voting_franchise = yes
-		NOT = { 
-			has_law = law_type:law_single_party_state
+		NOT = { has_law = law_type:law_vanguardism }
+		NOT = {
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_dominion
+			}
 		}
 	}
-
+	
 	on_government_type_change = {
 		change_to_parliamentary_elective = yes
 	}
+	
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
+	}
+}
+
+gov_parliamentary_democracy_unitary = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_TITLE_CHANCELLOR"
+	female_ruler = "RULER_TITLE_CHANCELLOR"
+	
+	possible = {
+		has_law = law_type:law_republic
+		has_law = law_type:law_parliamentary_system
+		has_law = law_type:law_appointed_bureaucrats
+		country_has_voting_franchise = yes
+		NOT = { has_law = law_type:law_vanguardism }
+		NOT = {
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_dominion
+			}
+		}
+	}
+	
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
+	}
+}
+
+gov_parliamentary_democracy_federal = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_TITLE_CHANCELLOR"
+	female_ruler = "RULER_TITLE_CHANCELLOR"
+	
+	possible = {
+		has_law = law_type:law_republic
+		has_law = law_type:law_parliamentary_system
+		has_law = law_type:law_elected_bureaucrats
+		country_has_voting_franchise = yes
+		NOT = { has_law = law_type:law_vanguardism }
+		NOT = {
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_dominion
+			}
+		}
+	}
+	
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	
 	on_post_government_type_change = {
 		post_change_to_parliamentary_elective = yes
 	}
