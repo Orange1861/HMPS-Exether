@@ -1,6 +1,7 @@
 ﻿COUNTRIES = {
 	c:DKO ?= {
 		effect_starting_technology_tier_3_tech = yes
+		effect_starting_per_capita_tax = yes
 
 		ig:ig_petty_bourgeoisie ?= {
 			add_ruling_interest_group = yes

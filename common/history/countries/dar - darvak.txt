@@ -1,6 +1,7 @@
 ﻿COUNTRIES = {
 	c:DAR = {
 		effect_starting_technology_tier_1_tech = yes
+		effect_starting_per_capita_tax = yes
 
 		ig:ig_industrialists ?= {
 			add_ruling_interest_group = yes

@@ -2,10 +2,12 @@
 	c:DRK = {
 		add_technology_researched = modern_sewerage
 		effect_starting_technology_tier_3_tech = yes
+		effect_starting_per_capita_tax = yes
 		add_technology_researched = empiricism
 		
 		# Laws 
-		activate_law = law_type:law_parliamentary_republic 
+		activate_law = law_type:law_republic
+		activate_law = law_type:law_parliamentary_system 
 		activate_law = law_type:law_census_voting
 		activate_law = law_type:law_no_workers_rights
 		activate_law = law_type:law_per_capita_based_taxation
