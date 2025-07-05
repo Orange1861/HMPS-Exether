@@ -106,8 +106,7 @@ law_per_capita_based_taxation = {
 }
 
 law_consumption_based_taxation_corsair = {
-	group = lawgroup_taxation
-	parent = law_consumption_based_taxation
+	group = lawgroup_poll_tax
 	
 	progressiveness = -100
 	
@@ -115,7 +114,7 @@ law_consumption_based_taxation_corsair = {
 	
 	modifier = {
 		state_bureaucracy_population_base_cost_factor_mult = -0.2
-		country_consumption_tax_cost_mult = -0.2
+		country_consumption_tax_cost_mult = -0.3
 		state_tax_capacity_mult = 0.05
 		state_lower_strata_standard_of_living_add = -1.5
 		state_middle_strata_standard_of_living_add = -1.0
@@ -138,27 +137,27 @@ law_consumption_based_taxation_corsair = {
 	}
 	
 	tax_modifier_very_low = {
-		tax_consumption_add = 0.05
+		tax_consumption_add = 0.025
 		tax_land_add = 0.20
 	}	
 	
 	tax_modifier_low = {
-		tax_consumption_add = 0.1
+		tax_consumption_add = 0.05
 		tax_land_add = 0.275
 	}
 	
 	tax_modifier_medium = {
-		tax_consumption_add = 0.2
+		tax_consumption_add = 0.1
 		tax_land_add = 0.35
 	}	
 	
 	tax_modifier_high = {
-		tax_consumption_add = 0.275
+		tax_consumption_add = 0.15
 		tax_land_add = 0.425
 	}
 	
 	tax_modifier_very_high = {
-		tax_consumption_add = 0.35
+		tax_consumption_add = 0.2
 		tax_land_add = 0.5
 	}	
 	
