@@ -34,14 +34,20 @@ law_environmental_regulation = {
 		law_laissez_faire
 	}
 	modifier = {
-		state_pollution_reduction_health_mult = -0.1
-		state_veil_integrity_contribution_mult = -0.25
+		country_institution_environmental_regulations_max_investment_add = 5
+		state_veil_integrity_contribution_mult = -0.15
 		state_adventurer_coverage_mult = 0.1
-		building_group_bg_light_industry_throughput_add = -0.05
-		building_group_bg_heavy_industry_throughput_add = -0.05
+		building_group_bg_light_industry_throughput_add = -0.04
+		building_group_bg_heavy_industry_throughput_add = -0.04
 		building_group_bg_magic_light_industry_throughput_add = -0.05
 		building_group_bg_magic_heavy_industry_throughput_add = -0.05
+		building_group_bg_mining_throughput_add = -0.04
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04	
 	}
+	
+	institution = institution_environmental_regulations
+		
 	ai_enact_weight_modifier = {
 		#Petitions
 		value = 0
@@ -120,7 +126,7 @@ law_magic_banned = {
 	modifier = {
 		building_group_bg_light_industry_throughput_add = 0.05
 		building_group_bg_heavy_industry_throughput_add = 0.05
-		state_pollution_reduction_health_mult = 0.1
+		state_pollution_reduction_health_mult = 0.5
 		interest_group_ig_intelligentsia_pol_str_mult = 0.25
 		country_production_tech_research_speed_mult = -0.25
 		country_production_tech_spread_mult = -0.25
@@ -208,6 +214,7 @@ law_industry_banned = {
 		country_production_tech_spread_mult = -0.25
 		state_peasants_education_access_add = -0.1
 		country_economic_dependence_on_overlord_add = -0.5
+		state_pollution_reduction_health_mult = 0.5
 	}
 	ai_will_do = {
 		OR = {
