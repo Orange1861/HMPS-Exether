@@ -7,9 +7,7 @@
 		law_plutocracy = neutral
 		law_monarchy = neutral
 		law_theocracy = neutral	
-		law_presidential_republic = disapprove
-		law_parliamentary_republic = disapprove
-		law_council_republic = disapprove
+		law_republic = disapprove
 	}
 
 	lawgroup_magic = {
@@ -45,9 +43,7 @@ ideology_anti_magic_movement = {
 		law_plutocracy = neutral
 		law_monarchy = neutral
 		law_theocracy = neutral	
-		law_presidential_republic = neutral
-		law_parliamentary_republic = neutral
-		law_council_republic = neutral
+		law_republic = neutral
 	}
 
 	lawgroup_magic = {
@@ -83,9 +79,7 @@ ideology_late_anti_magic_movement = {
 		law_plutocracy = neutral
 		law_monarchy = neutral
 		law_theocracy = neutral	
-		law_presidential_republic = neutral
-		law_parliamentary_republic = neutral
-		law_council_republic = neutral
+		law_republic = neutral
 	}
 
 	lawgroup_magic = {
@@ -125,18 +119,6 @@ ideology_anarchist_movement = {
 		law_multicultural = strongly_approve	
 	}	
 
-	lawgroup_distribution_of_power = {
-		law_anarchy = strongly_approve
-		law_universal_suffrage = neutral
-		law_census_voting = disapprove
-		law_wealth_voting = disapprove
-		law_landed_voting = disapprove
-		law_technocracy = strongly_disapprove
-		law_oligarchy = strongly_disapprove
-		law_autocracy = strongly_disapprove	
-		law_single_party_state = disapprove		
-	}
-
 	lawgroup_economic_system = {	
 		law_cooperative_ownership = strongly_approve
 		law_command_economy = disapprove
@@ -147,67 +129,54 @@ ideology_anarchist_movement = {
 		law_industry_banned = disapprove
 		law_extraction_economy = strongly_disapprove
 	}
-
-	lawgroup_army_model = {
-		law_national_militia = strongly_approve
-		law_professional_army = neutral
-		law_mass_conscription = disapprove
-		law_peasant_levies = strongly_disapprove
-	}
-
-	lawgroup_free_speech = {
-		law_protected_speech = strongly_approve
-		law_right_of_assembly = approve
-		law_censorship = disapprove
-		law_outlawed_dissent = strongly_disapprove
-	}
-
-	lawgroup_policing = {
-		law_no_police = approve
-		law_pest_control = neutral
-		law_local_police = disapprove
-		law_dedicated_police = disapprove
-		law_militarized_police = strongly_disapprove
-	}
-
-	lawgroup_governance_principles = {
-		law_monarchy = strongly_disapprove
-		law_magocracy = strongly_disapprove
-		law_presidential_republic = disapprove
-		law_parliamentary_republic = disapprove
-		law_corporate_state = strongly_disapprove
-		law_plutocracy = strongly_disapprove
-		law_theocracy = strongly_disapprove
-		law_council_republic = strongly_approve
-	}
-}
-
-ideology_radical_movement = {
-	icon = "gfx/interface/icons/ideology_icons/radical.dds"
 	
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_magocracy = strongly_disapprove
-		law_council_republic = disapprove
-		law_plutocracy = disapprove			
-		law_presidential_republic = approve
-		law_parliamentary_republic = strongly_approve
-		law_corporate_state = neutral
+		law_plutocracy = disapprove	
+		law_republic = strongly_approve
+		law_corporate_state = strongly_disapprove
 	}
 	
 	lawgroup_distribution_of_power = {
 		law_universal_suffrage = strongly_approve
 		law_census_voting = approve
 		law_wealth_voting = neutral
-		law_technocracy = disapprove
 		law_landed_voting = disapprove
+		law_clerical_voting = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
-		law_single_party_state = disapprove
+		law_vanguardism = strongly_disapprove
+		law_technocracy = disapprove
+	}
+	
+	lawgroup_debt = {
+		law_peonage = strongly_disapprove
+	}
+	
+	lawgroup_voting_system = {
+		law_no_voting = strongly_disapprove
+		law_plurality = disapprove
+		law_single_transferable_vote = approve
+		law_jefferson_method = approve
+		law_pure_proportional = approve
+	}
+	
+	lawgroup_cameralism = {
+		law_no_legislature = strongly_disapprove
+		law_unicameralism = approve
+		law_asymmetric_bicameralism = approve
+		law_symmetric_bicameralism = strongly_approve
 	}
 
+	lawgroup_poll_tax = {
+		law_no_poll_taxes = approve
+		law_land_based_taxation = disapprove
+		law_per_capita_based_taxation = neutral
+	}
+	
 	lawgroup_free_speech = {
 		law_protected_speech = strongly_approve
 		law_right_of_assembly = approve
@@ -226,9 +195,82 @@ ideology_radical_movement = {
 		law_public_schools = approve
 		law_private_schools = neutral
 		law_no_schools = disapprove
-		law_religious_schools = disapprove	
-		law_magical_schools = disapprove	
-	}	
+		law_religious_schools = disapprove
+		law_magical_schools = disapprove
+	}		
+	
+	lawgroup_policing = {
+		law_no_police = approve
+		law_pest_control = neutral
+		law_dedicated_police = disapprove
+		law_local_police = strongly_disapprove
+		law_militarized_police = strongly_disapprove
+	}		
+}
+
+ideology_radical_movement = {
+	icon = "gfx/interface/icons/ideology_icons/radical.dds"
+	
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_disapprove
+		law_theocracy = strongly_disapprove
+		law_magocracy = strongly_disapprove
+		law_plutocracy = disapprove	
+		law_republic = strongly_approve
+		law_corporate_state = strongly_disapprove
+	}
+	
+	lawgroup_distribution_of_power = {
+		law_universal_suffrage = strongly_approve
+		law_census_voting = approve
+		law_wealth_voting = neutral
+		law_landed_voting = disapprove
+		law_clerical_voting = strongly_disapprove
+		law_anarchy = strongly_disapprove
+		law_oligarchy = strongly_disapprove
+		law_autocracy = strongly_disapprove
+		law_vanguardism = strongly_disapprove
+		law_technocracy = disapprove
+	}
+	
+	lawgroup_debt = {
+		law_peonage = strongly_disapprove
+	}
+	
+	lawgroup_voting_system = {
+		law_no_voting = strongly_disapprove
+		law_plurality = disapprove
+		law_single_transferable_vote = approve
+		law_jefferson_method = approve
+		law_pure_proportional = approve
+	}
+	
+	lawgroup_cameralism = {
+		law_no_legislature = strongly_disapprove
+		law_unicameralism = approve
+		law_asymmetric_bicameralism = approve
+		law_symmetric_bicameralism = strongly_approve
+	}
+
+	lawgroup_poll_tax = {
+		law_no_poll_taxes = approve
+		law_land_based_taxation = disapprove
+		law_per_capita_based_taxation = neutral
+	}
+	
+	lawgroup_free_speech = {
+		law_protected_speech = strongly_approve
+		law_right_of_assembly = approve
+		law_censorship = disapprove
+		law_outlawed_dissent = strongly_disapprove
+	}
+	
+	lawgroup_internal_security = {
+		law_guaranteed_liberties = strongly_approve
+		law_no_home_affairs = approve
+		law_national_guard = strongly_disapprove
+		law_secret_police = strongly_disapprove
+	}
 	
 	lawgroup_policing = {
 		law_no_police = approve
