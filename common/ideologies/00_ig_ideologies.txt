@@ -539,6 +539,18 @@ ideology_moralist = {
 ideology_meritocratic = {
 	icon = "gfx/interface/icons/ideology_icons/meritocratic.dds"
 
+	lawgroup_distribution_of_power = {
+		law_universal_suffrage = neutral
+		law_census_voting = approve
+		law_wealth_voting = strongly_approve
+		law_landed_voting = approve
+		law_technocracy = approve
+		law_clerical_voting = disapprove
+		law_oligarchy = neutral
+		law_autocracy = disapprove
+		law_anarchy = strongly_disapprove
+		law_vanguardism = strongly_disapprove
+	}
 	
 	lawgroup_executive_structure = {
 		law_independent_executive = neutral
