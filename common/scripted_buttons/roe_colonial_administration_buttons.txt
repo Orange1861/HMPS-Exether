@@ -90,7 +90,8 @@
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
-				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_republic
+				activate_law = law_type:law_independent_executive
 			}
 		}
 		hidden_effect = {
@@ -197,7 +198,8 @@ je_colonial_administration_button_dreamweaver_jungle = {
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
-				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_republic
+				activate_law = law_type:law_independent_executive			
 			}
 		}
 		hidden_effect = {
@@ -304,7 +306,8 @@ je_colonial_administration_button_mindrend_sands = {
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
-				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_republic
+				activate_law = law_type:law_independent_executive			
 			}
 		}
 		hidden_effect = {
@@ -408,7 +411,8 @@ je_colonial_administration_button_scalethane_realms = {
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
-				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_republic
+				activate_law = law_type:law_independent_executive			
 			}
 		}
 		hidden_effect = {
@@ -514,7 +518,8 @@ je_colonial_administration_button_new_dumonia = {
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
-				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_republic
+				activate_law = law_type:law_independent_executive	
 			}
 		}
 		hidden_effect = {
@@ -620,7 +625,8 @@ je_colonial_administration_button_thoughtsmith_ridge = {
 					remove_variable = state_to_cede
 				}
 				activate_law = law_type:law_frontier_colonization
-				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_republic
+				activate_law = law_type:law_independent_executive			
 			}
 		}
 		hidden_effect = {
