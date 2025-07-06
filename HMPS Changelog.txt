@@ -155,6 +155,14 @@ Modified common\history\countries\btr - bonetide raiders, common\history\countri
 
 - They have correct corsair tax laws
 
+Modified common/ideologies
+
+- All files overriden, added HMPS laws to most ig groups
+
+Modified common/technology\technologies\10_production
+
+- Ported over HMPS EOW changes
+
 Ported over HMPS defines
 
 - Some stability and law changes
@@ -175,7 +183,6 @@ Ported over HMPS gfx/interface/icons/law_icons
 TODO:
 
 Go through ROE laws for balance
-Go through ig traits to apply tax laws
 Tech Cost?
 Port over HMPS's economy of scale changes to production tech
 Port HMPS UI changes like GDP ownership
