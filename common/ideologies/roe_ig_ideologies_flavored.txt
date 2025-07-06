@@ -4,13 +4,42 @@
 	lawgroup_distribution_of_power = {
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
-		law_single_party_state = disapprove
+		law_vanguardism = disapprove
 		law_landed_voting = neutral
 		law_wealth_voting = neutral
 		law_census_voting = disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+	}
+	
+	lawgroup_executive_structure = {
+		law_independent_executive = strongly_approve
+		law_dual_executive = approve
+		law_parliamentary_system = neutral
+		law_council_republic = strongly_disapprove
+		law_single_party_state = strongly_disapprove
+	}
+	
+	lawgroup_poll_tax = {
+		law_per_capita_based_taxation = disapprove
+		law_no_poll_taxes = neutral
+		law_land_based_taxation = strongly_approve
+	}
+	
+	lawgroup_voting_system = {
+		law_no_voting = strongly_approve
+		law_plurality = approve
+		law_single_transferable_vote = neutral
+		law_jefferson_method = disapprove
+		law_pure_proportional = strongly_disapprove
+	}
+	
+	lawgroup_debt = {
+		law_peonage = strongly_approve
+		law_debtors_prisons = approve
+		law_chartered_mandates = neutral
+		law_limited_liability = disapprove
 	}
 
 	lawgroup_rights_of_women = {
@@ -44,9 +73,24 @@ ideology_theocratic_moralist = {
 		law_chiefdom = approve
 		law_theocracy = strongly_approve
 		law_plutocracy = neutral
-		law_presidential_republic = neutral
-		law_parliamentary_republic = neutral
+		law_republic = disapprove
+		law_magocracy = disapprove
+	}
+	
+	lawgroup_executive_structure = {
+		law_independent_executive = strongly_approve
+		law_dual_executive = approve
+		law_parliamentary_system = neutral
 		law_council_republic = strongly_disapprove
+		law_single_party_state = strongly_disapprove
+	}
+	
+	lawgroup_voting_system = {
+		law_no_voting = strongly_approve
+		law_plurality = approve
+		law_single_transferable_vote = neutral
+		law_jefferson_method = disapprove
+		law_pure_proportional = strongly_disapprove
 	}
 
 	lawgroup_church_and_state = {
@@ -75,9 +119,51 @@ ideology_plutocratic_moralist = {
 		law_chiefdom = approve
 		law_theocracy = approve
 		law_plutocracy = strongly_approve
-		law_presidential_republic = neutral
-		law_parliamentary_republic = neutral
+		law_republic = neutral
+		law_magocracy = disapprove
+	}
+	
+	lawgroup_executive_structure = {
+		law_independent_executive = strongly_approve
+		law_dual_executive = approve
+		law_parliamentary_system = neutral
 		law_council_republic = strongly_disapprove
+		law_single_party_state = strongly_disapprove
+	}
+	
+	lawgroup_voting_system = {
+		law_no_voting = approve
+		law_plurality = approve
+		law_single_transferable_vote = neutral
+		law_jefferson_method = disapprove
+		law_pure_proportional = strongly_disapprove
+	}
+	
+	lawgroup_labor_rights = {
+		law_no_workers_rights = approve
+		law_regulatory_bodies = disapprove
+		law_worker_protections = strongly_disapprove
+	}
+	
+	lawgroup_minimum_wage = {
+		law_no_minimum_wage = approve
+		law_low_minimum_wage = neutral
+		law_moderate_minimum_wage = disapprove
+		law_high_minimum_wage = strongly_disapprove
+	}
+
+	lawgroup_welfare = {
+		law_no_social_security = approve
+		law_poor_laws = neutral
+		law_wage_subsidies = disapprove
+		law_old_age_pension = disapprove
+	}
+	
+	lawgroup_corporation_tax = {
+		law_no_corporation_taxes = approve
+		law_low_corporation_tax = neutral
+		law_moderate_corporation_tax = disapprove
+		law_high_corporation_tax = strongly_disapprove
 	}
 
 	lawgroup_church_and_state = {
@@ -165,13 +251,12 @@ ideology_ecumenical_moralist = {
 ideology_loyalist_bandit = {
 	icon = "gfx/interface/icons/ideology_icons/loyalist.dds"
 
-	lawgroup_taxation = {
-		law_per_capita_based_taxation = approve
-		law_proportional_taxation = approve
-		law_graduated_taxation = approve
-		law_land_based_taxation = neutral
-		law_consumption_based_taxation = strongly_approve
+	lawgroup_poll_tax = {
+		law_no_poll_taxes = approve
+		law_land_based_taxation = disapprove
+		law_per_capita_based_taxation = neutral
 	}
+	
 	lawgroup_magic = {
 		law_no_magic = neutral
 		law_divine_miracles = neutral
@@ -202,13 +287,20 @@ ideology_bandits = {
 	lawgroup_distribution_of_power = {
 		law_landed_voting = approve
 		law_autocracy = strongly_approve
-		law_single_party_state = approve
+		law_vanguardism = approve
 		law_oligarchy = strongly_approve
 		law_technocracy = neutral
 		law_wealth_voting = neutral
 		law_census_voting = disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_approve
+	}
+	
+	lawgroup_poll_tax = {
+		law_no_poll_taxes = neutral
+		law_land_based_taxation = strongly_disapprove
+		law_per_capita_based_taxation = strongly_disapprove
+		law_consumption_based_taxation_corsair = strongly_approve
 	}
 	
 }

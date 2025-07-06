@@ -2,6 +2,7 @@
 	c:THI = {
 		effect_starting_technology_tier_3_tech = yes
 		add_technology_researched = napoleonic_warfare
+		effect_starting_per_capita_tax = yes
 		
 		# Laws 
 		activate_law = law_type:law_theocracy
