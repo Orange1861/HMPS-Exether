@@ -77,11 +77,9 @@ je_abolish_monarchy = {
 
 	invalid = {
 		NOR = {
-			is_enacting_law = law_type:law_presidential_republic
-			is_enacting_law = law_type:law_parliamentary_republic
+			is_enacting_law = law_type:law_republic
 			is_enacting_law = law_type:law_council_republic
-			has_law = law_type:law_presidential_republic
-			has_law = law_type:law_parliamentary_republic
+			has_law = law_type:law_republic
 			has_law = law_type:law_council_republic
 		}
 	}
