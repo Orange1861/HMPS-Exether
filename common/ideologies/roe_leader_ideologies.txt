@@ -276,7 +276,10 @@ ideology_magillismo = {
 				owner = {
 					has_law = law_type:law_magic_schools
 					has_law = law_type:law_court_mages
-					has_law = law_type:law_presidential_republic
+					AND = {
+						has_law = law_type:law_republic
+						has_law = law_type:law_independent_executive
+					}
 				}
 			}
 			add = -75
