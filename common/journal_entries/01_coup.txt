@@ -28,33 +28,33 @@
 			}
 			random_law = {
 				limit = {
-					type = law_type:law_presidential_republic
+					type = law_type:law_republic
 				}
 				save_scope_as = coup_desired_law
 			}
 		}
-		else_if = {
-			limit = {
-				var:coup_for_law = 3
-			}
-			random_law = {
-				limit = {
-					type = law_type:law_council_republic
-				}
-				save_scope_as = coup_desired_law
-			}
-		}
-		else_if = {
-			limit = {
-				var:coup_for_law = 4
-			}
-			random_law = {
-				limit = {
-					type = law_type:law_parliamentary_republic
-				}
-				save_scope_as = coup_desired_law
-			}
-		}
+		#else_if = {
+		#	limit = {
+		#		var:coup_for_law = 3
+		#	}
+		#	random_law = {
+		#		limit = {
+		#			type = law_type:law_council_republic
+		#		}
+		#		save_scope_as = coup_desired_law
+		#	}
+		#}
+		#else_if = {
+		#	limit = {
+		#		var:coup_for_law = 4
+		#	}
+		#	random_law = {
+		#		limit = {
+		#			type = law_type:law_parliamentary_system
+		#		}
+		#		save_scope_as = coup_desired_law
+		#	}
+		#}
 		else_if = {
 			limit = {
 				var:coup_for_law = 5
