@@ -640,10 +640,7 @@
 					}
 				}
 				scope:target_country = {
-					OR = {
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_presidential_republic
-					}
+					has_law = law_type:law_republic
 				}
 			}
 			add = {
