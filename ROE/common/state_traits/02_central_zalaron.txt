@@ -1,0 +1,120 @@
+﻿state_trait_dark_morass = {
+	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
+	disabling_technologies = {
+		"railways"
+	}
+	modifier = {
+		state_construction_mult = -0.15
+		state_infrastructure_mult = -0.15
+	}
+}
+
+state_trait_starshimmer_pool = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 20
+	}	
+}
+
+state_trait_chin_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	
+	modifier = {
+        building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_agriculture_throughput_add = -0.2
+		building_group_bg_plantations_throughput_add = -0.2
+		state_construction_mult = -0.25
+		state_infrastructure_mult = -0.25
+	}
+}
+
+state_trait_inland_state = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_building_shipyards_max_level_add = -99
+		state_building_naval_base_max_level_add = -99
+		state_building_military_shipyards_max_level_add = -99
+	}	
+}
+
+#Vermillion Thicket
+state_trait_hostile_flora = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+
+    required_techs_for_colonization = { "flamethrowers" }
+	modifier = {
+		state_construction_mult = -0.30
+		state_infrastructure_mult = -0.30
+        state_non_homeland_colony_growth_speed_mult = -0.30
+        state_non_homeland_mortality_mult = 0.30
+		goods_output_hardwood_mult = 0.25
+	}
+}
+
+state_trait_leechgardens = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
+
+	modifier = {
+		building_group_bg_rice_farms_leechgardens_throughput_add = 0.15
+	}
+}
+
+state_trait_feylight_forest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.20
+		building_group_bg_hunting_throughput_add = 0.20
+		state_harvest_condition_living_trees_duration_mult = 0.3
+	}
+}
+
+state_trait_frayed_veil = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+
+	required_techs_for_colonization = { "veil_1"  }
+		disabling_technologies = {
+		"veil_2"
+	}
+
+	modifier = {
+		state_non_homeland_mortality_mult = 0.15
+		building_group_bg_agriculture_throughput_add = -0.15
+		building_group_bg_plantations_throughput_add = -0.15
+		building_haunted_grounds_throughput_add = 0.15
+	}
+}
+
+state_trait_fractured_veil = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+
+	required_techs_for_colonization = { "veil_2"  }
+	disabling_technologies = {
+		"veil_3"
+	}
+	modifier = {
+		state_non_homeland_mortality_mult = 0.15
+		building_haunted_grounds_throughput_add = 0.30
+		state_harvest_condition_caelum_radiation_duration_mult = 0.5
+	}
+}
+
+state_trait_twilan_sulfur_deposits = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_sulfur_mine_throughput_add = 0.20
+    }
+}
+
+state_trait_borasak = {
+    icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+		
+	modifier = {
+		state_building_underways_max_level_add = 10
+		state_infrastructure_mult = 0.10
+		battle_offense_owned_province_mult = 0.20
+		battle_defense_owned_province_mult = 0.20
+	}
+}

@@ -1,0 +1,272 @@
+﻿# prestige_goods types
+
+prestige_good_generic_chimesilt = {
+	base_good = opium
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/chimesilt_prestige_1.dds"
+}
+
+prestige_good_bengal_opium = {
+	base_good = opium
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/chimesilt_prestige_2.dds"
+}
+
+prestige_good_rare_chimesilt = {
+	base_good = opium
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/chimesilt_prestige_3.dds"
+}
+
+prestige_good_generic_cloudsilver = {
+	base_good = cloudsilver
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/nimbium.dds"
+}
+
+prestige_good_gnome_thaumacores = {
+	base_good = thaumacores
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/thaumacore_prestige_2.dds"
+}
+
+prestige_good_generic_thaumacores = {
+	base_good = thaumacores
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/thaumacore_prestige_1.dds"
+}
+
+prestige_good_uncommon_thaumacores = {
+	base_good = thaumacores
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/thaumacore_prestige_3.dds"
+}
+
+prestige_good_generic_ectoplasm = {
+	base_good = ectoplasm
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ectoprestige.dds"
+}
+
+prestige_good_dragon_trinkets = {
+	base_good = trinkets
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/trinket_prestige_1.dds"
+}
+
+prestige_good_bataji_trinkets = {
+	base_good = trinkets
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/trinket_prestige_2.dds"
+}
+
+prestige_good_ankylosaur_steaks = {
+	base_good = meat
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/river_plate_beef_prestige.dds"
+}
+
+prestige_good_uncommon_ectoplasm = {
+	base_good = ectoplasm
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ectoplasm_prestige.dds"
+}
+
+prestige_good_generic_airships = {
+	base_good = airships
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/airship_prestige_2.dds"
+}
+
+prestige_good_uncommon_airships = {
+	base_good = airships
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/airship_prestige_1.dds"
+}
+
+prestige_good_generic_gizmos = {
+	base_good = gizmos
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_gizmo_2.dds"
+}
+
+prestige_good_uncommon_gizmos = {
+	base_good = gizmos
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_gizmo_1.dds"
+}
+
+prestige_good_thunder_gear_gizmo = {
+	base_good = gizmos
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/gizmo_prestige_thundergear.dds"
+}
+
+
+prestige_good_zitci_gizmos = {
+	base_good = gizmos
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_gizmo_1.dds"
+}
+
+prestige_good_generic_wishstone = {
+	base_good = wishstone
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/wishtone_prestige_3.dds"
+}
+
+prestige_good_uncommon_wishstone = {
+	base_good = wishstone
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/wishtone_prestige_1.dds"
+}
+
+prestige_good_rare_wishstone = {
+	base_good = wishstone
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/wishstone_prestige_2.dds"
+}
+
+prestige_good_generic_monster_essence = {
+	base_good = monster_essence
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_2.dds"
+}
+
+prestige_good_uncommon_monster_essence = {
+	base_good = monster_essence
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_1.dds"
+}
+
+prestige_good_direwolf_essence = {
+	base_good = monster_essence
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_1.dds"
+}
+
+prestige_good_griffon_essence = {
+	base_good = monster_essence
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_1.dds"
+}
+
+prestige_good_generic_potions = {
+	base_good = potions
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_1.dds"
+}
+
+prestige_good_uncommon_potions = {
+	base_good = potions
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_2.dds"
+}
+
+prestige_good_rare_potions = {
+	base_good = potions
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_3.dds"
+}
+
+prestige_good_xxx_potions = {
+	base_good = potions
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_4.dds"
+}
+
+prestige_good_generic_luxury_potions = {
+	base_good = luxury_potions
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/luxurypotion_prestige_2.dds"
+}
+
+prestige_good_jingleroot_potions = {
+	base_good = luxury_potions
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/luxurypotion_prestige_2.dds"
+}
+
+prestige_good_boars_delight = {
+	base_good = luxury_potions
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/luxurypotion_prestige_1.dds"
+}
+
+prestige_good_cerunite_sulfur = {
+	base_good = sulfur
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sicilian_sulfur_prestige.dds"
+}
+
+prestige_good_generic_cloudpiercers = {
+	base_good = aeroplanes
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cloudpiercer_prestige.dds"
+}
+
+prestige_good_generic_blubber = {
+	base_good = blubber
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/blubber_prestige.dds"
+}
+
+prestige_good_generic_ammunition = {
+	base_good = ammunition
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ammunition_prestige_1.dds"
+}
+
+prestige_good_uncommon_ammunition = {
+	base_good = ammunition
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ammunition_prestige_2.dds"
+}
+
+prestige_good_honey = {
+	base_good = sugar
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/honey_icon.dds"
+}
+
+prestige_good_icebreaker_ships = {
+	base_good = ironclads
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/armstrong_ships_prestige.dds"
+}
+
+prestige_good_shrimp = {
+	base_good = fish
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/brine_shrimp.dds"
+}
+
+# prestige_good_rusttails = {   #CAN'T HAVE MORE THAN 3 CONSUMABLE PRESTIGE GOOD VARIANTS PER GOOD
+# 	base_good = fish
+# 	prestige_bonus = 0.1
+# 	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_rusttails.dds"
+# }
+
+prestige_good_leeches = {
+	base_good = fish
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_leeches.dds"
+}
+
+prestige_good_wyrmfruit = {
+	base_good = fruit
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_wyrmfruit.dds"
+}
+
+prestige_good_songberries = {
+	base_good = fruit
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_songberries.dds"
+}
+
+prestige_good_furs = {
+	base_good = fabric
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_furs.dds"
+}

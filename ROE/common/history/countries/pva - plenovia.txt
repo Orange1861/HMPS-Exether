@@ -1,0 +1,42 @@
+﻿COUNTRIES = {
+	c:PVA ?= {
+
+		effect_has_flavored_interest_groups = yes 
+
+		effect_starting_technology_tier_druid_tech = yes
+
+
+		add_journal_entry = {
+			type = je_winds_of_change
+		}
+
+		activate_law = law_type:law_chiefdom
+		activate_law = law_type:law_elder_council
+		activate_law = law_type:law_industry_banned
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_druidic_circles
+
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 1
+		}
+
+		set_institution_investment_level = {
+			institution = institution_magical_focus
+			level = 1
+		}
+
+		ig:ig_clans ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+	}
+}

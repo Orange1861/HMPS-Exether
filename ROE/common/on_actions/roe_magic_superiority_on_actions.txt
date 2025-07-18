@@ -1,0 +1,488 @@
+on_battle_started = {
+    on_actions = {
+        ROE_on_battle_started_magic_superiority
+    }
+}
+
+on_battle_ended = {
+    on_actions = {
+        ROE_on_battle_ended_magic_superiority
+    }
+}
+
+# root = defender
+# enemy_country = attacker
+ROE_on_battle_started_magic_superiority = {
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = evaluated_battles
+						target = scope:battle
+					}
+				}
+			}
+			root = {
+				save_scope_as = attacking_country
+			}
+			scope:enemy_country = {
+				save_scope_as = defending_country
+
+			}
+			scope:battle = {
+				add_to_global_variable_list = {
+					name = evaluated_battles
+					target = this
+				}
+				set_local_variable = {
+					name  = total_attacker_magic
+					value = {
+						value = scope:attacking_country.modifier:country_magic_superiority_base
+						min = 10
+					}
+				}
+				set_local_variable = {
+					name  = total_defender_magic
+					value = {
+						value = scope:defending_country.modifier:country_magic_superiority_base
+						min = 10
+					}
+				}
+				set_local_variable = {
+					name  = total_attacker_magic_resistance
+					value = 0
+				}
+				set_local_variable = {
+					name  = total_defender_magic_resistance
+					value = 0
+				}
+				front ?= {
+					ROE_calculate_magic_superiority = {
+						COUNTRY_SCOPE = attacking_country
+						SIDE_SCOPE = attacker
+					}
+					ROE_calculate_magic_superiority = {
+						COUNTRY_SCOPE = defending_country
+						SIDE_SCOPE = defender
+					}
+				}
+			}
+
+			change_local_variable = {
+				name = total_attacker_magic
+				multiply = {
+					value = 1
+					scope:attacker ?= {
+						add = modifier:unit_magic_offense_mult
+					}
+					min = 0
+				}
+			}
+
+			change_local_variable = {
+				name = total_defender_magic
+				multiply = {
+					value = 1
+					scope:defender ?= {
+						add = modifier:unit_magic_defense_mult
+					}
+					min = 0
+				}
+			}
+	
+			set_local_variable = {
+				name  = total_magic
+				value = {
+					add = local_var:total_attacker_magic
+					add = local_var:total_defender_magic
+				}
+			}
+	
+			set_local_variable = {
+				name = ratio
+				value = {
+					value = local_var:total_attacker_magic
+					divide = local_var:total_magic
+				}
+			}
+	
+			if = {
+				limit = {
+					local_var:ratio >= 0.5
+				}
+				set_variable = {
+					name = multiplier
+					value = {
+						value = local_var:ratio
+						subtract = 0.5
+						multiply = 100
+					}
+				}
+				change_variable = {
+					name = multiplier
+					multiply = {
+						value = local_var:total_attacker_magic
+						subtract = local_var:total_defender_magic_resistance
+						min = 0
+						divide = local_var:total_attacker_magic
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					name = multiplier
+					value = {
+						value = 0.5
+						subtract = local_var:ratio
+						multiply = 100
+					}
+				}
+				change_variable = {
+					name = multiplier
+					multiply = {
+						value = local_var:total_defender_magic
+						subtract = local_var:total_attacker_magic_resistance
+						min = 0
+						divide = local_var:total_defender_magic
+					}
+				}
+	
+			}
+	
+			scope:attacker ?= {
+				set_variable = {
+					name = total_attacker_magic
+					value = local_var:total_attacker_magic
+				}
+				set_variable = {
+					name = total_defender_magic
+					value = local_var:total_defender_magic
+				}
+				set_variable = {
+					name = total_attacker_magic_resistance
+					value = local_var:total_attacker_magic_resistance
+				}
+				set_variable = {
+					name = total_magic
+					value = local_var:total_magic
+				}
+				set_variable = {
+					name = base_multiplier
+					value = base_attacker_multiplier
+				}
+				set_variable = {
+					name = progressbar_var
+					value = 0
+				}
+			}
+	
+			scope:defender ?= {
+				set_variable = {
+					name = total_attacker_magic
+					value = local_var:total_attacker_magic
+				}
+				set_variable = {
+					name = total_defender_magic
+					value = local_var:total_defender_magic
+				}
+				set_variable = {
+					name = total_defender_magic_resistance
+					value = local_var:total_defender_magic_resistance
+				}
+				set_variable = {
+					name = total_magic
+					value = local_var:total_magic
+				}
+				set_variable = {
+					name = base_multiplier
+					value = base_defender_multiplier
+				}
+				set_variable = {
+					name = progressbar_var
+					value = 0
+				}
+			}
+
+			if = {
+				limit = {
+					local_var:ratio >= 0.5
+				}
+				scope:attacker ?= {
+					set_variable = {
+						name = magic_advantage
+						value = {
+							value = prev.var:multiplier
+							round = yes
+						}
+					}
+					set_variable = {
+						name = progressbar_var
+						value = {
+							value = prev.var:multiplier
+							divide = 50
+						}
+					}
+					set_variable = {
+						name = attacker_multiplier_difference
+						value = attacker_multiplier_difference
+					}
+
+					if = {
+						limit = {
+							scope:attacking_country = {
+								has_technology_researched = integrated_magic_corps
+							}
+						}
+						add_modifier = {
+							name = roe_ms_arcane_integrated_systems_attacker
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:attacking_country = {
+								has_technology_researched = superior_magecraft_doctrine
+							}
+						}
+						add_modifier = {
+							name = roe_ms_arcane_leyline_mapping_attacker
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:attacking_country = {
+								has_technology_researched = thaumaturgical_communications
+							}
+						}
+						add_modifier = {
+							name = roe_ms_arcane_signaling_attacker
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:attacking_country = {
+								has_technology_researched = rudimentary_thaumaturgy
+							}
+						}
+						add_modifier = {
+							name = roe_ms_enchanted_weapons
+							multiplier = prev.var:multiplier
+						}
+					}
+
+					if = {
+						limit = {
+							scope:attacking_country = {
+								has_technology_researched = barrier_disruption
+							}
+						}
+						add_modifier = {
+							name = roe_ms_barrier_disruption
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:attacking_country = {
+								has_technology_researched = elemental_munitions
+							}
+						}
+						add_modifier = {
+							name = roe_ms_elemental_munitions
+							multiplier = prev.var:multiplier
+						}
+					}
+				}
+			}
+			else = {
+				scope:defender ?= {
+					set_variable = {
+						name = magic_advantage
+						value = {
+							value = prev.var:multiplier
+							round = yes
+						}
+					}
+					set_variable = {
+						name = defender_multiplier_difference
+						value = defender_multiplier_difference
+					}
+
+					if = {
+						limit = {
+							scope:defending_country = {
+								has_technology_researched = integrated_magic_corps
+							}
+						}
+						add_modifier = {
+							name = roe_ms_arcane_integrated_systems_defender
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:defending_country = {
+								has_technology_researched = superior_magecraft_doctrine
+							}
+						}
+						add_modifier = {
+							name = roe_ms_arcane_leyline_mapping_defender
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:defending_country = {
+								has_technology_researched = thaumaturgical_communications
+							}
+						}
+						add_modifier = {
+							name = roe_ms_arcane_signaling_defender
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:defending_country = {
+								has_technology_researched = rudimentary_thaumaturgy
+							}
+						}
+						add_modifier = {
+							name = roe_ms_enchanted_armor
+							multiplier = prev.var:multiplier
+						}
+					}
+
+					if = {
+						limit = {
+							scope:defending_country = {
+								has_technology_researched = ward_creation
+							}
+						}
+						add_modifier = {
+							name = roe_ms_barrier_creation
+							multiplier = prev.var:multiplier
+						}
+					}
+					else_if = {
+						limit = {
+							scope:defending_country = {
+								has_technology_researched = battlefield_illumination
+							}
+						}
+						add_modifier = {
+							name = roe_ms_battlefield_illumination
+							multiplier = prev.var:multiplier
+						}
+					}
+					
+				}
+				scope:attacker ?= {
+					set_variable = {
+						name = progressbar_var
+						value = {
+							value = prev.var:multiplier
+							divide = 50
+							multiply = -1
+						}
+					}
+					set_variable = {
+						name = magic_advantage
+						value = -1
+					}
+				}
+			}
+			remove_variable = multiplier
+		}
+	}
+}
+
+ROE_on_battle_ended_magic_superiority = {
+	effect = {
+		remove_list_global_variable = {
+			name = evaluated_battles
+			target = scope:battle
+		}
+		scope:attacker ?= {
+			if = {
+				limit = {
+					has_modifier = roe_ms_arcane_integrated_systems_attacker
+				}
+				remove_modifier = roe_ms_arcane_integrated_systems_attacker
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_arcane_leyline_mapping_attacker
+				}
+				remove_modifier = roe_ms_arcane_leyline_mapping_attacker
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_arcane_signaling_attacker
+				}
+				remove_modifier = roe_ms_arcane_signaling_attacker
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_enchanted_weapons
+				}
+				remove_modifier = roe_ms_enchanted_weapons
+			}
+
+			if = {
+				limit = {
+					has_modifier = roe_ms_barrier_disruption
+				}
+				remove_modifier = roe_ms_barrier_disruption
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_elemental_munitions
+				}
+				remove_modifier = roe_ms_elemental_munitions
+			}
+		}
+		scope:defender ?= {
+			if = {
+				limit = {
+					has_modifier = roe_ms_arcane_integrated_systems_defender
+				}
+				remove_modifier = roe_ms_arcane_integrated_systems_defender
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_arcane_leyline_mapping_defender
+				}
+				remove_modifier = roe_ms_arcane_leyline_mapping_defender
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_arcane_signaling_defender
+				}
+				remove_modifier = roe_ms_arcane_signaling_defender
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_enchanted_armor
+				}
+				remove_modifier = roe_ms_enchanted_armor
+			}
+
+			if = {
+				limit = {
+					has_modifier = roe_ms_barrier_creation
+				}
+				remove_modifier = roe_ms_barrier_creation
+			}
+			else_if = {
+				limit = {
+					has_modifier = roe_ms_battlefield_illumination
+				}
+				remove_modifier = roe_ms_battlefield_illumination
+			}
+		}
+	}
+}

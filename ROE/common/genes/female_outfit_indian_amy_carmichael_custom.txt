@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_outfits6 = {
+			inheritable = no
+			
+			indian_outfits = {
+				index = 1
+				male = {
+						1 = male_civilian_coat_arabic_white_01
+				}
+				
+				female = {
+						1 = female_outfit_indian_amy_carmichael_custom
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

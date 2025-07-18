@@ -1,0 +1,197 @@
+﻿ANW = {
+	flag_definition = {
+		coa = ANW
+		subject_canton = ANW
+		priority = 1
+	}
+}
+
+CLL = {
+	flag_definition = {
+		coa = CLL
+		subject_canton = CLL
+		priority = 1
+	}
+}
+
+TEF = {
+	flag_definition = {
+		coa = TEF
+		subject_canton = TEF
+		priority = 1
+	}
+}
+
+OPA = {
+	flag_definition = {
+		coa = OPA
+		subject_canton = OPA
+		priority = 1
+	}
+}
+
+SET = {
+	flag_definition = {
+		coa = SET
+		subject_canton = SET
+		priority = 1
+	}
+}
+
+VAI = {
+	flag_definition = {
+		coa = VAI
+		subject_canton = VAI
+		priority = 1
+	}
+}
+
+OAZ = {
+	flag_definition = {
+		coa = OAZ
+		subject_canton = OAZ
+		priority = 1
+	}
+}
+
+TIS = {
+	flag_definition = {
+		coa = TIS
+		subject_canton = TIS
+		priority = 1
+	}
+}
+
+LIS = {
+	flag_definition = {
+		coa = LIS
+		subject_canton = LIS
+		priority = 1
+	}
+}
+
+SNM = {
+	flag_definition = {
+		coa = SNM
+		subject_canton = SNM
+		priority = 1
+	}
+}
+
+VER = {
+	flag_definition = {
+		coa = VER
+		subject_canton = VER
+		priority = 1
+	}
+}
+
+ZUB = {
+	flag_definition = {
+		coa = ZUB
+		subject_canton = ZUB
+		priority = 1
+	}
+}
+
+PVA = {
+	flag_definition = {
+		coa = PVA
+		subject_canton = PVA
+		priority = 1
+	}
+}
+
+RLP = {
+	flag_definition = {
+		coa = RLP
+		subject_canton = RLP
+		priority = 1
+	}
+}
+
+RDM = {
+	flag_definition = {
+		coa = RDM
+		subject_canton = RDM
+		priority = 1
+	}
+}
+
+ZIL = {
+	flag_definition = {
+		coa = ZIL
+		subject_canton = ZIL
+		priority = 1
+	}
+}
+
+SHE = {
+	flag_definition = {
+		coa = SHE
+		subject_canton = SHE
+		priority = 1
+	}
+}
+
+FLU = {
+	flag_definition = {
+		coa = FLU
+		subject_canton = FLU
+		priority = 1
+	}
+}
+
+SAZ = {
+	flag_definition = {
+		coa = SAZ
+		subject_canton = SAZ
+		priority = 1
+	}
+}
+
+GFL = {
+	flag_definition = {
+		coa = GFL
+		subject_canton = GFL
+		priority = 1
+	}
+}
+
+SFD = {
+	flag_definition = {
+		coa = SFD
+		subject_canton = SFD
+		priority = 1
+	}
+}
+
+PND = {
+	flag_definition = {
+		coa = PND
+		subject_canton = PND
+		priority = 1
+	}
+
+	flag_definition = {
+        coa = PND_anarchy     
+        priority = 50
+        trigger = { 
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_anarchy
+			}
+        }
+    }    
+
+	flag_definition = {
+        coa = PND_monarchy  
+        priority = 100
+        trigger = { 
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy
+			}
+        }
+    }    
+}

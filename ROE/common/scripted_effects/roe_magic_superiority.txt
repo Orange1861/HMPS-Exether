@@ -1,0 +1,170 @@
+# UNIT_TYPE = combat_unit_type
+# TARGET_SCOPE = scope
+ms_sgui_calculate_superiority_unit = {
+	save_scope_as = unit
+	if = {
+		limit = {
+			has_unit_type = unit_type:combat_unit_type_$UNIT_TYPE$
+		}
+		$TARGET_SCOPE$ = {
+			change_variable = {
+				name = magic_superiority_value
+				add = {
+					value = unit_type_$UNIT_TYPE$_attacker_spell_power
+					multiply = {
+						value = scope:unit.manpower
+						divide = 1000
+					}
+				}
+			}
+			change_variable = {
+				name = defense_magic_superiority_value
+				add = {
+					value = unit_type_$UNIT_TYPE$_defender_spell_power
+					multiply = {
+						value = scope:unit.manpower
+						divide = 1000
+					}
+				}
+			}
+			change_variable = {
+				name = resistance_magic_superiority_value
+				add = {
+					value = unit_type_$UNIT_TYPE$_spell_resistance
+					multiply = {
+						value = scope:unit.manpower
+						divide = 1000
+					}
+				}
+			}
+		}
+	}
+}
+
+ms_calculate_superiority_unit = {
+	change_local_variable = {
+		name = total_$SIDE_SCOPE$_magic
+		add = {
+			value = unit_type_$UNIT_TYPE$_$SIDE_SCOPE$_spell_power
+			multiply = {
+				value = manpower
+				divide = 1000
+			}
+		}
+	}
+	change_local_variable = {
+		name = total_$SIDE_SCOPE$_magic_resistance
+		add = {
+			value = unit_type_$UNIT_TYPE$_spell_resistance
+			multiply = {
+				value = manpower
+				divide = 1000
+			}
+		}
+	}
+}
+
+ms_sgui_calculate_superiority_front = {
+	every_military_formation = {
+		every_combat_unit = {
+			if = {
+				limit = {
+					OR = {
+						owner = root
+						owner = {
+							is_in_war_together = root
+						}
+					}
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_one
+					TARGET_SCOPE = root
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_two
+					TARGET_SCOPE = root
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_three
+					TARGET_SCOPE = root
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_four
+					TARGET_SCOPE = root
+				}
+			}
+			else_if = {
+				limit = {
+					owner = scope:second_country
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_one
+					TARGET_SCOPE = scope:second_country
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_two
+					TARGET_SCOPE = scope:second_country
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_three
+					TARGET_SCOPE = scope:second_country
+				}
+				ms_sgui_calculate_superiority_unit = {
+					UNIT_TYPE = mages_four
+					TARGET_SCOPE = scope:second_country
+				}
+			}
+		}
+	}
+}
+
+ROE_calculate_magic_superiority = {
+    every_military_formation = {
+		every_combat_unit = {
+			limit = {
+				OR = {
+					owner = scope:$COUNTRY_SCOPE$.owner
+					owner = {
+						is_in_war_together = scope:$COUNTRY_SCOPE$.owner
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_unit_type = unit_type:combat_unit_type_mages_one
+				}
+				ms_calculate_superiority_unit = {
+					SIDE_SCOPE = $SIDE_SCOPE$
+					UNIT_TYPE = mages_one
+				}
+			}
+			else_if = {
+				limit = {
+					has_unit_type = unit_type:combat_unit_type_mages_two
+				}
+				ms_calculate_superiority_unit = {
+					SIDE_SCOPE = $SIDE_SCOPE$
+					UNIT_TYPE = mages_two
+				}
+			}
+			else_if = {
+				limit = {
+					has_unit_type = unit_type:combat_unit_type_mages_three
+				}
+				ms_calculate_superiority_unit = {
+					SIDE_SCOPE = $SIDE_SCOPE$
+					UNIT_TYPE = mages_three
+				}
+			}
+			else_if = {
+				limit = {
+					has_unit_type = unit_type:combat_unit_type_mages_four
+				}
+				ms_calculate_superiority_unit = {
+					SIDE_SCOPE = $SIDE_SCOPE$
+					UNIT_TYPE = mages_four
+				}
+			}
+		}
+	}
+}

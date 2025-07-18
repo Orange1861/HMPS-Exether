@@ -1,0 +1,41 @@
+﻿canonic_count_dracula = {
+	first_name = Valenor
+	last_name = Vandar
+	historical = yes
+	ruler = yes
+	culture = cu:vampire
+	female = no
+	dna = dna_dracula
+	interest_group = ig_mages
+	ideology = ideology_traditionalist
+	is_general = yes
+	age = 51
+	religion = lunar_masquerade
+	traits = {
+		erudite
+		imposing
+		charismatic
+		forest_commander
+	}
+}
+
+exile_count_dracula = {
+	first_name = Ladislaus
+	last_name = De_Ville
+	historical = yes
+	culture = cu:vampire
+	is_general = yes
+	female = no
+	dna = dna_dracula
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	age = 51
+	religion = lunar_masquerade
+	traits = {
+		erudite
+		imposing
+		charismatic
+		forest_commander
+	}
+}
+

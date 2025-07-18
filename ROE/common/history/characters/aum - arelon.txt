@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:AUM ?= {
+		create_character = {
+			template = AUM_arelon_leader_template
+		}
+		create_character = {
+			template = AUM_arelon_vamp_template
+		}
+	}
+}
+

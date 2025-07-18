@@ -1,0 +1,684 @@
+﻿je_salt_waste_half_orc = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_internal_affairs
+
+	modifiers_while_active = {
+		salt_waste_half_orcs_assimilation
+	}
+	
+	on_yearly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					cultural_acceptance_base = { target = cu:rahoru value >= acceptance_status_4 }
+					cultural_acceptance_base = { target = cu:tqalt value >= acceptance_status_4 }
+					cultural_acceptance_base = { target = cu:waste_walker value >= acceptance_status_4 }
+				}
+				every_state = {
+					limit = {
+						is_split_state = no
+						is_incorporated = yes
+						owner = ROOT
+						state_region = {
+							OR = {
+								is_homeland = cu:rahoru
+								is_homeland = cu:tqalt
+								is_homeland = cu:waste_walker
+							}
+						}
+						any_neighbouring_state = {
+							state_region = {
+								is_homeland = cu:atamkumi
+							}
+							OR = {
+								is_capital = yes
+								culture_percent_state = {
+									target = cu:atamkumi
+									value >= 0.2
+								}
+							}
+						}
+						OR = {
+							any_scope_building = {
+								OR = {
+									is_building_type = building_naval_base
+									is_building_type = building_barracks
+								}
+								level >= 15
+							}
+							any_scope_building = {
+								is_building_type = building_university
+								level >= 5
+							}
+							any_scope_building = {
+								is_building_type = building_government_administration
+								level >= 5
+							}
+							any_scope_building = {
+								is_building_type = building_urban_center
+								level >= 5
+							}
+						}
+					}
+					state_region = {
+						add_homeland = cu:atamkumi
+						remove_homeland = cu:rahoru
+						remove_homeland = cu:tqalt
+						remove_homeland = cu:waste_walker
+					}
+					add_modifier = {
+						name = salt_waste_half_orc_birth
+						months = 12
+					}
+					every_scope_pop = {
+						limit = {
+							OR = {
+								culture = cu:rahoru
+								culture = cu:tqalt
+								culture = cu:waste_walker
+							}
+						}
+						change_pop_culture = { target = cu:atamkumi value = 0.1 }
+					}
+					if = {
+						limit = {
+							ROOT = { has_journal_entry = je_earn_recognition }
+						}
+						ROOT = {
+							je:je_earn_recognition ?= {
+								add_progress = { value = 5 name = earn_recognition_progress_bar }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	status_desc = {
+		first_valid = {
+            triggered_desc = {
+                desc = atamkumi_not_accepting_rahoru
+                trigger = {
+                    cultural_acceptance_base = { target = cu:rahoru value < acceptance_status_4 }
+                }
+            }
+            triggered_desc = {
+                desc = atamkumi_je_not_accepting_tqalt
+                trigger = {
+					cultural_acceptance_base = { target = cu:tqalt value < acceptance_status_4 }
+                }
+            }
+            triggered_desc = {
+                desc = atamkumi_je_NOT_ACCEPTING_WASTE_WALKER
+                trigger = {
+                    cultural_acceptance_base = { target = cu:waste_walker value < acceptance_status_4 }
+                }
+            }
+			triggered_desc = {
+                desc = atamkumi_je_do_not_fully_own_incorporated_homeland_state
+                trigger = {
+					NOT = {
+						any_state = {
+							is_split_state = no
+							is_incorporated = yes
+							owner = ROOT
+							state_region = {
+								OR = {
+									is_homeland = cu:rahoru
+									is_homeland = cu:tqalt
+									is_homeland = cu:waste_walker
+								}
+							}
+						}
+					}
+                }
+            }
+			triggered_desc = {
+                desc = atamkumi_je_no_homeland_state_has_adjacency
+                trigger = {
+					NOT = {
+						any_state = {
+							is_split_state = no
+							is_incorporated = yes
+							owner = ROOT
+							state_region = {
+								OR = {
+									is_homeland = cu:rahoru
+									is_homeland = cu:tqalt
+									is_homeland = cu:waste_walker
+								}
+							}
+							any_neighbouring_state = {
+								state_region = {
+									is_homeland = cu:atamkumi
+								}
+								OR = {
+									is_capital = yes
+									culture_percent_state = {
+										target = cu:atamkumi
+										value >= 0.2
+									}
+								}
+							}
+						}
+					}
+                }
+            }
+			triggered_desc = {
+                desc = atamkumi_je_no_homeland_state_has_development
+                trigger = {
+					NOT = {
+						any_state = {
+							is_split_state = no
+							is_incorporated = yes
+							owner = ROOT
+							state_region = {
+								OR = {
+									is_homeland = cu:rahoru
+									is_homeland = cu:tqalt
+									is_homeland = cu:waste_walker
+								}
+							}
+							any_neighbouring_state = {
+								state_region = {
+									is_homeland = cu:atamkumi
+								}
+								OR = {
+									is_capital = yes
+									culture_percent_state = {
+										target = cu:atamkumi
+										value >= 0.2
+									}
+								}
+							}
+							OR = {
+								any_scope_building = {
+									OR = {
+										is_building_type = building_naval_base
+										is_building_type = building_barracks
+									}
+									level >= 15
+								}
+								any_scope_building = {
+									is_building_type = building_university
+									level >= 5
+								}
+								any_scope_building = {
+									is_building_type = building_government_administration
+									level >= 5
+								}
+								any_scope_building = {
+									is_building_type = building_urban_center
+									level >= 5
+								}
+							}
+						}
+					}
+                }
+            }
+			triggered_desc = { 
+				desc = atamkumi_je_can_spread
+			}
+        }
+	}
+
+	complete = {
+		any_state = {
+			percent = 1
+			filter = {
+				OR = {
+					state_region = s:STATE_ANTAQAQA
+					state_region = s:STATE_BLOODAXE_TERRITORY
+					state_region = s:STATE_BLOODTHORN_WASTES
+					state_region = s:STATE_BLOODTHORN_WASTES_2 # Drygrass Badlands
+					state_region = s:STATE_FIERCEHOLD
+					state_region = s:STATE_KUNTURPAMPA
+					state_region = s:STATE_NAWIYANU
+					state_region = s:STATE_ROUGHSTONE_TERRITORY
+					state_region = s:STATE_SALTSHORE
+					state_region = s:STATE_SAVAGE_LANDS
+					state_region = s:STATE_SAVAGE_REACH
+					state_region = s:STATE_SAVAGE_LANDS_2 # Sawtooth Peaks
+					state_region = s:STATE_SALTSHORE_2 # Shalaati
+					state_region = s:STATE_ROUGHSTONE_TERRITORY_2 # Shatterstone Ridge
+					state_region = s:STATE_SNAILBANE
+					state_region = s:STATE_TAYTAQOCHA
+					state_region = s:STATE_THIRSTRIDGE
+					state_region = s:STATE_TINKUYUQ
+					state_region = s:STATE_URQUNAYUQ
+				}
+			}
+			state_region = {
+				is_homeland = cu:atamkumi
+			}
+		}
+	}
+
+	on_complete = {
+		add_technology_researched = human_tech
+		add_technology_researched = orc_tech
+		if = {
+			limit = {
+				has_journal_entry = je_earn_recognition
+			}
+			je:je_earn_recognition ?= {
+				add_progress = { value = 30 name = earn_recognition_progress_bar }
+			}
+		}
+		set_variable = je_salt_waste_half_orc_completed
+	}
+	
+	weight = 10
+}
+
+je_salt_waste_cure = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+	
+	on_yearly_pulse = {
+		effect = {
+			random = {
+				chance = 10
+				random_list = {
+					1 = { trigger_event = { id = salt_waste_narrative_events.1 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.1 months = 3 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.1 months = 6 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.1 months = 9 popup = yes } }
+				
+					1 = { trigger_event = { id = salt_waste_narrative_events.2 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.2 months = 3 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.2 months = 6 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.2 months = 9 popup = yes } }
+				
+					1 = { trigger_event = { id = salt_waste_narrative_events.3 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.3 months = 3 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.3 months = 6 popup = yes } }
+					1 = { trigger_event = { id = salt_waste_narrative_events.3 months = 9 popup = yes } }
+				}
+			}
+		}
+	}
+
+	scripted_button = cast_defensive_wards_button
+	scripted_button = establish_salt_rangers_button
+	scripted_button = fund_wasteland_patrols_button
+	scripted_button = handle_salt_waste_curse_button
+
+	is_shown_when_inactive = {
+		OR = {
+			any_primary_culture = {
+				has_discrimination_trait = saltwaste_survivor_culture_group
+			}
+			any_scope_state = {
+				has_state_trait = state_trait_salt_wastes
+			}
+		}
+	}
+	
+	possible = {
+		OR = {
+			any_scope_state = {
+				has_state_trait = state_trait_salt_wastes
+			}
+			hidden_trigger = {
+				has_variable = je_salt_waste_curse_resolved
+			}
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = resolve_the_salt_waste_curse
+			has_variable = je_salt_waste_curse_resolved
+		}
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = salt_waste_curse_resolved
+		}
+		hidden_effect = {
+			remove_variable = handle_salt_waste_curse_button_clicked
+			remove_variable = salt_waste_rangers_consequences_happening
+			remove_variable = salt_waste_wards_consequences_happening
+			remove_variable = salt_waste_patrols_consequences_happening
+			remove_variable = water_vampire_assault_state_handled
+			remove_variable = curse_surge_state_handled
+			remove_variable = salt_storm_state_handled
+			remove_variable = block_clicking_any_salt_waste_buttons
+			remove_variable = je_salt_waste_curse_resolved
+			remove_variable = harness_the_salt_waste_curse_fired
+			remove_variable = harness_the_salt_waste_curse
+		}
+	}
+
+	transferable = no
+}
+
+je_end_the_salt_waste_curse = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	group = je_group_objectives
+	
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					scope:journal_entry = {
+						"scripted_bar_progress(salt_waste_ritual_progress_bar)" >= 800
+					}
+					NOT = { has_variable = harness_the_salt_waste_curse_fired }
+				}
+				
+				trigger_event = {
+					id = salt_waste_narrative_events.7
+					popup = yes
+				}
+			}
+		}
+		random_events = {
+			100 = 0
+			9 = salt_waste_narrative_events.5
+		}
+	}
+	
+	scripted_button = end_the_salt_waste_curse_low_button
+	scripted_button = end_the_salt_waste_curse_high_button
+	scripted_button = end_the_salt_waste_curse_druids_button
+	scripted_button = end_the_salt_waste_curse_spell_breakers_button
+	
+	scripted_progress_bar = salt_waste_ritual_progress_bar
+	
+	fail = {
+		NAND = {
+			owns_entire_state_region = STATE_SAVAGE_LANDS
+			owns_entire_state_region = STATE_SAVAGE_LANDS_2
+			owns_entire_state_region = STATE_ROUGHSTONE_TERRITORY
+			owns_entire_state_region = STATE_ROUGHSTONE_TERRITORY_2
+			owns_entire_state_region = STATE_FIERCEHOLD
+			owns_entire_state_region = STATE_SAVAGE_REACH
+			owns_entire_state_region = STATE_SNAILBANE
+			owns_entire_state_region = STATE_BLOODTHORN_WASTES
+			owns_entire_state_region = STATE_BLOODTHORN_WASTES_2
+			owns_entire_state_region = STATE_BLOODAXE_TERRITORY
+			owns_entire_state_region = STATE_THIRSTRIDGE
+		}
+	}
+	
+	on_fail = {
+		remove_modifier = salt_waste_cure_ritual_1
+		remove_modifier = salt_waste_cure_ritual_2
+		remove_modifier = salt_waste_cure_ritual_2_druids
+		remove_modifier = salt_waste_cure_ritual_2_mage_hunters
+		remove_variable = harness_the_salt_waste_curse
+		remove_variable = harness_the_salt_waste_curse_fired
+	}
+	
+	complete = {
+		custom_tooltip = {
+			text = end_the_salt_waste_curse_complete
+			scope:journal_entry = {
+				"scripted_bar_progress(salt_waste_ritual_progress_bar)" >= 1000
+			}
+		}
+	}
+	
+	on_complete = {
+		trigger_event = {
+			id = salt_waste_narrative_events.6
+			popup = yes
+		}
+	}
+
+	transferable = no
+}
+
+je_tql_skarrakhlot = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		custom_tooltip = {
+			text = completed_half_orc_je
+			has_variable = je_salt_waste_half_orc_completed
+		}
+		has_modifier = salt_waste_curse_resolved
+		any_state = {
+			percent = 1
+			filter = {
+				OR = {
+					state_region = s:STATE_ANTAQAQA
+					state_region = s:STATE_BLOODAXE_TERRITORY
+					state_region = s:STATE_BLOODTHORN_WASTES
+					state_region = s:STATE_BLOODTHORN_WASTES_2 # Drygrass Badlands
+					state_region = s:STATE_FIERCEHOLD
+					state_region = s:STATE_KUNTURPAMPA
+					state_region = s:STATE_NAWIYANU
+					state_region = s:STATE_ROUGHSTONE_TERRITORY
+					state_region = s:STATE_SALTSHORE
+					state_region = s:STATE_SAVAGE_LANDS
+					state_region = s:STATE_SAVAGE_REACH
+					state_region = s:STATE_SAVAGE_LANDS_2 # Sawtooth Peaks
+					state_region = s:STATE_SALTSHORE_2 # Shalaati
+					state_region = s:STATE_ROUGHSTONE_TERRITORY_2 # Shatterstone Ridge
+					state_region = s:STATE_SNAILBANE
+					state_region = s:STATE_TAYTAQOCHA
+					state_region = s:STATE_THIRSTRIDGE
+					state_region = s:STATE_TINKUYUQ
+					state_region = s:STATE_URQUNAYUQ
+				}
+			}
+			is_split_state = no
+			owner = ROOT
+		}
+		is_country_type = recognized
+		is_power_bloc_leader = yes
+		any_state = {
+			percent >= 0.33
+			filter = {
+				OR = {
+					state_region = s:STATE_RUMATARI
+					state_region = s:STATE_NETSAL_KALAL
+					state_region = s:STATE_TAYIGAMU
+					state_region = s:STATE_BEARTZUNGUL
+					state_region = s:STATE_BURAMONG
+					state_region = s:STATE_DILAFSHAN
+				}
+			}
+			is_split_state = no
+			OR = {
+				owner = ROOT
+				owner = {
+					OR = {
+						is_subject_of = ROOT
+						AND = {
+							is_in_power_bloc = yes
+							power_bloc ?= {
+								power_bloc_leader = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		add_modifier = { name = age_of_orcs }
+		custom_tooltip = {
+			text = fully_assimilate_to_atamkumi
+			every_country = {
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:rahoru
+							culture = cu:tqalt
+							culture = cu:waste_walker
+						}
+					}
+					change_pop_culture = { target = cu:atamkumi value = 1 }
+				}
+			}
+		}
+		hidden_effect = {
+			remove_variable = je_salt_waste_half_orc_completed
+		}
+	}
+
+	weight = 10
+	should_be_pinned_by_default = yes
+}
+
+je_tql_vurzaratmoda = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		custom_tooltip = {
+			text = completed_half_orc_je
+			has_variable = je_salt_waste_half_orc_completed
+		}
+		has_modifier = salt_waste_curse_resolved
+		any_state = {
+			percent = 1
+			filter = {
+				OR = {
+					state_region = s:STATE_ANTAQAQA
+					state_region = s:STATE_BLOODAXE_TERRITORY
+					state_region = s:STATE_BLOODTHORN_WASTES
+					state_region = s:STATE_BLOODTHORN_WASTES_2 # Drygrass Badlands
+					state_region = s:STATE_FIERCEHOLD
+					state_region = s:STATE_KUNTURPAMPA
+					state_region = s:STATE_NAWIYANU
+					state_region = s:STATE_ROUGHSTONE_TERRITORY
+					state_region = s:STATE_SALTSHORE
+					state_region = s:STATE_SAVAGE_LANDS
+					state_region = s:STATE_SAVAGE_REACH
+					state_region = s:STATE_SAVAGE_LANDS_2 # Sawtooth Peaks
+					state_region = s:STATE_SALTSHORE_2 # Shalaati
+					state_region = s:STATE_ROUGHSTONE_TERRITORY_2 # Shatterstone Ridge
+					state_region = s:STATE_SNAILBANE
+					state_region = s:STATE_TAYTAQOCHA
+					state_region = s:STATE_THIRSTRIDGE
+					state_region = s:STATE_TINKUYUQ
+					state_region = s:STATE_URQUNAYUQ
+				}
+			}
+			is_split_state = no
+			owner = ROOT
+		}
+		is_country_type = recognized
+		is_power_bloc_leader = yes
+		average_sol >= 15
+	}
+
+	on_complete = {
+		add_modifier = { name = the_wastes_rejoice }
+		every_scope_state = {
+			limit = {
+				is_homeland_of_country_cultures = c:TQL
+			}
+			state_region = {
+				add_arable_land = 10
+			}
+		}
+		custom_tooltip = {
+			text = fully_assimilate_to_atamkumi
+			every_country = {
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:rahoru
+							culture = cu:tqalt
+							culture = cu:waste_walker
+						}
+					}
+					change_pop_culture = { target = cu:atamkumi value = 1 }
+				}
+			}
+		}
+		hidden_effect = {
+			remove_variable = je_salt_waste_half_orc_completed
+		}
+	}
+
+	weight = 10
+	should_be_pinned_by_default = yes
+}
+
+je_tql_salt_crucible = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		custom_tooltip = {
+			text = completed_half_orc_je
+			has_variable = je_salt_waste_half_orc_completed
+		}
+		has_modifier = salt_waste_curse_resolved
+		any_state = {
+			percent = 1
+			filter = {
+				OR = {
+					state_region = s:STATE_ANTAQAQA
+					state_region = s:STATE_BLOODAXE_TERRITORY
+					state_region = s:STATE_BLOODTHORN_WASTES
+					state_region = s:STATE_BLOODTHORN_WASTES_2 # Drygrass Badlands
+					state_region = s:STATE_FIERCEHOLD
+					state_region = s:STATE_KUNTURPAMPA
+					state_region = s:STATE_NAWIYANU
+					state_region = s:STATE_ROUGHSTONE_TERRITORY
+					state_region = s:STATE_SALTSHORE
+					state_region = s:STATE_SAVAGE_LANDS
+					state_region = s:STATE_SAVAGE_REACH
+					state_region = s:STATE_SAVAGE_LANDS_2 # Sawtooth Peaks
+					state_region = s:STATE_SALTSHORE_2 # Shalaati
+					state_region = s:STATE_ROUGHSTONE_TERRITORY_2 # Shatterstone Ridge
+					state_region = s:STATE_SNAILBANE
+					state_region = s:STATE_TAYTAQOCHA
+					state_region = s:STATE_THIRSTRIDGE
+					state_region = s:STATE_TINKUYUQ
+					state_region = s:STATE_URQUNAYUQ
+				}
+			}
+			is_split_state = no
+			owner = ROOT
+		}
+		is_country_type = recognized
+		is_power_bloc_leader = yes
+		country_rank = rank_value:great_power
+	}
+
+	on_complete = {
+		add_modifier = { name = lords_of_the_wastes }
+		custom_tooltip = {
+			text = fully_assimilate_to_atamkumi
+			every_country = {
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:rahoru
+							culture = cu:tqalt
+							culture = cu:waste_walker
+						}
+					}
+					change_pop_culture = { target = cu:atamkumi value = 1 }
+				}
+			}
+		}
+		hidden_effect = {
+			remove_variable = je_salt_waste_half_orc_completed
+		}
+	}
+
+	weight = 10
+	should_be_pinned_by_default = yes
+}

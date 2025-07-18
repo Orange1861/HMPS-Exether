@@ -1,0 +1,32 @@
+﻿CHARACTERS = {
+	c:GPK = {
+		create_character = {
+			first_name = "Irina"
+			last_name = "Guchev"
+			historical = yes
+			ruler = yes
+			female = yes
+			age = 28
+			interest_group = ig_devout
+			ideology = ideology_theocrat
+			traits = {
+				charismatic
+				imperious
+				pious
+				ambitious
+			}
+		}
+
+		create_character = {
+			historical = yes
+			age = 48
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_theocrat
+			traits = {
+				charismatic
+				pious
+			}
+		}
+	}
+}

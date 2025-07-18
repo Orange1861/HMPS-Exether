@@ -1,0 +1,71 @@
+﻿je_northern_colonial_administration = {
+	icon = "gfx/interface/icons/event_icons/event_colonial.dds"
+	
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		country_is_in_northern_colonial = no
+		OR = {
+			has_interest_marker_in_region = sr:region_razorwind
+			has_interest_marker_in_region = sr:region_south_toftir
+			has_interest_marker_in_region = sr:region_rimeroot_jungle
+			has_interest_marker_in_region = sr:region_thawed_lands
+			has_interest_marker_in_region = sr:region_west_everfrost
+			has_interest_marker_in_region = sr:region_whisperpine
+			has_interest_marker_in_region = sr:region_east_everfrost
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_is_in_northern_colonial = yes
+		}
+		has_technology_researched = colonization
+	}
+
+	immediate = {
+		random_state = {
+			limit = {
+                region = sr:region_razorwind
+                region = sr:region_south_toftir
+			}
+			save_scope_as = toftir_region_scope
+		}
+		random_state = {
+			limit = {
+                region = sr:region_rimeroot_jungle
+                region = sr:region_thawed_lands
+			}
+			save_scope_as = rimeroot_region_scope
+		}
+		random_state = {
+			limit = {
+		        region = sr:region_west_everfrost
+				region = sr:region_whisperpine
+			}
+			save_scope_as = west_everfrost_region_scope
+		}
+		random_state = {
+			limit = {
+                region = sr:region_east_everfrost
+			}
+			save_scope_as = east_everfrost_region_scope
+		}
+	}
+	
+	# Establish Colonial Administration
+	scripted_button = je_northern_colonial_administration_button_toftir
+	scripted_button = je_northern_colonial_administration_button_rimeroot
+	scripted_button = je_northern_colonial_administration_button_west_everfrost
+	scripted_button = je_northern_colonial_administration_button_east_everfrost
+
+	# Expand Colonial Administration
+	scripted_button = je_northern_colonial_administration_button_expand_toftir
+	scripted_button = je_northern_colonial_administration_button_expand_rimeroot
+	scripted_button = je_northern_colonial_administration_button_expand_west_everfrost
+	scripted_button = je_northern_colonial_administration_button_expand_east_everfrost
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

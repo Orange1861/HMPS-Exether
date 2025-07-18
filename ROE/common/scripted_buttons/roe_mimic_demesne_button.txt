@@ -1,0 +1,33 @@
+﻿mimic_button = {
+	name = mimic_button
+	desc = mimic_button_desc
+
+	visible = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		any_scope_state = {
+			OR = {
+			state_region = s:STATE_SHIFTING_SCAR
+			state_region = s:STATE_SHIFTING_SCAR_2
+			state_region = s:STATE_SARABENDO
+			}
+			is_under_colonization = yes
+		}
+		NOT = { has_modifier = mimic_campaign }
+	}
+
+	effect = {
+		add_modifier = {
+			name = mimic_campaign
+			days = long_modifier_time
+		}
+	}
+
+	ai_chance = {
+		value = 10
+	}
+}

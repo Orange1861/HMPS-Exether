@@ -1,0 +1,6147 @@
+﻿hag = { # Ute and Shoshone
+	color= hsv{ 0.06 0.39 0.80 }
+	religion = lunar_masquerade
+	traits = { east_noric_culture_group midnight_heritage }
+	male_common_first_names={
+		Antonga
+		Arapeen
+		Canalla
+		Cameahwait
+		Colorow
+		Guero
+		Ignacio
+		Kanosh
+		Ouray
+		Owitze
+		Paseego
+		Pinquanah
+		Pocatello
+		Posey
+		Sanpitch
+		Sapiah
+		Sapinero
+		Severo
+		Tabby-To-Hwanah
+		Tse-Ne-Gat
+		Walkara
+		Washakie
+		Wirasuap
+	}
+	female_common_first_names = {
+		Chipeta
+		Nanawu
+		Pearl
+		Shawsheen
+		Wenega
+	}	
+	noble_last_names = {
+		House
+		Timbimboo
+		Timpanog
+		Tussawehee
+		Umatilla
+	}
+	common_last_names={
+		Box
+		Daggett
+		Estep
+		Manning
+		Rael
+		Teton
+		Trahant
+		Trudell
+	}
+	ethnicities = {
+		1 = hag
+	}
+	graphics = east_asian
+}
+
+gulf_naga={
+	color= hsv{ 0.81 0.38 0.60 }
+	religion = teomakti
+	traits = { dreamweaver_culture_group naga_heritage_culture }
+	male_common_first_names={
+		Ashoka
+		Ashtravakra
+		Asvaghosa
+		Bandishankar
+		Chanakya
+		Maharshi
+		Mahavira
+		Samudragupta
+		Shivshankar
+		Udayanacharaya
+		Vachaspati
+		Vatsyayana
+		Zokmir
+	}
+	female_common_first_names = {
+		Bhawana
+		Ganga
+		Nidhi
+		Rohini
+	}	
+	noble_last_names = {
+		Singh
+		Valak
+	}
+	common_last_names={
+		Devi
+		Gupta
+		Janak
+		Jarasandh
+		Mishra
+		Ram
+		Valmiki
+	}
+	ethnicities = {
+		1 = naga
+	}
+	graphics = east_asian
+}
+
+jungle_naga={
+	color= hsv{ 0.39 0.45 0.74 }
+	religion = xocarakti
+	traits = { dreamweaver_culture_group naga_heritage_culture }
+	
+	
+	male_common_first_names={
+		Amar
+		Bhakti
+		Bhim_Shamsher
+		Bhimsen
+		Bir_Shamsher
+		Chandra_Shamsher
+		Deva_Shamsher
+		Jang
+		Ranjur
+		Renaudip
+		Shamsher
+	}
+	female_common_first_names = {
+		Anuradha 
+		Divyeshwari
+		Durga
+		Lakshmi
+		Sangita
+		Sunita
+		Yogmaya 
+	}	
+	noble_last_names = {
+		Basnyat
+		Bahadur_Rana
+		Bhandari
+		Chautariya
+		Koirala
+		Kunwar
+		Mahat
+		Pande
+		Singh
+		Singh_Thapa
+		Thapa
+		Rana
+	}
+	common_last_names={
+		Acharya
+		Ban
+		Das
+		Devi
+		Neupane
+		Sob
+	}
+	ethnicities = {
+		1 = naga
+	}
+	graphics = east_asian
+}
+
+nightwalker = {
+	color={ 30 30 40 }
+	religion = marktarian
+	traits = { khussite_culture_group human_heritage }
+	male_common_first_names={
+		Ablai
+		Abu_al-Khayr
+		Aryn
+		Baitursyn
+		Bukei
+		Chokan
+		Dulat
+		Ibirai
+		Isatai
+		Ishim
+		Jangir
+		Kenisary
+		Mashur
+		Murat
+		Nur_Ali
+		Qayip
+		Sadyk
+		Sarzhan
+		Sirim
+		Tenek
+		Tolshan
+		Vali
+	}
+	female_common_first_names = {
+		Aisha
+		Balzhan
+		Bayan
+		Demesh
+		Gulshat
+		Samal
+	}	
+	noble_last_names = {
+		Bukeikhanov
+		Beg
+		Khan
+	}
+	common_last_names={
+		Baitursynov
+		Dulatuli
+		Konanbai_uli
+		Kutebar_uli
+		Qasim_uli
+		Shoshak-ula
+	}
+	ethnicities = {
+		1 = central_asian
+	}
+	graphics = east_asian
+}
+
+khussite_vampire = {
+	color={ 30 30 40 }
+	religion = lunar_masquerade
+	traits = { khussite_culture_group vampiric human_heritage }
+	male_common_first_names={
+		Ablai
+		Abu_al-Khayr
+		Aryn
+		Baitursyn
+		Bukei
+		Chokan
+		Dulat
+		Ibirai
+		Isatai
+		Ishim
+		Jangir
+		Kenisary
+		Mashur
+		Murat
+		Nur_Ali
+		Qayip
+		Sadyk
+		Sarzhan
+		Sirim
+		Tenek
+		Tolshan
+		Vali
+	}
+	female_common_first_names = {
+		Aisha
+		Balzhan
+		Bayan
+		Demesh
+		Gulshat
+		Samal
+	}	
+	noble_last_names = {
+		Bukeikhanov
+		Beg
+		Khan
+	}
+	common_last_names={
+		Baitursynov
+		Dulatuli
+		Konanbai_uli
+		Kutebar_uli
+		Qasim_uli
+		Shoshak-ula
+	}
+	ethnicities = {
+		1 = vampire
+	}
+	graphics = east_asian
+}
+
+wastecrawler = {
+	color={ 80 70 40 }
+	religion = marktarian
+	traits = { khussite_culture_group human_heritage }
+	male_common_first_names={
+		Ablai
+		Abu_al-Khayr
+		Aryn
+		Baitursyn
+		Bukei
+		Chokan
+		Dulat
+		Ibirai
+		Isatai
+		Ishim
+		Jangir
+		Kenisary
+		Mashur
+		Murat
+		Nur_Ali
+		Qayip
+		Sadyk
+		Sarzhan
+		Sirim
+		Tenek
+		Tolshan
+		Vali
+	}
+	female_common_first_names = {
+		Aisha
+		Balzhan
+		Bayan
+		Demesh
+		Gulshat
+		Samal
+	}	
+	noble_last_names = {
+		Bukeikhanov
+		Beg
+		Khan
+	}
+	common_last_names={
+		Baitursynov
+		Dulatuli
+		Konanbai_uli
+		Kutebar_uli
+		Qasim_uli
+		Shoshak-ula
+	}
+	ethnicities = {
+		1 = central_asian
+	}
+	graphics = east_asian
+}
+
+gnoll={
+	color= hsv{ 0.58 0.51 0.96 }
+	religion = animist
+	traits = { hyena_plains_culture_group chin_culture_group gnoll_heritage  }
+	male_common_first_names={
+		Amadi
+		Andikan
+		Aren
+		Averey
+		Bahari
+		Bakari
+		Bash
+		Bayode
+		Bitalo
+		Chane
+		Chata
+		Dakarai
+		Davu
+		Dume
+		Fabunni
+		Gamba
+		Genet
+		Guban
+		Hajari
+		Haruni
+		Ife
+		Ilo
+		Issay
+		Jabari
+		Jabilo
+		Jaguan
+		Kabili
+		Kamwimbile
+		Kasim
+		Kenyi
+		Khairi
+		Makalo
+		Mansa
+		Morathi
+		Musawenkosi
+		Raimi
+		Razi
+		Reth
+	}
+	female_common_first_names = {
+		Jokate
+		Kajala
+		Khalila
+		Wema
+		Yobnesh
+	}	
+	noble_last_names = {
+		Kasanda
+		Watuta
+		Zwagendaba
+	}
+	common_last_names={
+		Bulungute
+		Mirambo
+		Mkasiwa
+		Mnywasele
+		Msemwa
+		Mudimbe
+	}
+	ethnicities = {
+		1 = gnoll
+	}
+	graphics = hyena_graphics
+}
+jungle_gnoll={
+	color= hsv{ 0.68 0.51 0.96 }
+	religion = animist
+	traits = { hyena_plains_culture_group gnoll_heritage  }
+	male_common_first_names={
+		Amadi
+		Andikan
+		Aren
+		Averey
+		Bahari
+		Bakari
+		Bash
+		Bayode
+		Bitalo
+		Chane
+		Chata
+		Dakarai
+		Davu
+		Dume
+		Fabunni
+		Gamba
+		Genet
+		Guban
+		Hajari
+		Haruni
+		Ife
+		Ilo
+		Issay
+		Jabari
+		Jabilo
+		Jaguan
+		Kabili
+		Kamwimbile
+		Kasim
+		Kenyi
+		Khairi
+		Makalo
+		Mansa
+		Morathi
+		Musawenkosi
+		Raimi
+		Razi
+		Reth
+	}
+	female_common_first_names = {
+		Jokate
+		Kajala
+		Khalila
+		Wema
+		Yobnesh
+	}	
+	noble_last_names = {
+		Kasanda
+		Watuta
+		Zwagendaba
+	}
+	common_last_names={
+		Bulungute
+		Mirambo
+		Mkasiwa
+		Mnywasele
+		Msemwa
+		Mudimbe
+	}
+	ethnicities = {
+		1 = gnoll
+	}
+	graphics = hyena_graphics
+}
+
+warren_gnoll={
+	color= hsv{ 0.68 0.51 0.96 }
+	religion = animist
+	traits = { gnoll_heritage hyena_plains_culture_group khaduran_cavern_dweller  }
+	male_common_first_names={
+		Amadi
+		Andikan
+		Aren
+		Averey
+		Bahari
+		Bakari
+		Bash
+		Bayode
+		Bitalo
+		Chane
+		Chata
+		Dakarai
+		Davu
+		Dume
+		Fabunni
+		Gamba
+		Genet
+		Guban
+		Hajari
+		Haruni
+		Ife
+		Ilo
+		Issay
+		Jabari
+		Jabilo
+		Jaguan
+		Kabili
+		Kamwimbile
+		Kasim
+		Kenyi
+		Khairi
+		Makalo
+		Mansa
+		Morathi
+		Musawenkosi
+		Raimi
+		Razi
+		Reth
+	}
+	female_common_first_names = {
+		Jokate
+		Kajala
+		Khalila
+		Wema
+		Yobnesh
+	}	
+	noble_last_names = {
+		Kasanda
+		Watuta
+		Zwagendaba
+	}
+	common_last_names={
+		Bulungute
+		Mirambo
+		Mkasiwa
+		Mnywasele
+		Msemwa
+		Mudimbe
+	}
+	ethnicities = {
+		1 = gnoll
+	}
+	graphics = hyena_graphics
+}
+
+awakened={
+	color={ 182 87 111 }
+	religion = animist
+	traits = { dreamweaver_culture_group awakened_heritage }
+	obsessions = {
+		fruit
+	}
+	male_common_first_names={
+		Gaghaz
+		Baikah
+		Sanggo
+		Twaid
+		Fraus
+		Plomba
+		Taull
+		Kohku
+		Balu
+		
+	}
+	female_common_first_names = {
+		Lustau
+		Irun
+		Laiga
+		Nyiru
+		Auraiw
+		Latub
+		Raill
+		Tinta
+		Jekara
+	}	
+	noble_last_names = {
+		Longtooth
+		Longmane
+		Nyaupaind
+		Aktaip
+		Munggau
+		Nonkairl
+	}
+	common_last_names={
+		Grark
+		Howl
+		Lang
+		Lurjonci
+		Stingka
+		Wund
+		Yapaursew
+	}
+	ethnicities = {
+		1 = awakened_ape
+	}
+	graphics = european
+}
+
+plundboelka={
+	color={ 122 127 111 }
+	religion = animist
+	traits = { thoughtsmith_culture_group awakened_heritage }
+	obsessions = {
+		fruit
+	}
+	male_common_first_names={
+		Gaghaz
+		Yori
+		Frong
+		Twaid
+		Vralk
+	}
+	female_common_first_names = {
+		Brahda
+		Droota
+		Kanka
+		Frifa
+	}	
+	noble_last_names = {
+		Longtooth
+		Longmane
+	}
+	common_last_names={
+		Grark
+		Howl
+	}
+	ethnicities = {
+		1 = bear
+	}
+	graphics = bear
+}
+
+praprandgaw={
+	color={ 14 46 14 }
+	religion = animist
+	traits = { thoughtsmith_culture_group awakened_heritage }
+	obsessions = {
+		fruit
+		coffee
+	}
+	male_common_first_names={
+		Gaghaz
+		Yori
+		Frong
+		Twaid
+		Vralk
+	}
+	female_common_first_names = {
+		Brahda
+		Droota
+		Kanka
+		Frifa
+	}	
+	noble_last_names = {
+		Longtooth
+		Longmane
+	}
+	common_last_names={
+		Grark
+		Howl
+	}
+	ethnicities = {
+		1 = bear
+	}
+	graphics = bear
+}
+
+bintukin={  #needs new namelist
+	color={ 122 127 111 }
+	religion = animist
+	traits = { thoughtsmith_culture_group awakened_heritage  }
+	obsessions = {
+		coffee
+	}
+	male_common_first_names={
+		Gaghaz
+		Yori
+		Frong
+		Twaid
+		Vralk
+		Gram
+	}
+	female_common_first_names = {
+		Brahda
+		Droota
+		Grifa
+		Kanka
+		Frifa
+		Needa
+	}	
+	noble_last_names = {
+		Bigheart
+		Finefur
+		Smallear
+		Sleekfur
+		Tallcat
+		Longcoat
+		Tinyfoot
+	}
+	common_last_names={
+		Grark
+		Howl
+		Curl
+		Slink
+		Shorthat
+		Mewler
+	}
+	ethnicities = {
+		1 = bintukin
+	}
+	graphics = bear
+}
+
+vampire={
+	color= hsv{ 0.12 0.41 0.54 }
+	religion = lunar_masquerade
+	traits = { east_noric_culture_group vampiric midnight_heritage }
+	obsessions = {
+		fine_art
+	}
+	male_common_first_names={
+		Adrian
+		Alexandru
+		Andrei
+		Anton
+		Artur
+		Bogdan
+		Carol
+		Cezar
+		Constantin
+		Constin
+		Cosmin
+		Daniel
+		Dumitru
+		Emanuel
+		Eremia
+		Eugen
+		Ferdinand
+		Flaviu
+		Florea
+		Gheorghe
+		Grigore
+		Henric
+		Horatiu
+		Iacob
+		Ilie
+		Ioan
+		Ion
+		Ion_Emanuel
+		Iosif
+		Iulian
+		Iuliu
+		Laurentiu
+		Leontin
+		Luca
+		Lucian
+		Mihai
+		Mircea
+		Nicolae
+		Ovidiu
+		Petru
+		Radu
+		Sergiu
+		Silviu
+		Simion
+		Stefan
+		Valeriu
+		Vasile
+		Victor
+		Vintila
+		Vlad
+	}
+	female_common_first_names = {
+		Adela
+		Ana
+		Constanta
+		Daria
+		Dora
+		Ecaterina
+		Elena
+		Elisa
+		Elisabeta
+		Eugenia
+		Iulia
+		Iuliana
+		Lucretia
+		Maria
+		Maritica
+	}	
+	noble_last_names = {
+		Cantemir
+		Caradja
+		Conachi
+		de_Reuss-Mirza
+		de_Hohenzollern
+		Dinotto-Gusti
+		Dragos
+		Ghica
+		Hasdeu
+		Hurmuzachi
+		Kogalniceanu
+		Mocioni
+		Moruzi
+		Murgulet
+		Racovita
+		Sturdza
+		Vacarescu
+		Ionita
+	}
+	common_last_names={
+		Angelescu
+		Antonescu
+		Argetoianu
+		Averescu
+		Baldescu
+		Barozzi
+		Berindei
+		Cernat
+		Christecu
+		Cihoski
+		Ciuperca
+		Coanda
+		Crainiceanu
+		Critescu
+		Culcer
+		Cuza
+		Dona
+		Dragalina
+		Dumitrescu
+		Falcoianu
+		Flechtenmacher
+		Florescu
+		Froza
+		Gardescu
+		Grigorescu
+		Harjeu
+		Holban
+		Iancovescu
+		Iliasevici
+		Iliescu
+		Ionascu
+		Ionescu
+		Ionitiu
+		Koslinski
+		Lahovary
+		Lupescu
+		Mardarescu
+		Murgescu
+		Poenaru
+		Prezan
+		Salajan
+		Samsonovici
+		Schitiu
+		Scodrea
+		Slaniceanu
+		Steflea
+		Tatarascu
+		Tenescu
+		Vaitoianu
+		Zottu
+	}
+	ethnicities = {
+		1 = vampire
+	}
+	graphics = european
+}
+
+uriki_vampire={
+	color= hsv{ 0.12 0.41 0.54 }
+	religion = lunar_masquerade
+	traits = { uriks_passage_culture_group vampiric human_heritage }
+	obsessions = {
+		fine_art
+	}
+	male_common_first_names={
+		Adrian
+		Alexandru
+		Andrei
+		Anton
+		Artur
+		Bogdan
+		Carol
+		Cezar
+		Constantin
+		Constin
+		Cosmin
+		Daniel
+		Dumitru
+		Emanuel
+		Eremia
+		Eugen
+		Ferdinand
+		Flaviu
+		Florea
+		Gheorghe
+		Grigore
+		Henric
+		Horatiu
+		Iacob
+		Ilie
+		Ioan
+		Ion
+		Ion_Emanuel
+		Iosif
+		Iulian
+		Iuliu
+		Laurentiu
+		Leontin
+		Luca
+		Lucian
+		Mihai
+		Mircea
+		Nicolae
+		Ovidiu
+		Petru
+		Radu
+		Sergiu
+		Silviu
+		Simion
+		Stefan
+		Valeriu
+		Vasile
+		Victor
+		Vintila
+		Vlad
+	}
+	female_common_first_names = {
+		Adela
+		Ana
+		Constanta
+		Daria
+		Dora
+		Ecaterina
+		Elena
+		Elisa
+		Elisabeta
+		Eugenia
+		Iulia
+		Iuliana
+		Lucretia
+		Maria
+		Maritica
+	}	
+	noble_last_names = {
+		Cantemir
+		Caradja
+		Conachi
+		de_Reuss-Mirza
+		de_Hohenzollern
+		Dinotto-Gusti
+		Dragos
+		Ghica
+		Hasdeu
+		Hurmuzachi
+		Kogalniceanu
+		Mocioni
+		Moruzi
+		Murgulet
+		Racovita
+		Sturdza
+		Vacarescu
+		Ionita
+	}
+	common_last_names={
+		Angelescu
+		Antonescu
+		Argetoianu
+		Averescu
+		Baldescu
+		Barozzi
+		Berindei
+		Cernat
+		Christecu
+		Cihoski
+		Ciuperca
+		Coanda
+		Crainiceanu
+		Critescu
+		Culcer
+		Cuza
+		Dona
+		Dragalina
+		Dumitrescu
+		Falcoianu
+		Flechtenmacher
+		Florescu
+		Froza
+		Gardescu
+		Grigorescu
+		Harjeu
+		Holban
+		Iancovescu
+		Iliasevici
+		Iliescu
+		Ionascu
+		Ionescu
+		Ionitiu
+		Koslinski
+		Lahovary
+		Lupescu
+		Mardarescu
+		Murgescu
+		Poenaru
+		Prezan
+		Salajan
+		Samsonovici
+		Schitiu
+		Scodrea
+		Slaniceanu
+		Steflea
+		Tatarascu
+		Tenescu
+		Vaitoianu
+		Zottu
+	}
+	ethnicities = {
+		1 = vampire
+	}
+	graphics = european
+}
+
+gnome_vampire={
+	color= rgb{ 3 141 72 }
+	religion = lunar_masquerade
+	traits = { hasalian wood_gnome vampiric gnome_heritage }
+	obsessions = {
+		services
+	}
+	male_common_first_names={
+		Snom
+		Lelf
+		Ked
+		Golie
+		Eirbrik
+		Twun
+		Plein
+		Dekt
+		Sneer
+		Drans
+		Klort
+		Pulf
+		Blert
+		Angrort
+		Troulf
+		Kraplu
+		Kwans
+		Astus
+		Norbris
+		Vikt
+		Tiror
+		Keich
+		Wim
+		Lon
+		Jad
+		Mant
+		Slodeft
+		Porste
+		Blarmie
+		Ronvolf
+		Drolt
+		Jent
+		Ladrui
+		Luin
+		Kreik
+		Trint
+		Hal
+		Gouls
+		Eilf
+	}
+	female_common_first_names = {
+		Iwe
+		Velabee
+		Woele
+		Zanreen
+		Lasei
+		Eil
+		Luinme
+		Beur
+		Gevreilou
+		Wud
+		Bre
+		Tritfe
+		Blisloes
+		Twir
+		Snischie
+		Beevie
+		Nuilve
+	}	
+	noble_last_names = {
+		sna_Vengt
+		sna_Lokton
+		sna_Ispre
+		sna_Spengeelken
+		sna_Vreigren
+		sna_Denzenvui
+	}
+	common_last_names={
+		Mirloer
+		Werzift
+		Bompjee
+		Schrandeeb
+		Snirsoun
+		Kweentui
+		Eustei
+		Durdeekt
+		Vratzie
+		Merken
+		Snankel
+		Drangt
+		Kourkota
+		Urkteert
+		Sprong
+		Dronge
+		Zofmeek
+		Nanstou
+		Twont
+		Klurcht
+		Leicho
+		Duir
+		Sprils
+		Tonkee
+		Plang
+	}
+	graphics = european
+	ethnicities = {
+		1 = gnome_vampire
+	}
+}
+
+dark_elf_vampire = {
+	color= hsv{ 0.1 0.43 0.56 }
+	religion = lunar_masquerade
+	traits = { southern_elf vampiric elf_heritage }
+	obsessions = {
+		clippers
+	}
+	male_common_first_names={
+		Rom
+		Saund
+		Hond
+		Gwulre
+		Angunt
+		Aend
+		Crosce
+		Dralph
+		Holl
+		Tron
+		Rhichei
+		Drugog
+		Dolph
+		Boch
+		Thar
+		Urch
+		Rhaephn
+	}
+	female_common_first_names = {
+		Lulre
+		Rongleth
+		Caerdh
+		Irn
+		Hynd
+		Ynthai
+		Ladletha
+		Lhynt
+		Heidh
+		Lom
+		Surph
+		Hapha
+		Nuinni
+		Treid
+		Sur
+		Pirdh
+		Bemli
+		Dreiw
+		Gelphill
+		Arweilph
+		Siwi
+		Myrn
+		Sehe
+		Aennansa
+		Crigweirn
+	}	
+	noble_last_names = {
+		Nomoch
+		Lolbernill
+		Drauvrall
+		Gwydrau
+		Vaspi
+		Hodhym
+		Eiphrusae
+	}
+	common_last_names={
+		Nolphombiss
+		Cumanno
+		Vergesc
+		Vaspi
+		Semgi
+		Odaelch
+		Drusc
+		Vaeb
+		Rhant
+		Drammae
+		Craes
+		Elch
+		Traw
+		Gumidh
+	}
+	ethnicities = {
+		1 = elf_dark
+	}
+	graphics = darkelf_graphics
+}
+
+high_elf_vampire={
+	color= hsv{ 0.14 0.46 0.54 }
+	religion = lunar_masquerade
+	traits = { high_elf vampiric elf_heritage  }
+	obsessions = {
+		porcelain
+	}
+	male_common_first_names={
+		Quar
+		Hrote
+		Rimnu
+		Vihtyu
+		Anirdos
+		Hwan
+		Nwinge
+		Murcupin
+		Eryos
+		Tempus
+		Mitwas
+		Tarmu
+		Vilpunt
+		Hroldi
+		Hyeme
+		Norwun
+		Taryol
+		Mustor
+		Filmer
+		Samil
+		Puos
+		Ano
+		Cent
+		Mingar
+		Solyi
+		Vot
+		Tisos
+		Cur
+		Pehtas
+		Yapte
+		Famber
+	}
+	female_common_first_names = {
+		Loni
+		Sina
+		Fipea
+		Tamnea
+		Nae
+		Wilea
+		Tunea
+		Nata
+		Larquea
+		Emmahtyea
+		Osea
+		Lani
+		Ircel
+		Yimni
+		Nesti
+		Teccea
+		Anmencu
+	}	
+	noble_last_names = {
+		Hwahtyipil
+		Pambilquor
+		Hrulquer
+		Quolatos
+		Latyahtye
+		Hyitehto
+		Lurcer
+		Quilir
+		Nahtentu_Amye
+		Rentán_Polne
+	}
+	common_last_names={
+		Wetsur
+		Hlapso
+		Wel
+		Lorre
+		Netwus
+		Reppa
+		Motsi
+		Nurro
+		Catti
+		Yimapont
+		Pehtas
+		Noquent
+		Yocu
+		Letal
+		Nimyat
+		Yirvit
+		Rallun
+		Upos
+		Wustu
+		Nirdu
+		Pulfis
+		Psot
+		Remyin
+		Watse
+		Hrant
+		Surnepos
+		Rongwat
+		Mornen
+		Rendepi
+		Ungwa
+		Melde
+		Merwummu
+	}
+	ethnicities = {
+		1 = high_elf_vampire
+	}
+	graphics = woodelf_graphics
+}
+
+west_avian_vampire = {
+	color= hsv{ 0.52 0.51 0.75 }
+	religion = lunar_masquerade
+	obsessions = {
+		fruit
+	}
+	traits = { west_aritzakarric_culture_group vampiric bird_heritage }
+	male_common_first_names={
+		Acren
+Actow
+Adil
+Aglarro
+Ajpe
+Ajurbiw
+Aornu
+Apsos
+Apsow
+Armagno
+Aro
+Arris
+Ated
+Bajtras
+Bandorr
+Bejpo
+Berro
+Biscid
+Biscre
+Blenognu
+Blescrompu
+Blesterro
+Blifud
+Blimpe
+Blirr
+Blollod
+Blubon
+Bogle
+Bonfow
+Branal
+Brecirr
+Brenglu
+Brerdo
+Brirjon
+Briserr
+Bropto
+Ceju
+Cendi
+Cento
+Cepeldos
+Cerbun
+Cetad
+Chal
+Chedas
+Cherrid
+Chesga
+Chis
+Chulmen
+Cido
+Cilpor
+Cimbu
+Cisar
+Clebor
+Clebsu
+Cleldriw
+Clelsoscras
+Clesto
+Clilto
+Clirpru
+Clormo
+Clortis
+Cludew
+Cluru
+Corgactin
+Corju
+Cospos
+Crandre
+Cranmonstros
+Crenber
+Crenes
+Crepto
+Crine
+Crobed
+Crodu
+Croldru
+Cropas
+Crud
+Crujtralcud
+Crurr
+Cuapsi
+Cuaro
+Cuefow
+Cuenfur
+Cuestrol
+Cujsoju
+Cujtraspaw
+Cuobro
+Cusle
+Dacue
+Degner
+Dejtro
+Delsijsu
+Denfu
+Dentiptu
+Deson
+Despo
+Destonbo
+Dibso
+Dincrer
+Dorme
+Dorores
+Doscre
+Dralmas
+Drapsu
+Drejpencre
+Dremplo
+Dremuw
+Dril
+Druptes
+Druw
+Dumi
+Ebsi
+Egnentiw
+Egrud
+Ejan
+Ejse
+Ejso
+Elbo
+Elgad
+Embun
+Encirr
+Eran
+Errew
+Esmer
+Fangor
+Fendre
+Feorr
+Ferper
+Finclud
+Fles
+Flolebres
+Flun
+Fognor
+Folpompes
+Frarerro
+Frarr
+Fretembro
+Fris
+Frodeslas
+Frogle
+Frosocui
+Fruw
+Galbar
+Gencod
+Grarpror
+Gratru
+Greblaw
+Gresgro
+Griw
+Grute
+Ibsow
+Ibu
+Ices
+Icro
+Ide
+Ijtrorr
+Ijtrud
+Ilajpon
+Imirgal
+Io
+Ipu
+Ircecso
+Irder
+Irdus
+Irnu
+Ises
+Ismas
+Isto
+Jagnu
+Janfes
+Jarpru
+Jombro
+Jorcun
+Jurgol
+Labe
+Lardor
+Lebjol
+Ledil
+Lelsu
+Lerbegras
+Lestid
+Locsusdu
+Logastriw
+Lores
+Lulsor
+Lurtir
+Malpir
+Mardu
+Marlo
+Mescren
+Mindrid
+Motaw
+Mow
+Munstro
+Nentance
+Nenus
+Nerpran
+Nerrew
+Nucter
+Nudod
+Nusto
+Ocsu
+Odis
+Olbu
+Ondri
+Onsos
+Orres
+Osgren
+Ostal
+Pacsomis
+Palrel
+Pasas
+Peldro
+Pelles
+Permu
+Perrar
+Persu
+Pesu
+Picue
+Platil
+Plelmol
+Pluldres
+Plulmu
+Plupe
+Ponfe
+Ponglod
+Pranglo
+Preluncler
+Prinfer
+Pror
+Prud
+Prupritrus
+Rares
+Rarfan
+Rid
+Robo
+Rospirr
+Rufo
+Ruldel
+Rulpal
+Saptu
+Sardal
+Sasdin
+Senclo
+Sencrente
+Sepriw
+Serlaslew
+Serrerr
+Serten
+Seso
+Siblu
+Sildru
+Sincli
+Sipter
+Soiw
+Sorbognel
+Soscrer
+Soslal
+Srajserr
+Sral
+Sran
+Sranse
+Srasce
+Srastru
+Srejsolcerr
+Sresa
+Sriw
+Srocu
+Srontre
+Suctun
+Sugnurce
+Sujtro
+Suncror
+Surburr
+Tarpru
+Tecer
+Tenes
+Tinsar
+Tirrerr
+Tisgred
+Togud
+Tolletro
+Tollo
+Tono
+Tralcur
+Trentan
+Trirrod
+Trone
+Tuncle
+Turbol
+Ube
+Ubsur
+Ucso
+Uctil
+Udu
+Ufis
+Ulbir
+Umpo
+Umprori
+Urbor
+Urnew
+Urud
+Usas
+Usos
+Ustun
+Yarod
+Yejsu
+Yestri
+Yinbel
+Yondre
+Yorr
+Yubge
+Yurru
+	}
+	female_common_first_names = {
+		Acui
+Adre
+Alli
+Ano
+Anserma
+Bami
+Berdi
+Bliprampa
+Brigla
+Brosmi
+Bulda
+Cancopra
+Casa
+Celre
+Cesgra
+Challa
+Clajpa
+Clilba
+Clirna
+Crele
+Creta
+Crubjapti
+Culte
+Cuorfi
+Dacua
+Dapi
+Delga
+Della
+Depsa
+Dida
+Dina
+Drerta
+Drulla
+Ecu
+Elbe
+Ema
+Endi
+Engli
+Eri
+Ferma
+Finba
+Flonobra
+Flosca
+Frale
+Fropri
+Frosta
+Imba
+Ime
+Ingra
+Isca
+Labla
+Lice
+Lildi
+Lisel
+Lompa
+Mero
+Monga
+Nircha
+Nocha
+Nopri
+Olme
+Onme
+Ono
+Osci
+Pandre
+Panfe
+Pebi
+Pebli
+Peca
+Peme
+Perja
+Pircorri
+Plarno
+Plulmu
+Plupe
+Pridi
+Purpe
+Raca
+Rasdi
+Refa
+Resi
+Rismel
+Robla
+Sogra
+Solbunda
+Suchoma
+Sudi
+Sudri
+Suspa
+Tefi
+Tenfotra
+Tideja
+Tirde
+Truspa
+Umpa
+Unfa
+Urne
+Urra
+Yere
+Yestri
+Yompe
+	}	
+	noble_last_names = {
+Almin
+Anclarr
+Bacurran
+Beptirr
+Berdi
+Bescrates
+Bidron
+Blararrod
+Bretarrarr
+Cherr
+Clamarr
+Clentil
+Clilburro
+Cono
+Cralu
+Crocru
+Crunbarri
+Cuecuol
+Cueslijtri
+Cuorrimprirr
+Dojpe
+Dratore
+Drircir
+Dugorr
+Ellupir
+Encri
+Entrocsu
+Ertal
+Fencruna
+Foctacow
+Frindragra
+Galdin
+Gan
+Grablorr
+Grinder
+Icuor
+Ilmirsu
+Lase
+Lichu
+Mardu
+Mow
+Nendo
+Nurr
+Pabrerr
+Pebi
+Perprod
+Plardaw
+Pliblus
+Plutrorrurr
+Pridi
+Prulir
+Prurdonclel
+Pucharr
+Rectarcerr
+Relsojso
+Sambriw
+Samo
+Satimpe
+Srafo
+Sren
+Tongri
+Tosdi
+Trir
+Trirlo
+Trol
+Ugonu
+Yar
+Yarod
+Yejpirbar
+Yerrin
+Yesembrerr
+Yestirgad
+Yonto
+	}
+	common_last_names={
+Almin
+Anclarr
+Bacurran
+Beptirr
+Berdi
+Bescrates
+Bidron
+Blararrod
+Bretarrarr
+Cherr
+Clamarr
+Clentil
+Clilburro
+Cono
+Cralu
+Crocru
+Crunbarri
+Cuecuol
+Cueslijtri
+Cuorrimprirr
+Dojpe
+Dratore
+Drircir
+Dugorr
+Ellupir
+Encri
+Entrocsu
+Ertal
+Fencruna
+Foctacow
+Frindragra
+Galdin
+Gan
+Grablorr
+Grinder
+Icuor
+Ilmirsu
+Lase
+Lichu
+Mardu
+Mow
+Nendo
+Nurr
+Pabrerr
+Pebi
+Perprod
+Plardaw
+Pliblus
+Plutrorrurr
+Pridi
+Prulir
+Prurdonclel
+Pucharr
+Rectarcerr
+Relsojso
+Sambriw
+Samo
+Satimpe
+Srafo
+Sren
+Tongri
+Tosdi
+Trir
+Trirlo
+Trol
+Ugonu
+Yar
+Yarod
+Yejpirbar
+Yerrin
+Yesembrerr
+Yestirgad
+Yonto
+	}
+	ethnicities = {
+		1 = sandcircler
+		2 = cliffpercher
+	}
+	graphics = bird_graphics
+}
+
+wood_elf_vampire = {
+	color= hsv{ 0.7 0.8 0.71 }
+	religion = lunar_masquerade
+	traits = { wood_elf vampiric elf_heritage }
+	obsessions = {
+		glass
+	}
+	male_common_first_names={
+		Hrihr
+		Vusi
+		Jyth
+		Saik
+		Girr
+		Puodu
+		Thohrn
+		Itho
+		Baq
+		Muhcu
+		Vad
+		Baessu
+		Haek
+		Bluor
+		Hoit
+		Gluov
+		Chasaeh
+		Thruolt
+		Criq
+		Khorn
+		Jaorn
+		Cuosce
+		Drim
+		Mrim
+		Luscu
+		Zodro
+		Kyt
+		Zesu
+		Drand
+		Dogo
+		Ebro
+		Baquai
+		Chosan
+		Jimae
+		Hail
+		Quoscuh
+		Gess
+		Drerch
+		Caev
+		Vessu
+		Nohu
+		Zair
+		Cargist
+		Gloirmih
+		Buodrend
+		Suobrern
+		Uthesic
+	}
+	female_common_first_names = {
+		Cris
+		Jife
+		Thrilka
+		Ness
+		Chich
+		Nhyd
+		Droth
+		Den
+		Poda
+		Shal
+		Fern
+		Minith
+		Aene
+		Wam
+		Gyl
+		Sarn
+		Shem
+		Nir
+		Blissi
+		Fhaesh
+		Droisi
+		Zou
+		Cyn
+		Ahith
+		Hothae
+	}	
+	noble_last_names = {
+		Srastaelt
+		Aidroguol
+		Dhaicure
+		Joirr
+		Pagaeth
+		Okycaerr
+		Horvidrym
+		Aommenth
+	}
+	common_last_names={
+		Evirs
+		Mhua
+		Quaih
+		Glaoll
+		Waemmich
+		Lathess
+		Choll
+		Kyquai
+		Srihnau
+		Taerkh
+		Khaohnau
+		Mhaoskuo
+		Grebraonan
+		Novairn
+		Futror
+		Boirinae
+		Hrahrn
+		Quod
+		Purch
+		Kinarrael
+		Mhyrch
+		Thrast
+		Sainish
+		Nhav
+		Shuss
+		Kustu
+		Zaend
+		Orvuss
+		Mhahro
+		Groirn
+		Kaigaeno
+		Uvall
+		Srelao
+		Terki
+		Lhaedaim
+		Hruomith
+		Traemai
+		Chaern
+		Saeskauth
+		Pairku
+		Tokirgel
+		Ychyrs
+		Eherkh
+	}
+	graphics = woodelf_graphics
+	ethnicities = {
+		1 = high_elf_vampire
+	}
+}
+
+settler_coast_vampire={
+	color= hsv{ 0.12 0.46 0.54 }
+	religion = lunar_masquerade
+	traits = { settler_coast_culture_group vampiric human_heritage }
+	obsessions = {
+		fine_art
+	}
+	male_common_first_names={
+		Adrian
+		Alexandru
+		Andrei
+		Anton
+		Artur
+		Bogdan
+		Carol
+		Cezar
+		Constantin
+		Constin
+		Cosmin
+		Daniel
+		Dumitru
+		Emanuel
+		Eremia
+		Eugen
+		Ferdinand
+		Flaviu
+		Florea
+		Gheorghe
+		Grigore
+		Henric
+		Horatiu
+		Iacob
+		Ilie
+		Ioan
+		Ion
+		Ion_Emanuel
+		Iosif
+		Iulian
+		Iuliu
+		Laurentiu
+		Leontin
+		Luca
+		Lucian
+		Mihai
+		Mircea
+		Nicolae
+		Ovidiu
+		Petru
+		Radu
+		Sergiu
+		Silviu
+		Simion
+		Stefan
+		Valeriu
+		Vasile
+		Victor
+		Vintila
+		Vlad
+	}
+	female_common_first_names = {
+		Adela
+		Ana
+		Constanta
+		Daria
+		Dora
+		Ecaterina
+		Elena
+		Elisa
+		Elisabeta
+		Eugenia
+		Iulia
+		Iuliana
+		Lucretia
+		Maria
+		Maritica
+	}	
+	noble_last_names = {
+		Cantemir
+		Caradja
+		Conachi
+		de_Reuss-Mirza
+		de_Hohenzollern
+		Dinotto-Gusti
+		Dragos
+		Ghica
+		Hasdeu
+		Hurmuzachi
+		Kogalniceanu
+		Mocioni
+		Moruzi
+		Murgulet
+		Racovita
+		Sturdza
+		Vacarescu
+		Ionita
+	}
+	common_last_names={
+		Angelescu
+		Antonescu
+		Argetoianu
+		Averescu
+		Baldescu
+		Barozzi
+		Berindei
+		Cernat
+		Christecu
+		Cihoski
+		Ciuperca
+		Coanda
+		Crainiceanu
+		Critescu
+		Culcer
+		Cuza
+		Dona
+		Dragalina
+		Dumitrescu
+		Falcoianu
+		Flechtenmacher
+		Florescu
+		Froza
+		Gardescu
+		Grigorescu
+		Harjeu
+		Holban
+		Iancovescu
+		Iliasevici
+		Iliescu
+		Ionascu
+		Ionescu
+		Ionitiu
+		Koslinski
+		Lahovary
+		Lupescu
+		Mardarescu
+		Murgescu
+		Poenaru
+		Prezan
+		Salajan
+		Samsonovici
+		Schitiu
+		Scodrea
+		Slaniceanu
+		Steflea
+		Tatarascu
+		Tenescu
+		Vaitoianu
+		Zottu
+	}
+	ethnicities = {
+		1 = vampire
+	}
+	graphics = european
+}
+
+awakened_vampire={
+	color= hsv{ 0.12 0.41 0.47 }
+	religion = lunar_masquerade
+	traits = { thoughtsmith_culture_group vampiric awakened_heritage }
+	obsessions = {
+		fine_art
+	}
+	male_common_first_names={
+		Adrian
+		Alexandru
+		Andrei
+		Anton
+		Artur
+		Bogdan
+		Carol
+		Cezar
+		Constantin
+		Constin
+		Cosmin
+		Daniel
+		Dumitru
+		Emanuel
+		Eremia
+		Eugen
+		Ferdinand
+		Flaviu
+		Florea
+		Gheorghe
+		Grigore
+		Henric
+		Horatiu
+		Iacob
+		Ilie
+		Ioan
+		Ion
+		Ion_Emanuel
+		Iosif
+		Iulian
+		Iuliu
+		Laurentiu
+		Leontin
+		Luca
+		Lucian
+		Mihai
+		Mircea
+		Nicolae
+		Ovidiu
+		Petru
+		Radu
+		Sergiu
+		Silviu
+		Simion
+		Stefan
+		Valeriu
+		Vasile
+		Victor
+		Vintila
+		Vlad
+	}
+	female_common_first_names = {
+		Adela
+		Ana
+		Constanta
+		Daria
+		Dora
+		Ecaterina
+		Elena
+		Elisa
+		Elisabeta
+		Eugenia
+		Iulia
+		Iuliana
+		Lucretia
+		Maria
+		Maritica
+	}	
+	noble_last_names = {
+		Cantemir
+		Caradja
+		Conachi
+		de_Reuss-Mirza
+		de_Hohenzollern
+		Dinotto-Gusti
+		Dragos
+		Ghica
+		Hasdeu
+		Hurmuzachi
+		Kogalniceanu
+		Mocioni
+		Moruzi
+		Murgulet
+		Racovita
+		Sturdza
+		Vacarescu
+		Ionita
+	}
+	common_last_names={
+		Angelescu
+		Antonescu
+		Argetoianu
+		Averescu
+		Baldescu
+		Barozzi
+		Berindei
+		Cernat
+		Christecu
+		Cihoski
+		Ciuperca
+		Coanda
+		Crainiceanu
+		Critescu
+		Culcer
+		Cuza
+		Dona
+		Dragalina
+		Dumitrescu
+		Falcoianu
+		Flechtenmacher
+		Florescu
+		Froza
+		Gardescu
+		Grigorescu
+		Harjeu
+		Holban
+		Iancovescu
+		Iliasevici
+		Iliescu
+		Ionascu
+		Ionescu
+		Ionitiu
+		Koslinski
+		Lahovary
+		Lupescu
+		Mardarescu
+		Murgescu
+		Poenaru
+		Prezan
+		Salajan
+		Samsonovici
+		Schitiu
+		Scodrea
+		Slaniceanu
+		Steflea
+		Tatarascu
+		Tenescu
+		Vaitoianu
+		Zottu
+	}
+	ethnicities = {
+		1 = vampire_bear
+	}
+	graphics = bear
+}
+
+buramog_vampire = {
+	color= hsv{ 0.14 0.35 0.99 }
+	religion = skarrakhlot
+	traits = { plaguewoods_culture_group vampiric orc_heritage }
+	obsessions = {
+		meat
+	}
+	male_common_first_names = {
+		Nu_li
+		Ganoxuf
+		Dvopamniy
+		Nizu
+		Kmih
+		Logo
+		Zuk
+		Kalu
+		Pila
+		Kmala
+		Hala
+		Laxa
+		Kmovev
+		Stezdi
+		Bikro
+		Bni_tul
+		Tila
+		Kla_mitz
+		Sivegmu
+		Satz
+		Bazit
+		Bemne
+		Sutoma
+		Kmeza
+		Beyli
+		Hemeh
+		Bna_le
+		Kexu
+		Lahom
+		Ya_puli
+		Nule
+		Boka
+		Kalon
+		Kmate
+		Getsi
+		Bazo
+		Hoha
+		Hegmaylag
+		Bea
+		Kvagmi
+		Kvebe
+		Mefuv
+		Zmola
+		Kma_pakni
+		Balol
+		Noxa
+		Nadan
+		Dumnun
+		Yi_tom
+		Bnik
+		Petsum
+		Pule
+		Bova
+		Tmizda
+		Yibe
+		Kuyli
+		Saza
+		Diti
+		Meni
+		Sepu
+		Bnehet
+		Dopov
+		Zuy
+		Hiha
+		Dif
+		Tmikaf
+		Dit
+		Yipus
+		Silmuma
+		Dvafa
+		Kvod
+		Biyim
+		Tmukh
+		Metal
+		Gaha
+		Stuba
+		Stedom
+		Kmiso
+		Kvemnokh
+		Pon
+		Bnikni
+		Dvotsu
+		Lotu
+		Zmoyfi
+		Mozat
+		Bnamkakh
+		Kvuhaf
+		Hukru
+		Kmizu
+		Hov
+		Si_ma
+		Hogmog
+		Latse
+		Pexel
+		Tmeliv
+		Niget
+		Zmimel
+		Hixi
+		Ni_paden
+		Gime
+		Laboli
+		Suta
+		Yoya
+		Ney
+		Hoknufud
+		Bnila
+		Kihexa
+		Kmabah
+		Pamkalatz
+		Bnif
+		Ka_mad
+		Hiped
+		Pegav
+		Kvofoh
+		Dvuso
+		Tmuhokh
+		Kvomatz
+		Sin
+		Kmomke
+		Puduf_i
+		Ti_pa
+		Da_bo
+		Dizi
+		Hotsu
+		Moze
+		Tmekram
+		Yila
+	}
+	female_common_first_names = {
+		Ya_tan
+		Pado
+		Buzav
+		Ladeyol
+		Namra
+		Maylag
+		Zmati
+		Gupuf
+		Ninepekh
+		Leve
+		Zmaf_u
+		Tmilme
+		Maf_i
+		Zmuylos
+		Stif
+		Kadan
+		Leha
+		Kles
+		Golem
+		Nutey
+		Lao
+		Zmemhu
+		Tmum
+		Dvabe
+		Tmak
+		Nulin
+		Bniviv
+		Zogu_tav
+		Haot
+		Zeva
+		Do_lin
+		Muma
+		Yofezi
+		Baso
+		Lusedi
+		Bniyfam
+		Kumhakh
+		Buyli
+		Kvet
+		Tmaf
+		Ni_ta
+		Yuyfif
+		Lef_i
+		Nolmamku
+		Lulin
+		Dvimra
+		Kezo
+		Zoh
+		Bud
+		Dvomhu
+		Nobi
+		Have
+		Liyuy
+		Statev
+		Stes
+		Stoil
+		Stumrutsa
+		Zizdeknan
+		Zenul
+		Gagmi
+		Polek
+		Mahokh
+		Klumreni
+		Zmakne
+		Yut
+		Gide_pe
+		Sovav
+		Zebakh
+		Yogmit
+		Simrud
+		Ku_pa_makh
+		Sefon
+		Buzu
+		Stusu
+		Klegi
+		Hilu
+		Liha
+		Tmof_om
+		Bnabul
+		Maye
+		Kikri
+		Pifah
+		Zef
+		Lu_mu
+		Pados
+		Zug
+		Bna_bekh
+		Kvavi
+		Kemnu
+		Kli_makh
+		Lamkam
+		Zmosaf_am
+		Gavu
+		Kaf_imna
+		Bnakal
+		Kalu
+		Zen
+		Bnin
+		Talum
+		Did
+		Bikno
+		Nosa
+		Lohopo
+		Stolo
+		Ha_mema
+		Mumhel
+		Tmabad
+		Lodeh
+		Bif_u
+		Guh
+		Kmutam
+		Husek
+		Dem
+		Tetsazdo
+		Zo_ti
+		Keylak
+		Dvuda
+		Gogma
+		Bna_lagmukh
+		Kmog
+		Duvi
+		Tmos
+		Zmul
+		Gali
+		Bnutu
+		Kmit
+		Dutsa
+	}
+	noble_last_names = {
+		Bnamran
+		Holmamhikh
+		Tit
+		Batet
+		Mitsokh
+		Yede
+		Lagokh
+		Dvudokruk
+		Yeful
+		Stapak
+		Bnekh
+		Siyakru
+		Ka_mi
+		Zomnid
+		Mo_tem
+		Kagmolug
+		Suvu
+		Ligmatse
+		Pulmikra
+		Gakna
+		Kezde
+		Bnomom
+		Deka
+		Kvetz
+		Moknifin
+		Tayam
+		Deon
+		Lata
+		Tmoh
+		Solmi
+		Kvoba
+		Piyukh
+		Stu_mo
+		Klati
+		Li_ma
+		Klo_tiv
+		Todezdeh
+		Tmuylutz
+		Stofa
+		Henam
+		Nayfizum
+		Tma_pa
+		Zmi_to
+		Lupa
+		Ko_mi
+		Luov
+		Meyolo
+		Yiyot
+		Doxe
+		Kmenoga
+		Stamra
+		Dvotsi
+		Bnod
+		Tiyfeol
+		Dotim
+		Kada
+		Ne_tuv
+		Tmazdiy
+		Hazuy
+		Galmuh
+		Dviyfo
+		Lef
+		Dvomro
+	}
+	common_last_names = {
+		Di_po
+		Dves
+		Kenit
+		Memnaded
+		Bneza
+		Pikni
+		Gafotz
+		Mimoy
+		Dvali
+		Klena
+		Zmag
+		Legmiv
+		Stimkom
+		Hilay
+		Kusel
+		Talukh
+		Yakron
+		Hauyid
+		Mezi
+		Hamah
+		Li_to
+		Tohu
+		Lonam
+		Mufos
+		Hi_mutz
+		Bos
+		Zuv
+		Dvexo
+		Tmamkey
+		Dvapo
+		Mede
+		Tave
+		Bay
+		Zmek
+		Zal
+		Bnah
+		Nalel
+		Getam
+		Bu_to
+		Hatz
+		Gelamru
+		Kvokre
+		Sele
+		Ti_tead
+		Ke_ma
+		Zizoh
+		Suf
+		Bnuy
+		Litso
+		Megmik
+		Dvik
+		Mupikh
+		Puzda
+		Stimhi
+		Kmuhukh
+		Zamki
+		Zmakakna
+		Kazuh
+		Maned
+		Bnef_izol
+		Bnufid
+		Kamo
+		Nis
+		Dveya
+		Lodu
+		Tukram
+		Kvotsu
+		Nuv
+		Depa
+		Pol
+		Koba
+		Kvabitz
+		Bnad
+		Stos
+		Tmesokh
+		Sikni
+		Muylam
+		Dvak
+		Zmuxo
+		Zekrakh
+		Nalakh
+		Yimked
+		Deh
+		Tmo_mak
+		Klazah
+		Talil
+		Tebegme
+		Bniyle
+		Sazdu
+		Stuzesol
+		Tmaku
+		Ko_pif_o
+		Tila
+		Nubefi
+		Pomrute
+		Biyi
+		Bubo
+		Guyul
+		Dumekh
+		Kvul
+		Klemak
+		Mabetsam
+		Kamhu
+		Sisi
+		Pu_lelma
+		Satseh
+		Steknaka
+		Luhut
+		Nafam
+		Nav
+		Yezakh
+		To_mo
+		Nuf
+		Tuh
+		Tuy
+		Kved
+		Dvutz
+		Kmuhonatz
+		Bnimet
+		Nona
+		Tapuh
+		Stuho
+		Kmitz
+		Dokro
+		Piva
+		Soda
+		Yoda
+		Kamhit
+		Disi
+		Mebo
+		Zima
+		Kito
+		Bneg
+		Keyfe
+		Bnul
+		Dvoyod
+		Klidet
+		Node
+		Latsit
+		Zmak
+		Zmohe
+		Saha
+		Namko
+		Zmofa
+		Tmusutz
+		Kviko
+		Ze_ti
+		Dod
+		Kleday
+		Kliknu
+		Dvutsas
+		Naf
+		Kmivi
+		Meyli
+		Tuk
+		Halun
+		Lis
+		Dumhusov
+		Doyu
+		Klevat
+		Kmoyo
+		Maknat
+		Dvug
+		Kmu_pu
+		Stikrikh
+		Kmayo
+		Lete
+		No_ma
+		Klila
+		Kekif
+		Yoda
+		Dvul
+		Kvaved
+		Gutz
+		Kazo
+		Kvu_pe
+		Tolela
+		Kamni
+		Kvau
+		Peg
+		Hev
+		Pukru
+		Bea
+		Lexu
+		Pabi
+		Gidana
+		Gusizutz
+		Hutig
+		Yeyalem
+		Tmef_i
+		Bnidi
+	}
+	ethnicities = {
+		1 = orc_vampire
+	}
+	graphics = orc
+}
+
+avian_vampire = {
+	color= hsv{ 0.72 0.25 0.22 }
+	religion = lunar_masquerade
+	traits = { roost_reject_culture_group vampiric bird_heritage }
+	obsessions = {
+		trinkets
+	}
+	male_common_first_names={
+		Acren
+Actow
+Adil
+Aglarro
+Ajpe
+Ajurbiw
+Aornu
+Apsos
+Apsow
+Armagno
+Aro
+Arris
+Ated
+Bajtras
+Bandorr
+Bejpo
+Berro
+Biscid
+Biscre
+Blenognu
+Blescrompu
+Blesterro
+Blifud
+Blimpe
+Blirr
+Blollod
+Blubon
+Bogle
+Bonfow
+Branal
+Brecirr
+Brenglu
+Brerdo
+Brirjon
+Briserr
+Bropto
+Ceju
+Cendi
+Cento
+Cepeldos
+Cerbun
+Cetad
+Chal
+Chedas
+Cherrid
+Chesga
+Chis
+Chulmen
+Cido
+Cilpor
+Cimbu
+Cisar
+Clebor
+Clebsu
+Cleldriw
+Clelsoscras
+Clesto
+Clilto
+Clirpru
+Clormo
+Clortis
+Cludew
+Cluru
+Corgactin
+Corju
+Cospos
+Crandre
+Cranmonstros
+Crenber
+Crenes
+Crepto
+Crine
+Crobed
+Crodu
+Croldru
+Cropas
+Crud
+Crujtralcud
+Crurr
+Cuapsi
+Cuaro
+Cuefow
+Cuenfur
+Cuestrol
+Cujsoju
+Cujtraspaw
+Cuobro
+Cusle
+Dacue
+Degner
+Dejtro
+Delsijsu
+Denfu
+Dentiptu
+Deson
+Despo
+Destonbo
+Dibso
+Dincrer
+Dorme
+Dorores
+Doscre
+Dralmas
+Drapsu
+Drejpencre
+Dremplo
+Dremuw
+Dril
+Druptes
+Druw
+Dumi
+Ebsi
+Egnentiw
+Egrud
+Ejan
+Ejse
+Ejso
+Elbo
+Elgad
+Embun
+Encirr
+Eran
+Errew
+Esmer
+Fangor
+Fendre
+Feorr
+Ferper
+Finclud
+Fles
+Flolebres
+Flun
+Fognor
+Folpompes
+Frarerro
+Frarr
+Fretembro
+Fris
+Frodeslas
+Frogle
+Frosocui
+Fruw
+Galbar
+Gencod
+Grarpror
+Gratru
+Greblaw
+Gresgro
+Griw
+Grute
+Ibsow
+Ibu
+Ices
+Icro
+Ide
+Ijtrorr
+Ijtrud
+Ilajpon
+Imirgal
+Io
+Ipu
+Ircecso
+Irder
+Irdus
+Irnu
+Ises
+Ismas
+Isto
+Jagnu
+Janfes
+Jarpru
+Jombro
+Jorcun
+Jurgol
+Labe
+Lardor
+Lebjol
+Ledil
+Lelsu
+Lerbegras
+Lestid
+Locsusdu
+Logastriw
+Lores
+Lulsor
+Lurtir
+Malpir
+Mardu
+Marlo
+Mescren
+Mindrid
+Motaw
+Mow
+Munstro
+Nentance
+Nenus
+Nerpran
+Nerrew
+Nucter
+Nudod
+Nusto
+Ocsu
+Odis
+Olbu
+Ondri
+Onsos
+Orres
+Osgren
+Ostal
+Pacsomis
+Palrel
+Pasas
+Peldro
+Pelles
+Permu
+Perrar
+Persu
+Pesu
+Picue
+Platil
+Plelmol
+Pluldres
+Plulmu
+Plupe
+Ponfe
+Ponglod
+Pranglo
+Preluncler
+Prinfer
+Pror
+Prud
+Prupritrus
+Rares
+Rarfan
+Rid
+Robo
+Rospirr
+Rufo
+Ruldel
+Rulpal
+Saptu
+Sardal
+Sasdin
+Senclo
+Sencrente
+Sepriw
+Serlaslew
+Serrerr
+Serten
+Seso
+Siblu
+Sildru
+Sincli
+Sipter
+Soiw
+Sorbognel
+Soscrer
+Soslal
+Srajserr
+Sral
+Sran
+Sranse
+Srasce
+Srastru
+Srejsolcerr
+Sresa
+Sriw
+Srocu
+Srontre
+Suctun
+Sugnurce
+Sujtro
+Suncror
+Surburr
+Tarpru
+Tecer
+Tenes
+Tinsar
+Tirrerr
+Tisgred
+Togud
+Tolletro
+Tollo
+Tono
+Tralcur
+Trentan
+Trirrod
+Trone
+Tuncle
+Turbol
+Ube
+Ubsur
+Ucso
+Uctil
+Udu
+Ufis
+Ulbir
+Umpo
+Umprori
+Urbor
+Urnew
+Urud
+Usas
+Usos
+Ustun
+Yarod
+Yejsu
+Yestri
+Yinbel
+Yondre
+Yorr
+Yubge
+Yurru
+	}
+	female_common_first_names = {
+		Acui
+Adre
+Alli
+Ano
+Anserma
+Bami
+Berdi
+Bliprampa
+Brigla
+Brosmi
+Bulda
+Cancopra
+Casa
+Celre
+Cesgra
+Challa
+Clajpa
+Clilba
+Clirna
+Crele
+Creta
+Crubjapti
+Culte
+Cuorfi
+Dacua
+Dapi
+Delga
+Della
+Depsa
+Dida
+Dina
+Drerta
+Drulla
+Ecu
+Elbe
+Ema
+Endi
+Engli
+Eri
+Ferma
+Finba
+Flonobra
+Flosca
+Frale
+Fropri
+Frosta
+Imba
+Ime
+Ingra
+Isca
+Labla
+Lice
+Lildi
+Lisel
+Lompa
+Mero
+Monga
+Nircha
+Nocha
+Nopri
+Olme
+Onme
+Ono
+Osci
+Pandre
+Panfe
+Pebi
+Pebli
+Peca
+Peme
+Perja
+Pircorri
+Plarno
+Plulmu
+Plupe
+Pridi
+Purpe
+Raca
+Rasdi
+Refa
+Resi
+Rismel
+Robla
+Sogra
+Solbunda
+Suchoma
+Sudi
+Sudri
+Suspa
+Tefi
+Tenfotra
+Tideja
+Tirde
+Truspa
+Umpa
+Unfa
+Urne
+Urra
+Yere
+Yestri
+Yompe
+	}	
+	noble_last_names = {
+Almin
+Anclarr
+Bacurran
+Beptirr
+Berdi
+Bescrates
+Bidron
+Blararrod
+Bretarrarr
+Cherr
+Clamarr
+Clentil
+Clilburro
+Cono
+Cralu
+Crocru
+Crunbarri
+Cuecuol
+Cueslijtri
+Cuorrimprirr
+Dojpe
+Dratore
+Drircir
+Dugorr
+Ellupir
+Encri
+Entrocsu
+Ertal
+Fencruna
+Foctacow
+Frindragra
+Galdin
+Gan
+Grablorr
+Grinder
+Icuor
+Ilmirsu
+Lase
+Lichu
+Mardu
+Mow
+Nendo
+Nurr
+Pabrerr
+Pebi
+Perprod
+Plardaw
+Pliblus
+Plutrorrurr
+Pridi
+Prulir
+Prurdonclel
+Pucharr
+Rectarcerr
+Relsojso
+Sambriw
+Samo
+Satimpe
+Srafo
+Sren
+Tongri
+Tosdi
+Trir
+Trirlo
+Trol
+Ugonu
+Yar
+Yarod
+Yejpirbar
+Yerrin
+Yesembrerr
+Yestirgad
+Yonto
+	}
+	common_last_names={
+		Almin
+Anclarr
+Bacurran
+Beptirr
+Berdi
+Bescrates
+Bidron
+Blararrod
+Bretarrarr
+Cherr
+Clamarr
+Clentil
+Clilburro
+Cono
+Cralu
+Crocru
+Crunbarri
+Cuecuol
+Cueslijtri
+Cuorrimprirr
+Dojpe
+Dratore
+Drircir
+Dugorr
+Ellupir
+Encri
+Entrocsu
+Ertal
+Fencruna
+Foctacow
+Frindragra
+Galdin
+Gan
+Grablorr
+Grinder
+Icuor
+Ilmirsu
+Lase
+Lichu
+Mardu
+Mow
+Nendo
+Nurr
+Pabrerr
+Pebi
+Perprod
+Plardaw
+Pliblus
+Plutrorrurr
+Pridi
+Prulir
+Prurdonclel
+Pucharr
+Rectarcerr
+Relsojso
+Sambriw
+Samo
+Satimpe
+Srafo
+Sren
+Tongri
+Tosdi
+Trir
+Trirlo
+Trol
+Ugonu
+Yar
+Yarod
+Yejpirbar
+Yerrin
+Yesembrerr
+Yestirgad
+Yonto
+	}
+	ethnicities = {
+		1 = blacktalon
+	}
+	graphics = bird_graphics
+}
+
+kobold_vampire={
+	color= hsv{ 0.83 0.36 0.43 }
+	religion = lunar_masquerade
+	traits = { kobold_culture_group vampiric dragon_heritage }
+	male_common_first_names={
+		Akaki
+		Alexander
+		Andria
+		Bagrat
+		Besarion
+		David
+		Dimitri
+		Eduard
+		Ekvtime
+		Evgeni
+		Filipp
+		Galaktion
+		Georgi
+		German
+		Givi
+		Grigol
+		Ilia
+		Ioseb
+		Irakli
+		Ivane
+		Jansung
+		Jemal
+		Kaikhosro
+		Konstantine
+		Leo
+		Levan
+		Luka
+		Meliton
+		Mikheil
+		Murman
+		Nikoloz
+		Noe
+		Otar
+		Polikarp
+		Radish
+		Revaz
+		Sargis
+		Sergo
+		Shalva
+		Solomon
+		Sulkhan
+		Teimuraz
+		Tingiz
+		Vakhtang
+		Valerian
+		Vasil
+		Vladimer
+		Zakharia
+		Zurab
+		Zviad
+	}
+	female_common_first_names = {
+		Ana
+		Anastasia
+		Aneta
+		Babilina
+		Darejan
+		Dominika
+		Ekaterine
+		Eleonora
+		Esma
+		Ketevan
+		Mariam
+		Nino
+		Olga
+		Rusudan
+		Tekle
+		Vera
+	}	
+	noble_last_names = {
+		Abashidze
+		Dadeshkeliani
+		Dadiani
+		Guramishvili
+		Melikishvili 
+		Nikoladze
+		Orbeliani
+		Tumanishvili
+		Tsereteli
+		Tsitsishvili
+	}
+	common_last_names={
+		Abkhazi
+		Amilakhvari
+		Avalishvili
+		Bagratuni
+		Bakradze
+		Balanchivadze
+		Barakadze
+		Chabukiani
+		Chavchanadze
+		Chkhubianashvili
+		Cholokashvili
+		Chubinashvili
+		Dodashvili
+		Eliava
+		Gabashvili
+		Gokhieli
+		Gordeli
+		Javakhisvili
+		Jugashvili
+		Jugheli
+		Kakabadze
+		Kandelaki
+		Kartvelishvili
+		Kavtaradze
+		Kereselidze
+		Khelaia
+		Khvitia
+		Kvinitadze
+		Leselidze
+		Maglakelidze
+		Makharadze
+		Mazniashvili
+		Mikeladze
+		Muskhelishvili
+		Nioradze
+		Nutsubideze
+		Otskheli
+		Ramishvili
+		Razikashvili
+		Sabinin
+		Shanidze
+		Sukhisvili
+		Tabidze
+		Takaishvili
+		Tsereteli
+		Tsintsadze
+		Uznadze
+		Zhordania
+	}
+	ethnicities = {
+		1 = kobold_green
+	}
+	graphics = kobold_graphics
+}
+
+west_zalar_vampire={
+	color= hsv{ 0.83 0.36 0.43 }
+	religion = lunar_masquerade
+	traits = { west_zalar_culture_group vampiric human_heritage }
+	obsessions = {
+        porcelain
+    }
+	male_common_first_names={
+		Seabi
+		Mirloer
+		Frian
+		Furi
+		Gial
+		Bar
+		Geard
+		Turinguart
+		Dir
+		Gart
+		Sethrid
+		Gruart
+		Dul
+		Mith
+		Sron
+		Robh
+		Lagli
+		Thag
+		Char
+		Glost
+		Nuthart
+		Cliach
+		Iasairt
+		Raciar
+		Liamirt
+		Chlag
+		Math
+		Famirt
+	}
+	female_common_first_names = {
+		Seabi
+		Fann
+		Nuat
+		Pagla
+		Maribh
+		Ciurt
+		Setol
+		Druthi
+		Uani
+		Ciseirt
+		Nanag
+		Clear
+		Beibh
+		Mebh
+		Ibhua
+		Bheth
+		Glimpia
+		Citha
+		Garira
+		Ig
+		Uani
+	}	
+	noble_last_names = {
+		Futhuachurt
+		Brulart
+		Droscor
+		Glannart
+		Scealurt
+		Clinont
+		Gascu
+		Ceostea
+		Detheir
+	}
+	common_last_names={
+		Feimh
+		Chleithal
+		Brunntum
+		Bias
+		Crolul
+		Fann
+		Gial
+		Puar
+		Bocho
+		Guannum
+		Cil
+		Pad
+		Clolteg
+		Siuast
+		Lucht
+		Peisuia
+		Channach
+		Champial
+		Magalo
+		Crungam
+		Piastimh
+		Crololiar
+		Scrail
+		Cuarli
+	}
+
+	graphics = south_asian
+	ethnicities = {
+		3 = vampire
+		1 = slavic_dark_hair
+	}
+}
+
+mousefolk_vampire ={
+	color= hsv{ 0.81 0.20 0.68 }
+	religion = lunar_masquerade
+	traits = { moorwealder_culture_group vampiric }
+	obsessions = {
+		transportation
+	}
+	male_common_first_names={
+		Abraham
+		Amos
+		Baruch
+		Binyamin
+		Daniel
+		David
+		Efraim
+		Ehud
+		Eli
+		Eliezer
+		Elijah
+		Gavriel
+		Hebel
+		Immanuel
+		Itzhak
+		Levi
+		Mattiyahu
+		Mensahe
+		Mikhael
+		Mordecai
+		Moshe
+		Natan
+		Noach
+		Reuben
+		Roi
+		Shalom
+		Shimon
+		Tovia
+		Uriel
+		Uzziel
+		Yaakov
+		Yachin
+		Yafe
+		Yehoshua
+		Yehudah
+		Yochanan
+		Yonatan
+		Yosef
+		Zohar
+	}
+	female_common_first_names = {
+		Barbara
+		Beatrice
+		Cecile
+		Eugenie
+		Inez
+		Irene
+		Noemie
+		Nora
+		Ruth
+		Sonia
+		Yosefa
+	}	
+	noble_last_names = {
+		Abrabanel
+		Camondo
+		Curiel
+		De_Leon
+		Sassoon
+	}
+	common_last_names={
+		Banai
+		Barak
+		Ben_Ami
+		Benveniste
+		Canetti
+		Cantor
+		Cardoso
+		Cohen
+		Disraeli
+		Gaon
+		Golan
+		Haddad
+		Halevi
+		Levy
+		Maimon
+		Mizrachi
+		Montefiore
+		Peretz
+		Rafaeli
+		Saban
+		Sebag
+	}
+	graphics = mousefolk
+	ethnicities = {
+		1 = mousefolk
+	}
+}
+
+dwarven_vampire={
+	color= hsv{ 0.29 0.22 0.51 }
+	religion = lunar_masquerade
+	traits = { cloud_dwarf vampiric dwarf_heritage }
+	obsessions = {
+        tobacco
+    }
+	male_common_first_names={
+		Denny
+		Dominggus
+		Edinho
+		Ellyas
+		Ignacio
+		Jordao
+		Jos
+		Levi
+		Michael
+		Sonny
+	}
+	female_common_first_names = {
+		Bellaetrix 
+		Fatimah
+	}	
+	noble_last_names = {
+		Kolano
+		Sjah
+	}
+	common_last_names={
+		Bouma
+		Hafiedz
+		Leiwakabessy
+		Lilipaly
+		Mainaky
+		Palyama
+		Pattinama
+		Pelmelay
+		Weisapy
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = dwarf_graphics
+}
+
+draconic_vampire={
+	color= hsv{ 0.15 0.55 0.52 }
+	religion = lunar_masquerade
+	traits = { dragonborn_culture_group vampiric dragon_heritage }
+	male_common_first_names={
+		Alexander
+		Arakel
+		Aram
+		Aramais
+		Arsen
+		Artashes
+		Artavazd
+		Artem
+		Ashot
+		Assadour
+		Atom
+		Barsegh
+		Benyamin
+		Deran
+		Eduard
+		Ejseaa
+		Gevorg
+		Gor
+		Gurgen
+		Hamazasp
+		Hayk
+		Hovhannes
+		Hovsep
+		Hrant
+		Isahak
+		Karapet
+		Kevork
+		Levon
+		Mkrtich
+		Murad
+		Nubad
+		Papken
+		Rheing
+		Rouben
+		Sarkis
+		Sergei
+		Sevan
+		Smbat
+		Soghomon
+		Souren
+		Spiru
+		Tadevos
+		Taniel
+		Vahan
+		Vahe
+		Vahram
+		Vano
+		Vartan
+		Vazrik
+		Vilen
+		Yegishe
+		Yervand
+		Zaven
+	}
+	female_common_first_names = {
+		Anna
+		Arshaluys
+		Diana
+		Hripsime 
+		Mari
+		Perchuhi
+		Satenik
+		Shushanik
+		Sophia
+		Virginia
+		Zabel
+		Zardar
+	}	
+	noble_last_names = {
+		Abamelik
+		Agadzhanian
+		Atabekian
+		Melik-Aghamalian
+		Melikyan
+	}
+	common_last_names={
+		Afeyan
+		Arakelian
+		Asdvadzadrian
+		Asriyan
+		Avakian
+		Aydinian
+		Azatian
+		Babadzhanian
+		Bogosian
+		Bounyatian
+		Chakheltian
+		Dombalagian
+		Egoyan
+		Erznvian
+		Ghakarian
+		Ghehanian
+		Ghorghanian
+		Guediguian
+		Hannessoghlian
+		Hasratian
+		Hovsepian
+		Kaloian
+		Kamalian
+		Khachaturian
+		Khakhanyan
+		Khatchaturiants
+		Konstandyan
+		Konstanian
+		Mamikonian
+		Mardvian
+		Matinian
+		Mirakian
+		Mkhitarian
+		Mussiniants
+		Pahlevanian
+		Peleshyan
+		Safrazpekian
+		Sahakiam
+		Sarksyan
+		Sekoyan
+		Shadunts
+		Shahsuvarian
+		Tavakyalian
+		Tchartichian
+		Tcholakhian
+		Ter-Sarkayan
+		Terzian
+		Tigraniants
+		Tigranov
+		Toshian
+		Varapetian
+		Vartanian
+	}
+	ethnicities = {
+		1 = dragonborn_gem
+	}
+	graphics = gem_dragon_graphics
+}
+
+gavkhani_vampire = {
+	color= hsv{ 0.40 0.10 0.24 }
+	religion = lunar_masquerade
+	traits = { gavkhani_culture_group vampiric goblin_heritage }
+	male_common_first_names={
+		Asaf
+		Baqi
+		Bekbulat
+		Fatxelbayan
+		Galiaskar
+		Gargant #real names above this line
+		Redrask
+		Frokh
+		Kad
+		Dak
+		Got
+		Drov
+		Vendro
+		Grath
+		Sith
+		Osk
+		Zhesm
+		Thurf
+	}
+	female_common_first_names = {
+		Masrura
+		Riza
+		Zeyneb
+	}	
+	noble_last_names = {
+		Dodralt
+		Udrask
+		Qwundre
+		Drothkalt
+	}
+	common_last_names={
+		Amirkhanov
+		Agumov
+		Borhan
+		Faysi
+		Gizzat
+		Ibragimov
+		Ibrahim
+		Kamal
+		Khusainov
+		Sultan-Galiev
+		Tinchurin
+		Tukay
+		Kurrul
+		Waxitov
+		Yanbayev
+		Yamasev
+
+		Thalt
+		Kukhhoz
+	}
+	ethnicities = {
+		1 = goblin
+	}
+	graphics = goblin_graphics
+}
+
+qiinat_vampire={
+	color= hsv{ 0.10 0.22 0.69 }
+	religion = lunar_masquerade
+	traits = { chin_culture_group vampiric human_heritage }
+	male_common_first_names={
+		Agustin
+		Alejandro
+		Antauro
+		Antonio
+		Basilio
+		Daniel
+		Diego
+		Eugenio_2
+		Facundo
+		Felipe
+		Francisco
+		Gustavo
+		Hilario
+		Inca
+		Isaac
+		Jose_Maria
+		Julio
+		Lorenzo
+		Manuel
+		Marcos
+		Mariano
+		Martin_2
+		Nicolas_2
+		Osvaldo
+		RenE_
+		Roberto
+		Simon_2
+		Tupac
+		Ulises
+		Victor_2
+	}
+	female_common_first_names = {
+		Angelica
+		Casimira
+		Felicita
+		Juanita
+		Luzmila
+		Mercedes
+		Micael
+		Nilda
+		Savina
+		Silvia
+	}	
+	noble_last_names = {
+		Collahuazo
+		Duchicela
+		Poma
+		Quispe
+		Santa_Cruz
+	}
+	common_last_names={
+		Arguedas
+		Barrientos
+		Cajahuanca
+		Canchata
+		Chambi
+		Chihuan
+		Cusurichi
+		Espejo
+		Frisancho
+		Gamarra
+		Guaman
+		Guayasamin
+		Gutierrez
+		Heredia
+		Humala
+		Iturri
+		Lazarte
+		Luduena
+		Melgarejo
+		Noguera
+		Palacios
+		Patino
+		Rodriguez
+		Roncaglia
+		Sosa
+		Sumac
+		Toledo
+		Vargas
+		Wallparrimachi
+	}
+	ethnicities = {
+		1 = vampire
+	}
+	graphics = south_asian
+}
+
+kailan_vampire={
+	color= hsv{ 0.60 0.38 0.51 }
+	religion = lunar_masquerade
+	traits = { kailan_culture_group vampiric lizardfolk_heritage }
+	obsessions = {
+		coffee
+	}
+	male_common_first_names={
+		Mthuthuzeli
+		Nolizwe
+		Nonceba
+		Paki
+		Sipliwo
+		Thandiwe
+		Themba
+		Uuka
+	}
+	female_common_first_names = {
+		Bukelwa
+		Nogaweni
+		Nolitha
+		Noloyiso
+		Nolusapho
+		Nondwe
+		Nontathu
+		Nozamile
+		Thobeka
+		Vuyiswa
+	}	
+	noble_last_names = {
+		kaGcaleka
+		kaHintsa
+		kaPhalo
+		Sigcawu
+	}
+	common_last_names={
+		Behle
+		Dlamini
+		Dosini
+		Gqunu
+		Gxarha
+		Hegebe
+		Khawatu
+		Khumalo
+		Kwayi
+		Maduna
+		Mpemvu
+		Ncuthu
+		Qadi
+		Rhadebe
+		Sikhosana
+		Xesibe
+		Zangwa
+	}
+	ethnicities = {
+		1 = lizard_iguana
+	}
+	graphics = african
+}
+
+hiadud_vampire = {
+	color= rgb{ 132 121 86 }
+	religion = lunar_masquerade
+	obsessions = {
+		tea
+	}
+	
+	traits = { new_dumonia_culture_group vampiric hiadud_heritage }
+	male_common_first_names={
+		Tauarin
+		Krimauk
+		Murin
+		Saudik
+		Tanuim
+		Reatar
+		Nedeq
+		Khemauk
+		Yaudiq
+		Qelrud
+		Krurqan
+		Rautarus
+		Kyaurak
+		Khraunir
+		Dumalik
+		Khrarun
+		Tunkhaur
+		Qaateq
+		Ianuq
+		Yauhkru
+		Khiraun
+		Nimauq
+		Qauster
+	}
+	female_common_first_names = {
+		Staula
+		Aika
+		Deluqa
+		Saudina
+		Ikhira
+		Nauami
+		Qimara
+		Khehni
+		Yauheqa
+		Rehtani
+		Tiamuq
+		Asaura
+		Maustina
+		Kiuane
+		Khraura
+	}	
+	noble_last_names = {
+		Lhalu
+		Ngapoi
+	}
+	common_last_names={
+		Chophel
+		Dzasa
+		Lungshar
+		Rinpoche
+		Shakabpa
+		Shatra
+		Tashi
+		Wangyal
+	}
+	ethnicities = {
+		1 = hiadud_vampire
+	}
+	graphics = south_asian
+}
+
+gnoll_vampire={
+	color= hsv{ 0.68 0.51 0.96 }
+	religion = animist
+	traits = { hyena_plains_culture_group vampiric gnoll_heritage }
+	male_common_first_names={
+		Amadi
+		Andikan
+		Aren
+		Averey
+		Bahari
+		Bakari
+		Bash
+		Bayode
+		Bitalo
+		Chane
+		Chata
+		Dakarai
+		Davu
+		Dume
+		Fabunni
+		Gamba
+		Genet
+		Guban
+		Hajari
+		Haruni
+		Ife
+		Ilo
+		Issay
+		Jabari
+		Jabilo
+		Jaguan
+		Kabili
+		Kamwimbile
+		Kasim
+		Kenyi
+		Khairi
+		Makalo
+		Mansa
+		Morathi
+		Musawenkosi
+		Raimi
+		Razi
+		Reth
+	}
+	female_common_first_names = {
+		Jokate
+		Kajala
+		Khalila
+		Wema
+		Yobnesh
+	}	
+	noble_last_names = {
+		Kasanda
+		Watuta
+		Zwagendaba
+	}
+	common_last_names={
+		Bulungute
+		Mirambo
+		Mkasiwa
+		Mnywasele
+		Msemwa
+		Mudimbe
+	}
+	ethnicities = {
+		1 = gnoll
+	}
+	graphics = hyena_graphics
+}
+
+vairipire = {
+	color= hsv{ 0.72 0.51 0.75 }
+	religion = cult_of_the_sea
+	traits = { vairia_culture_group vampiric human_heritage }
+	obsessions = {
+		clippers
+	}
+	male_common_first_names={ 
+		Tunga 
+		Broprun 
+		Prasto 
+		Grombe 
+		Resar 
+		Drecuis 
+		Dedal 
+		Ibron 
+		Climan 
+		Cerunur 
+		Jodod 
+		Cengal 
+		Empu 
+		Lasur 
+		Dredo 
+		Punad 
+		Gollar 
+		Frendrel 
+		Bocho 
+		Dodid 
+		Natir 
+		Orjun 
+		Ompros 
+		Cherfar 
+		Bredan 
+		Trarbus 
+		Lode 
+		Ogo 
+		Diro 
+		Drorca 
+		Pecad 
+		Yinden 
+		Elto 
+		Suspo 
+		Plogri 
+		Jordo 
+		Tunor 
+		Bronta 
+		Miro 
+		Drenstri 
+		Brudir 
+		Tujon 
+		Greptin 
+		Brendir
+		Drenstri
+		Pirdun
+	}
+	female_common_first_names = {
+		Espe
+		Sengla
+		Grobla
+		Tresla
+		Breme
+		Inmu
+		Pena
+		Binsi
+		Deni
+		Srena
+		Clese
+		Cisti
+		Sibsor
+		Mebsar
+		Binte
+		Cleni
+		Cimplas
+		Yirmentri
+		Tresgrapod
+		Baltata
+		Plasca
+		Jubli
+		Nanci
+		Ena
+		Agna
+		Suri
+		Angla
+		Yelmi
+		Serenta
+		Ledi
+		Saramon
+		Srami
+		Mema
+		Dolde
+		Dajsa
+		Trellechi
+		Chinglimpe
+		Narmi
+		Dusis
+		Ninglid
+	}	
+	noble_last_names = {
+		Drecuis
+		Clombrer
+		Brinsar
+		Crarnes
+		Enstronfes
+		Fungle
+		Grelcorel
+		Grastra
+		Brensar
+		Enstronfes
+		Isgrermol
+		Grelri
+		Grami
+		Blenglir
+		Grentas
+		Grugres
+		Brudir
+		Grimbe
+		Dumpri
+		Srarfur
+		Grul
+		Rilmondri
+		Tidas
+		Monta
+		Floncar
+		Blapene
+		Grures
+		Grellel
+		Trirto
+		Prampra
+		Grichor
+		Grersa
+		Srafor
+		Grontra
+	}
+	common_last_names={
+		Pleblis
+		Rejple
+		Crorbubsor
+		Crorpe
+		Besco
+		Flersio
+		Floncri
+		Plupta
+		Clopsu
+		Demplre
+		Drenstri
+		Frunsil
+		Bochi
+		Sraror
+		Srar
+		Clombo
+		Praslus
+		Blerchas
+		Prampra
+		Flasu
+		Plabres
+		Drabsi
+		Crusel
+		Blormu
+		Floncar
+		Nuscar
+		Mobla
+		Floncas
+		Dosce
+		Cueles
+		Mebin
+		Blopru
+		Bropra
+		Ponca
+		Torca
+		Nobre
+	}
+	ethnicities = {
+		1 = vampire
+	}
+	graphics = european
+}
+
+thiralian_vampire={
+	color= hsv{ 0.62 0.54 0.72 }
+	religion = lunar_masquerade
+	traits = { vaythir_culture_group vampiric human_heritage }
+	obsessions = {
+		luxury_clothes
+	}
+	male_common_first_names={
+		Amos Anatole Aaron Augustin Achille
+        Baptiste Bernard Bolivar Blaise Baudouin Branford Barnabe Benjamin
+        Charles Clayton Claude Clement Conrad Christophe Constant
+        Domenic Dudley David Daniel 
+        Eraste Eugene Earl Edwin Ernoul Emmanuel Etienne
+        Felix Frederic Ferdinand Fortunat
+        Gustave Gilbert Gabriel Girard
+        Henri Herbert Hollis Hardin Hippolyte Hilaire
+        Ignace
+        Jean Jean-Baptiste Joachim Justin
+        Louis Leon Louis-Auguste Luc Lazare Laurent Lionel
+        Marius Marc Michel
+        Napoleon Nazaire Norbert
+        Olivier Omer
+        Paul Pierre Pelerin Polycarp
+        Raphael Rodrigue
+        Sylvain 
+        Thomas Theophile
+        Ursin Ulysse Urbain
+        Victor Virgil
+        Xaxier
+	}
+	female_common_first_names = {
+		Anne Ada Agnes Amelie Angelique Alice
+        Blandine Berenice Brigitte Barbara
+        Catherine Cecile Constance Christine Claudette Carmen Charlotte
+        Drusilla Debora
+        Eulalie Evangeline Eurydice
+        Flavie Florastine
+        Gabrielle Georgette Georgie
+        Honorine Hazel
+        Jacqueline Jeanne Justine
+        Leopauline Louise
+        Melanie Modeste Miriam Marie
+        Nicole
+        Ophelia Odette Olive
+        Pelagie Prudence
+        Regine Rita Rosette Rose
+        Sylvie Seraphine Severine Sophie Sabine
+        Theodorine
+        Ursuline
+        Virginie
+        Yolande
+	}	
+	noble_last_names = {
+		Bedard
+		Bellemare
+		Cartier
+		David
+		Papineau
+		Surrette
+	}
+	common_last_names={
+		Arceneaux Aucoin Anzelmo Authement
+        Bertinot Bertus Bordelon Brister Broussard Bellocq
+        Chachere Chenier de_Clouet Coupar Creaux Cailloux Couvillon
+        DeBuys Dede Delaroderie Delhomme Delouche Deshotel Dorgenois Doucet Delaup Dessommes
+        Estilette dEnvrich
+        Fontenot Freret Fuglaar Flambeau
+        Gerois Girod Gisclair Goff Guilbeaux Guyote Grenouille Guillory Guidry Guillotte Glapion 
+        Hebert
+        Istre
+        Jeanlouis Jearnmard Jumonville
+        Lambert Landry Larcade Larriviere Latiolais Lavergne LeBlance Lemelle Lafitte
+        Montoucet de_Macarty Marchand Martinet Montegut Mouton Metoyer Morial
+        Nicaud Nagin
+        Pavy Perrault Pinac Pitot Prieur Peltier Paillard Permillion
+        Rabon de_Reggio Rilleux Ritchie Roffignac Roman Roudanez Rozier Robideaux Rosembraise Rillieux
+        Savoie Schexnayder Sibille Simien Simoneaux Sarebresole Soule Sentell
+        Teekell Teurlings Trevigne Vercher de_Ville Vauquelin Verret Vandage
+        Vallencourt
+        Wende
+        Zeringue
+	}
+	graphics = european
+	ethnicities = {
+		2 = vampire
+		1 = slavic_dark_hair
+	}
+}
+
+goblin_vampire = {
+	color= hsv{ 0.12 0.41 0.47 }
+	religion = lunar_masquerade
+	traits = { kharai_urchu_culture_group vampiric goblin_heritage }
+	male_common_first_names={
+		Aysen
+		Aytal
+		Elley
+		Manchaary
+		Nyurgun
+	}
+	female_common_first_names = {
+		Anna
+		Natalia
+		Sardana
+		Zoya
+	}	
+	noble_last_names = {
+		Anabar
+		Darkhan
+		Kigilyakh
+	}
+	common_last_names={
+		Okhlopkov
+		Ondar
+		Pinigin
+		Shishigin
+		Shtyrov
+		Sivtsev
+	}
+	ethnicities = {
+		1 = goblin_vampire
+	}
+	graphics = goblin_graphics
+}
+
+orc_vampire={
+	color= hsv{ 0.25 0.43 0.55 }
+	religion = lunar_masquerade
+	traits = { saltwaste_survivor_culture_group vampiric orc_heritage }
+	obsessions = {
+		meat
+	}
+	male_common_first_names = {
+		Tusib
+		Hiyyab
+		Khot
+		Nahum
+		Khafayyu
+		Sawafl
+		Mawin
+		Wiraqut
+		Kibayy
+		Nanta
+		Nontira
+		Qikris
+		Qarro
+		Moshayy
+		Dibbiqqa
+		Hosm
+		Nadda
+		Yandud
+		Oqaq
+		Hikhof
+		Huti
+		Lowaq
+		Aqqur
+		Lowwad
+		Mawi
+		Wud
+		Intah
+		Latar
+		Khofud
+		Tubu
+		Sammun
+		Lashi
+		Tusiw
+		Urik
+		Woko
+		Simiyy
+		Fubbub
+		Khiwi
+		Nus
+		Khitu
+		Qurimor
+		Fafi
+		Antin
+		Siri
+		Nof
+		Rabba
+		Murbala
+		Rifir
+		Zifa
+		Honu
+		Taru
+		Kodif
+		Bali
+		Khahard
+		Qishi
+		Biyyism
+		Orbu
+		Zulaf
+		Ontal
+		Talak
+		Qadi
+		Lord
+		Safido
+		Sifl
+		Khindih
+		Ilof
+		Nabba
+		Sitlod
+		Romub
+		Naha
+		Mayya
+		Qukhi
+		Qawwad
+		Kalayyu
+		Warri
+		Zuyik
+		Sariqu
+		Dof
+		Zirut
+		Tahit
+		Rumuntar
+		Namandab
+		Qodo
+		Tayyo
+		Wataw
+		Akra
+		Ras
+		Dondi
+		Utli
+		Wotanta
+		Nidado
+		Wiyyin
+		Futlib
+		Danindu
+		Wuwwo
+		Tammudi
+		Kak
+		Hirar
+		Qumi
+		Qiyyoyy
+		Sorol
+		Tiqayy
+		Boqiqa
+		Saqin
+		Huhab
+		Loni
+		Wanu
+		Kiwa
+		Doward
+		Iqu
+		Wano
+		Zunu
+		Duqa
+		Zifl
+		Fonord
+		Mirbahak
+		Qulo
+		Qafi
+		Lodda
+		Sabi
+		Ayi
+		Fusm
+		Tuyi
+		Yayat
+		Khadih
+		Qali
+		Nat
+		Arbi
+	}
+	female_common_first_names = {
+		Iyo
+		Mirroyyo
+		Kara
+		Ummall
+		Hilaw
+		Furrum
+		Dummi
+		Qoki
+		Khotafa
+		Wimi
+		Liqit
+		Laqqah
+		Bulo
+		Baqqon
+		Okhakri
+		Matiq
+		Doqun
+		Kummu
+		Yatli
+		Wuf
+		Wataf
+		Zisitlaf
+		Diku
+		Dua
+		Idad
+		Bakhuf
+		Qokra
+		Yaqi
+		Kuyyis
+		Sabbad
+		Yayyill
+		Roti
+		Qosa
+		Laki
+		Ziti
+		Khillat
+		Tis
+		Bubar
+		Duhah
+		Atomab
+		Didor
+		Hishorba
+		Nuw
+		Kundord
+		Lawwo
+		Dota
+		Kayar
+		Yama
+		Samo
+		Nammur
+		Siqqa
+		Daduk
+		Rord
+		Mori
+		Ubir
+		Ituno
+		Ili
+		Uyu
+		Yilal
+		Taroshan
+		Dariru
+		Qiwwo
+		Qarod
+		Hira
+		Anto
+		Sorod
+		Owwa
+		Yow
+		Kuforri
+		Lirbok
+		Miqat
+		Darrikro
+		Zoba
+		Iti
+		Hushil
+		Tammi
+		Misa
+		Toso
+		Huwwi
+		Hammah
+		Dirruh
+		Khirba
+		Hayyil
+		Ukro
+		Rudud
+		Khid
+		Raka
+		Akhon
+		Hallum
+		Zobba
+		Okih
+		Wakhiq
+		Wull
+		Kadi
+		Yaf
+		Sofad
+		Niyya
+		Qibafl
+		Quntam
+		Zudot
+		Bila
+		Qirah
+		Zolo
+		Hibah
+		Kiddun
+		Sura
+		Tutini
+		Makhin
+		Nadukhiq
+		Wurd
+		Kawwu
+		Lalal
+		Bukhur
+		Sitlodur
+		Yalum
+		Zuwwuk
+		Siso
+		Moraddi
+		Uwu
+		Kiqu
+		Notluq
+		Hill
+		Fikha
+		Kumad
+		Kayyi
+		Lan
+		Fifo
+		Hikhif
+		Lism
+	}
+	noble_last_names = {
+		Satism
+		Duka
+		Akin
+		Tushaq
+		Aror
+		Abona
+		Ilar
+		Foyy
+		Dihuqol
+		Orar
+		Ati
+		Harba
+		Tadid
+		Dahiyyo
+		Durim
+		Hudu
+		Tilata
+		Duqqilab
+		Satla
+		Nudo
+		Matlall
+		Kuli
+		Habumur
+		Tintufl
+		Kada
+		Soso
+		Yoqal
+		Yiniqqo
+		Kasi
+		Randar
+		Akholah
+		Fushut
+		Koritur
+		Mitlakhif
+		Inum
+		Moma
+		Tuti
+		Fawo
+		Qawaq
+		Bukruntak
+		Tioyy
+		Iki
+		Zus
+		Sarro
+		Qayyorob
+		Khalladdow
+		Fidi
+		Zatulo
+		Mol
+		Kunah
+		Usun
+		Kama
+		Fikhi
+		Katom
+		Tonda
+		Kundu
+		Qimmab
+		Bimmu
+		Doho
+		Tutu
+		Wunta
+		Nuwa
+		Kaso
+	}
+	common_last_names = {
+		Makhis
+		Qiwub
+		Zukhih
+		Yiwwo
+		Natas
+		Mibbo
+		Howwas
+		Rubbu
+		Qufu
+		Irub
+		Yandard
+		Titill
+		Qosu
+		Funta
+		Wakhi
+		Harru
+		Yatlan
+		Wammituf
+		Otatlu
+		Quli
+		Domon
+		Qubam
+		Ama
+		Kitliq
+		Bosis
+		Fof
+		Ibiddu
+		Dilla
+		Khadu
+		Tisah
+		Holl
+		Raba
+		Atuntuf
+		Nabba
+		Fado
+		Hatim
+		Nufa
+		Motu
+		Satiw
+		Zutu
+		Kolin
+		Now
+		Nalo
+		Masir
+		Yub
+		Surrim
+		Haddol
+		Birbam
+		Santi
+		Salor
+		Bimma
+		Uwafa
+		Zomufl
+		Nobatiyy
+		Kosm
+		Wusa
+		Uhi
+		Mabbu
+		Wak
+		Qiba
+		Dimi
+		Darraqqi
+		Zahoh
+		Qola
+		Sofl
+		Soddu
+		Oku
+		Fafinto
+		Tasoqih
+		Luqof
+		Fukill
+		Doma
+		Sotilu
+		Otla
+		Hafl
+		Mitul
+		Miqqi
+		Raur
+		Fora
+		Mommi
+		Bayyar
+		Woyy
+		Futoh
+		Khord
+		Mamali
+		Mikra
+		Matlaf
+		Tuno
+		Iyyo
+		Foyan
+		Muma
+		Qisa
+		Quhi
+		Mabo
+		Durobbi
+		Mimu
+		Hanard
+		Fiyu
+		Diraw
+		Bumminu
+		Yitlar
+		Mutism
+		Uor
+		Ladak
+		Sudah
+		Nari
+		Kuddu
+		Kowu
+		Khafu
+		Dowwu
+		Qibbiwat
+		Morrir
+		Hukasut
+		Kiwa
+		Miqit
+		Qamu
+		Nusak
+		Faqqiyy
+		Irall
+		Rit
+		Mollo
+		Bifl
+		Khasm
+		Immu
+		Kahut
+		Zammit
+		Moqa
+		Riuh
+		Fitom
+		Udadi
+		Iwisha
+		Kidada
+		Wulu
+		Kotlull
+		Yosarrir
+		Uhurd
+		Baraw
+		Kayab
+		Didil
+		Tonuh
+		Folut
+		Latunall
+		Tayya
+		Wayoh
+		Rimo
+		Bawwiyyad
+		Riwi
+		Diyam
+		Qakasu
+		Kibuw
+		Kaqimi
+		Hudubi
+		Hakra
+		Qummi
+		Surbo
+		Mirbim
+		Bullol
+		Sura
+		Zidum
+		Maqid
+		Dita
+		Qumir
+		Nabi
+		Rikro
+		Hiq
+		Burbi
+		Qiko
+		Khon
+		Tabu
+		Yoll
+		Yabo
+		Luquwa
+		Qia
+		Wurar
+		Mikir
+		Motlab
+		Wida
+		Fok
+		Rubu
+		Fonta
+		Wirism
+		Lird
+		Kumah
+		Maba
+		Biwu
+		Antu
+		Huqih
+		Mohola
+		Kafid
+		Alin
+	}
+	ethnicities = {
+		1 = orc_vampire
+	}
+	graphics = orc
+}
+
+embervein_vampire={
+	color= hsv{ 0.25 0.43 0.55 }
+	religion = lunar_masquerade
+	traits = { embervein_warriors_culture_group vampiric orc_heritage }
+	obsessions = {
+		meat
+	}
+	male_common_first_names = {
+		Tusib
+		Hiyyab
+		Khot
+		Nahum
+		Khafayyu
+		Sawafl
+		Mawin
+		Wiraqut
+		Kibayy
+		Nanta
+		Nontira
+		Qikris
+		Qarro
+		Moshayy
+		Dibbiqqa
+		Hosm
+		Nadda
+		Yandud
+		Oqaq
+		Hikhof
+		Huti
+		Lowaq
+		Aqqur
+		Lowwad
+		Mawi
+		Wud
+		Intah
+		Latar
+		Khofud
+		Tubu
+		Sammun
+		Lashi
+		Tusiw
+		Urik
+		Woko
+		Simiyy
+		Fubbub
+		Khiwi
+		Nus
+		Khitu
+		Qurimor
+		Fafi
+		Antin
+		Siri
+		Nof
+		Rabba
+		Murbala
+		Rifir
+		Zifa
+		Honu
+		Taru
+		Kodif
+		Bali
+		Khahard
+		Qishi
+		Biyyism
+		Orbu
+		Zulaf
+		Ontal
+		Talak
+		Qadi
+		Lord
+		Safido
+		Sifl
+		Khindih
+		Ilof
+		Nabba
+		Sitlod
+		Romub
+		Naha
+		Mayya
+		Qukhi
+		Qawwad
+		Kalayyu
+		Warri
+		Zuyik
+		Sariqu
+		Dof
+		Zirut
+		Tahit
+		Rumuntar
+		Namandab
+		Qodo
+		Tayyo
+		Wataw
+		Akra
+		Ras
+		Dondi
+		Utli
+		Wotanta
+		Nidado
+		Wiyyin
+		Futlib
+		Danindu
+		Wuwwo
+		Tammudi
+		Kak
+		Hirar
+		Qumi
+		Qiyyoyy
+		Sorol
+		Tiqayy
+		Boqiqa
+		Saqin
+		Huhab
+		Loni
+		Wanu
+		Kiwa
+		Doward
+		Iqu
+		Wano
+		Zunu
+		Duqa
+		Zifl
+		Fonord
+		Mirbahak
+		Qulo
+		Qafi
+		Lodda
+		Sabi
+		Ayi
+		Fusm
+		Tuyi
+		Yayat
+		Khadih
+		Qali
+		Nat
+		Arbi
+	}
+	female_common_first_names = {
+		Iyo
+		Mirroyyo
+		Kara
+		Ummall
+		Hilaw
+		Furrum
+		Dummi
+		Qoki
+		Khotafa
+		Wimi
+		Liqit
+		Laqqah
+		Bulo
+		Baqqon
+		Okhakri
+		Matiq
+		Doqun
+		Kummu
+		Yatli
+		Wuf
+		Wataf
+		Zisitlaf
+		Diku
+		Dua
+		Idad
+		Bakhuf
+		Qokra
+		Yaqi
+		Kuyyis
+		Sabbad
+		Yayyill
+		Roti
+		Qosa
+		Laki
+		Ziti
+		Khillat
+		Tis
+		Bubar
+		Duhah
+		Atomab
+		Didor
+		Hishorba
+		Nuw
+		Kundord
+		Lawwo
+		Dota
+		Kayar
+		Yama
+		Samo
+		Nammur
+		Siqqa
+		Daduk
+		Rord
+		Mori
+		Ubir
+		Ituno
+		Ili
+		Uyu
+		Yilal
+		Taroshan
+		Dariru
+		Qiwwo
+		Qarod
+		Hira
+		Anto
+		Sorod
+		Owwa
+		Yow
+		Kuforri
+		Lirbok
+		Miqat
+		Darrikro
+		Zoba
+		Iti
+		Hushil
+		Tammi
+		Misa
+		Toso
+		Huwwi
+		Hammah
+		Dirruh
+		Khirba
+		Hayyil
+		Ukro
+		Rudud
+		Khid
+		Raka
+		Akhon
+		Hallum
+		Zobba
+		Okih
+		Wakhiq
+		Wull
+		Kadi
+		Yaf
+		Sofad
+		Niyya
+		Qibafl
+		Quntam
+		Zudot
+		Bila
+		Qirah
+		Zolo
+		Hibah
+		Kiddun
+		Sura
+		Tutini
+		Makhin
+		Nadukhiq
+		Wurd
+		Kawwu
+		Lalal
+		Bukhur
+		Sitlodur
+		Yalum
+		Zuwwuk
+		Siso
+		Moraddi
+		Uwu
+		Kiqu
+		Notluq
+		Hill
+		Fikha
+		Kumad
+		Kayyi
+		Lan
+		Fifo
+		Hikhif
+		Lism
+	}
+	noble_last_names = {
+		Satism
+		Duka
+		Akin
+		Tushaq
+		Aror
+		Abona
+		Ilar
+		Foyy
+		Dihuqol
+		Orar
+		Ati
+		Harba
+		Tadid
+		Dahiyyo
+		Durim
+		Hudu
+		Tilata
+		Duqqilab
+		Satla
+		Nudo
+		Matlall
+		Kuli
+		Habumur
+		Tintufl
+		Kada
+		Soso
+		Yoqal
+		Yiniqqo
+		Kasi
+		Randar
+		Akholah
+		Fushut
+		Koritur
+		Mitlakhif
+		Inum
+		Moma
+		Tuti
+		Fawo
+		Qawaq
+		Bukruntak
+		Tioyy
+		Iki
+		Zus
+		Sarro
+		Qayyorob
+		Khalladdow
+		Fidi
+		Zatulo
+		Mol
+		Kunah
+		Usun
+		Kama
+		Fikhi
+		Katom
+		Tonda
+		Kundu
+		Qimmab
+		Bimmu
+		Doho
+		Tutu
+		Wunta
+		Nuwa
+		Kaso
+	}
+	common_last_names = {
+		Makhis
+		Qiwub
+		Zukhih
+		Yiwwo
+		Natas
+		Mibbo
+		Howwas
+		Rubbu
+		Qufu
+		Irub
+		Yandard
+		Titill
+		Qosu
+		Funta
+		Wakhi
+		Harru
+		Yatlan
+		Wammituf
+		Otatlu
+		Quli
+		Domon
+		Qubam
+		Ama
+		Kitliq
+		Bosis
+		Fof
+		Ibiddu
+		Dilla
+		Khadu
+		Tisah
+		Holl
+		Raba
+		Atuntuf
+		Nabba
+		Fado
+		Hatim
+		Nufa
+		Motu
+		Satiw
+		Zutu
+		Kolin
+		Now
+		Nalo
+		Masir
+		Yub
+		Surrim
+		Haddol
+		Birbam
+		Santi
+		Salor
+		Bimma
+		Uwafa
+		Zomufl
+		Nobatiyy
+		Kosm
+		Wusa
+		Uhi
+		Mabbu
+		Wak
+		Qiba
+		Dimi
+		Darraqqi
+		Zahoh
+		Qola
+		Sofl
+		Soddu
+		Oku
+		Fafinto
+		Tasoqih
+		Luqof
+		Fukill
+		Doma
+		Sotilu
+		Otla
+		Hafl
+		Mitul
+		Miqqi
+		Raur
+		Fora
+		Mommi
+		Bayyar
+		Woyy
+		Futoh
+		Khord
+		Mamali
+		Mikra
+		Matlaf
+		Tuno
+		Iyyo
+		Foyan
+		Muma
+		Qisa
+		Quhi
+		Mabo
+		Durobbi
+		Mimu
+		Hanard
+		Fiyu
+		Diraw
+		Bumminu
+		Yitlar
+		Mutism
+		Uor
+		Ladak
+		Sudah
+		Nari
+		Kuddu
+		Kowu
+		Khafu
+		Dowwu
+		Qibbiwat
+		Morrir
+		Hukasut
+		Kiwa
+		Miqit
+		Qamu
+		Nusak
+		Faqqiyy
+		Irall
+		Rit
+		Mollo
+		Bifl
+		Khasm
+		Immu
+		Kahut
+		Zammit
+		Moqa
+		Riuh
+		Fitom
+		Udadi
+		Iwisha
+		Kidada
+		Wulu
+		Kotlull
+		Yosarrir
+		Uhurd
+		Baraw
+		Kayab
+		Didil
+		Tonuh
+		Folut
+		Latunall
+		Tayya
+		Wayoh
+		Rimo
+		Bawwiyyad
+		Riwi
+		Diyam
+		Qakasu
+		Kibuw
+		Kaqimi
+		Hudubi
+		Hakra
+		Qummi
+		Surbo
+		Mirbim
+		Bullol
+		Sura
+		Zidum
+		Maqid
+		Dita
+		Qumir
+		Nabi
+		Rikro
+		Hiq
+		Burbi
+		Qiko
+		Khon
+		Tabu
+		Yoll
+		Yabo
+		Luquwa
+		Qia
+		Wurar
+		Mikir
+		Motlab
+		Wida
+		Fok
+		Rubu
+		Fonta
+		Wirism
+		Lird
+		Kumah
+		Maba
+		Biwu
+		Antu
+		Huqih
+		Mohola
+		Kafid
+		Alin
+	}
+	ethnicities = {
+		1 = orc_vampire
+	}
+	graphics = orc
+}
+
+ogre_vampire={
+	color= rgb{ 233 207 84 }
+	religion = lunar_masquerade
+	traits = { kharai_oni_culture_group vampiric ogre_heritage }
+
+	obsessions = {
+		luxury_potions
+	}
+
+		male_common_first_names={
+		Plaurko
+		Moku
+		Poye
+		Gurke
+		Aum
+		Graim
+		Sharak
+		Kur
+		Yitau
+		Urje
+		Urbomai
+		Bedai
+		Kigu
+		Cinghun
+		Gerno
+		Oksi
+		Omli
+		Hund
+		Fricau
+		Redaip
+		Baundai
+		Maugi
+		Frull
+		Cairmuk
+		Minyel
+		Frop
+		Loll
+		Irci
+		Punglei
+	}
+	female_common_first_names = {
+		Maunde
+		Lat
+		Yeh
+		Paw
+		Cind
+		Timbi
+		Grirte
+		Maiconyi
+		Oyu
+		Embe
+		Wurdem
+	}	
+	noble_last_names = {
+		Cambaunggai
+		Ususta
+		Ausese
+		Nyauncai
+		Sherpurdaill
+		Ernairmi
+		Dairu
+		Katanggaing
+		Arsintraint
+	}
+	common_last_names={
+		Rurkain
+		Dind
+		Stangkang
+		Yaib
+		Ibustrang
+		Plufo
+		Munga
+		Baurjolkunt
+		Rangkang
+		Froknyu
+		Saksaim
+		Taurhaurde
+		Prenggumok
+		Aukai
+		Oriru
+		Waih
+		Hepte
+		Launyuh
+		Olaidaub
+		Kembi
+		Prengharbu
+		Ikhengkir
+	}
+	ethnicities = {
+		1 = ogre_vampire
+	}
+	graphics = east_asian
+}
+
+dark_dwarven_vampire={
+	color= hsv{ 0.04 0.54 0.86 }
+	religion = old_kragmorn
+	traits = { tunnel_cursed vampiric dwarf_heritage }
+	male_common_first_names={
+		Ang
+		Norodom
+		Pok
+		Satha
+		Sisowath
+		Thommo
+		I_Gusti
+		Anak_Agung
+		Tjokorda
+		I_Dewa
+		Ida
+		Jero
+	}
+	female_common_first_names = {
+		Aut
+		Bunlei
+		Di
+		Mey
+		Ros
+		Vanthy
+		Vara
+	}	
+	noble_last_names = {
+		Ang
+		Varman
+	}
+	common_last_names={
+		Chan
+		Em
+		Eng
+		Mey
+		Non
+		Reachea
+		Sieng
+		Sinn
+		Snguon
+		Tong
+	}
+	ethnicities = {
+		1 = dwarf_dark
+	}
+	graphics = dwarf_graphics
+}
+
+sunkissed={
+	color= hsv{ 0.22 0.41 0.64 }
+	religion = cult_of_the_sun
+	traits = { central_noric_culture_group east_noric_culture_group human_heritage}
+	obsessions = {
+		fine_art
+	}
+	male_common_first_names={
+		Adrian
+		Alexandru
+		Andrei
+		Anton
+		Artur
+		Bogdan
+		Carol
+		Cezar
+		Constantin
+		Constin
+		Cosmin
+		Daniel
+		Dumitru
+		Emanuel
+		Eremia
+		Eugen
+		Ferdinand
+		Flaviu
+		Florea
+		Gheorghe
+		Grigore
+		Henric
+		Horatiu
+		Iacob
+		Ilie
+		Ioan
+		Ion
+		Ion_Emanuel
+		Iosif
+		Iulian
+		Iuliu
+		Laurentiu
+		Leontin
+		Luca
+		Lucian
+		Mihai
+		Mircea
+		Nicolae
+		Ovidiu
+		Petru
+		Radu
+		Sergiu
+		Silviu
+		Simion
+		Stefan
+		Valeriu
+		Vasile
+		Victor
+		Vintila
+		Vlad
+	}
+	female_common_first_names = {
+		Adela
+		Ana
+		Constanta
+		Daria
+		Dora
+		Ecaterina
+		Elena
+		Elisa
+		Elisabeta
+		Eugenia
+		Iulia
+		Iuliana
+		Lucretia
+		Maria
+		Maritica
+	}	
+	noble_last_names = {
+		Cantemir
+		Caradja
+		Conachi
+		de_Reuss-Mirza
+		de_Hohenzollern
+		Dinotto-Gusti
+		Dragos
+		Ghica
+		Hasdeu
+		Hurmuzachi
+		Kogalniceanu
+		Mocioni
+		Moruzi
+		Murgulet
+		Racovita
+		Sturdza
+		Vacarescu
+		Ionita
+	}
+	common_last_names={
+		Angelescu
+		Antonescu
+		Argetoianu
+		Averescu
+		Baldescu
+		Barozzi
+		Berindei
+		Cernat
+		Christecu
+		Cihoski
+		Ciuperca
+		Coanda
+		Crainiceanu
+		Critescu
+		Culcer
+		Cuza
+		Dona
+		Dragalina
+		Dumitrescu
+		Falcoianu
+		Flechtenmacher
+		Florescu
+		Froza
+		Gardescu
+		Grigorescu
+		Harjeu
+		Holban
+		Iancovescu
+		Iliasevici
+		Iliescu
+		Ionascu
+		Ionescu
+		Ionitiu
+		Koslinski
+		Lahovary
+		Lupescu
+		Mardarescu
+		Murgescu
+		Poenaru
+		Prezan
+		Salajan
+		Samsonovici
+		Schitiu
+		Scodrea
+		Slaniceanu
+		Steflea
+		Tatarascu
+		Tenescu
+		Vaitoianu
+		Zottu
+	}
+	ethnicities = {
+		1 = sunkissed
+	}
+	graphics = european
+}
+
+mutant={
+	color= hsv{ 0.62 0.35 0.28 }
+	religion = church_of_man
+	traits = { sirens_lagoon_culture_group monstrous_heritage }
+	male_common_first_names={
+		Aadu
+		Alar
+		Aleksander
+		Andrus
+		Artur
+		August
+		Bernard
+		Dmitri
+		Eduard
+		Eerik
+		Elmar
+		Ernst
+		Georg
+		Gustav
+		Haman
+		Harri
+		Heino
+		Hendrik
+		Hjalmar
+		Ivari
+		Jaan
+		Jakob
+		Johannes
+		Joosep
+		Juhan
+		Julius
+		Juri
+		Kaarel
+		Kalev
+		Konstantin
+		Lennart
+		Ludvig
+		Madis
+		Mart
+		Mikhel
+		Nigul
+		Olev
+		Paavo
+		Peeter
+		Pent
+		Ragnar
+		Siiri
+		Sven
+		Tarmo
+		Toomas
+		Tonis
+		Uno
+		Valmar
+		Villwm
+		Voldemar
+	}
+	female_common_first_names = {
+		Aino
+		Anna
+		Astrid
+		Caroline
+		Doris
+		Dorothea
+		Jutta
+		Mari
+		Marta
+	}	
+	noble_last_names = {
+		Angelus
+		Brede
+		Kopp
+		Kukk
+		Leesment
+		Rahamagi
+		von_Ditmar
+		von_Schilling
+		von_Stackelberg
+		von_zur-Muhlen
+	}
+	common_last_names={
+		Aamisepp
+		Aavik
+		Adams
+		Anvel
+		Barbarus
+		Bornhohe
+		Eenpalu
+		Hint
+		Hurt
+		Irv
+		Jaakson
+		Jekelius
+		Jervan
+		Kalm
+		Kangro
+		Kint
+		Klaasen
+		Klumberg
+		Koern
+		Kogerman
+		Kotli
+		Kranig
+		Kumari
+		Kupine
+		Kuulmata
+		Kuusik
+		Koiv
+		Laidoner
+		Laretei
+		Leppik
+		Lipping
+		Lohk
+		Moora
+		Mae
+		Mannil
+		Natus
+		Nurkse
+		Nurmekund
+		Orkivu
+		Perna
+		Piiper
+		Poska
+		Puusepp
+		Pats
+		Poopuu
+		Rei
+		Reinman
+		Rank
+		Siinmaa
+		Sikkar
+		Sirk
+		Strandman
+		Tonisson
+		Uluots
+		Vaga
+		Veske
+		Vilbaste
+		Vilms
+		Warma
+		von_Uexkull
+		Okva
+		Opik
+	}
+	ethnicities = {
+		1 = slavic
+	}
+	graphics = european
+}

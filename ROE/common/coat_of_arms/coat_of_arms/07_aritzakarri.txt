@@ -1,0 +1,245 @@
+﻿#Crag Eagles
+CRG = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "white" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+    color2 = "grey"
+    color3 = "blue_light"
+
+    colored_emblem = {
+        texture = "ce_chevron.dds"
+        color1 = color2
+        color2 = color3
+		instance = { position = { 0.5 0.6 } }
+    }
+}
+
+#Ulivona literally an uncolonized state had the first bird related flag
+ULI = {
+	pattern = "pattern_solid.tga"
+	color1 = "orange"
+	
+	colored_emblem = {
+		texture = "ce_roe_owl.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+}
+
+#Gailurr - home to one of the last dragons, which will come up in their JE
+GAI = {
+	pattern = "pattern_solid.tga"
+	color1 = "red_dark"
+	#The textured emblem looks way better but tbh its kinda incongruinous. Gonna bring it back if people comment on the current design
+	#textured_emblem = {
+	#	texture = "te_wyvern_woven.dds"
+	#	color1 = "white"
+	#	color2 = "yellow"
+	#	instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	#}	
+	colored_emblem = {
+		texture = "ce_gandaberunda.dds"
+		color1 = "yellow"
+		color2 = "black"
+		color3 = "black"
+	}
+}
+
+#Piumavia
+PIU = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.75 0.75 } position = { 0.75 0.3 } }		
+	}
+
+
+	colored_emblem = {
+		texture = "ce_castle_cajun.dds"
+		color1 = "green_light"
+	}
+}
+
+#Aitzkora
+#AIZ = {
+#	pattern = "pattern_solid.tga"
+#	color1 = "red_light"
+#
+#	textured_emblem = {
+#		texture = "ce_gredic.dds"
+#		color1 = "white"
+#		color2 = "yellow"
+#		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+#	}	
+#	
+#	
+#}
+
+#ihesara
+IHE = {
+	pattern = "pattern_solid.tga"
+	color1 = "grey"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "blue_light"
+		color2 = "grey"
+		
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+	colored_emblem = {
+		texture = "ce_triangles.dds"
+		color1 = "blue"
+		color2 = "black"
+		
+		instance = { scale = { .2 .4 } position = { 0.5 0.5 } }	
+	}
+	colored_emblem = {
+		texture = "ce_triangles.dds"
+		color1 = "blue"
+		color2 = "black"
+		
+		instance = { scale = { .2 .4 } rotation = 180  position = { 0.5 0.5 }  }	
+	}
+}
+
+#Kolvatch
+KCH = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+
+	
+	colored_emblem = {
+		texture = "ce_sun_face_roe.dds"
+		color1 = "white"
+		color2 = "red"
+		color3 = "black"
+
+		instance = { scale = { 1 1 } position = { 0.5 0.45 } }	
+	}
+	colored_emblem = {
+		texture = "ce_stripe_bottom.dds"
+		color1 = "orange"
+		
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+	colored_emblem = {
+		texture = "ce_stripe_bottom.dds"
+		color1 = "yellow"
+		
+		instance = { scale = { 1 1 } position = { 0.5 0.65 } }	
+	}
+	colored_emblem = {
+		texture = "ce_stripe_bottom_nkp.dds"
+		color1 = "black"
+
+		instance = { scale = { 1 1 } position = { 0.5 0.45 } }	
+	}
+	#colored_emblem = {
+	#	texture = "ce_border_overlord"
+	#	color1 = "blue_light"
+	#	color2 = "red"
+	#	color3 = "black"
+#
+#		instance = { scale = { 1 .5 } position = { 0.5 0.5 } }	
+#	}
+}
+
+#Zharsehich ##Silver Serpents flag
+ZIH = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_roe_kraken_pirate.dds"
+		color1 = "yellow"
+		color2 = "grey"
+		instance = { scale = { 1 1 } position = { 0.5 0.55 } }	
+	}	
+
+	
+}
+
+#Skraggi ##Crimson Corsairs old flag
+NIS = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_roe_communist_pirate.dds"
+		color1 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.55 } }	
+	}	
+
+	
+}
+
+# Hizkiabar
+HIZ = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "orange"
+		
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+}
+LUR = {
+	pattern = "pattern_solid.tga"
+	color1 = "orange"
+
+	colored_emblem = {
+		texture = "ce_bird_paradise.dds"
+		color1 = "white"
+		color2 = "green"
+		color3 = "black"
+		
+		instance = { scale = { 1 1 } position = { 0.8 0.5 } }	
+	}
+	colored_emblem = {
+		texture = "ce_bird_paradise.dds"
+		color1 = "white"
+		color2 = "green"
+		color3 = "black"
+		
+		instance = { scale = { -1 1 } position = { 0.25 0.5 } }	
+	}
+	colored_emblem = {
+		texture = "ce_fish_oudh.dds"
+		color1 = "blue_light"
+		color2 = "green"
+		color3 = "blue"
+		
+		instance = { scale = { .5 .5 } position = { 0.53 0.7 } }	
+	}
+	
+}
+
+BRY = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_dark"
+
+	colored_emblem = {
+		texture = "ce_roe_spiked_emblem.dds"
+		color1 = "green_dark"
+		color2 = "white"
+		color3 = "black"
+		
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+
+	colored_emblem = {
+		texture = "ce_endless_knot2.dds"
+		color1 = "white"
+
+		
+		instance = { scale = { 0.25 0.65 } position = { 0.5 0.5 } rotation=90 }	
+	}
+
+}

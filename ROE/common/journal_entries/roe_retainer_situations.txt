@@ -1,0 +1,58 @@
+﻿je_thieves_guild = {
+    icon = "gfx/interface/icons/event_icons/event_police.dds"
+
+    group = je_group_quests
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                state_region = {
+                    has_harvest_condition = thieves_guild
+                }
+            }
+            save_scope_as = thieves_guild_state
+        }
+        trigger_event = { id = retainer_situations.1 }
+    }
+
+    scripted_button = send_retainer_thieves_guild
+
+    scripted_button = send_police_thieves_guild
+
+
+    complete = {
+        OR = {
+            NOT = {
+                any_scope_state = {
+                    state_region = {
+                        has_harvest_condition = thieves_guild
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = thieves_guild_dealt_with_tt
+                has_variable = thieves_guild_dealt_with
+            }
+        }
+    }
+
+    on_complete = {
+        trigger_event = { id = retainer_situations.2 }
+    }
+
+
+    on_monthly_pulse = {
+        random_events = {
+            200 = 0
+            #10 = retainer_situations.4
+            #10 = retainer_situations.5
+            #10 = retainer_situations.6
+            #10 = retainer_situations.7
+            #50 = retainer_situations.8
+        }
+    }
+
+    weight = 100
+
+    should_be_pinned_by_default = yes
+}

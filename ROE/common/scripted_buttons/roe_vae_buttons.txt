@@ -1,0 +1,144 @@
+je_extend_penal_contracts_button = {
+	name = "je_extend_penal_contracts_button"
+	
+	visible = { always = yes }
+	
+	possible = {
+		NOT = { has_war_with = top_overlord }
+		gold_reserves >= 250000
+		custom_tooltip = {
+			text = je_vae_penal_button_tt_1
+			NOR = {
+				has_modifier = modifier_vae_penal_contract_extension_cooldown
+				has_modifier = modifier_vae_penal_2
+			}
+		}
+	}
+	
+	ai_chance = {
+		value = 50
+	}
+	
+	effect = {
+		add_treasury = -250000
+		top_overlord = {
+			#give VAI a notification about this
+			add_treasury = 200000 #corruption stole 20%
+		}
+		change_relations = { 
+			country = top_overlord
+			value = 5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_vae_penal_1
+			}
+			remove_modifier = modifier_vae_penal_1
+		}
+		add_modifier = {
+			name = modifier_vae_penal_1
+			months = 120
+		}
+		add_modifier = {
+			name = modifier_vae_penal_contract_extension_cooldown
+			months = 60
+		}
+	}
+}
+
+je_cement_penal_contracts_button = {
+	name = "je_cement_penal_contracts_button"
+	
+	visible = { has_modifier = modifier_vae_penal_1 }
+	
+	possible = {
+		NOT = { has_war_with = top_overlord }
+		gold_reserves >= 500000
+		has_modifier = modifier_vae_penal_1
+		institution_investment_level = {
+			institution = institution_police
+			value >= 3
+		}
+	}
+	
+	ai_chance = {
+		value = 50
+	}
+	
+	effect = {
+		#add an event later that allows you to choose between enacting guild slavery, slave trade with infamy, or upper class loyalists
+		add_treasury = -500000
+		top_overlord = {
+			#give VAI a notification about this
+			add_treasury = 400000 #corruption stole 20%
+		}
+		change_relations = { 
+			country = top_overlord
+			value = 10
+		}
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_positive
+			target = top_overlord
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_vae_penal_1
+			}
+			remove_modifier = modifier_vae_penal_1
+		}
+		add_modifier = {
+			name = modifier_vae_penal_2
+		}
+		hidden_effect = {
+			remove_modifier = modifier_vae_penal_contract_extension_cooldown
+		}
+	}
+}
+
+je_penal_contracts_indep_button = {
+	name = "je_penal_contracts_indep_button"
+	
+	visible = { always = yes }
+	
+	possible = {
+		OR = {
+			has_modifier = modifier_vae_penal_1
+			has_modifier = modifier_vae_penal_2
+		}
+		is_subject = no
+	}
+	
+	ai_chance = {
+		value = 50
+	}
+	
+	effect = {
+		#give VAI an event about this
+		custom_tooltip = {
+			text = je_vae_penal_button_tt_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_vae_penal_1
+			}
+			remove_modifier = modifier_vae_penal_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_vae_penal_2
+			}
+			remove_modifier = modifier_vae_penal_2
+		}
+		change_relations = { 
+			country = top_overlord 
+			value = -50
+		}
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_negative
+			target = top_overlord
+		}
+		s:STATE_ZAWADKA = {
+			add_claim = top_overlord
+		}
+	}
+}

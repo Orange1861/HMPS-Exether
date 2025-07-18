@@ -1,0 +1,695 @@
+﻿building_hunting_lodge  = {
+	building_group = bg_hunting
+	icon = "gfx/interface/icons/building_icons/essence_temperate.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	production_method_groups = {
+		pmg_base_building_hunting_lodge
+		pmg_hunting_meat
+		pmg_hunting_equipment
+		pmg_transportation_hunting_lodges
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_desert_hunting_lodge = {
+	building_group = bg_desert_hunting
+	icon = "gfx/interface/icons/building_icons/essence_desert.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	production_method_groups = {
+		pmg_base_building_hunting_lodge
+		pmg_hunting_dye
+		pmg_hunting_equipment
+		pmg_transportation_hunting_lodges
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_winter_hunting_lodge = {
+	building_group = bg_winter_hunting
+	icon = "gfx/interface/icons/building_icons/essence_cold.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	production_method_groups = {
+		pmg_base_building_hunting_lodge
+		pmg_hunting_blubber
+		pmg_hunting_equipment
+		pmg_transportation_hunting_lodges
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_khus_hunting_lodge = {
+	building_group = bg_khus_hunting
+	icon = "gfx/interface/icons/building_icons/essence_temperate.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	potential = {
+		crystalspawn_building_trigger = yes
+	}
+
+	possible = {
+		crystalspawn_building_trigger = yes
+	}
+	
+	production_method_groups = {
+		pmg_base_building_khus_hunting_lodge
+		pmg_hunting_khus_chimesilt
+		pmg_hunting_equipment
+		pmg_transportation_hunting_lodges
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_big_game_hunts = {
+	building_group = bg_big_game_hunting
+	icon = "gfx/interface/icons/building_icons/cave_hunting.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	potential = {
+		gets_undermountain_buildings = yes
+	}
+
+	possible = {
+		gets_undermountain_buildings = yes
+	}
+
+	production_method_groups = {
+		pmg_big_hunts
+		pmg_carapace_usage
+		pmg_big_game_hunting_equipment
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_rotfarm = {
+	building_group = bg_rotfarm
+	icon = "gfx/interface/icons/building_icons/rot_farms.dds"
+	city_type = wood
+	required_construction = construction_cost_medium
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	potential = {
+		gets_undermountain_buildings = yes
+	}
+
+	possible = {
+		gets_undermountain_buildings = yes
+	}
+
+	production_method_groups = {
+		pmg_grubhub
+		pmg_monster_wine
+		pmg_harvesting_process_building_wheat_farm
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_logging_camp_stonewood = {
+	building_group = bg_logging_stonewood
+	icon = "gfx/interface/icons/building_icons/vermillion_wood.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	potential = {
+		state_is_in_vermillion_thicket = yes
+	}
+
+	possible = {
+		state_is_in_vermillion_thicket = yes
+	}
+	production_method_groups = {
+		pmg_base_building_logging_camp_stonewood
+		pmg_potion_sap
+		pmg_equipment
+		pmg_transportation_building_logging_camp
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_logging_camp_crystalwood= {
+	building_group = bg_logging_crystalwood
+	icon = "gfx/interface/icons/building_icons/crystalbloom.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp_crystalwood
+		pmg_glass_bark
+		pmg_equipment
+		pmg_transportation_building_logging_camp
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_haunted_grounds = {
+	building_group = bg_haunted_grounds
+	icon = "gfx/interface/icons/building_icons/ectoplasm.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		ghost_busters
+	}
+
+	production_method_groups = {
+		pmg_base_building_haunted_grounds
+		pmg_equipment_haunted_grounds
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+
+building_fur_hunting_lodge = {
+	building_group = bg_game_hunting
+	icon = "gfx/interface/icons/building_icons/building_fur_lodge.dds"
+	city_type = farm
+	required_construction = construction_cost_low
+	terrain_manipulator = farmland_rye
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_fur_hunting
+		pmg_exotic_game
+		pmg_game_hunting_potions
+	}
+	ownership_type = self
+	should_auto_expand = { 
+		
+		cash_reserves_ratio = 0.95
+		occupancy >= 0.95
+		state.market_access > 0.95
+		
+		NOT = { is_under_construction = yes }
+	}
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+building_cactus_farm = {
+	building_group = bg_cactus_farm
+	icon = "gfx/interface/icons/building_icons/cactus_fields.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp
+		pmg_logging_potions
+		pmg_cactus_fruit
+		pmg_equipment
+		pmg_transportation_building_logging_camp
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_fishing_wharf_rusttails = {
+	building_group = bg_fishing_rusttails
+	icon = "gfx/interface/icons/building_icons/rusttail.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_rusttails
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_fishing_wharf_goldfish = {
+	building_group = bg_fishing_goldfish
+	icon = "gfx/interface/icons/building_icons/true_goldfish.dds"
+	city_type = port
+	required_construction = construction_cost_low
+	
+	potential = {
+		is_coastal = yes
+	}
+
+	possible = {
+		is_sea_adjacent = yes
+	}
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_goldfish
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_fishing_wharf_glowfish = {
+	building_group = bg_fishing_glowfish
+	icon = "gfx/interface/icons/building_icons/lanternfish.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_glowfish
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_hippo_ranches = {
+	building_group = bg_hippos
+	icon = "gfx/interface/icons/building_icons/hippos.dds"
+	city_type = farm
+	required_construction = construction_cost_low
+	
+	unlocking_technologies = {
+		enclosure
+	}
+
+	production_method_groups = {
+		pmg_base_building_hippo_ranches
+		pmg_refrigeration_building_whaling_station
+	}
+	
+	terrain_manipulator = pasture
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_ice_pond = {
+	building_group = bg_ice
+	icon = "gfx/interface/icons/building_icons/ice_pond.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	city_type = wood
+	levels_per_mesh = 5
+	
+	production_method_groups = {
+		pmg_base_building_ice_pond
+		pmg_automation_ice_pond
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_ice_cap = {
+	building_group = bg_ice_cap
+	icon = "gfx/interface/icons/building_icons/ice_caps.dds"
+	required_construction = construction_cost_low
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	city_type = wood
+	levels_per_mesh = 5
+	
+	production_method_groups = {
+		pmg_base_building_ice_cap
+		pmg_steam_automation_building_iron_mine
+		pmg_mountain_farm_shipping
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_wishstone_reefs = {
+	building_group = bg_wishstone_reefs
+	icon = "gfx/interface/icons/building_icons/wishstone_reefs.dds"
+	city_type = port
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+
+	unlocking_technologies = {
+		drydocks
+	}
+	
+	production_method_groups = {
+		pmg_base_building_wishstone_reef
+		pmg_potions_wishstone_reef	
+	}
+
+	possible = {
+		is_sea_adjacent = yes
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_ship_graveyard = {
+	building_group = bg_ship_graveyard
+	icon = "gfx/interface/icons/building_icons/ship_graveyard.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+	city_type = port
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+
+	unlocking_technologies = {
+		hydraulic_cranes
+	}
+	
+	production_method_groups = {
+		pmg_base_building_ship_graveyard
+		pmg_relics_ship_graveyard
+		pmg_potions_ship_graveyard		
+	}
+
+	possible = {
+		is_sea_adjacent = yes
+	}
+	ownership_type = self
+}
+
+building_blubber_plants = {
+	building_group = bg_heavy_industry
+	icon = "gfx/interface/icons/building_icons/blubber_plant.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		blubber_engine
+	}
+	
+	production_method_groups = {
+		pmg_blubber
+		pmg_flow_additives
+		pmg_blubber_to_essence
+		#pmg_blubber_automation
+		
+	}
+	ownership_type = self
+	required_construction = construction_cost_very_high
+
+	possible = {
+		owner = { 
+			NOT = { has_law = law_type:law_industry_banned } 
+		}
+	}
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}
+
+building_squid_squad = {
+	building_group = bg_squidding
+	icon = "gfx/interface/icons/building_icons/cephalopods.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_squid_squad
+		pmg_monster_hunters_squids
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+		
+	potential = {
+		is_coastal = yes
+	}
+
+	possible = {
+		is_sea_adjacent = yes
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_seasnake_wharf = {
+	building_group = bg_seasnake_wharf
+	icon = "gfx/interface/icons/building_icons/sea_snakes.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_seasnake_wharf
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+	
+	possible = {
+		is_sea_adjacent = yes
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_krakeneer_outpost = { 
+	building_group = bg_fishing
+	icon = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_seasnake_wharf
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+	
+	possible = {
+		is_sea_adjacent = yes
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_leviathan_outpost = {
+	building_group = bg_leviathan_outpost
+	icon = "gfx/interface/icons/building_icons/whaling_station.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_leviathan_outpost
+		pmg_Krakeneering
+		pmg_airhunting
+		pmg_refrigeration_building_whaling_station
+	}
+	
+	possible = {
+		is_sea_adjacent = yes
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+# Underground survival
+
+building_underfarm = {
+	building_group = bg_underfarms
+	
+	icon = "gfx/interface/icons/building_icons/underfarm.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure 
+	}
+
+	potential = {
+		gets_undermountain_buildings = yes
+	}
+
+	possible = {
+		gets_undermountain_buildings = yes
+	}
+
+	production_method_groups = {
+		pmg_base_building_underfarm
+		pmg_secondary_building_underfarm
+		pmg_harvesting_process_building_rice_farm
+		pmg_rice_farms_enhancements
+	}
+
+	required_construction = construction_cost_low
+	
+	terrain_manipulator = farmland_rye
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_spider_ranch = {
+	building_group = bg_spider_ranch
+
+	icon = "gfx/interface/icons/building_icons/spidersilk.dds"
+	
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure 
+	}
+
+	potential = {
+		gets_undermountain_buildings = yes
+	}
+
+	possible = {
+		gets_undermountain_buildings = yes
+	}
+
+	production_method_groups = {
+		pmg_base_building_spider_ranch
+		pmg_silk_refinement
+		pmg_spider_enhancements
+		#pmg_spider_fencing
+		pmg_warding
+	}
+
+	required_construction = construction_cost_low
+
+	terrain_manipulator = pasture
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_mushroom_logging  = {
+	building_group = bg_mushroom_logging
+	icon = "gfx/interface/icons/building_icons/mushroom_logging.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	
+	potential = {
+		gets_undermountain_buildings = yes
+	}
+
+	possible = {
+		gets_undermountain_buildings = yes
+	}
+
+	production_method_groups = {
+		pmg_base_building_mushroom_logging
+		pmg_more_wood
+		pmg_equipment
+		pmg_transportation_building_logging_camp
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_underground_wharf = {
+	building_group = bg_underground_fishing
+	icon = "gfx/interface/icons/building_icons/underground_fishing.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+
+	potential = {
+		gets_undermountain_buildings = yes
+	}
+
+	possible = {
+		gets_undermountain_buildings = yes
+	}
+
+	production_method_groups = {
+		pmg_base_building_underground_wharf
+		pmg_refrigeration_building_fishing_wharf
+	}
+	
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}

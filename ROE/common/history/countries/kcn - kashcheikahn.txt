@@ -1,0 +1,28 @@
+﻿COUNTRIES = {
+	c:KCN = {
+		effect_starting_technology_tier_goblin_tech = yes
+		effect_starting_politics_traditional = yes
+
+		add_technology_researched = international_relations
+		add_technology_researched = colonization
+
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_extraction_economy
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_no_magic
+		
+		#add_taxed_goods = g:grain
+		#add_taxed_goods = g:services
+		#add_taxed_goods = g:clothes
+
+		set_tax_level = medium
+
+		add_journal_entry = {
+			type = je_hobgoblin_yoke
+		}
+	}
+}

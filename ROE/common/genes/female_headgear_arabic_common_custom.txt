@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_headgear1 = {
+			inheritable = no
+			
+			arabic_headgear = {
+				index = 1
+				male = {
+						1 = male_headgear_arabic_landowners_01
+				}
+				
+				female = {
+						1 = female_headgear_arabic_common_custom
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

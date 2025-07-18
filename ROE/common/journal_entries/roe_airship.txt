@@ -1,0 +1,36 @@
+﻿je_airships = {
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_technology
+
+	is_shown_when_inactive = {
+		NOT = { has_variable = completed_airships_je }
+		has_technology_researched = airship
+	}
+
+	possible = {
+		has_technology_researched = zeppelins
+	}
+
+	immediate = {
+	}
+
+	complete = {
+		any_scope_building = {
+			is_building_type = building_airshipyards
+			has_active_production_method = pm_complex_airships
+			occupancy >= 0.8
+			level >= 3
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = society_tech_events.301 }
+		set_variable = {
+			name = completed_airships_je
+		}
+	}
+
+	timeout = 4000
+}

@@ -1,0 +1,225 @@
+basic_mage_commander = {
+	type = skill
+	texture = gfx/interface/icons/character_trait_icons/basic_mage_commander.dds
+	command_modifier = {
+		unit_magic_offense_mult = 0.15
+		unit_magic_defense_mult = 0.15
+	}
+	possible = {
+		has_role = general
+		owner ?= {
+			has_technology_researched = arcane_marshals
+		}
+		NOR = {
+			has_trait = experienced_mage_commander
+			has_trait = expert_mage_commander
+		}
+		NOT = {
+			age < define:NCharacters|ADULT_AGE
+		}
+	}
+	weight = {
+		value = 2
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_one
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_two
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_three
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 10
+		}
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_four
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 20
+		}
+	}
+	replace = {
+		inexperienced
+	}
+	value = 1
+}
+
+experienced_mage_commander = {
+	type = skill
+	texture = gfx/interface/icons/character_trait_icons/experienced_mage_commander.dds
+	command_modifier = {
+		unit_magic_offense_mult = 0.30
+		unit_magic_defense_mult = 0.30
+	}
+	possible = {
+		has_trait = basic_mage_commander
+		NOT = {
+			age < define:NCharacters|ADULT_AGE
+		}
+	}
+	weight = {
+		value = 2
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_two
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_three
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 10
+		}
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_four
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 20
+		}
+	}
+	replace = {
+		basic_mage_commander
+	}
+	value = 2
+}
+
+expert_mage_commander = {
+	type = skill
+	texture = gfx/interface/icons/character_trait_icons/expert_mage_commander.dds
+	command_modifier = {
+		unit_magic_offense_mult = 0.45
+		unit_magic_defense_mult = 0.45
+	}
+	possible = {
+		has_trait = experienced_mage_commander
+		NOT = {
+			age < define:NCharacters|ADULT_AGE
+		}
+	}
+	weight = {
+		value = 2
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_three
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 10
+		}
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_mages_four
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 20
+		}
+	}
+	replace = {
+		experienced_mage_commander
+	}
+	value = 3
+}

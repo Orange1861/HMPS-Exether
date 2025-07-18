@@ -1,0 +1,1162 @@
+﻿##agitators
+
+agitator_darian_vandar = {
+    first_name = Darian
+	last_name = Vandar
+	historical = yes
+	culture = cu:cerunite
+	female = no
+    is_agitator = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_mad_scientist
+	dna = dna_vandar
+	birth_date = 1164.4.11
+	traits = {
+		inspirational_orator
+        arrogant
+        ambitious
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				country_is_in_settler_coast = yes
+			}
+			has_dlc_feature = voice_of_the_people_content
+		}
+        interest_group_trigger = {
+			OR = {
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_mages
+				is_interest_group_type = ig_industrialists
+			}
+			
+        }   
+        earliest_usage_date = 1184.1.1
+        latest_usage_date = 1209.1.1
+        chance = 75
+    }
+	trait_generation = { }
+}
+
+agitator_aelith_selvig = { 
+	first_name = Aelith
+	last_name = Selvig
+	historical = yes
+	female = yes
+	ig_leader = yes
+	culture = cu:cerunite
+	religion = rel:church_of_man
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1174.1.5
+	traits = {
+		reckless
+		persistent
+		experienced_political_operator
+	}
+    interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				any_scope_state = {
+					OR = {
+						state_region = s:STATE_CRAGGEDWYN
+						state_region = s:STATE_VIRULENT_EGRESS
+					}
+					
+				}
+			}
+			has_dlc_feature = voice_of_the_people_content
+		}
+        interest_group_trigger = {
+			OR = {
+				is_interest_group_type = ig_mages
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+			}
+			
+        }   
+        earliest_usage_date = 1196.1.1
+        latest_usage_date = 1226.1.1
+        chance = 100
+    }   
+	trait_generation = { }
+}
+
+agitator_dorinda_senglin = { 
+	first_name = Dorinda
+	last_name = Senglin
+	historical = yes
+	female = yes
+	ig_leader = yes
+	culture = cu:cerunite
+	religion = rel:church_of_man
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1200.6.5
+	traits = {
+		reckless
+		hedonist
+		demagogue
+	}
+    interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				any_scope_state = {
+					OR = {
+						state_region = s:STATE_CRAGGEDWYN
+						state_region = s:STATE_VIRULENT_EGRESS
+					}
+					
+				}
+			}
+			has_dlc_feature = voice_of_the_people_content
+		}
+        interest_group_trigger = {
+			OR = {
+				is_interest_group_type = ig_mages
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+			}
+			
+        }
+        earliest_usage_date = 1227.1.1
+        latest_usage_date = 1247.1.1
+        chance = 75
+    }   
+	trait_generation = { }
+}
+
+agitator_erwin_brandes = { 
+	first_name = Erwin
+	last_name = Coehoorn
+	historical = yes
+	culture = cu:ravikian
+	religion = rel:creed_of_hasal
+	female = no
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1156.5.22
+	traits = {
+		erudite
+		basic_political_operator
+		social_bandit
+	}
+
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				c:DRI ?= this
+				c:RAV ?= this
+				c:QAR ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1206.1.1
+		chance = 100
+	}
+	trait_generation = { }
+}
+
+
+agitator_suzanna_ongerboer = { # Jean Jaurès
+	first_name = Suzanna
+	last_name = Ongerboer
+	historical = yes
+	culture = cu:ravikian
+	religion = rel:creed_of_hasal
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_social_democrat
+	birth_date = 1196.9.3
+	traits = {
+		firebrand
+		erudite
+		expert_political_operator
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				c:RAV ?= this
+				c:DRI ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_mages
+			    is_interest_group_type = ig_intelligentsia
+			}
+        }   
+		earliest_usage_date = 1228.1.1
+		latest_usage_date = 1253.12.31
+		chance = 50
+	}
+	trait_generation = { }
+}
+
+agitator_kazimieras_oginskis = { 
+	first_name = Kazimieras
+	last_name = Oginskis
+	historical = yes
+	culture = cu:akmuociai
+	religion = rel:draconic_oath
+	female = no
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1177.5.22
+	traits = {
+		charismatic
+		basic_political_operator
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1201.1.3
+		latest_usage_date = 1226.1.1
+		chance = 100
+	}
+	trait_generation = { }
+}
+
+agitator_sadije_faysi = { 
+	first_name = Sadije
+	last_name = Faysi
+	historical = yes
+	culture = cu:xhurlob
+	religion = rel:scourgelore
+	female = yes
+	interest_group = ig_industrialists
+	ideology = ideology_mad_scientist
+	birth_date = 1179.11.28
+	traits = {
+		charismatic
+		engineer
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_has_primary_culture = cu:xhurlob
+				country_has_primary_culture = cu:varbat
+				any_scope_state = {
+					state_region = s:STATE_MRAJ_MRAMR
+				}
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1201.1.3
+		latest_usage_date = 1226.1.1
+		chance = 100
+	}
+	trait_generation = { }
+}
+
+agitator_theofan_begolli = { 
+	first_name = Theofan
+	last_name = Begolli
+	historical = yes
+	culture = cu:xhurlob
+	religion = rel:scourgelore
+	female = no
+	interest_group = ig_industrialists
+	ideology = ideology_artificer_baron
+	birth_date = 1184.1.23
+	traits = {
+		experienced_political_operator
+		imperious
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_has_primary_culture = cu:xhurlob
+				country_has_primary_culture = cu:varbat
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1206.1.3
+		latest_usage_date = 1236.1.1
+		chance = 75
+	}
+	trait_generation = { }
+}
+
+#south seas empire
+agitator_lom_vaeb = { 
+	first_name = Lom
+	last_name = Vaeb
+	historical = yes
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	female = yes
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1177.3.25
+	traits = {
+		ambitious
+		firebrand
+		bigoted	
+	}
+
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1201.1.3
+		latest_usage_date = 1226.1.1
+		chance = 100
+	}
+	trait_generation = { }
+}
+
+agitator_ladletha_odaelch = { 
+	first_name = Ladletha
+	last_name = Odaelch
+	historical = yes
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_magoclast_leader
+	birth_date = 1169.3.25
+	traits = {
+		brave
+		firebrand
+		bigoted	
+	}
+
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_rural_folk
+			}
+        }   
+		earliest_usage_date = 1192.1.3
+		latest_usage_date = 1222.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_gelphill_nomoch= { 
+	first_name = Gelphill
+	last_name = Nomoch
+	historical = yes
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_magoclast_leader
+	birth_date = 1199.5.11
+	traits = {
+		brave
+		meticulous
+	}
+
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_rural_folk
+			}
+        }   
+		earliest_usage_date = 1244.1.3
+		latest_usage_date = 1264.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_heidh_drammae = { 
+	first_name = Heidh
+	last_name = Drammae
+	historical = yes
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_magoclast_leader
+	birth_date = 1169.7.25
+	traits = {
+		basic_political_operator
+		firebrand
+		bigoted	
+	}
+
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_rural_folk
+			}
+        }   
+		earliest_usage_date = 1205.1.3
+		latest_usage_date = 1232.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_caerdh_craes = { 
+	first_name = Caerdh
+	last_name = Craes
+	historical = yes
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_skeptic_leader
+	birth_date = 1152.3.25
+	traits = {
+		brave
+		firebrand
+		bigoted	
+	}
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_rural_folk
+			}
+        }   
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1202.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_treid_cumanno = { 
+	first_name = Treid
+	last_name = Cumanno
+	historical = yes
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_skeptic_leader
+	birth_date = 1168.5.11
+	traits = {
+		brave
+		firebrand
+		bigoted	
+	}
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_rural_folk
+			}
+        }   
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1202.1.1
+		chance = 100
+	}
+	trait_generation = { }
+}
+
+#birbs
+
+agitator_peca_nendo = {
+    first_name = Peca
+    last_name = Nendo
+    historical = yes
+	is_agitator = yes
+    culture = cu:cliffpercher
+    female = yes
+    ideology = ideology_land_reformer
+    interest_group = ig_rural_folk
+    birth_date = 1163.7.29
+    traits = {
+        demagogue
+        direct
+        persistent
+    }   
+    agitator_usage = {
+        country_trigger = {
+			country_has_primary_culture = cu:cliffpercher
+        }
+
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+				is_interest_group_type = ig_rural_folk
+            } 
+        }   
+        earliest_usage_date = 1194.1.1
+        latest_usage_date = 1214.1.1
+        chance = 75
+    }
+
+}
+
+agitator_plarno_plardaw = {
+    first_name = Plarno
+    last_name = Plardaw
+    historical = yes
+	is_agitator = yes
+    culture = cu:cliffpercher
+    female = yes
+    ideology = ideology_druid
+    interest_group = ig_rural_folk
+    birth_date = 1152.12.27
+    traits = {
+        demagogue
+        direct
+        starbrand_fey
+    }   
+    agitator_usage = {
+        country_trigger = {
+			country_has_primary_culture = cu:cliffpercher
+        }
+
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+				is_interest_group_type = ig_mages
+				is_interest_group_type = ig_rural_folk
+            } 
+        }   
+        earliest_usage_date = 1178.1.1
+        latest_usage_date = 1198.1.1
+        chance = 100
+    }
+
+	on_created = {
+		exile_character = yes
+	}  
+}
+
+agitator_arris_crunbarri = {
+    first_name = Arris
+    last_name = Crunbarri
+    historical = yes
+	is_agitator = yes
+    culture = cu:whitefeather
+    female = no
+    ideology = ideology_magillismo
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1158.3.21
+    traits = {
+        demagogue
+        direct
+        persistent
+    }   
+    agitator_usage = {
+        country_trigger = {
+			country_has_primary_culture = cu:whitefeather
+        }
+
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_mages
+            } 
+        }   
+        earliest_usage_date = 1189.1.1
+        latest_usage_date = 1209.1.1
+        chance = 60
+    } 
+	on_created = {
+		exile_character = yes
+	}  
+}
+
+agitator_blifud_plardaw = { #founder of Olarbide alchemical concoctions
+	first_name = Blifud
+	last_name = Plardaw
+	historical = yes
+	female = no
+	ig_leader = yes
+	culture = saglithan
+	religion = rel:viticist
+	interest_group = ig_industrialists 
+	ideology = ideology_mad_scientist
+	birth_date = 1170.6.20
+	traits = {
+		imperious
+		engineer
+	}
+    interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+					any_scope_state = {
+						state_region = s:STATE_OLABEGI
+					}
+				}
+			
+			has_dlc_feature = voice_of_the_people_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_industrialists
+			is_interest_group_type = ig_mages
+        }   
+        earliest_usage_date = 1190.1.1
+        latest_usage_date = 1220.1.1
+        chance = 100
+    }   
+	trait_generation = { }
+}
+
+#thiralian
+agitator_gustave_guilbeaux = {
+    first_name = Gustave
+    last_name = Guilbeaux
+    historical = yes
+	is_agitator = yes
+    culture = cu:thiralian
+    female = no
+    ideology = ideology_magillismo
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1158.3.21
+    traits = {
+        demagogue
+        direct
+        arrogant
+    }   
+    agitator_usage = {
+        country_trigger = {
+			country_has_primary_culture = cu:thiralian
+        }
+
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_mages
+            } 
+        }   
+        earliest_usage_date = 1178.1.1
+        latest_usage_date = 1200.1.1
+        chance = 80
+    } 
+
+}
+
+agitator_louis_bellemare = {
+    first_name = Louis-Auguste
+    last_name = Bellemare
+    historical = yes
+	is_agitator = yes
+    culture = cu:thiralian
+    female = no
+    ideology = ideology_artificer_baron
+    interest_group = ig_industrialists
+    birth_date = 1153.3.21
+    traits = {
+        inspirational_orator
+        hedonist
+        expensive_tastes
+    }   
+    agitator_usage = {
+        country_trigger = {
+			c:THI ?= this
+        }
+
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+				is_interest_group_type = ig_industrialists
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_mages
+            } 
+        }
+        earliest_usage_date = 1178.1.1
+        latest_usage_date = 1200.1.1
+        chance = 100
+    } 
+
+}
+
+agitator_evangeline_istre = {
+    first_name = Evangeline
+    last_name = Istre
+    historical = yes
+	is_agitator = yes
+    culture = cu:thiralian
+    female = yes
+    ideology = ideology_vanguardist
+    interest_group = ig_trade_unions
+    birth_date = 1188.1.21
+    traits = {
+        inspirational_orator
+        hedonist
+		direct
+    }   
+    agitator_usage = {
+        country_trigger = {
+			c:THI ?= this
+			has_technology_researched = political_agitation
+        }
+
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+				is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_trade_unions
+            } 
+        }
+        earliest_usage_date = 1225.1.1
+        latest_usage_date = 1245.1.1
+        chance = 100
+    } 
+
+}
+
+#ogres
+agitator_baundai_yaib = {
+    first_name = Baundai
+    last_name = Yaib
+    historical = yes
+	is_agitator = yes
+    culture = cu:onghori
+    female = no
+    ideology = ideology_market_liberal
+    interest_group = ig_intelligentsia
+    birth_date = 1148.3.21
+    traits = {
+        experienced_political_operator
+        direct
+        persistent
+    }   
+    agitator_usage = {
+        country_trigger = {
+			c:ONG ?= this
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_rural_folk
+            } 
+        }   
+        earliest_usage_date = 1196.1.1
+        latest_usage_date = 1215.1.1
+        chance = 50
+    }   
+}
+
+agitator_maiconyi_sherpurdaill = {
+	first_name = Maiconyi
+	last_name = Sherpurdaill
+	historical = yes
+	culture = cu:onghori
+	female = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+    is_agitator = yes
+	birth_date = 1224.3.4
+    #dna = dna_rotha_lintorn_orman
+	traits = {
+        hedonist
+        alcoholic
+        demagogue
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:ONG ?= this
+
+            has_technology_researched = political_agitation
+		}
+        interest_group_trigger = {
+            is_marginal = no
+			OR = {
+				is_interest_group_type = ig_armed_forces
+            	is_interest_group_type = ig_petty_bourgeoisie
+			}
+
+        }   
+		earliest_usage_date = 1253.1.1
+		latest_usage_date = 1273.12.30
+		chance = 60
+	}
+}
+
+agitator_paw_munga = { #proudhon lol
+	first_name = Paw
+	last_name = Munga
+	historical = yes
+	culture = cu:onghori
+	religion = rel:atheist
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	birth_date = 1192.1.15
+	#dna = dna_proudhon 
+	traits = {
+		erudite # dude taught himself Latin
+		ambitious
+		demagogue
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			c:ONG ?= this
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_trade_unions
+            } 
+        }   
+		earliest_usage_date = 1224.6.30 # first publication of "What is to be Done?""
+		latest_usage_date = 1244.1.19
+		chance = 60
+	}
+}
+
+agitator_maunde_kembi = { 
+	first_name = Maunde
+	last_name = Kembi
+	historical = yes
+	culture = cu:onghori
+	female = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_artificer_baron
+	birth_date = 1185.3.13
+	traits = {
+		charismatic
+		persistent
+		arrogant
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_has_primary_culture = cu:onghori
+				country_has_primary_culture = cu:onikoku
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1215.1.1
+		latest_usage_date = 1235.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_omli_rangkang = { 
+	first_name = Omli
+	last_name = Rangkang
+	historical = yes
+	culture = cu:onghori
+	female = yes
+	interest_group = ig_industrialists
+	ideology = ideology_mad_scientist
+	birth_date = 1177.3.13
+	traits = {
+		charismatic
+		persistent
+		reckless
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_has_primary_culture = cu:onghori
+				country_has_primary_culture = cu:onikoku
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1203.1.1
+		latest_usage_date = 1223.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_timbi_munga = { 
+	first_name = Timbi
+	last_name = Munga
+	historical = yes
+	culture = cu:onghori
+	female = yes
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1165.7.22
+	traits = {
+		charismatic
+		persistent
+		arrogant
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_has_primary_culture = cu:onghori
+				country_has_primary_culture = cu:onikoku
+				country_has_primary_culture = cu:onisazae
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1188.1.1
+		latest_usage_date = 1210.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_cinghun_oginskis = { 
+	first_name = Cinghun
+	last_name = Ausese
+	historical = yes
+	culture = cu:onikoku
+	female = no
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1145.5.22
+	traits = {
+		firebrand
+		basic_political_operator
+	}
+
+	on_created = {
+		exile_character = yes 
+	}
+
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				c:YOK ?= this
+				c:SHJ ?= this
+				c:RUG ?= this
+				c:MOK ?= this
+				c:OGR ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1206.1.1
+		chance = 100
+	}
+	trait_generation = { }
+}
+
+agitator_arweilph_vaeb = { 
+	first_name = Arweilph
+	last_name = Vaeb
+	historical = yes
+	culture = cu:cithrel
+	religion = rel:southern_fosirmi
+	female = yes
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	birth_date = 1202.9.23
+	traits = {
+		ambitious
+		demagogue
+		bigoted	
+	}
+	agitator_usage = {
+		country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
+			OR = {
+				country_is_in_south_sea_empire_range = yes
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+			    is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+			    is_interest_group_type = ig_mages
+			}
+        }   
+		earliest_usage_date = 1235.1.1
+		latest_usage_date = 1259.1.1
+		chance = 80
+	}
+	trait_generation = { }
+}
+
+agitator_ider_murdorj = { 
+	first_name = Ider
+	last_name = Murdorj 
+	historical = yes
+	female = yes
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:scourgelore
+	interest_group = ig_rural_folk
+	ideology = ideology_druid
+	birth_date = 1172.11.11
+	traits = {
+		social_bandit
+		brave
+		starbrand_fey
+	}
+    agitator_usage = {
+        country_trigger = {
+		
+				country_has_primary_culture = cu:khanaruk
+
+			has_dlc_feature = voice_of_the_people_content
+        }
+        interest_group_trigger = {
+			OR = {
+			is_interest_group_type = ig_mages
+			is_interest_group_type = ig_rural_folk
+			}
+
+        }   
+        earliest_usage_date = 1191.1.1
+        latest_usage_date = 1221.1.1
+        chance = 75
+	}
+	trait_generation = { }
+}
+
+

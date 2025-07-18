@@ -1,0 +1,332 @@
+﻿namespace = mimic_demesne
+
+mimic_demesne.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = mimic_demesne.1.t
+	desc = mimic_demesne.1.d
+	flavor = mimic_demesne.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	trigger = {
+		# complete je_mimic_demesne
+	}
+
+	immediate = {
+		if = { 
+			limit = {
+				owns_entire_state_region = STATE_SHIFTING_SCAR
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_SHIFTING_SCAR
+				}
+				save_scope_as = mimic_state
+			}
+		}
+		if = {
+			limit = {
+				owns_entire_state_region = STATE_SHIFTING_SCAR_2
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_SHIFTING_SCAR_2
+				}
+				save_scope_as = mimic_state_two
+			}
+		}
+		if = {
+			limit = {
+				owns_entire_state_region = STATE_SARABENDO
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_SARABENDO
+				}
+				save_scope_as = mimic_state_three
+			}
+		}
+	}
+
+	option = {
+		name = mimic_demesne.1.a
+		default_option = yes
+		if = {
+			limit = {
+				owns_entire_state_region = STATE_SHIFTING_SCAR
+			}
+			if = {
+				limit = {
+					country_has_primary_culture = cu:changeling
+				}
+				scope:mimic_state = {
+					add_modifier = {
+							name = resettling_the_demesne
+							days = long_modifier_time
+					}
+				}
+			}
+			else = {
+				limit = {
+					country_has_primary_culture = cu:achonian
+				}
+				scope:mimic_state = {
+					state_region = {
+						add_homeland = cu:achonian
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owns_entire_state_region = STATE_SHIFTING_SCAR_2
+			}
+			if = {
+				limit = {
+					country_has_primary_culture = cu:changeling
+				}
+				scope:mimic_state_two = {
+					add_modifier = {
+							name = resettling_the_demesne
+							days = long_modifier_time
+					}
+				}
+			}
+			else = {
+				limit = {
+					country_has_primary_culture = cu:achonian
+				}
+				scope:mimic_state_two = {
+					state_region = {
+						add_homeland = cu:achonian
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owns_entire_state_region = STATE_SARABENDO
+			}
+			if = {
+				limit = {
+					country_has_primary_culture = cu:changeling
+				}
+				scope:mimic_state_three = {
+					state_region = {
+						add_homeland = cu:changeling
+					}
+				}
+			}
+			else = {
+				limit = {
+					country_has_primary_culture = cu:achonian
+				}
+				scope:mimic_state_three = {
+					state_region = {
+						add_homeland = cu:achonian
+					}
+				}
+			}
+		}
+	}
+}
+
+mimic_demesne.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = mimic_demesne.2.t
+	desc = mimic_demesne.2.d
+	flavor = mimic_demesne.2.f
+
+	duration = 3
+	cooldown = { days = long_modifier_time }
+
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	trigger = {
+		any_scope_state = {
+			is_incorporated = no
+			any_neighbouring_state = {
+				owner = {
+					is_country_type = decentralized
+					NOT = {
+						has_modifier = mimic_supplied_with_weapons
+					}
+				}
+			}
+		}
+		any_country = {
+			has_diplomatic_pact = {
+				who = ROOT
+				type = rivalry
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+					NOT = { 
+						has_modifier = mimic_supplied_with_weapons 
+					}
+				}
+			}
+			save_scope_as = mimic_state
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				owner = {
+					save_scope_as = mimic_country
+				}
+			}
+		}
+		if = {
+			limit = {
+				this = c:AHO
+			}
+				c:PFL = {
+					save_scope_as = rival_scope
+				}
+		}	
+		else = {
+			c:AHO = {
+				save_scope_as = rival_scope
+			}
+		}
+	}
+
+	option = { # slow down, attempt to de-escalate
+		name = mimic_demesne.2.a
+		default_option = yes
+		scope:mimic_state = {
+			add_modifier = {
+				name = mimic_slow_down
+				days = normal_modifier_time
+			}
+		}
+		change_tension = {
+			country = scope:mimic_country
+			value = -50
+		}
+	}
+	option = { # if they want a fight they'll get one
+		name = mimic_demesne.2.b
+		change_relations = {
+			country = scope:rival_scope
+			value = -20
+		}
+		change_tension = {
+			country = scope:mimic_country
+			value = 25
+		}
+	}
+}
+
+bp1_mimic_demesne.1 = {
+	type = country_event
+	placement = ROOT
+	placement = scope:mimic_country.capital
+
+	title = bp1_mimic_demesne.1.t
+	desc = bp1_mimic_demesne.1.d
+	flavor = bp1_mimic_demesne.1.f
+
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by je_mimic_demesne
+		 NOT = { has_global_variable = mimic_kingdom_var }
+		 any_neighbouring_state = {
+		 	owner = {
+		 		is_country_type = decentralized
+		 		country_has_primary_culture = cu:changeling
+		 	}
+		 }
+	}
+
+	immediate = {
+		set_global_variable = mimic_kingdom_var
+		random_neighbouring_state = {
+			limit = {
+				owner = {
+			 		is_country_type = decentralized
+			 		country_has_primary_culture = cu:changeling
+			 	}
+			}
+			owner = {
+					create_character = {
+						first_name = "Tvekh_Kstesi"
+						last_name = "Ktai_Krilispret"
+						historical = yes
+						ruler = yes
+						culture = cu:changeling
+						birth_date = 1145.1.1
+					}
+				save_scope_as = mimic_country
+				ruler = {
+					save_scope_as = mimic_ruler
+				}
+			}
+		}
+	}
+
+	option = { # this is ridiculous
+		name = bp1_mimic_demesne.1.a
+		default_option = yes
+		scope:mimic_country = {
+			change_tension = {
+				country = root
+				value = 50
+			}
+		}
+		ai_chance = { base = 1 }
+	}
+
+	option = { # fine, offer them protection
+		name = bp1_mimic_demesne.1.b
+		scope:mimic_country = {
+			set_country_type = unrecognized
+			activate_law = law_type:law_monarchy
+			hidden_effect = {
+				remove_modifier = native_conscription_10
+			}
+		}
+		create_diplomatic_pact = {
+			country = scope:mimic_country
+			type = puppet
+		}
+		ai_chance = { base = 0 }
+	}
+}

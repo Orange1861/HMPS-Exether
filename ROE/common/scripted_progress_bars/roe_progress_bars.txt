@@ -1,0 +1,320 @@
+﻿union_of_the_sands_progress_bar = {
+	name = "union_of_the_sands_progress_bar_name"
+	desc = "union_of_the_sands_progress_bar_yavira_desc"
+	second_desc = "union_of_the_sands_progress_bar_vozmead_desc"
+
+	double_sided_gold = yes
+    
+    weekly_progress = {
+		if = {
+		limit = {
+			NOT = {
+				scope:journal_entry = { 
+					union_of_the_sands_balance = "scripted_bar_progress(union_of_the_sands_progress_bar)" 
+				}
+			}
+		}
+		scope:journal_entry = { 
+		subtract = {
+			desc = "union_of_the_sands_progress_bar_reset"
+				value = "scripted_bar_progress(union_of_the_sands_progress_bar)"
+			} 
+		}
+		add = {
+			desc = "replaces_progress_bar_with_your_var"
+				value = union_of_the_sands_balance
+			}
+		}
+	}
+            
+	start_value = 50
+	min_value = 0
+	max_value = 100
+
+}
+
+dragonblight_vaccine_progress_bar = {
+	name = "dragonblight_vaccine_progress_bar"
+	desc = "dragonblight_vaccine_progress_bar"
+
+	default_bad = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				owner = {
+		
+				literacy_rate >= 0.175
+				}
+			}	
+			add = {
+				desc = "dragon_vaccine_progress_from_literacy_tt"
+				owner = {
+					add = this.literacy_rate
+					multiply = 50
+				}
+						
+			}
+			
+		}
+		if = {
+			limit = {
+				is_ai = yes 
+				}
+				add = {
+					desc = "dragon_vaccine_ai_cheats_tt"
+					owner = {
+						add = 12
+					}
+							
+				}
+			}	
+
+		if = {
+			limit = {
+				owner = {
+					ig:ig_intelligentsia ?= {
+						ig_clout > 0.15
+					}
+				}
+			}
+			add = {
+				desc = "dragon_vaccine_progress_from_intelligentsia_tt"
+				owner = {
+					ig:ig_intelligentsia ?= {
+						add = this.ig_clout
+						multiply = 50
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					country_has_building_type_levels = {
+						target = bt:building_university value >=1
+					}
+				}
+			}
+			add = {
+				desc = "dragon_vaccine_progress_from_universities_tt"
+				owner = {
+					every_scope_state = {
+						limit = {
+							any_scope_building = {
+								is_building_type = building_university
+								occupancy > 0.65
+							}
+						}
+						add = this.b:building_university.level
+						
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					ig:ig_intelligentsia ?= {
+						is_in_government = yes
+					}
+					OR = {
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_appointed_bureaucrats
+					}
+				}
+			}
+			add = {
+				desc = "dragon_vaccine_progress_from_bureaucrats_tt"
+				add = 7.5
+
+			}
+		}
+
+	}
+	
+	start_value = 0
+	min_value = 0
+	max_value = 5000
+
+ }
+
+ griffon_killer_progress_bar = {
+	name = "griffon_killer_progress_bar"
+	desc = "griffon_killer_progress_bar_desc"
+
+	default_green = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				owner = {
+					ig:ig_mages ?= {
+						ig_clout > 0.05
+					}
+				}
+			}
+			add = {
+				desc = "griffon_progress_from_mages_tt"
+				owner = {
+					ig:ig_mages ?= {
+						add = this.ig_clout
+						multiply = 50
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					ig:ig_rural_folk ?= {
+						ig_clout > 0.05
+					}
+				}
+			}
+			add = {
+				desc = "griffon_progress_from_rf_tt"
+				owner = {
+					ig:ig_rural_folk ?= {
+						add = this.ig_clout
+						multiply = 50
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						country_has_building_type_levels = {
+							target = bt:building_hunting_lodge value >=1
+						}
+					}
+
+				}
+			}
+			add = {
+				desc = "griffon_progress_from_hunting_tt"
+					owner = {
+					every_scope_building = {
+						limit = { 
+								is_building_type = building_hunting_lodge
+								occupancy > 0.65
+								state = {
+									state_is_in_aritzakarri = yes
+								}
+						}
+						add = this.level
+						#add = this.b:building_desert_hunting_lodge.level
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						country_has_building_type_levels = {
+							target = bt:building_desert_hunting_lodge value >=1
+						}
+					}
+
+				}
+			}
+			add = {
+				desc = "griffon_progress_from_desert_hunting_tt"
+					owner = {
+					every_scope_building = {
+						limit = { 
+								is_building_type = building_desert_hunting_lodge
+								occupancy > 0.65
+								state = {
+									state_is_in_aritzakarri = yes
+								}
+						}
+						add = this.level
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_company = company_type:company_sandsparrow_guild
+				}
+			}
+			multiply = {
+				desc = "griffon_progress_from_sandsparrows_tt"
+				value = 2
+
+			}
+		}
+
+	}
+	
+	start_value = 1
+	min_value = 0
+	max_value = 4000
+
+ }
+ 
+ salt_waste_ritual_progress_bar = {
+	name="salt_waste_ritual_progress_bar"
+	desc="salt_waste_ritual_progress_bar_desc"
+	
+	start_value = 0
+	min_valule = 0
+	max_value = 1000
+	
+	default = yes
+	
+	monthly_progress = {
+		if = {
+			limit = {
+				owner = { has_modifier = salt_waste_cure_ritual_1 }
+			}
+			add = {
+				desc = "end_the_salt_waste_curse_low_button"
+				value = 14
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = salt_waste_cure_ritual_2 }
+			}
+			add = {
+				desc = "end_the_salt_waste_curse_high_button"
+				value = 28
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = salt_waste_cure_ritual_2_druids }
+			}
+			add = {
+				desc = "end_the_salt_waste_curse_druids_button"
+				value = 7
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = salt_waste_cure_ritual_2_mage_hunters }
+			}
+			add = {
+				desc = "end_the_salt_waste_curse_spell_breakers_button"
+				value = 7
+			}
+		}
+	}
+ }
+
+  craggedwyn_control_progress_bar = {
+	name = "craggedwyn_control_progress_bar"
+	desc = "craggedwyn_control_progress_bar_desc"
+
+	default_bad = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 8
+ }

@@ -1,0 +1,17 @@
+﻿CHARACTERS = {
+	c:IRA = {
+		create_character = {
+			first_name = "Aleksanteri"
+			last_name = "Wetzer"
+			historical = yes
+			ruler = yes
+			age = 22
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				tactful
+				resupply_commander
+			}
+		}
+	}
+}

@@ -1,0 +1,1700 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width_minus_30 = 510
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types journal
+{
+	type journal_panel = default_block_window {
+		name = "journal_panel"
+		
+		blockoverride "animation_state_block" {
+			state = {
+				name = _show
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/journal"
+				}
+			}
+
+			state = {
+				name = _hide
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/journal_stop"
+				}
+			}
+		}
+		
+		blockoverride "window_header_name"
+		{
+			text = "JOURNAL_WINDOW_HEADER"
+		}
+
+		blockoverride "header_back_button" {
+				onclick = "[InformationPanelBar.OpenPreviousPanel]"
+				onclick = "[RemoveTempMapMode]"
+		}
+		
+		blockoverride "header_close_button" {
+			onclick = "[InformationPanelBar.ClosePanel]"
+			onclick = "[RemoveTempMapMode]"
+		}
+
+		blockoverride "fixed_top" {
+			tab_buttons = {
+				blockoverride "first_button" {
+					text = "JOURNAL_ENTRIES_CONCEPT"
+				}
+				blockoverride "first_button_tooltip" {
+					tooltip = "JOURNAL_ENTRIES_CONCEPT"
+				}
+				blockoverride "first_button_click" {
+					onclick = "[InformationPanel.SelectTab('default')]"
+				}
+				blockoverride "first_button_visibility" {
+					visible = "[InformationPanel.IsTabSelected('default')]"
+				}
+				blockoverride "first_button_visibility_checked" {
+					visible = "[Not( InformationPanel.IsTabSelected('default') )]"
+				}
+				blockoverride "first_button_selected" {
+					text = "JOURNAL_ENTRIES_CONCEPT"
+				}
+				blockoverride "first_button_name" {
+					name = "tutorial_highlight_journal"
+				}
+
+				blockoverride "second_button" {
+					text = "POTENTIAL"
+				}
+				blockoverride "second_button_tooltip" {
+					tooltip = "POTENTIAL"
+				}
+				blockoverride "second_button_click" {
+					onclick = "[InformationPanel.SelectTab('inactive_journal_entries')]"
+				}
+				blockoverride "second_button_visibility" {
+					visible = "[InformationPanel.IsTabSelected('inactive_journal_entries')]"
+				}
+				blockoverride "second_button_visibility_checked" {
+					visible = "[Not( InformationPanel.IsTabSelected('inactive_journal_entries') )]"
+				}
+				blockoverride "second_button_selected" {
+					text = "POTENTIAL"
+				}
+
+				blockoverride "third_button" {
+					text = "NATION_FORMATION"
+				}
+				blockoverride "third_button_tooltip" {
+					tooltip = "NATION_FORMATION"
+				}
+				blockoverride "third_button_click" {
+					onclick = "[InformationPanel.SelectTab('nation_formation')]"
+				}
+				blockoverride "third_button_visibility" {
+					visible = "[InformationPanel.IsTabSelected('nation_formation')]"
+				}
+				blockoverride "third_button_visibility_checked" {
+					visible = "[Not( InformationPanel.IsTabSelected('nation_formation') )]"
+				}
+				blockoverride "third_button_selected" {
+					text = "NATION_FORMATION"
+				}
+
+				blockoverride "fourth_button" {
+					text = "RETAINERS"
+				}
+				blockoverride "fourth_button_tooltip" {
+					tooltip = "RETAINERS"
+				}
+				blockoverride "fourth_button_click" {
+					onclick = "[InformationPanel.SelectTab('situations')]"
+					onclick = "[SetTempMapModeByKey('mm_situations')]"
+				}
+				blockoverride "fourth_button_visibility" {
+					visible = "[InformationPanel.IsTabSelected('situations')]"
+				}
+				blockoverride "fourth_button_visibility_checked" {
+					visible = "[Not( InformationPanel.IsTabSelected('situations') )]"
+				}
+				blockoverride "fourth_button_selected" {
+					text = "RETAINERS"
+				}
+			}
+		}
+		
+		blockoverride "scrollarea_content" {
+			
+			flowcontainer = {
+				direction = vertical
+				using = default_list_position
+				margin_top = 10
+				
+				### JOURNAL
+				flowcontainer = {
+					visible = "[InformationPanel.IsTabSelected('default')]"
+					using = default_list_position
+					direction = vertical
+					using = default_content_fade
+					
+					### GAME OBJECTIVES
+					default_header = {
+						visible = "[GetPlayer.HasObjective]"
+						blockoverride "text" {
+							text = "[AccessPlayer.GetObjective.GetName]"
+						}
+					}
+
+					empty_state = {
+						blockoverride "visible" {
+							 visible = "[And(IsDataModelEmpty(AccessPlayer.AccessActivePlayerObjectiveJournalEntries), GetPlayer.HasObjective)]"
+						}
+						
+						blockoverride "text" {
+							text = "[AccessPlayer.GetObjective.GetObjectiveType.GetIdleHeader]"
+						}
+
+						blockoverride "hint_visibility" {
+							visible = yes
+						}
+
+						blockoverride "hint" {
+							text = "[AccessPlayer.GetObjective.GetObjectiveType.GetIdleHint]"
+						}
+					}
+
+					flowcontainer = {
+						visible = "[Not(IsDataModelEmpty(AccessPlayer.AccessActivePlayerObjectiveJournalEntries))]"
+						direction = vertical
+						spacing = 2
+						parentanchor = hcenter
+						datamodel = "[AccessPlayer.AccessActivePlayerObjectiveJournalEntries]"
+						
+						item = {
+							journal_entry = {}
+						}
+					}
+
+					empty_state = {
+						blockoverride "visible" {
+							 visible = "[IsDataModelEmpty(AccessPlayer.AccessActiveNonPlayerObjectiveJournalEntries)]"
+						}
+						blockoverride "text" {
+							text = "NO_JOURNAL_ENTRIES"
+						}
+					}
+
+					flowcontainer = {
+						direction = vertical
+						parentanchor = hcenter
+						datamodel = "[AccessPlayer.GetGroupsForActiveJournalEntries]"
+						spacing = 10
+						margin_bottom = 10
+
+						item = {
+							flowcontainer = {
+								direction = vertical
+								textbox = {
+									text = "[JournalEntryGroup.GetName]"
+									autoresize = yes
+									align = nobaseline
+									default_format = "#title"
+									margin_left = 3
+								}							
+								flowcontainer = {
+									direction = vertical
+									datamodel = "[JournalEntryGroup.GetActiveJournalEntryTypes(GetPlayer.Self)]"
+									spacing = 2
+									item = {
+										journal_entry = {
+											datacontext = "[AccessPlayer.GetJournalEntry(JournalEntryType.Self)]"
+										}
+									}
+								}
+							}
+						}
+					}
+						
+					### DECISIONS
+					default_header = {
+						blockoverride "text" {
+							text = "DECISIONS"
+						}
+					}
+
+					flowcontainer = {
+						using = default_list_position
+						direction = vertical
+						margin_bottom = 10
+						using = default_content_fade
+
+						
+						textbox = {
+							visible = "[IsDataModelEmpty(GetPlayer.GetDecisions)]"
+							text = NO_DECISIONS
+							autoresize = yes
+							align = left|nobaseline
+							using = fontsize_xxl
+							parentanchor = top|hcenter
+							margin_bottom = 25
+							margin_top = 10
+							alpha = 0.3
+						}
+
+						dynamicgridbox = {
+							parentanchor = hcenter
+							datamodel = "[GetPlayer.GetDecisions]"
+							item = {
+								flowcontainer = {
+									margin = { 0 2 }
+									direction = vertical
+									
+									decision = {
+										minimumsize = { @panel_width_minus_30 -1 }
+									}
+								}
+							}
+						}
+					}
+				}
+
+				### INACTIVE JOURNAL ENTRIES
+				flowcontainer = {
+					visible = "[InformationPanel.IsTabSelected('inactive_journal_entries')]"
+					using = default_list_position
+					direction = vertical
+					using = default_content_fade
+
+					spacing = 10
+					parentanchor = hcenter
+					datamodel = "[AccessPlayer.GetGroupsForInActiveJournalEntries]"
+
+
+					empty_state = {
+						parentanchor = vcenter
+						blockoverride "visible" {
+							visible = "[IsDataModelEmpty(AccessPlayer.GetGroupsForInActiveJournalEntries)]"
+						}
+						blockoverride "text" {
+							text = "NO_INACTIVE_JOURNAL_ENTRIES"
+						}
+					}
+
+					item = {
+						flowcontainer = {
+							direction = vertical
+							textbox = {
+								text = "[JournalEntryGroup.GetName]"
+								autoresize = yes
+								align = nobaseline
+								default_format = "#title"
+								margin_left = 3
+							}							
+							flowcontainer = {
+								direction = vertical
+								datamodel = "[JournalEntryGroup.GetInactiveJournalEntryTypes(GetPlayer.Self)]"
+								spacing = 2
+								item = {
+									journal_entry = {
+										datacontext = "[AccessPlayer.GetJournalEntry(JournalEntryType.Self)]"
+										alpha = 0.75
+										blockoverride "fontsize" {}
+										blockoverride "iconsize" {
+											size = { 35 35 }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+								### NATION FORMATION
+								flowcontainer = {
+									visible = "[InformationPanel.IsTabSelected('nation_formation')]"
+									using = default_list_position
+									direction = vertical
+									using = default_content_fade
+				
+									flowcontainer = {
+										using = default_list_position
+										direction = vertical
+										margin_bottom = 10
+										using = default_content_fade
+				
+				
+										empty_state = {
+											blockoverride "visible" {
+												visible = "[IsDataModelEmpty(AccessPlayer.AccessFormableCountries)]"
+											}
+											blockoverride "text" {
+												text = "NO_FORMABLE_COUNTRIES"
+											}
+										}	
+				
+										flowcontainer = {
+											parentanchor = hcenter
+											direction = vertical
+											visible = "[Not(IsDataModelEmpty(AccessPlayer.AccessFormableCountries))]"
+											datamodel = "[AccessPlayer.AccessFormableCountries]"
+											using = default_content_fade
+				
+											item = {
+												formable_country_button = {}
+											}
+										}
+									}
+								}
+
+				### SITUATIONS
+				flowcontainer = {
+					visible = "[InformationPanel.IsTabSelected('situations')]"
+					using = default_list_position
+					direction = vertical
+					using = default_content_fade
+
+					
+					default_header = {
+						using = default_list_position
+						blockoverride "text" {
+							text = "REPUTATION"
+						}
+					}
+
+					### COHESION BAR AND EMBLEM
+					widget = {
+						size = { @panel_width_plus_14 95 }
+						parentanchor = hcenter
+
+						widget = {
+							size = { 500 76 }
+							parentanchor = vcenter|right
+
+							icon = {
+								position = { 15 0 }
+								size = { 73% 100% }
+								texture = "gfx/interface/progressbar/cohesion_bar.dds"
+							}
+						}
+
+						textbox = {
+							raw_text = "[AccessPlayer.MakeScope.ScriptValue('renown_reputation')|v0]"
+							parentanchor = vcenter|left
+							using = header_font_fancy
+							using = header_font_fancy_size
+							size = { 85 85 }
+							position = { 30 -7.5 }
+						}
+
+						widget = {
+			
+							position = { -25 -5 }
+							parentanchor = hcenter|vcenter
+							block "progressbar_size" {
+								size = { 347 20 }
+							}
+							tooltip = "RENOWN_TOOLTIP"
+							onmousehierarchyenter = "[PdxGuiWidget.FindChild('reputation_max').InterruptThenTriggerAnimation('hide_reputation_max','show_reputation_max')]"
+							onmousehierarchyleave = "[PdxGuiWidget.FindChild('reputation_max').InterruptThenTriggerAnimation('show_reputation_max','hide_reputation_max')]"
+							alwaystransparent = no
+				
+							green_progressbar_horizontal = {
+								size = { 100% 100% }
+								
+				
+								blockoverride "glow_size" {
+									size = { 347 20 }
+								}
+				
+								parentanchor = hcenter
+								
+								
+								blockoverride "values" {
+									min = 0
+									max = 1000
+									value = "[AccessPlayer.MakeScope.ScriptValue('renown_modulo')]"
+								}
+				
+								progressbar_highlight = {
+									visible = no
+								}
+							}
+				
+							flowcontainer = {
+								parentanchor = vcenter
+								textbox = {
+									raw_text = "@renown![AccessPlayer.MakeScope.ScriptValue('renown')|D]"
+									margin_left = 4
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+				
+								textbox = {
+									alpha = 0
+									name = reputation_max
+				
+									state = {
+										name = show_reputation_max
+										delay = 0.15
+										alpha = 1
+										duration = 0.15
+										using = Animation_Curve_Default
+									}
+									state = {
+										name = hide_reputation_max
+										alpha = 0
+										duration = 0
+										using = Animation_Curve_Default
+									}
+				
+									raw_text = " / #maximum [AccessPlayer.MakeScope.ScriptValue('renown_level_max')]#!"
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+							}
+						}
+
+						flowcontainer = {
+							position = { -25 -7.5 }
+							direction = vertical
+							parentanchor = vcenter|right
+							minimumsize = { 50 40 }
+							maximumsize = { 80 65 }
+				
+							textbox = {
+								align = nobaseline
+								parentanchor = hcenter
+								text = "REPUTATION_EFFECTS"
+								autoresize = yes
+								elide = right
+							}
+		
+							flowcontainer = {
+				
+								textbox = {
+									align = nobaseline
+									parentanchor = vcenter
+									text = "RETAINER_SLOTS"
+									autoresize = yes
+									elide = right
+								}
+							}
+
+							flowcontainer = {
+				
+								textbox = {
+									align = nobaseline
+									parentanchor = vcenter
+									raw_text = "[AccessPlayer.MakeScope.ScriptValue('renown_prestige')|=+D] [concept_prestige]"
+									autoresize = yes
+									elide = right
+								}
+							}
+						}
+
+					}
+
+					default_header = {
+						using = default_list_position
+						blockoverride "text" {
+							text = "ON_RETAINER"
+						}
+					}
+
+					party_members = {
+						using = default_content_fade
+					}
+
+					flowcontainer = {
+						margin = { 0 10 }
+						direction = vertical
+						spacing = 2
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(AccessPlayer.AccessActivePlayerObjectiveJournalEntries))]"
+						datamodel = "[AccessPlayer.AccessActivePlayerObjectiveJournalEntries]"
+						
+						item = {
+							journal_entry = {}
+						}
+					}
+
+										### DECISIONS
+					default_header = {
+						using = default_list_position
+						visible = "[InformationPanel.IsTabSelected('situations')]"
+						blockoverride "text" {
+							text = "EXPEDITIONS"
+						}
+					}
+
+
+				
+
+					flowcontainer = {
+						visible = "[InformationPanel.IsTabSelected('situations')]"
+						spacing = 20
+						minimumsize = { @panel_width 85 }
+						direction = horizontal
+						margin_left = 30
+
+						start_expedition_button = {
+							size = { 83 83 }
+							resizeparent = yes
+							texture = "gfx/interface/illustrations/expeditions/expedition_everfrost.dds"
+
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_everfrost_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							texture = "gfx/interface/illustrations/expeditions/expedition_locari.dds"
+
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_dreamweaver_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							texture = "gfx/interface/illustrations/expeditions/expedition_mindrend.dds"
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_mindrend_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							texture = "gfx/interface/illustrations/expeditions/expedition_iaslesh.dds"
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_iaslesh_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							texture = "gfx/interface/illustrations/expeditions/expedition_khus.dds"
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_khus_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+					}
+
+
+
+					### ACTIVE
+					default_header = {
+						using = default_list_position
+						visible = "[InformationPanel.IsTabSelected('situations')]"
+						blockoverride "text" {
+							text = "SITUATIONS"
+						}
+					}
+
+					empty_state = {
+						datacontext = "[GetJournalEntryGroup('je_group_quests')]"
+						blockoverride "visible" {
+							 visible = "[And(And(IsDataModelEmpty(JournalEntryGroup.GetActiveJournalEntryTypes(GetPlayer.Self)), IsDataModelEmpty(JournalEntryGroup.GetInactiveJournalEntryTypes(GetPlayer.Self))), InformationPanel.IsTabSelected('situations'))]"
+						}
+						blockoverride "text" {
+							text = "NO_SITUATIONS"
+						}
+					}
+
+					flowcontainer = {
+						
+						datacontext = "[GetJournalEntryGroup('je_group_quests')]"
+						visible = "[And(Not(IsDataModelEmpty(JournalEntryGroup.GetActiveJournalEntryTypes(GetPlayer.Self))), InformationPanel.IsTabSelected('situations'))]"
+						margin = { 0 10 }
+						direction = vertical
+						parentanchor = hcenter
+						spacing = 10
+
+							flowcontainer = {
+								direction = vertical
+								
+								textbox = {
+									raw_text = "Active"
+									autoresize = yes
+									align = nobaseline
+									default_format = "#title"
+									margin_left = 3
+								}				
+								flowcontainer = {
+									direction = vertical
+									datamodel = "[JournalEntryGroup.GetActiveJournalEntryTypes(GetPlayer.Self)]"
+									spacing = 2
+									item = {
+										journal_entry = {
+											datacontext = "[AccessPlayer.GetJournalEntry(JournalEntryType.Self)]"
+											alpha = 0.75
+											blockoverride "fontsize" {}
+											blockoverride "iconsize" {
+												size = { 35 35 }
+											}
+										}
+									}
+								}			
+
+							}
+					}
+					flowcontainer = {
+						datacontext = "[GetJournalEntryGroup('je_group_quests')]"
+						visible = "[And(Not(IsDataModelEmpty(JournalEntryGroup.GetInactiveJournalEntryTypes(GetPlayer.Self))), InformationPanel.IsTabSelected('situations'))]"
+						margin = { 0 10 }
+						direction = vertical
+						parentanchor = hcenter
+						spacing = 10
+
+							flowcontainer = {
+								direction = vertical
+								
+								textbox = {
+									raw_text = "Inactive"
+									autoresize = yes
+									align = nobaseline
+									default_format = "#title"
+									margin_left = 3
+								}					
+								flowcontainer = {
+									direction = vertical
+									datamodel = "[JournalEntryGroup.GetInactiveJournalEntryTypes(GetPlayer.Self)]"
+									spacing = 2
+									item = {
+										journal_entry = {
+											datacontext = "[AccessPlayer.GetJournalEntry(JournalEntryType.Self)]"
+											alpha = 0.75
+											blockoverride "fontsize" {}
+											blockoverride "iconsize" {
+												size = { 35 35 }
+											}
+										}
+									}
+								}
+
+							}
+					}
+				}
+				}
+			}
+		}
+	
+
+	### JOURNAL ENTRY
+	type journal_entry = button {
+		
+		highlight_tutorial_ui = {
+			visible = "[JournalEntry.IsBeingTutorialHighlighted]"
+		}
+
+		block "button_style" {
+			using = default_button
+		}
+		onclick = "[InformationPanelBar.OpenJournalEntryPanel(JournalEntry.AccessSelf)]"
+		enabled = "[JournalEntry.IsActive]"
+
+		tooltipwidget = {
+			FancyTooltip_JournalEntry = {}
+		}
+
+		onmousehierarchyenter = "[PdxGuiWidget.FindChild('journal_pin_button').InterruptThenTriggerAnimation('hide_journal_pin_button','show_journal_pin_button')]"
+		onmousehierarchyleave = "[PdxGuiWidget.FindChild('journal_pin_button').InterruptThenTriggerAnimation('show_journal_pin_button','hide_journal_pin_button')]"
+	
+		block "background" {}
+	
+		flowcontainer = {
+			resizeparent = yes
+			block "minimumsize" {
+				minimumsize = { @panel_width -1 }
+			}
+			block "flowcontainer_properties" {
+				margin = { 10 8 }
+				spacing = 10
+			}
+
+			flowcontainer = {
+				direction = vertical
+				
+				# journal entry icon
+				icon = {
+					texture = "[JournalEntry.GetIcon]"
+					block "iconsize" {
+						size = { 40 40 }
+					}
+				}
+				
+				# completion in progress
+				icon = {
+					visible = "[JournalEntry.IsProgressing]"
+					parentanchor = hcenter
+					block "completing_iconsize" {
+						size = { 20 20 }
+					}
+					texture = "gfx/interface/icons/generic_icons/green_checkmark.dds"
+					tooltip = "JOURNAL_ENTRY_IN_PROGRESS"
+					using = shimmer
+					
+					icon = {
+						parentanchor = center
+						using = rotate_glow_animation_02
+						size = { 300% 300% }
+						alpha = 0.5
+					}
+				}
+			}
+
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+
+				# title
+				textbox = {
+					text = "[JournalEntry.GetName]"
+					autoresize = yes
+					align = left|nobaseline
+					multiline = yes
+					default_format = "#header"
+
+					block "fontsize" {
+						using = fontsize_large
+					}
+					
+					block "textsize" {
+						maximumsize = { 420 -1 }
+						minimumsize = { 420 -1 }
+					}
+				}
+				
+				# status description
+				textbox = {
+					text = "[JournalEntry.GetStatusDesc]"
+					visible = "[Not(StringIsEmpty(JournalEntry.GetStatusDesc))]"
+					autoresize = yes					
+					align = left|nobaseline
+					multiline = yes
+					block "textsize" {
+						maximumsize = { 420 -1 }
+						minimumsize = { 420 -1 }
+					}
+				}
+
+				# number of possible actions
+				textbox = {
+					text = "JOURNAL_ENTRY_POSSIBLE_ACTIONS"
+					visible = "[GreaterThan_int32(JournalEntry.GetNumPossibleScriptedButtons, '(int32)0')]"
+					autoresize = yes					
+					align = left|nobaseline
+					multiline = yes
+					block "textsize" {
+						maximumsize = { 420 -1 }
+						minimumsize = { 420 -1 }
+					}
+				}
+
+				textbox = {
+					
+					autoresize = yes
+				}
+				
+				# progress description
+				textbox = {
+					text = "[JournalEntry.GetProgressDesc]"
+					tooltip = "[JournalEntry.GetGoalDesc]"
+					autoresize = yes					
+					align = left|nobaseline
+					multiline = yes
+					block "textsize" {
+						maximumsize = { 420 -1 }
+						minimumsize = { 420 -1 }
+					}
+				}
+
+				# progress bar
+				flowcontainer = {
+					visible = "[And(JournalEntry.HasProgressBar, JournalEntry.IsActive)]"
+					margin = { 0 10 }
+					default_progressbar_horizontal = {
+						block "progressbar_size" {
+							size = { 420 6 }
+						}
+						blockoverride "values" {
+							value = "[FixedPointToFloat(JournalEntry.GetGoalProgressPercent)]"
+							min = 0
+							max = 1
+						}
+					}
+				}
+				
+				# scripted progress bars
+				flowcontainer = {
+					visible = "[Not( IsDataModelEmpty( JournalEntry.GetScriptedProgressBars ) )]"
+					datamodel = "[JournalEntry.GetScriptedProgressBars]"
+					margin = { 0 10 }
+					direction = vertical
+					spacing = 10
+
+					item = {
+						container = {
+
+							# Default
+							default_progressbar_horizontal = {
+								visible = "[ScriptedProgressBar.IsDefault]"
+								block "progressbar_size" {
+									size = { 420 10 }
+								}
+								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+								blockoverride "values" {
+									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+									min = 0
+									max = 1
+								}
+							}
+
+							# Default Bad
+							bad_progressbar_horizontal = {
+								visible = "[ScriptedProgressBar.IsDefaultBad]"
+								block "progressbar_size" {
+									size = { 420 10 }
+								}
+								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+								blockoverride "values" {
+									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+									min = 0
+									max = 1
+								}
+							}
+
+							#Default Green
+							green_progressbar_horizontal = {
+								visible = "[ScriptedProgressBar.IsDefaultGreen]"
+								block "progressbar_size" {
+									size = { 420 10 }
+								}
+
+								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+								blockoverride "values" {
+									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+									min = 0
+									max = 1
+								}
+							}
+
+							# double sided bad
+							default_progressbar_horizontal = {
+								visible = "[ScriptedProgressBar.IsDoubleSidedBad]"
+								block "progressbar_size" {
+									size = { 420 10 }
+								}
+								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+
+								blockoverride "noprogresstexture" {
+									noprogresstexture = "gfx/interface/progressbar/progressbar_bad.dds"
+								}
+
+								blockoverride "values" {
+									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+									min = 0
+									max = 1
+								}
+
+								#this is hack to get an extra marker on top of the frame (progressbar properties are copied)
+								blockoverride "on_top_of_the_progressbar" {
+									progressbar = {
+										noprogresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
+										progresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
+										size = { 100% 100% }
+										spriteType = Corneredtiled
+										spriteborder = { 4 4 }
+										texture_density = 2
+										skip_initial_animation = yes
+
+										block "values" {}
+										block "direction" {
+											direction = horizontal
+										}
+										block "progress_changed_animation" {
+											using = progressbar_changed_animation
+										}
+										block "animate_negative_change" {
+											animate_negative_changes = yes
+										}
+										marker = {
+
+											widget = {
+												size = { 50 50 }
+												icon = {
+													size = { 35 35 }
+													widgetanchor = center
+													position = { 0 5 }
+
+													block "progress_icon" {
+														texture = "[JournalEntry.GetIcon]"
+													}
+												}
+											}
+										}
+									}
+								}
+
+							}
+
+							# Double sided gold
+							default_progressbar_horizontal  = {
+								visible = "[ScriptedProgressBar.IsDoubleSidedGold]"
+								block "progressbar_size" {
+									size = { 420 6 }
+								}
+
+								blockoverride "noprogresstexture" {
+									noprogresstexture = "gfx/interface/progressbar/progressbar_gold.dds"
+								}
+
+								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+								blockoverride "values" {
+									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+									min = 0
+									max = 1
+								}
+
+								#this is hack to get an extra marker on top of the frame (progressbar properties are copied)
+								blockoverride "on_top_of_the_progressbar" {
+									progressbar = {
+										noprogresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
+										progresstexture = "gfx/interface/icons/generic_icons/transparent.dds"
+										size = { 100% 100% }
+										spriteType = Corneredtiled
+										spriteborder = { 4 4 }
+										texture_density = 2
+										skip_initial_animation = yes
+
+										block "values" {}
+										block "direction" {
+											direction = horizontal
+										}
+										block "progress_changed_animation" {
+											using = progressbar_changed_animation
+										}
+										block "animate_negative_change" {
+											animate_negative_changes = yes
+										}
+										marker = {
+
+											icon = {
+												size = { 40 20 }
+												parentanchor = vcenter
+												widgetanchor = center
+												texture = "gfx/interface/progressbar/progressbar_marker.dds"
+												using = shimmer
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				# time out info
+				flowcontainer = {
+					visible = "[And(JournalEntry.CanTimeOut, JournalEntry.IsActive)]"
+					spacing = 5
+					
+					icon = {
+						size = { 18 18 }
+						texture = "gfx/interface/icons/generic_icons/clock.dds"
+						parentanchor = vcenter
+					}
+					textbox = {
+						text = "[JournalEntry.GetTimeoutTooltip]"
+						autoresize = yes
+						align = left|nobaseline
+						parentanchor = vcenter
+					}
+				}
+			}
+		}
+
+		# pin button
+		widget = {
+			size = { 23 23 }
+			parentanchor = vcenter|right
+			position = { -5 0 }
+			visible = "[JournalEntry.IsActive]"
+
+			button = {
+				name = "journal_pin_button"
+				texture = "gfx/interface/outliner/unpinned_icon.dds"
+				using = check_button_sound
+				size = { 100% 100% }
+				visible = "[Not(JournalEntry.IsPinnedInOutliner)]"
+				onclick = "[JournalEntry.TogglePinInOutliner]"
+				tooltip = "PIN"
+				parentanchor = center
+
+				state = {
+					name = hide_journal_pin_button
+					trigger_on_create = yes
+					alpha = 0
+					duration = 0.2
+					scale = 0.5
+				}
+
+				state = {
+					name = show_journal_pin_button
+					alpha = 1
+					duration = 0.15
+					scale = 1
+				}
+			}
+			button = {
+				using = check_button_sound
+				texture = "gfx/interface/outliner/pinned_icon.dds"
+				size = { 100% 100% }
+				visible = "[JournalEntry.IsPinnedInOutliner]"
+				onclick = "[JournalEntry.TogglePinInOutliner]"
+				tooltip = "UNPIN"
+				parentanchor = center
+			}
+		}
+	}
+	
+	### DECISION
+	type decision = container {
+		maximumsize = { @panel_width_minus_30 -1 }
+		minimumsize = { @panel_width_minus_30 -1 }
+		
+		flowcontainer = {
+			margin = { 20 10 }
+			direction = vertical 
+
+			textbox = {
+				text = "[Decision.GetName]"
+				autoresize = yes
+				align = left|nobaseline
+				using = fontsize_large
+				multiline = yes
+				maximumsize = { 420 -1 }
+				minimumsize = { 420 -1 }
+				default_format = "#header"
+			}
+
+			textbox = {
+				text = "[Decision.GetDesc]"
+				autoresize = yes
+				align = left|nobaseline
+				multiline = yes
+				maximumsize = { 420 -1 }
+				minimumsize = { 420 -1 }
+			}
+		}
+		
+		button_icon_check = {
+			parentanchor = right|vcenter
+			size = { 50 50 }
+			tooltip = "[Decision.GetTooltip( GetPlayer )]"
+			enabled = "[IsValid( Decision.TakeDecision( GetPlayer ) )]"
+			onclick = "[Execute( Decision.TakeDecision( GetPlayer ) )]"
+		}
+		
+		divider_clean = {
+			parentanchor = bottom
+		}
+	}
+
+	type party_members = flowcontainer  {
+		direction = vertical
+		using = default_list_position
+
+		### BACKGROUND WITH LEADERS SECTION
+		widget = {
+			size = { 560 274 }
+
+			widget = {
+				size = { 556 274 }
+				parentanchor = hcenter
+
+				map_modes_single_button_minimized = {
+					parentanchor = right
+					position = { -10 10 }
+					blockoverride "button_click" {
+						onclick = "[SetTempMapModeByKey('mm_situations')]"
+					}
+					blockoverride "button_icon" {
+						texture = "gfx/interface/main_hud/lens_map_info.dds"
+					}
+					blockoverride "button_text" {
+						text = "SHOW_RETAINER_MM"
+						margin = { 15 0 }
+						max_width = 160
+					}
+					blockoverride "expanded_size" {
+						size = { 190 45 }
+					}
+					blockoverride "right_icon_size" {
+						size = { 25 25 }
+					}
+				}
+
+				### OVERVIEW BACKGROUND
+				background = {
+					texture = "gfx/interface/power_blocs/backgrounds/pb_background_forest.dds"
+					using = fade_top_illus
+				}
+
+				background = {
+					using = simple_frame
+				}
+
+				### CHARACTERS
+				# BLOC MEMBER 4
+				# MEMBER AVAILABLE
+				container = {
+					visible = "[GetPlayer.MakeScope.Var('fourth_retainer').IsSet]"
+					parentanchor = hcenter
+					position = { -210 15 }
+					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
+
+					character_portrait_base = {
+						parentanchor = hcenter
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fourth_retainer').GetCharacter]"
+
+						size = { 250 270 }
+
+						blockoverride "portrait_size" {
+							block "character_portrait_size" {
+								size = { 265 265 }
+							}
+						}
+
+						blockoverride "portrait_texture" {
+							portrait_texture = "[Character.GetAnimatedPortrait('characters_portrait_environment', 'camera_event_right', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+						}
+
+						blockoverride "portrait_icons" {}
+						blockoverride "tooltip" {}
+						blockoverride "show_hat" {}
+						blockoverride "highlight" {}
+
+						blockoverride "portrait_button" {
+							button = {
+								parentanchor = hcenter
+								size = { 100% 100% }
+
+								block "portrait_button_onclick" {
+									onclick = "[GetVariableSystem.Toggle('retainer_character_panel_open')]"
+									onclick = "[InformationPanelBar.ClosePanel]"
+									datacontext = "[GetScriptedGui('open_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('clicked_retainer', Character.MakeScope).End)]"
+								}
+
+								block "portrait_button_onrightclick" {
+									onrightclick = "[RightClickMenuManager.ShowForCharacter(Character.AccessSelf)]"
+								}
+
+							
+								onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+							}
+						}
+					}
+				}
+
+				# NO FOURTH MEMBER AVAILABLE
+				widget = {
+					visible = "[Not(GetPlayer.MakeScope.Var('fourth_retainer').IsSet)]"
+
+					parentanchor = hcenter
+					size = { 280 280 }
+					position = { -210 15 }
+
+					icon = {
+						size = { 260 260 }
+						texture = "gfx/interface/power_blocs/bloc_no_member.dds"
+						alpha = 1
+					}
+				}
+
+				### BLOC MEMBER 2
+				# MEMBER AVAILABLE
+				container = {
+					parentanchor = hcenter
+					position = { -110 15 }
+					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
+
+					character_portrait_base = {
+						visible = "[GetPlayer.MakeScope.Var('second_retainer').IsSet]"
+						parentanchor = hcenter
+						datacontext = "[GetPlayer.MakeScope.GetVariable('second_retainer').GetCharacter]"
+
+						size = { 250 265 }
+
+						blockoverride "portrait_size" {
+							block "character_portrait_size" {
+								size = { 280 280 }
+							}
+						}
+
+						blockoverride "portrait_texture" {
+							portrait_texture = "[Character.GetAnimatedPortrait('characters_portrait_environment', 'camera_event_right', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+						}
+
+						blockoverride "portrait_mask" {
+							mask = "gfx/interface/portraits/portrait_mask_small_fade_bottom.dds"
+						}
+
+						blockoverride "portrait_icons" {}
+						blockoverride "tooltip" {}
+						blockoverride "show_hat" {}
+						blockoverride "highlight" {}
+
+						blockoverride "portrait_button" {
+							button = {
+								parentanchor = hcenter
+								size = { 100% 100% }
+
+								block "portrait_button_onclick" {
+									onclick = "[GetVariableSystem.Toggle('retainer_character_panel_open')]"
+									onclick = "[InformationPanelBar.ClosePanel]"
+									datacontext = "[GetScriptedGui('open_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('clicked_retainer', Character.MakeScope).End)]"
+								}
+
+								block "portrait_button_onrightclick" {
+									onrightclick = "[RightClickMenuManager.ShowForCharacter(Character.AccessSelf)]"
+								}
+
+								
+								onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+							}
+						}
+					}
+
+				}
+
+				# NO SECOND MEMBER AVAILABLE
+				widget = {
+					visible = "[Not(GetPlayer.MakeScope.Var('second_retainer').IsSet)]"
+					parentanchor = hcenter
+					size = { 280 280 }
+					position = { -110 5 }
+
+					icon = {
+						size = { 280 280 }
+						texture = "gfx/interface/power_blocs/bloc_no_member.dds"
+						alpha = 1
+					}
+				}
+
+				### BLOC MEMBER 5
+				# MEMBER AVAILABLE
+				container = {
+					visible = "[GetPlayer.MakeScope.Var('fifth_retainer').IsSet]"
+					parentanchor = hcenter
+					position = { 210 15 }
+					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
+
+					character_portrait_base = {
+						parentanchor = hcenter
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fifth_retainer').GetCharacter]"
+
+						size = { 250 270 }
+
+						blockoverride "portrait_size" {
+							block "character_portrait_size" {
+								size = { 265 265 }
+							}
+						}
+
+						blockoverride "portrait_texture" {
+							portrait_texture = "[Character.GetAnimatedPortrait('characters_portrait_environment', 'camera_event_left', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+						}
+
+						blockoverride "portrait_icons" {}
+						blockoverride "tooltip" {}
+						blockoverride "show_hat" {}
+						blockoverride "highlight" {}
+
+						blockoverride "portrait_button" {
+							button = {
+								parentanchor = hcenter
+								size = { 100% 100% }
+
+								block "portrait_button_onclick" {
+									onclick = "[GetVariableSystem.Toggle('retainer_character_panel_open')]"
+									onclick = "[InformationPanelBar.ClosePanel]"
+									datacontext = "[GetScriptedGui('open_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('clicked_retainer', Character.MakeScope).End)]"
+								}
+
+								block "portrait_button_onrightclick" {
+									onrightclick = "[RightClickMenuManager.ShowForCharacter(Character.AccessSelf)]"
+								}
+
+								
+								onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+							}
+						}
+					}
+				}
+
+				# NO FIFTH MEMBER AVAILABLE
+				widget = {
+					visible = "[Not(GetPlayer.MakeScope.Var('fifth_retainer').IsSet)]"
+					parentanchor = hcenter
+					size = { 280 280 }
+					position = { 210 15 }
+
+					icon = {
+						size = { 260 260 }
+						texture = "gfx/interface/power_blocs/bloc_no_member.dds"
+						mirror = horizontal
+						alpha = 1
+					}
+				}
+
+				### BLOC MEMBER 3
+				# MEMBER AVAILABLE
+				container = {
+					visible = "[GetPlayer.MakeScope.Var('third_retainer').IsSet]"
+					parentanchor = hcenter
+					position = { 110 15 }
+					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
+
+					character_portrait_base = {
+						parentanchor = hcenter
+						datacontext = "[GetPlayer.MakeScope.GetVariable('third_retainer').GetCharacter]"
+
+						size = { 250 265 }
+
+						blockoverride "portrait_size" {
+							block "character_portrait_size" {
+								size = { 280 280 }
+							}
+						}
+
+						blockoverride "portrait_texture" {
+							portrait_texture = "[Character.GetAnimatedPortrait('characters_portrait_environment', 'camera_event_left', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+						}
+
+						blockoverride "portrait_icons" {}
+						blockoverride "tooltip" {}
+						blockoverride "show_hat" {}
+						blockoverride "highlight" {}
+
+						blockoverride "portrait_button" {
+							button = {
+								parentanchor = hcenter
+								size = { 100% 100% }
+
+								block "portrait_button_onclick" {
+									onclick = "[GetVariableSystem.Toggle('retainer_character_panel_open')]"
+									onclick = "[InformationPanelBar.ClosePanel]"
+									datacontext = "[GetScriptedGui('open_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('clicked_retainer', Character.MakeScope).End)]"
+								}
+
+								block "portrait_button_onrightclick" {
+									onrightclick = "[RightClickMenuManager.ShowForCharacter(Character.AccessSelf)]"
+								}
+
+		
+								onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+							}
+						}
+					}
+
+				}
+
+				# NO THIRD MEMBER AVAILABLE
+				widget = {
+					visible = "[Not(GetPlayer.MakeScope.Var('third_retainer').IsSet)]"
+					parentanchor = hcenter
+					size = { 280 280 }
+					position = { 110 5 }
+
+					icon = {
+						size = { 280 280 }
+						texture = "gfx/interface/power_blocs/bloc_no_member.dds"
+						mirror = horizontal
+						alpha = 1
+					}
+				}
+
+				### BLOC MEMBER 1 (LEADER)
+				container = {
+					parentanchor = hcenter
+					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
+					datacontext = "[GetPlayer.MakeScope.GetVariable('first_retainer').GetCharacter]"
+
+					character_portrait_base = {
+						parentanchor = hcenter
+						size = { 250 265 }
+
+						blockoverride "portrait_size" {
+							block "character_portrait_size" {
+								size = { 300 300 }
+							}
+						}
+
+						blockoverride "portrait_position" {
+							position = { 0 15 }
+						}
+
+						blockoverride "portrait_texture" {
+							portrait_texture = "[Character.GetAnimatedPortrait('pop_environment', 'camera_body', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+						}
+
+						blockoverride "portrait_icons" {}
+						blockoverride "tooltip" {}
+						blockoverride "show_hat" {}
+						blockoverride "highlight" {}
+
+						blockoverride "portrait_button" {
+							button = {
+								parentanchor = hcenter
+								size = { 100% 100% }
+
+								block "portrait_button_onclick" {
+									onclick = "[GetVariableSystem.Toggle('retainer_character_panel_open')]"
+									onclick = "[InformationPanelBar.ClosePanel]"
+									datacontext = "[GetScriptedGui('open_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('clicked_retainer', Character.MakeScope).End)]"
+								}
+
+								block "portrait_button_onrightclick" {
+									onrightclick = "[RightClickMenuManager.ShowForCharacter(Character.AccessSelf)]"
+								}
+
+				
+								onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+							}
+						}
+					}
+				}
+
+				vfx = {
+					position = { 0 -2 }
+
+					blockoverride "entity_instance" {
+						entity_instance = vfx_entity_ui_powerbloc_rank_03_rulers
+					}				
+				}
+
+				### PARTY MEMBER RECRUITMENT
+
+				#PARTY MEMBER 1 BUTTON (LEADER)
+				add_character_button = {
+					size = { 83 83 }
+					position = { 0 -20 }
+					parentanchor = hcenter|bottom
+					visible = "[Not(GetPlayer.MakeScope.Var('first_retainer').IsSet)]"
+
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+	
+
+					datacontext = "[GetScriptedGui('regenerate_retainers')]"		
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+					}
+
+				}
+				character_popularity_retainer = {
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('first_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('first_retainer').GetCharacter]"
+					}
+					blockoverride "position" {
+						position = { 0 185 }
+					}
+					
+				}
+			
+
+				#PARTY MEMBER 2 BUTTON
+				add_character_button = {
+					size = { 55 55 }
+					position = { -110 -20 }
+					parentanchor = hcenter|bottom
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)1000'), GetPlayer.MakeScope.Var('first_retainer').IsSet)]"
+					visible = "[Not(GetPlayer.MakeScope.Var('second_retainer').IsSet)]"
+
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					datacontext = "[GetScriptedGui('regenerate_retainers')]"		
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+					}
+				}
+				character_popularity_retainer = {
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('second_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('second_retainer').GetCharacter]"
+					}
+					blockoverride "position" {
+						position = { -110 175 }
+					}
+					
+				}
+				
+
+				#PARTY MEMBER 3 BUTTON
+				add_character_button = {
+					size = { 55 55 }
+					position = { 110 -20 }
+					parentanchor = hcenter|bottom
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)2000'), GetPlayer.MakeScope.Var('second_retainer').IsSet)]"
+					visible = "[Not(GetPlayer.MakeScope.Var('third_retainer').IsSet)]"
+
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					datacontext = "[GetScriptedGui('regenerate_retainers')]"		
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+					}
+				}
+				character_popularity_retainer = {
+					blockoverride "position" {
+						position = { 110 175 }
+					}
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('third_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('third_retainer').GetCharacter]"
+					}
+
+				}
+
+				#PARTY MEMBER 4 BUTTON
+				add_character_button = {
+					size = { 55 55 }
+					position = { -210 -20 }
+					parentanchor = hcenter|bottom
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)3000'), GetPlayer.MakeScope.Var('third_retainer').IsSet)]"
+					visible = "[Not(GetPlayer.MakeScope.Var('fourth_retainer').IsSet)]"
+
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					datacontext = "[GetScriptedGui('regenerate_retainers')]"		
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+					}
+				}
+				character_popularity_retainer = {
+					blockoverride "position" {
+						position = { -220 165 }
+					}
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('fourth_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fourth_retainer').GetCharacter]"
+					}
+				}
+
+				#PARTY MEMBER 5 BUTTON
+				add_character_button = {
+					size = { 55 55 }
+					position = { 210 -20 }
+					parentanchor = hcenter|bottom
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)4000'), GetPlayer.MakeScope.Var('fourth_retainer').IsSet)]"
+					visible = "[Not(GetPlayer.MakeScope.Var('fifth_retainer').IsSet)]"
+
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					datacontext = "[GetScriptedGui('regenerate_retainers')]"		
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+					}
+				}
+
+				character_popularity_retainer = {
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('fifth_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fifth_retainer').GetCharacter]"
+					}
+					blockoverride "position" {
+						position = { 220 165 }
+					}
+				}
+
+			}
+		}
+
+	}
+}

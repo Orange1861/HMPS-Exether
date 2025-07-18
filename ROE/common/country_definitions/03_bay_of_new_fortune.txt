@@ -1,0 +1,368 @@
+﻿#Yuyaychay
+YUY = {
+	color = rgb{ 100 0 50 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { dunaq } 
+	capital = STATE_INTIWINA
+}
+
+#K'anchayani
+KAN = {
+	color = rgb{ 255 50 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { dunaq } 
+	capital = STATE_LLANKAYUQ
+}
+
+#Wasi Qhuchuy
+WAQ = {
+	color = rgb{ 100 156 123 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { yachaymanchi kusichaki } 
+	capital = STATE_NAWI_OASIS
+}
+
+
+#Taytacha
+TAY = {
+	color = rgb{ 200 80 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { dunaq } 
+	capital = STATE_PISQUPATA
+}
+
+#Warminpacha
+WAR = {
+	color = rgb{ 100 130 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { dunaq } 
+	capital = STATE_PISQUPATA
+}
+
+#Kawsaypacha
+KAW = {
+	color = rgb{ 10 80 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { dunaq } 
+	capital = STATE_MIKHUYUQ
+}
+
+#Wayrachakana
+WAY = {
+	color = rgb{ 100 80 10 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { dunaq } 
+	capital = STATE_PUKARAQOCHA
+}
+
+
+DDN = {
+	color = rgb{ 100 90 160} 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { duneshar } 
+	capital = STATE_GUGNOS
+}
+#Goldpass Keepers
+GPK = {
+	color = rgb{ 250 150 0 } 
+
+	country_type = unrecognized
+
+	tier = grand_principality
+	
+	cultures = {aisjie } 
+	capital = STATE_YAASKCASCH
+}
+
+#Snailbane
+SNL = {
+	color = rgb{ 133 138 67 } 
+
+	country_type = preindustrial
+
+	tier = grand_principality
+
+	cultures = { waste_walker } 
+	capital = STATE_SNAILBANE
+}
+
+#Atamzotayit
+TQL = {
+	color = rgb{ 90 45 180 } 
+
+	country_type = unrecognized
+
+	tier = empire
+
+	cultures = { atamkumi rahoru tqalt waste_walker } 
+	capital = STATE_SNAILBANE
+}
+
+#Bonegnawer
+BGR = {
+	color = rgb{ 110 120 90 }
+	
+	country_type = preindustrial
+	
+	tier = principality
+	
+	cultures = { waste_walker }
+	capital = STATE_ROUGHSTONE_TERRITORY_2
+}
+
+#Ghostmurder
+GMR = {
+	color = rgb{ 80 80 80 }
+	
+	country_type = preindustrial
+	
+	tier = principality
+	
+	cultures = { waste_walker }
+	capital = STATE_FIERCEHOLD
+}
+
+#Yakuway
+YKU = {
+	color = rgb{ 200 130 130 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { yachaymanchi } 
+	capital = STATE_ANTAQAQA
+}
+
+#Pachallawi
+PAC = {
+	color = rgb{ 180 250 30 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { yachaymanchi } 
+	capital = STATE_KUCHUYPATA
+}
+
+#Titikunka
+TIT = {
+	color = rgb{ 20 50 230 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { yachaymanchi } 
+	capital = STATE_TIKAQULLU
+}
+
+#Kunturmana
+KUN = {
+	color = rgb{ 130 20 30 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { kusichaki } 
+	capital = STATE_MALLKIYAKU
+}
+
+#Horkaa
+HOR = {
+	color = rgb { 180 180 30 } 
+
+	country_type = unrecognized
+
+	tier = kingdom
+
+	cultures = { rahoru } 
+	capital = STATE_TINKUYUQ
+}
+
+#Skravend
+SKR = {
+	color = rgb{ 50 100 30 } 
+
+	country_type = preindustrial
+
+	tier = grand_principality
+
+	cultures = { gnoll } 
+	capital = STATE_UTSOCUKU
+}
+
+#thassarcian gnoll vassal / Renamed to Bongack Bomkha
+FMJ = {
+	color = rgb{ 50 200 162 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { jungle_gnoll } 
+	capital = STATE_CHEJATAN_DO
+}
+
+#South Kingdom/Mhlilaey
+MHL = { 
+	color = rgb{ 50 200 162 } #same as bongack, the intended former
+
+	country_type = unrecognized
+
+	tier = grand_principality
+
+	cultures = { jungle_gnoll gnoll } 
+	capital = STATE_KIMBHADO
+}
+
+NYO = { 
+	color = rgb{ 50 200 162 } #same as bongack, the intended former
+
+	country_type = unrecognized
+
+	tier = grand_principality
+
+	cultures = { jungle_gnoll } #could add the orcs to this one hmmm
+	capital = STATE_CHITTERKIQ
+}
+
+NKO = { 
+	color = rgb{ 50 200 162 } #same as bongack, the intended former
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { jungle_gnoll } #could add the orcs to this one hmmm
+	capital = STATE_KUDENETHAR
+}
+#Prowlhold
+PRO = {
+	color = rgb{ 180 150 156 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { jungle_gnoll } 
+	capital = STATE_CHITTERKIQ
+}
+
+#Yiparidge
+YIP = {
+	color = rgb{ 50 120 30 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { gnoll } 
+	capital = STATE_DUTAKHAMKU
+}
+
+#Thriktar
+THT = {
+	color = rgb{ 120 120 120 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { gnoll } 
+	capital = STATE_IMKIMPIL
+}
+
+#Ghravor
+GHR = {
+	color = rgb{ 50 120 130 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { jungle_gnoll } # pop are jungle_gnoll
+	capital = STATE_THACK_MZUNT
+}
+
+#Rikor
+RIK = {
+	color = rgb{ 50 20 30 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { gnoll } 
+	capital = STATE_EPUSOTFA
+}
+
+#Bloodthorn
+BLD = {
+	color = rgb{ 135 48 48 } 
+
+	country_type = preindustrial
+
+	tier = kingdom
+
+	cultures = { tqalt } 
+	capital = STATE_BLOODTHORN_WASTES
+}
+
+#Roughstone
+RSE = {
+	color = hsv360 { 213 3 40 } 
+
+	country_type = preindustrial
+
+	tier = kingdom
+
+	cultures = { tqalt } 
+	capital = STATE_SAVAGE_LANDS_2
+}
+
+#Rustaxe
+RUX = {
+	color = rgb{ 139 49 3 } 
+
+	country_type = preindustrial
+
+	tier = kingdom
+
+	cultures = { tqalt } 
+	capital = s:STATE_SAVAGE_REACH
+}

@@ -1,0 +1,19 @@
+﻿SET_seleneth_leader_template = {
+ 		first_name = Anmencu
+   		last_name = Rentán_Polne
+    	historical = yes
+		ruler = yes
+		female = yes	
+    	age = 44
+    	dna = dna_seleneth_ruler
+    	culture = cu:seleni
+		religion = rel:orthodox_fosirmi
+		interest_group = ig_intelligentsia
+		ideology = ideology_magocrat
+		traits = {
+			aesthete
+			reserved
+			literary
+			erudite
+    }
+}

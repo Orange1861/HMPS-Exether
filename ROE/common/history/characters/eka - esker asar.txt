@@ -1,0 +1,18 @@
+﻿CHARACTERS = {
+	c:EKA = {
+		create_character = {
+			first_name = "Kabulu"
+			last_name = "Lugave"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 36
+			interest_group = ig_devout
+			ideology = ideology_jingoist_leader
+			traits = {
+				cautious
+				charismatic
+			}
+		}
+	}
+}

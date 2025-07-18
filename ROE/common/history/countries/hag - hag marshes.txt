@@ -1,0 +1,28 @@
+﻿COUNTRIES = {
+	c:HAG = {
+		effect_starting_technology_tier_knowledge_tech = yes
+		effect_starting_politics_traditional = yes
+
+		add_technology_researched = thaumaturgical_communications
+		add_technology_researched = battlefield_illumination
+		add_technology_researched = elemental_munitions
+
+		activate_law = law_type:law_matriarchy	
+		activate_law = law_type:law_magocracy
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_court_mages
+		activate_law = law_type:law_magical_schools	
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_astrological_studies
+		
+	}
+}

@@ -1,0 +1,739 @@
+﻿namespace = locari
+
+# Examined draconic carvings
+locari.1 = {
+    type = country_event
+    dlc = dlc_roe
+    title = locari.1.t
+    desc = locari.1.d
+    flavor = locari.1.f
+
+    placement = scope:locari_state_scope
+
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        s:STATE_ELENIKAAJ = {
+            random_scope_state = {
+                limit = {
+                    any_scope_building = {
+                        is_building_type = building_dragon_ruins
+                        level >= 1
+                    }
+                }
+                save_scope_as = locari_state_scope
+            }
+        }
+        set_variable = draconic_mural_variable
+        add_modifier = {
+            name = draconic_obelisk_murals
+        }
+    }
+
+    option = {
+        name = locari.1.a
+        default_option = yes
+        add_modifier = {
+            name = draconic_carvings_examined
+            days = short_modifier_time
+        }
+        add_journal_entry = {
+            type = je_dragon_tombs
+        }
+        s:STATE_ELENIKAAJ = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_TSURWA = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_BORKAGAUW = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_VAROTSOA = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_ONOLYSTU = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        custom_tooltip = locari_obelisk_tt
+    }
+}
+
+locari.2 = {
+    type = country_event
+    dlc = dlc_roe
+    title = locari.2.t
+    desc = locari.2.d
+    flavor = locari.2.f
+
+    event_image = {
+        video = "dragonbone"
+    }
+
+    placement = scope:locari_state_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        s:STATE_ONOLYSTU = {
+            random_scope_state = {
+                limit = {
+                    owner = root
+                }
+                save_scope_as = locari_state_scope
+            }
+        }
+    }
+
+    option = {
+        name = locari.2.a
+        default_option = yes
+        set_variable = laith_tomb_variable
+        custom_tooltip = laith_tomb_tt
+    }
+}
+
+locari.3 = {
+    type = country_event
+    dlc = dlc_roe
+    title = locari.3.t
+    desc = locari.3.d
+    flavor = locari.3.f
+
+    event_image = {
+        video = "dragonbone"
+    }
+
+    placement = scope:locari_state_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        s:STATE_VAROTSOA = {
+            random_scope_state = {
+                limit = {
+                    owner = root
+                }
+                save_scope_as = locari_state_scope
+            }
+        }
+    }
+
+    option = {
+        name = locari.3.a
+        default_option = yes
+        set_variable = vhauluo_tomb_variable
+        custom_tooltip = vhauluo_tomb_tt
+    }
+}
+
+locari.4 = {
+    type = country_event
+    dlc = dlc_roe
+    title = locari.4.t
+    desc = locari.4.d
+    flavor = locari.4.f
+
+    event_image = {
+        video = "dragonbone"
+    }
+
+    placement = scope:locari_state_scope
+    
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        s:STATE_TSURWA = {
+            random_scope_state = {
+                limit = {
+                    owner = root
+                }
+                save_scope_as = locari_state_scope
+            }
+        }
+    }
+
+    option = {
+        name = locari.4.a
+        default_option = yes
+        set_variable = maok_tomb_variable
+        custom_tooltip = maok_tomb_tt
+    }
+}
+
+locari.3 = {
+    type = country_event
+    dlc = dlc_roe
+    title = locari.3.t
+    desc = locari.3.d
+    flavor = locari.3.f
+
+    event_image = {
+        video = "dragonbone"
+    }
+
+    placement = scope:locari_state_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        s:STATE_VAROTSOA = {
+            random_scope_state = {
+                limit = {
+                    owner = root
+                }
+                save_scope_as = locari_state_scope
+            }
+        }
+    }
+
+    option = {
+        name = locari.3.a
+        default_option = yes
+        set_variable = vhauluo_tomb_variable
+        custom_tooltip = vhauluo_tomb_tt
+    }
+}
+
+locari.100 = { #emerald sunset success event
+    type = country_event
+    dlc = dlc_roe
+    title = locari.100.t
+    desc = locari.100.d
+    flavor = locari.100.f
+
+    event_image = {
+        video = "bear_talking_to_bureaucrats_positive"
+    }
+    
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        
+    }
+
+    option = { #we declare our friendship with the ocelian people
+        name = locari.100.a
+        default_option = yes
+        create_diplomatic_catalyst = {  
+			type = catalyst_event_positive
+			target = c:EME
+		}
+        change_relations = {
+				country = c:EME
+				value = 25
+		}
+        c:EME ?= {
+            change_relations = {
+				country = root
+				value = 25
+		    }
+        }
+        ig:ig_mages ?= {
+			leader = {
+                set_ideology = ideology:ideology_artificer_baron
+            }
+		}
+
+        add_modifier = {
+            name = ocelian_advisors
+            years = 10
+        }
+        capital = {
+            state_region = {
+                add_homeland = cu:pecif
+            }
+        }
+    }
+    option = { #we will codify our natural borders
+        name = locari.100.b
+        default_option = yes
+        add_modifier = {
+            name = a_bintukin_state
+            years = 15
+        }
+        s:STATE_TENALMUYLAN = {
+            add_claim = c:ORL
+        }
+        s:STATE_MUMHAMOT = {
+            add_claim = c:ORL
+        }
+        s:STATE_UMKITMUT = {
+            add_claim = c:ORL
+        }
+        if = {
+            limit = {
+                has_law = law_type:law_no_colonial_affairs
+            }
+            activate_law = law_type:law_frontier_colonization
+        }
+    }
+}
+
+locari.101 = { #emerald sunset failure event
+    type = country_event
+    dlc = dlc_roe
+    title = locari.101.t
+    desc = locari.101.d
+    flavor = locari.101.f
+
+    event_image = {
+        video = "bear_talking_to_bureaucrats_negative"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        capital = {
+            save_scope_as = capital_scope
+        }
+    }
+
+     option = {
+        name = locari.101.a
+        default_option = yes
+        trigger = {
+            is_player = yes
+            
+        }
+		if = {
+		    limit = {
+                exists = c:OLC 
+			}
+            if = {
+                limit = {
+                    c:OLC = {
+                        is_player = no
+                    }
+                }
+                c:ORL ?= {
+				    play_as = c:OLC
+			    }
+            }
+		
+            c:OLC ?= {
+                create_diplomatic_pact = {
+		            country = c:ORL
+		            type = puppet
+	            }
+            }
+            activate_law = law_type:law_extraction_economy
+            add_primary_culture = cu:pecif
+            remove_primary_culture = cu:bintukin
+            custom_tooltip = {
+                text = pecif_migration_tt
+                capital = {
+                    create_pop = {
+                        culture = pecif
+			            size = 90000
+                    }
+             }
+         }
+         every_scope_state = {
+             state_region = {
+                 add_homeland = cu:pecif
+             }
+         }
+        add_modifier = {
+            name = ocelian_company_coup
+            years = 20
+            is_decaying = yes
+        }
+        c:EME ?= {
+            trigger_event = locari.103
+        }
+        c:OLC ?= {
+            trigger_event = locari.103
+        }
+		}	
+	
+       else = {
+            c:EME ?= {
+                create_diplomatic_pact = {
+			        country = c:ORL
+			        type = puppet
+		        }
+            }
+            add_modifier = {
+                    name = ocelian_company_coup
+                    years = 20
+                    is_decaying = yes
+             }
+            activate_law = law_type:law_extraction_economy
+            add_primary_culture = cu:pecif
+            remove_primary_culture = cu:bintukin
+            custom_tooltip = {
+                text = pecif_migration
+                capital = {
+                    create_pop = {
+                        culture = pecif
+				        size = 90000
+                    }
+                }
+            }
+            c:EME ?= {
+                trigger_event = locari.103
+            }
+        }
+
+
+    }
+
+    option = {
+        name = locari.101.b
+        if = {
+            limit = {
+                exists = c:OLC
+            }
+            add_modifier = {
+                    name = ocelian_company_coup
+                    years = 20
+                    is_decaying = yes
+             }
+            c:OLC ?= {
+                create_diplomatic_pact = {
+			        country = c:ORL
+			        type = puppet
+		        }
+            }
+            activate_law = law_type:law_extraction_economy
+            add_primary_culture = cu:pecif
+            remove_primary_culture = cu:bintukin
+            custom_tooltip = {
+                text = pecif_migration_tt
+                capital = {
+                    create_pop = {
+                        culture = pecif
+				        size = 90000
+                    }
+                }
+            }
+            every_scope_state = {
+                state_region = {
+                    add_homeland = cu:pecif
+                }
+            }
+            c:EME ?= {
+                trigger_event = locari.103
+            }
+            c:OLC ?= {
+                trigger_event = locari.103
+            }
+        }
+        else = {
+            c:EME ?= {
+                create_diplomatic_pact = {
+			        country = c:ORL
+			        type = puppet
+		        }
+            }
+            add_modifier = {
+                    name = ocelian_company_coup
+                    years = 20
+                    is_decaying = yes
+             }
+            activate_law = law_type:law_extraction_economy
+            add_primary_culture = cu:pecif
+            remove_primary_culture = cu:bintukin
+            custom_tooltip = {
+                text = pecif_migration
+                capital = {
+                    create_pop = {
+                        culture = pecif
+				        size = 90000
+                    }
+                }
+            }
+            c:EME ?= {
+                trigger_event = locari.103
+            }
+        }
+    }
+}
+
+locari.102 = { #emerald sunset fallback event for independence
+    type = country_event
+    dlc = dlc_roe
+    title = locari.102.t
+    desc = locari.102.d
+    flavor = locari.102.f
+
+    event_image = {
+        video = "bear_talking_to_bureaucrats_positive"
+    }
+    
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        
+    }
+    option = { #we will codify our natural borders
+        name = locari.102.a
+        default_option = yes
+        if = {
+            limit = {
+                is_subject = no
+            }
+            add_modifier = {
+                name = a_bintukin_state
+                years = 15
+            }
+            s:STATE_TENALMUYLAN = {
+                add_claim = c:ORL
+            }
+            s:STATE_MUMHAMOT = {
+                add_claim = c:ORL
+            }
+            s:STATE_UMKITMUT = {
+                add_claim = c:ORL
+            }
+            if = {
+                limit = {
+                    has_law = law_type:law_no_colonial_affairs
+                }
+                activate_law = law_type:law_frontier_colonization
+            }
+        }
+        
+    }
+}
+
+locari.103 = { #notification event for OLC and EME
+    type = country_event
+    dlc = dlc_roe
+    title = locari.103.t
+    desc = locari.103.d
+    flavor = {
+        first_valid = {
+			triggered_desc  = {
+				desc = locari.103.f
+				trigger = {
+					root = {
+                        c:EME ?= this
+                    }
+                    exists = c:OLC
+				}
+			}
+            triggered_desc  = {
+				desc = locari.103.f2
+				trigger = {
+					root = {
+                        c:OLC ?= this
+                    }
+				}
+			}
+            triggered_desc  = {
+				desc = locari.103.f3
+				trigger = {
+					AND = {
+                        root = {
+                            c:EME ?= this
+                        }
+                        NOT = {
+                            exists = c:OLC
+                        }
+                    }
+				}
+			}
+        }
+    }
+    event_image = {
+        video = "bear_talking_to_bureaucrats_positive"
+    }
+    
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+       c:OLC ?= {
+            save_scope_as = olc_scope
+       }
+       
+       c:ORL ?= {
+            save_scope_as = orl_scope
+       } 
+    }
+    option = { #we will see if they can eat it
+        name = locari.103.a
+        default_option = yes
+        trigger = {
+		    root = {
+                c:EME ?= this
+            }
+            exists = c:OLC
+		}
+        show_as_tooltip = {
+            c:OLC ?= {
+                create_diplomatic_pact = {
+			        country = c:ORL
+			        type = puppet
+		        }
+            }  
+        }    
+    }
+    option = { #that's cool
+        name = locari.103.c
+        default_option = yes
+        trigger = {
+            OR = {
+                AND = {
+                    root = {
+                        c:EME ?= this
+                    }
+                    NOT = {
+                        exists = c:OLC
+                    }
+                }
+                NOT = {
+                    root = {
+                        c:EME ?= this
+                    }
+                }
+            }
+		}
+        show_as_tooltip = {
+            create_diplomatic_pact = {
+			    country = c:ORL
+			    type = puppet
+		    }
+        }    
+    }
+
+    option = { #NAW BRO
+        name = locari.103.b
+        trigger = {
+			root = {
+                c:EME ?= this
+                }
+            exists = c:OLC
+			}
+        c:EME ?= {
+            create_diplomatic_pact = {
+			    country = c:ORL
+			    type = puppet
+		    }
+            create_diplomatic_catalyst = {  
+			    type = catalyst_event_negative
+			    target = c:OLC
+		    }
+        } 
+    }
+
+}
+
+locari.104 = { #OLC startup event
+    type = country_event
+    dlc = dlc_roe
+    title = locari.104.t
+    desc = locari.104.d
+    flavor = locari.104.f
+
+    event_image = {
+        video = "bear_talking_to_bureaucrats_positive"
+    }
+    
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        c:ORL ?= {
+            save_scope_as = orl_scope
+       } 
+    }
+    option = { #we will do nothing
+        name = locari.104.a
+        default_option = yes
+        
+    }
+
+    option = { #we will put our foot on the scale
+        name = locari.104.b
+        trigger = {
+            c:ORL ?= {
+                is_ai = yes
+            }
+        }
+        add_treasury = -180000
+        c:ORL ?= {
+            custom_tooltip = {
+                text = empower_tribes_tt
+                add_modifier = {
+                    name = funding_tribal_interests
+                    years = 10
+                }
+            }
+            
+            hidden_effect = {
+                set_strategy = ai_strategy_conservative_agenda
+            }
+            ig:ig_clans ?= {
+			    add_modifier = {
+				    name = external_instigators
+				    years = 10
+			    }
+		    }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+﻿NGraphics = {
+	FLATMAP_FOLDS_COLOR = { 0.2 0.2 0.2 0.2 }		# Color and Alpha of Folds [ Red channel ]
+	FLATMAP_LINES_COLOR = { 0.0 0.0 0.0 0.4 }		# Color and Alpha of Lines [ Green channel ]
+	FLATMAP_DETAILS_COLOR = { 0.0 0.0 0.0 1.0 }		# Opacity of flatmap details on land
+}
+NMapMode = {
+	COLOR_DECENTRALIZED_COUNTRY = { 1.0 1.0 1.0 1.0 }		# Alpha can control blend with country color
+}

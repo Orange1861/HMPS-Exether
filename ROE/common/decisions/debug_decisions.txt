@@ -1,0 +1,18 @@
+﻿weather_test = {
+	is_shown = {
+		always = no
+	}
+	
+	possible = {
+		always = yes
+	}
+
+	when_taken = {
+recalculate_pop_ig_support = yes
+	}
+	
+
+	ai_chance = {
+		value = 0
+	}
+}

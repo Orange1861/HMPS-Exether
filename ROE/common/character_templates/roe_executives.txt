@@ -1,0 +1,104 @@
+﻿
+ARR_boram_rumblebeam = { 
+	first_name = Boram
+	last_name = Rumblebeam
+	historical = yes
+	culture = cu:clearbough
+	age = 46
+	interest_group = ig_rural_folk
+	ideology = ideology_moderate
+	traits = {
+		ambitious
+		expensive_tastes
+		experienced_entrepreneur
+	}
+	executive_usage = {
+		country_trigger = {
+			has_dlc_feature = mp1_content
+		}
+		company_trigger = {
+			is_company_type = company_type:company_clearbough_estates
+		}
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1258.5.29
+		chance = 100
+	}
+}
+
+ARR_cutlass_thundergear = { 
+	first_name = Cutlass
+	last_name = Thundergear
+	historical = yes
+	culture = cu:soulwrought
+	age = 32
+	interest_group = ig_industrialists
+	ideology = ideology_market_liberal
+	traits = {
+		meticulous
+		innovative
+		expert_entrepreneur
+	}
+	executive_usage = {
+		country_trigger = {
+			has_dlc_feature = mp1_content
+		}
+		company_trigger = {
+			is_company_type = company_type:company_thundergear
+		}
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1278.5.29
+		chance = 100
+	}
+}
+
+CER_kellark_marrath = { 
+	first_name = Kellark
+	last_name = Marrath
+	historical = yes
+	culture = cu:cerunite
+	age = 51
+	interest_group = ig_mages
+	ideology = ideology_mad_scientist
+	traits = {
+		reckless
+		innovative
+		basic_entrepreneur
+	}
+	executive_usage = {
+		country_trigger = {
+			has_dlc_feature = mp1_content
+		}
+		company_trigger = {
+			is_company_type = company_type:company_craggedwyn
+		}
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1218.5.29
+		chance = 100
+	}
+}
+
+DUM_tirath_valancius = { 
+	first_name = Tirath
+	last_name = Valancius
+	historical = yes
+	culture = cu:sunkissed
+	age = 36
+	interest_group = ig_devout
+	ideology = ideology_theocrat
+	traits = {
+		pious
+		cruel
+		explorer
+	}
+	executive_usage = {
+		country_trigger = {
+			has_dlc_feature = mp1_content
+		}
+		company_trigger = {
+			is_company_type = company_type:company_south_sea_company
+		}
+		earliest_usage_date = 1178.1.1
+		latest_usage_date = 1278.5.29
+		chance = 100
+	}
+}

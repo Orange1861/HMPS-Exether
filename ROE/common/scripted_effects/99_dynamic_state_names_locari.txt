@@ -1,0 +1,962 @@
+﻿assign_state_name_region_thoughtsmith_ridge = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_LAFUYLAN ?= this
+            }
+        }
+        STATE_LAFUYLAN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TENALMUYLAN ?= this
+            }
+        }
+        STATE_TENALMUYLAN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_HABENZUT ?= this
+            }
+        }
+        STATE_HABENZUT_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_NIPOTMIK ?= this
+            }
+        }
+        STATE_NIPOTMIK_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_MUMHAMOT ?= this
+            }
+        }
+        STATE_MUMHAMOT_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_UMKITMUT ?= this
+            }
+        }
+        STATE_UMKITMUT_state_name_assign = yes
+    }
+}
+
+assign_state_name_region_sarpakshetra = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_DANKASEMBE ?= this
+            }
+        }
+        STATE_DANKASEMBE_state_name_assign = yes
+    }
+}
+
+assign_state_name_region_dreamweaver_jungle = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_LAUPALLA ?= this
+            }
+        }
+        STATE_LAUPALLA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KURRADUYARRA ?= this
+            }
+        }
+        STATE_KURRADUYARRA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TSURWA ?= this
+            }
+        }
+        STATE_TSURWA_state_name_assign = yes
+    }
+}
+
+assign_state_name_region_new_dumonia = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_HASQSTALE ?= this
+            }
+        }
+        STATE_HASQSTALE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KIT_RAUNAQ ?= this
+            }
+        }
+        STATE_KIT_RAUNAQ_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_NYINGMAWASKAHIKAN ?= this
+            }
+        }
+        STATE_NYINGMAWASKAHIKAN_state_name_assign = yes
+    }
+
+
+}
+
+assign_state_name_region_scalethane_realms = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_LAUHIVIL ?= this
+            }
+        }
+        STATE_LAUHIVIL_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KHREM_YAIQ ?= this
+            }
+        }
+        STATE_KHREM_YAIQ_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_AEMQAA ?= this
+            }
+        }
+        STATE_AEMQAA_state_name_assign = yes
+    }
+}
+
+assign_state_name_region_mindrend_sands = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_STAUSTKRAUL ?= this
+            }
+        }
+        STATE_STAUSTKRAUL_state_name_assign = yes
+    }
+}
+
+STATE_TENALMUYLAN_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_TENALMUYLAN_settlers
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_TENALMUYLAN_city_settlers
+        }
+
+		set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_TENALMUYLAN_farm_settlers
+        }
+
+        set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_TENALMUYLAN_mine_settlers
+        }
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_TENALMUYLAN_ocelian
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_TENALMUYLAN_city_ocelian
+        }
+
+		set_hub_name = {
+            type = mine
+            name = HUB_NAME_STATE_TENALMUYLAN_mine_ocelian
+        }
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_TENALMUYLAN_farm_ocelian
+        }
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_LAFUYLAN_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LAFUYLAN_settlers_coast
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_LAFUYLAN_city_settlers_coast
+        }
+
+		set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_LAFUYLAN_port_settlers_coast
+        }
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes  
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_LAFUYLAN_ocelian
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_LAFUYLAN_city_ocelian
+        }
+
+		set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_LAFUYLAN_port_ocelian
+        }
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_HABENZUT_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_HABENZUT_settlers
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_HABENZUT_port_settlers_coast
+        }
+
+    }
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_HABENZUT_ocelian
+
+        set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_HABENZUT_port_ocelian
+        }
+
+
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_NIPOTMIK_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { has_discrimination_trait = naga }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_NIPOTMIK_city_naga
+        }
+
+		set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_NIPOTMIK_port_naga
+        }
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_MUMHAMOT_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+                locari_language_trigger = yes
+			}
+        }
+        set_state_name = STATE_MUMHAMOT_naga
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_MUMHAMOT_city_naga
+        }
+
+		set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MUMHAMOT_port_naga
+        }
+    }
+    else = { # switch back to defaults
+
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_UMKITMUT_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				locari_language_trigger = yes
+			}
+        }
+        set_state_name = STATE_UMKITMUT_naga
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_UMKITMUT_city_naga
+        }
+
+		set_hub_name = {
+            type = port
+            name = HUB_NAME_STATE_MUMHAMOT_port_naga
+        }
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = human_heritage
+                            has_discrimination_trait = imperial_culture_group
+                        }
+                        AND = {
+                            has_discrimination_trait = settler_coast_culture_group
+                            has_discrimination_trait = human_heritage
+                        }
+
+                        AND = {
+                            has_discrimination_trait = uriks_passage_culture_group
+                            has_discrimination_trait = human_heritage
+                            NOT = { cu:ocelian ?= this  }
+                        }
+                        
+                    } 
+                }
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_UMKITMUT_settlers_coast
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_UMKITMUT_farm_settlers
+        }
+
+    }
+
+    else_if = {
+        limit = {
+			owner ?= {
+				ocelian_language_trigger = yes
+				NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:bintukin ?= this 
+                            cu:praprandgaw ?= this
+                            cu:plundboelka ?= this   
+                        } 
+                    } 
+                }
+			}
+        }
+
+        set_state_name = STATE_UMKITMUT_ocelian
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_UMKITMUT_farm_ocelian
+        }
+
+
+    }
+
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_LAUPALLA_state_name_assign = {
+    if = {
+        limit = {
+			owner ?= {
+				locari_language_trigger = yes
+
+			}
+        }
+
+        set_state_name = STATE_LAUPALLA_naga
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_LAUPALLA_farm_naga
+        }
+
+		set_hub_name = {
+            type = wood
+            name = HUB_NAME_STATE_LAUPALLA_wood_naga
+        }
+    }
+    else = { # switch back to defaults
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_DANKASEMBE_state_name_assign = {
+	if = {
+        limit = {
+			owner ?= {
+				locari_language_trigger = yes
+
+			}
+        }
+		
+        set_state_name = STATE_DANKASEMBE_naga
+        
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_DANKASEMBE_city_naga
+        }
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_DANKASEMBE_farm_naga
+        }
+	}
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_KURRADUYARRA_state_name_assign = {
+	if = {
+        limit = {
+			owner ?= {
+				locari_language_trigger = yes
+
+			}
+        }
+		
+        set_state_name = STATE_KURRADUYARRA_naga
+        
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_KURRADUYARRA_city_naga
+        }
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_KURRADUYARRA_farm_naga
+        }
+	}
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_AEMQAA_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_AEMQAA_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_AEMQAA_farm_dragon
+        }
+
+        set_hub_name = {
+            type = wood
+            name = HUB_NAME_STATE_AEMQAA_wood_dragon
+        }
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_KHREM_YAIQ_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KHREM_YAIQ_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_KHREM_YAIQ_farm_dragon
+        }
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_KHREM_YAIQ_city_dragon
+        }
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_KIT_RAUNAQ_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_KIT_RAUNAQ_dragon
+
+        set_hub_name = {
+            type = farm
+            name = HUB_NAME_STATE_KIT_RAUNAQ_farm_dragon
+        }
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_KIT_RAUNAQ_city_dragon
+        }
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_STAUSTKRAUL_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_STAUSTKRAUL_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_HASQSTALE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_HASQSTALE_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_NYINGMAWASKAHIKAN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_NYINGMAWASKAHIKAN_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_LAUHIVIL_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_LAUHIVIL_dragon
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}
+
+STATE_TSURWA_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                any_primary_culture = { 
+                    OR = {
+                        AND = {
+                            has_discrimination_trait = dragon_heritage
+                        }
+                    } 
+                }
+                NOT = {
+                    any_primary_culture = { 
+                        OR = {
+                            cu:navrozdok ?= this 
+                            cu:koquilla ?= this
+                            cu:qadimra ?= this
+                        } 
+                    } 
+                }
+            }
+        }
+
+        set_state_name = STATE_TSURWA_dragon
+
+        set_hub_name = {
+            type = city
+            name = HUB_NAME_STATE_TSURWA_city_dragon
+        }
+
+    }
+
+
+	else = { # switch back to defaults
+		reset_state_name = yes
+		reset_hub_names = yes
+	}
+}

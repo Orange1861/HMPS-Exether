@@ -1,0 +1,1668 @@
+﻿interest_group_ig_mages_pol_str_mult = {
+	decimals=0
+	color=neutral
+	percent = yes
+	
+	game_data={
+		ai_value=0
+	}
+}
+interest_group_ig_mages_pop_attraction_mult = {
+	decimals=0
+	color=neutral
+	percent = yes
+
+	game_data={
+		ai_value=0
+	}
+}
+
+interest_group_ig_mages_approval_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+interest_group_ig_clans_pol_str_mult = {
+	decimals=0
+	color=neutral
+	percent = yes
+	
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_airship_dock_max_level_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_underways_max_level_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_soulwrought_assembly_plant_max_level_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_magic_carpet_store_max_level_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_observatory_max_level_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_obelisk_max_level_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_military_shipyards_max_level_add  = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_mutagen_vats_max_level_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_shipyards_max_level_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+building_goods_output_mult = {
+	color=good
+	percent = yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_magic_manufacturing_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data={
+		ai_value = 0
+	}
+}
+
+building_group_bg_magic_resource_throughput_add = {
+	decimals = 1
+	color = good
+	percent = yes
+	game_data={
+		ai_value = 0
+	}
+}
+
+building_group_bg_subsistence_agriculture_output_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_subsistence_agriculture_output_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_adventurer_coverage_add = {
+	color=good
+	percent = no
+	game_data={
+		ai_value=10
+	}
+}
+
+state_veil_integrity_contribution = {
+	color=bad
+	percent = no
+	decimals = 1
+	game_data={
+		ai_value=0
+	}
+}
+
+state_adventurer_coverage_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_adventurers_pol_str_mult={
+	decimals=1
+	color=neutral
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_adventurers_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_adventurers_mortality_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_magic_manufacturing_mortality_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+building_employment_adventurers_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_adventurers_shares_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+state_adventurers_investment_pool_contribution_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_adventurers_investment_pool_efficiency_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_wizards_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_tribesmen_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
+
+
+building_employment_war_slaves_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+# for ordering purposes
+country_wizards_pol_str_mult={
+	decimals=1
+	color=neutral
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_wizards_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_wizards_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_wizards_shares_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+state_wizards_investment_pool_contribution_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_wizards_investment_pool_efficiency_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_tribesmen_pol_str_mult={
+	decimals=1
+	color=neutral
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_tribesmen_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_tribesmen_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_tribesmen_shares_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+state_tribesmen_investment_pool_contribution_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_tribesmen_investment_pool_efficiency_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_military_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_manufacturing_throughput_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_mining_throughput_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_rice_farms_leechgardens_throughput_add={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_wishstone_mining_throughput_add={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+building_leviathan_outpost_throughput_add={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_ice_pond_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_ice_cap_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_archeology_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_artifactory_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_pos_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_neg_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_gen_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_cost_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_upkeep = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+
+country_arcana_pos_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_neg_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_gen_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_cost_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_upkeep = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_archeology_throughput_add = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_public_infrastructure_throughput_add = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_airshipyards_throughput_add = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_trade_tax_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+ 
+building_group_bg_mining_infrastructure_usage_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_logging_infrastructure_usage_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_hunting_infrastructure_usage_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_archmages_pol_str_mult={
+	decimals=1
+	color=neutral
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+
+country_archmages_voting_power_add={
+	decimals=1
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+state_archmages_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_archmages_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_archmages_shares_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+state_archmages_investment_pool_contribution_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_archmages_investment_pool_efficiency_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_archmages_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
+
+unit_combat_unit_group_cavalry_offense_mult = { #look bro I have no idea if this works
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+
+unit_combat_unit_type_hussars_offense_mult = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+unit_combat_unit_group_cavalry_defense_mult = { 
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+unit_combat_unit_type_hussars_defense_mult = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_hunting_throughput_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_trapping_throughput_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_haunted_grounds_throughput_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_potion_distillery_throughput_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_logging_camp_throughput_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_banana_plantation_throughput_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_pollution_generation_add_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_veil_integrity_contribution_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_allow_conversion_veneration_bool = {
+	boolean = yes
+	decimals = 1
+	color = neutral
+}
+
+country_allow_assimilation_veneration_bool = {
+	boolean = yes
+	decimals = 0
+	color = neutral
+}
+
+country_assimilation_veneration_mult = {
+	percent = yes
+	decimals = 0
+	color = neutral
+}
+
+country_radicalism_increases_veneration_mult = {
+	percent = yes
+	decimals = 0
+	color = bad
+}
+
+country_loyalism_increases_veneration_mult = {
+	percent = yes
+	decimals = 0
+	color = good
+}
+
+country_political_strength_veneration_mult = {
+	percent = yes
+	decimals = 0
+	color = good
+}
+
+country_voting_power_veneration_mult = {
+	percent = yes
+	decimals = 0
+	color = neutral
+}
+
+country_allow_voting_veneration_bool = {
+	boolean = yes
+	decimals = 1
+	color = neutral
+}
+
+country_qualification_growth_veneration_mult = {
+	percent = yes
+	decimals = 0
+	color = good
+}
+
+country_wage_veneration_mult = {
+	percent = yes
+	decimals = 0
+	color = good
+}
+
+country_standard_of_living_veneration_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_disallow_government_work_veneration_bool = {
+	boolean = yes
+	decimals = 1
+	color = neutral
+}
+
+country_disallow_military_work_veneration_bool = {
+	boolean = yes
+	decimals = 1
+	color = neutral
+}
+
+building_group_bg_owner_buildings_tax_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_allow_argentum_rail = {
+	boolean = yes
+	decimals = 0
+	color = neutral
+}
+
+state_mutant_conversion = {
+	color=bad
+	percent = yes
+	decimals=2
+	game_data={
+		ai_value=0
+	}
+}
+
+country_institution_cost_institution_magical_focus_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_soulwrought_assembled_add = { 
+	decimals=1
+	color=good
+	percent=no
+	game_data={
+		ai_value=10
+	}
+}
+
+state_soulwrought_assembled_mult = { 
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_infrastructure_from_airships_consumption_add={
+	decimals=2
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_diggy_diggy_dwarf_add = { #arcthar pop creation modifier
+	decimals=1
+	color=good
+	percent=no
+	game_data={
+		ai_value=0
+	}
+}
+
+state_diggy_diggy_dwarf_mult = { #arcthar pop creation modifier
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_sunstation_progress_mult = { 
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_sunstation_progress_add = { 
+	decimals=0
+	color=good
+	percent=no
+	game_data={
+		ai_value=75
+	}
+}
+
+state_arable_land_dummy_add = { 
+	decimals=0
+	color=good
+	percent=no
+	game_data={
+		ai_value=150
+	}
+}
+
+state_harvest_condition_kiankstauk_colonies_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_kiankstauk_colonies_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_psionic_winds_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=150
+	}
+}
+
+state_harvest_condition_heptadrone_swarms_positive_impact_mult = {
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=15
+	}
+}
+
+state_harvest_condition_heptadrone_swarms_positive_duration_mult = {
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=15
+	}
+}
+
+state_harvest_condition_heptadrone_swarms_negative_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=15
+	}
+}
+
+state_harvest_condition_heptadrone_swarms_negative_duration_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=15
+	}
+}
+
+state_harvest_condition_psionic_winds_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_psionic_storms_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=150
+	}
+}
+
+state_harvest_condition_psionic_storms_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_acid_rain_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_acid_rain_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_dinosaur_attacks_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_dinosaur_attacks_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_direwolf_packs_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_direwolf_packs_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_mammoth_migrations_impact_mult = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_mammoth_migrations_duration_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_snail_stampedes_impact_mult = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_snail_stampedes_duration_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_vampire_spawn_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_vampire_spawn_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_wishstone_showers_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_wishstone_showers_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_kisqi_raids_duration_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_kisqi_raids_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_cavern_collapse_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_cavern_collapse_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_living_trees_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_living_trees_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_rock_elementals_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_rock_elementals_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_gas_leaks_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_gas_leaks_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_seasnake_infestations_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_seasnake_infestations_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_dark_feeders_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_dark_feeders_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_griffon_attacks_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_griffon_attacks_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_awakened_flora_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_awakened_flora_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_treacherous_whirlpools_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_treacherous_whirlpools_duration_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_caelum_radiation_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_caelum_radiation_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_draconic_submachina_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_draconic_submachina_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_death_hounds_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_death_hounds_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_sludgestorms_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_sludgestorms_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_ghostly_harbingers_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_extraction_employee_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_magic_manufacturing_employee_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_ghostly_harbingers_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_ghost_ships_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_ghost_ships_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_magical_hotspots_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_magical_hotspots_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_landshark_swarms_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_landshark_swarms_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_plague_spores_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_plague_spores_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_thieves_guild_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_thieves_guild_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_hailstorm_impact_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_frost_impact_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_nightmare_brine_contamination_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_nightmare_brine_contamination_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_salt_mad_elementals_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_salt_mad_elementals_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_salt_ghouls_impact_mult = {
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_salt_ghouls_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_infrastructure_from_airships_consumption_add={
+	decimals=2
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

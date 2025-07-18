@@ -1,0 +1,82 @@
+﻿ideology_epidemiologist = { #this ideology basically does everything you'd want to cure the dragonblight
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_theocrat.dds"
+	
+	character_ideology = yes
+
+	lawgroup_distribution_of_power = {
+		law_technocracy = approve	
+
+	}
+
+	lawgroup_education_system = {
+		law_public_schools = approve
+		law_private_schools = approve
+		law_no_schools = disapprove
+		law_religious_schools = disapprove		
+	}
+
+	lawgroup_health_system = {
+		law_private_health_insurance = approve
+		law_no_health_system = disapprove
+		law_charitable_health_system = approve
+		law_public_health_insurance = approve
+		law_genetic_testing = approve
+	}
+
+	lawgroup_bureaucracy = {
+		law_court_mages = neutral
+		law_hereditary_bureaucrats = disapprove
+		law_appointed_bureaucrats = strongly_approve
+		law_elected_bureaucrats = neutral
+	}
+	
+	# possible = {
+	# 	# Agitator ideologies should disapprove of a current law
+	# 	NAND = {
+	# 		has_role = agitator
+	# 		owner = {
+	# 			has_institution = institution_health_system
+	# 		}
+	# 	}
+	# 	owner = {
+	# 		c:DIS = this
+	# 		has_journal_entry = je_dragonblight
+	# 	}
+	# 	scope:interest_group = {
+	# 		OR = {
+	# 			is_interest_group_type = ig_intelligentsia
+	
+	# 		}
+	# 	}
+	# }
+		
+	# leader_weight = {
+	# 	value = 75
+	# 	# more likely if things still need to be done
+	# 	if = {
+	# 		limit = {
+	# 			owner = {
+	# 				NOT = {
+	# 					OR = {
+	# 						has_institution = institution_health_system
+	# 						has_law = law_type:law_technocracy
+	# 						has_law = law_type:law_appointed_bureaucrats
+	# 					}
+						
+	# 				}
+					
+	# 			}
+	# 		}
+	# 		add = 75
+	# 	}
+	# 	# More likely after medical degrees
+	# 	if = {
+	# 		limit = {
+	# 			owner = {
+	# 				has_technology_researched = medical_degrees 
+	# 			}
+	# 		}
+	# 		add = 75
+	# 	}
+	# }
+}

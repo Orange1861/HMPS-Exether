@@ -1,0 +1,174 @@
+﻿building_rice_farm_leechgardens = {
+	building_group = bg_rice_farms_leechgardens
+	
+	icon = "gfx/interface/icons/building_icons/leeches.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	production_method_groups = {
+		pmg_base_building_leechgardens
+		pmg_secondary_building_leechgardens
+		pmg_armed_harvesting_leechgardens
+	}
+
+	required_construction = construction_cost_low
+	
+	terrain_manipulator = farmland_rice
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_terrace_farm = {
+	building_group = bg_terrace_farms
+	
+	icon = "gfx/interface/icons/building_icons/rice_farm.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	production_method_groups = {
+		pmg_base_building_rice_farm
+		pmg_rice_farms_enhancements
+		pmg_secondary_building_rye_farm
+		pmg_harvesting_process_building_rice_farm
+	}
+
+	required_construction = construction_cost_low
+	
+	terrain_manipulator = farmland_rice
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_mountain_maize_farm = {
+	building_group = bg_mountain_maize_farms
+	
+	icon = "gfx/interface/icons/building_icons/mountain_corn.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure
+	}
+	
+	production_method_groups = {
+		pmg_base_building_mountain_maize_farm
+		pmg_secondary_building_mountain_maize_farm
+		pmg_harvesting_process_building_mountain_maize_farm
+		pmg_mountain_farm_shipping
+		
+	}
+
+	required_construction = construction_cost_low
+	
+	terrain_manipulator = farmland_maize
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_beekeeping = {
+	building_group = bg_beekeeping
+	icon = "gfx/interface/icons/building_icons/beekeeping.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+	
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	production_method_groups = {
+		pmg_base_beekeeping
+		pmg_beekeeping_mead
+		pmg_beekeeping_automation
+	}
+	ownership_type = self
+	required_construction = construction_cost_low
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+building_snail_herder_ranch = {
+	building_group = bg_snail_herders
+	icon = "gfx/interface/icons/building_icons/snail_ranch.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure
+	}
+	production_method_groups = {
+		pmg_base_building_snail_herder_ranch
+		pmg_snail_ranch
+		pmg_snail_godsblood
+		pmg_fencing
+		pmg_refrigeration_building_livestock_ranch
+	}
+	ownership_type = self
+	required_construction = construction_cost_low
+
+	terrain_manipulator = pasture
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_shrimp_farm = {
+	building_group = bg_shrimp_farms
+	icon = "gfx/interface/icons/building_icons/brine_shrimp.dds"
+	city_type = farm
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_shrimp_farms
+		#pmg_harvesting_process_building_rye_farm #tractor or refrigeration, there can only be one.
+		pmg_godshrimp
+		pmg_refrigeration_building_fishing_wharf #no thanks
+	}
+	
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_gardenback_beetle_ranches = {
+	building_group = bg_gardenbacks
+	icon = "gfx/interface/icons/building_icons/gardenbacks.dds"
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	city_type = farm
+	levels_per_mesh = 5
+	
+	production_method_groups = {
+		pmg_gardenback_husbandry
+		pmg_gardenback_cultivation
+		pmg_livestock_enhancements_gardenback
+		pmg_livestock_godsblood_gardenback
+		pmg_fencing
+		pmg_refrigeration_building_livestock_ranch
+	}
+	
+	required_construction = construction_cost_low
+
+	terrain_manipulator = pasture
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}

@@ -1,0 +1,96 @@
+﻿ONG_onghor_leader_template = {
+			first_name = Baundai
+   			last_name = Dairu
+    		historical = yes
+			ruler = yes
+    		age = 43
+    		dna = dna_onghor_ruler
+    		culture = cu:onghori
+			interest_group = ig_landowners
+   			ideology = ideology_mad_scientist
+    			traits = {
+				cruel
+				hedonist
+				romantic
+				direct
+				expensive_tastes
+			}	
+}
+
+IG_gerno_hepte_template = {
+			first_name = "Gerno"
+			last_name = "Hepte"
+			historical = yes
+			ig_leader = yes
+			culture = primary_culture
+			age = 36
+			interest_group = ig_landowners
+			ideology = ideology_mad_scientist
+			traits = {
+				reckless
+				wrathful
+				hedonist
+			}
+}
+
+IG_bedai_katang_template = {
+			first_name = Bedai
+			last_name = Katanggaing
+			historical = yes
+			ig_leader = yes
+			culture = primary_culture
+			age = 52
+			interest_group = ig_devout
+			ideology = ideology_mad_scientist
+			traits = {
+				basic_political_operator
+				erudite
+				hedonist
+			}
+}
+
+IG_paw_stangkang_template = {
+			first_name = Paw
+			last_name = Stangkang
+			female = yes
+			historical = yes
+			ig_leader = yes
+			culture = primary_culture
+			age = 48
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_jingoist_leader
+			traits = {
+				wrathful
+				meticulous
+			}
+}
+
+##agitators
+ONG_ricardo_katanggaing_template = { # son of previous devout ig leader
+	first_name = Sharak
+	last_name = Katanggaing
+	historical = yes
+	female = no
+	ig_leader = yes
+	culture = cu:onghori
+	interest_group = ig_devout
+	ideology = ideology_mad_scientist
+	birth_date = 1174.7.19
+	traits = {
+		inspirational_orator
+		brave
+		erudite
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			c:ONG ?= this
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_devout
+        }   
+        earliest_usage_date = 1194.1.1
+        latest_usage_date = 1228.1.1
+        chance = 100
+    }   
+	trait_generation = { }
+}

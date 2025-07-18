@@ -1,0 +1,34 @@
+﻿CHARACTERS = {
+	c:LUR = {
+		create_character = {
+			first_name = "Rafaela"
+			last_name = "de_Oliveira"
+			historical = yes
+			ruler = yes
+			female = yes
+			age = 41
+			culture = cu:cliffpercher
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				honorable
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = "Rosalia"
+			last_name = "de_Oliveira"
+			historical = yes
+			heir = yes
+			female = yes
+			age = 11
+			interest_group = ig_landowners
+			ideology = ideology_magocrat
+			culture = cu:cliffpercher
+			traits = {
+				trait_child
+				starbrand_golem
+			}
+		}
+	}
+}

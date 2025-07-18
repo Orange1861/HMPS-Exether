@@ -1,0 +1,65 @@
+﻿DIPLOMACY = {
+	c:FLU = {
+		create_bidirectional_truce = {
+			country = c:SAZ
+			months = 180
+		}
+		create_bidirectional_truce = {
+			country = c:CLL
+			months = 180
+		}
+	}
+	c:TEM = {
+		create_bidirectional_truce = {
+			country = c:YOK
+			months = 48
+		}
+	}
+
+	c:BIE = {
+		create_bidirectional_truce = {
+			country = c:YAN
+			months = 42
+		}
+	}
+
+	c:YUL = {
+		create_bidirectional_truce = {
+			country = c:YOK
+			months = 48
+		}
+	}
+
+	c:CER = {
+		create_unidirectional_truce = {
+			country = c:RTD
+			months = 360
+		}
+		create_unidirectional_truce = {
+			country = c:BDB
+			months = 360
+		}
+	}
+
+	c:OPA = {
+		create_bidirectional_truce = {
+			country = c:XXP
+			months = 25
+		}
+	}
+
+	c:RAV = {
+		create_unidirectional_truce = {
+			country = c:GRA
+			months = 60
+		}
+		create_unidirectional_truce = {
+			country = c:DKO
+			months = 60
+		}
+		create_unidirectional_truce = {
+			country = c:SBH
+			months = 60
+		}
+	}
+}

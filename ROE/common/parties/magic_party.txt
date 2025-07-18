@@ -1,0 +1,361 @@
+﻿# Fallback party for Mages
+# When mages are powerful, other magical IG's might join
+
+magic_party = {
+	color = { 160 100 160 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_magic
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/arcane.dds"
+	}
+	unlocking_technologies = {
+		supernatural_studies
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			ig:ig_mages ?= {
+				is_marginal = no
+			}
+		}
+		NOR = { # Magoclasts will never join
+			has_ideology = ideology:ideology_magoclast
+			has_ideology = ideology:ideology_pious_magoclast
+			has_ideology = ideology:ideology_corporatist_magoclast
+			leader = { has_ideology = ideology:ideology_magoclast_leader }
+		}
+	}
+	join_weight = {
+		value = {
+			value = -5
+			desc = "base_value"
+		}
+		if = {
+			limit = {
+				is_interest_group_type = ig_mages
+				owner = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_magocracy"
+			}
+		}
+		if = { # nobody will join if the mages don't join
+			limit = {
+				NOT = { is_interest_group_type = ig_mages }
+				OR = {
+					NOT = { exists = owner.py:magic_party }
+					AND = {
+						exists = owner.py:magic_party
+						owner = {
+							ig:ig_mages ?= {
+								NOT = { is_member_of_party = owner.py:magic_party }
+							}
+						}
+					}
+				}
+			}
+			add = {
+				value = -20
+				desc = "from_no_mages_in_party" # this should probably never actually display in game because the party won't exist
+			}
+		}
+		if = { # magically inclined people might join if mages are powerful
+			limit = {
+				is_powerful = no
+				owner = {
+					ig:ig_mages ?= {
+						is_powerful = yes
+					}
+				}
+				OR = {
+					has_ideology = ideology:ideology_pious_knowledge
+					has_ideology = ideology:ideology_corporatist_knowledge
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_magocrat
+							has_ideology = ideology:ideology_artificer_baron
+							has_ideology = ideology:ideology_mad_scientist
+							has_ideology = ideology:ideology_magillismo
+						}
+					}
+				}
+			}
+			add = {
+				value = 15
+				desc = "from_powerful_mages_other"
+			}
+		}
+		if = { # IGs that support autocracy will want to join
+			limit = {
+				OR = {
+					is_interest_group_type = ig_landowners
+					has_ideology = ideology:ideology_enclavist
+					has_ideology = ideology:ideology_power_hungry
+					has_ideology = ideology:ideology_caudillismo
+					leader = { 
+						OR = {
+							has_ideology = ideology:ideology_authoritarian
+							has_ideology = ideology:ideology_positivist
+						}
+					}
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_autocracy"
+			}
+		}
+		if = { # anti-censorship
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_liberal
+					has_ideology = ideology:ideology_liberal_mages
+					has_ideology = ideology:ideology_liberal_modern
+					has_ideology = ideology:ideology_egalitarian
+					has_ideology = ideology:ideology_dwarf_egalitarian
+					has_ideology = ideology:ideology_egalitarian_modern
+					has_ideology = ideology:ideology_dwarf_egalitarian_modern
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_humanitarian
+							has_ideology = ideology:ideology_humanitarian_royalist
+						}
+					}
+				}
+				owner = {
+					has_law = law_type:law_outlawed_dissent
+				}
+			}
+			add = {
+				value = 3
+				desc = from_outlawed_dissent
+			}
+		}
+		if = { # capitalists and landowners more likely to join mages when the poor can vote
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_plutocratic
+					has_ideology = ideology:ideology_enclavist
+					has_ideology = ideology:ideology_plutocratic_moralist
+					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_republican_paternalistic
+					has_ideology = ideology:ideology_papal_paternalistic
+					has_ideology = ideology:ideology_paternalistic_hobgoblin
+				}
+				owner = {
+					has_law = law_type:law_universal_suffrage
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_capitalists_suffrage"
+			}
+		}
+		if = { # against hereditary bureacrats
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_meritocratic
+					has_ideology = ideology:ideology_dwarf_meritocratic
+					has_ideology = ideology:ideology_power_hungry
+				}
+				owner = {
+					has_law = law_type:law_hereditary_bureaucrats
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_hereditary_offices"
+			}
+		}
+		if = { # Alliance to Establish Schooling
+			limit = {
+				owner = { has_law = law_type:law_no_schools }
+				OR = {
+					has_ideology = ideology:ideology_arcane_scholars
+					is_interest_group_type = ig_devout
+					is_interest_group_type = ig_intelligentsia
+					has_ideology = ideology:ideology_individualist
+					has_ideology = ideology:ideology_utilitarian_millian
+					has_ideology = ideology:ideology_modernizer
+					has_ideology = ideology:ideology_proletarian
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_corporatist_leader
+							has_ideology = ideology:ideology_utilitarian_leader
+						}
+					}
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_no_schools"
+			}
+		}
+		if = { # Alliance to School the Children
+			limit = {
+				owner = {
+					NOT = { has_law = law_type:law_compulsory_primary_school }
+				}
+				OR = {
+					has_ideology = ideology:ideology_arcane_scholars
+					has_ideology = ideology:ideology_pious_knowledge
+					has_ideology = ideology:ideology_corporatist_knowledge
+					has_ideology = ideology:ideology_modernizer
+					has_ideology = ideology:ideology_egalitarian
+					has_ideology = ideology:ideology_dwarf_egalitarian
+					has_ideology = ideology:ideology_egalitarian_modern
+					has_ideology = ideology:ideology_dwarf_egalitarian_modern
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_social_democrat
+							has_ideology = ideology:ideology_reformer
+							has_ideology = ideology:ideology_humanitarian_royalist
+							has_ideology = ideology:ideology_humanitarian
+						}
+					}
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_no_compulsory_schools"
+			}
+		}
+		if = { # skeptics and atheists are much less likely to join
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_anti_clerical
+					has_ideology = ideology:ideology_skeptic
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_skeptic_leader
+							has_ideology = ideology:ideology_positivist
+							has_ideology = ideology:ideology_atheist
+						}
+					}
+				}
+			}
+			add = {	
+				value = -10
+				desc = "from_skepticism"
+			}
+		}
+		if = { # Devout more likely to join with traditional precedent
+			limit = {
+				is_interest_group_type = ig_devout
+				owner = { has_law = law_type:law_divine_miracles }
+			}
+			add = {	
+				value = 5
+				desc = "from_traditional_precedent"
+			}
+		}
+		if = { # Intelligentsia more likely to join with arcane learning
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_liberal
+					has_ideology = ideology:ideology_liberal_modern
+				}
+				owner = { has_law = law_type:law_astrological_studies }
+			}
+			add = {
+				value = 15
+				desc = "from_arcane_learning"
+			}
+		}
+		if = { # Druids more likely to join mages under Rural Hermits
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_pious_druidic
+					has_ideology = ideology:ideology_corporatist_druidic
+					has_ideology = ideology:ideology_luddite_ig
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_druid 
+							has_ideology = ideology:ideology_luddite
+						}
+					}
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_druidic_circles"
+			}
+		}
+		if = { # Industrialists/TU more likely to join with artificer guilds
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_laissez_faire
+					has_ideology = ideology:ideology_proletarian
+				}
+				owner = { has_law = law_type:law_artificer_guilds }
+			}
+			add = {
+				value = 5
+				desc = "from_artificer_guilds"
+			}
+		}
+		if = { # a party for powerful mages
+			limit = {
+				is_interest_group_type = ig_mages
+				is_powerful = yes
+			}
+			multiply = {
+				value = 2
+				desc = "from_archetype_party"
+			}
+		}
+		if = {
+			limit = {
+				scope:number = 1
+				is_powerful = no
+				is_marginal = no
+			}
+			multiply = {
+				value = 2
+				desc = "from_influential_supporting_member"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 2
+			}
+			multiply = {
+				value = 0.5
+				desc = "from_two_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 3
+			}
+			multiply = {
+				value = 0.25
+				desc = "from_three_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number > 3
+			}
+			multiply = {
+				value = 0.1
+				desc = "from_more_than_three_prior_members"
+			}
+		}
+	}
+}

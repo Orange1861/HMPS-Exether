@@ -1,0 +1,297 @@
+﻿EME_emerald_league_leader_template = {
+			first_name = Louibre
+   			last_name = Blustran
+    		historical = yes
+			ruler = yes
+			ig_leader = yes			
+    		age = 40
+    		dna = dna_emerald_ruler
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_devout
+   			ideology = ideology_moderate
+    			traits = {
+				pious
+				reserved
+				tactful
+				literary
+    }	
+}
+
+EME_emerald_league_petite_ig_template = {
+			first_name = Etiom
+   			last_name = Isquorne
+    		historical = yes
+			ig_leader = yes
+    		age = 28
+    		dna = dna_emerald_ig_petite
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_petty_bourgeoisie
+   			ideology = ideology_protectionist
+    			traits = {
+				charismatic
+				ambitious
+				innovative
+				inexperienced
+    }
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 40
+		}
+	}	
+}
+
+EME_emerald_league_industrial_ig_template = {
+			first_name = Ravre
+   			last_name = Eusmersque
+    		historical = yes
+			ig_leader = yes
+    		age = 36
+    		dna = dna_emerald_ig_industrial
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_industrialists
+   			ideology = ideology_artificer_baron
+    			traits = {
+				arrogant
+				meticulous				
+				experienced_political_operator
+				experienced_entrepreneur
+
+    }
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 30
+		}
+	}	
+}
+
+EME_emerald_league_military_ig_template = {
+			first_name = Jabre
+   			last_name = Sanlcande
+    		historical = yes
+			ig_leader = yes
+			is_admiral = yes
+			commander_rank = commander_rank_4			
+    		age = 33
+    		dna = dna_emerald_ig_military
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_armed_forces
+   			ideology = ideology_reformer
+    			traits = {
+				direct
+				honorable
+				ruthless
+				dockyard_master
+    }
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 30
+		}
+	}	
+}
+
+EME_emerald_league_rural_ig_template = {
+			first_name = Chete
+   			last_name = Bieu
+    		historical = yes
+			ig_leader = yes
+    		age = 35
+    		dna = dna_emerald_ig_rural
+    		culture = cu:pecif
+			religion = rel:church_of_man
+			interest_group = ig_rural_folk
+   			ideology = ideology_pacifist
+    			traits = {
+				direct
+				imperious
+				cautious
+				demagogue
+    }
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 30
+		}
+	}	
+}
+
+EME_emerald_league_landowner_ig_template = {
+			first_name = Baroness
+   			last_name = Bernien
+    		historical = yes
+			ig_leader = yes
+			female = yes
+    		age = 29
+    		dna = dna_emerald_ig_landowner
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_landowners
+   			ideology = ideology_jingoist_leader
+    			traits = {
+				charismatic
+				bigoted
+				romantic
+				experienced_diplomat
+    }
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 30
+		}
+	}	
+}
+
+EME_emerald_league_intel_ig_template = {
+			first_name = Sizio
+   			last_name = Ayrinhac
+    		historical = yes
+			ig_leader = yes
+    		age = 30
+    		dna = dna_emerald_ig_intel
+    		culture = cu:ocelian
+			religion = rel:orthodox_fosirmi
+			interest_group = ig_intelligentsia
+   			ideology = ideology_reformer
+    			traits = {
+				persistent
+				ambitious
+				master_bureaucrat
+				starbrand_unicorn
+    }
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 40
+		}
+	}
+}
+
+EME_emerald_league_mage_ig_template = {
+			first_name = Sondre
+   			last_name = Viersustre
+    		historical = yes
+			ig_leader = yes
+			female = yes
+    		age = 33
+    		dna = dna_emerald_ig_mage
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_mages
+   			ideology = ideology_reformer
+    			traits = {
+				aesthete
+				meticulous
+				reserved
+				basic_diplomat
+				starbrand_fey
+    }
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 40
+		}
+	}	
+}
+
+EME_emerald_league_union_ig_template = {
+			first_name = Ruete
+   			last_name = Crouicteve
+    		historical = yes
+			ig_leader = yes
+			female = yes
+    		age = 22
+    		dna = dna_emerald_ig_union
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_trade_unions
+   			ideology = ideology_social_democrat
+    			traits = {
+				brave
+				direct
+				imposing
+				firebrand
+    }
+			interest_group_leader_usage = {
+				country_trigger = {
+					c:EME ?= this
+					has_technology_researched = political_agitation					
+				}     
+				interest_group_trigger = {
+					is_interest_group_type = ig_trade_unions
+				}   
+				earliest_usage_date = 1208.1.1
+				latest_usage_date = 1268.1.1
+				chance = 100
+			} 
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 40
+		}
+	} 	
+}
+
+EME_emerald_league_union_agitator_1 = {
+			first_name = Zastre
+   			last_name = Renan
+			female = yes
+			is_agitator = yes
+    		age = 26
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_trade_unions
+   			ideology = ideology_vanguardist
+    			traits = {
+				ambitious
+				wrathful
+				demagogue
+    }
+			agitator_usage = {
+				country_trigger = {
+					c:EME ?= this
+					has_technology_researched = political_agitation
+				}     
+				interest_group_trigger = {
+					is_interest_group_type = ig_trade_unions
+				}   
+				earliest_usage_date = 1208.1.1
+				latest_usage_date = 1268.1.1
+				chance = 75
+			} 
+}
+
+EME_emerald_league_union_agitator_2 = {
+			first_name = Onfre
+   			last_name = Suque
+			female = no
+			is_agitator = yes
+    		age = 30
+    		culture = cu:ocelian
+			religion = rel:church_of_man
+			interest_group = ig_trade_unions
+   			ideology = ideology_anarchist
+    			traits = {
+				brave
+				hedonist
+				demagogue
+				starbrand_siren
+    }
+			agitator_usage = {
+				country_trigger = {
+					c:EME ?= this
+					has_technology_researched = political_agitation					
+				}     
+				interest_group_trigger = {
+					is_interest_group_type = ig_trade_unions
+				}   
+				earliest_usage_date = 1208.1.1
+				latest_usage_date = 1268.1.1
+				chance = 75
+			} 
+}

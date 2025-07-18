@@ -1,0 +1,391 @@
+﻿ai_strategy_agricultural_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+	
+	type = administrative
+
+	building_group_weights = {
+		bg_agriculture = 1.25
+		bg_ranching = 1.25
+		bg_plantations = 1.25
+	}
+	
+	goods_stances = {
+	}
+
+	possible = {
+		always = yes
+	}
+	
+	weight = {
+		value = 10		
+		
+		if = { 
+			limit = { literacy_rate < 0.25 }
+			multiply = 1.5
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.35 }
+			multiply = 1.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.50 }
+			multiply = 0.5
+		}			
+
+		if = {
+			limit = { 
+				exists = ig:ig_landowners
+				ig:ig_landowners ?= { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				exists = overlord				
+				overlord = { 
+					OR = { 
+						AND = {
+							is_ai = no
+							NOT = { has_law = law_type:law_traditionalism }				
+						}						
+						has_strategy = ai_strategy_resource_expansion
+						has_strategy = ai_strategy_industrial_expansion
+					}		
+				}
+			}
+			multiply = 0.5
+		}		
+	}
+}
+
+ai_strategy_plantation_economy = {
+	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+	
+	type = administrative
+
+	goods_stances = {
+	}	
+
+	building_group_weights = {
+		bg_plantations = 1.25
+	}
+
+	possible = {
+		OR = {
+			country_is_in_citrus_currents = yes
+		}
+	}
+	
+	weight = {
+		value = 10			
+		
+		if = {
+			limit = { 
+				OR = {
+					country_is_in_citrus_currents = yes
+				}
+			}
+			add = 20
+		}
+
+		if = {
+			limit = { is_country_type = unrecognized }
+			multiply = 0.5
+		}
+
+		if = {
+			limit = { 
+				exists = ig:ig_landowners
+				ig:ig_landowners ?= { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}	
+
+		if = {
+			limit = {
+				has_journal_entry = je_agricultural_development
+			}
+			add = 45
+		}
+	}
+}
+
+ai_strategy_resource_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
+	
+	type = administrative	
+
+	building_group_weights = {
+		bg_rubber = 1.25
+		bg_oil_extraction = 1.25
+		bg_mining = 1.25
+	}
+	
+	subsidies = {
+	}
+	
+	goods_stances = {	
+	}
+
+
+	possible = {
+		always = yes
+	}
+	
+	weight = {
+		value = 10		
+		
+		if = {
+			limit = { 
+				OR = {
+					country_is_in_settler_coast = yes
+					country_is_in_northwestern_zalaron = yes
+				}
+			}
+			add = 20
+		}
+		
+		if = {
+			limit = {
+				has_radical_leftist_government = yes
+				NOT = {
+					ig:ig_rural_folk ?= {
+						is_powerful = yes
+						is_in_government = yes
+					}
+				}
+			}
+			add = 25
+		}	
+		
+		if = {
+			limit = { is_country_type = unrecognized }
+			multiply = 0.5
+		}		
+
+		if = {
+			limit = { 
+				exists = ig:ig_industrialists
+				ig:ig_industrialists ?= { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				has_technology_researched = railways
+			}
+			multiply = 2.0
+		}
+		
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { 
+					OR = { 
+						AND = {
+							is_ai = no
+							NOT = { has_law = law_type:law_traditionalism }				
+						}						
+						has_strategy = ai_strategy_resource_expansion
+						has_strategy = ai_strategy_industrial_expansion
+					}		
+				}
+			}
+			multiply = 2.0
+		}	
+	}
+}
+
+ai_strategy_industrial_expansion = {
+	icon = "gfx/interface/icons/ai_strategy_icons/industrial_expansion.dds"
+	
+	type = administrative
+	
+	subsidies = {
+	}
+	
+	goods_stances = {
+	}
+	
+	building_group_weights = {
+		bg_manufacturing = 1.50
+		bg_mining = 1.25
+		bg_wishstone_fields = 1.25
+	}
+	
+	weight = {
+		value = 10
+				
+		if = {
+			limit = { 
+				OR = {
+					country_is_in_settler_coast = yes
+					country_is_in_northwestern_zalaron = yes
+				}
+			}
+			add = 20
+		}
+		if = {
+			limit = {
+				has_radical_leftist_government = yes
+				NOT = {
+					ig:ig_rural_folk ?= {
+						is_powerful = yes
+						is_in_government = yes
+					}
+				}
+			}
+			add = 50
+		}	
+		if = {
+			limit = {
+				has_law = law_type:law_command_economy	
+			}
+			multiply = 2
+		}	
+		if = {
+			limit = { is_country_type = unrecognized }
+			multiply = 0.25
+		}	
+		
+		if = {
+			limit = { 
+				exists = ig:ig_industrialists
+				ig:ig_industrialists ?= { is_powerful = yes } 
+			}
+			multiply = 2.0
+		}	
+		
+		if = { 
+			limit = { literacy_rate < 0.20 }
+			multiply = 0.5
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.40 }
+			multiply = 0.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.60 }
+			multiply = 1.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.80 }
+			multiply = 1.5
+		}			
+
+		if = {
+			limit = {
+				has_technology_researched = railways
+			}
+			multiply = 1.5
+		}		
+	}
+}
+
+ai_strategy_placate_population = {
+	icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds"
+	
+	type = administrative
+
+	desired_tax_level = low
+	max_tax_level = medium
+	min_tax_level = very_low
+
+	building_group_weights = {
+		bg_manufacturing = 0.5		
+	}
+	
+	goods_stances = {
+	}
+
+	possible = {
+		has_law = law_type:law_traditionalism
+	}
+	
+	weight = {
+		value = 10
+		
+		if = {
+			limit = { is_country_type = unrecognized }
+			add = 20
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.25 }
+			multiply = 1.5
+		}
+		
+		if = { 
+			limit = { literacy_rate < 0.35 }
+			multiply = 1.5
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.50 }
+			multiply = 0.5
+		}	
+
+		if = {
+			limit = {
+				has_technology_researched = railways
+			}
+			multiply = 0.5
+		}		
+		
+		if = {
+			limit = { 
+				exists = ig:ig_rural_folk
+				ig:ig_rural_folk ?= { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { 
+					OR = { 
+						AND = {
+							is_ai = no
+							NOT = { has_law = law_type:law_traditionalism }				
+						}						
+						has_strategy = ai_strategy_resource_expansion
+						has_strategy = ai_strategy_industrial_expansion
+					}		
+				}
+			}
+			multiply = 0.1
+		}		
+	}
+}
+
+ai_strategy_colonial_extraction = {
+    icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
+    
+    type = administrative   
+
+    building_group_weights = {
+    }
+    
+    subsidies = {
+    }
+    
+    goods_stances = {
+    }
+
+    possible = {
+    	is_subject = yes
+    	is_country_type = colonial
+    }
+    
+    weight = {
+        value = 100
+    }
+}

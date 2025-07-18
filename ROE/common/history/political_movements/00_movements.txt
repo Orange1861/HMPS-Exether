@@ -1,0 +1,140 @@
+﻿POLITICAL_MOVEMENTS = {
+	every_country = {
+		limit = { NOT = { is_country_type = decentralized } }
+		### Royalist movements
+		if = {
+			limit = {
+				has_law = law_type:law_monarchy
+				country_has_voting_franchise = no
+			}
+			create_political_movement = { type = movement_royalist_absolutist }
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_monarchy
+				country_has_voting_franchise = yes
+			}
+			create_political_movement = { type = movement_royalist_constitutional }
+		}
+
+		### Abolitionist movements
+		if = {
+			limit = {
+				NOT = { has_law = law_type:law_guild_bondage }
+			}
+			if = {
+				limit = {
+					NOT = { has_law = law_type:law_slavery_banned }
+				}
+				create_political_movement = { type = movement_pro_slavery }
+				
+				if = {
+					limit = { 
+						has_technology_researched = empiricism 
+					}
+					create_political_movement = { type = movement_anti_slavery }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_guild_bondage
+			}
+			create_political_movement = { type = movement_pro_consortium }
+			if = {
+				limit = { 
+					has_technology_researched = empiricism 
+				}
+				create_political_movement = { type = movement_romantic }
+			}
+		}
+			
+
+		### Religious movements
+		create_political_movement = { type = movement_religious_majority }
+
+		### Cultural majority movements
+		create_political_movement = { type = movement_cultural_majority }
+
+		### Labour movements
+		if = {
+			limit = {
+				has_technology_researched = labor_movement
+			}
+			create_political_movement = { type = movement_labor }
+		}
+		
+		### Anarchist Movements
+		if = {
+			limit = {
+				owner ={
+					OR = {
+						any_primary_culture = {
+							OR = {
+								has_discrimination_trait = mouse_heritage
+								has_discrimination_trait = awakened_heritage
+								has_discrimination_trait = lizardfolk_heritage
+							}
+						}
+						has_technology_researched = anarchism
+					}
+				}
+			}
+			create_political_movement = { type = movement_anarchist }
+		}
+
+		### Liberal movements
+		if = {
+			limit = {
+				has_technology_researched = democracy
+				OR = {
+					has_law = law_type:law_landed_voting
+					has_law = law_type:law_wealth_voting
+					has_law = law_type:law_census_voting
+					has_law = law_type:law_universal_suffrage
+				}
+			}
+			create_political_movement = { type = movement_liberal }
+		}
+
+		### Magic movements
+		if = {
+			limit = {
+				OR = {
+					has_law = law_type:law_magocracy
+					has_law = law_type:law_court_mages				
+				}
+			}
+			create_political_movement = { type = movement_magocrat }
+		}
+
+		if = {
+			limit = {
+				has_law = law_type:law_mage_hunters
+			}
+			create_political_movement = { type = movement_anti_magic }
+		}
+		
+		### Country-Specific Movements
+		c:ZKW ?= {
+		create_political_movement = { type = movement_radical }
+		}
+
+		c:VAE = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:frost_giant }
+			create_political_movement = { type = movement_cultural_minority culture = cu:wood_giant }
+		}
+		c:CER = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:rivierling }
+		}
+		c:AHO = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:changeling }
+		}
+		c:RVC = {
+			create_political_movement = { type = movement_religious_minority religion = rel:cult_of_the_sun }
+		}
+		c:DUM = {
+			create_political_movement = { type = movement_religious_minority religion = rel:cult_of_the_sun }
+		}
+	}
+}

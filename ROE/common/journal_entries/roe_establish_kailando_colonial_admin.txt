@@ -1,0 +1,54 @@
+﻿je_kailando_colonial_administration = {
+	icon = "gfx/interface/icons/event_icons/event_exploration.dds"
+	
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		OR = {
+			country_is_in_kailando = no
+			country_is_in_africa = no
+		}
+		country_is_in_africa = no
+		OR = {
+			has_interest_marker_in_region = sr:region_elusive_coves
+			has_interest_marker_in_region = sr:region_lacertia
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_is_in_kailando = yes
+				state_is_in_africa = yes
+			}
+		}
+		has_technology_researched = colonization
+	}
+
+	immediate = {
+		random_state = {
+			limit = {
+				region = sr:region_elusive_coves
+			}
+			save_scope_as = elusive_coves_region_scope
+		}
+		random_state = {
+			limit = {
+				region = sr:region_lacertia
+			}
+			save_scope_as = lacertia_region_scope
+		}
+	}
+	
+	# Establish Colonial Administration
+	scripted_button = je_colonial_administration_button_elusive_coves
+	scripted_button = je_colonial_administration_button_lacertia
+
+	# Expand Colonial Administration
+	scripted_button = je_colonial_administration_button_expand_elusive_coves
+	scripted_button = je_colonial_administration_button_expand_lacertia
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

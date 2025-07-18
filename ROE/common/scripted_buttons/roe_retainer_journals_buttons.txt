@@ -1,0 +1,82 @@
+﻿send_retainer_thieves_guild = {
+	name = "send_retainer_thieves_guild_button"
+	desc = "send_retainer_thieves_guild_button_desc"
+
+
+	possible = {
+		OR = {
+			has_free_retainer = yes
+			AND = {
+				any_scope_state = {
+					state_region = {
+						has_harvest_condition = thieves_guild
+					}
+					has_modifier = state_retainer_assigned
+				}
+			}
+		}
+		custom_tooltip = {
+			text = recently_sent_retainer_tt
+			NOT = {
+				has_variable = thieves_guild_recently_sent_retainer_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = thieves_guild_recently_sent_retainer_var
+			days = 30
+		}
+		trigger_event = { id = retainer_situations.3}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				always = no
+			}
+			add = 100
+		}
+
+	}
+}
+
+send_police_thieves_guild = {
+	name = "send_police_thieves_guild_button"
+	desc = "send_police_thieves_guild_button_desc"
+
+
+	possible = {
+        institution_investment_level = {
+			institution = institution_police
+			value >= 3
+		}
+		custom_tooltip = {
+			text = recently_sent_police_tt
+			NOT = {
+				has_variable = thieves_guild_recently_sent_police_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = thieves_guild_recently_sent_police_var
+			days = 30
+		}
+		trigger_event = { id = retainer_situations.4}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				always = no
+			}
+			add = 100
+		}
+
+	}
+}

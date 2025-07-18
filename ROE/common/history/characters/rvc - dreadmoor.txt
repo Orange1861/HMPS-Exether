@@ -1,0 +1,39 @@
+﻿CHARACTERS = {
+	c:RVC ?= {
+		create_character = {
+			template = canonic_count_dracula
+		}
+		create_character = {
+			first_name = Herschem
+			last_name = Rhuli
+			historical = yes
+			ig_leader = yes
+			culture = cu:meriwyn
+			religion = rel:cult_of_the_sun
+			age = 42
+			interest_group = ig_devout
+			ideology = ideology_traditionalist_minoritarian
+			traits = {
+				compliant
+				basic_political_operator
+				literary
+			}
+			trait_generation = { }
+		}
+		create_character = {
+			first_name = Sithov
+			last_name = Zorlan
+			historical = yes
+			ig_leader = yes
+			age = 42
+			interest_group = ig_mages
+			ideology = ideology_authoritarian
+			traits = {
+				ruthless
+				direct
+				scarred
+			}
+			trait_generation = { }
+		}
+	}
+}

@@ -1,0 +1,715 @@
+﻿POPS = {
+	s:STATE_UTSOCUKU = {
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 1325800
+			}
+		}
+	}
+	s:STATE_EPUSOTFA = {
+		region_state:RIK = {
+			create_pop = {
+				culture = gnoll
+				size = 487900
+			}
+		}
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 381500
+			}
+		}
+	}
+	s:STATE_THACK_MZUNT = {
+		region_state:GHR = {
+			create_pop = {
+				culture = jungle_gnoll
+				size = 872200
+			}
+		}
+	}
+	s:STATE_DUTAKHAMKU = {
+		region_state:YIP = {
+			create_pop = {
+				culture = gnoll
+				size = 695675
+			}
+		}
+		region_state:RIK = {
+			create_pop = {
+				culture = gnoll
+				size = 464800
+			}
+		}
+	}
+	s:STATE_IMKIMPIL = {
+		region_state:THT = {
+			create_pop = {
+				culture = gnoll
+				size = 728700
+			}
+		}
+	}
+	s:STATE_DEPZWU = {
+		region_state:THT = {
+			create_pop = {
+				culture = jungle_gnoll
+				size = 627745
+			}
+		}
+	}
+	s:STATE_CHITTERKIQ = {
+		region_state:PRO = {
+			create_pop = {
+				culture = jungle_gnoll
+				size = 2689957
+			}
+		}
+	}
+	s:STATE_MKHOT_NAF = {
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 693700
+			}
+		}
+	}
+	s:STATE_NYOKSIAPLA = {
+		region_state:YIP = {
+			create_pop = {
+				culture = gnoll
+				size = 453457
+			}
+			create_pop = {
+				culture = dunaq
+				size = 68600
+			}
+		}
+		
+	}
+
+	s:STATE_TROBIPPA = {
+		region_state:SNB = {
+			create_pop = {
+				culture = jungle_gnoll
+				size = 140083
+			}
+		}
+		region_state:GHR = {
+			create_pop = {
+				culture = jungle_gnoll
+				size = 211483
+			}
+		}
+		
+	}
+	s:STATE_DENYICUNU = {
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 897400
+			}
+		}
+	}
+	s:STATE_KIMBHADO = {
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 1078700
+			}
+		}
+	}
+	s:STATE_PACHAQULLU = {
+		region_state:KUN = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 153740
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 1523796
+			}
+			create_pop = {
+				culture = vandori
+				size = 55996
+			}
+			create_pop = {
+				religion = house_of_fate
+				culture = dunaq
+				size = 86000
+			}
+		}
+	}
+	s:STATE_INTIWINA = {
+		region_state:KUN = {
+			create_pop = {
+				religion = house_of_fate
+				culture = dunaq
+				size = 50000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 30000
+			}
+			create_pop = {
+				#RIP Equatorial Bantu
+				pop_type = slaves
+				culture = gnoll
+				size = 20000
+			}
+		}
+	}
+
+	s:STATE_MALLKIYAKU = {
+		region_state:KUN = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 155123
+			}
+			create_pop = {
+				religion = house_of_fate
+				culture = dunaq
+				size = 100000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 1233132
+			}
+			create_pop = {
+				culture = vandori
+				size = 102996
+			}
+		}
+		region_state:TIT = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 385953
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 504215
+			}
+			create_pop = {
+				religion = house_of_fate
+				culture = dunaq
+				size = 212950
+			}
+			create_pop = {
+				culture = vandori
+				size = 90646
+			}
+		}
+	}
+	s:STATE_QAQAMANTA = {
+		region_state:KAN = {
+			create_pop = {
+				culture = dunaq
+				size = 106800
+			}
+		}
+	}
+	s:STATE_MRAENTWAARSH = {
+		region_state:GPK={
+			create_pop = {
+				culture = aisjie
+				size = 2696203
+			}
+		}
+	}
+	s:STATE_YAASKCASCH = {
+		region_state:GPK={
+			create_pop = {
+				culture = aisjie
+				size = 3520010
+			}
+		}
+	}
+	s:STATE_NAWI_OASIS = {
+		region_state:WAQ={
+			create_pop = {
+				culture = yachaymanchi
+				size = 1295000
+			}
+			create_pop = {
+				religion = house_of_fate
+				culture = dunaq
+				size = 558500
+			}
+			create_pop = {
+				religion = house_of_fate
+				pop_type = slaves
+				culture = dunaq
+				size = 74000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 981400
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 21000
+			}
+			create_pop = {
+				culture = vandori
+				size = 140000
+			}
+		}
+	}
+	s:STATE_LLANKAYUQ = {
+		region_state:KAN = {
+			create_pop = {
+				culture = dunaq
+				size = 28000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 2800
+			}
+		}
+	}
+	s:STATE_TIKAQULLU = {
+		region_state:TIT = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 1105804
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 550199
+			}
+			create_pop = {
+				culture = vandori
+				size = 150000
+			}
+			create_pop = {
+				religion = house_of_fate
+				culture = dunaq
+				size = 70000
+			}
+		}
+	}
+	s:STATE_PUKARAQOCHA = {
+		region_state:WAY = {
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 23500
+			}
+			create_pop = {
+				culture = dunaq
+				size = 61877
+			}
+		}
+		region_state:WAQ = {
+			create_pop = {
+				culture = dunaq
+				size = 21877
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 11877
+			}
+		}
+	}
+	s:STATE_KUCHUYPATA = {
+		region_state:PAC = {
+			create_pop = {
+				culture = kusichaki
+				size = 70911
+			}
+			create_pop = {
+				culture = vandori
+				size = 52800
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 1071800
+			}
+			create_pop = {
+				religion = house_of_fate
+				culture = dunaq
+				size = 65000
+			}
+		}
+	}
+	s:STATE_MIKHUYUQ = {
+		region_state:KAW = {
+			create_pop = {
+				culture = dunaq
+				size = 255920
+			}
+		}
+	}
+	s:STATE_PISQUPATA = {
+		region_state:TAY = {
+			create_pop = {
+				culture = dunaq
+				size = 40200
+			}
+		}
+	}
+	s:STATE_QOMERQOCHA = {
+		region_state:WAR = {
+			create_pop = {
+				culture = dunaq
+				size = 19600
+			}
+		}
+	}
+	s:STATE_URQUNAYUQ = {
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 695035
+			}
+			create_pop = {
+				culture = rahoru
+				religion = skarrakhlot
+				size = 317668
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 68000
+			}
+		}
+	}
+	s:STATE_TAYTAQOCHA = {
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 619368
+			}
+			create_pop = {
+				culture = rahoru
+				religion = skarrakhlot
+				size = 73282
+			}
+			create_pop = {
+				culture = tqalt
+				size = 76738
+			}
+		}
+	}
+	s:STATE_KUNTURPAMPA = {
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 1562513
+			}
+		}
+	}
+	s:STATE_NAWIYANU = {
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 2171338
+			}
+		}
+		region_state:GMR = {
+			create_pop = {
+				culture = waste_walker
+				size = 249434
+			}
+			create_pop = {
+				culture = tqalt
+				size = 7000
+				pop_type = slaves
+			}
+			create_pop = {
+				culture = rahoru
+				size = 2100
+				pop_type = slaves
+			}
+		}
+	}
+	s:STATE_TINKUYUQ = {
+		region_state:HOR = {
+			create_pop = {
+				culture = tqalt
+				size = 644998
+			}
+			create_pop = {
+				culture = rahoru
+				size = 2100783
+			}
+		}
+	}
+	s:STATE_SAVAGE_LANDS = {
+		region_state:RSE = {
+			create_pop = {
+				culture = tqalt
+				size = 772724
+			}
+			create_pop = {
+				culture = rahoru
+				religion = skarrakhlot
+				size = 72043
+			}
+			create_pop = {
+				culture = waste_walker
+				pop_type = slaves
+				size = 51295
+			}
+		}
+	}
+	s:STATE_SAVAGE_LANDS_2 = {
+		region_state:RSE = {
+			create_pop = {
+				culture = tqalt
+				size = 428338
+			}
+			create_pop = {
+				culture = rahoru
+				religion = skarrakhlot
+				size = 72097
+			}
+			create_pop = {
+				culture = waste_walker
+				pop_type = slaves
+				size = 39068
+			}
+		}
+	}
+	s:STATE_ROUGHSTONE_TERRITORY = {
+		region_state:RSE = {
+			create_pop = {
+				culture = tqalt
+				size = 406334
+			}
+			create_pop = {
+				culture = waste_walker
+				pop_type = slaves
+				size = 37631
+			}
+		}
+	}
+	s:STATE_ROUGHSTONE_TERRITORY_2 = {
+		region_state:BGR = {
+			create_pop = {
+				culture = waste_walker
+				size = 596324
+			}
+			create_pop = {
+				culture = tqalt
+				size = 49000
+				pop_type = slaves
+			}
+			create_pop = {
+				culture = stranfolk
+				size = 14000
+				pop_type = slaves
+			}
+		}
+	}
+	s:STATE_FIERCEHOLD = {
+		region_state:BLD = {
+			create_pop = {
+				culture = tqalt
+				size = 426299
+			}
+			create_pop = {
+				culture = stranfolk
+				size = 14134
+				pop_type = slaves
+			}
+			create_pop = {
+				culture = glabrekthorn
+				size = 28272
+				pop_type = slaves
+			}
+		}
+		region_state:BGR = {
+			create_pop = {
+				culture = waste_walker
+				size = 269658
+			}
+			create_pop = {
+				culture = tqalt
+				size = 35000
+				pop_type = slaves
+			}
+			create_pop = {
+				culture = stranfolk
+				size = 7000
+				pop_type = slaves
+			}
+		}
+	}
+	s:STATE_SAVAGE_REACH = {
+		region_state:RUX = {
+			create_pop = {
+				culture = tqalt
+				size = 898202
+			}
+			create_pop = {
+				culture = waste_walker
+				pop_type = slaves
+				size = 102768
+			}
+		}
+		region_state:GMR = {
+			create_pop = {
+				culture = waste_walker
+				size = 148330
+			}
+			create_pop = {
+				culture = tqalt
+				size = 7000
+				pop_type = slaves
+			}
+		}
+	}
+	s:STATE_SNAILBANE = {
+		region_state:SNL = {
+			create_pop = {
+				culture = waste_walker
+				size = 144252
+			}
+			create_pop = {
+				culture = tqalt
+				size = 58880
+			}
+			create_pop = {
+				culture = tqalt
+				size = 14365
+				pop_type = slaves
+			}
+		}
+	}
+	s:STATE_BLOODTHORN_WASTES = {
+		region_state:BLD = {
+			create_pop = {
+				culture = tqalt
+				size = 1466542
+			}
+			create_pop = {
+				culture = waste_walker
+				size = 88203
+				pop_type = slaves
+			}
+			create_pop = {
+				culture = glabrekthorn
+				size = 121073
+				pop_type = slaves
+			}
+		}
+	}
+	s:STATE_BLOODTHORN_WASTES_2 = {
+		region_state:BLD = {
+			create_pop = {
+				culture = tqalt
+				size = 1256062
+			}
+			create_pop = {
+				culture = waste_walker
+				size = 17500
+				pop_type = slaves
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 14000
+				pop_type = slaves
+			}
+		}
+	}
+
+	s:STATE_SALTSHORE = {
+		region_state:YKU = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 693790
+			}
+			create_pop = {
+				culture = tqalt
+				size = 181378
+			}
+			create_pop = {
+				culture = vandori
+				size = 49353
+			}
+		}
+	}
+	s:STATE_SALTSHORE_2 = {
+		region_state:YKU = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 700985
+			}
+			create_pop = {
+				culture = vandori
+				size = 42375
+			}
+		}
+	}
+	s:STATE_ANTAQAQA = {
+		region_state:YKU = {
+			create_pop = {
+				culture = rahoru
+				size = 144690
+			}
+			create_pop = {
+				culture = vandori
+				size = 127750
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 1115797
+			}
+		}
+	}
+	s:STATE_BLOODAXE_TERRITORY = {
+		region_state:RUX = {
+			create_pop = {
+				culture = tqalt
+				size = 768844
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = waste_walker
+				size = 108860
+			}
+		}
+	}
+	
+		s:STATE_GUGNOS = {
+			region_state:THK = {
+				create_pop = {
+					culture = kaalkid
+					size = 562902
+				}
+				create_pop = {
+					culture = underkaal
+					size = 352902
+				}
+				create_pop = {
+					culture = kaalkid
+					religion = skarrakhlot
+					size = 186980
+				}
+			}
+			region_state:DDN = {
+				create_pop = {
+					culture = duneshar
+					size = 225642
+				}
+
+			}
+	}
+	
+	s:STATE_THIRSTRIDGE = {
+		region_state:RUX = {
+			create_pop = {
+				culture = tqalt
+				size = 1036518
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = waste_walker
+				size = 54607
+			}
+		}
+	}
+}

@@ -1,0 +1,347 @@
+﻿je_queenslayer = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+
+	complete = {
+
+		any_scope_state = {
+			state_region = s:STATE_ARGI
+		
+			any_scope_building = {
+				OR = {
+					is_building_type = building_mutagen_vats
+				}
+				level >= 1
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = wingbreaker.1 popup = yes }
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			3 = 0
+			6 = wingbreaker.5
+		}
+
+	}
+
+	
+
+	weight = 1000
+	should_be_pinned_by_default = yes
+}
+
+je_survival_of_the_fattest = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_quests
+
+	scripted_button = arrola_skeleton_harvest_button
+	scripted_button = khiarhi_squid_fight_button
+	scripted_button = olabegi_tba_monsterfight
+	scripted_button = khanba_centipede_button
+
+	immediate = {
+
+			s:STATE_OLABEGI = {
+				save_scope_as = olabegi_state
+			}
+  	random_country = {
+    	limit = {
+         any_scope_state = {
+           state_region = s:STATE_KHIARHI
+         }
+     }
+	 random_state = {
+		limit = {
+			state_region = s:STATE_KHIARHI
+		}
+		save_scope_as = khiarhi_state
+	 }
+     save_scope_as = khiarhi_owner_scope
+ 	 }
+    set_variable = {
+      name = khiarhi_owner_var
+      value = scope:khiarhi_owner_scope
+    }
+
+	random_country = {
+    	limit = {
+         any_scope_state = {
+           state_region = s:STATE_KHANBA
+         }
+     }
+	random_state = {
+		limit = {
+			state_region = s:STATE_KHANBA
+		}
+		save_scope_as = khanba_state
+	 }
+     save_scope_as = khanba_owner_scope
+ 	 }
+    set_variable = {
+      name = khanba_owner_var
+      value = scope:khanba_owner_scope
+    }
+
+	random_country = {
+    	limit = {
+         any_scope_state = {
+           state_region = s:STATE_ARROLA
+         }
+     }
+	random_state = {
+		limit = {
+			state_region = s:STATE_ARROLA
+		}
+		save_scope_as = arrola_state
+	 }
+     save_scope_as = arrola_owner_scope
+ 	 }
+    set_variable = {
+      name = arrola_owner_var
+      value = scope:arrola_owner_scope
+    }
+
+	random_country = {
+    	limit = {
+         any_scope_state = {
+           state_region = s:STATE_OLABEGI
+         }
+     }
+	random_state = {
+		limit = {
+			state_region = s:STATE_OLABEGI
+		}
+		save_scope_as = olabegi_state
+	 }
+     save_scope_as = olabegi_owner_scope
+ 	 }
+    set_variable = {
+      name = olabegi_owner_var
+      value = scope:olabegi_owner_scope
+    }
+
+	}
+
+	complete = {
+		AND = {
+			custom_tooltip = {
+				text = harvested_arrola_skeleton_tt
+				has_variable = harvested_arrola_skeleton
+			}
+			custom_tooltip = {
+				text = fought_the_squid_tt
+				has_variable = fought_the_squid
+			}
+
+			custom_tooltip = {
+				text = olabegi_monsterfight_tt
+				has_variable = olabegi_tba_monsterfight
+			}
+
+			custom_tooltip = {
+				text = khanba_centipede_tt
+				has_variable = fought_khanba_centipede
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = wingbreaker.6 popup = yes }
+	}
+
+	
+	on_weekly_pulse = { #this could probably be a monthly pulse instead
+		effect = {
+  			random_country = {
+    			limit = {
+         			any_scope_state = {
+           				state_region = s:STATE_KHIARHI
+         			}
+     			}
+     save_scope_as = khiarhi_owner_scope
+  }
+    set_variable = {
+      name = khiarhi_owner_var
+      value = scope:khiarhi_owner_scope
+    }
+
+	random_country = {
+    	limit = {
+         any_scope_state = {
+           state_region = s:STATE_KHANBA
+         }
+     }
+     save_scope_as = khanba_owner_scope
+ 	 }
+    set_variable = {
+      name = khanba_owner_var
+      value = scope:khanba_owner_scope
+    }
+
+	random_country = {
+    	limit = {
+         any_scope_state = {
+           state_region = s:STATE_ARROLA
+         }
+     }
+     save_scope_as = arrola_owner_scope
+ 	 }
+    set_variable = {
+      name = arrola_owner_var
+      value = scope:arrola_owner_scope
+    }
+
+	random_country = {
+    	limit = {
+         any_scope_state = {
+           state_region = s:STATE_OLABEGI
+         }
+     }
+     save_scope_as = olabegi_owner_scope
+ 	 }
+    set_variable = {
+      name = olabegi_owner_var
+      value = scope:olabegi_owner_scope
+    }
+		}
+
+	}
+	on_yearly_pulse = {
+
+	}
+
+	
+
+	weight = 1000
+	should_be_pinned_by_default = yes
+}
+
+je_wingbreaker = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_historical_content
+	
+	immediate = {
+
+	}
+
+	scripted_progress_bar = griffon_killer_progress_bar
+	
+	modifiers_while_active = {
+		independent_griffon_hunters
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			3 = 0
+			1 = wingbreaker.4
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = griffon_killer_full_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(griffon_killer_progress_bar)" >= 4000
+			}
+		}
+	}	
+
+	on_complete = {
+		trigger_event = { id = wingbreaker.2 popup = yes }
+
+	}
+
+	weight = 1000
+
+	should_be_pinned_by_default = yes
+}
+
+je_wingsplicer = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_historical_content
+	
+	immediate = {
+		market_capital.market = {
+			mg:potions = {
+				save_scope_as = potions_scope
+			}
+		}
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			3 = 0
+			1 = wingbreaker.4
+		}
+	}
+
+	current_value = {
+		value = scope:potions_scope.market_goods_production
+	}
+
+	goal_add_value = {
+		value = {
+			add = scope:potions_scope.market_goods_production
+			multiply = 2
+			min = 1000
+			subtract = scope:potions_scope.market_goods_production
+		}
+	}
+
+
+	complete = {
+		any_scope_state = {
+				state_has_building_type_levels = {
+					target = bt:building_university value >= 1
+				}
+			} 
+		#OR = {
+		#	AND = {
+		#	capital.market = {
+		#		owner = root
+		#		AND = {
+		#			mg:potions = {
+		#				market_goods_buy_orders > 850
+		#			}	
+		#			mg:potions = {
+		#				market_goods_sell_orders > 1000
+		#			}
+		#		}
+		#	}
+		#	has_company = company_type:company_olarbide
+		#	}
+		#	capital.market = {
+		#		owner = root
+		#		AND = {
+		#			mg:potions = {
+		#				market_goods_buy_orders > 1250
+		#			}	
+		#			mg:potions = {
+		#				market_goods_sell_orders > 1400
+		#			}
+		#		}
+		#	}
+		#}
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}	
+
+	on_complete = {
+		trigger_event = { id = wingbreaker.3 popup = yes }
+	}
+
+	weight = 1000
+
+	progressbar = yes
+
+	should_be_pinned_by_default = yes
+}

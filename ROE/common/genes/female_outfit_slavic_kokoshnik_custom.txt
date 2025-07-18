@@ -1,0 +1,43 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_dark_elf_colors = {
+			inheritable = no
+			
+			slavic_outfits = {
+				index = 1
+				male = {
+						1 = male_civilian_coat_arabic_white_01
+				}
+				
+				female = {
+						1 = female_outfit_slavic_kokoshnik_custom1
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}
+
+special_genes = {
+	accessory_genes = {
+
+		MOD_dark_elf_colors2 = {
+			inheritable = no
+			
+			slavic_outfits = {
+				index = 1
+				male = {
+						1 = male_civilian_coat_arabic_white_01
+				}
+				
+				female = {
+						1 = female_outfit_slavic_kokoshnik_custom2
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

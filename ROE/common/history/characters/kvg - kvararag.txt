@@ -1,0 +1,42 @@
+﻿CHARACTERS = {
+	c:KVG ?= {
+		create_character = {
+			first_name = "Afanasiy"
+			last_name = "Khan"
+			historical = yes
+			ruler = yes
+			age = 70
+			interest_group = ig_landowners
+			ideology = ideology_royalist
+			traits = {
+				cautious
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = "Sainkho"
+			last_name = "Khan"
+			historical = yes
+			heir = yes
+			female = yes
+			age = 5
+			interest_group = ig_landowners
+			ideology = ideology_market_liberal
+			traits = {
+				trait_child
+			}
+		}
+
+		create_character = {
+			historical = yes
+			age = 58
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_royalist
+			traits = {
+				cautious
+				experienced_political_operator
+			}
+		}
+	}
+}

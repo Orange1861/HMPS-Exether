@@ -1,0 +1,95 @@
+﻿
+
+renown = {
+	add = renown_generation
+	add = renown_upkeep
+	add = renown_usage
+}
+
+renown_reputation = {
+	add = renown 
+	round_to = 1000
+	divide = 1000
+}
+
+renown_prestige = {
+	add = renown_reputation
+	multiply = 10
+}
+
+
+renown_modulo = {
+	add = renown_generation
+	add = renown_upkeep
+	add = renown_usage
+	modulo = 1000
+}
+
+renown_level_max = {
+	add = renown_generation
+	add = renown_upkeep
+	add = renown_usage
+	add = 1000
+	divide = 1000
+	round_to = 1
+	multiply = 1000
+}
+
+renown_multiplier = {
+	value = 1
+	add = modifier:country_renown_gen_mult
+	add = modifier:country_renown_cost_mult
+}
+
+renown_generation = {
+	value = modifier:country_renown_pos_add
+	multiply = {
+		value = 1
+		add = modifier:country_renown_gen_mult
+	}
+}
+
+renown_usage = {
+	value = modifier:country_renown_neg_add
+	multiply = {
+		value = 1
+		add = modifier:country_renown_cost_mult
+	}
+}
+
+renown_upkeep = {
+	value = modifier:country_renown_upkeep
+	multiply = {
+		value = 1
+		add = modifier:country_renown_cost_mult
+	}
+}
+
+total_renown_usage = {
+	value = renown_upkeep
+	add = renown_usage 
+}
+
+normalized_renown_surplus = {
+	value = renown
+
+	divide = 600
+	min = -1
+	max = 1
+  }
+
+  normalized_renown_deficit = {
+	value = renown
+
+	divide = 600
+	min = -1
+	max = 0
+  }
+
+  normalized_renown = {
+	value = renown
+
+	divide = 600
+	min = -1
+	max = 1
+  }

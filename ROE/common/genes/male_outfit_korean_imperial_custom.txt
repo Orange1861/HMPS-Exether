@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_outfits9 = {
+			inheritable = no
+			
+			korean_imperial_coat = {
+				index = 1
+				male = {
+						1 = male_outfit_korean_imperial_custom
+				}
+				
+				female = {
+
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

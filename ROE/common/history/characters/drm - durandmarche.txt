@@ -1,0 +1,21 @@
+﻿CHARACTERS = {
+	c:DRM ?= {
+		create_character = {
+			first_name = "Boste"
+	        last_name = "Dorgeni"
+			historical = yes
+			ruler = yes
+			ig_leader = yes
+			age = 51
+			culture = primary_culture
+			interest_group = ig_industrialists
+			religion = rel:church_of_man
+			ideology = ideology_artificer_baron
+		    traits = {
+			 engineer 
+			 literary
+		}
+	  }
+    }
+  }
+

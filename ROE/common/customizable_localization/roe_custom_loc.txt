@@ -1,0 +1,253 @@
+﻿
+	magic_reserves_loc = {
+		type = country
+
+		text = {
+			trigger = {
+				normalized_magic_surplus >= 1
+			}
+			localization_key = MAGIC_EXCESS_EFFECT_HEADER 
+		}
+		text = {
+			trigger = {
+				normalized_magic_deficit < 0
+			}
+			localization_key = MAGIC_DEFICIT_EFFECT_HEADER 
+		}
+	}
+
+	magic_institution_bonus_loc = {
+		type = country
+
+		text = {
+			trigger = {
+				magic_institution_level > 0
+				NOT = {
+					has_law = law_type:law_mage_hunters
+				}
+			}
+			localization_key = MAGIC_INSTITUTION_RESERVE_BONUS
+		}
+	}
+
+	adventurer_coverage_bonus_loc = {
+		type = state
+
+		text = {
+			trigger = {
+				modifier:state_adventurer_coverage_add > 0
+			}
+			localization_key = ADVENTURER_COVERAGE_BUILDING_BONUS
+		}
+	}
+
+	adventurer_coverage_demand_bonus_loc = {
+		type = state
+
+		text = {
+			trigger = {
+				this.pollution_generation > 0
+			}
+			localization_key = ADVENTURER_COVERAGE_POLLUTION
+		}
+	}
+
+	adventurer_coverage_demand_urban_bonus_loc = {
+		type = state
+
+		text = {
+			trigger = {
+				any_scope_building = {
+					is_building_type = building_urban_center
+					level > 0
+				}
+			}
+			localization_key = ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS
+		}
+	}
+
+	ritual_name_loc = {
+		type = country
+
+		text = {
+			localization_key = RITUAL_1
+		}
+	}
+
+	has_journals_loc = {
+		type = country
+
+		text = {
+			trigger = {
+				has_variable = has_custom_journals_var
+			}
+			localization_key = ICON_CHECK
+		}
+		text = {
+			localization_key = ICON_CROSS
+		}
+	}
+
+	has_major_formable_loc = {
+		type = country
+
+		text = {
+			trigger = {
+				has_variable = has_major_formable_var
+			}
+			localization_key = ICON_CHECK
+		}
+		text = {
+			localization_key = ICON_CROSS
+		}
+	}
+
+	country_racial_tech = {
+		type = country
+
+		text = {
+			trigger = {
+				has_technology_researched = human_tech
+			}
+			localization_key = HUMAN_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = elf_tech
+			}
+			localization_key = ELF_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = halfling_tech
+			}
+			localization_key = HALFLING_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = giant_tech
+			}
+			localization_key = GIANT_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = lizard_tech
+			}
+			localization_key = LIZARD_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = ogre_tech
+			}
+			localization_key = OGRE_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = planetouched_tech
+			}
+			localization_key = PLANETOUCHED_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = dwarf_tech
+			}
+			localization_key = DWARF_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = midnight_tech
+			}
+			localization_key = MIDNIGHT_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = orc_tech
+			}
+			localization_key = ORC_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = dragon_tech
+			}
+			localization_key = DRAGON_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = goblin_tech
+			}
+			localization_key = GOBLIN_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = awakened_tech
+			}
+			localization_key = AWAKENED_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = half_elf_tech
+			}
+			localization_key = HALF_ELF_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = hiadud_tech
+			}
+			localization_key = HIADUD_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = gnome_tech
+			}
+			localization_key = GNOME_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = mouse_tech
+			}
+			localization_key = MOUSE_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = bird_tech
+			}
+			localization_key = BIRD_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = monster_tech
+			}
+			localization_key = MONSTER_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = naga_tech
+			}
+			localization_key = NAGA_TECH
+		}
+		text = {
+			trigger = {
+				has_technology_researched = mechanical_tech
+			}
+			localization_key = MECHANICAL_TECH
+		}
+
+		text = {
+			localization_key = NO_TECH
+		}
+	}
+
+
+	has_flavored_interest_groups_loc = {
+		type = country
+
+		text = {
+			trigger = {
+				has_variable = has_flavored_interest_groups_var
+			}
+			localization_key = ICON_CHECK
+		}
+		text = {
+			localization_key = ICON_CROSS
+		}
+	}

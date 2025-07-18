@@ -1,0 +1,1152 @@
+﻿MILITARY_FORMATIONS = {
+	#Worlds end and Ravencliff armys and armadas	
+	#c:JUR ?= {
+	#	create_military_formation = {
+	#		type = army
+	#		hq_region = sr:region_worlds_end
+	#		name = Jurians_Brightest
+#
+	#		combat_unit = {
+	#			type = unit_type:combat_unit_type_line_infantry
+	#			state_region = s:STATE_MAESBELAN
+	#			count = 10
+	#		}
+#
+	#		combat_unit = {
+	#			type = unit_type:combat_unit_type_cannon_artillery
+	#			state_region = s:STATE_MAESBELAN
+	#			count = 2
+	#		}
+	#		save_scope_as = jurians_brightest_army
+	#	}
+#
+	#	create_character = {
+	#		template = JUR_alfred_morgan
+	#		save_scope_as = morgan_gen
+	#	}
+#
+	#	scope:morgan_gen = {
+	#		transfer_to_formation = scope:jurians_brightest_army
+	#	}
+#
+	#	create_military_formation = {
+	#		type = fleet
+	#		hq_region = sr:region_worlds_end
+	#		name = incinerator_armada
+	#	
+	#		combat_unit = {
+	#			type = unit_type:combat_unit_type_man_o_war
+	#			state_region = s:STATE_MAESBELAN
+	#			count = 1
+	#		}
+#
+	#		combat_unit = {
+	#			type = unit_type:combat_unit_type_frigate
+	#			state_region = s:STATE_MAESBELAN
+	#			count = 3
+	#		}
+	#		save_scope_as = incinerator_armada_fleet
+	#	}
+    #
+	#	create_character = {
+	#		template = JUR_samuel_grimm
+	#		save_scope_as = grimm_adm
+	#	}
+	#	scope:grimm_adm = {
+	#		transfer_to_formation = scope:incinerator_armada_fleet
+	#	}
+	#}
+	c:DOV ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_noricum
+
+			name = "Dovedale Citizen Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BALLYNE
+				service_type = conscript
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_THORNWALL
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BALLYNE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_THORNWALL
+				service_type = conscript
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_GLASINBLAIR
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_GLASINBLAIR
+				service_type = conscript
+				count = 15
+			}
+			save_scope_as = Dovedalian_National_Guard
+		}
+         
+
+		create_character = {
+			#template = DOV_alf_cobcroft
+			is_general = yes
+			commander_rank = commander_rank_4
+			save_scope_as = cobcroft_gen
+		}
+
+		scope:cobcroft_gen = {
+			transfer_to_formation = scope:Dovedalian_National_Guard
+		}
+
+	#	create_military_formation = {
+	#		type = fleet
+	#		hq_region = sr:region_central_noricum
+	#		name = dovedalian_armada
+	#
+	#		save_scope_as = dovedalian_fleet
+	#	}
+		#create_character = {
+			#template = DOV_stafford_clarke
+		#	is_admiral = yes
+		#	commander_rank = commander_rank_2
+		#	save_scope_as = clarke_adm
+#		}
+		#scope:clarke_adm = {
+			#transfer_to_formation = scope:dovedalian_fleet
+		#}
+	}
+	c:RVC ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_worlds_end
+
+			name = "Legions of Dreadmoor"
+
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mages_one
+				state_region = s:STATE_RAVENCLIFF
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BLACKDON
+				count = 45
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_RAVENCLIFF
+				count = 15
+			}
+		     save_scope_as = rvcarmy
+		}
+
+		create_character = {
+			is_general = yes
+			culture = cu:vampire
+			hq = sr:region_worlds_end
+			commander_rank = commander_rank_2
+			save_scope_as = rvcgen
+		}
+		scope:rvcgen = {
+			transfer_to_formation = scope:rvcarmy
+		}
+
+		create_character = {
+			is_general = yes
+			culture = cu:vampire
+			hq = sr:region_worlds_end
+			commander_rank = commander_rank_1
+			save_scope_as = rvcge2
+		}
+
+	}
+	c:AUM ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_noricum
+			name = "The Order"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TEMPLE_HILL
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_FALNALECK
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MAESBELAN
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_TEMPLE_HILL
+				count = 20
+			}
+		save_scope_as = AUM_Army
+		}
+		create_character = {
+			is_general = yes
+			culture = cu:sunkissed
+			hq = sr:region_central_noricum
+			commander_rank = commander_rank_3
+			save_scope_as = AUMgen1
+		}
+		scope:AUMgen1 = {
+			transfer_to_formation = scope:AUM_Army
+		}
+	}
+		c:HAG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_worlds_end
+			name = "Witch Cabals"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mages_one
+				state_region = s:STATE_MAESBELAN
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BANCFAN
+				count = 25
+			}
+
+		save_scope_as = HAG_Army
+		}
+		create_character = {
+			is_general = yes
+			female = yes 
+			hq = sr:region_worlds_end
+			commander_rank = commander_rank_2
+			save_scope_as = HAGgen1
+		}
+		scope:HAGgen1 = {
+			transfer_to_formation = scope:HAG_Army
+		}
+	}
+	c:ABR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dumonian_heartlands
+			name = "Provincial Militias"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MIDCLACK
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MIDCLACK
+				count = 5
+			}
+
+
+			save_scope_as = dumarmy1
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_dumonian_heartlands
+			commander_rank = commander_rank_2
+			save_scope_as = dumgen1
+		}
+		scope:dumgen1 = {
+			transfer_to_formation = scope:dumarmy1
+		}
+	}
+	c:DUM ?= {
+			create_military_formation = {
+			type = army
+			hq_region = sr:region_dumonian_heartlands
+			name = "Dumonian Heartland Levies"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SERONTAIN
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_SERONTAIN
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LOCHTYRE
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_SERONTAIN
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mages_one
+				state_region = s:STATE_LOCHTYRE
+				count = 10
+			}
+			save_scope_as = dumarmy3
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_dumonian_heartlands
+			save_scope_as = dumgen5
+		}
+		scope:dumgen5 = {
+			transfer_to_formation = scope:dumarmy3
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_noricum
+			name = "Eastern Garrisons"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MELENLECK
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_SERONTAIN
+				count = 10
+			}
+			save_scope_as = dumarmy4
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_central_noricum
+			save_scope_as = dumgen4
+		}
+		scope:dumgen4 = {
+			transfer_to_formation = scope:dumarmy4
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_dumonian_heartlands
+
+			name = "Askalon Seas Fleet"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_CALDAMUS
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CALDAMUS
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_NORLEA
+				count = 10
+			}
+
+			save_scope_as = dumnavy
+		}
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_2
+				save_scope_as = dumadmiral
+			}
+			
+			scope:dumadmiral = {
+				transfer_to_formation = scope:dumnavy
+			}
+
+			create_military_formation = {
+				type = fleet
+				hq_region = sr:region_gulfwatch
+	
+				name = "South Seas Fleet"
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_man_o_war
+					state_region = s:STATE_MELENLECK
+					count = 5
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_MELENLECK
+					count = 10
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_MALINMORE
+					count = 10
+				}
+	
+				save_scope_as = dumnavy2
+			}
+				create_character = {
+					is_admiral = yes
+					commander_rank = commander_rank_2
+					save_scope_as = dumadmiral2
+				}
+				
+				scope:dumadmiral2 = {
+					transfer_to_formation = scope:dumnavy2
+				}
+	}
+
+		c:RAL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_southwestern_noricum
+			name = "Ralaurian Regular Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_LAST_HEARTH
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_BANEKERT
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_ADRIANSEN
+				count = 10
+			}
+			save_scope_as = dumarmy2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_southwestern_noricum
+			save_scope_as = dumgen2
+		}
+		scope:dumgen2 = {
+			transfer_to_formation = scope:dumarmy2
+		}
+
+				create_military_formation = {
+			type = fleet
+			hq_region = sr:region_southwestern_noricum
+
+			name = "Westerburgh Dockyard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_LAST_HEARTH
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_LAST_HEARTH
+				count = 13
+			}
+
+
+			save_scope_as = dumnavy0
+		}
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_2
+				save_scope_as = dumadmiral0
+			}
+			
+			scope:dumadmiral0 = {
+				transfer_to_formation = scope:dumnavy0
+			}
+
+
+	}
+
+			c:UPP ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_gulfwatch
+			name = "Highland Watch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HIGHPASS
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NORTH_HIGHLANDS
+				count = 15
+			}
+			save_scope_as = upparmy2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_gulfwatch
+			save_scope_as = uppgen2
+		}
+		scope:uppgen2 = {
+			transfer_to_formation = scope:upparmy2
+		}
+
+	}
+
+				c:GED ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_gulfwatch
+			name = "Coastguard of Gulfwatch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MERCHANT_BAY
+				count = 20
+			}
+			save_scope_as = gedarmy2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_gulfwatch
+			save_scope_as = gedgen2
+		}
+		scope:gedgen2 = {
+			transfer_to_formation = scope:gedarmy2
+		}
+
+					create_military_formation = {
+				type = fleet
+				hq_region = sr:region_gulfwatch
+	
+				name = "Gulfwatch Coastwatch"
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_man_o_war
+					state_region = s:STATE_MERCHANT_BAY
+					count = 3
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_MERCHANT_BAY
+					count = 10
+				}
+	
+				save_scope_as = dumnavy3
+			}
+				create_character = {
+					is_admiral = yes
+					commander_rank = commander_rank_2
+					save_scope_as = dumadmiral3
+				}
+				
+				scope:dumadmiral3 = {
+					transfer_to_formation = scope:dumnavy3
+				}
+
+	}
+
+			c:DEW ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_southwestern_noricum
+			name = "Sludge Wardens"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SLUDGE_COAST
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mages_one
+				state_region = s:STATE_TAR_PITS
+				count = 15
+			}
+			save_scope_as = dumarmy3
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_southwestern_noricum
+			save_scope_as = dumgen3
+		}
+
+		scope:dumgen3 = {
+			transfer_to_formation = scope:dumarmy3
+		}
+
+	}
+			
+	c:ROF ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_worlds_end
+			name = "Bancfan Border Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BANCFAN
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_BANCFAN
+				count = 7
+			}
+
+			save_scope_as = rofarmy
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_worlds_end
+			commander_rank = commander_rank_2
+			save_scope_as = rofgen
+		}
+		scope:rofgen = {
+			transfer_to_formation = scope:rofarmy
+		}
+
+	}
+	c:FOX ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_worlds_end
+
+			name = "Stagworth National Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GLYNFFORDD
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GWYNWEN
+				service_type = conscript
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_GWYNWEN
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_GWYNWEN
+				service_type = conscript
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GLYNFFORDD
+				service_type = conscript
+				count = 15
+			}
+			save_scope_as = foxarmy
+
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_worlds_end
+			commander_rank = commander_rank_2
+			save_scope_as = foxgen
+		}
+		scope:foxgen= {
+			transfer_to_formation = scope:foxarmy
+		}
+	}
+	#Yanger steppe armys and armadas	
+	c:EVR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TALNANT
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TALNANT
+				count = 2
+			}
+		}
+
+	}			
+	c:MBR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GLASLIESH
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TYMANS_FOLLY
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TYMANS_FOLLY
+				count = 1
+			}
+				save_scope_as = mbr_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_yanger_steppe
+			commander_rank = commander_rank_1
+			save_scope_as = mbrgen1
+		}
+		scope:mbrgen1 = {
+			transfer_to_formation = scope:mbr_army1
+		}
+
+	}
+	c:BIE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			name = "Brackenshire National Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KENLYNE
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KENLYNE
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_KENLYNE
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_KENLYNE
+				count = 7
+			}
+			save_scope_as = biearmy
+
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_yanger_steppe
+			commander_rank = commander_rank_2
+			save_scope_as = biegen
+		}
+		scope:biegen= {
+			transfer_to_formation = scope:biearmy
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_yanger_steppe
+
+			name = "Coastal Armada"
+		
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KENLYNE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KENLYNE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_KENLYNE
+				count = 1
+			}
+			save_scope_as = bienavy
+
+		}
+		create_character = {
+			is_admiral = yes
+			hq = sr:region_yanger_steppe
+			commander_rank = commander_rank_2
+			save_scope_as = bieadmiral
+		}
+		scope:bieadmiral= {
+			transfer_to_formation = scope:bienavy
+		}
+	}
+	c:DRK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			name = "Drysgolmarkian Citizen Milita"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				service_type = conscript
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				service_type = conscript
+				count = 4
+			}
+		}
+
+	}	
+	#Coldreach armys and armadas	
+		# I think Srioman doesn't have army or armada, many territory, and only some pops
+	c:ICE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SNOWBREACH
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_FALMAKELD
+				count = 2
+			}
+			
+		save_scope_as = ice_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_east_everfrost
+			commander_rank = commander_rank_1
+			save_scope_as = icegen1
+		}
+		scope:icegen1 = {
+			transfer_to_formation = scope:ice_army1
+		}
+
+	}
+	c:CAO ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DRUMAGAR
+				count = 5
+			}
+		}
+
+	}
+	c:LEL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SOLVIK
+				count = 2
+			}
+		}
+
+	}
+
+	c:SRO ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NORDFJALL
+				count = 2
+			}
+		}
+
+	}
+	c:RIS ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DRUMAGAR
+				count = 10
+			}
+		}
+	}
+	#East Everfrost armys and armadas	
+	c:SRN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_EOGHANS_SPEAR
+				count = 4
+			}
+
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_east_everfrost
+		
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_EOGHANS_SPEAR
+				count = 3
+			}
+		}
+
+	}
+	c:CVE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GLENKELD
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DUNMAFAR
+				count = 5
+			}
+
+		}
+
+	}
+	c:BRR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HAFODFAN
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TANISTS_RETREAT
+				count = 5
+			}
+		}
+
+	}
+	c:OEX ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ELDBERG
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ELDBERG
+				count = 10
+			}
+		}
+
+	}
+	c:BFU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BALATHOUL
+				count = 5
+			}
+
+		}
+
+	}	
+	c:YAN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+			name = "Yanger Nomadic Host"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_URIKS_GIFT
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_URIKS_GIFT
+				count = 12
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_EAST_YANGER_STEPPE
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_RIDERS_MOOT
+				count = 15
+			}
+			save_scope_as = yanarmy
+
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_yanger_steppe
+			commander_rank = commander_rank_2
+			save_scope_as = yangen
+		}
+		scope:yangen= {
+			transfer_to_formation = scope:yanarmy
+		}
+	}	
+
+	c:BCT ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+			name = "Covenant Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LIGHTSCOURGE
+				count = 35
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_LIGHTSCOURGE
+				count = 26
+			}
+			save_scope_as = bctarmy
+
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_east_everfrost
+			interest_group = ig_armed_forces
+			age = 32
+			traits = {
+				surveyor
+				mountain_commander
+				expert_defensive_strategist
+			}
+			commander_rank = commander_rank_2
+			save_scope_as = bctgen
+		}
+		scope:bctgen= {
+			transfer_to_formation = scope:bctarmy
+		}
+	}
+	
+	c:ZKW ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_whisperpine
+			name = "Home Army"
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZARKI
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CZERWIONKA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mages_one
+				state_region = s:STATE_WHISPERPINE_WOODS
+				count = 5
+			}
+			save_scope_as = zkwarmy
+		}
+		create_character = {
+			first_name = "Knir"
+			last_name = "Luvdi"
+			historical = yes
+			is_general = yes
+			ig_leader = yes
+			hq = sr:region_whisperpine
+			interest_group = ig_armed_forces
+			ideology = ideology_magillismo
+			age = 27
+			traits = {
+				erudite
+				forest_commander
+				explorer
+			}
+			commander_rank = commander_rank_1
+			save_scope_as = zkwgen
+		}
+		scope:zkwgen= {
+			transfer_to_formation = scope:zkwarmy
+		}
+	}
+}

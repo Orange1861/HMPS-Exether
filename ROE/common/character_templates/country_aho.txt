@@ -1,0 +1,115 @@
+﻿# AHO - Achon
+
+AHO_achon_leader_template = {
+			first_name = Pozhantr
+   			last_name = Shtoskovuj
+    		historical = yes
+			ruler = yes
+    		age = 69
+    		dna = dna_achon_ruler
+    		culture = cu:achonian
+			religion = rel:erigian
+			interest_group = ig_mages
+   			ideology = ideology_magocrat
+    			traits = {
+				innovative
+				reserved
+				cautious
+				
+				erudite
+    }	
+		on_created = {
+				set_variable = {
+					name = old_man_pozhantr
+		}                
+	}
+}
+
+AHO_achon_heir_template = {
+			first_name = Zvojtir
+   			last_name = Irmishkholm
+    		historical = yes
+			ig_leader = yes
+    		age = 25
+    		dna = dna_achon_heir
+    		culture = cu:achonian
+			religion = rel:erigian
+			interest_group = ig_mages
+   			ideology = ideology_ethno_nationalist
+    			traits = {
+				charismatic
+				ruthless
+				imposing
+				inexperienced
+    }
+}
+
+AHO_achon_heir_agitator_template = {
+			first_name = Zvojtir
+   			last_name = Irmishkholm
+    		historical = yes
+			is_agitator = yes
+    		age = 25
+    		dna = dna_achon_heir
+    		culture = cu:achonian
+			religion = rel:erigian
+			interest_group = ig_mages
+   			ideology = ideology_ethno_nationalist
+    			traits = {
+				charismatic
+				ruthless
+				imposing
+				inexperienced
+    }
+}
+
+AHO_achon_interim_template = {
+			first_name = Knistr
+   			last_name = Mgnitstavo
+    		historical = yes
+			ig_leader = yes
+    		age = 55
+    		culture = cu:achonian
+			religion = rel:erigian
+			interest_group = ig_mages
+   			ideology = ideology_magocrat
+    			traits = {
+				cautious
+				compliant
+				reserved
+				political_appointee
+		}
+			on_created = {
+						set_as_interest_group_leader = yes
+						set_character_as_ruler = yes
+	}
+}
+
+
+AHO_devout_IG_template = {
+			first_name = "Drago"
+			last_name = "Kacijanar"
+			ig_leader = yes
+			historical = yes
+			age = 53
+			interest_group = ig_devout
+			ideology = ideology_magocrat
+			traits = {
+				romantic
+				erudite
+    }
+}
+
+AHO_armed_forces_IG_template = {
+				first_name = Alenka
+				last_name = Rozman
+				ig_leader = yes
+				historical = yes
+				age = 29
+				interest_group = ig_armed_forces
+				ideology = ideology_magillismo
+				traits = {
+					experienced_offensive_planner
+					meticulous
+    }
+}

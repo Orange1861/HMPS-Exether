@@ -1,0 +1,132 @@
+﻿namespace = ai_expedition_simulator
+
+ai_expedition_simulator.1 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				has_variable = AI_EXPEDITION_EVERFROST
+			}
+			random_list = {
+				3 = {
+					trigger_event = { id = everfrost_expedition.10 }
+					add_modifier = {
+						name = modifier_failed_expedition
+						days = normal_modifier_time
+						is_decaying	= yes
+					}
+				}
+				2 = {
+					trigger_event = { id = everfrost_expedition.7 }
+					set_variable = everfrost_expedition_success_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = AI_EXPEDITION_DREAMWEAVER_JUNGLE
+			}
+			random_list = {
+				3 = {
+					trigger_event = { id = expedition_events.612 }
+					set_variable = failed_dreamweaver_var
+				}
+				2 = {
+					trigger_event = { id = expedition_events.611 }
+					set_variable = dreamweaver_expedition_success_var
+				}
+			}
+		}
+
+		else_if = {
+			limit = {
+				has_variable = AI_EXPEDITION_RIMEROOT
+			}
+			random_list = {
+				3 = {
+					trigger_event = { id = sunstation.4 }
+					set_variable = failed_rimeroot_var
+				}
+				2 = {
+					trigger_event = { id = sunstation.10 }
+					set_variable = rimeroot_expedition_success_var
+					set_global_variable = { name = rimeroot_core_reached }
+					set_variable = rimeroot_expedition_success_var
+					random_scope_state = {
+						limit = {
+							state_is_in_rimeroot = yes
+						}
+						state_region = {
+							start_harvest_condition = heptadrone_swarms_positive
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = AI_EXPEDITION_MINDREND
+			}
+			random_list = {
+				3 = {
+					trigger_event = { id = mindrend.103 }
+					set_variable = failed_central_africa_expedition_var
+				}
+				2 = {
+					trigger_event = { id = mindrend.104 }
+					set_variable = central_africa_expedition_success_var
+				}
+			}
+		}
+		#else_if = {
+		#	limit = {
+		#		has_variable = AI_EXPEDITION_NIGER
+		#	}
+		#	random_list = {
+		#		3 = {
+		#			trigger_event = { id = expedition_events.12 }
+		#			set_variable = failed_niger_river_var
+		#		}
+		#		2 = {
+		#			trigger_event = { id = expedition_events.11 }
+		#			set_variable = niger_river_expedition_success_var
+		#		}
+		#	}
+		#}
+		#else_if = {
+		#	limit = {
+		#		has_variable = AI_EXPEDITION_WAMERICA
+		#	}
+		#	random_list = {
+		#		2 = {
+		#			trigger_event = { id = expedition_events.205 }
+		#		}
+		#		1 = {
+		#			trigger = { NOT = { has_global_variable = buenaventura_river_disproven } }
+		#			trigger_event = { id = expedition_events.300 }
+		#			set_variable = west_america_expedition_success_var
+		#		}
+		#		1 = {
+		#			trigger = { NOT = { has_global_variable = oregon_trail_mapped } }
+		#			trigger_event = { id = expedition_events.301 }
+		#			set_variable = west_america_expedition_success_var
+		#		}
+		#		1 = {
+		#			trigger = { NOT = { has_global_variable = great_salt_lake_mapped } }
+		#			trigger_event = { id = expedition_events.302  }
+		#			set_variable = west_america_expedition_success_var
+		#		}
+		#	}
+		#}
+		trigger_event = { id = ai_expedition_simulator.2 days = 14 }
+	}
+}
+
+ai_expedition_simulator.2 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		ai_expedition_simulator_end = yes
+	}
+}

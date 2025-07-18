@@ -1,0 +1,753 @@
+﻿POPS = {
+
+	s:STATE_MALANDA = {
+		region_state:AZI = {
+			create_pop = {
+				culture = bakibi
+				size = 277033
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 794963
+			}
+		}
+	}
+
+	s:STATE_WINOLYSTU = {
+		region_state:CKA = {
+			create_pop = {
+				culture = zemvelo
+				size = 53600
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 221330
+			}
+		}
+	}
+
+	s:STATE_KUSTU_MYUNIS = {
+		region_state:CKA = {
+			create_pop = {
+				culture = zemvelo
+				size = 35263
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 171400
+			}
+		}
+		region_state:AES = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 40240
+			}
+		}
+	}
+
+	s:STATE_KIKUHO_KOHIKI = {
+		region_state:NOT = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 511840
+			}
+			create_pop = {
+				culture = bakibi
+				religion = animist
+				size = 108080
+			}
+			create_pop = {
+				pop_type = slaves
+				religion = animist
+				culture = bakibi
+				size = 17500
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 17500
+			}
+		}
+	}
+
+	s:STATE_XABELO = {
+		region_state:AZI = {
+			create_pop = {
+				culture = bakibi
+				size = 40600
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 242550
+			}
+		}
+	}
+
+	s:STATE_SQUKI_IHI = {
+		region_state:CKA = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 330820
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 11203
+			}
+		}
+		region_state:AES = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 550060
+			}
+		}
+		region_state:RAT = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 89367
+			}
+		}
+	}
+
+	s:STATE_OULOMYSSI = {
+		region_state:RAT = {
+			create_pop = {
+				culture = bakibi
+				size = 84071
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 476071
+			}
+		}
+		region_state:AES = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 539000
+			}
+		}
+	}
+
+	s:STATE_MOYHOSTUPI = {
+		region_state:NOT = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 620280
+			}
+			create_pop = {
+				pop_type = slaves
+				religion = animist
+				culture = bakibi
+				size = 71338
+			}
+		}
+
+		region_state:AES = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 55280
+			}
+		}
+
+		region_state:SEP = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 182280
+			}
+		}
+	}
+
+	s:STATE_IWO_YUPI = {
+		region_state:RAT = {
+			create_pop = {
+				culture = bakibi
+				size = 85397
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 302397
+			}
+		}
+		region_state:SEP = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 481043
+			}
+			create_pop = {
+				culture = bakibi
+				size = 140000
+			}
+		}
+	}
+
+	s:STATE_AMALUMA = {
+		region_state:AZI = {
+			create_pop = {
+				culture = zemvelo
+				size = 71400
+			}
+			create_pop = {
+				culture = bakibi
+				religion = animist
+				size = 215950
+			}
+			create_pop = {
+				culture = bakibi
+				size = 75950
+			}
+		}
+	}
+
+	s:STATE_SQIO_USQU = {
+		region_state:THI = {
+			create_pop = {
+				culture = bakibi
+				religion = rose_court
+				size = 27303
+			}
+			create_pop = {
+				culture = east_lacertian
+				religion = rose_court
+				size = 303280
+			}
+			create_pop = {
+				culture = east_lacertian
+				religion = rose_court
+				size = 61280
+			}
+		}
+		region_state:DUM={
+			create_pop = {
+				culture = dumonian
+				size = 29400
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 140000
+			}
+		}
+		region_state:DUM={
+			create_pop = {
+				culture = dumonian
+				size = 29400
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 140000
+			}
+		}
+	}
+
+	s:STATE_RARGIO = {
+		region_state:EME={
+			create_pop = {
+				culture = ocelian
+				size = 24500
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 224000
+			}
+		}
+	}
+
+	s:STATE_VIANCOTEVE = {
+		region_state:LAC = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 206083
+			}
+			create_pop = {
+				culture = bakibi
+				religion = animist
+				size = 210085
+			}
+			create_pop = {
+				culture = bakibi
+				size = 951268
+			}
+			create_pop = {
+				culture = thiralian
+				size = 65147
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				religion = rose_court
+				size = 72850
+			}
+		}
+		region_state:NOT = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 606760
+			}
+			create_pop = {
+				culture = bakibi
+				religion = animist
+				size = 209230
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 21000
+			}
+			create_pop = {
+				pop_type = slaves
+				religion = animist
+				culture = bakibi
+				size = 21000
+			}
+		}
+	}
+
+	s:STATE_WIS_POU = {
+		region_state:SEP = {
+			create_pop = {
+				pop_type = slaves
+				culture = bakibi
+				religion = animist
+				size = 21070
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 280630
+			}
+		}
+	}
+
+	s:STATE_CREUCHE = {
+		region_state:LAC = {
+			create_pop = {
+				culture = bakibi
+				religion = animist
+				size = 441086
+			}
+			create_pop = {
+				culture = bakibi
+				size = 140618
+			}
+			create_pop = {
+				culture = thiralian
+				size = 71260
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				religion = rose_court
+				size = 73485
+			}
+		}
+
+		region_state:SEP = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 63785
+			}
+		}
+	}
+
+	s:STATE_LISAZISA = {
+		region_state:COV = {
+			create_pop = { 
+				culture = dumonian
+				size = 257638
+			}
+			create_pop = { 
+				culture = ralaurian
+				size = 411204
+			}
+			create_pop = {
+				culture = bakibi
+				religion = animist
+				size = 1057927
+			}
+			create_pop = { 
+				culture = gelidrumin
+				size = 259204
+			}
+		}
+		region_state:SEP = {
+			create_pop = {
+				pop_type = slaves
+				religion = animist
+				culture = bakibi
+				size = 35000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 350840
+			}
+		}
+	}
+
+	s:STATE_MAHALATSAKA = {
+		region_state:AYE = {
+			create_pop = {
+				culture = lacertian
+				size = 1323532
+			}
+		}
+
+	}
+
+	s:STATE_FIANARIVO = {
+		region_state:DEV = {
+			create_pop = {
+				culture = jazamandroso
+				size = 638863
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 311324
+			}
+		}
+		region_state:AYE = {
+			create_pop = {
+				culture = jazamandroso
+				size = 359863
+			}
+			create_pop = {
+				culture = lacertian
+				size = 683734
+			}
+		}
+	}
+
+	s:STATE_VAROTSOA = {
+		region_state:DEV = {
+			create_pop = {
+				culture =jazamandroso
+				size = 1516095
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 561338
+			}
+		}
+	}
+
+	s:STATE_TSIMIHAVANA = {
+		region_state:LIR = {
+			create_pop = {
+				culture = lacertian
+				size = 1217897
+			}		
+			create_pop = {
+				culture = cithrel
+				size = 517897
+			}	
+		}
+	}
+
+	s:STATE_ANKAZOBE = {
+		region_state:LIR = {
+			create_pop = {
+				culture = lacertian
+				size = 511780
+			}
+			create_pop = {
+				culture = cithrel
+				size = 230191
+			}
+		}
+	}
+
+	s:STATE_SONANTH = {
+		region_state:VHA = {
+			create_pop = {
+				culture = hulutit
+				size = 592900
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 246400
+			}
+		}
+	}
+
+	s:STATE_APLUKACAL = {
+		region_state:VHA = {
+			create_pop = {
+				culture = hulutit
+				size = 458926
+			}
+		}
+	}
+
+	s:STATE_ONOPYNISQI = {
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 350000
+			}
+		}
+	}
+
+	s:STATE_LAIVINMAR = {
+		region_state:SAE = {
+			create_pop = {
+				culture = akmuociai
+				size = 446836
+			}
+			create_pop = {
+				culture = hulutit
+				size = 902146
+			}
+		}
+	}
+
+	s:STATE_AACHTINT = {
+		region_state:VHA = {
+			create_pop = {
+				culture = hulutit
+				size = 1082900
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 190400
+			}
+		}
+	}
+
+	s:STATE_UPESTARR = {
+		region_state:VHA = {
+			create_pop = {
+				culture = hulutit
+				size = 969430
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 189238
+			}
+		}
+	}
+
+	s:STATE_HIJAASCH = {
+		region_state:JUX = {
+			create_pop = {
+				culture = akmuociai
+				size = 2320783
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = dales_togrul
+				size = 108100
+			}
+			create_pop = {
+				culture = hulutit
+				size = 211322
+			}
+		}
+	}
+
+	s:STATE_PIKY_UHILY = {
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 432600
+			}
+		}
+	}
+
+	s:STATE_KRIOKLYKATAL = {
+		region_state:VHA = {
+			create_pop = {
+				culture = hulutit
+				size = 557900
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 113400
+			}
+		}
+	}
+
+	s:STATE_BANGALITVA = {
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 541450
+			}
+		}
+	}
+
+	s:STATE_SMILTYNECAT = {
+		region_state:VHO = {
+			create_pop = {
+				culture = akmuociai
+				size = 701400
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = dales_togrul
+				size = 199142
+			}
+		}
+	}
+
+	s:STATE_JEIBUO = {
+		region_state:VHO = {
+			create_pop = {
+				culture = akmuociai
+				size = 932470
+			}
+
+			create_pop = {
+				pop_type = slaves
+				culture = dales_togrul
+				size = 269100
+			}		
+		}
+	}
+
+	s:STATE_LYPIKISQI = {
+		region_state:LAG = {
+			create_pop = {
+				culture = lacertian
+				size = 581196
+			}
+		}
+	}
+
+	s:STATE_SINIKISQI = {
+		region_state:LAG = {
+			create_pop = {
+				culture = lacertian
+				size = 629279
+			}
+		}
+	}
+
+	s:STATE_MYCOLGA = {
+		region_state:LAG = {
+			create_pop = {
+				culture = lacertian
+				size = 595272
+			}
+		}
+	}
+
+	s:STATE_SAMARTHYA = {
+		region_state:OLC = {
+			create_pop = {
+				culture = east_lacertian
+				size = 760794
+			}
+			create_pop = {
+				culture = pecif
+				size = 376544
+			}
+		}
+	}
+
+	s:STATE_JIVANTA = {
+		region_state:OLC = {
+			create_pop = {
+				culture = east_lacertian
+				size = 957897
+			}
+			create_pop = {
+				culture = pecif
+				size = 552884
+			}
+		}
+	}
+	
+	s:STATE_ODADRUEL = {
+		region_state:FMJ = {
+			create_pop = {
+				culture = jungle_gnoll
+				size = 562238
+			}
+			create_pop = {
+				culture = gnoll
+				size = 255829
+			}		
+		}
+	}
+	s:STATE_BYS_LOWAE = {
+		region_state:EOO = {
+			create_pop = {
+				culture = lacertian
+				size = 686237
+			}
+			create_pop = {
+				culture = gnoll
+				size = 529347
+			}	
+		}
+	}
+	s:STATE_NOLOGO_RULL = {
+		region_state:SPH = {
+			create_pop = {
+				culture = lacertian
+				size = 654893
+			}
+		}	
+	}
+  s:STATE_NOLOGO_VELPH = {
+	region_state:SPH = {
+		create_pop = {
+			culture = lacertian
+			size = 586250
+		}		
+		}
+	}
+	s:STATE_LHEIPH_VA = {
+		region_state:SPH = {
+			create_pop = {
+				culture = lacertian
+				size = 519068
+			}	
+		}
+	}
+	s:STATE_YNTHOLG = {
+		region_state:LIR = {
+			create_pop = {
+				culture = cithrel
+				size = 1513424
+			}
+			create_pop = {
+				culture = lacertian
+				pop_type = slaves
+				size = 498238
+			}
+		}
+	}
+	s:STATE_ARGYSTSIK = {
+		region_state:BTR = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 1296556
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				religion = church_of_man
+				size = 125449
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 184973
+			}
+		}
+	}
+
+	s:STATE_HILOKINI = {
+		region_state:BTR = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 1268920
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 226000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 191828
+			}
+		}
+	}
+}

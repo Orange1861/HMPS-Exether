@@ -1,0 +1,4 @@
+﻿l_english:
+  MILITARY_FORMATION_UNITS_UPGRADE_ALL_DESC_ARMY: "This will upgrade all units that can into:\n[MilitaryFormation.GetSelectedUnitTypeForGroup(GetCombatUnitGroup('combat_unit_group_infantry').Self).GetNameWithCulture(MilitaryFormation.GetPrimaryCultureForGroup(GetCombatUnitGroup('combat_unit_group_infantry').Self).Self)] for Infantry\n[MilitaryFormation.GetSelectedUnitTypeForGroup(GetCombatUnitGroup('combat_unit_group_artillery').Self).GetNameWithCulture(MilitaryFormation.GetPrimaryCultureForGroup(GetCombatUnitGroup('combat_unit_group_artillery').Self).Self)] for Artillery\n[MilitaryFormation.GetSelectedUnitTypeForGroup(GetCombatUnitGroup('combat_unit_group_cavalry').Self).GetNameWithCulture(MilitaryFormation.GetPrimaryCultureForGroup(GetCombatUnitGroup('combat_unit_group_cavalry').Self).Self)] for Support"
+  combat_unit_group_cavalry: "Support"
+  combat_unit_group_cavalry_desc: "Provides support to your units positions"

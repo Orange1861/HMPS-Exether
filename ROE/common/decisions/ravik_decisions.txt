@@ -1,0 +1,327 @@
+﻿rav_annex_twilgach = {
+	is_shown = {
+		exists = c:RAV
+		c:RAV = ROOT
+		NOT = { has_global_variable = rav_annexed_twil }
+		is_subject = no
+		NOT = { owns_entire_state_region = STATE_HIMMELSTIM }
+		any_country = {
+            NOT = {
+                any_scope_state = {
+                    region = sr:region_hasals_mirror
+                    NOT = { state_region = s:STATE_HIMMELSTIM }
+                }
+            }
+			NOT = { THIS = ROOT }
+			any_scope_state = {
+				state_region = s:STATE_HIMMELSTIM
+				is_capital = no
+			}
+			is_player = no
+		}
+	}
+
+	possible = {
+        any_neighbouring_state = { state_region = s:STATE_HIMMELSTIM }
+		has_technology_researched = nationalism
+		any_country = {
+			custom_tooltip = {
+				text = at_peace_nocontext_tt
+				is_at_war = no
+			}
+            NOT = {
+                any_scope_state = {
+                    AND = {
+                        region = sr:region_hasals_mirror
+                        NOT = { state_region = s:STATE_HIMMELSTIM }
+                    }
+
+                }
+            }
+			any_scope_state = {
+				state_region = s:STATE_HIMMELSTIM
+				is_capital = no
+			}
+			custom_tooltip = {
+				text = relations_amicable_nocontext_tt
+				relations:root >= relations_threshold:amicable
+			}
+			is_revolutionary = no
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+			trigger_if = {
+				limit = {
+					is_subject = no
+				}
+				owes_obligation_to = ROOT
+			}
+		}
+	}
+
+	when_taken = {
+        random_country = {
+            limit = {
+                NOT = {
+                    any_scope_state = {
+                        region = sr:region_hasals_mirror
+                        NOT = { state_region = s:STATE_HIMMELSTIM }
+                    }
+                }
+                NOT = { THIS = ROOT }
+                any_scope_state = {
+                    state_region = s:STATE_HIMMELSTIM
+                    is_capital = no
+                }
+                is_player = no
+            }
+        }
+		set_global_variable = rav_annexed_twil
+		custom_tooltip = obligation_for_savoy_tt
+		trigger_event = { id = natural_borders.3 popup = yes }
+	}
+
+	ai_chance = {
+		value = 1
+	}
+}
+
+sell_twilgach = {
+	is_shown = {
+		exists = c:RAV
+		NOT = { has_global_variable = rav_annexed_twil }
+		any_scope_state = {
+			state_region = s:STATE_HIMMELSTIM
+			is_capital = no
+		}
+        NOT = {
+            any_scope_state = {
+                region = sr:region_hasals_mirror
+                NOT = { state_region = s:STATE_HIMMELSTIM }
+            }
+        }
+        OR = {
+            top_overlord ?= { c:RAV ?= this }
+            is_subject = no
+        }
+
+	}
+
+	possible = {
+        OR = { 
+            has_technology_researched = nationalism
+            c:RAV = { has_journal_entry = je_ravik_natural_borders }
+        }
+		
+		c:RAV = {
+			is_at_war = no
+            OR = {
+                owns_entire_state_region = STATE_EKENKUST
+                owns_entire_state_region = STATE_FARREACH
+                owns_entire_state_region = STATE_HAVENSHIRE
+                any_scope_state = { state_region = s:STATE_HIMMELSTIM }
+            }
+			
+			is_subject = no
+			NOT = { owes_obligation_to = ROOT }
+			relations:root >= relations_threshold:cordial
+		}
+	}
+
+	when_taken = {
+		set_global_variable = rav_annexed_twil
+		set_global_variable = fra_savoy_sardinia
+		c:RAV = {
+			set_owes_obligation_to = {
+				country = ROOT
+				setting = yes
+			}
+		}
+		show_as_tooltip = {
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_HIMMELSTIM
+				}
+				set_state_owner = c:RAV
+			}
+		}
+		c:RAV = { trigger_event = { id = natural_borders.3 popup = yes } }
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				c:RAV= {
+				relations:root >= relations_threshold:amicable
+			}
+			OR = {
+				any_scope_treaty = {
+					binds = c:RAV
+					any_scope_article = {
+						OR = {
+							has_type = defensive_pact
+							has_type = alliance
+						}
+						
+					}
+				}
+                top_overlord ?= { c:RAV ?= this }
+			}
+			}
+
+			add = 1
+		}
+        if = {
+			limit = { 
+				top_overlord ?= { c:RAV ?= this }
+                c:RAV= {
+                    relations:root >= 45
+                }
+			}
+			add = 20
+		}
+	}
+}
+
+centralize_soulwrought_ai = {
+	is_shown = {
+		has_variable = soulwrought_production_var
+		is_ai = yes
+		hidden_trigger = {
+			NOT = { has_modifier = soulwrought_centralization }
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			NOT = { has_modifier = soulwrought_centralization }
+		}
+		hidden_trigger = {
+			is_ai = yes
+		}
+        any_scope_state = {
+			state_has_building_type_levels = {
+				target = bt:building_soulwrought_assembly_plant value >= 1
+			}
+		}		
+		
+	}
+
+	when_taken = {
+    	add_modifier = {
+			name = soulwrought_centralization
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_has_building_type_levels = {
+						target = bt:building_soulwrought_assembly_plant value >= 2
+					}
+				}	
+			}
+			random_scope_state = {
+				limit = {
+					state_has_building_type_levels = {
+						target = bt:building_soulwrought_assembly_plant value >= 2
+					}
+				}
+				add_modifier = {
+					name = soulwrought_assembly_hub_ai
+				}
+			}
+		}
+		else = {
+			capital = {
+				add_modifier = {
+					name = soulwrought_assembly_hub_ai
+				}
+			}
+		}
+	}
+		
+	
+
+	ai_chance = {
+		value = 0
+			if = {
+				limit = {
+					any_scope_state = {
+						state_has_building_type_levels = {
+							target = bt:building_soulwrought_assembly_plant value >= 2
+						}
+					}	
+				}
+				add = 10
+			}
+	}
+}
+
+centralize_soulwrought = {
+	is_shown = {
+		has_variable = soulwrought_production_var
+		is_ai = no
+		hidden_trigger = {
+			NOT = { has_modifier = soulwrought_centralization }
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			NOT = { has_modifier = soulwrought_centralization }
+		}
+		hidden_trigger = {
+			is_ai = no
+		}
+        any_scope_state = {
+			state_has_building_type_levels = {
+				target = bt:building_soulwrought_assembly_plant value >= 1
+			}
+		}
+
+	
+			custom_tooltip = {
+			text = use_special_measures_centralize_tt
+			any_scope_state = {
+				has_decree = decree_special_measures
+			}
+		}
+			
+		
+	}
+
+	when_taken = {
+    	add_modifier = {
+			name = soulwrought_centralization
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					has_decree = decree_special_measures
+				}
+			}
+			random_scope_state = {
+				limit = {
+					has_decree = decree_special_measures
+				}
+				add_modifier = {
+					name = soulwrought_assembly_hub
+				}
+			}
+		}
+		else = {
+			capital = {
+				add_modifier = {
+					name = soulwrought_assembly_hub
+				}
+			}
+		}
+	}
+		
+	
+
+	ai_chance = {
+		value = 0
+	}
+}

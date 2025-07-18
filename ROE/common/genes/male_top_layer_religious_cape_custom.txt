@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_dark_elf_cape = {
+			inheritable = no
+			
+			top_layer= {
+				index = 1
+				male = {
+						1 = male_top_layer_religious_cape_custom
+				}
+								
+				female = {
+						1 = female_top_layer_religious_cape
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

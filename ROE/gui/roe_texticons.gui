@@ -1,0 +1,1401 @@
+﻿
+texticon = {
+  icon = wishstone
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/wishstone.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = ice
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/ice.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = cloudsilver
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/cloudsilver.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = thaumacores
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/thaumacores.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = trinkets
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/trinkets.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = gizmos
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/gizmo.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = airships
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/airship.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = blubber
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/blubber.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = monster_essence
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/monster_essence.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = potions
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/potions.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = luxury_potions
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/luxury_potions.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = ectoplasm
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/ectoplasm.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = relics
+  iconsize = {
+    texture = "gfx/interface/icons/goods_icons/relics.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+texticon = {
+  icon = soulwrought_intangible
+  iconsize = {
+    texture = "gfx/interface/icons/generic_icons/population.dds"
+    size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+  }
+}
+
+#texticon = {
+#	icon = nimbium
+#	iconsize = {
+#		texture = "gfx/interface/icons/goods_icons/nimbium.dds"
+#		size = { 25 25 }
+#		offset = { 0 7 }
+#		fontsize = 18
+#	}
+#}
+
+texticon = {
+  icon = adventurers
+  iconsize = {
+    offset = { 0 50 }
+    texture = "gfx/interface/icons/pops_icons/adventurers.dds"
+    fontsize = 250
+  }
+}
+
+texticon = {
+  icon = adventurers
+  iconsize = {
+    offset = { 0 5 }
+    texture = "gfx/interface/icons/pops_icons/adventurers_15.dds"
+    fontsize = 30
+  }
+}
+
+texticon = {
+  icon = archmages
+  iconsize = {
+    offset = { 0 50 }
+    texture = "gfx/interface/icons/pops_icons/archmages.dds"
+    fontsize = 250
+  }
+}
+
+texticon = {
+  icon = archmages
+  iconsize = {
+    offset = { 0 5 }
+    texture = "gfx/interface/icons/pops_icons/archmages_15.dds"
+    fontsize = 30
+  }
+}
+
+texticon = {
+  icon = wizards
+  iconsize = {
+    offset = { 0 50 }
+    texture = "gfx/interface/icons/pops_icons/wizards.dds"
+    fontsize = 250
+  }
+}
+
+texticon = {
+  icon = wizards
+  iconsize = {
+    offset = { 0 5 }
+    texture = "gfx/interface/icons/pops_icons/wizards_15.dds"
+    fontsize = 30
+  }
+}
+
+
+texticon = {
+  icon = tribesmen
+  iconsize = {
+    offset = { 0 50 }
+    texture = "gfx/interface/icons/pops_icons/tribesmen.dds"
+    fontsize = 250
+  }
+}
+
+texticon = {
+  icon = tribesmen
+  iconsize = {
+    offset = { 0 5 }
+    texture = "gfx/interface/icons/pops_icons/tribesmen_15.dds"
+    fontsize = 30
+  }
+}
+
+texticon = {
+  icon = artificers
+  iconsize = {
+    offset = { 0 50 }
+    texture = "gfx/interface/icons/pops_icons/artificers.dds"
+    fontsize = 250
+  }
+}
+
+texticon = {
+  icon = artificers
+  iconsize = {
+    offset = { 0 5 }
+    texture = "gfx/interface/icons/pops_icons/artificers_15.dds"
+    fontsize = 30
+  }
+}
+
+texticon = {
+  icon = heroes
+  iconsize = {
+    offset = { 0 50 }
+    texture = "gfx/interface/icons/pops_icons/heroes.dds"
+    fontsize = 250
+  }
+}
+
+texticon = {
+  icon = heroes
+  iconsize = {
+    offset = { 0 5 }
+    texture = "gfx/interface/icons/pops_icons/heroes_15.dds"
+    fontsize = 30
+  }
+}
+
+texticon = {
+  icon = guild_bonded
+  iconsize = {
+    offset = { 0 50 }
+    texture = "gfx/interface/icons/pops_icons/guild_bonded.dds"
+    fontsize = 250
+  }
+}
+
+texticon = {
+  icon = guild_bonded
+  iconsize = {
+    offset = { 0 5 }
+    texture = "gfx/interface/icons/pops_icons/guild_bonded_15.dds"
+    fontsize = 30
+  }
+}
+
+texticon = {
+  icon = mages
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/ig_icons/mages_30.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = clans
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/ig_icons/clans_30.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = magic
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/magic_reserves_icon.dds"
+    fontsize = 82
+  }
+}
+
+
+texticon = {
+  icon = renown
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/renown_icon.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = veil
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/veil_icon.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = veilneg
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/veil_icon_negative.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_one
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_one.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_one
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_one.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_two
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_two.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_two
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_two.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_three
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_three.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_three
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_three.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_four
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_four.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_four
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_four.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_five
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_five.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_five
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_five.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_six
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_six.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_six
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_six.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_seven
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_seven.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_seven
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_seven.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_eight
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_eight.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_eight
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_eight.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_nine
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_nine.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_nine
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_nine.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_ten
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_ten.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_ten
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_ten.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_eleven
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_eleven.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_eleven
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_eleven.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_twelve
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_twelve.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_twelve
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_twelve.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_dragon
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_dragon.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = num_desat_dragon
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/num_desat_dragon.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = march
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/diplomatic_action_icons/march_15.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = logo
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/topbar/roe_logo.dds"
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = draconic_submachina
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/draconic_submachina.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = thieves_guild
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/thieves_guild.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = death_hounds
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/death_hounds.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = sludgestorms
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/potion_spillage.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = ghostly_harbingers
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/raven_icon.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = caelum_radiation
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/caelum_radiation.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = ghost_ships
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/ghost_ships.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = magical_hotspots
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/magical_hotspots.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = psionic_winds
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/psionic_winds.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = kiankstauk_colonies
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/kiankstauk_colonies.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = psionic_storms
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/psionic_storms.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = dinosaur_attacks
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/dinosaur_attacks.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = direwolf_packs
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/direwolf_packs.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = mammoth_migrations
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/mammoth_migrations.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = snail_stampedes
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/snail_stampedes.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = nightmare_brine_contamination
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/wild_magic_angel.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = salt_mad_elementals
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/rock_elementals.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = salt_ghouls
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/vampire_spawn.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = kisqi_raids
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/kisqi_raids.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = vampire_spawn
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/vampire_spawn.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = wishstone_showers
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/wishstone_showers.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = gas_leaks
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/gas_leaks.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = seasnake_infestations
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/seasnake_infestations.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = dark_feeders
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/dark_feeders.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = brass_peacock_sightings
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/duskmirror_swan.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = cavern_collapse
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/cavern_collapse.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = rock_elementals
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/rock_elementals.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = living_trees
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/living_trees.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = griffon_attacks
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/griffon_attacks.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = awakened_flora
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/awakened_flora.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = acid_rain
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/acid_rain.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = heptadrone_swarms_negative
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/heptadrone_negative.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = heptadrone_swarms_positive
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/heptadrone_positive.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = plague_spores
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/plague_spores.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = treacherous_whirlpools
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/treacherous_whirlpools.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = thiral_blooming
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/rose_icon.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
+  icon = acceptance_status_6
+  iconsize = {
+    offset = { 0 18  }
+    texture = "gfx/interface/icons/acceptance_icons/acceptance_number6.dds"
+    fontsize = 50
+  }
+}
+
+texticon = {
+  icon = march
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/diplomatic_action_icons/march_15.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = banner
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/diplomatic_action_icons/banner_15.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = real_union
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/diplomatic_action_icons/real_union_15.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = satrapy
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/diplomatic_action_icons/satrapy_15.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = movement_category_magic
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/political_movement_icons/movement_magic.dds"
+    fontsize = 220
+  }
+}
+
+texticon = {
+  icon = unit_magic_offense
+  iconsize = {
+    offset = { 0 20 }
+    texture = "gfx/interface/icons/military_icons/magic_offense.dds"
+    fontsize = 60
+  }
+}
+
+texticon = {
+	icon = prestige_good_generic_chimesilt
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/chimesilt_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_bengal_opium
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/chimesilt_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_rare_chimesilt
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/chimesilt_prestige_3.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_cloudsilver
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/nimbium.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_gnome_thaumacores
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/thaumacore_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_thaumacores
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/thaumacore_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_thaumacores
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/thaumacore_prestige_3.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_ectoplasm
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ectoprestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_ectoplasm
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ectoplasm_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_dragon_trinkets
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/trinket_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_bataji_trinkets
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/trinket_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_ankylosaur_steaks
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/river_plate_beef_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_airships
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/airship_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_airships
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/airship_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_gizmos
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_gizmo_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_gizmos
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_gizmo_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_zitci_gizmos
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_gizmo_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_wishstone
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/wishtone_prestige_3.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_wishstone
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/wishtone_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_rare_wishstone
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/wishstone_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_monster_essence
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_potions
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_monster_essence
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_direwolf_essence
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_griffon_essence
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/monster_essence_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_potions
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_rare_potions
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_3.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_xxx_potions
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/potion_prestige_4.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_luxury_potions
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/luxurypotion_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jingleroot_potions
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/luxurypotion_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_boars_delight
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/luxurypotion_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cerunite_sulfur
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sicilian_sulfur_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_cloudpiercers
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/cloudpiercer_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_honey
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/honey_icon.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+# texticon = {
+# 	icon = prestige_good_rusttails
+# 	iconsize = {
+# 		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_rusttails.dds"
+# 		size = { 25 25 }
+# 		offset = { 0 7 }
+# 		fontsize = 18
+# 	}
+# }
+
+texticon = {
+	icon = prestige_good_shrimp
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/brine_shrimp.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_leeches
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_leeches.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_wyrmfruit
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_wyrmfruit.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_songberries
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_songberries.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_furs
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_furs.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_blubber
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/blubber_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_ammunition
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ammunition_prestige_1.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_uncommon_ammunition
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ammunition_prestige_2.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

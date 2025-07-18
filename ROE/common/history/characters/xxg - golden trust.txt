@@ -1,0 +1,18 @@
+﻿CHARACTERS = {
+	c:XXG = {
+		create_character = {
+			first_name = "Ynthai"
+			last_name = "Drauvrall"
+			historical = yes
+			ruler = yes
+			age = 53
+			female = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				meticulous
+				experienced_colonial_administrator
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+﻿DIS_ilektra_morakis = { 
+	first_name = Ilektra
+	last_name = Morakis
+	historical = yes
+	female = yes
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:draconic_oath
+	interest_group = ig_rural_folk
+	ideology = ideology_druid
+	birth_date = 1145.6.06 #probably the wrong year for a starbrand fey
+	traits = {
+		starbrand_fey
+		charismatic
+	}
+    agitator_usage = {
+        country_trigger = {
+		
+				c:DIS?= THIS
+				
+			
+			has_dlc_feature = voice_of_the_people_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+			is_interest_group_type = ig_devout
+        }   
+        earliest_usage_date = 1179.1.1
+        latest_usage_date = 1209.1.1
+         
+    }   
+}
+
+DIS_lazaros_thanasis = { 
+	first_name = Lazaros
+	last_name = Thanasis
+	historical = yes
+	female = no
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:draconic_oath
+	interest_group = ig_intelligentsia
+	ideology = ideology_land_reformer
+	birth_date = 1159.5.1
+	traits = {
+		innovative
+		experienced_political_operator
+	}
+	agitator_usage = {
+        country_trigger = {
+		
+				c:DIS?= THIS
+				
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }   
+        earliest_usage_date = 1181.1.1
+        latest_usage_date = 1201.1.1
+         
+    }
+       
+	trait_generation = { }
+}

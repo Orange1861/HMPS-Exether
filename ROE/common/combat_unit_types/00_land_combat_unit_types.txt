@@ -1,0 +1,1844 @@
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+combat_unit_type_irregular_infantry = {
+    group = combat_unit_group_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+    battle_modifier = {
+        unit_offense_add = 10
+        unit_defense_add = 10
+        unit_morale_loss_add = 15
+    }
+
+    upkeep_modifier = {
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dwarf_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_elf_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_elf_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_elf_irregular.dds"
+    }
+
+   combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_lizard_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_goblin_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dragon_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dragon_irregular.dds"
+    }
+   
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_hyena_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_bird_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_irregular.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_line_infantry
+		combat_unit_type_skirmish_infantry
+        combat_unit_type_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+	}
+}
+
+combat_unit_type_line_infantry = {
+    group = combat_unit_group_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 25
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { line_infantry }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_goblin_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dragon_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_bird_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dragon_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dwarf_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_darkelf_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_woodelf_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_halfelf_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_lizard_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_hyena_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_line.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_line.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_skirmish_infantry
+        combat_unit_type_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+	}
+}
+
+combat_unit_type_skirmish_infantry = {
+    group = combat_unit_group_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_ammunition_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 35
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { general_staff }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dwarf_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_darkelf_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_woodelf_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_halfelf_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_goblin_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_kobold_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dragon_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_hyena_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_lizard_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_bird_skirmish.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_skirmish.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+	}
+}
+
+combat_unit_type_trench_infantry = {
+    group = combat_unit_group_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 40
+        unit_morale_loss_add = 8
+    }
+
+	unlocking_technologies = { trench_works }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_trench.dds"
+    }
+    ##exether
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dwarf_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dragon_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_kobold_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_darkelf_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_woodelf_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_halfelf_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_lizard_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_hyena_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_goblin_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_bird_trench.dds"
+    }
+    
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_trench.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_squad_infantry = {
+    group = combat_unit_group_infantry
+	max_manpower = 1000
+
+    conscript_peasant_levies = yes
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 40
+        unit_defense_add = 50
+        unit_morale_loss_add = 6
+    }
+
+	unlocking_technologies = { nco_training }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_squad.dds"
+    }
+    
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dwarf_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_goblin_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_kobold_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_dragon_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_lizard_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_darkelf_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_woodelf_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_halfelf_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_hyena_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/infantry_bird_squad.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/infantry_eu_squad.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_mechanized_infantry = {
+    group = combat_unit_group_infantry
+	max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_oil_add = 1
+        goods_input_radios_add = 1
+        goods_input_tanks_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 60
+        unit_morale_loss_add = 4
+        unit_devastation_mult = 0.1
+    }
+
+	unlocking_technologies = { mobile_armor }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_mechanized.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_mechanized.dds"
+    }
+}
+
+### Artillery
+
+combat_unit_type_cannon_artillery = {
+    group = combat_unit_group_artillery
+	max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_artillery_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 15
+        unit_morale_loss_add = 10
+        unit_kill_rate_add = 0.1
+        unit_devastation_mult = 0.1
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { artillery }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/artillery_orc_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_cannon.dds"
+    }
+    
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/artillery_bear_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_dwarf_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_dragon_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_dragon_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_lizard_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/artillery_mouse_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_goblin_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_darkelf_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_woodelf_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_halfelf_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_hyena_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_bird_cannon.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_cannon.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mobile_artillery
+        combat_unit_type_shrapnel_artillery
+        combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_mobile_artillery = {
+    group = combat_unit_group_artillery
+	max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_artillery_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 15
+        unit_morale_loss_add = 8
+        unit_kill_rate_add = 0.2
+        unit_devastation_mult = 0.15
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { napoleonic_warfare }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/artillery_bear_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/artillery_orc_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_dwarf_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/artillery_mouse_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_darkelf_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_highelf_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_halfelf_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_lizard_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_hyena_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_goblin_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_kobold_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics  
+        }
+        texture = "gfx/unit_illustrations/artillery_dragon_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_bird_mobile.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_mobile.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_shrapnel_artillery
+        combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_shrapnel_artillery = {
+    group = combat_unit_group_artillery
+	max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_artillery_add = 3
+        goods_input_ammunition_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 45
+        unit_defense_add = 25
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.3
+        unit_devastation_mult = 0.15
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { breech_loading_artillery }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/artillery_mouse_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/artillery_orc_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_hyena_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_kobold_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_kobold_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_woodelf_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = halfelf_graphics
+        }
+        texture = "gfx/unit_illustrations/artillery_woodelf_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_shrapnel.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_siege_artillery = {
+    group = combat_unit_group_artillery
+	max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_artillery_add = 4
+        goods_input_ammunition_add = 4
+		goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 55
+        unit_defense_add = 30
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.25
+        unit_devastation_mult = 0.2
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { defense_in_depth }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_siege.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_siege.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_siege.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_siege.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_siege.dds"
+    }
+}
+
+combat_unit_type_heavy_tank = {
+    group = combat_unit_group_artillery
+	max_manpower = 1000
+
+    upkeep_modifier = {
+        goods_input_tanks_add = 3
+        goods_input_artillery_add = 4
+		goods_input_ammunition_add = 4
+        goods_input_radios_add = 1
+        goods_input_oil_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 70
+        unit_defense_add = 35
+        unit_morale_loss_add = 4
+        unit_kill_rate_add = 0.25
+        unit_morale_damage_mult = 0.15
+        unit_devastation_mult = 0.2
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { mobile_armor }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
+    }
+}
+
+### Cavalry
+
+combat_unit_type_hussars = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+
+    can_build = {
+        always = no
+    }
+
+    upkeep_modifier = {
+        goods_input_grain_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 15
+        unit_defense_add = 10
+        unit_morale_loss_add = 10
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.25
+        military_formation_movement_speed_mult = 0.25
+    }
+
+	unlocking_technologies = { standing_army }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_east_asian_hussar.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_south_asian_hussar.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/cavalry_african_hussar.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/cavalry_arabic_hussar.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/cavalry_eu_hussar.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_dragoons
+        combat_unit_type_cuirassiers
+        combat_unit_type_lancers
+    }
+}
+
+combat_unit_type_mages_one = {
+    group = combat_unit_group_cavalry
+    max_manpower = 1000
+	
+    upkeep_modifier = {
+        goods_input_wishstone_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 15
+        unit_magic_offense_add = 15
+        unit_magic_defense_add = 10
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { matchlock_magi }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/wizard_bear_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_bird_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_darkelf_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_dragonborn_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_dwarf_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_goblin_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_hyena_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_kobold_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_lizard_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/wizard_mouse_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/wizard_orc_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/wizard_south_indian_basic_1.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/wizard_european_basic_1.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mages_two
+        combat_unit_type_mages_three
+        combat_unit_type_mages_four
+    }
+}
+
+combat_unit_type_mages_two = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+    
+    upkeep_modifier = {
+        goods_input_wishstone_add = 3
+        goods_input_potions_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 40
+        unit_defense_add = 25
+        unit_magic_offense_add = 25
+        unit_magic_defense_add = 20
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { battlemages }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/wizard_bear_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_bird_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_darkelf_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_kobold_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_dwarf_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_goblin_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_hyena_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_kobold_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_lizard_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/wizard_mouse_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/wizard_orc_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/wizard_south_indian_basic_2.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/wizard_european_basic_2.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mages_three
+        combat_unit_type_mages_four
+    }
+}
+
+combat_unit_type_mages_three = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+    
+    upkeep_modifier = {
+        goods_input_wishstone_add = 4
+        goods_input_potions_add = 4
+        goods_input_thaumacores_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 30
+        unit_magic_offense_add = 35
+        unit_magic_defense_add = 30
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { shock_magic }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/wizard_bear_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_bird_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_darkelf_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_dragonborn_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_goblin_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_hyena_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_dragonborn_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_lizard_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/wizard_orc_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/wizard_south_indian_basic_3.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/wizard_european_basic_3.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mages_four
+    }
+}
+
+combat_unit_type_mages_four = {
+    group = combat_unit_group_cavalry
+	max_manpower = 1000
+    
+    upkeep_modifier = {
+        goods_input_tanks_add = 2
+        goods_input_wishstone_add = 5
+        goods_input_potions_add = 5
+        goods_input_thaumacores_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 35
+        unit_magic_offense_add = 50
+        unit_magic_defense_add = 45
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { siege_magic }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/wizard_bear_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bird_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_bird_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = darkelf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_darkelf_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = gem_dragon_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_dragonborn_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = dwarf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_dwarf_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = goblin_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_goblin_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = hyena_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_hyena_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = kobold_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_kobold_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = lizard_komodo_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_lizard_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/wizard_mouse_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/wizard_orc_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/wizard_south_indian_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = woodelf_graphics
+        }
+        texture = "gfx/unit_illustrations/wizard_woodelf_basic_4.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/wizard_european_basic_4.dds"
+    }
+
+    upgrades = {
+    }
+}

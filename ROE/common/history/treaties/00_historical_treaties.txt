@@ -1,0 +1,1024 @@
+﻿TREATIES = {
+			create_treaty = {
+		name = "Midnight Accord"
+		first_country = c:HAG
+		second_country = c:RVC
+
+		is_draft = no
+		entered_into_force_on = 1162.10.26
+		binding_period = { years = 40 }
+
+		articles_to_create = {
+			{ # Defensive Pact
+				article = trade_privilege
+                source_country = c:HAG
+				target_country = c:RVC
+			}
+			{ 
+			    article = alliance
+			}
+			{ 
+				article = trade_privilege
+				source_country = c:RVC
+				target_country = c:HAG
+			}
+		}
+	}
+		create_treaty = {
+		name = "Westerburgh Initiative"
+		first_country = c:DUM
+		second_country = c:CER
+
+		is_draft = no
+		entered_into_force_on = 1162.10.26
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{ # Defensive Pact
+				article = military_assistance
+                source_country = c:CER
+				target_country = c:DUM
+			}
+			{ 
+			    article = defensive_pact
+			}
+			{ 
+				article = trade_privilege
+				source_country = c:DUM
+				target_country = c:CER
+			}
+		}
+	}
+
+			create_treaty = {
+		name = "Arroyo Pact"
+		first_country = c:THK
+		second_country = c:TSH
+
+		is_draft = no
+		entered_into_force_on = 1162.10.26
+		binding_period = { years = 35 }
+
+		articles_to_create = {
+			{ # Defensive Pact
+				article = transit_rights
+                source_country = c:TSH
+				target_country = c:THK
+			}
+			{ 
+			    article = defensive_pact
+			}
+			{ 
+				article = trade_privilege
+				source_country = c:THK
+				target_country = c:TSH
+			}
+		}
+	}
+
+    create_treaty = {
+		#name = treaty_name_emerald_serbinelle_agreement
+		first_country = c:EME
+		second_country = c:SEB
+
+		is_draft = no
+		entered_into_force_on = 1168.10.26
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{
+				article = foreign_investment_rights
+                source_country = c:SEB
+				target_country = c:EME
+			}
+
+        	{ 
+				article = trade_privilege
+				source_country = c:SEB
+				target_country = c:EME
+			}
+		}
+	}
+
+     create_treaty = {
+		name = "Mousington Treaty"
+		first_country = c:CER
+		second_country = c:WHI
+
+		is_draft = no
+		entered_into_force_on = 1168.10.26
+		binding_period = { years = 60 }
+
+		articles_to_create = {
+			{ 
+				article = military_access
+                source_country = c:WHI
+				target_country = c:CER
+			}
+			{ 
+				article = trade_privilege
+                source_country = c:WHI
+				target_country = c:CER
+			}
+			{ 
+				article = foreign_investment_rights
+                source_country = c:WHI
+				target_country = c:CER
+			}
+			{ 
+				article = transit_rights
+                source_country = c:WHI
+				target_country = c:CER
+			}
+			{ 
+				article = transit_rights
+                source_country = c:CER
+				target_country = c:WHI
+			}
+		}
+	}
+
+    create_treaty = {
+		name = "Freerivers Trade Agreement"
+		first_country = c:EMP
+		second_country = c:WHI
+
+		is_draft = no
+		entered_into_force_on = 1178.1.01
+		binding_period = { years = 50 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+                source_country = c:WHI
+				target_country = c:EMP
+			}
+			{ 
+				article = transit_rights
+                source_country = c:WHI
+				target_country = c:EMP
+			}
+			{ 
+				article = foreign_investment_rights
+                source_country = c:WHI
+				target_country = c:EMP
+			}
+			{ 
+				article = military_access
+                source_country = c:WHI
+				target_country = c:EMP
+			}
+			{ 
+				article = trade_privilege
+                source_country = c:EMP
+				target_country = c:WHI
+			}
+			{ 
+				article = transit_rights
+                source_country = c:EMP
+				target_country = c:WHI
+			}
+		}
+	}
+
+     create_treaty = {
+		name = "Potbelly Accord"
+		first_country = c:SMA
+		second_country = c:WHI
+
+		is_draft = no
+		entered_into_force_on = 1158.10.26
+		binding_period = { years = 60 }
+
+		articles_to_create = {
+			{ 
+				article = foreign_investment_rights
+                source_country = c:WHI
+				target_country = c:SMA
+			}
+
+			            { 
+				article = military_access
+                source_country = c:WHI
+				target_country = c:SMA
+			}
+
+            { 
+				article = trade_privilege
+                source_country = c:WHI
+				target_country = c:SMA
+			}
+			            { 
+				article = trade_privilege
+                source_country = c:SMA
+				target_country = c:WHI
+			}
+		}
+	}
+
+    create_treaty = {
+		name = "Redfort Treaties"
+		first_country = c:ARR
+		second_country = c:WHI
+
+		is_draft = no
+		entered_into_force_on = 1168.10.13
+		binding_period = { years = 50 }
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+                source_country = c:WHI
+				target_country = c:ARR
+			}
+			{ 
+				article = foreign_investment_rights
+                source_country = c:WHI
+				target_country = c:ARR
+			}
+						{ 
+				article = military_access
+                source_country = c:WHI
+				target_country = c:ARR
+			}
+			{ 
+				article = transit_rights
+                source_country = c:ARR
+				target_country = c:WHI
+			}
+		}
+	}
+
+     create_treaty = {
+		#name = treaty_name_greencourt_agreement
+		first_country = c:ARR
+		second_country = c:PRI
+
+		is_draft = no
+		entered_into_force_on = 1168.6.23
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{ 
+				article = foreign_investment_rights
+				article = trade_privilege
+				article = military_access
+                source_country = c:PRI
+				target_country = c:ARR
+			}
+		}
+	}
+
+    create_treaty = {
+		#name = treaty_name_saltboot_agreement
+		first_country = c:ARR
+		second_country = c:SLB
+
+		is_draft = no
+		entered_into_force_on = 1168.10.26
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{ 
+				article = foreign_investment_rights
+                source_country = c:SLB
+				target_country = c:ARR
+			}
+		}
+	}
+
+    create_treaty = {
+		#name = treaty_name_saltboot_agreement
+		first_country = c:DUM
+		second_country = c:EME
+
+		is_draft = no
+		entered_into_force_on = 1168.10.26
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{ 
+				article = non_colonization_agreement
+                source_country = c:DUM
+				target_country = c:EME
+				inputs = {
+					{ strategic_region = sr:region_thoughtsmith_ridge }
+				}
+			}
+			{ 
+				article = non_colonization_agreement
+                source_country = c:EME
+				target_country = c:DUM
+				inputs = {
+					{ strategic_region = sr:region_new_dumonia }
+				}
+			}
+		}
+	}
+
+    	create_treaty = {
+		#name = treaty_name_saltboot_agreement
+		first_country = c:DUM
+		second_country = c:VAI
+
+		is_draft = no
+		entered_into_force_on = 1164.3.24
+		binding_period = { years = 32 }
+
+		articles_to_create = {
+			{ 
+				article = non_colonization_agreement
+                source_country = c:DUM
+				target_country = c:VAI
+				inputs = {
+					{ strategic_region = sr:region_rimeroot_jungle }
+				}
+			}
+			{ 
+				article = non_colonization_agreement
+                source_country = c:VAI
+				target_country = c:DUM
+				inputs = {
+					{ strategic_region = sr:region_new_dumonia }
+				}
+			}
+			{ 
+				article = non_colonization_agreement
+                source_country = c:VAI
+				target_country = c:DUM
+				inputs = {
+					{ strategic_region = sr:region_lacertia }
+				}
+			}
+		}
+	}
+
+    create_treaty = {
+		name = treaty_name_vozira_agreement
+		first_country = c:VOZ
+		second_country = c:DRO
+
+		is_draft = no
+		entered_into_force_on = 1171.10.26
+		binding_period = { years = 30  }
+
+		articles_to_create = {
+           { 
+				article = trade_privilege
+                source_country = c:DRO
+				target_country = c:VOZ
+			}
+
+          { 
+				article = alliance
+			}
+
+             { 
+				article = trade_privilege
+                source_country = c:VOZ
+				target_country = c:DRO
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:DIS
+		second_country = c:SNB
+
+		is_draft = no
+		entered_into_force_on = 1175.4.2
+		binding_period = { years = 10  }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+			{ 
+				article = trade_privilege
+                source_country = c:DIS
+				target_country = c:SNB
+			}
+			{ 
+				article = trade_privilege
+                source_country = c:SNB
+				target_country = c:DIS
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:TEF
+		second_country = c:FEY
+
+		is_draft = no
+		entered_into_force_on = 1176.7.16
+		binding_period = { years = 20  }
+
+		articles_to_create = {
+			{ 
+			    article = support_independence
+                source_country = c:FEY
+				target_country = c:TEF
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:TEF
+		second_country = c:ANW
+
+		is_draft = no
+		entered_into_force_on = 1169.2.26
+		binding_period = { years = 20  }
+
+		articles_to_create = {
+			{ 
+			    article = foreign_investment_rights
+                source_country = c:ANW
+				target_country = c:TEF
+			}
+
+           { 
+				article = trade_privilege
+                source_country = c:ANW
+				target_country = c:TEF
+			}
+		}
+	}
+
+     create_treaty = {
+		first_country = c:TEF
+		second_country = c:OPA
+
+		is_draft = no
+		entered_into_force_on = 1171.8.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+            { 
+			    article = alliance
+			}
+		}
+	}
+
+     create_treaty = {
+		first_country = c:TEF
+		second_country = c:SET
+
+		is_draft = no
+		entered_into_force_on = 1173.8.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = foreign_investment_rights
+                source_country = c:SET
+				target_country = c:TEF
+			}
+			{ 
+			    article = defensive_pact
+
+			}
+
+
+            
+
+
+		}
+	}
+
+     create_treaty = {
+		first_country = c:WIT
+		second_country = c:HAG
+
+		is_draft = no
+		entered_into_force_on = 1153.8.21
+		binding_period = { years = 50 }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:LAZ
+		second_country = c:OKH
+
+		is_draft = no
+		entered_into_force_on = 1163.4.11
+		binding_period = { years = 30 }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:LGZ
+		second_country = c:EKA
+
+		is_draft = no
+		entered_into_force_on = 1166.5.13
+		binding_period = { years = 25 }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:VAI
+		second_country = c:XXP
+
+		is_draft = no
+		entered_into_force_on = 1172.5.17
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:DSB
+		second_country = c:RDM
+
+		is_draft = no
+		entered_into_force_on = 1171.7.18
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:FLU
+		second_country = c:CLL
+
+		is_draft = no
+		entered_into_force_on = 1171.7.18
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+		}
+	}
+
+    create_treaty = {
+		first_country = c:CLL
+		second_country = c:ICA
+
+		is_draft = no
+		entered_into_force_on = 1171.7.18
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ 
+			    article = guarantee_independence
+                source_country = c:CLL
+				target_country = c:ICA
+			}
+
+		}
+	}
+
+     create_treaty = {
+		first_country = c:BIE
+		second_country = c:YAN
+
+		is_draft = no
+		entered_into_force_on = 1173.8.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = foreign_investment_rights
+                source_country = c:YAN
+				target_country = c:BIE
+			}
+
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:RAV
+		second_country = c:TPK
+
+		is_draft = no
+		entered_into_force_on = 1173.8.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = guarantee_independence
+                source_country = c:RAV
+				target_country = c:TPK
+			}
+
+
+		}
+	}
+    create_treaty = {
+		name = "Concord of Tabul-Raz"
+		first_country = c:BDB
+		second_country = c:OCR
+
+		is_draft = no
+		entered_into_force_on = 1171.6.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+
+		}
+	}
+
+    create_treaty = {
+		name = "Concord of Tabul-Raz"
+		first_country = c:BDB
+		second_country = c:RCR
+
+		is_draft = no
+		entered_into_force_on = 1171.6.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+
+		}
+	}
+
+    create_treaty = {
+		name = "Concord of Tabul-Raz"
+		first_country = c:OCR
+		second_country = c:RCR
+
+		is_draft = no
+		entered_into_force_on = 1171.6.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:IHE
+		second_country = c:PIU
+
+		is_draft = no
+		entered_into_force_on = 1171.6.21
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:PVA
+		second_country = c:BLL
+
+		is_draft = no
+		entered_into_force_on = 1165.1.21
+		binding_period = { years = 30  }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:SNB
+		second_country = c:JUX
+
+		is_draft = no
+		entered_into_force_on = 1176.8.21
+		binding_period = { years = 20  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+
+		}
+	}
+
+     create_treaty = {
+		first_country = c:SNB
+		second_country = c:VHA
+
+		is_draft = no
+		entered_into_force_on = 1164.5.25
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+
+		}
+	}
+
+     create_treaty = {
+		first_country = c:JUX
+		second_country = c:VHA
+
+		is_draft = no
+		entered_into_force_on = 1161.5.13
+		binding_period = { years = 25  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+
+		}
+	}
+
+     create_treaty = {
+		first_country = c:XXG
+		second_country = c:LIR
+
+		is_draft = no
+		entered_into_force_on = 1154.8.21
+		binding_period = { years = 100  }
+
+		articles_to_create = {
+			{ 
+			    article = foreign_investment_rights
+                source_country = c:LIR
+				target_country = c:XXG
+			}
+
+           { 
+				article = trade_privilege
+                source_country = c:LIR
+				target_country = c:XXG
+			}
+
+            {
+				article = money_transfer
+				source_country = c:LIR
+				target_country = c:XXG
+				inputs = {
+					{ quantity = 2500 } # The rent of Macau was 500 taels, about 700 spanish dollars or 145 pounds in 1840 (based on silver prices)
+				}
+			}
+		}
+	}
+
+     create_treaty = {
+		first_country = c:ARR
+		second_country = c:THI
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = trade_privilege
+                source_country = c:ARR
+				target_country = c:THI
+			}
+
+           { 
+				article = trade_privilege
+                source_country = c:THI
+				target_country = c:ARR
+			}
+		}
+	}
+
+     create_treaty = {
+		first_country = c:EBR
+		second_country = c:PFL
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = trade_privilege
+                source_country = c:PFL
+				target_country = c:EBR
+			}
+
+		}
+	}
+
+     create_treaty = {
+		first_country = c:VAR
+		second_country = c:NRA
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = trade_privilege
+                source_country = c:VAR
+				target_country = c:NRA
+			}
+
+		}
+	}
+
+     create_treaty = {
+		name = "Duneshar-Tozhi Pact of Defense and Friendship"
+		first_country = c:KHD
+		second_country = c:TSH
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+						{ 
+			    article = trade_privilege
+                source_country = c:KHD
+				target_country = c:TSH
+			}
+						{ 
+			    article = trade_privilege
+                source_country = c:TSH
+				target_country = c:KHD
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:YOK
+		second_country = c:HIR
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:MOK
+		second_country = c:SHJ
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:YOK
+		second_country = c:RUG
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = alliance
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:YOK
+		second_country = c:GOL
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:RUG
+		second_country = c:HIR
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:HIR
+		second_country = c:GOL
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:PIU
+		second_country = c:BRJ
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+		}
+	}
+
+    create_treaty = {
+		first_country = c:PAC
+		second_country = c:TIT
+
+		is_draft = no
+		entered_into_force_on = 1161.8.21
+		binding_period = { years = 40  }
+
+		articles_to_create = {
+			{ 
+			    article = defensive_pact
+			}
+
+		}
+	}
+
+
+}
+
+
+

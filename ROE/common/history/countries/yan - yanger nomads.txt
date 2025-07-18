@@ -1,0 +1,28 @@
+﻿COUNTRIES = {
+	c:YAN = {
+		effect_starting_technology_tier_4_tech = yes
+		effect_starting_politics_traditional = yes
+
+		add_technology_researched = mandatory_service
+		add_technology_researched = line_infantry
+		add_technology_researched = romanticism #JE stuff
+		
+		activate_law = law_type:law_homesteading
+
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+
+		trigger_event = {
+			id = stepping_forward.1
+			popup = yes
+		}
+
+		add_journal_entry = {
+			type = je_a_steppe_behind
+		}
+		
+		effect_has_custom_journals = yes 
+
+	}
+}

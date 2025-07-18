@@ -1,0 +1,308 @@
+﻿company_timekeepers_consortium = {
+	icon = "gfx/interface/icons/company_icons/timekeepers.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+		building_tooling_workshops
+	}
+	
+	extension_building_types = {
+		building_port
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_tools
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_hasals_mirror
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TIKKERHAVEN
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TIKKERHAVEN
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_university
+
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		military_formation_movement_speed_mult = 0.1
+		building_railway_throughput_add = 0.1
+	}	
+	
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_TIKKERHAVEN
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_fabricator_five = {
+	icon = "gfx/interface/icons/company_icons/fabricator_five.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_thaumacore_foundry
+		building_soulwrought_assembly_plant
+	}
+
+	extension_building_types = { 
+		building_haunted_grounds
+		building_ship_graveyard
+	}
+
+	possible_prestige_goods = {
+		prestige_good_gnome_thaumacores
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_gnomehome
+		has_technology_researched = gnome_tech
+	}
+	
+	attainable = {
+		# Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FLUSTERBEEK
+			}
+	}			
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_thaumacore_foundry
+					is_building_type = building_soulwrought_assembly_plant
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_soulwrought_assembled_mult = 0.2
+		goods_output_soulwrought_intangible_mult = 0.2
+		state_soulwrought_standard_of_living_add = -0.5
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_FLUSTERBEEK
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 5 # Higher base value for flavored companies
+	}
+}
+
+company_lake_armory = {
+	icon = "gfx/interface/icons/company_icons/lake_thalori_armory.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_artillery_foundries
+		building_munition_plants
+	}
+	
+	extension_building_types = { 
+		building_steel_mills
+	}
+
+	possible_prestige_goods = {
+		prestige_good_krupp_guns
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_hasals_mirror
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SNAARGRACHT
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_SNAARGRACHT
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 3
+			}
+		}
+		has_technology_researched = rifling
+	}
+	
+	prosperity_modifier = {
+		unit_offense_mult = 0.05
+		building_arms_industry_throughput_add = 0.1
+	}	
+	
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_SNAARGRACHT
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_gizmo_emp = {
+	icon = "gfx/interface/icons/company_icons/birb.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_wishstone_mine
+		building_gizmo_workshop
+		building_motor_industry
+	}
+	
+	extension_building_types = { 
+		building_wishstone_reefs
+		building_steel_mills
+	}
+
+	possible_prestige_goods = {
+		prestige_good_uncommon_gizmos
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_hasals_mirror
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+
+					state_region = s:STATE_WINDSONG
+
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WINDSONG
+		
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wishstone_mine
+					is_building_type = building_gizmo_workshop
+				}
+				level >= 3
+			}
+		}		
+		has_technology_researched = wishstone_machines
+	}
+	
+	prosperity_modifier = {
+		building_tooling_workshops_throughput_add = 0.1
+		building_gizmo_workshop_throughput_add = 0.1
+		interest_group_ig_mages_pop_attraction_mult = 0.1
+	}
+	
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_WINDSONG
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_gnome_ectoplasm = {
+	icon = "gfx/interface/icons/company_icons/gnome_ecto.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	replaces_company = company_basic_ectoplasm
+
+	building_types = {  
+		building_haunted_grounds
+		building_ship_graveyard
+	}
+
+	extension_building_types = { 
+		building_thaumacore_foundry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_ectoplasm
+	}
+
+	potential = {
+		has_technology_researched = gnome_tech
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_haunted_grounds
+					is_building_type = building_ship_graveyard
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_soulwrought_assembled_mult = 0.1
+		building_thaumacore_foundry_throughput_add = 0.1
+	}	
+	ai_will_do = {
+		any_scope_building = {
+			OR = {
+				is_building_type = building_haunted_grounds
+				is_building_type = building_ship_graveyard
+			}
+			level >= 3
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

@@ -1,0 +1,29 @@
+﻿CHARACTERS = {
+	c:YUL = {
+		create_character = {
+			first_name = "Chingis"
+			last_name = "Yulug"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 52
+			interest_group = ig_armed_forces
+			ideology = ideology_ethno_nationalist
+			traits = {
+				imperious
+			}
+		}
+		create_character = {
+			first_name = "Damdin"
+			last_name = "Yulug"
+			historical = yes
+			heir = yes
+			age = 17
+			interest_group = ig_armed_forces
+			ideology = ideology_nihilist
+			traits = {
+				trait_child
+			}
+		}
+	}
+}

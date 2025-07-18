@@ -1,0 +1,1148 @@
+﻿namespace = sunstation
+
+sunstation.1 = { #sunstation JE success event
+	type = country_event
+	placement = scope:sunstation_state
+	title = sunstation.1.t
+	desc = sunstation.1.d
+	flavor = sunstation.1.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "rimeroot_sunstation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_agriculture.dds"
+
+	trigger = { #triggered by JE success
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_sunstation
+				}
+			}
+			save_scope_as = sunstation_state
+		}
+	}
+
+	option = {
+		name = sunstation.1.a #we will focus on welcoming these newcomers
+		default_option = yes
+		every_scope_state = {
+			limit = {
+				OR = {
+					region = sr:region_thawed_lands
+					region = sr:region_rimeroot_jungle
+				}
+			}
+			add_modifier = {
+				name = new_land_of_opportunity
+				years = 15	
+			}
+		}
+		add_modifier = {
+			name = sunstation_scientific_studies
+			years = 10
+		}
+		custom_tooltip = sunstation.1.tt
+	}
+
+	option = {
+		name = sunstation.1.b #we must focus our efforts on our artificers
+
+		add_modifier = {
+			name = rime_focused_artificers
+			years = 15	
+		}
+		add_modifier = {
+			name = sunstation_scientific_studies
+			years = 10
+		}
+		custom_tooltip = sunstation.1.tt
+}
+
+}
+
+sunstation.2 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.2.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = sunstation.2.d
+				trigger = {
+					NOT = { has_global_variable = sunstation_storeroom_established }
+				}
+			}
+			triggered_desc = {
+				desc = sunstation.2.d2
+				trigger = {
+					has_global_variable = sunstation_storeroom_established
+				}
+			}
+		}
+	}
+	flavor = sunstation.2.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "rimeroot_sunstation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" = 1
+		}
+		NOT = { has_variable = sunstation_storeroom_var }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = sunstation_storeroom_var
+	}
+	
+	option = { # make a durable hut and leave supplies
+		name = sunstation.2.a
+		trigger = {
+			NOT = { has_global_variable = sunstation_storeroom_established }
+		}
+		default_option = yes
+		set_global_variable = sunstation_storeroom_established
+		custom_tooltip = discovery_hut_tt
+		add_small_peril_effect = yes
+	}
+	option = { # make a flimsy base camp, won't last
+		name = sunstation.2.b
+		trigger = {
+			NOT = { has_global_variable = sunstation_storeroom_established }
+		}
+		expedition_minor_progress_effect = yes
+		add_small_peril_effect = yes
+	}
+	option = { # rest and resupply at the hut
+		name = sunstation.2.c
+		trigger = {
+			has_global_variable = sunstation_storeroom_established
+		}
+		expedition_minor_progress_effect = yes
+		
+	}
+}
+
+# Overshot and lost
+sunstation.3 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.3.t
+	desc = sunstation.3.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					je:je_heptadron_probs ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" >= 7
+					}
+				}
+				desc = sunstation.3.f
+			}
+			triggered_desc = {
+				trigger = {
+					je:je_heptadron_probs ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" < 7
+					}
+				}
+				desc = sunstation.3.f2
+			}
+		}
+	}	
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" > 3
+		}
+		NOT = { has_variable = rimeroot_got_lost }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = rimeroot_got_lost
+	}
+	
+	option = { # go back
+		name = sunstation.3.a
+		default_option = yes
+		random_list = {
+			75 = {
+				expedition_lose_progress_effect = yes
+			}
+			25 = {
+
+			}
+		}
+	}
+	option = {
+		name = sunstation.3.b
+		random_list = {
+			25 = {
+				expedition_moderate_progress_effect = yes
+			}
+			75 = {
+				add_large_peril_effect = yes
+			}
+		}
+	}
+}
+
+sunstation.4 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.4.t
+	desc = sunstation.4.d
+	flavor = sunstation.4.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+
+	option = {
+		name = sunstation.4.a
+		default_option = yes
+		scope:expedition_leader = {
+			kill_character = yes
+		}
+		remove_variable = on_expedition
+		remove_expedition_events_effect = yes
+		exether_remove_expedition_effect = yes
+	}
+}
+
+sunstation.5 = { #reach the core
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.5.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = sunstation.5.d
+				trigger = {
+					NOT = { has_global_variable = rimeroot_core_reached }
+				}
+			}
+			triggered_desc = {
+				desc = sunstation.5.d2
+				trigger = {
+					has_global_variable = rimeroot_core_reached
+				}
+			}
+		}
+	}
+	flavor = sunstation.5.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 5
+		}
+		NOT = { has_variable = first_to_reach_rimeroot_core }
+	}
+	
+	immediate = {
+		save_scope_as = expedition_country
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_variable = rimeroot_expedition_success_var
+				}
+			}
+			random_country = {
+				limit = {
+					has_variable = rimeroot_expedition_success_var
+				}
+				save_scope_as = rimeroot_winner_country
+			}
+		}
+		set_variable = rimeroot_event_var
+	}
+	
+	option = { #WE HAVE TO GO DEEPER
+		name = sunstation.5.a
+		trigger = {
+			NOT = { has_global_variable = rimeroot_core_reached }
+		}
+		default_option = yes
+
+		expedition_minor_progress_effect = yes
+
+	}
+	option = { #wtf is a biosample
+		name = sunstation.5.b
+		trigger = {
+			has_global_variable = rimeroot_core_reached
+		}
+		custom_tooltip = {
+			text = end_expedition_tt
+		}
+		set_variable = destroyed_heptadrones_variable
+	}
+	option = { #shut down the heptadrones and destroy them
+		name = sunstation.5.c
+		trigger = {
+			NOT = { has_global_variable = rimeroot_core_reached }
+		}
+		set_variable = {
+			name = first_to_reach_rimeroot_core
+		}
+		custom_tooltip = {
+			text = end_expedition_tt
+		}
+		set_variable = destroyed_heptadrones_variable
+	
+	}
+}
+
+sunstation.6 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.6.t
+	desc = sunstation.6.d
+	flavor = sunstation.6.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {	
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = dog_meat }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = dog_meat
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = {
+		name = sunstation.6.a
+		default_option = yes
+		# scope:expedition_leader = {
+		# 	add_modifier = {
+		# 		name = ate_dogs_modifier
+		# 		days = normal_modifier_time
+		# 	}
+		# }
+		expedition_moderate_progress_effect = yes
+		add_small_peril_effect = yes
+	}
+	option = {
+		name = sunstation.6.b
+		expedition_minor_progress_effect = yes
+	}
+}
+
+sunstation.7 = { #damaged sunstation section
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.7.t
+	desc = sunstation.7.d
+	flavor = sunstation.7.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" <= 6
+		}
+		NOT = { has_variable = pack_ice }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = pack_ice
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # Push on!
+		name = sunstation.7.a
+		default_option = yes
+		random_list = {
+			50 = {
+				add_small_peril_effect = yes
+			}
+			50 = {
+				expedition_minor_progress_effect = yes
+			}
+		}
+	}
+	option = { # Leader is good at this somehow?
+		name = sunstation.7.b
+		trigger = {
+			scope:expedition_leader = {
+				OR = {
+					has_variable = polar_explorer
+					AND = {
+						has_trait = explorer
+						OR = {
+							has_trait = innovative
+							has_trait = engineer
+							has_trait = tactful
+						}
+					}
+				}
+			}
+		}
+		highlighted_option = yes
+		expedition_moderate_progress_effect = yes
+	}	
+}
+
+sunstation.8 = { #dead heptadrones blocking path
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.8.t
+	desc = sunstation.8.d
+	flavor = sunstation.8.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		NOT = { has_variable = heptajam }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = heptajam
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { # Push on!
+		name = sunstation.8.a
+		default_option = yes
+		random_list = {
+			50 = {
+				#trigger_event = { id = sunstation.9 days = day_until_next_expedition_event }
+				add_small_peril_effect = yes
+			}
+			50 = {
+				expedition_minor_progress_effect = yes
+			}
+		}
+	}
+	option = { # find another way
+		name = sunstation.8.b
+		highlighted_option = yes
+		random_list = {
+			60 = {
+			}
+			40 = {
+				expedition_lose_progress_effect = yes
+			}
+		}
+	}	
+}
+
+# Returning home - Success event
+sunstation.10 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.10.t
+	desc = sunstation.10.d
+
+	
+	flavor = sunstation.10.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "europenorthamerica_antarctica"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	immediate = {
+		save_scope_as = expedition_country
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = {
+		name = sunstation.10.a
+		default_option = yes
+		scope:expedition_leader = {
+			add_trait = explorer
+			set_variable = polar_explorer
+			set_character_busy_and_immortal = no
+			add_modifier = {
+				name = succesfull_rimeroot_modifier
+				multiplier = 2
+			}
+		}
+		add_modifier = {
+			name = rimeroot_expedition_returned
+			days = normal_modifier_time
+		}
+		add_modifier = {
+			name = first_to_the_core
+			days = normal_modifier_time
+		}
+		remove_expedition_events_effect = yes
+		exether_remove_expedition_effect = yes
+	}
+}
+
+sunstation.12 = { #heptadrone scouts
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.12.t
+	desc = sunstation.12.d
+	flavor = sunstation.12.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" > 3
+		}
+		NOT = { has_variable = heptadrone_scouts }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = heptadrone_scouts
+	}
+	
+	option = { # hunt down the scouts
+		name = sunstation.12.a
+		default_option = yes
+		random_list = {
+			75 = {
+				expedition_lose_progress_effect = yes
+			}
+			25 = {
+				add_medium_peril_effect = yes
+			}
+		}
+	}
+	option = { #ignore them, what could go wrong?
+		name = sunstation.12.b
+		random_list = {
+			34 = {
+				expedition_minor_progress_effect = yes
+			}
+			66 = {
+				add_large_peril_effect = yes
+			}
+		}
+	}
+}
+
+# Strange rock
+sunstation.13 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.13.t
+	desc = sunstation.13.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					je:je_heptadron_probs ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" >= 7
+					}
+				}
+				desc = sunstation.13.f2
+			}
+			triggered_desc = {
+				trigger = {
+					je:je_heptadron_probs ?= {
+						"scripted_bar_progress(expedition_peril_progress_bar)" < 7
+					}
+				}
+				desc = sunstation.13.f
+			}
+		}
+	}
+	
+	duration = 3
+	
+	event_image = {
+		video = "europenorthamerica_antarctica"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = strange_rune_var }
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_university
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_university
+				}
+			}
+			save_scope_as = university_state
+		}
+		set_variable = strange_rune_var
+	}
+	
+	option = { #make arrangements to have it shipped to the university in
+		name = sunstation.13.a
+		default_option = yes
+		set_variable = took_strange_rock_var #grand exhibition bonus
+		expedition_lose_progress_effect = yes
+		add_modifier = {
+			name = found_cool_rune
+			years = 5
+		}
+	}
+	option = { #ignore it
+		name = sunstation.13.b
+		expedition_minor_progress_effect = yes
+	}
+}
+
+sunstation.14 = { #fix a brass bull
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.14.t
+	desc = sunstation.14.d
+	flavor = sunstation.14.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_peril_progress_bar)" < 6
+		}
+		NOT = { has_variable = heptadrone_buddy }
+	}
+
+	cancellation_trigger = {
+		NOT = { has_variable = on_expedition }
+	}
+	
+	immediate = {
+		set_variable = heptadrone_buddy
+	}
+	
+	option = { # fix the heptadrone
+		name = sunstation.14.a
+		default_option = yes
+		random_list = {
+			66 = {
+				expedition_peril_decrease_medium_effect = yes
+				expedition_lose_progress_effect = yes
+				set_variable = heptadrone_buddy_success
+			}
+			34 = {
+				expedition_lose_progress_effect = yes
+				add_medium_peril_effect = yes
+			}
+		}
+	}
+	option = { #why would we do this
+		name = sunstation.14.b
+
+	}
+}
+	# Returning home - Partial Success event
+sunstation.15 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.15.t
+	desc = sunstation.15.d
+
+	
+	flavor = sunstation.15.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "europenorthamerica_antarctica"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	immediate = {
+		save_scope_as = expedition_country
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = {
+		name = sunstation.15.a
+		default_option = yes
+		scope:expedition_leader = {
+			add_trait = explorer
+			set_variable = polar_explorer
+			set_character_busy_and_immortal = no
+			add_modifier = {
+				name = succesfull_rimeroot_modifier
+				multiplier = 2
+			}
+		}
+		add_modifier = {
+			name = rimeroot_expedition_returned
+			days = normal_modifier_time
+		}
+	}
+}
+
+sunstation.16 = { #heptadrone ambush
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.16.t
+	desc = sunstation.16.d
+	flavor = sunstation.16.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 4
+		}
+		NOT = { has_variable = heptadrone_attack }
+	}
+	
+	immediate = {
+		set_variable = heptadrone_attack
+		save_scope_as = expedition_country
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #stand and fight
+		name = sunstation.16.a
+		trigger = {
+			NOT = { has_variable = heptadrone_buddy_success }
+		}
+		random_list = {
+			50 = {
+				expedition_minor_progress_effect = yes
+			}
+			50 = {
+				
+				add_medium_peril_effect = yes
+			}
+		}
+	}
+	option = { #retreat!
+		name = sunstation.16.b
+		default_option = yes
+		expedition_lose_progress_effect = yes
+	}
+	option = { #the brass jaguar saves the day!
+		name = sunstation.16.c
+		highlighted_option = yes
+		trigger = {
+			 has_variable = heptadrone_buddy_success
+		}
+		expedition_peril_decrease_small_effect = yes
+		expedition_minor_progress_effect = yes
+		
+	}
+}
+
+sunstation.17 = { #duskmirror swan in the tunnels
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.17.t
+	desc = sunstation.17.d
+	flavor = sunstation.17.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "sunstation_interior"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		je:je_heptadron_probs ?= {
+			"scripted_bar_progress(expedition_progress_bar)" >= 3
+		}
+		NOT = { has_variable = duskmirror_dude }
+	}
+	
+	immediate = {
+		set_variable = duskmirror_dude
+		save_scope_as = expedition_country
+		random_scope_character = {
+			limit = { has_variable = expedition_leader_var }
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	option = { #follow the swan
+		name = sunstation.17.a
+		default_option = yes
+		trigger = {
+			 has_variable = heptadrone_buddy_success
+		}
+		expedition_peril_decrease_medium_effect = yes
+		expedition_lose_progress_effect = yes
+	
+	}
+
+	option = { #wtf are you doing
+		name = sunstation.17.b
+		expedition_minor_progress_effect = yes
+	}
+}
+
+sunstation.101 = {
+	type = country_event
+	placement = ROOT
+	
+	title = sunstation.101.t
+	desc = sunstation.101.d
+	flavor = sunstation.101.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "rimeroot_sunstation"
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			save_scope_as = capital_scope
+		}
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = {
+		name = sunstation.101.a
+		trigger_event = { id = sunstation.102 days = 0 popup = yes }
+	}
+}
+
+sunstation.102 = { #Choose commander
+	type = country_event
+    placement = ROOT
+
+    title = sunstation.102.t
+    desc = sunstation.102.d
+    flavor = sunstation.102.f
+
+    duration = 3
+	
+	event_image = {
+		video = "europenorthamerica_antarctica"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_variable = is_retainer
+			}
+			
+			is_busy = no
+		}
+	}
+
+	immediate = {
+
+		random_scope_character = {
+			limit = {
+				is_busy = no
+				OR = {
+					has_role = general
+					has_variable = is_retainer
+				}
+				has_variable = polar_explorer
+				is_ruler = no
+			}
+			save_scope_as = expedition_leader_1
+		}
+		if = {
+			random_scope_character = {
+				limit = {
+					is_busy = no
+					is_ruler = no
+					OR = {
+						has_role = general
+						has_variable = is_retainer
+					}
+					has_trait = explorer
+					NOT = {
+						scope:expedition_leader_1 ?= this
+					}
+				}
+				save_scope_as = expedition_leader_2
+			}
+		}
+		else = {
+			random_scope_character = {
+				limit = {
+					is_busy = no
+					is_ruler = no
+					OR = {
+						has_role = general
+						has_role = admiral
+						has_variable = is_retainer
+					}
+					NOT = {
+						scope:expedition_leader_1 ?= this
+					}
+				}
+				save_scope_as = expedition_leader_2
+			}
+		}
+		random_scope_character = {
+			limit = {
+				is_busy = no
+				is_ruler = no
+				OR = {
+					has_role = general
+					has_role = admiral
+					has_variable = is_retainer
+				}
+				NOR = {
+					scope:expedition_leader_1 ?= this
+					scope:expedition_leader_2 ?= this
+				}
+			}
+			save_scope_as = expedition_leader_3
+		}
+		random_scope_character = {
+			limit = {
+				is_busy = no
+				is_ruler = no
+				OR = {
+					has_role = general
+					has_role = admiral
+					has_variable = is_retainer
+				}
+				NOR = {
+					scope:expedition_leader_1 ?= this
+					scope:expedition_leader_2 ?= this
+					scope:expedition_leader_3 ?= this
+				}
+			}
+			save_scope_as = expedition_leader_4
+		}
+	}
+
+	option = {
+		name = sunstation.102.a
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_1
+		}
+		default_option = yes
+		highlighted_option = yes
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_1 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_heptadron_probs
+		}
+	}
+
+	option = {
+		name = sunstation.102.b
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_2
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_2 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_heptadron_probs
+		}
+	}
+
+	option = {
+		name = sunstation.102.c
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			exists = scope:expedition_leader_3
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_3 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_heptadron_probs
+		}
+	}
+	
+	option = {
+		name = sunstation.102.e
+		custom_tooltip = expedition_costs_tt
+		trigger = {
+			NOT = { exists = scope:expedition_leader_1 }
+			exists = scope:expedition_leader_4
+		}
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+		scope:expedition_leader_4 ?= {
+			set_variable = expedition_leader_var
+			set_character_busy_and_immortal = yes
+		}
+		add_journal_entry = {
+			type = je_heptadron_probs
+		}
+	}
+}

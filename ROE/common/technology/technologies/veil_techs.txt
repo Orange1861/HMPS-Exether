@@ -1,0 +1,84 @@
+﻿
+veil_1 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
+	category = society
+	can_research = no
+
+	on_researched = {
+		if = {
+			limit = {
+				NOT = { has_variable = veil_1_researched }
+			}
+			set_variable = veil_1_researched
+			ig:ig_intelligentsia ?= {
+				add_ideology = ideology_skeptic
+			}
+		}
+	}
+
+	modifier = {
+
+	}
+	
+	ai_weight = {
+
+	}
+}
+
+
+veil_2 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
+	category = society
+	can_research = no
+
+	on_researched = {
+		if = {
+			limit = {
+				NOT = { has_variable = veil_2_researched }
+			}
+			set_variable = veil_2_researched
+			ig:ig_intelligentsia ?= {
+				remove_ideology = ideology_skeptic
+				add_ideology = ideology_magoclast
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				add_ideology = ideology_skeptic
+			}
+		}
+	}
+
+	modifier = {
+
+	}
+	
+	ai_weight = {
+
+	}
+
+	unlocking_technologies = {
+		veil_1
+	}
+}
+
+
+veil_3 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+
+	}
+	
+	ai_weight = {
+
+	}
+
+	unlocking_technologies = {
+		veil_2
+	}
+}
+

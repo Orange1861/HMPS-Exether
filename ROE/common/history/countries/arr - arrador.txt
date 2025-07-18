@@ -1,0 +1,90 @@
+﻿COUNTRIES = {
+	c:ARR = {
+		
+		ig:ig_industrialists ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+		
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+		
+		effect_starting_technology_tier_1_tech = yes
+
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:luxury_potions
+		add_taxed_goods = g:services
+
+		set_tax_level = medium
+
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = thaumacore_factories
+		add_technology_researched = ectoplasm_engines
+		add_technology_researched = joint_stock_companies
+
+		# Laws 
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_ecumenical_recognition
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_laissez_faire_corpo
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_guild_bondage
+		activate_law = law_type:law_artificer_guilds
+		
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+		set_institution_investment_level = {
+			institution = institution_magical_focus
+			level = 2
+		}
+
+		add_journal_entry = {
+			type = je_dcw_countdown
+		}
+
+		add_journal_entry = {
+			type = je_vinewell_accords
+		}
+
+		add_company = company_type:company_thundergear
+		company:company_thundergear = {
+        	set_company_establishment_date = 1121.6.1
+        	set_company_state_region = s:STATE_SHARPWOOD
+        }
+
+		add_company = company_type:company_jingleroot
+		company:company_jingleroot = {
+        	set_company_establishment_date = 1164.5.15
+        	set_company_state_region = s:STATE_THE_MATCHES
+        }
+
+		add_company = company_type:company_clearbough_estates
+		company:company_clearbough_estates = {
+			set_company_establishment_date = 1103.12.31
+			set_company_state_region = s:LOWER_GOLDENLEAF
+			add_owned_country = c:CLR #links the country to this company
+		}
+	}
+}

@@ -1,0 +1,63 @@
+﻿state_adventurer_coverage_value = {
+	add = modifier:state_adventurer_coverage_add
+	multiply = state_adventurer_coverage_bonus
+	min = 0.01
+}
+
+state_adventurer_coverage_bonus = {
+	add = 1
+	add = modifier:state_adventurer_coverage_mult 
+}
+
+state_adventurer_coverage_demand_urban_center_reduction = {
+	value = 0
+	if = {
+		limit = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+			}
+		}
+		add = this.b:building_urban_center.level
+	}
+}
+
+state_adventurer_coverage_demand_arable_land = {
+	value = 0
+	add = this.free_arable_land
+	max = 100
+}
+
+state_adventurer_coverage_demand_pollution = {
+	value = 0
+	add = pollution_generation
+	IF = {
+		limit = {
+			arable_land > 0
+		}
+		divide = arable_land
+	}
+
+}
+
+state_adventurer_coverage_demand = {
+	value = 0
+	add = state_adventurer_coverage_demand_arable_land
+	add = state_adventurer_coverage_demand_pollution
+	subtract = state_adventurer_coverage_demand_urban_center_reduction
+
+	min = 0
+}
+
+state_adventurer_coverage_balance = {
+	value = 0
+	add = state_adventurer_coverage_value
+	subtract = state_adventurer_coverage_demand
+}
+
+state_adventurer_coverage_multiplier = {
+	value = 0
+	add = state_adventurer_coverage_demand
+	divide = state_adventurer_coverage_value
+	subtract = 1
+	max = 2
+}

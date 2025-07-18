@@ -1,0 +1,264 @@
+﻿namespace = gamerule
+
+gamerule.1 = {
+	type = country_event
+	placement = root
+
+	title = gamerule.1.t
+	dlc = dlc_roe
+	hidden = yes
+
+	duration = 1
+	immediate = {
+		if = {
+			limit = {
+				has_game_rule = bloodtithe_mode_basic
+			}
+			every_country = {
+				add_journal_entry = {
+					type = je_vampire_university
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_game_rule = bloodtithe_mode_player_basic
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				add_journal_entry = {
+					type = je_vampire_university
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_game_rule = bloodtithe_mode_crazy
+			}
+			every_country = {
+				add_journal_entry = {
+					type = je_vampire_university
+				}
+
+				add_journal_entry = {
+					type = je_blood_tribunal
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_game_rule = bloodtithe_mode_player_crazy
+			}
+			every_country = {
+				limit = {
+					NOT = { 
+						any_primary_culture = {
+							has_discrimination_trait = vampiric
+						} 
+					}
+					is_ai = no
+				}
+
+				add_journal_entry = {
+					type = je_vampire_university
+				}
+
+				add_journal_entry = {
+					type = je_blood_tribunal
+				}
+			}
+		}
+	}
+}
+
+# gamerule.2 = {
+# 	type = country_event
+# 	placement = root
+
+# 	title = gamerule.2
+# 	dlc = dlc_roe
+
+# 	duration = 1
+# 	immediate = {
+
+# 	}
+# 	option = {
+# 		if = {
+# 			limit = {
+# 				has_game_rule = bloodtithe_mode_basic
+# 			}
+# 			custom_tooltip = basic_tt
+# 			every_country = {
+# 				add_journal_entry = {
+# 					type = je_vampire_university
+# 				}
+# 			}
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				has_game_rule = bloodtithe_mode_player_basic
+# 			}
+# 			custom_tooltip = player_basic_tt
+# 			every_country = {
+# 				limit = {
+# 					is_ai = no
+# 				}
+# 				add_journal_entry = {
+# 					type = je_vampire_university
+# 				}
+# 			}
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				has_game_rule = bloodtithe_mode_crazy
+# 			}
+# 			custom_tooltip = crazy_tt
+# 			every_country = {
+# 				limit = {
+# 					NOT = { 
+# 						any_primary_culture = {
+# 							has_discrimination_trait = vampiric
+# 						} 
+# 					}
+# 					is_ai = no
+# 				}
+# 				bloodtithe_mode_culture_switch = yes
+# 				midnight_enforcement = yes
+# 			}
+# 			every_country = {
+# 				add_journal_entry = {
+# 					type = je_vampire_university
+# 				}
+
+# 				add_journal_entry = {
+# 					type = je_blood_tribunal
+# 				}
+# 			}
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				has_game_rule = bloodtithe_mode_player_crazy
+# 			}
+# 			custom_tooltip = player_crazy_tt
+# 			every_country = {
+# 				limit = {
+# 					NOT = { 
+# 						any_primary_culture = {
+# 							has_discrimination_trait = vampiric
+# 						} 
+# 					}
+# 					is_ai = no
+# 				}
+# 				bloodtithe_mode_culture_switch = yes
+# 				midnight_enforcement = yes
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					is_ai = no
+# 				}
+# 				add_journal_entry = {
+# 					type = je_vampire_university
+# 				}
+
+# 				add_journal_entry = {
+# 					type = je_blood_tribunal
+# 				}
+# 			}
+# 		}
+
+# 	}
+# }
+
+gamerule.3 = {
+	type = country_event
+	placement = root
+	hidden = yes
+	title = gamerule.2
+	dlc = dlc_roe
+
+	duration = 1
+	immediate = {
+		trigger_event = {
+			id = gamerule.1
+		}
+		trigger_event = {
+			id = gamerule.5
+		}
+	}
+}
+
+gamerule.4 = {
+	type = country_event
+	placement = root
+	
+	title = gamerule.4
+	dlc = dlc_roe
+	hidden = yes
+	duration = 1
+	immediate = {
+		bloodtithe_mode_culture_switch = yes
+		midnight_enforcement = yes
+	}
+
+}
+
+gamerule.5 = { #ceraun ai coinflip, has to be after gamestart for ai check to work
+	type = country_event
+	placement = root
+	
+	title = gamerule.4
+	dlc = dlc_roe
+	hidden = yes
+	duration = 1
+	immediate = {
+		c:CER ?= {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				random_list = {
+				60 = {
+					set_variable = evil_zarnak_var
+				}
+				20 = {
+		
+				}
+				20 = {
+					c:CDW ?= {
+						add_modifier = {
+						name = reining_in_company
+						years = 10
+					}
+					}
+					
+				}
+			}
+			}
+		}
+	}
+
+}
+
+gamerule.6 = { #test event
+	type = country_event
+	placement = root
+	
+	dlc = dlc_roe
+	hidden = yes
+	duration = 1
+	trigger = {
+		has_variable = soulwrought_production_var
+	}
+	immediate = {
+		
+	}
+
+}

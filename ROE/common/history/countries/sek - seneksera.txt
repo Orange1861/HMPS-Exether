@@ -1,0 +1,17 @@
+﻿COUNTRIES = {
+	c:SEK = {
+		effect_starting_technology_tier_3_tech = yes
+		
+		effect_starting_politics_traditional = yes
+
+
+		add_journal_entry = {
+			type = je_winds_of_change
+		}
+
+		activate_law = law_type:law_chiefdom
+		activate_law = law_type:law_elder_council
+		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_slavery_banned
+	}
+}

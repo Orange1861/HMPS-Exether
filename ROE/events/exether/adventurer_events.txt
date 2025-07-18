@@ -1,0 +1,32 @@
+﻿namespace = adventurer_events
+
+
+adventurer_events.1 = {
+	type = country_event
+	title = adventurer_events.1.t
+	desc = adventurer_events.1.d
+	flavor = adventurer_events.1.f
+
+	event_image = {
+		video = "asia_factory_accident"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	trigger = {
+		always = no
+	}
+	immediate = {
+
+	}
+
+	option = {
+		name = adventurer_events.1.a
+
+	}
+
+}
+

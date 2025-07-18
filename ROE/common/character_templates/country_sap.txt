@@ -1,0 +1,14 @@
+﻿SAP_zokmir_valak = {
+    first_name = "Zokmir"
+    last_name = "Valak"
+    historical = yes
+    ruler = yes
+    age = 42
+    interest_group = ig_mages
+    ideology = ideology_jingoist_leader
+    on_created = {
+        set_variable = {
+            name = is_zokmir
+        }
+    }
+}

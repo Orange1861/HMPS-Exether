@@ -1,0 +1,14 @@
+﻿AKB_bhimsen_thapa = {
+    first_name = "Bhimsen"
+    last_name = "Thapa"
+    historical = yes
+    ruler = yes
+    age = 30
+    interest_group = ig_mages
+    ideology = ideology_jingoist_leader
+    on_created = {
+        set_variable = {
+            name = is_bhimsen
+        }
+    }
+}

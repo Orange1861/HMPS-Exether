@@ -1,0 +1,810 @@
+﻿# GRYPHON
+calculate_arcanas_gryphon = {
+	clear_variable_list = available_arcana_id_gryphon_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_gryphon_1
+		}
+		add_to_variable_list = { name = active_arcana_id_gryphon_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_gryphon_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_gryphon_2
+		}
+		add_to_variable_list = { name = active_arcana_id_gryphon_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 2 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_gryphon_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_gryphon_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_gryphon_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 3 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_gryphon_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_gryphon_4
+		}
+		add_to_variable_list = { name = active_arcana_id_gryphon_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 4 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_gryphon_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_gryphon_5
+		}
+		add_to_variable_list = { name = active_arcana_id_gryphon_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 5 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_gryphon_list target = 5 }
+	}
+}
+
+# JUSTICE
+calculate_arcanas_justice = {
+
+	clear_variable_list = available_arcana_id_justice_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_justice_1
+		}
+		add_to_variable_list = { name = active_arcana_id_justice_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 101 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_justice_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_justice_2
+		}
+		add_to_variable_list = { name = active_arcana_id_justice_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 102 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_justice_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_justice_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_justice_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 103 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_justice_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_justice_4
+		}
+		add_to_variable_list = { name = active_arcana_id_justice_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 104 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_justice_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_justice_5
+		}
+		add_to_variable_list = { name = active_arcana_id_justice_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 105 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_justice_list target = 5 }
+	}
+}
+
+# SPHINX
+calculate_arcanas_sphinx = {
+
+	clear_variable_list = available_arcana_id_sphinx_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_sphinx_1
+		}
+		add_to_variable_list = { name = active_arcana_id_sphinx_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 201 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_sphinx_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_sphinx_2
+		}
+		add_to_variable_list = { name = active_arcana_id_sphinx_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 202 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_sphinx_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_sphinx_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_sphinx_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 203 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_sphinx_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_sphinx_4
+		}
+		add_to_variable_list = { name = active_arcana_id_sphinx_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 204 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_sphinx_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_sphinx_5
+		}
+		add_to_variable_list = { name = active_arcana_id_sphinx_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 205 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_sphinx_list target = 5 }
+	}
+}
+
+# GOLEM
+calculate_arcanas_golem = {
+
+	clear_variable_list = available_arcana_id_golem_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_golem_1
+		}
+		add_to_variable_list = { name = active_arcana_id_golem_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 301 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_golem_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_golem_2
+		}
+		add_to_variable_list = { name = active_arcana_id_golem_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 302 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_golem_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_golem_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_golem_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 303 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_golem_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_golem_4
+		}
+		add_to_variable_list = { name = active_arcana_id_golem_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 304 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_golem_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_golem_5
+		}
+		add_to_variable_list = { name = active_arcana_id_golem_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 305 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_golem_list target = 5 }
+	}
+}
+
+# UNICORN
+calculate_arcanas_unicorn = {
+
+	clear_variable_list = available_arcana_id_unicorn_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_unicorn_1
+		}
+		add_to_variable_list = { name = active_arcana_id_unicorn_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 401 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_unicorn_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_unicorn_2
+		}
+		add_to_variable_list = { name = active_arcana_id_unicorn_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 402 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_unicorn_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_unicorn_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_unicorn_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 403 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_unicorn_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_unicorn_4
+		}
+		add_to_variable_list = { name = active_arcana_id_unicorn_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 404 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_unicorn_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_unicorn_5
+		}
+		add_to_variable_list = { name = active_arcana_id_unicorn_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 405 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_unicorn_list target = 5 }
+	}
+}
+
+# FEY
+calculate_arcanas_fey = {
+
+	clear_variable_list = available_arcana_id_fey_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_fey_1
+		}
+		add_to_variable_list = { name = active_arcana_id_fey_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 501 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fey_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fey_2
+		}
+		add_to_variable_list = { name = active_arcana_id_fey_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 502 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fey_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fey_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_fey_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 503 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fey_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fey_4
+		}
+		add_to_variable_list = { name = active_arcana_id_fey_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 504 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fey_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fey_5
+		}
+		add_to_variable_list = { name = active_arcana_id_fey_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 505 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fey_list target = 5 }
+	}
+}
+
+# PHOENIX
+calculate_arcanas_phoenix = {
+
+	clear_variable_list = available_arcana_id_phoenix_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_phoenix_1
+		}
+		add_to_variable_list = { name = active_arcana_id_phoenix_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 601 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_phoenix_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_phoenix_2
+		}
+		add_to_variable_list = { name = active_arcana_id_phoenix_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 602 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_phoenix_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_phoenix_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_phoenix_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 603 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_phoenix_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_phoenix_4
+		}
+		add_to_variable_list = { name = active_arcana_id_phoenix_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 604 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_phoenix_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_phoenix_5
+		}
+		add_to_variable_list = { name = active_arcana_id_phoenix_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 605 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_phoenix_list target = 5 }
+	}
+}
+
+# DJINN
+calculate_arcanas_djinn = {
+
+	clear_variable_list = available_arcana_id_djinn_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_djinn_1
+		}
+		add_to_variable_list = { name = active_arcana_id_djinn_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 701 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_djinn_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_djinn_2
+		}
+		add_to_variable_list = { name = active_arcana_id_djinn_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 702 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_djinn_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_djinn_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_djinn_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 703 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_djinn_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_djinn_4
+		}
+		add_to_variable_list = { name = active_arcana_id_djinn_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 704 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_djinn_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_djinn_5
+		}
+		add_to_variable_list = { name = active_arcana_id_djinn_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 705 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_djinn_list target = 5 }
+	}
+}
+
+# SIREN
+calculate_arcanas_siren = {
+
+	clear_variable_list = available_arcana_id_siren_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_siren_1
+		}
+		add_to_variable_list = { name = active_arcana_id_siren_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 801 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_siren_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_siren_2
+		}
+		add_to_variable_list = { name = active_arcana_id_siren_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 802 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_siren_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_siren_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_siren_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 803 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_siren_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_siren_4
+		}
+		add_to_variable_list = { name = active_arcana_id_siren_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 804 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_siren_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_siren_5
+		}
+		add_to_variable_list = { name = active_arcana_id_siren_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 805 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_siren_list target = 5 }
+	}
+}
+
+# KRAKEN
+calculate_arcanas_kraken = {
+
+	clear_variable_list = available_arcana_id_kraken_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_kraken_1
+		}
+		add_to_variable_list = { name = active_arcana_id_kraken_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 901 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_kraken_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_kraken_2
+		}
+		add_to_variable_list = { name = active_arcana_id_kraken_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 902 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_kraken_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_kraken_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_kraken_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 903 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_kraken_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_kraken_4
+		}
+		add_to_variable_list = { name = active_arcana_id_kraken_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 904 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_kraken_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_kraken_5
+		}
+		add_to_variable_list = { name = active_arcana_id_kraken_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 905 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_kraken_list target = 5 }
+	}
+}
+
+# FIEND
+calculate_arcanas_fiend = {
+
+	clear_variable_list = available_arcana_id_fiend_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_fiend_1
+		}
+		add_to_variable_list = { name = active_arcana_id_fiend_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1001 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fiend_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fiend_2
+		}
+		add_to_variable_list = { name = active_arcana_id_fiend_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1002 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fiend_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fiend_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_fiend_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1003 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fiend_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fiend_4
+		}
+		add_to_variable_list = { name = active_arcana_id_fiend_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1004 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fiend_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fiend_5
+		}
+		add_to_variable_list = { name = active_arcana_id_fiend_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1005 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fiend_list target = 5 }
+	}
+}
+
+# ANGEL
+calculate_arcanas_angel = {
+
+	clear_variable_list = available_arcana_id_angel_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_angel_1
+		}
+		add_to_variable_list = { name = active_arcana_id_angel_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1101 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_angel_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_angel_2
+		}
+		add_to_variable_list = { name = active_arcana_id_angel_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1102 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_angel_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_angel_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_angel_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1103 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_angel_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_angel_4
+		}
+		add_to_variable_list = { name = active_arcana_id_angel_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1104 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_angel_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_angel_5
+		}
+		add_to_variable_list = { name = active_arcana_id_angel_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1105 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_angel_list target = 5 }
+	}
+}
+
+# DRAGON
+calculate_arcanas_dragon = {
+
+	clear_variable_list = available_arcana_id_dragon_list
+	if = {
+		limit = {
+			has_modifier = country_arcana_dragon_1
+		}
+		add_to_variable_list = { name = active_arcana_id_dragon_list target = 1 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1201 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_dragon_list target = 1 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_dragon_2
+		}
+		add_to_variable_list = { name = active_arcana_id_dragon_list target = 2 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1202 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_dragon_list target = 2 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_dragon_3 
+		}
+		add_to_variable_list = { name = active_arcana_id_dragon_list target = 3 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1203 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_dragon_list target = 3 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_dragon_4
+		}
+		add_to_variable_list = { name = active_arcana_id_dragon_list target = 4 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1204 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_dragon_list target = 4 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_dragon_5
+		}
+		add_to_variable_list = { name = active_arcana_id_dragon_list target = 5 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1205 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_dragon_list target = 5 }
+	}
+}
+
+calculate_arcanas = {
+	# Clear entity-specific active lists
+	clear_variable_list = active_arcana_id_all_list
+	clear_variable_list = active_arcana_id_gryphon_list
+	clear_variable_list = active_arcana_id_justice_list
+	clear_variable_list = active_arcana_id_sphinx_list
+	clear_variable_list = active_arcana_id_golem_list
+	clear_variable_list = active_arcana_id_unicorn_list
+	clear_variable_list = active_arcana_id_fey_list
+	clear_variable_list = active_arcana_id_phoenix_list
+	clear_variable_list = active_arcana_id_djinn_list
+	clear_variable_list = active_arcana_id_siren_list
+	clear_variable_list = active_arcana_id_kraken_list
+	clear_variable_list = active_arcana_id_fiend_list
+	clear_variable_list = active_arcana_id_angel_list
+	clear_variable_list = active_arcana_id_dragon_list
+	# Calculate arcanas for each entity in order
+	calculate_arcanas_gryphon = yes
+	calculate_arcanas_justice = yes
+	calculate_arcanas_sphinx = yes
+	calculate_arcanas_golem = yes
+	calculate_arcanas_unicorn = yes
+	calculate_arcanas_fey = yes
+	calculate_arcanas_phoenix = yes
+	calculate_arcanas_djinn = yes
+	calculate_arcanas_siren = yes
+	calculate_arcanas_kraken = yes
+	calculate_arcanas_fiend = yes
+	calculate_arcanas_angel = yes
+	calculate_arcanas_dragon = yes
+}

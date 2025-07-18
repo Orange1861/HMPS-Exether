@@ -1,0 +1,479 @@
+﻿#Northern Protectorate
+XXG = {
+	color = { 60 70 60 }
+
+	country_type = organization_tag
+
+	tier = hegemony
+
+	cultures = { cithrel } 
+	capital = STATE_DRAGDA
+}
+
+#Achon
+AHO = {
+	color = { 147  82  173 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { achonian } 
+	capital = STATE_LEYLINE_COAST
+}
+
+#Arrador
+ARR = {
+	color = { 87  130  199 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { dorite } 
+	capital = STATE_VICEROYS_PEARL
+}
+
+#Ebridor
+EBR = {
+	color = { 205  212  228 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { eberri } 
+	capital = STATE_RUNEPORT_GALESTRUM
+}
+
+#Pefril
+PFL = {
+	color = { 105  82  228 }
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { changeling } 
+	capital = STATE_ROCHENSTONE
+}
+
+#Emerald League
+EME = {
+	color = { 56 143 53 } 
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { ocelian } 
+	capital = STATE_SEUTE_EPHEI
+}
+
+#Ceraun
+CER = {
+	color = rgb{ 200  100  100 } 
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { cerunite } 
+	capital = STATE_LANDING_AT_SEA
+}
+
+#Gladcross
+GCS = {
+	color = rgb{ 100  160  60 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { coast_halfling rivierling } 
+	capital = STATE_PEARFIELDS
+}
+
+#Clearbough Estates
+CLR = {
+	color = rgb{ 100  150  100 } 
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { clearbough } 
+	capital = STATE_CLEARBOUGH_ESTATES
+}
+
+#Vozmead
+VOZ = {
+	color = hsv360{ 20  80  80 }
+
+	social_hierarchy = dwarf_social_hierarchy
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { vozi } 
+	capital = STATE_SKYPIERCER_PEAK
+}
+
+#Yavira
+DRO = {
+	color = { 211  220  240 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { aridrun } 
+	capital = STATE_CINPHNPHAINN
+}
+
+#Union of the Sands
+UTS = {
+	color = hsv360{ 20  60  80 }
+
+	country_type = recognized 
+
+	tier = empire
+
+	cultures = { vozi aridrun }
+	capital = STATE_SKYPIERCER_PEAK
+}
+
+#Whisker Fields
+WHI = {
+	color = rgb{ 100  90  90 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { mousefolk }
+	capital = STATE_WHISKER_FIELDS
+}
+
+#Durandmarche
+DRM = {
+	color = rgb{ 153  153  0 }
+
+	country_type = recognized 
+
+	tier = principality
+
+	religion = cult_of_commerce
+	cultures = { bossardi }
+	capital = STATE_DURANS_LAND
+}
+
+#Leonceau
+LEO = {
+	color = rgb{ 255 200 30 }
+
+	country_type = recognized
+
+	tier = principality
+	
+	religion = rose_court
+	cultures = { bossardi }
+	capital = STATE_FAR_SHORE
+}
+
+#Bossardie
+BOS = {
+	color = rgb{ 205 220 30 }
+
+	country_type = recognized
+
+	tier = empire
+	cultures = { bossardi } 
+	capital = STATE_THE_AMBER_RUN
+}
+
+#Alchemist's Refuse
+ALC = {
+	color = rgb{ 0  70  0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { mutant } 
+	capital = STATE_VIRULENT_EGRESS
+}
+
+#Moorweald Wilds
+MOO = {
+	color = rgb{ 0  90  0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { coast_halfling } 
+	capital = STATE_INNER_MOORWEALD
+}
+
+#Braisebranch
+BRB = {
+	color = rgb{ 0  90  120 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { highland_halfling } 
+	capital = STATE_OVERBURROW
+}
+
+#Northland Estate
+BRB = {
+	color = rgb{ 30  50  60 } #random
+
+	country_type = recognized
+
+	tier = grand_principality
+	cultures = { highland_halfling  } 
+	capital = STATE_OVERBURROW
+}
+
+#Grand Estate
+GES = {
+	color = rgb{ 78  120  60 } #random
+
+	country_type = recognized
+
+	tier = kingdom
+	cultures = { highland_halfling clearbough } 
+	capital = STATE_OVERBURROW
+}
+
+
+#Smalland
+SLD = {
+	color = rgb{ 0 255 80 }
+
+	country_type = recognized
+
+	tier = empire
+	cultures = { highland_halfling clearbough } 
+	capital = STATE_OVERBURROW
+}
+
+#Cherryn
+CHE = {
+	color = rgb{ 255 0 45 }
+
+	country_type = recognized
+
+	tier = empire
+	cultures = { coast_halfling rivierling } 
+	capital = STATE_OUTER_MOORWEALD
+}
+
+#Greenhand
+GRH = {
+	color = rgb{ 0  120  30 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { highland_halfling } 
+	capital = STATE_UPPER_GOLDENLEAF
+}
+
+#Fairhearth
+FTH = {
+	color = rgb{ 120  90  0 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { highland_halfling } 
+	capital = STATE_NEWBANKS
+}
+
+#Saltboot Borough
+SLB = {
+	color = rgb{ 190  180  80 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { coast_halfling } 
+	capital = STATE_FIRST_BOROUGH
+}
+
+#Smallcoast
+SMA = {
+	color = rgb{ 180  60  0 } 
+
+	country_type = recognized
+
+	tier = grand_principality
+
+	cultures = { coast_halfling } 
+	capital = STATE_OUTER_MOORWEALD
+}
+
+#Gladshire
+GDS = {
+	color = rgb{ 255  121  0 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { rivierling } 
+	capital = STATE_PEARFIELDS
+}
+
+#Mimic Demesne
+MMD = {
+	color = rgb{ 100  0  100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { changeling } 
+	capital = STATE_SHIFTING_SCAR
+}
+
+#Vyndurvoht
+VHT  = {
+	color = rgb{ 100  20  120 } 
+
+	country_type = recognized
+	tier = principality
+
+	cultures = { vynduri } 
+	capital = STATE_VYNDERVOHT
+}
+
+#Ashwall
+ASW  = {
+	color = rgb{ 120  120  120 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { buramog } 
+	capital = STATE_ASHWICK
+}
+
+#Craggedwyn
+CDW = {
+	color = rgb{ 87 47 47 } 
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { cerunite } 
+	capital = STATE_CRAGGEDWYN
+}
+
+#Thurgatan's Land
+TLD = {
+	color = rgb{ 20  40  60 } 
+
+	social_hierarchy = dwarf_social_hierarchy
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { tolorr } 
+	capital = STATE_VOZMEAD_BORDERLANDS
+}
+
+#Serbinelle
+SEB = {
+	color = rgb{ 30  60  90 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { enelli } 
+	capital = STATE_SERBINELLE
+}
+
+#Rotdrinker
+RTD = {
+	color = rgb{ 50 95 90 } 
+	# 50  95  50 old color
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { buramog } 
+	capital = STATE_EASTERN_PLAGUEWOOD
+}
+
+#Bloodbound
+BDB = {
+	color = rgb{ 30 65 20 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { buramog } 
+	capital = STATE_BURAMONG
+}
+
+#Buralair
+ORK = {
+	color = rgb{ 185  22  12 } 
+
+	country_type = preindustrial 
+
+	tier = kingdom
+
+	cultures = { buramog } 
+	capital = STATE_BURAMONG
+}
+
+#Barkscratcher
+BRC = {
+	color = rgb{ 10  10  140 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { buramog } 
+	capital = STATE_PLAGUEWOOD_HINTERLANDS
+}
+
+#Cliffdweller
+CLD = {
+	color = rgb{ 10  10  120 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { buramog } 
+	capital = STATE_PLAGUES_END
+}
+
+#Alkudh
+RCR = {
+	color = rgb{ 150 140 20 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { korkaz } 
+	capital = STATE_DILAFSHAN
+}

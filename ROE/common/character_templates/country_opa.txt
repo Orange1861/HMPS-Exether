@@ -1,0 +1,20 @@
+﻿# Opalath - OPA
+
+OPA_opalath_leader_template = {
+ 			first_name = Tisos
+   			last_name = Vahtimyis
+    		historical = yes
+			ruler = yes
+    		age = 31
+    		dna = dna_opalath_ruler
+    		culture = cu:kashtarnel
+			religion = rel:orthodox_fosirmi
+			interest_group = ig_petty_bourgeoisie
+   			ideology = ideology_ethno_nationalist
+    			traits = {
+				ambitious
+				ruthless
+				bigoted
+				demagogue
+    }
+}

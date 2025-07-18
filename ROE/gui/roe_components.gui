@@ -1,0 +1,83 @@
+types = roe_components  {
+
+type roe_context_menu = flowcontainer {
+				direction = vertical
+				resizeparent = no
+				margin = { 10 15 }
+				
+
+				state = {
+					name = sound
+					trigger_on_create = yes
+					start_sound = {
+						using = ui_sfx_global_panel_show
+					}
+				}
+
+				
+
+						block "position" {
+							position = { 0 0 }
+						}
+
+						block "visible" {
+							visible = yes
+						}
+
+						background = {
+							using = frame_small_mask
+							using = default_background
+							
+						}
+						background = {
+							using = frame_small
+						}
+
+				scrollarea = {
+				scrollbarpolicy_horizontal = always_off
+				scrollbar_vertical = {
+					using = vertical_scrollbar
+				}
+
+				maximumsize = { -1 800 }
+				autoresizescrollarea = yes
+			
+				scrollwidget = {
+					flowcontainer = {
+						margin = { 8 0 }
+						parentanchor = top|left
+						direction = vertical
+
+						block "header_text" {
+							textbox = {
+								autoresize = yes
+								default_format = "#header"
+								align = left|nobaseline
+								margin_left = 10
+								margin_bottom = 2
+
+								block "title_text" {
+									raw_text = "Default Title"
+								}
+							}
+						}
+
+						block "list" {
+							flowcontainer = {
+								using = default_list_position
+								spacing = 2
+
+								direction = vertical
+
+								block "items" {
+									
+								}
+							}
+						}
+					}
+				}
+			}
+
+
+}
+}

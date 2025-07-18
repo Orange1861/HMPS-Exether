@@ -1,0 +1,78 @@
+﻿puritan_guard_devout = {
+	type = interest_group
+	log_loc_errors = no
+	
+	text = {
+		trigger = {
+			owner = {
+				OR = {
+					AND = {
+						c:OAZ ?= this
+						OR = {
+							is_subject = no
+							any_overlord_or_above ?= {
+								NOT = { country_has_state_religion = rel:marktarian_antimagic }
+							}
+						}
+					}
+					AND = {
+						exists = c:OAZ
+						is_direct_subject_of = c:OAZ
+					}
+				}
+			}
+		}
+		localization_key = ig_generic_puritan_guard
+	}
+	text = {
+		trigger = {
+			owner = {
+				OR = {
+					AND = {
+						c:SNM ?= this
+						OR = {
+							is_subject = no
+							any_overlord_or_above ?= {
+								NOT = { country_has_state_religion = rel:marktarian_antimagic }
+							}
+						}
+					}
+					AND = {
+						exists = c:SNM
+						is_direct_subject_of = c:SNM
+					}
+				}
+			}
+		}
+		localization_key = ig_faithful_puritan_guard
+	}
+	text = {
+		trigger = {
+			owner = {
+				OR = {
+					AND = {
+						c:ZHR ?= this
+						OR = {
+							is_subject = no
+							any_overlord_or_above ?= {
+								NOT = { country_has_state_religion = rel:marktarian_antimagic }
+							}
+						}
+					}
+					AND = {
+						exists = c:ZHR
+						is_direct_subject_of = c:ZHR
+					}
+				}
+			}
+		}
+		localization_key = ig_honorable_puritan_guard
+	}
+	text = {
+		trigger = {
+			always = no
+		}
+		fallback = yes
+		localization_key = ig_independent_puritan_guard
+	}
+}

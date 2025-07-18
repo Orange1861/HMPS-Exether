@@ -1,0 +1,141 @@
+﻿# production
+
+pm_artifactory_hand_sorting = {
+
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"
+
+
+	building_modifiers = {
+	    level_scaled = {
+			building_employment_laborers_add = 4250
+	    }
+
+        workforce_scaled = {
+            goods_input_relics_add = 20    # x30 = 600
+
+            goods_output_trinkets_add = 10   # x100 = 1000  == 400
+
+        }
+    }
+}
+
+pm_artifactory_lenses_of_identification = {
+
+	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+
+    unlocking_technologies = {
+        advanced_contraptions
+	}
+
+	building_modifiers = {
+	    level_scaled = {
+            building_employment_laborers_add = 3250
+            building_employment_machinists_add = 1000
+	    }
+
+        workforce_scaled = {
+            goods_input_gizmos_add = 5      #60  = 300
+            goods_input_relics_add = 45      #30 = 1350
+
+            goods_output_trinkets_add = 25    # x100 = 2500 == 850
+
+        }
+    }
+}
+
+pm_artifactory_lenses_of_identification_2 = {
+
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+
+    unlocking_technologies = {
+        ectoplasm_engines
+	}
+
+	building_modifiers = {
+	    level_scaled = {
+            building_employment_laborers_add = 2500
+            building_employment_machinists_add = 1750
+	    }
+
+        workforce_scaled = {
+            goods_input_thaumacores_add = 10 #150 = 1500
+            goods_input_gizmos_add = 10      # x60  = 600
+            goods_input_relics_add = 60      # x50 = 1800
+
+            goods_output_trinkets_add = 50    # x100 = 5000 == 1100
+
+        }
+    }
+}
+
+# oversight
+
+pm_artifactory_adventurer_crews = {
+
+	texture = "gfx/interface/icons/production_method_icons/state_atheism.dds"
+
+	building_modifiers = {
+	    level_scaled = {
+	        building_employment_adventurers_add = 500
+	        building_employment_shopkeepers_add = 250
+	    }
+    }
+}
+
+pm_artifactory_clergy_oversight = {
+
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+
+	building_modifiers = {
+	    level_scaled = {
+	        building_employment_clergymen_add = 750
+	    }
+    }
+}
+
+pm_artifactory_government_run = {
+
+	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
+
+	building_modifiers = {
+	    level_scaled = {
+	        building_employment_bureaucrats_add = 750
+	    }
+    }
+}
+
+# automation
+
+pm_artifactory_no_automation = {
+
+    texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+
+	building_modifiers = {
+	    level_scaled = {
+	    }
+    }
+}
+
+pm_artifactory_conveyor_belts = {
+
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+
+    unlocking_technologies = {
+        conveyors
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_blubber_add = 10 #40 200
+			goods_input_electricity_add = 5 #30 150
+		}
+	    level_scaled = {
+            building_employment_laborers_add = -2500
+	    }
+
+        workforce_scaled = {
+        }
+    }
+	required_input_goods = electricity
+}

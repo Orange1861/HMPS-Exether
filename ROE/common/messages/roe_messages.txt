@@ -1,0 +1,139 @@
+﻿plaguewood_invader_failed_attack_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/military.dds"
+	notification_type = feed
+	days = 28
+}
+
+plaguewood_invader_village_burned_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/military.dds"
+	notification_type = feed
+	days = 28
+}
+
+plaguewood_invader_supply_convoy_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/military.dds"
+	notification_type = feed
+	days = 28
+}
+
+plaguewood_tribe_defection_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/military.dds"
+	notification_type = feed
+	days = 28
+}
+
+plaguewood_invader_soldiers_defection_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/military.dds"
+	notification_type = feed
+	days = 28
+}
+
+plaguewood_buramog_refugees_arrived = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/death.dds"
+
+	notification_type = feed
+}
+
+buramog_deported_message = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/death.dds"
+
+	notification_type = feed
+}
+
+plaguewood_protest_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+
+	notification_type = feed
+}
+
+prestige_goods_ectoplasm_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_thaumacores_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_airships_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_chimesilt_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_blubber_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_monster_essence_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_potions_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_luxury_potions_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_wishstone_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_gizmos_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_ammunition_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_goods_cloudsilver_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}

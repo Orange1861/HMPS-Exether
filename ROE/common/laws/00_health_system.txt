@@ -1,0 +1,256 @@
+﻿law_no_health_system = {
+	group = lawgroup_health_system
+	icon = "gfx/interface/icons/law_icons/no_health_system.dds"
+	
+	progressiveness = 0
+	
+	modifier = {
+	}
+	
+	# AI shouldn't try to abolish institutions
+	ai_will_do = {
+		always = no
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}
+
+law_charitable_health_system = {
+	group = lawgroup_health_system
+	icon = "gfx/interface/icons/law_icons/charitable_health_system.dds"
+	
+	progressiveness = 50
+	
+	unlocking_technologies = {
+		medical_degrees
+	}
+
+	modifier = {
+		country_institution_cost_institution_health_system_mult = -0.2
+	}
+
+	institution = institution_health_system
+	institution_modifier = {
+		state_mortality_mult = -0.03
+		interest_group_ig_devout_pol_str_mult = 0.1
+		state_pollution_reduction_health_mult = -0.1
+		state_food_security_add = 0.02
+	}
+	
+	# Don't return to charity if we have something more advanced
+	ai_will_do = {
+		NOR = {
+			has_law = law_type:law_private_health_insurance
+			has_law = law_type:law_public_health_insurance
+		}
+	}
+	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}
+
+law_private_health_insurance = {
+	group = lawgroup_health_system
+	icon = "gfx/interface/icons/law_icons/private_health_insurance.dds"
+	
+	progressiveness = 75
+	
+	unlocking_technologies = {
+		pharmaceuticals
+	}
+	
+	modifier = {
+		country_institution_cost_institution_health_system_mult = -0.4
+		country_institution_health_system_max_investment_add = 2
+	}	
+	
+	institution = institution_health_system
+	institution_modifier = {
+		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
+		state_mortality_wealth_mult = -0.002
+		state_pollution_reduction_health_mult = -0.1
+		state_upper_strata_standard_of_living_add = 0.5
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}
+
+law_public_health_insurance = {
+	group = lawgroup_health_system
+	icon = "gfx/interface/icons/law_icons/public_health_insurance.dds"
+	
+	progressiveness = 100
+	
+	unlocking_technologies = {
+		pharmaceuticals
+	}
+	
+	modifier = {
+		country_institution_health_system_max_investment_add = 2
+	}		
+	
+	institution = institution_health_system
+	institution_modifier = {
+		state_mortality_mult = -0.05
+		state_pollution_reduction_health_mult = -0.15
+		state_standard_of_living_add = 0.5
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}
+
+law_genetic_testing = {
+	group = lawgroup_health_system
+	icon = "gfx/interface/icons/law_icons/genetic_healthcare.dds"
+	
+	progressiveness = 75
+	
+	unlocking_technologies = {
+		pumpjacks
+	}
+	
+	on_enact = {
+		# set_variable = mutant_acceptance_bonus
+		# every_scope_state = {
+		# 	add_acceptance = { target = cu:mutant value = 20 }
+		# }
+		if = {
+			limit = {
+				any_scope_state = {
+					state_has_building_type_levels = {
+					target = bt:building_mutagen_vats value >= 1
+					}
+				}
+			}
+			every_scope_state = {
+				limit = {
+						state_has_building_type_levels = {
+							target = bt:building_mutagen_vats value >= 1
+						}
+					}
+				activate_building = {
+					building = building_mutagen_vats
+				}
+			}
+		}
+	}
+
+	on_deactivate = {
+		# if = {
+		# 	limit = {
+		# 		has_variable = mutant_acceptance_bonus
+		# 	}
+		# 	every_scope_state = {
+		# 		add_acceptance = { target = cu:mutant value = -20 }
+		# 	}
+		# 	remove_variable = mutant_acceptance_bonus
+		# }
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_has_building_type_levels = {
+					target = bt:building_mutagen_vats value >= 1
+					}
+				}
+			}
+			every_scope_state = {
+				limit = {
+						state_has_building_type_levels = {
+							target = bt:building_mutagen_vats value >= 1
+						}
+					}
+					deactivate_building = {
+						building = building_mutagen_vats
+					}
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							OR = {
+								has_modifier = mutagen_central
+							}
+						}
+					}
+					every_scope_state = {
+						limit = {
+							OR = {
+								has_modifier = mutagen_central
+							}
+						}
+					remove_modifier = mutagen_central
+					}
+		}
+
+
+			}
+			if = {
+				limit = {
+					OR = {
+						has_modifier = centralized_mutagenetic_testing
+						has_modifier = heavily_centralized_mutagenetic_testing
+					}
+				}
+				remove_modifier = centralized_mutagenetic_testing
+				remove_modifier = heavily_centralized_mutagenetic_testing
+			}
+	}
+
+	modifier = {
+		country_institution_cost_institution_health_system_mult = -0.2
+		country_institution_health_system_max_investment_add = 2
+		# country_allow_assimilation_violent_hostility_bool = yes
+		# country_allow_assimilation_cultural_erasure_bool = yes
+		# country_allow_assimilation_open_prejudice_bool = yes
+		# country_allow_assimilation_second_rate_citizen_bool = yes
+		# country_allow_assimilation_full_acceptance_bool = yes
+		state_lower_strata_standard_of_living_add = -0.5
+		state_building_mutagen_vats_max_level_add = 1
+	}		
+	
+	institution = institution_health_system
+	institution_modifier = {
+		interest_group_ig_mages_pol_str_mult = 0.1
+		state_mutant_conversion = 0.0015
+		state_mortality_mult = -0.02
+		state_mortality_wealth_mult = -0.001
+		state_pollution_reduction_health_mult = -0.1
+		character_health_add = 0.25
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}

@@ -1,0 +1,594 @@
+﻿namespace = dcw_events
+
+dcw_events.1 = {
+	type = country_event
+	placement = root
+	title = dcw_events.1.t
+	desc = dcw_events.1.d
+	flavor = dcw_events.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_noble_burdens
+			}
+			save_scope_as = romantic_ig
+		}
+
+		random_law = {
+			limit = { type = law_type:law_guild_bondage }
+			save_scope_as = guild_bondage_scope
+		}
+	}
+
+	option = {
+		name = dcw_events.1.a
+		default_option = yes
+
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_noble_burdens
+			}
+			remove_ideology = ideology_noble_burdens
+		}
+
+		add_modifier = {
+			name = arrador_new_order
+			years = 10
+		}
+	}
+	option = { 
+		name = dcw_events.1.b
+
+		add_radicals = {
+			value = small_radicals
+			strata = upper
+		}
+		
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_noble_burdens
+			}
+			remove_ideology = ideology_noble_burdens
+		}
+
+		add_modifier = {
+			name = arrador_new_order
+			years = 15
+		}
+	}
+}
+
+dcw_events.2 = {
+	type = country_event
+	placement = root
+	title = dcw_events.2.t
+	desc = dcw_events.2.d
+	flavor = dcw_events.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+	}
+
+	option = {
+		name = dcw_events.2.a
+		
+		if = {
+			limit = {
+				exists = c:ROM
+			}
+			add_journal_entry = {
+				type = je_dcw_war
+				target = c:ROM
+			}
+			hidden_effect = {
+				c:ROM = {
+					add_journal_entry = {
+						type = je_dcw_war
+						target = c:ARR
+					}
+					ig:ig_landowners = {
+						add_ideology = ideology_noble_burdens
+					}
+				}
+			}
+			
+		}
+		else = {
+			add_journal_entry = {
+				type = je_dcw_war
+				target = c:CSA
+			}
+			hidden_effect = {
+				c:CSA = {
+					add_journal_entry = {
+						type = je_dcw_war
+						target = c:ARR
+					}
+	
+					ig:ig_industrialists= {
+						add_ideology = ideology_corporate_sovereignty
+					}
+				}
+			}
+		}
+	}
+}
+
+dcw_events.3 = {
+	type = country_event
+	placement = root
+	title = dcw_events.3.t
+	desc = dcw_events.3.d
+	flavor = dcw_events.3.f
+
+	duration = 3
+
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+
+	}
+
+	option = {
+		name = dcw_events.3.a
+		default_option = yes
+
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_corporate_sovereignty
+			}
+			remove_ideology = ideology_corporate_sovereignty
+		}
+
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_noble_burdens
+			}
+			remove_ideology = ideology_noble_burdens
+		}
+	}
+}
+
+dcw_events.4 = {
+	type = country_event
+	placement = root
+	title = dcw_events.4.t
+	desc = dcw_events.4.d
+	flavor = dcw_events.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_corporate_sovereignty
+			}
+			save_scope_as = consortium_scope
+		}
+
+		random_law = {
+			limit = { type = law_type:law_slavery_banned }
+			save_scope_as = slavery_law_scope
+		}
+	}
+
+	option = {
+		name = dcw_events.4.a
+		default_option = yes
+
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_corporate_sovereignty
+			}
+			remove_ideology = ideology_corporate_sovereignty
+		}
+
+		add_modifier = {
+			name = arrador_old_order
+			years = 10
+		}
+	}
+	option = { 
+		name = dcw_events.4.b
+
+		add_radicals = {
+			value = small_radicals
+			strata = upper
+		}
+		
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology_corporate_sovereignty
+			}
+			remove_ideology = ideology_corporate_sovereignty
+		}
+
+		add_modifier = {
+			name = arrador_old_order
+			years = 15
+		}
+	}
+}
+
+dcw_events.5 = {
+	type = country_event
+	placement = root
+	title = dcw_events.5.t
+	desc = dcw_events.5.d
+	flavor = dcw_events.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		ig:ig_landowners = {
+			save_scope_as = magnates_scope
+		}
+	}
+
+	option = {
+		name = dcw_events.5.a
+		default_option = yes
+
+		activate_law = law_type:law_slavery_banned
+	}
+}
+
+dcw_events.9 = {
+	type = country_event
+	placement = root
+	title = dcw_events.9.t
+	desc = dcw_events.9.d
+	flavor = dcw_events.9.f
+
+	duration = 3
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+	}
+
+	option = {
+		name = dcw_events.9.a
+
+		highlighted_option = yes
+
+		show_as_unavailable = { always = yes }
+
+		trigger = {
+			has_modifier = arrador_new_order
+		}
+
+		add_modifier = total_financial_autonomy
+	}
+
+	option = {
+		name = dcw_events.9.b
+
+		highlighted_option = yes
+
+		show_as_unavailable = { always = yes }
+
+		trigger = {
+			has_modifier = arrador_old_order
+		}
+
+		add_modifier = arrador_noble_privilege
+	}
+
+	option = {
+		name = dcw_events.9.c
+
+		highlighted_option = yes
+
+		show_as_unavailable = { always = yes }
+
+		trigger = {
+			NOR = {
+				has_modifier = arrador_new_order
+				has_modifier = arrador_old_order
+			}
+		}
+	}
+}
+
+dcw_events.10 = {
+	type = country_event
+	placement = root
+	title = dcw_events.10.t
+	desc = dcw_events.10.d
+	flavor = dcw_events.10.f
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_variable = lady_journal_var }
+	}
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		ig:ig_landowners = {
+			save_scope_as = magnates_scope
+		}
+
+		ig:ig_industrialists = {
+			save_scope_as = consortium_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_pro_consortium
+			}
+			save_scope_as = consortium_movement
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_romantic
+			}
+			save_scope_as = romantic_movement
+		}
+
+		set_variable = lady_journal_var
+	}
+
+	option = {
+		name = dcw_events.10.a
+		default_option = yes
+
+		add_modifier = {
+			name = arrador_magnates_angry
+			years = 5
+		}
+
+		scope:romantic_movement = {
+			add_modifier = {
+				name = lady_elara_journal
+				years = 20
+			}
+		}
+
+	}
+
+	option = {
+		name = dcw_events.10.b
+
+		add_modifier = {
+			name = arrador_consortium_angry
+			years = 5
+		}
+
+		scope:romantic_movement = {
+			add_modifier = {
+				name = lady_elara_journal
+				years = 20
+			}
+		}
+
+	}
+}
+
+dcw_events.11 = {
+	type = country_event
+	placement = root
+	title = dcw_events.11.t
+	desc = dcw_events.11.d
+	flavor = dcw_events.11.f
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_variable = landholder_league_var }
+	}
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		ig:ig_landowners = {
+			save_scope_as = magnates_scope
+		}
+
+		ig:ig_industrialists = {
+			save_scope_as = consortium_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_pro_consortium
+			}
+			save_scope_as = consortium_movement
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_romantic
+			}
+			save_scope_as = romantic_movement
+		}
+
+		set_variable = landholder_league_var
+	}
+
+	option = {
+		name = dcw_events.11.a
+		default_option = yes
+
+		add_modifier = {
+			name = arrador_magnates_angry
+			years = 5
+		}
+
+		add_modifier = {
+			name = corporate_pressure
+			years = 2
+		}
+
+		scope:romantic_movement = {
+			add_modifier = {
+				name = landholder_league
+				years = 20
+			}
+		}
+
+	}
+
+	option = {
+		name = dcw_events.11.b
+
+		add_modifier = {
+			name = arrador_consortium_angry
+			years = 5
+		}
+
+		add_modifier = {
+			name = noble_alms
+			years = 2
+		}
+
+		scope:romantic_movement = {
+			add_modifier = {
+				name = landholder_league
+				years = 20
+			}
+		}
+
+	}
+}
+
+dcw_events.12 = {
+	type = country_event
+	placement = root
+	title = dcw_events.12.t
+	desc = dcw_events.12.d
+	flavor = dcw_events.12.f
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_variable = ministry_of_labor_var }
+	}
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		ig:ig_landowners = {
+			save_scope_as = magnates_scope
+		}
+
+		ig:ig_industrialists = {
+			save_scope_as = consortium_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_pro_consortium
+			}
+			save_scope_as = consortium_movement
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_romantic
+			}
+			save_scope_as = romantic_movement
+		}
+
+		set_variable = ministry_of_labor_var
+	}
+
+	option = {
+		name = dcw_events.12.a
+		default_option = yes
+
+		add_modifier = {
+			name = arrador_magnates_angry
+			years = 5
+		}
+
+		scope:romantic_movement = {
+			add_modifier = {
+				name = arrador_labor_report
+				years = 20
+			}
+		}
+
+	}
+
+	option = {
+		name = dcw_events.12.b
+
+		add_modifier = {
+			name = arrador_consortium_angry
+			years = 5
+		}
+
+		scope:romantic_movement = {
+			add_modifier = {
+				name = arrador_labor_report
+				years = 20
+			}
+		}
+
+	}
+}

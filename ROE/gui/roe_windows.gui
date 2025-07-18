@@ -1,0 +1,612 @@
+types roe_window_types {
+
+    type roe_domains_window = default_popup {
+        size = { 1120 700 }
+        name = "roe_domains_window"
+        visible = "[Or(GetVariableSystem.HasValue('roe_open_window', 'roe_domains_window'), GetVariableSystem.HasValue('roe_alert_action', Localize('domains_window_action')))]"
+        datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+
+        alpha = 0
+
+        blockoverride "minimize" {
+            minimize_button_large = {
+                onclick = "[GetVariableSystem.Clear('roe_open_window')]"
+                onclick = "[GetVariableSystem.Clear('roe_alert_action')]"
+                parentanchor = center
+                shortcut = "close_window"
+            }
+        }
+        blockoverride "header_close_button_visibility" {
+            visible = yes
+        }
+
+        blockoverride "window_header_name" {
+            text = "domains_window_title"
+            default_format = "#bold"
+        }
+        blockoverride "content" {}
+
+        blockoverride "second_text" {
+            visible = no
+        }
+
+        blockoverride "goto_visibility" {
+            visible = no
+        }
+
+        blockoverride "goto_properties" {
+            onclick = "[Country.GetCapital.ZoomToCapital]"
+            tooltip = "ROE_ZOOM_TO_CAPITAL_STATE"
+            enabled = "[Not(Country.GetCapital.IsZoomingToCapital)]"
+        }
+
+        state = {
+            trigger_on_create = yes
+            name = 1
+            duration = 0.3
+            using = Animation_Curve_EaseOut
+            alpha = 1
+            using = Snapshot_Mute_World_100
+            using = Snapshot_Mute_Vfx_War_100
+            start_sound = {
+                soundeffect = "event:/SFX/UI/Alerts/event_appear"
+            }
+        }
+
+        ### SETTING SIZE OF WINDOW
+        flowcontainer = {
+            resizeparent = yes
+            margin = { 35 0 }
+            margin_bottom = 25
+
+            ### VIDEO/IMAGE + TEXT/OPTIONS
+            container = {
+                container = {
+                    minimumsize = { 1120 -1 }
+                    position = { 0 90 }
+
+                    ### EVENT IMAGE / CONTENT
+                    widget = {
+                        position = { 3 3 }
+                        size = { 1120 600 }
+
+                        # animated video ( most images should have this )
+                        video_icon = {
+                            video = "gfx/event_images/unspecified_magic_phenomena.bk2"
+                            size = { 100% 100% }
+                            alwaystransparent = yes
+                            loop = no
+                        }
+                    }
+
+                    ### INNER FRAME + FADE OVER THE IMAGE
+                    icon = {
+                        texture = "gfx/interface/event_window/event_inner_frame_fullscreen_horizontal.dds"
+                        size = { 100% 100% }
+                        spriteType = Corneredtiled
+                        spriteborder = { 25 25 }
+                        texture_density = 2
+                        #visible = no
+
+                        modify_texture = {
+                            texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = overlay
+                        }
+                        modify_texture = {
+                            using = texture_velvet
+                        }
+                    }
+
+                    ### CONTENT DESIGNATION ICON
+                    flowcontainer = {
+                        spacing = 10
+                        parentanchor = bottom|left
+                        position = { 10 -10 }
+
+                        container = {
+                            datamodel = "[GetDlcCollection]"
+
+                            item = {
+                                flowcontainer = {
+                                    tooltip = ROE_WINDOW_DLC_TOOLTIP
+                                    visible = "[ObjectsEqual(Localize('dlc_roe'), Dlc.GetName)]"
+                                    spacing = 10
+
+                                    icon = {
+                                        size = { 40 40 }
+                                        texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                                        parentanchor = bottom|left
+
+                                        icon = {
+                                            size = { 40 40 }
+                                            position = { 3 -3 }
+                                            texture = "[Dlc.GetIcon]"
+                                            parentanchor = center
+
+                                        }
+                                    }
+
+                                    textbox = {
+                                        size = { 150 20 }
+                                        align = left|vcenter
+                                        parentanchor = left|vcenter
+                                        elide = right
+                                        using = fontsize_large
+                                        fontsize_min = 12
+                                        alpha = 0.7
+
+                                        text = "[Dlc.GetName]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    flowcontainer = {
+                        direction = horizontal
+                        spacing = 0
+                        widget = {
+                            size = { 560 600 }
+                            widget = {
+                                size = { 100% 94% }
+
+                                background = {
+                                    texture = "gfx/interface/backgrounds/tutorial_bg.dds"
+                                    spriteType = Corneredtiled
+                                    spriteborder = { 20 20 }
+                                    alpha = 0.94
+
+                                    modify_texture = {
+                                        texture = "gfx/interface/backgrounds/gradient_overlay.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 0 0 }
+                                        blend_mode = overlay
+                                        alpha = 0.7
+                                    }
+                                    margin = { -15 -20 }
+                                }
+
+                                flowcontainer = {
+                                    direction = vertical
+                                    using = default_list_position
+                                    spacing = 5
+                                    margin = { 50 50 }
+
+                                    textbox = {
+                                        name = "description"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "domains_window_description"
+                                        margin = { 20 10 }
+                                    }
+
+                                    divider_decorative = {
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                    }
+
+                                    textbox = {
+                                        name = "flavortext"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = top|hcenter
+                                        text = domains_window_flavor
+                                        default_format = "#lore"
+                                        margin = { 30 10 }
+                                    }
+                                }
+                            }
+                        }
+                        widget = {
+                            size = { 560 600 }
+                            widget = {
+                                size = { 100% 94% }
+
+                                background = {
+                                    texture = "gfx/interface/backgrounds/tutorial_bg.dds"
+                                    spriteType = Corneredtiled
+                                    spriteborder = { 20 20 }
+                                    alpha = 0.94
+
+                                    modify_texture = {
+                                        texture = "gfx/interface/backgrounds/gradient_overlay.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 0 0 }
+                                        blend_mode = overlay
+                                        alpha = 0.7
+                                    }
+                                    margin = { -15 -20 }
+                                }
+
+                                flowcontainer = {
+                                    direction = vertical
+                                    using = default_list_position
+                                    spacing = 5
+                                    margin = { 50 50 }
+
+                                    textbox = {
+                                        name = "sub_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        text = domains_window_sub_title
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                    }
+
+                                    divider_decorative = {
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                    }
+                                }
+
+                                widget = {
+                                    size = { 100% 100% }
+                                    widget = {
+                                        size = { 400 400 }
+                                        parentanchor = vcenter|hcenter
+
+                                        widget = {
+                                            size = { 400 400 }
+                                            parentanchor = vcenter|hcenter
+                                            roe_domain_button = {
+                                                position = { 0 0 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = domains_window_material_plane
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 0 -150 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_gryphon_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 30 60 }
+                                                            { 30 150 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 0 150 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_justice_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 30 0 }
+                                                            { 30 -90 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { -150 0 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_sphinx_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 60 30 }
+                                                            { 150 30 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 150 0 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_golem_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 0 30 }
+                                                            { -90 30 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 125 75 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_unicorn_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { -70 -30 }
+                                                            { 5 15 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 75 125 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_unicorn_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { -30 -70 }
+                                                            { 15 5 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { -75 -125 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_fey_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 45 55 }
+                                                            { 90 130 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { -125 -75 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_fey_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 55 45 }
+                                                            { 130 90 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 75 -125 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_phoenix_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 15 55 }
+                                                            { -30 130 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 125 -75 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_phoenix_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 5 45 }
+                                                            { -70 90 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { -75 125 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_djinn_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 90 -70 }
+                                                            { 45 5 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { -125 75 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_djinn_desc
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    enabled = no
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    #TODO: Add onclick
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                roe_domain_line = {
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 130 -30 }
+                                                            { 55 15 }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    type roe_domain_button = widget {
+        parentanchor = vcenter|hcenter
+        size = { 60 60 }
+        block "button_tooltip" {
+            tooltip = concept_gryphon_desc
+        }
+
+        sidepanel_button_small = {
+            position = { 0 0 }
+            size = { 60 60 }
+            blockoverride "icon" {
+                textbox = {
+                    size = { 60 60 }
+                    scale = 1.8
+                    align = vcenter|hcenter
+                    parentanchor = vcenter|hcenter
+                    block "button_text" {
+                        raw_text = "@innovation!"
+                    }
+                }
+            }
+            block "button_enabled" {
+                enabled = no
+            }
+            block "button_onclick" {}
+        }
+    }
+
+    type roe_domain_line = line {
+        position = { 0 0 }
+        gfxtype = linegfx
+        line_type = BSpline
+        block "tech_line_texture" {
+            texture = "gfx/interface/tech_tree/tech_line_research_locked.dds"
+        }
+        mask = "gfx/interface/tech_tree/tech_line_mask.dds"
+        width = 4
+        alpha = 0.8
+
+        block "line_points" {
+            points = {
+                { 0 0 }
+                { 0 0 }
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+﻿je_hobgoblin_yoke = {
+	icon = "gfx/interface/icons/event_icons/event_revolt.dds"
+	
+	group = je_group_internal_affairs
+
+	modifiers_while_active = {
+		yulug_governor_rule
+	}
+
+	complete = {
+		NOT = { 
+			has_law = law_type:law_ethnostate
+		}
+
+		OR ={
+			is_subject_type = subject_type_tributary
+			is_subject_type = subject_type_banner
+		}
+
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				ROOT ?= C:KCN
+			}
+			add_primary_culture = cu:morevnamarya
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:TAH
+			}
+			add_primary_culture = cu:sarhbalb
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:SAI
+			}
+			add_primary_culture = cu:sarhbalb
+			add_primary_culture = cu:puarfejiin
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:SUN
+			}
+			add_primary_culture = cu:yakamimbo
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:PUA
+			}
+			add_primary_culture = cu:puarfejiin
+		}
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_hobgoblin_hegemony
+			add_ideology = ideology_paternalistic
+			remove_ideology = ideology_paternalistic_hobgoblin
+		}
+		ig:ig_industrialists ?= {
+			add_ideology = ideology_laissez_faire
+			remove_ideology = ideology_colonialist
+			add_ideology = ideology_plutocratic
+			remove_ideology = ideology_enclavist
+			add_ideology = ideology_individualist
+			remove_ideology = ideology_malthusian
+		}
+		ig:ig_devout ?= {
+			remove_ideology = ideology_goblin_moralist_governorate
+			add_ideology = ideology_moralist
+		}
+	}
+
+	fail = {
+		NOT = { is_subject_of = c:YUL }
+	}
+
+	on_fail = {
+		if = {
+			limit = {
+				ROOT ?= C:KCN
+			}
+			add_primary_culture = cu:morevnamarya
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:TAH
+			}
+			add_primary_culture = cu:sarhbalb
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:SUN
+			}
+			add_primary_culture = cu:yakamimbo
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:PUA
+			}
+			add_primary_culture = cu:puarfejiin
+		}
+		else_if = {
+			limit = {
+				ROOT ?= C:SAI
+			}
+			add_primary_culture = cu:sarhbalb
+			add_primary_culture = cu:puarfejiin
+		}
+		remove_primary_culture = cu:khanaruk
+
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_hobgoblin_hegemony
+			add_ideology = ideology_paternalistic
+			remove_ideology = ideology_paternalistic_hobgoblin
+		}
+		ig:ig_industrialists ?= {
+			add_ideology = ideology_laissez_faire
+			remove_ideology = ideology_colonialist
+			add_ideology = ideology_plutocratic
+			remove_ideology = ideology_enclavist
+			add_ideology = ideology_individualist
+			remove_ideology = ideology_malthusian
+		}
+		ig:ig_devout ?= {
+			remove_ideology = ideology_goblin_moralist_governorate
+			add_ideology = ideology_moralist
+		}
+	}
+
+	should_be_pinned_by_default = yes
+
+	weight = 1000
+}

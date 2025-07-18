@@ -1,0 +1,968 @@
+﻿ideology_magocrat = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_theocrat.dds"
+	
+	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_magocracy = strongly_approve
+		law_technocracy = approve	
+		law_plutocracy = neutral
+		law_monarchy = neutral
+		law_theocracy = neutral	
+		law_presidential_republic = disapprove
+		law_parliamentary_republic = disapprove
+		law_council_republic = disapprove
+	}
+
+	lawgroup_magic = {
+		law_no_magic = disapprove
+		law_divine_miracles = approve
+		law_druidic_circles = approve
+		law_artificer_guilds = approve
+		law_astrological_studies = strongly_approve
+		
+		law_mage_hunters = strongly_disapprove
+	}
+
+	lawgroup_bureaucracy = {
+		law_court_mages = strongly_approve
+		law_hereditary_bureaucrats = neutral
+		law_appointed_bureaucrats = disapprove
+		law_elected_bureaucrats = disapprove
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = neutral
+		law_magic_banned = strongly_disapprove
+		law_environmental_regulation = disapprove
+		law_industry_banned = neutral
+	}
+	
+	interest_group_leader_trigger = {
+		ideology_magocrat_valid_trigger = yes
+	}
+
+	country_trigger = {
+		exists = ig:ig_mages
+		ig:ig_mages ?= {
+			is_marginal = no
+		}
+		OR = {
+			owner = {
+				has_technology_researched = veil_1
+			}
+			has_law = law_type:law_magocracy
+		}
+	}
+	# possible = {
+	# 	exists = ig:ig_mages
+	# 	ig:ig_mages ?= {
+	# 		is_marginal = no
+	# 	}
+	# 	OR = {
+	# 		owner = {
+	# 			has_technology_researched = veil_1
+	# 		}
+	# 		has_law = law_type:law_magocracy
+	# 	}
+
+	# 	# Agitator ideologies should disapprove of a current law
+	# 	NAND = {
+	# 		has_role = agitator
+	# 		owner = {
+	# 			NOT = {
+	# 				has_law = law_type:law_no_magic
+	# 			}
+	# 			NOT = {
+	# 				has_law = law_type:law_mage_hunters
+	# 			}
+	# 		}
+	# 	}
+	# 	scope:interest_group = {
+	# 		OR = {
+	# 			is_interest_group_type = ig_rural_folk
+	# 			is_interest_group_type = ig_trade_unions
+	# 			is_interest_group_type = ig_armed_forces
+	# 			is_interest_group_type = ig_petty_bourgeoisie
+	# 			is_interest_group_type = ig_landowners
+	# 			is_interest_group_type = ig_devout
+	# 			is_interest_group_type = ig_mages
+	# 		}
+	# 	}
+	# }
+	
+	interest_group_leader_weight = {
+		value = 100
+		# more likely if mages and angry and issues are relevant
+		if = {
+			limit = {
+				ig_approval <= -5
+				is_interest_group_type = ig_mages
+
+				owner = {
+					NOR = {
+						has_law = law_type:law_magocracy
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+					OR = {
+						has_law = law_type:law_mage_hunters
+						has_law = law_type:law_no_magic
+					}
+				}
+			}
+			add = 75
+		}
+		# More likely for mages
+		if = {
+			limit = {
+				is_interest_group_type = ig_mages
+			}
+			add = 50
+		}
+		# Unlikely for content IG's when issues aren't relevant
+		if = {
+			limit = {
+				ig_approval >= 5
+				owner = {
+					OR = {
+						has_law = law_type:law_magocracy
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_monarchy
+					}
+					NOR = {
+						has_law = law_type:law_mage_hunters
+						has_law = law_type:law_no_magic
+					}
+				}
+			}
+			add = -150
+		}
+	}
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_magocracy
+				has_law = law_type:law_court_mages
+			}
+		}
+	}
+}
+
+ideology_magillismo = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_positivist.dds"
+	
+	character_ideology = yes
+	
+	lawgroup_governance_principles = {
+		law_presidential_republic = strongly_approve
+		law_parliamentary_republic = neutral
+		law_magocracy = approve
+		law_monarchy = neutral
+		law_plutocracy = neutral
+		law_theocracy = disapprove
+		law_council_republic = strongly_disapprove
+	}
+	
+	lawgroup_distribution_of_power = {
+		law_landed_voting = strongly_approve
+		law_autocracy = strongly_approve
+		law_single_party_state = approve
+		law_oligarchy = approve
+		law_technocracy = neutral
+		law_wealth_voting = neutral
+		law_census_voting = disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_anarchy = strongly_disapprove
+	}
+	
+	lawgroup_bureaucracy = {
+		law_court_mages = strongly_approve
+		law_hereditary_bureaucrats = neutral
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = approve
+	}
+
+	lawgroup_education_system = {
+		law_magical_schools = strongly_approve
+		law_public_schools = approve
+		law_private_schools = approve
+		law_no_schools = disapprove
+		law_religious_schools = disapprove		
+	}
+
+	interest_group_leader_trigger = {
+		ideology_magillismo_valid_trigger = yes
+	}
+
+	interest_group_leader_weight = {
+		value = 50
+		# more likely for mages
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_mages
+				}
+				
+			}
+			add = 50
+		}
+		# more likely for mages, industrialists, and PB with anti magic/industry laws or no health system
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_mages
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_monarchy
+						
+						NOT = {
+							has_law = law_type:law_court_mages
+						}
+					}
+				}
+			}
+			add = 50
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_magic_schools
+					has_law = law_type:law_court_mages
+					has_law = law_type:law_presidential_republic
+				}
+			}
+			add = -75
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+	country_trigger = {
+		country_has_voting_franchise = no
+		has_technology_researched = democracy
+		has_technology_researched = arcane_concentration
+		OR = {
+			AND = {
+				exists = ig:ig_mages
+				ig:ig_mages = {
+					is_marginal = no
+				}
+			}
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}
+}
+
+ideology_mad_scientist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_humanitarian_royalist.dds"
+	
+	character_ideology = yes
+
+	lawgroup_magic = {
+		law_no_magic = disapprove
+		law_divine_miracles = approve
+		law_druidic_circles = approve
+		law_artificer_guilds = strongly_approve
+		law_astrological_studies = strongly_approve
+		law_mage_hunters = strongly_disapprove
+	}
+
+	lawgroup_health_system = {
+		law_private_health_insurance = neutral
+		law_no_health_system = disapprove
+		law_charitable_health_system = disapprove
+		law_public_health_insurance = disapprove
+		law_genetic_testing = strongly_approve
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = approve
+		law_magic_banned = strongly_disapprove
+		law_environmental_regulation = disapprove
+		law_industry_banned = neutral
+	}
+	
+	interest_group_leader_trigger = {
+		ideology_mad_scientist_valid_trigger = yes
+	}
+
+	interest_group_leader_weight = {
+		value = 50
+		# more likely for mages
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_mages
+				}
+				
+			}
+			add = 80
+		}
+		# more likely for mages, industrialists, and PB with anti magic/industry laws or no health system
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_mages
+					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_petty_bourgeoisie
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_no_health_system
+						has_law = law_type:law_mage_hunters
+						has_law = law_type:law_magic_banned
+						has_law = law_type:law_environmental_regulation
+						has_law = law_type:law_industry_banned
+					}
+				}
+			}
+			add = 50
+		}
+		# More likely for GP's
+		if = {
+			limit = {
+				owner = {
+					country_rank = rank_value:great_power
+				}
+			}
+			add = 25
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_genetic_testing
+					has_law = law_type:law_artificer_guilds
+					has_law = law_type:law_no_restrictions
+				}
+			}
+			add = -75
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+	country_trigger = {
+		has_technology_researched = mutagens
+	}
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}	
+}
+
+ideology_magoclast_leader = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_positivist.dds"
+	
+	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_magocracy = strongly_disapprove
+		law_technocracy = neutral
+		law_plutocracy = neutral
+		law_monarchy = neutral
+		law_theocracy = neutral	
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_council_republic = neutral
+	}
+
+	lawgroup_magic = {
+		law_no_magic = strongly_disapprove
+		law_divine_miracles = strongly_disapprove
+		law_druidic_circles = strongly_disapprove
+		law_artificer_guilds = strongly_disapprove
+		law_astrological_studies = strongly_disapprove
+		law_mage_hunters = strongly_approve
+	}
+
+	lawgroup_bureaucracy = {
+		law_court_mages = strongly_disapprove
+		law_hereditary_bureaucrats = neutral
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = neutral
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = disapprove
+		law_magic_banned = strongly_approve
+		law_environmental_regulation = approve
+		law_industry_banned = neutral
+	}
+}
+
+ideology_skeptic_leader = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_positivist.dds"
+	
+	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_magocracy = disapprove
+		law_technocracy = neutral
+		law_plutocracy = neutral
+		law_monarchy = neutral
+		law_theocracy = neutral	
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_council_republic = neutral
+	}
+
+	lawgroup_magic = {
+		law_no_magic = approve
+		law_divine_miracles = disapprove
+		law_druidic_circles = disapprove
+		law_artificer_guilds = disapprove
+		law_astrological_studies = disapprove
+		law_mage_hunters = strongly_approve
+	}
+
+	lawgroup_bureaucracy = {
+		law_court_mages = disapprove
+		law_hereditary_bureaucrats = neutral
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = neutral
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = disapprove
+		law_magic_banned = neutral
+		law_environmental_regulation = approve
+		law_industry_banned = neutral
+	}
+}
+
+ideology_artificer_baron = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_market_liberal.dds"
+	
+	character_ideology = yes
+
+	lawgroup_economic_system = {	
+		law_laissez_faire = strongly_approve
+		law_interventionism = neutral
+		law_agrarianism = disapprove
+		law_traditionalism = disapprove		
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = strongly_disapprove
+		law_industry_banned = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+	
+	lawgroup_trade_policy = {
+		law_free_trade = strongly_approve
+		law_mercantilism = disapprove
+		law_protectionism = disapprove		
+		law_isolationism = strongly_disapprove
+	}
+
+	lawgroup_labor_rights = {
+		law_regulatory_bodies = disapprove
+		law_worker_protections = strongly_disapprove
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = approve
+		law_magic_banned = strongly_disapprove
+		law_environmental_regulation = disapprove
+		law_industry_banned = strongly_disapprove
+	}
+	
+	lawgroup_magic = {
+		law_no_magic = disapprove
+		law_divine_miracles = neutral
+		law_druidic_circles = strongly_disapprove
+		law_artificer_guilds = strongly_approve
+		law_astrological_studies = neutral
+		law_mage_hunters = disapprove
+	}
+
+	country_trigger = {
+		has_technology_researched = stock_exchange
+		# capitalism must be relevant
+		exists = ig:ig_industrialists
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+		# magic must be relevant
+		exists = ig:ig_mages
+		ig:ig_mages = {
+			is_marginal = no
+		}
+	}
+
+	interest_group_leader_trigger = {
+		ideology_artificer_baron_valid_trigger = yes
+	}
+	
+	non_interest_group_leader_trigger = {
+		# Agitator ideologies should disapprove of a current law
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_child_labor_allowed
+				has_law = law_type:law_free_trade
+				has_law = law_type:law_commercialized_agriculture
+				has_law = law_type:law_no_magic
+				has_law = law_type:law_mage_hunters
+			}
+		}
+		interest_group = {
+			ideology_artificer_baron_valid_trigger = yes
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 100
+		# more likely for industrialists
+		if = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+			}
+			add = 50
+		}
+		# more likely for intelligentsia, industrialists, and PB with traditional economic laws
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_mages
+					is_interest_group_type = ig_industrialists
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_agrarianism
+						has_law = law_type:law_traditionalism
+						has_law = law_type:law_isolationism
+						has_law = law_type:law_mercantilism
+					}
+				}
+			}
+			add = 50
+		}
+		# more likely for weaker mages when industrialists are powerful
+		if = {
+			limit = {
+				is_interest_group_type = ig_mages
+				is_powerful = no
+				owner = {
+					exists = ig:ig_industrialists
+					ig:ig_industrialists = {
+						is_powerful = yes
+					}
+				}
+			}
+			add = 75
+		}
+		# less likely for powerful mages under traditional laws
+		if = {
+			limit = {
+				is_interest_group_type = ig_mages
+				is_powerful = yes
+				owner = {
+					OR = {
+						has_law = law_type:law_agrarianism
+						has_law = law_type:law_traditionalism
+					}
+				}
+			}
+			add = -75
+		}
+		# very unlikely in countries without a large urban center
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_scope_state = {
+							any_scope_building = {
+								is_building_type = building_urban_center
+								level >= 10
+							}
+						}
+					}
+				}
+			}
+			add = -150
+		}
+		# Less likely for unrecognized countries
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						is_country_type = unrecognized
+						is_country_type = preindustrial
+					}
+				}
+			}
+			add = -50
+		}
+		# More likely for GP's
+		if = {
+			limit = {
+				owner = {
+					country_rank = rank_value:great_power
+				}
+			}
+			add = 25
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_free_trade
+					has_law = law_type:law_laissez_faire
+					has_law = law_type:law_artificer_guilds
+				}
+			}
+			add = -75
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+	
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}	
+}
+
+ideology_druid = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/luddite.dds"
+	
+	character_ideology = yes
+
+	lawgroup_magic = {
+		law_no_magic = disapprove
+		law_divine_miracles = neutral
+		law_druidic_circles = strongly_approve
+		law_artificer_guilds = strongly_disapprove
+		law_astrological_studies = neutral
+		
+		law_mage_hunters = disapprove
+	}
+
+	lawgroup_economic_system = {
+		law_agrarianism = approve
+		law_cooperative_ownership = approve
+		law_traditionalism = neutral
+		law_laissez_faire = strongly_disapprove
+		law_interventionism = strongly_disapprove
+		law_command_economy = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = neutral
+		law_magic_banned = neutral
+		law_environmental_regulation = approve
+		law_industry_banned = strongly_approve
+	}
+
+	interest_group_leader_trigger = {
+		ideology_druid_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		# Agitator ideologies should disapprove of a current law
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_druidic_circles
+				has_law = law_type:law_industry_banned
+			}
+		}
+		interest_group = {
+			ideology_luddite_valid_trigger = yes
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 50 
+		# druids become politically active as encroachment occurs
+		if = {
+			limit = {
+				owner = {
+					any_scope_building = {
+						is_building_group = bg_subsistence_agriculture
+						level <= 12
+					}
+				}
+			}
+			add = 50
+		}
+		# More druids exist around farms
+		if = {
+			limit = {
+				owner = {
+					any_scope_state = {
+					OR = {
+						any_scope_building = {
+							is_building_group = bg_agriculture
+							level >= 15
+						}
+						any_scope_building = {
+							is_building_group = bg_plantations
+							level >= 15
+						}
+					}
+						
+					}
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+
+	country_trigger = {
+		owner = {
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
+		}
+	}
+}
+
+ideology_nomadic = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_traditionalist.dds"
+	
+	character_ideology = yes
+	
+	lawgroup_rights_of_women = {
+		law_no_womens_rights = disapprove
+		law_women_own_property = approve
+		law_women_in_the_workplace = neutral
+		law_womens_suffrage = disapprove
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = approve
+		law_freedom_of_conscience = disapprove
+		law_religious_tax = disapprove
+		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
+	}
+	
+	lawgroup_economic_system = {
+		law_agrarianism = approve
+		law_cooperative_ownership = neutral
+		law_traditionalism = neutral
+		law_laissez_faire = strongly_disapprove
+		law_interventionism = strongly_disapprove
+		law_command_economy = disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+
+	lawgroup_environment = {		
+		law_no_restrictions = neutral
+		law_magic_banned = neutral
+		law_environmental_regulation = approve
+		law_industry_banned = strongly_approve
+	}
+
+	interest_group_leader_trigger = {
+		OR = {
+			# owner = {
+			# 	has_modifier = horselord_traditions #a surprise tool to help us later
+			# }
+			owner = {
+				c:YAN ?= this
+				c:RDM ?= this
+				c:OCR ?= this
+			}
+		}
+	}
+	# 	# Agitatos should have an ideology at odds with current laws
+	# 	NAND = {
+	# 		has_role = agitator
+	# 		owner = {
+	# 			has_law = law_type:law_no_womens_rights
+	# 			has_law = law_type:law_state_religion
+	# 			has_law = law_type:law_industry_banned
+	# 		}
+	# 	}
+	# 	OR = {
+	# 		owner = {
+	# 			has_modifier = horselord_traditions #a surprise tool to help us later
+	# 		}
+	# 		owner = {
+	# 			c:YAN ?= this
+	# 			c:RDM ?= this
+	# 			c:OCR ?= this
+	# 		}
+	# 	}
+
+	# }
+	# 	scope:interest_group = {
+	# 		OR = {
+	# 			is_interest_group_type = ig_rural_folk
+	# 			is_interest_group_type = ig_trade_unions
+	# 			is_interest_group_type = ig_armed_forces
+	# 			is_interest_group_type = ig_petty_bourgeoisie
+	# 			is_interest_group_type = ig_landowners
+	# 			is_interest_group_type = ig_devout
+	# 		}
+	# 	}
+	# 	scope:interest_group = {
+	# 		NOR = {
+	# 			has_variable = communist_ig_var
+	# 			has_variable = chose_vanguardism
+	# 			has_variable = chose_fascism
+	# 			has_variable = chose_ethno_nationalism
+	# 		}
+	# 	}
+	
+	
+	interest_group_leader_weight = {
+		value = 75
+		# more likely for landowners, devout and rural
+		if = {
+			limit = {
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_devout
+						is_interest_group_type = ig_rural_folk
+					}
+				}
+			}
+			add = 50
+		}	
+	}
+}

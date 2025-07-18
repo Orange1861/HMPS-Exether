@@ -1,0 +1,55 @@
+﻿region_valley_of_golden_fields = {
+	graphical_culture = "asian"
+	capital_province = xE88E8B
+	map_color = { 0.204 0.651 0.308 }
+	states = { STATE_ULDOR STATE_GAVQLOMR STATE_KHORTA STATE_KHURIN STATE_ORONK STATE_SHISHUSM STATE_DALKH STATE_GWITESHAST STATE_GWITESHIAIA STATE_GARBOL STATE_KHAIRI STATE_CHADBA }
+}
+
+region_hirugolaima = {
+	graphical_culture = "asian"
+	capital_province = xE582F5
+	map_color = { 0.9 0.1 0.1 }
+	states = { STATE_NISHIGUCHI STATE_KIYOMATSUE STATE_JARGALYO STATE_TSUKHANJUKU STATE_HARUGAWASAI STATE_MONGOROKKU }
+}
+
+region_yamkhanato = {
+	graphical_culture = "asian"
+	capital_province = xFEEFA4
+	map_color = { 0.8 0.8 0.9 }
+	states = { STATE_HOKUKHAN STATE_SHINKANBATA STATE_KIYOMORIN STATE_KHULEKKA STATE_BATOKYOAN STATE_ARASHIHARA STATE_KAMITAI STATE_MONGOGAWA STATE_HIRAKHANJO STATE_HAYAKHAMURA STATE_KHULEKI STATE_TSURUKHAN STATE_KITAYAMAO STATE_HOKUDAIHAN } 
+}
+
+region_bataar_kharaal = {
+	graphical_culture = "asian"
+	capital_province = x93ACFB
+	map_color = { 0.8 0.1 0.9 }
+	states = { STATE_KHULANJO STATE_KURULANDU STATE_JARGALTSAI STATE_YAMAKHANJU STATE_KYRZUR STATE_SAINO STATE_BUYANT STATE_GALSHA STATE_BAIDAL } 
+}
+
+region_muru = {
+	graphical_culture = "asian"
+	capital_province = xC897D9
+	map_color = { 0.1 0.6 0.7 }
+	states = { STATE_GURVA STATE_OROGOO STATE_ERKHE STATE_BATSI STATE_DORNO STATE_SERGER STATE_TSENK STATE_KHONGO } 
+}
+
+region_khantar = {
+	graphical_culture = "asian"
+	capital_province = xC8FD53
+	map_color = { 0.35 0.35 0.7 }
+	states = { STATE_FIRDRUI STATE_KHANGAWA STATE_ORONAKA STATE_VAHGRAK STATE_GROMMOK STATE_KYRGRIM STATE_URTHOR STATE_ERDENEA STATE_GLARDIH STATE_NISHIGARRA STATE_MUGARA STATE_HAHKDRAD STATE_KYRKAZ STATE_THARKYR STATE_GULTHYR STATE_ALBAIN  } 
+}
+
+region_tundgara = {
+	graphical_culture = "asian"
+	capital_province = xC7FEBF
+	map_color = { 0.75 0.24 0.4 }
+	states = { STATE_KYRTHOR STATE_KRAGKYL STATE_DRUKYN STATE_GOLMOK STATE_ERKBALB STATE_ZURKYL } 
+}
+
+region_shkumbdash = {
+	graphical_culture = "asian"
+	capital_province = xD8F477
+	map_color = { 0.25 0.54 0.4 }
+	states = { STATE_TAKAYAMAAN STATE_GROMKYL STATE_KYRTHAL STATE_KAZTHOK STATE_BURZOK STATE_DALSHTOK STATE_RAZOK STATE_DORAZ STATE_BALDBAN STATE_BAZKYL STATE_KYRGRUK STATE_KRAKYR STATE_GNAKYR } 
+}

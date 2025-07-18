@@ -1,0 +1,25 @@
+﻿pmg_artifactory_identification = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+	    pm_artifactory_hand_sorting
+	    pm_artifactory_lenses_of_identification
+		pm_artifactory_lenses_of_identification_2
+	}
+}
+
+pmg_artifactory_management = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+	    pm_artifactory_adventurer_crews
+	    pm_artifactory_clergy_oversight
+	    pm_artifactory_government_run
+	}
+}
+
+pmg_artifactory_automation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+	    pm_artifactory_no_automation
+	    pm_artifactory_conveyor_belts
+	}
+}

@@ -1,0 +1,55 @@
+﻿l_english:
+ entangled_economies_hesitation: "[concept_great_power] Economic Entanglement with [SCOPE.sCountry('enemy_country').GetName]"
+ substantial_trade_ties: "[concept_great_power] Trade Partner with [SCOPE.sCountry('enemy_country').GetName]"
+ risk_of_alliance_cascade: "[concept_great_power] Alliance Cascade with [SCOPE.sCountry('enemy_country').GetName]"
+ internal_instability_concerns: "[concept_great_power] Domestic Instability"
+
+ rule_pop_politics_preindustrial: "Preindustrial Political Engagement"
+
+ setting_no_pop_politics_preindustrial: "@logo! Unique"
+ setting_no_pop_politics_preindustrial_desc: "$bureaucrats$,  $clerks$  and  $shopkeepers$ will never become active.  $peasants$ will be more politically active.\n@warning! #bold #r High#!#! performance impact."
+ 
+ setting_normal_pop_politics_preindustrial: "Default"
+ setting_normal_pop_politics_preindustrial_desc: "$peasants$,  $bureaucrats$,  $clerks$ and  $shopkeepers$ will become active regularly in pre-industrial societies."
+
+ ###
+
+ rule_pop_politics_variable: "Political Engagement Calculation"
+
+ setting_pop_politics_variable_enabled: "@logo! Cached"
+ setting_pop_politics_variable_enabled_desc: "[Concept('concept_pop', '$concept_pops$')] will have their political engagement updated and saved to the country level when the corresponding catalyst occurs. \n@information! Some engagement multipliers will not appear in tooltips."
+ 
+ setting_pop_politics_variable_disabled: "Default"
+ setting_pop_politics_variable_disabled_desc: "[Concept('concept_pop', '$concept_pops$')] will have their political engagement calculated in the default manner.\n@warning! #r Very High#! performance impact."
+
+ ###
+
+ rule_ai_diplomatic_plays_dynamic: "#bold #blue (AI)#!#! Dynamic Diplomatic Plays"
+
+ setting_ai_diplomatic_plays_dynamic_everyone: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_ai_diplomatic_plays_dynamic_everyone_tt Enabled#!#!"
+ setting_ai_diplomatic_plays_dynamic_everyone_desc: "[Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] by any [concept_country] will have their traditional components and success ratio dynamically calculated.\n@warning! #red #underline Extreme#!#! performance impact."
+ setting_ai_diplomatic_plays_dynamic_everyone_tt: "The AI will dynamically evaluate the power potential of all diplomatic plays and will initiate plays scaling with its belived likelihood of success. This results in a vastly improved simulation and more logical wars."
+
+ setting_ai_diplomatic_plays_dynamic_selective: "@logo! #tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_ai_diplomatic_plays_dynamic_selective_tt Selective#!#!"
+ setting_ai_diplomatic_plays_dynamic_selective_desc: "[Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] need to be initiated by atleast a [concept_major_power] before their success ratio is dynamically calculated.\n@warning! #bold #green Low#!#! performance impact."
+ setting_ai_diplomatic_plays_dynamic_selective_tt: "The AI in countries with atleast the rank of [concept_major_power] will dynamically evaluate the power potential of all diplomatic plays and will initiate plays scaling with its belived likelihood of success. This results in a vastly improved simulation and more logical wars."
+
+ setting_ai_diplomatic_plays_dynamic_disabled: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_ai_diplomatic_plays_dynamic_disabled_tt Disabled#!#!"
+ setting_ai_diplomatic_plays_dynamic_disabled_desc: "[Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] by the AI have a variety of historical, scripted, and static weights to evaluate them."
+ setting_ai_diplomatic_plays_dynamic_disabled_tt: "This is the default Paradox setting and how it works in vanilla. Realms of Exether lacks many of the historical, scripted, and static weights present in the base game. Disabling this setting will result in a less dynamic and worse performing AI."
+
+ rule_bloodtithe_mode: "#red Bloodtithe Mode#!"
+ setting_bloodtithe_mode_disabled: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],bloodtithe_mode_tt#!#! Disabled"
+ setting_bloodtithe_mode_basic: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],bloodtithe_mode_tt Basic#!#!"
+ setting_bloodtithe_mode_player_basic: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],bloodtithe_mode_player_tt Basic Player-Only#!#!"
+ setting_bloodtithe_mode_crazy: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],bloodtithe_mode_crazy_tt Crazy#!#!"
+ setting_bloodtithe_mode_player_crazy: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],bloodtithe_mode_player_crazy_tt Crazy Player-Only#!#!"
+ bloodtithe_mode_tt: "In this game mode, every country will have access to the [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system, and will collect [Concept('concept_pop', '$concept_pops$')] from their [Concept('concept_subject', '$concept_subjects$')] on a yearly basis."
+ bloodtithe_mode_player_tt: "In this game mode, every country controlled by a player will have access to the [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system, and will collect [Concept('concept_pop', '$concept_pops$')] from their [Concept('concept_subject', '$concept_subjects$')] on a yearly basis."
+ bloodtithe_mode_player_crazy_tt: "This game mode has everything from the basic bloodtithe mode and also adds Dreadmoor's secondary [Concept('concept_journal_entry', '$concept_journal_entries$')] to increase the strength of the [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system to every player-controlled country. Player-controlled countries will convert to a local vampire [Concept('concept_primary_cultures','$concept_primary_culture$')], if one is available."
+ bloodtithe_mode_crazy_tt: "Player-controlled countries will convert to a local vampire [Concept('concept_primary_cultures','$concept_primary_culture$')]. All countries will have Dreadmoor's secondary [Concept('concept_journal_entry', '$concept_journal_entries$')] to increase the strength of the [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system."
+ setting_bloodtithe_mode_crazy_desc: "Player-controlled countries will convert to a local vampire [Concept('concept_primary_cultures','$concept_primary_culture$')], and every country will have access to Dreadmoor's secondary [Concept('concept_journal_entry', '$concept_journal_entries$')] to increase the strength of [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system."
+ setting_bloodtithe_mode_basic_desc: "Every country will have access to the [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system, and will collect [Concept('concept_pop', '$concept_pops$')] from their [Concept('concept_subject', '$concept_subjects$')] on a yearly basis."
+ setting_bloodtithe_mode_player_basic_desc: "Every country country controlled by a player will have access to the [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system, and will collect [Concept('concept_pop', '$concept_pops$')] from their [Concept('concept_subject', '$concept_subjects$')] on a yearly basis."
+ setting_bloodtithe_mode_disabled_desc: "Only Dreadmoor will have access to the [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system."
+setting_bloodtithe_mode_player_crazy_desc: "Player-controlled countries will convert to a local vampire [Concept('concept_primary_cultures','$concept_primary_culture$')], and will have Dreadmoor's secondary [Concept('concept_journal_entry', '$concept_journal_entries$')] to increase the strength of [Concept('concept_bloodtithe', '$concept_bloodtithes$')] system."

@@ -1,0 +1,565 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530            # used to be 450
+@panel_width_minus_30 = 510
+@panel_width = 540                # used to be 460
+@panel_width_half = 270                # used to be 230
+@status_panel = 242
+@panel_width_plus_10 = 550        # used to be 470
+@panel_width_plus_14 = 554            # used to be 474
+@panel_width_plus_14_half = 277        # used to be 237
+@panel_width_plus_20 = 560            # used to be 480
+@panel_width_plus_30 = 570            # used to be 490
+@panel_width_plus_70 = 610            # used to be 530
+
+types international {
+    type drow_panel = default_block_window {
+        name = "information_panel_bar"
+        visible = "[GetVariableSystem.Exists('international_open')]"
+        onmousehierarchyleave = "[GetVariableSystem.Clear('show_gain_favor')]"
+        onmousehierarchyleave = "[GetVariableSystem.Clear('show_gain_boons')]"
+        blockoverride "animation_state_block" {
+            state = {
+                name = _show
+                # Close open panel before showing this one
+                on_start = "[InformationPanelBar.ClosePanel]"
+                on_start = "[MapListPanelManager.CloseCurrentPanel]"
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/budget"
+                }
+            }
+
+            state = {
+                name = _hide
+                start_sound = {
+                    soundeffect = "event:/SFX/UI/SideBar/budget_stop"
+                }
+            }
+        }
+
+        blockoverride "header_back_button" {
+            onclick = "[GetVariableSystem.Toggle('international_open')]"
+        }
+
+        blockoverride "header_close_button" {
+            onclick = "[GetVariableSystem.Toggle('international_open')]"
+        }
+
+        blockoverride "window_header_name" {
+            text = "DROW_EMPIRE"
+        }
+
+        #TOP
+        blockoverride "fixed_top" {
+        }
+
+        blockoverride "scrollarea_content" {
+
+            ### General
+            flowcontainer = {
+                direction = vertical
+                using = default_list_position
+
+
+                flowcontainer = {
+                    datacontext = "[GetGlobalVariable('south_sea_empire_tag_var').GetCountry.GetRuler]"
+                    datacontext = "[GetGlobalVariable('south_sea_empire_tag_var').GetCountry]"
+                    visible = "[InformationPanel.IsTabSelected('default')]"
+                    direction = vertical
+                    using = default_list_position
+                    using = default_content_fade
+
+
+                    widget = {
+                        size = { 300 150 }
+                        widget = {
+                            parentanchor = top|right
+                            position = { -10 20 }
+                            widget = {
+                                size = { @[ panel_width_minus_30 / 2 ] 100 }
+
+                                using = entry_bg_fancy
+
+                                background = {
+                                    texture = "gfx/state_pictures/docks.dds"
+                                    alpha = 0.9
+                                    fittype = centercrop
+                                    using = frame_small_mask
+
+                                    modify_texture = {
+                                        texture = "gfx/interface/masks/fade_horizontal_center.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 0 0 }
+                                        blend_mode = alphamultiply
+                                    }
+                                }
+
+
+                                default_header_clean = {
+                                    blockoverride "text" {
+                                        raw_text = "Open"
+                                    }
+                                    blockoverride "header_mask" {
+                                        using = frame_small_mask_top
+                                    }
+                                    blockoverride "size" {
+                                        size = { 100% 42 }
+                                    }
+                                }
+                            }
+                        }
+                        widget = {
+                            parentanchor = top|left
+                            position = { 10 20 }
+                            widget = {
+                                size = { @[ panel_width_minus_30 / 2 ] 100 }
+
+                                using = entry_bg_fancy
+
+                                background = {
+                                    texture = "gfx/state_pictures/ocean.dds"
+                                    alpha = 0.9
+                                    fittype = centercrop
+                                    using = frame_small_mask
+
+                                    modify_texture = {
+                                        texture = "gfx/interface/masks/fade_horizontal_center.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 0 0 }
+                                        blend_mode = alphamultiply
+                                    }
+                                }
+
+                                default_header_clean = {
+
+                                    blockoverride "text" {
+                                        position = { -10 0 }
+                                        raw_text = "Tumultuous"
+                                    }
+                                    blockoverride "header_mask" {
+                                        using = frame_small_mask_top
+                                    }
+                                    blockoverride "size" {
+                                        size = { 100% 42 }
+                                    }
+                                }
+                            }
+                        }
+                        widget = {
+                            parentanchor = top|hcenter
+                            position = { 50 0 }
+                            widget = {
+                                size = { 150 150 }
+
+                                icon = {
+                                    size = { 100% 100% }
+                                    texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                                }
+                                icon = {
+                                    size = { 66% 66% }
+                                    texture = "gfx/interface/icons/religion_icons/southern_elf.dds"
+                                    parentanchor = center
+                                }
+                            }
+                        }
+                    }
+                    container = {
+                        minimumsize = { 265 -1 }
+                        maximumsize = { 265 -1 }
+                        parentanchor = hcenter|top
+
+                        background = {
+                            using = entry_bg
+                        }
+                        flowcontainer = {
+                            margin = { 0 10 }
+                            spacing = 5
+                            parentanchor = center
+                            textbox = {
+                                raw_text = "[GetGlobalVariable('south_sea_empire_tag_var').GetCountry.GetNameNoFlag]"
+                                autoresize = yes
+                                using = header_font_fancy_size
+                                using = header_font_fancy
+                                align = nobaseline
+                                parentanchor = vcenter
+                            }
+                        }
+                    }
+
+                    flowcontainer = {
+                        parentanchor = hcenter
+                        spacing = 40
+                        flowcontainer = {
+                            parentanchor = vcenter
+                            flag = {
+                                parentanchor = vcenter
+                                using = tooltip_above
+                                tooltip = "[ContextualDiplomaticPact.GetTooltip]"
+                                onclick = "[GetVariableSystem.Clear('international_open')]"
+                            }
+                        }
+                        character_portrait_large_torso = {
+                            parentanchor = vcenter
+                        }
+                        character_portrait_medium = {
+                            datacontext = "[GetScriptedGui('satrapy_exists')]"
+                            visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                            datacontext = "[GetGlobalVariable('south_sea_empire_satrapy_tag_var').GetCountry.GetRuler]"
+                            parentanchor = vcenter
+                        }
+                    }
+                    container = {
+                        minimumsize = { 200 -1 }
+                        maximumsize = { 200 -1 }
+                        parentanchor = hcenter
+
+                        background = {
+                            using = entry_bg
+                        }
+
+                        flowcontainer = {
+                            margin = { 5 10 }
+                            spacing = 5
+                            parentanchor = center
+                            textbox = {
+                                raw_text = "[GetGlobalVariable('south_sea_empire_tag_var').GetCountry.GetRuler.GetFullName]"
+                                autoresize = yes
+                                using = fontsize_large
+                                align = nobaseline
+                                parentanchor = vcenter
+                            }
+                        }
+                    }
+                    flowcontainer = {
+                        parentanchor = hcenter
+                        spacing = 25
+                        ### GIVE STUFF
+                        widget = {
+                            size = { 75 75 }
+
+                            icon = {
+                                texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                                size = { 75 75 }
+                                block "luxury_icon_selected" {
+                                    visible = "[GetVariableSystem.Exists('show_gain_favor')]"
+                                }
+                                using = default_fade_in_out
+                            }
+
+                            goods_filter_button = {
+                                tooltip = "GAIN_FAVOR"
+
+                                block "luxury_onclick" {
+                                    onclick = "[GetVariableSystem.Toggle('show_gain_favor')]"
+                                    onclick = "[GetVariableSystem.Clear('show_gain_boons')]"
+                                    using = market_filter_luxury_button_sound
+                                }
+                                blockoverride "icon" {
+                                    texture = "gfx/interface/icons/generic_icons/give.dds"
+                                }
+                            }
+                        }
+
+                        container = {
+                            minimumsize = { 225 -1 }
+                            maximumsize = { 225 -1 }
+                            parentanchor = vcenter
+
+                            background = {
+                                using = entry_bg
+                            }
+
+                            flowcontainer = {
+                                margin = { 5 10 }
+                                spacing = 5
+                                parentanchor = center
+                                icon = {
+                                    texture = "gfx/interface/icons/lens_toolbar_icons/redeem_obligation.dds"
+                                    size = { 25 25 }
+                                }
+
+                                textbox = {
+                                    text = "concept_south_sea_favor"
+                                    autoresize = yes
+                                    using = fontsize_large
+                                    align = nobaseline
+                                    parentanchor = vcenter
+                                    max_width = 150
+                                    fontsize_min = 14
+                                    elide = right
+                                }
+                                textbox = {
+                                    raw_text = " #variable [GetPlayer.MakeScope.Var('south_sea_favor_var').GetValue]#!"
+                                    autoresize = yes
+                                    using = fontsize_large
+                                    align = nobaseline
+                                    parentanchor = vcenter
+                                }
+                            }
+                        }
+
+                        ### GAIN BOONS
+                        widget = {
+                            size = { 75 75 }
+
+                            icon = {
+                                texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                                size = { 75 75 }
+                                block "military_icon_selected" {
+                                    visible = "[GetVariableSystem.Exists('show_gain_boons')]"
+                                }
+                                using = default_fade_in_out
+                            }
+
+                            goods_filter_button = {
+                                tooltip = "SPEND_FAVOR"
+
+                                block "military_onclick" {
+                                    onclick = "[GetVariableSystem.Clear('show_gain_favor')]"
+                                    onclick = "[GetVariableSystem.Toggle('show_gain_boons')]"
+                                    using = market_filter_military_button_sound
+                                }
+                                blockoverride "icon" {
+                                    texture = "gfx/interface/icons/generic_icons/gain.dds"
+                                }
+
+
+                            }
+                        }
+                    }
+                    default_header = {
+                        using = default_list_position
+                        blockoverride "text" {
+                            text = "TRIBUTARIES"
+                        }
+                    }
+                    scrollbox = {
+                        parentanchor = hcenter
+                        minimumsize = { @panel_width_minus_10 150 }
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+                        blockoverride "scrollbox_content" {
+                            fixedgridbox = {
+                                addcolumn = 35
+                                addrow = 50
+                                datamodel_wrap = 15
+                                flipdirection = yes
+                                datamodel = "[GetGlobalList('drow_tributary_list')]"
+                                item = {
+                                    flowcontainer = {
+                                        datacontext = "[Scope.AccessCountry]"
+                                        tiny_flag = {
+                                            parentanchor = vcenter
+                                            using = tooltip_above
+                                            datacontext = "[Scope.AccessCountry]"
+                                            tooltip = "[ContextualDiplomaticPact.GetTooltip]"
+                                            onclick = "[GetVariableSystem.Clear('international_open')]"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            roe_context_menu = {
+                blockoverride "position" {
+                    position = { 140 500 }
+                }
+                blockoverride "visible" {
+                    visible = "[GetVariableSystem.Exists('show_gain_favor')]"
+                }
+                blockoverride "title_text" {
+                    text = "GAIN_FAVOR"
+                }
+                blockoverride "items" {
+                    button = {
+                        using = default_button
+                        size = { 170 40 }
+
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            margin_left = 10
+
+                            block "icon" {
+                                icon = {
+                                    block "texture" {
+                                        texture = "gfx/interface/icons/generic_icons/money.dds"
+                                    }
+                                    size = { 25 25 }
+                                }
+                            }
+
+                            textbox = {
+                                layoutpolicy_horizontal = expanding
+                                layoutpolicy_vertical = expanding
+                                text = "SOUTH_SEA_GIFT"
+                                align = left|nobaseline
+                                using = fontsize_large
+                                fontsize_min = 12
+                                elide = right
+                                margin = { 5 0 }
+                            }
+
+                            textbox = {
+                                margin_right = 10
+                                align = right|nobaseline
+                                autoresize = yes
+                                text = "SOUTH_SEA_GIFT_FAVOR"
+                            }
+                        }
+
+                        minimumsize = { 250 0 }
+                        datacontext = "[GetScriptedGui('south_sea_send_gift')]"
+                        onclick = "[GetVariableSystem.Clear('show_gain_favor')]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                    }
+                    button = {
+                        using = default_button
+                        size = { 170 40 }
+
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            margin_left = 10
+
+                            block "icon" {
+                                icon = {
+                                    block "texture" {
+                                        texture = "gfx/interface/icons/generic_icons/prestige.dds"
+                                    }
+                                    size = { 25 25 }
+                                }
+                            }
+
+                            textbox = {
+                                layoutpolicy_horizontal = expanding
+                                layoutpolicy_vertical = expanding
+                                text = "SOUTH_SEA_KOWTOW"
+                                align = left|nobaseline
+                                using = fontsize_large
+                                fontsize_min = 12
+                                elide = right
+                                margin = { 5 0 }
+                            }
+
+                            textbox = {
+                                margin_right = 10
+                                align = right|nobaseline
+                                autoresize = yes
+                                text = "SOUTH_SEA_KOWTOW_FAVOR"
+                            }
+                        }
+
+                        minimumsize = { 250 0 }
+                        datacontext = "[GetScriptedGui('south_sea_kowtow')]"
+                        onclick = "[GetVariableSystem.Clear('show_gain_favor')]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                    }
+                }
+            }
+            roe_context_menu = {
+                blockoverride "position" {
+                    position = { 160 500 }
+                }
+                blockoverride "visible" {
+                    visible = "[GetVariableSystem.Exists('show_gain_boons')]"
+                }
+                blockoverride "title_text" {
+                    text = "SPEND_FAVOR"
+                }
+                blockoverride "items" {
+                    button = {
+                        using = default_button
+                        size = { 170 40 }
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            margin_left = 10
+
+                            block "icon" {
+                                icon = {
+                                    block "texture" {
+                                        texture = "gfx/interface/icons/character_role_icons/admiral.dds"
+                                    }
+                                    size = { 25 25 }
+                                }
+                            }
+
+                            textbox = {
+                                layoutpolicy_horizontal = expanding
+                                layoutpolicy_vertical = expanding
+                                text = "SOUTH_SEA_ADMIRAL"
+                                align = left|nobaseline
+                                using = fontsize_large
+                                fontsize_min = 12
+                                elide = right
+                                margin = { 5 0 }
+                            }
+
+                            textbox = {
+                                margin_right = 10
+                                align = right|nobaseline
+                                autoresize = yes
+                                text = "SOUTH_SEA_ADMIRAL_FAVOR"
+                            }
+                        }
+                        minimumsize = { 250 0 }
+                        datacontext = "[GetScriptedGui('south_sea_recruit_admiral')]"
+                        onclick = "[GetVariableSystem.Toggle('show_gain_boons')]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                    }
+                    button = {
+                        using = default_button
+                        size = { 170 40 }
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+                            margin_left = 10
+
+                            block "icon" {
+                                icon = {
+                                    block "texture" {
+                                        texture = "gfx/interface/icons/generic_icons/innovation.dds"
+                                    }
+                                    size = { 25 25 }
+                                }
+                            }
+
+                            textbox = {
+                                layoutpolicy_horizontal = expanding
+                                layoutpolicy_vertical = expanding
+                                text = "SOUTH_SEA_TECH"
+                                align = left|nobaseline
+                                using = fontsize_large
+                                fontsize_min = 12
+                                elide = right
+                                margin = { 5 0 }
+                            }
+
+                            textbox = {
+                                margin_right = 10
+                                align = right|nobaseline
+                                autoresize = yes
+                                text = "SOUTH_SEA_TECH_FAVOR"
+                            }
+                        }
+                        minimumsize = { 250 0 }
+                        datacontext = "[GetScriptedGui('south_sea_tech')]"
+                        onclick = "[GetVariableSystem.Toggle('show_gain_boons')]"
+                        onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                        tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+﻿### State geography triggers
+
+state_is_in_aritzakarri = {
+	OR = {
+		region = sr:region_vitics_roosts
+		region = sr:region_skittering_hills
+		region = sr:region_west_aritzakarri
+		region = sr:region_vulture_coast
+	}
+}
+
+country_is_in_aritzakarri = {
+	exists = capital
+	capital = {
+		state_is_in_aritzakarri = yes
+	}
+}
+
+country_is_in_india= {
+	country_is_in_aritzakarri = yes
+}
+
+state_is_in_india = {
+	state_is_in_aritzakarri = yes
+}
+
+state_is_in_vermillion_thicket = {
+	OR = {	
+		region = sr:region_vermillion_thicket
+	}
+}
+
+state_is_in_rimeroot = {
+	OR = {
+		region = sr:region_rimeroot_jungle
+		region = sr:region_thawed_lands
+	}
+}
+
+gets_undermountain_buildings = { #this trigger is for the broadest possible definition of underground states
+	OR = {
+			state_region = s:STATE_ALQADIM
+			state_region = s:STATE_GIRAR
+			state_region = s:STATE_QAMARUD
+			state_region = s:STATE_ARCTHARAL
+			state_region = s:STATE_DER_IBBENN
+			state_region = s:STATE_GLIDGRED_RIZRA
+			state_region = s:STATE_KHARGISHABBO
+			state_region = s:STATE_LIGHTSCOURGE
+			state_region = s:STATE_NAKOKAIN
+			state_region = s:STATE_YAASKCASCH
+			state_region = s:STATE_TAYIGAMU
+			state_region = s:STATE_GUGNOS
+			state_region = s:STATE_CHITTERKIQ
+			state_region = s:STATE_MRAENTWAARSH
+			state_region = s:STATE_KEENAVOK
+			state_region = s:STATE_VYNDERVOHT
+			state_region = s:STATE_ELDBERG
+	}
+}
+
+crystalspawn_building_trigger = { #crystalspawn visibility trigger
+	OR = {
+		region = sr:region_achon
+		region = sr:region_keystone_peninsula
+		region = sr:region_old_khus
+		region = sr:region_shimmering_coast
+	}
+}

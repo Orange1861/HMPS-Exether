@@ -1,0 +1,153 @@
+﻿EXA = {
+	flag_definition = {
+		coa = EXA
+		subject_canton = EXA
+		priority = 1
+	}
+}
+
+AUM = {
+	flag_definition = {
+		coa = AUM
+		subject_canton = AUM
+		priority = 1
+	}
+}
+
+BCT = {
+	flag_definition = {
+		coa = BCT
+		subject_canton = BCT
+		priority = 1
+	}
+}
+
+DUM = {
+	flag_definition = {
+		coa = DUM
+		subject_canton = DUM
+		priority = 1
+	}
+}
+
+JUR = {
+	flag_definition = {
+		coa = JUR
+		subject_canton = JUR
+		priority = 1
+	}
+}
+
+ROF = {
+	flag_definition = {
+		coa = ROF
+		subject_canton = ROF
+		priority = 1
+	}
+}
+
+OEX = {
+	flag_definition = {
+		coa = OEX
+		subject_canton = OEX
+		priority = 1
+	}
+}
+
+YAN = {
+	flag_definition = {
+		coa = YAN
+		subject_canton = YAN
+		priority = 1
+	}
+}
+
+ZKW = {
+	flag_definition = {
+		coa = ZKW
+		subject_canton = ZKW
+		priority = 1
+	}
+	flag_definition = {
+        coa = ZKW_subject_AHO      
+        priority = 50
+        trigger = { 
+			exists = c:AHO
+            c:ZKW = {
+				is_subject_of = c:AHO
+			}
+        }
+    }    
+}
+
+FOX = {
+	flag_definition = {
+		coa = FOX
+		subject_canton = FOX
+		priority = 1
+	}
+}
+
+ABR = {
+	flag_definition = {
+		coa = ABR
+		subject_canton = ABR
+		priority = 1
+	}
+}
+
+RVC = {
+	flag_definition = {
+		coa = RVC
+		subject_canton = RVC
+		priority = 1
+	}
+}
+
+# RVD = {
+# 	flag_definition = {
+# 		coa = RVC
+# 		subject_canton = RVC
+# 		priority = 1
+# 	}
+# }
+
+DOV = {
+	flag_definition = {
+		coa = DOV
+		subject_canton = DOV
+		priority = 1
+	}
+}
+
+DRK = {
+	flag_definition = {
+		coa = DRK
+		subject_canton = DRK
+		priority = 1
+	}
+}
+
+PTD = {
+	flag_definition = {
+		coa = PTD
+		subject_canton = PTD
+		priority = 1
+	}
+}
+
+LEL = {
+	flag_definition = {
+		coa = LEL
+		subject_canton = LEL
+		priority = 1
+	}
+}
+
+LAR = {
+	flag_definition = {
+		coa = LAR
+		subject_canton = LAR
+		priority = 1
+	}
+}

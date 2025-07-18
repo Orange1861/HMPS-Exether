@@ -1,0 +1,18 @@
+﻿CHARACTERS = {
+	c:BLD = {
+		create_character = {
+			first_name = "Wiraqut"
+			last_name = "Zomnid"
+			historical = yes
+			ruler = yes
+			age = 31
+			interest_group = ig_landowners
+			ideology = ideology_jingoist_leader
+			traits = {
+				ambitious
+				direct
+				persistent 
+			}
+		}
+	}
+}

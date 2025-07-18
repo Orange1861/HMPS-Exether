@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_outfits2 = {
+			inheritable = no
+			
+			african_outfits = {
+				index = 1
+				male = {
+						1 = male_outfit_african_custom
+				}
+								
+				female = {
+						1 = female_outfit_african_common_1
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

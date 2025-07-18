@@ -1,0 +1,565 @@
+﻿namespace = kinfold
+
+kinfold.1 = { 
+	type = country_event
+	placement = scope:kinfold_nation.capital
+	title = kinfold.1.t
+	desc = kinfold.1.d
+	flavor = kinfold.1.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	trigger = { #triggered by JE
+		NOT = { 
+			has_variable = kinfold_cooldown 
+		}
+		NOT = {
+			has_variable = kinfold_debts_var
+		}
+		any_country = {
+			any_primary_culture = {
+				has_discrimination_trait = imperial_culture_group
+			}
+			has_diplomatic_pact = {
+				who = c:DUM
+				type = personal_union
+			}
+			NOT = {
+				owes_obligation_to = ROOT
+			}
+			any_neighbouring_state = {
+				owner = c:DUM
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = kinfold_cooldown
+			days = short_modifier_time
+		}
+		set_variable = kinfold_debts_var
+		random_country = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = imperial_culture_group
+				}
+				has_diplomatic_pact = {
+					who = c:DUM
+					type = personal_union
+				}
+			}
+			save_scope_as = kinfold_nation
+			ig:ig_landowners = {
+				leader = {
+					save_scope_as = kinfold_leader
+				}
+			}
+		}
+	}
+
+	option = {
+		name = kinfold.1.a #
+		default_option = yes
+		scope:kinfold_nation = {
+			set_owes_obligation_to = {
+				country = ROOT
+				setting = yes
+			}
+		}
+		if = {
+			limit = {
+				scope:kinfold_nation.scaled_debt > 0
+			}
+			take_on_scaled_debt = {
+				who = scope:kinfold_nation
+				value = scope:kinfold_nation.scaled_debt
+			}	
+		}
+
+		add_modifier ={ 
+			name = paying_kinfold_debts
+			days = short_modifier_time
+			is_decaying = yes
+		}
+
+		ig:ig_landowners = {
+			add_modifier ={ 
+				name = paid_kinfold_debts
+				days = short_modifier_time
+				is_decaying = yes
+			}
+		}
+	}
+
+	option = {
+		name = kinfold.1.b #we must focus our efforts on our artificers
+		root = {
+			change_relations = {
+				country = scope:kinfold_nation 
+				value = -25
+			}
+			ig:ig_landowners = {
+				add_modifier ={ 
+					name = denied_kinfold_debts
+					days = short_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+}
+
+kinfold.2 = { 
+	type = country_event
+	placement = scope:kinfold_state
+	title = kinfold.2.t
+	desc = kinfold.2.d
+	flavor = kinfold.2.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_russian_serfs"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_agriculture.dds"
+
+	trigger = { #triggered by JE
+		NOT = { 
+			has_variable = kinfold_cooldown 
+		}
+		NOT = {
+			has_variable = kinfold_conversion_var
+		}
+		any_country = {
+			any_primary_culture = {
+				has_discrimination_trait = imperial_culture_group
+			}
+			has_diplomatic_pact = {
+				who = c:DUM
+				type = personal_union
+			}
+			NOT = {
+				owes_obligation_to = ROOT
+			}
+			any_neighbouring_state = {
+				owner = c:DUM
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = kinfold_cooldown
+			days = short_modifier_time
+		}
+		set_variable = kinfold_conversion_var
+		random_country = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = imperial_culture_group
+				}
+				has_diplomatic_pact = {
+					who = c:DUM
+					type = personal_union
+				}
+			}
+			save_scope_as = kinfold_nation
+			ig:ig_landowners = {
+				leader = {
+					save_scope_as = kinfold_leader
+				}
+			}
+		}
+	}
+
+option = {
+		name = kinfold.2.a #
+		default_option = yes
+		scope:kinfold_nation = {
+			set_owes_obligation_to = {
+				country = ROOT
+				setting = yes
+			}
+			set_state_religion = rel:cult_of_the_sun
+			state_religion_switch_effect = yes
+			hidden_effect = {
+				ig:ig_devout = {
+					remove_ideology = ideology_ecumenical_moralist
+					add_ideology = ideology_theocratic_moralist
+					set_interest_group_name = ig_sun_cult 
+					set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
+					set_ig_trait = ig_trait:ig_trait_secular_shrine_theory
+					set_ig_trait = ig_trait:ig_trait_heavenly_sovereign
+					leader ?= {
+						change_character_religion = rel:cult_of_the_sun
+						hidden_effect = {
+							if = {
+								limit = {
+									has_ideology = ideology:ideology_ecumenical_traditionalist
+								}
+								set_ideology = ideology:ideology_traditionalist
+							}
+						}
+					}
+				}
+			}
+
+			random_scope_state = {
+				limit = {
+					owner = scope:kinfold_nation
+					is_capital = yes
+				}
+				convert_population = {
+					target = rel:cult_of_the_sun
+					value = 0.4
+				}
+			}
+			every_scope_state = {
+				limit = {
+					owner = scope:kinfold_nation
+					is_incorporated = yes
+					NOT = { is_capital = yes }
+				}
+				convert_population = {
+					target = rel:cult_of_the_sun
+					value = 0.2
+				}
+			}
+		}
+
+
+		ig:ig_devout = {
+			add_modifier ={ 
+				name = helped_heretics
+				days = short_modifier_time
+				is_decaying = yes
+			}
+		}
+	}
+
+	option = {
+		name = kinfold.2.b #we must focus our efforts on our artificers
+		root = {
+			change_relations = {
+				country = scope:kinfold_nation 
+				value = -25
+			}
+			ig:ig_landowners = {
+				add_modifier ={ 
+					name = denied_kinfold_debts
+					days = short_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+}
+
+kinfold.3 = {
+	type = country_event
+	placement = scope:peasant_state
+	title = kinfold.3.t
+	desc = kinfold.3.d
+	flavor = kinfold.3.f
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	duration = 3
+
+	trigger = {
+		NOT = { 
+			has_variable = kinfold_cooldown 
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_pop = {
+				is_pop_type = aristocrats
+			}
+			any_scope_pop = {
+				is_pop_type = peasants
+			}
+			is_capital = no
+		}
+		any_scope_character = {
+			OR = {
+				has_role = general
+			}
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_capital = no
+				is_incorporated = yes
+				any_scope_pop = {
+					is_pop_type = peasants 
+				}
+			}
+			random_scope_pop = {
+					limit = { 
+						is_pop_type = peasants 
+					}
+					save_scope_as = peasant_pop_scope
+				}
+			save_scope_as = peasant_state
+		}
+		set_variable = {
+			name = kinfold_cooldown
+			days = short_modifier_time
+		}
+		random_scope_character = {
+			limit = {
+				has_role = general
+			}
+			save_scope_as = peasant_smashing_general
+		}
+	}
+
+	option = {
+		name = kinfold.3.a						
+        default_option = yes
+		scope:peasant_state = {
+			add_modifier = {
+				name = peasant_unrest
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+			add_radicals_in_state = {
+				pop_type = peasants
+				value = medium_radicals
+			}
+		}
+	}
+	option = {
+		name = kinfold.3.b
+		scope:peasant_state = {
+			add_modifier = {
+				name = peasant_unrest
+				days = normal_modifier_time
+				multiplier = 0.25
+			}
+			add_radicals_in_state = {
+				pop_type = aristocrats
+				value = large_radicals
+			}
+		}
+	}
+	option = {
+		name = kinfold.3.c					
+		scope:peasant_state = {
+			add_modifier = {
+				name = peasant_unrest
+				days = normal_modifier_time
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = expanding_holdings
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+kinfold.4 = { 
+	type = country_event
+	placement = scope:kinfold_state
+	title = kinfold.4.t
+	desc = kinfold.4.d
+	flavor = kinfold.4.f
+    dlc = dlc_roe
+	duration = 3
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	trigger = { #triggered by JE
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = kinfold.4.a #
+		default_option = yes
+
+		custom_tooltip = {
+			text = dumonian_conversion_tt
+			every_scope_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = dewaric
+						has_pop_culture = avalorean
+						has_pop_culture = gelidrumin
+						has_pop_culture = ralaurian
+						has_pop_culture = uplander
+						has_pop_culture = dumonian
+					}
+				}
+				change_pop_culture = {
+					target = cu:imperial
+					value = 1
+				}
+			}
+		}
+
+		add_primary_culture = cu:imperial
+
+		if= {
+			limit = {
+				country_has_primary_culture = cu:dumonian
+			} 
+			remove_primary_culture = cu:dumonian
+		}
+		if= {
+			limit = {
+				country_has_primary_culture = cu:ralaurian
+			} 
+			remove_primary_culture = cu:ralaurian
+		}
+		if= {
+			limit = {
+				country_has_primary_culture = cu:dewaric
+			}
+			remove_primary_culture = cu:dewaric
+		}
+		if= {
+			limit = {
+				country_has_primary_culture = cu:uplander
+			}
+			remove_primary_culture = cu:uplander
+		}
+		if= {
+			limit = {
+				country_has_primary_culture = cu:avalorean
+			}
+			remove_primary_culture = cu:avalorean
+		}
+		if= {
+			limit = {
+				country_has_primary_culture = cu:gelidrumin
+			}
+			remove_primary_culture = cu:gelidrumin
+		}
+
+		every_scope_state = {
+			limit = {
+				state_region = {
+					OR = {
+						is_homeland = cu:dewaric
+						is_homeland = cu:avalorean
+						is_homeland = cu:gelidrumin
+						is_homeland = cu:ralaurian
+						is_homeland = cu:uplander
+						is_homeland = cu:dumonian
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						state_region = {
+							is_homeland = cu:imperial
+						}
+					}
+				}
+				state_region = {
+					add_homeland = cu:imperial
+				}
+			}
+		}
+		every_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:dumonian
+				}
+			}
+			state_region = {
+				remove_homeland = cu:dumonian
+			}
+		}
+		every_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:dewaric
+				}
+			}
+			state_region = {
+				remove_homeland = cu:dewaric
+			}
+		}
+
+		every_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:avalorean
+				}
+			}
+			state_region = {
+				remove_homeland = cu:avalorean
+			}
+		}
+
+		every_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:uplander
+				}
+			}
+			state_region = {
+				remove_homeland = cu:uplander
+			}
+		}
+
+		every_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:ralaurian
+				}
+			}
+			state_region = {
+				remove_homeland = cu:ralaurian
+			}
+		}
+
+		every_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:gelidrumin
+				}
+			}
+			state_region = {
+				remove_homeland = cu:gelidrumin
+			}
+		}
+
+
+	}
+}

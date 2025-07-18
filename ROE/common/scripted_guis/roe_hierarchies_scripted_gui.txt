@@ -1,0 +1,19 @@
+﻿# GRYPHON
+show_dwarf_law_button = {
+	is_valid = {
+		has_social_hierarchy = dwarf_social_hierarchy
+	}
+}
+
+show_west_bird_law_button = {
+	is_valid = {
+		has_social_hierarchy = west_avian_social_hierarchy
+	}
+}
+
+show_east_bird_law_button = {
+	is_valid = {
+		has_social_hierarchy = avian_social_hierarchy
+	}
+}
+

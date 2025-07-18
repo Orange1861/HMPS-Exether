@@ -1,0 +1,48 @@
+﻿default_social_hierarchy = {
+	is_default = yes
+}
+
+dwarf_social_hierarchy = {
+	pop_criteria = {
+		custom_tooltip = {
+			text = dwarf_social_hierarchy_trigger_desc
+			culture = {
+				has_discrimination_trait = dwarf_heritage
+			}
+		}
+	}
+}
+
+avian_social_hierarchy = {
+	pop_criteria = {
+		custom_tooltip = {
+			text = avian_social_hierarchy_trigger_desc
+			culture = {
+				has_discrimination_trait = bird_heritage
+			}
+		}
+	}
+}
+
+west_avian_social_hierarchy = {
+	pop_criteria = {
+		custom_tooltip = {
+			text = west_avian_social_hierarchy_trigger_desc
+			culture = {
+				has_discrimination_trait = bird_heritage
+			}
+		}
+	}
+}
+
+british_indian_caste_system = {
+	pop_criteria = {
+		custom_tooltip = {
+			text = british_indian_caste_system_trigger_desc
+			has_pop_religion = hindu
+			culture = {
+				has_discrimination_trait = south_asian_heritage
+			}
+		}
+	}
+}

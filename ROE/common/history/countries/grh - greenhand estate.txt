@@ -1,0 +1,27 @@
+﻿COUNTRIES = {
+	c:GRH ?= {
+		effect_starting_technology_tier_2_tech = yes
+
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = railways
+		add_technology_researched = mechanical_tools
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = thaumacore_factories
+		add_technology_researched = ectoplasm_engines
+
+		effect_starting_politics_traditional = yes
+
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_ecumenical_recognition
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_right_of_assembly		
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_homesteading
+	}
+}

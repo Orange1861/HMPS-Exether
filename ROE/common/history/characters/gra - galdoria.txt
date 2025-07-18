@@ -1,0 +1,19 @@
+﻿CHARACTERS = {
+	c:GRA ?= {
+		create_character = {
+			first_name = "Grigore"
+			last_name = "Barozzi"
+			historical = yes
+			ig_leader = yes
+			ruler = yes
+			age = 40
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_jingoist_leader
+			traits = {
+				brave
+				experienced_political_operator 
+				literary
+			}
+		}
+	}
+}

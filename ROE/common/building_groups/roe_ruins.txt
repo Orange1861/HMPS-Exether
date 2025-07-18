@@ -1,0 +1,163 @@
+﻿bg_ruins = {
+	parent_group = bg_archeology
+
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	depletable_resource = yes
+	
+	always_self_owning = yes
+	
+	pays_taxes = no
+
+	infrastructure_usage_per_level = 0
+	
+	fired_pops_become_radical = no
+}
+
+bg_archeology = {
+	category = rural
+
+	capped_by_resources = yes
+
+	economy_of_scale = yes
+
+	can_use_slaves = yes
+
+	lens = mine
+
+	cash_reserves_max = 25000
+
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+
+	should_auto_expand = {
+		default_auto_expand_rule = yes
+	}
+
+	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 1.0
+
+	default_building = building_archeology
+}
+
+
+bg_ruins_discoverable = {
+	parent_group = bg_ruins
+
+	discoverable_resource = yes
+}
+
+bg_collapsed_godsbane_vault = {
+	parent_group = bg_ruins
+
+	discoverable_resource = yes
+	
+	depletable_resource = yes
+
+	always_self_owning = yes
+
+	infrastructure_usage_per_level = 1
+
+	default_building = building_collapsed_godsbane_vault
+	
+	fired_pops_become_radical = no
+}
+
+bg_renovated_godsbane_vault = {
+	parent_group =  bg_archeology
+
+	default_building = building_renovated_godsbane_vault
+}
+bg_dragon_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_dragon_ruins
+}
+
+bg_orc_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_orc_ruins
+}
+
+bg_halfling_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_halfling_ruins
+}
+
+bg_human_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_human_ruins
+}
+
+bg_goblin_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_goblin_ruins
+}
+
+bg_lizard_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_lizard_ruins
+}
+
+# Need more info
+bg_gnomish_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_gnomish_ruins
+}
+
+# Arritzikarri
+bg_arritz_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_arritz_ruins
+}
+
+# Ogre
+bg_ogre_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_ogre_ruins
+}
+
+# Elvish
+bg_elvish_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_elvish_ruins
+}
+
+# Dwarf
+bg_dwarf_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_dwarf_ruins
+}
+
+# Giant
+bg_giant_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_giant_ruins
+}
+
+# Naga
+bg_asuroth_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_asuroth_ruins
+}
+
+# Khus
+bg_khus_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_khus_ruins
+}

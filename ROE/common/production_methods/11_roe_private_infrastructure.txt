@@ -1,0 +1,211 @@
+﻿#road infra building
+# Grappes: i'm a dipshit for how I set this up before, hopefully will actually be semi-viable now.
+pm_base_road_quality = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 5
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			}
+	}
+
+}
+
+pm_stone_road_quality = {
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	unlocking_technologies = {
+		modern_sewerage
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 7.5
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			}
+	}
+
+}
+
+pm_paved_road_quality = {
+	texture = "gfx/interface/icons/production_method_icons/steel_frame_buildings.dds"
+	unlocking_technologies = {
+		paved_roads
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+	building_modifiers = {
+	level_scaled = {
+		building_employment_laborers_add = 6000
+		}
+	}
+}
+
+pm_covered_road_wagons = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 3
+			goods_input_fabric_add = 2
+			# input 5 x 20 = 100
+			goods_output_transportation_add = 5 # output 5 x 30 = 150
+			# Verdict: Base Profit is 50. Intended to mitigate costs of labor for early-game infra anyways, not to get-rich-quick.
+			# Note: Base Profit calculations here are based off of raw goods balances, not including labor costs. This is a flaw.
+		}
+	}
+
+}
+
+pm_steam_fired_engines = {
+	texture = "gfx/interface/icons/production_method_icons/pumps.dds"
+	unlocking_technologies = {
+		watertube_boiler
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 2 # 60 x 2 = 120
+			goods_input_coal_add = 3 # 30 x 3 = 90 (Sum = 210)
+			goods_output_transportation_add = 10 # 30 x 10 = 300
+			# Verdict: Base profitability is 90, which is 40 higher than previous PM.
+		}
+	}
+}
+
+pm_early_compression_engines = {
+	texture = "gfx/interface/icons/production_method_icons/condensing_engine_pump.dds"
+	unlocking_technologies = {
+		steam_donkey
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 2 # 60 x 2 = 120
+			goods_input_blubber_add = 4 # 40 x 4 = 160 (Sum = 280)
+			goods_output_transportation_add = 15 # 30 x 15 = 450
+			# Verdict: Base Profitability is 170.
+		}
+	}
+}
+
+pm_early_maglev = {
+	texture = "gfx/interface/icons/production_method_icons/experimental_trains.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_thaumacores_add = 2 # 300
+			goods_input_cloudsilver_add = 1 # 40
+			goods_output_transportation_add = 20 # 600
+		}
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_machinists_add = 200
+			building_employment_clerks_add = 200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 20
+			state_veil_integrity_contribution = 25
+		}
+	}
+}
+
+pm_stable_maglev = {
+	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
+
+	unlocking_technologies = {
+		nimbium_tech
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_thaumacores_add = 2 # 300 # 300
+			goods_input_cloudsilver_add = 3 # 40 120
+			goods_output_transportation_add = 25 # 750
+		}
+		level_scaled = {
+			building_employment_laborers_add = 500
+			building_employment_machinists_add = 300
+			building_employment_clerks_add = 200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 25
+			state_veil_integrity_contribution = 20
+		}
+	}
+}
+
+pm_nimbium_maglev = {
+	texture = "gfx/interface/icons/production_method_icons/trains_diesel.dds"
+	replacement_if_valid = pm_nimbium_maglev_principle_transport_3
+	
+	unlocking_technologies = {
+		maglev
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_thaumacores_add = 2 # 300 # 300
+			goods_input_cloudsilver_add = 6 # 40 240
+			goods_output_transportation_add = 35 # 1050
+		}
+		level_scaled = {
+			building_employment_laborers_add = 400
+			building_employment_machinists_add = 400
+			building_employment_clerks_add = 200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 30
+		}
+	}
+
+}
+
+pm_nimbium_maglev_principle_transport_3 = {
+	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_principles = {
+		principle_transport_3
+	}
+	
+	unlocking_technologies = {
+		nimbium_tech
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_thaumacores_add = 2.4 # 360
+			goods_input_cloudsilver_add = 9 #40 360
+			goods_output_transportation_add = 45 # 1050
+		}
+		level_scaled = {
+			building_employment_laborers_add = 400
+			building_employment_machinists_add = 400
+			building_employment_clerks_add = 200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 40
+		}
+	}
+}

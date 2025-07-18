@@ -1,0 +1,39 @@
+﻿CHARACTERS = {
+	c:EMP ?= {
+		create_character = {
+			first_name = "Vego"
+	        last_name = "cie_Emparal_pi_Kracia"
+			historical = yes
+			ruler = yes
+			age = 39
+			culture = primary_culture
+			interest_group = ig_landowners
+			religion = rel:church_of_man
+			ideology = ideology_traditionalist
+		    traits = {
+		     hedonist
+			 direct
+		}
+			on_created = {
+			set_variable = {
+            name = is_cie_Emparal_pi_Kracia
+         }               
+       }
+	 }
+        create_character = {
+			first_name = "Enri"
+			last_name = "cie_Emparal_pi_Kracia"
+			historical = yes
+			heir = yes
+			age = 12
+			culture = primary_culture
+			interest_group = ig_intelligentsia
+			religion = rel:church_of_man
+			ideology = ideology_humanitarian_royalist
+	        traits = {
+		     romantic
+	    }
+      }
+    }
+  }
+

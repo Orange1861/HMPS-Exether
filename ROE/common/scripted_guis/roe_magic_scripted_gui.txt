@@ -1,0 +1,746 @@
+﻿# GRYPHON
+cast_arcana_id_gryphon_button_effect = {
+	saved_scopes = { arcana_id_gryphon }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		grpyhon_ai_selection = yes
+		pick_arcana_id_gryphon = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_gryphon_is_valid = yes
+	}
+	ai_chance = {
+		base = 100
+	}
+	is_valid = {
+		cast_arcana_id_gryphon_is_valid = yes
+	}
+}
+
+# JUSTICE
+cast_arcana_id_justice_button_effect = {
+	saved_scopes = { arcana_id_justice }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		justice_ai_selection = yes
+		pick_arcana_id_justice = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_justice_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_justice_is_valid = yes
+	}
+}
+
+# SPHINX
+cast_arcana_id_sphinx_button_effect = {
+	saved_scopes = { arcana_id_sphinx }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		sphinx_ai_selection = yes
+		pick_arcana_id_sphinx = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_sphinx_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_sphinx_is_valid = yes
+	}
+}
+
+# GOLEM
+cast_arcana_id_golem_button_effect = {
+	saved_scopes = { arcana_id_golem }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		golem_ai_selection = yes
+		pick_arcana_id_golem = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_golem_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_golem_is_valid = yes
+	}
+}
+
+# UNICORN
+cast_arcana_id_unicorn_button_effect = {
+	saved_scopes = { arcana_id_unicorn }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		unicorn_ai_selection = yes
+		pick_arcana_id_unicorn = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_unicorn_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_unicorn_is_valid = yes
+	}
+}
+
+# FEY
+cast_arcana_id_fey_button_effect = {
+	saved_scopes = { arcana_id_fey }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		fey_ai_selection = yes
+		pick_arcana_id_fey = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_fey_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_fey_is_valid = yes
+	}
+}
+
+# PHOENIX
+cast_arcana_id_phoenix_button_effect = {
+	saved_scopes = { arcana_id_phoenix }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		phoenix_ai_selection = yes
+		pick_arcana_id_phoenix = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_phoenix_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_phoenix_is_valid = yes
+	}
+}
+
+# DJINN
+cast_arcana_id_djinn_button_effect = {
+	saved_scopes = { arcana_id_djinn }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		djinn_ai_selection = yes
+		pick_arcana_id_djinn = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_djinn_is_valid = yes
+	}
+	
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_djinn_is_valid = yes
+	}
+}
+
+# SIREN
+cast_arcana_id_siren_button_effect = {
+	saved_scopes = { arcana_id_siren }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		siren_ai_selection = yes
+		pick_arcana_id_siren = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_siren_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_siren_is_valid = yes
+	}
+}
+
+# KRAKEN
+cast_arcana_id_kraken_button_effect = {
+	saved_scopes = { arcana_id_kraken }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		kraken_ai_selection = yes
+		pick_arcana_id_kraken = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_kraken_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_kraken_is_valid = yes
+	}
+}
+
+# FIEND
+cast_arcana_id_fiend_button_effect = {
+	saved_scopes = { arcana_id_fiend }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		fiend_ai_selection = yes
+		pick_arcana_id_fiend = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_fiend_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_fiend_is_valid = yes
+	}
+}
+
+# ANGEL
+cast_arcana_id_angel_button_effect = {
+	saved_scopes = { arcana_id_angel }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		angel_ai_selection = yes
+		pick_arcana_id_angel = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_angel_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_angel_is_valid = yes
+	}
+}
+
+# DRAGON
+cast_arcana_id_dragon_button_effect = {
+	saved_scopes = { arcana_id_dragon }
+	effect = {
+		add_modifier = {
+			name = country_arcana_card_cooldown
+			years = 12
+		}
+		dragon_ai_selection = yes
+		pick_arcana_id_dragon = yes
+		get_cost = yes
+	}
+	ai_is_valid = {
+		cast_arcana_id_dragon_is_valid = yes
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		cast_arcana_id_dragon_is_valid = yes
+	}
+}
+
+
+################################
+
+# GRYPHON
+cast_arcana_description_gryphon = {
+	saved_scopes = { arcana_id_gryphon }
+	effect = {
+		pick_arcana_id_gryphon = yes
+	}
+}
+
+# JUSTICE
+cast_arcana_description_justice = {
+	saved_scopes = { arcana_id_justice }
+	effect = {
+		pick_arcana_id_justice = yes
+	}
+}
+
+# SPHINX
+cast_arcana_description_sphinx = {
+	saved_scopes = { arcana_id_sphinx }
+	effect = {
+		pick_arcana_id_sphinx = yes
+	}
+}
+
+# GOLEM
+cast_arcana_description_golem = {
+	saved_scopes = { arcana_id_golem }
+	effect = {
+		pick_arcana_id_golem = yes
+	}
+}
+
+# UNICORN
+cast_arcana_description_unicorn = {
+	saved_scopes = { arcana_id_unicorn }
+	effect = {
+		pick_arcana_id_unicorn = yes
+	}
+}
+
+# FEY
+cast_arcana_description_fey = {
+	saved_scopes = { arcana_id_fey }
+	effect = {
+		pick_arcana_id_fey = yes
+	}
+}
+
+# PHOENIX
+cast_arcana_description_phoenix = {
+	saved_scopes = { arcana_id_phoenix }
+	effect = {
+		pick_arcana_id_phoenix = yes
+	}
+}
+
+# DJINN
+cast_arcana_description_djinn = {
+	saved_scopes = { arcana_id_djinn }
+	effect = {
+		pick_arcana_id_djinn = yes
+	}
+}
+
+# SIREN
+cast_arcana_description_siren = {
+	saved_scopes = { arcana_id_siren }
+	effect = {
+		pick_arcana_id_siren = yes
+	}
+}
+
+# KRAKEN
+cast_arcana_description_kraken = {
+	saved_scopes = { arcana_id_kraken }
+	effect = {
+		pick_arcana_id_kraken = yes
+	}
+}
+
+# FIEND
+cast_arcana_description_fiend = {
+	saved_scopes = { arcana_id_fiend }
+	effect = {
+		pick_arcana_id_fiend = yes
+	}
+}
+
+# ANGEL
+cast_arcana_description_angel = {
+	saved_scopes = { arcana_id_angel }
+	effect = {
+		pick_arcana_id_angel = yes
+	}
+}
+
+# DRAGON
+cast_arcana_description_dragon = {
+	saved_scopes = { arcana_id_dragon }
+	effect = {
+		pick_arcana_id_dragon = yes
+	}
+}
+
+
+cast_arcana_description_all = {
+	saved_scopes = { arcana_id }
+	effect = {
+		pick_arcana_id_gryphon = yes
+		pick_arcana_id_justice = yes
+		pick_arcana_id_sphinx = yes
+		pick_arcana_id_golem = yes
+		pick_arcana_id_unicorn = yes
+		pick_arcana_id_fey = yes
+		pick_arcana_id_phoenix = yes
+		pick_arcana_id_djinn = yes
+		pick_arcana_id_siren = yes
+		pick_arcana_id_kraken = yes
+		pick_arcana_id_fiend = yes
+		pick_arcana_id_angel = yes
+		pick_arcana_id_dragon = yes
+	}
+}
+######################################
+
+# GRYPHON
+dispel_arcana_gryphon_button_effect = {
+	saved_scopes = { arcana_id_gryphon }
+	effect = {
+		pick_dispel_arcana_gryphon = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# JUSTICE
+dispel_arcana_justice_button_effect = {
+	saved_scopes = { arcana_id_justice }
+	effect = {
+		pick_dispel_arcana_justice = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# SPHINX
+dispel_arcana_sphinx_button_effect = {
+	saved_scopes = { arcana_id_sphinx }
+	effect = {
+		pick_dispel_arcana_sphinx = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# GOLEM
+dispel_arcana_golem_button_effect = {
+	saved_scopes = { arcana_id_golem }
+	effect = {
+		pick_dispel_arcana_golem = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# UNICORN
+dispel_arcana_unicorn_button_effect = {
+	saved_scopes = { arcana_id_unicorn }
+	effect = {
+		pick_dispel_arcana_unicorn = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# FEY
+dispel_arcana_fey_button_effect = {
+	saved_scopes = { arcana_id_fey }
+	effect = {
+		pick_dispel_arcana_fey = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# PHOENIX
+dispel_arcana_phoenix_button_effect = {
+	saved_scopes = { arcana_id_phoenix }
+	effect = {
+		pick_dispel_arcana_phoenix = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# DJINN
+dispel_arcana_djinn_button_effect = {
+	saved_scopes = { arcana_id_djinn }
+	effect = {
+		pick_dispel_arcana_djinn = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# SIREN
+dispel_arcana_siren_button_effect = {
+	saved_scopes = { arcana_id_siren }
+	effect = {
+		pick_dispel_arcana_siren = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# KRAKEN
+dispel_arcana_kraken_button_effect = {
+	saved_scopes = { arcana_id_kraken }
+	effect = {
+		pick_dispel_arcana_kraken = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# FIEND
+dispel_arcana_fiend_button_effect = {
+	saved_scopes = { arcana_id_fiend }
+	effect = {
+		pick_dispel_arcana_fiend = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# ANGEL
+dispel_arcana_angel_button_effect = {
+	saved_scopes = { arcana_id_angel }
+	effect = {
+		pick_dispel_arcana_angel = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# DRAGON
+dispel_arcana_dragon_button_effect = {
+	saved_scopes = { arcana_id_dragon }
+	effect = {
+		pick_dispel_arcana_dragon = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_arcana_card_cooldown
+		}
+	}
+}
+
+# RECALC #
+recalculate_arcana_lists = {
+	effect = {
+		calculate_arcanas = yes
+	}
+}
+
+# Check if Gryphon arcana ID is active
+is_arcana_id_gryphon_active = {
+    saved_scopes = { arcana_id_gryphon }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_gryphon_list
+            target = scope:arcana_id_gryphon
+        }
+    }
+}
+
+# Check if Justice arcana ID is active
+is_arcana_id_justice_active = {
+    saved_scopes = { arcana_id_justice }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_justice_list
+            target = scope:arcana_id_justice
+        }
+    }
+}
+
+# Check if Sphinx arcana ID is active
+is_arcana_id_sphinx_active = {
+    saved_scopes = { arcana_id_sphinx }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_sphinx_list
+            target = scope:arcana_id_sphinx
+        }
+    }
+}
+
+# Check if Golem arcana ID is active
+is_arcana_id_golem_active = {
+    saved_scopes = { arcana_id_golem }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_golem_list
+            target = scope:arcana_id_golem
+        }
+    }
+}
+
+# Check if Unicorn arcana ID is active
+is_arcana_id_unicorn_active = {
+    saved_scopes = { arcana_id_unicorn }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_unicorn_list
+            target = scope:arcana_id_unicorn
+        }
+    }
+}
+
+# Check if Fey arcana ID is active
+is_arcana_id_fey_active = {
+    saved_scopes = { arcana_id_fey }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_fey_list
+            target = scope:arcana_id_fey
+        }
+    }
+}
+
+# Check if Phoenix arcana ID is active
+is_arcana_id_phoenix_active = {
+    saved_scopes = { arcana_id_phoenix }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_phoenix_list
+            target = scope:arcana_id_phoenix
+        }
+    }
+}
+
+# Check if Djinn arcana ID is active
+is_arcana_id_djinn_active = {
+    saved_scopes = { arcana_id_djinn }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_djinn_list
+            target = scope:arcana_id_djinn
+        }
+    }
+}
+
+# Check if Siren arcana ID is active
+is_arcana_id_siren_active = {
+    saved_scopes = { arcana_id_siren }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_siren_list
+            target = scope:arcana_id_siren
+        }
+    }
+}
+
+# Check if Kraken arcana ID is active
+is_arcana_id_kraken_active = {
+    saved_scopes = { arcana_id_kraken }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_kraken_list
+            target = scope:arcana_id_kraken
+        }
+    }
+}
+
+# Check if Fiend arcana ID is active
+is_arcana_id_fiend_active = {
+    saved_scopes = { arcana_id_fiend }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_fiend_list
+            target = scope:arcana_id_fiend
+        }
+    }
+}
+
+# Check if Angel arcana ID is active
+is_arcana_id_angel_active = {
+    saved_scopes = { arcana_id_angel }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_angel_list
+            target = scope:arcana_id_angel
+        }
+    }
+}
+
+# Check if Dragon arcana ID is active
+is_arcana_id_dragon_active = {
+    saved_scopes = { arcana_id_dragon }
+    is_valid = {
+        is_target_in_variable_list = {
+            name = active_arcana_id_dragon_list
+            target = scope:arcana_id_dragon
+        }
+    }
+}

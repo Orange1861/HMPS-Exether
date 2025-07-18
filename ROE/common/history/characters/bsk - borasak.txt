@@ -1,0 +1,92 @@
+CHARACTERS = {
+	c:BSK ?= {
+		create_character = {
+			first_name = "Jero"
+			last_name = "Wayan_Balik"
+			historical = yes
+			ig_leader = yes
+			age = 30
+			interest_group = ig_intelligentsia
+			ideology = ideology_republican_leader
+			traits = {
+				reserved
+				persistent
+			}
+		}
+
+		create_character = {
+			first_name = "Norodom"
+			last_name = "Nengah"
+			historical = yes
+			ig_leader = yes
+			age = 38
+			interest_group = ig_industrialists
+			ideology = ideology_republican_leader
+			traits = {
+				ambitious
+				charismatic
+			}
+		}
+		
+		create_character = { 
+			first_name = "Norodom"
+			last_name = "Wayan_Balik"
+			historical = yes
+			ig_leader = yes
+			age = 42
+			interest_group = ig_devout
+			ideology = ideology_theocrat
+			traits = {
+				pious
+				ambitious
+			}
+		}
+
+		create_character = {
+			first_name = "Thommo"
+			last_name = "Putu"
+			historical = yes
+			ig_leader = yes
+			ruler = yes
+			age = 40
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_ethno_nationalist
+			traits = {
+				firebrand
+				literary
+				charismatic
+				bigoted
+			}
+		}
+
+		create_character = {
+			first_name = "I_Gusti"
+			last_name = "Kadek"
+			historical = yes
+			is_general = yes
+			ig_leader = yes
+			age = 30
+			interest_group = ig_armed_forces
+			ideology = ideology_ethno_nationalist
+			traits = {
+				persistent
+				meticulous
+			}
+		}
+
+		create_character = {
+			first_name = "Satha"
+			last_name = "Kadek"
+			historical = yes
+			ig_leader = yes
+			age = 47
+			interest_group = ig_landowners
+			ideology = ideology_land_reformer
+			traits = {
+				hedonist
+				romantic
+			}
+		}
+
+	}
+}

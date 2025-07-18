@@ -1,0 +1,36 @@
+﻿
+region_vindon_narrows = {
+	graphical_culture = "latin"
+	capital_province = xF94FBA
+	map_color = { 0.2 0.36 1 }
+	states = { STATE_SMILTYNECAT STATE_JEIBUO STATE_HIJAASCH STATE_LAIVINMAR STATE_APLUKACAL STATE_SONANTH STATE_AACHTINT STATE_KRIOKLYKATAL STATE_UPESTARR STATE_BANGALITVA STATE_PIKY_UHILY STATE_ONOPYNISQI  }
+}
+
+region_lotus_isles = {
+	graphical_culture = "latin"
+	capital_province = xA2E699
+	map_color = { 0.3 0.86 0.45 }
+	states = { STATE_LYPIKISQI STATE_SINIKISQI STATE_MYCOLGA STATE_LHEIPH_VA STATE_NOLOGO_VELPH STATE_NOLOGO_RULL STATE_BYS_LOWAE }
+}
+
+region_fahavalo = {
+	graphical_culture = "latin"
+	capital_province = xF2B89B
+	map_color = { 0.2 0.36 0.45 }
+	states = { STATE_ANKAZOBE STATE_MAHALATSAKA STATE_TSIMIHAVANA STATE_FIANARIVO STATE_VAROTSOA STATE_YNTHOLG STATE_DRAGDA }
+}
+
+region_elusive_coves = {
+	graphical_culture = "latin"
+	capital_province = xF4C349
+	map_color = { 91 205 60 }
+	states = { STATE_OULOMYSSI STATE_WIS_POU STATE_ARGYSTSIK STATE_HILOKINI STATE_ONOLYSTU STATE_MISQISIMI STATE_SQUKI_IHI STATE_KUSTU_MYUNIS }
+}
+
+region_lacertia = {
+	graphical_culture = "african"
+	capital_province = xDFD0C5
+	map_color = { 125 171 84 }
+	states = { STATE_RARGIO STATE_VIANCOTEVE STATE_LISAZISA STATE_IWO_YUPI STATE_MOYHOSTUPI STATE_SQIO_USQU STATE_XABELO STATE_AMALUMA STATE_CREUCHE STATE_KIKUHO_KOHIKI STATE_MALANDA STATE_WINOLYSTU  }
+}
+

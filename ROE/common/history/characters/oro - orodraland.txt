@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:ORO = {
+		create_character = {
+			first_name = "Likhaaf"
+			last_name = "Chmalk"
+			historical = yes
+			ruler = yes
+			female = no
+			age = 32
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = "Gazel"
+			last_name = "Chmalk"
+			historical = yes
+			heir = yes
+			female = yes
+			age = 2
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
+			traits = {
+				trait_child
+			}
+		}
+	}
+}

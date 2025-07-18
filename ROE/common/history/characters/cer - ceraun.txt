@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:CER ?= {
+		create_character = {
+			template = CER_ludric_zarnak
+		}
+
+		create_character = {
+			first_name = "Cedric"
+			last_name = "Oswin"
+			historical = yes
+			ig_leader = yes
+			culture = primary_culture
+			age = 36
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_mad_scientist
+			traits = {
+				reckless
+				innovative
+				aesthete
+			}
+		}
+
+		create_character = {
+			ig_leader = yes
+			culture = primary_culture
+			interest_group = ig_mages
+			ideology = ideology_mad_scientist
+		}
+	}
+}

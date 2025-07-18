@@ -1,0 +1,157 @@
+﻿building_tavern= {
+	building_group = bg_taverns
+
+	city_type = city
+	
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_tavern
+		pmg_meal_plans
+		pmg_drink_options
+	}
+	ownership_type = self
+	icon = "gfx/interface/icons/building_icons/tavern.dds"
+
+	required_construction = construction_cost_very_low
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_mutagen_vats = {
+	building_group = bg_government
+	city_type = mine
+	icon = "gfx/interface/icons/building_icons/building_mutagen_vats.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+	has_max_level = yes
+
+	production_method_groups = {
+		pmg_base_building_mutagen_vats
+		pmg_potions_mutagen_vats
+	}
+
+	required_construction = construction_cost_medium
+	
+	unlocking_technologies = { pumpjacks }
+
+	potential = {
+		owner = {
+			has_law = law_type:law_genetic_testing
+		}
+	}
+
+	possible = {
+		owner = {
+			has_law = law_type:law_genetic_testing
+		}
+		
+	}
+	ai_value = 50000
+}
+
+building_sunstation = {
+	building_group = bg_sunstation
+	city_type = city
+	icon = "gfx/interface/icons/building_icons/building_sunstation.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+	unlocking_technologies = { thaumacore_factories  }
+
+	production_method_groups = {
+		pmg_base_building_sunstation
+	}
+
+	potential = {
+		OR = {
+			region = sr:region_thawed_lands
+			region = sr:region_rimeroot_jungle
+		}
+
+	}
+
+	required_construction = construction_cost_high
+	ai_value = 50000
+}
+
+building_underways = {
+	building_group = bg_underways
+	city_type = city
+	icon = "gfx/interface/icons/building_icons/building_underways.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	downsizeable = no
+
+	unlocking_technologies = { mechanical_tools dwarf_tech }
+
+	can_build_government = {
+		always = yes
+	}
+
+	can_build_private = {
+		always = no
+	}
+	 
+	potential = {
+		underway_state_trigger = yes
+	}
+
+	possible = {
+		underway_state_trigger = yes
+	}
+
+	production_method_groups = {
+		pmg_base_building_underways
+	}
+
+	required_construction = 1000
+	ai_value = {
+		value = 2500
+		
+		if = {
+			limit = { 
+				is_incorporated = yes	
+				free_arable_land < 12
+			}
+			
+		add = 35000
+		}	
+	}
+}
+
+building_obelisk = {
+	building_group = bg_monuments
+	city_type = city
+	icon = "gfx/interface/icons/building_icons/building_obelisk.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	downsizeable = no
+
+	potential = {
+		owner = {
+			OR = {
+				has_modifier = draconic_obelisk_murals
+				has_modifier = secrets_of_the_obelisks
+			}
+			
+		}
+		OR = {
+			region = sr:region_scalethane_realms
+			region = sr:region_new_dumonia
+			region = sr:region_dreamweaver_jungle
+			region = sr:region_mindrend_sands
+			region = sr:region_sarpakshetra
+			region = sr:region_thoughtsmith_ridge
+		}
+
+	}
+
+	production_method_groups = {
+		pmg_base_building_obelisk
+	}
+
+	required_construction = 800
+	ai_value = 20000
+}

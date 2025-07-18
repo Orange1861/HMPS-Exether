@@ -1,0 +1,148 @@
+﻿# All dynamic names should be applied on a strategic region level for ease of use and to avoid overlapping script
+evaluate_and_assign_state_hub_dynamic_names = {
+	if = {
+		limit = {
+			has_game_rule = no_dynamic_naming
+		}
+		reset_state_name = yes
+	    reset_hub_names = yes
+	}
+	else = {
+		assign_state_hub_dynamic_names = yes
+	}
+}
+
+assign_state_hub_dynamic_names = {
+	if = {
+		limit = {
+			region = sr:region_thoughtsmith_ridge
+		}
+		assign_state_name_region_thoughtsmith_ridge = yes
+	}
+	if = {
+		limit = {
+			region = sr:region_sarpakshetra
+		}
+		assign_state_name_region_sarpakshetra = yes
+	}
+	if = { 
+		limit = {
+			region = sr:region_dreamweaver_jungle
+		}
+		assign_state_name_region_dreamweaver_jungle = yes
+	}
+	if = {
+		limit = {
+			region = sr:region_thawed_lands
+		}
+		assign_state_name_region_thawed_lands = yes
+	}
+	if = {
+		limit = {
+			region = sr:region_rimeroot_jungle
+		}
+		assign_state_name_region_rimeroot_jungle = yes
+	}
+	if = {
+		limit = {
+			region = sr:region_lacertia
+		}
+		assign_state_name_region_lacertia = yes
+	}
+		if = {
+		limit = {
+			region = sr:region_elusive_coves
+		}
+		assign_state_name_region_elusive_coves = yes
+	}
+
+		if = {
+		limit = {
+			region = sr:region_vindon_narrows
+		}
+		assign_state_name_region_vindon_narrows = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_lotus_isles
+		}
+		assign_state_name_region_lotus_isles = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_scalethane_realms
+		}
+		assign_state_name_region_scalethane_realms = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_mindrend_sands
+		}
+		assign_state_name_region_mindrend_sands = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_new_dumonia
+		}
+		assign_state_name_region_new_dumonia = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_south_toftir
+		}
+		assign_state_name_region_south_toftir = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_razorwind
+		}
+		assign_state_name_region_razorwind = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_west_aritzakarri
+		}
+		assign_state_name_region_west_aritzakarri = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_vulture_coast
+		}
+		assign_state_name_region_vulture_coast = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_west_everfrost
+		}
+		assign_state_name_region_west_everfrost = yes
+	}
+
+	if = {
+		limit = {
+			region = sr:region_old_thaloria
+		}
+		assign_state_name_region_old_thaloria = yes
+	}
+	if = {
+		limit = {
+			region = sr:region_hasals_mirror
+		}
+		assign_state_name_region_hasals_mirror = yes
+	}
+	if = {
+		limit = {
+			region = sr:region_ravik
+		}
+		assign_state_name_region_ravik = yes
+	}
+
+}

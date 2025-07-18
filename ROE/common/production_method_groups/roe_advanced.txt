@@ -1,0 +1,109 @@
+﻿pmg_base_building_tavern = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_watering_hole
+		pm_glass_taverns
+		pm_steel_bar
+		pm_skyscraper_bar
+	}
+}
+
+pmg_meal_plans = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_meals
+		pm_fish_food
+		pm_meat_n_mead
+		pm_restaraunts
+	}
+}
+
+pmg_drink_options = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_luxury_drink
+		pm_tea
+		pm_coffee 
+		pm_wine 
+		pm_luxury_potion
+	}
+}
+
+pmg_base_building_airship_dock = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_anchorage_airship
+		pm_basic_port_airship
+		pm_industrial_port_airship
+		pm_modern_port_airship
+	}
+}
+
+pmg_base_building_magic_carpet_store = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_carpet_enchanting_posts
+		pm_carpet_enchanting_stations
+		pm_carpet_enchanting_emporium
+	}
+}
+
+pmg_tapestries_carpet_store = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	
+	production_methods = {
+		pm_no_tapestries
+		pm_basic_tapestries
+		pm_exotic_tapestries
+	}
+}
+
+pmg_base_building_sunstation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_before_sunrise
+		pm_before_sunset
+		pm_before_midnight
+	}
+}
+
+pmg_base_building_underways = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_underway_dummy
+	}
+}
+
+pmg_base_building_obelisk = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+
+	production_methods = {
+		pm_basic_obelisk
+	}
+}
+
+pmg_base_building_mutagen_vats = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_mutagen_vats
+		pm_advanced_mutagen_vats
+		pm_griffonblood_mutagen_vats
+	}
+}
+
+pmg_potions_mutagen_vats = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	production_methods = {
+		pm_no_potions_mutagen
+		pm_potions_mutagen
+		pm_griffonblood_potions_mutagen
+	}
+}

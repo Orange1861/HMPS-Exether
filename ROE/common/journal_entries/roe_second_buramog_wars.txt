@@ -1,0 +1,712 @@
+﻿je_buramog_raids = {
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        NOT = {
+            any_primary_culture = {
+                has_discrimination_trait = orc_heritage
+            }
+        }
+        any_scope_state = {
+            any_neighbouring_state = {
+                region = sr:region_plaguewood
+            }
+        }
+    }
+
+    possible = { 
+        custom_tooltip = {
+            text = bordering_plaguewood_orcs_tt
+            OR = {
+                AND = {
+                    any_scope_state = {
+                        any_neighbouring_state = {
+                            exists = c:RTD
+                            owner = c:RTD
+                        }
+                    }
+                    has_strategic_adjacency = c:RTD
+                    c:RTD = {
+                        has_journal_entry = je_second_buramog_wars
+                    }
+                }
+                AND = {
+                    any_scope_state = {
+                        any_neighbouring_state = {
+                            exists = c:BDB
+                            owner = c:BDB
+                        }
+                    }
+                    has_strategic_adjacency = c:BDB
+                    c:BDB = {
+                        has_journal_entry = je_second_buramog_wars
+                    }
+                }
+            }
+        }
+       
+        OR = {
+            top_overlord = {
+                NOT = {
+                    has_journal_entry = je_grey_boar
+                }
+            }
+        }
+    }
+
+    immediate = {
+        trigger_event = { id = buramog_war.11 }
+    }
+
+    scripted_button = outsider_escalate_buramog_wars
+
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = buramog_wars_escalated_loc
+                trigger = {
+                    OR = {
+                        has_variable = escalated_buramog_wars
+                        NOR = {
+                            AND = {
+                                exists = c:RTD
+                                has_truce_with = c:RTD
+                            }
+                            AND = {
+                                exists = c:BDB
+                                has_truce_with = c:BDB
+                            }
+                        }
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = buramog_wars_non_escalated_loc
+            }    
+        }
+    }
+
+    complete = {
+        OR = {
+
+            custom_tooltip = {
+                text = orcs_wiped_out_tt
+                NOT = {
+                    exists = c:BDB
+                    exists = c:RTD
+                }
+            }
+            AND = {
+                OR = {
+                    AND = {
+                        any_neighbouring_state = {
+                            OR = {
+                                owner ?= c:RTD
+                            }
+                        }
+                        custom_tooltip = {
+                            text = yevmehol_pacified_tt
+                            AND = {
+       
+                               
+                                OR = {
+                                    ROOT = {
+                                        has_diplomatic_pact = {
+                                            who = c:RTD
+                                            type = humiliation
+                                            is_initiator = yes
+                                        }
+                                    }
+                                    # ROOT = {
+                                    #     has_diplomatic_pact = {
+                                    #         who = c:RTD
+                                    #         type = war_reparations
+                                    #         is_initiator = yes
+                                    #     }
+                                    # }
+                                    c:RTD = {
+                                        OR = {
+                                            relations:root >= relations_threshold:amicable
+                                            is_subject_of = root
+                                        }
+                                    }
+                                }
+        
+                            }
+                        }
+                    }
+                    AND = {
+                        any_neighbouring_state = {
+                            OR = {
+                                owner ?= c:BDB
+                            }
+                        }
+                        custom_tooltip = {
+                            text = neskmes_pacified_tt
+                            AND = {
+
+                                OR = {
+                                    ROOT = {
+                                        has_diplomatic_pact = {
+                                            who = c:BDB
+                                            type = humiliation
+                                            is_initiator = yes
+                                        }
+                                    }
+                                    # ROOT = { #war reps pact don't exist no more
+                                    #     has_diplomatic_pact = {
+                                    #         who = c:BDB
+                                    #         type = war_reparations
+                                    #         is_initiator = yes
+                                    #     }
+                                    # }
+                                    C:BDB = {
+                                        OR = {
+                                            relations:root >= relations_threshold:amicable
+                                            is_subject_of = root
+                                        }
+                                    }
+                                }
+        
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
+
+        }
+    }
+
+    on_complete = {
+        set_global_variable = caucasus_consolidated_var
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = yevmehol_defeated
+                    
+                }
+                any_scope_state = {
+                    OR = {
+                        state_region = s:STATE_NORTHERN_EXPANSE
+                        state_region = s:STATE_EASTERN_PLAGUEWOOD
+                        state_region = s:STATE_BLACKWOOD
+                    }
+                }
+            }
+            trigger_event = { id = buramog_war_end.3 }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = neskmes_defeated
+                }
+                any_scope_state = {
+                    OR = {
+                        state_region = s:STATE_BURAMONG
+                        state_region = s:STATE_FORESTS_HEART
+                        state_region = s:STATE_RIBAGAR
+                        state_region = s:STATE_PLAGUEBRUSH
+                        state_region = s:STATE_SANDWOOD
+                    }
+                }
+            }
+            trigger_event = { id = buramog_war_end.1 }
+        }
+        trigger_event = { id = buramog_war_end.5 }
+    }
+
+    fail = {
+        OR = {
+            custom_tooltip = {
+                text = lost_to_orcs_tt
+                OR = {
+                    OR = {
+                        ROOT = {
+                            has_diplomatic_pact = {
+                                who = c:BDB
+                                type = humiliation
+                                is_initiator = no
+                            }
+                        }
+                        ROOT = {
+                            has_diplomatic_pact = {
+                                who = c:RTD
+                                type = humiliation
+                                is_initiator = no
+                            }
+                        }
+                    }
+                    # OR = {
+                    #     # AND = {
+                    #     #     exists = c:BDB
+                    #     #     ROOT = {
+                    #     #         has_diplomatic_pact = {
+                    #     #             who = c:BDB
+                    #     #             type = war_reparations
+                    #     #             is_initiator = no
+                    #     #         }
+                    #     #     }
+                    #     # }
+                    #     AND = {
+                    #         exists = c:BDB
+                    #         ROOT = {
+                    #             has_diplomatic_pact = {
+                    #                 who = c:RTD
+                    #                 type = war_reparations
+                    #                 is_initiator = no
+                    #             }
+                    #         }
+                    #     }
+                    # }
+                }
+            }
+            is_subject_of = c:BDB
+            is_subject_of = c:RTD
+        }
+
+
+    }
+
+    on_fail = {
+        set_global_variable = caucasus_failure_var
+        trigger_event = { id = buramog_war_end.4 days = 0 }
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    OR = {
+                        state_region = s:STATE_BLACKWOOD
+                        state_region = s:STATE_SANDWOOD
+                        state_region = s:STATE_RIBAGAR
+                    }
+                }
+                remove_modifier = buramog_wars_attacker
+            }       
+        }
+    }
+
+    invalid = {
+        OR = {
+            AND = {
+                c:RTD = {
+                    NOT = {
+                        has_journal_entry = je_second_buramog_wars
+                    }
+                }
+                c:BDB = {
+                    NOT = {
+                        has_journal_entry = je_second_buramog_wars
+                    }
+                }
+            }
+        NOT = {
+            any_neighbouring_state = {
+                OR = {
+                    owner ?= c:BDB
+                    owner ?= c:RTD
+                }
+            }
+        }
+        OR = {
+            AND = {
+                any_neighbouring_state = {
+                    OR = {
+                        owner ?= c:RTD
+                    }
+                }
+                NOT = {
+                    any_neighbouring_state = {
+                        OR = {
+                            owner ?= c:BDB
+                        }
+                    }
+                }
+                c:RTD = {
+                    NOT = {
+                        has_journal_entry = je_second_buramog_wars
+                    }
+                }
+            }
+            AND = {
+                any_neighbouring_state = {
+                    OR = {
+                        owner ?= c:BDB
+                    }
+                }
+                NOT = {
+                    any_neighbouring_state = {
+                        OR = {
+                            owner ?= c:RTD
+                        }
+                    }
+                }
+                c:BDB = {
+                    NOT = {
+                        has_journal_entry = je_second_buramog_wars
+                    }
+                }
+            }
+        }
+
+
+        }
+
+    }
+
+    on_invalid = {
+        trigger_event = { id = buramog_war_end.6 }
+    }
+
+    on_weekly_pulse = {
+        events = {
+            buramog_war_end.1
+            buramog_war_end.3
+        }
+    }
+
+    on_monthly_pulse = {
+        random_events = {
+            200 = 0
+            10 = buramog_war.1
+            10 = buramog_war.2
+            10 = buramog_war.3
+            10 = buramog_war.4
+            50 = buramog_war.6
+        }
+    }
+
+    weight = 100
+
+    can_deactivate = yes
+
+    should_be_pinned_by_default = yes
+}
+
+je_second_buramog_wars = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    group = je_group_historical_content
+
+    modifiers_while_active = {
+		buramog_wars_defender
+	}
+
+    immediate = {
+
+    }
+
+    fail = {
+        any_state = {
+            state_region = {
+                is_homeland = cu:buramog
+            }
+            
+            region = sr:region_plaguewood
+            owner = {
+                NOT = {
+                    country_has_primary_culture = cu:buramog
+                }
+            }
+        }
+    }
+
+
+    scripted_button = buramog_alliance_button
+
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = buramog_wars_escalated_loc
+                trigger = {
+                    always = no
+                }
+            }
+            triggered_desc = {
+                desc = buramog_wars_non_escalated_loc
+                trigger = {
+                    always = yes
+                }
+            }    
+        }
+    }
+
+    complete = {
+        OR = {
+            
+            any_scope_state = {
+                state_region = {
+                    NOR = {
+                        is_homeland = cu:buramog
+                        is_homeland = cu:korkaz
+                    }
+                }
+            }
+        }
+
+    }
+
+    invalid = {
+        navy_size >= 10
+    }
+
+     on_monthly_pulse = {
+        effect = {
+            
+        }
+        random_events = {
+            100 = 0
+            30 = buramog_war.7
+            10 = buramog_war.10
+        }
+    }
+
+    on_complete = {
+        trigger_event = { id = buramog_war_end.2 }
+                if= {
+            limit = {
+                is_country_type = preindustrial
+            }
+            show_as_tooltip = { 
+                set_country_type = unrecognized
+            }
+           
+        }
+
+    }
+
+    weight = 100
+
+    should_be_pinned_by_default = yes
+}
+
+je_plaguewood_expulsions = {
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        has_variable = plaguewood_directive_accepted
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = orcs_defeated_tt
+            OR = {
+                AND = {
+                    NOT = {
+                        exists = c:BDB
+                    }
+                    any_scope_state = {
+                        OR = {
+                            state_region = s:STATE_BURAMONG
+                            state_region = s:STATE_FORESTS_HEART
+                            state_region = s:STATE_RIBAGAR
+                            state_region = s:STATE_PLAGUEBRUSH
+                            state_region = s:STATE_SANDWOOD
+                        }
+                    }
+                }
+                AND = {
+                    NOT = {
+                        exists = c:RTD
+                    }
+                    any_scope_state = {
+                        OR = {
+                            state_region = s:STATE_NORTHERN_EXPANSE
+                            state_region = s:STATE_EASTERN_PLAGUEWOOD
+                            state_region = s:STATE_BLACKWOOD
+                        }
+                    }
+                }
+            }
+
+        }
+        cultural_acceptance_base = { target = cu:buramog value < acceptance_status_4 }
+    }
+
+    immediate = {
+        cu:buramog = {
+            save_scope_as = buramog_culture_scope
+        }
+        random_country = {
+			limit = {
+				any_scope_state = {
+                    is_incorporated = yes
+					OR = {
+				        state_region = s:STATE_SEUTE_EPHEI
+						state_region = s:STATE_WINOLYSTU
+					}
+				}
+			}
+			save_scope_as = expulsion_destination_country
+            trigger_event = { id = plaguewood_expulsions.2 days = 3 popup = yes }
+		}
+    }
+
+    scripted_button = invader_halt_plaguewood_expulsions
+
+    complete = {
+        any_scope_state = {
+            filter = {
+                region = sr:region_plaguewood
+            }
+            custom_tooltip = {
+                text = buramog_below_5_percent
+                culture_percent_state = {
+                    target = cu:buramog
+                    value <= 0.05
+                }
+            }
+            percent = 1
+        }
+    }
+
+    on_complete = {
+
+    }
+
+    fail = {
+       OR = {
+            custom_tooltip = {
+                text = has_halted_deportations_tt
+                has_variable = halted_buramog_deportations
+            }
+            ROOT = {
+                cultural_acceptance_base = { target = cu:buramog value >= acceptance_status_4 }
+            }
+        }
+    }
+
+    on_fail = {
+
+    }
+
+    on_monthly_pulse = {
+        events = {
+            plaguewood_expulsions.1
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_variable = buramog_events_hidden
+                    NOT = {
+                        has_variable = plaguewood_expulsion_stall
+                    }
+                }
+                random_scope_state = {
+                    limit = {
+                        region = sr:region_plaguewood
+                        any_scope_pop = {
+                            culture = cu:buramog
+                        }
+                    }
+                    save_scope_as = buramog_expulsion_state
+                }
+                random_country = {
+                    limit = {
+                        any_scope_state = {
+                            OR = {
+			                    state_region = s:STATE_SEUTE_EPHEI
+						        state_region = s:STATE_WINOLYSTU
+                            }
+                        }
+                    }
+                    save_scope_as = expulsion_destination_country
+                    random_scope_state = {
+                        limit = {
+                            OR = {
+				                state_region = s:STATE_SEUTE_EPHEI
+						        state_region = s:STATE_WINOLYSTU
+                            }
+                        }
+                        save_scope_as = expulsion_destination_state
+                    }
+                }
+                cu:buramog = {
+                    save_scope_as = buramog_culture
+                }
+                set_variable = {
+                    name = plaguewood_expulsion_stall
+                    months = 3
+                }
+                scope:buramog_expulsion_state = {
+                    if = {
+                        limit = {
+                            scope:expulsion_destination_country = {
+                                has_variable = refused_circassian_refugees
+                            }
+                        }
+                        kill_population_percent_in_state = {
+                            percent = 0.06
+                            culture = cu:buramog
+                        }
+                    }
+                    else = {
+                        kill_population_percent_in_state = {
+                            percent = 0.04
+                            culture = cu:buramog
+                        }
+                    }
+                    custom_tooltip = {
+                        text = three_pops_deported_tt
+                        random_scope_pop = {
+                            limit = {
+                                culture = cu:buramog
+                                strata = lower
+                            }
+                            move_pop = scope:expulsion_destination_state
+                        }
+                        random_scope_pop = {
+                            limit = {
+                                culture = cu:buramog
+                                strata = middle
+                            }
+                            move_pop = scope:expulsion_destination_state
+                        }
+                        random_scope_pop = {
+                            limit = {
+                                culture = cu:buramog
+                                strata = upper
+                            }
+                            move_pop = scope:expulsion_destination_state
+                        }
+                    }
+                }
+                scope:expulsion_destination_country = {
+                    post_notification = plaguewood_buramog_refugees_arrived
+                }
+                post_notification = buramog_deported_message
+            }
+
+            random_list = {
+                90 = {
+
+                }
+                10 = {
+                    random_country = {
+                        limit = {
+                            NOT = {
+                                this = root
+                            }
+                            any_scope_state = {
+                                OR = {
+				                    state_region = s:STATE_SEUTE_EPHEI
+					            	state_region = s:STATE_WINOLYSTU
+                                }
+                            }
+                        }
+                        trigger_event = { id = plaguewood_expulsions.3 popup = yes }
+                    }
+                }
+            }
+        }
+    }
+
+    weight = 100
+
+    should_be_pinned_by_default = yes
+}

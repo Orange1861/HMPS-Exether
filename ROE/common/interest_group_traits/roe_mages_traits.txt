@@ -1,0 +1,32 @@
+﻿ig_arcane_intervention = {
+	icon = "gfx/interface/icons/ig_trait_icons/arcane_enlightenment.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_turmoil_effects_mult= -0.05
+		state_construction_mult = 0.025
+	}
+}
+
+ig_mystical_traditions = {
+	icon = "gfx/interface/icons/ig_trait_icons/mystical_traditions.dds"
+	min_approval = happy
+	
+	modifier = {
+		state_radicals_from_political_movements_mult = -0.05
+	}
+}
+
+ig_isolationist = {
+	icon = "gfx/interface/icons/ig_trait_icons/isolationist.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		country_authority_mult = -0.05
+		country_bureaucracy_mult = -0.05
+		country_influence_mult = -0.05
+		state_assimilation_mult = -0.10
+
+	}
+}
+

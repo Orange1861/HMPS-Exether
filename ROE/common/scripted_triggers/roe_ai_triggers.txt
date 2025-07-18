@@ -1,0 +1,55 @@
+ai_wants_colonial_affairs = {
+	OR = {
+		c:TTN ?= this
+		c:ZKW ?= this
+		c:OPA?= this
+	}
+}
+
+ai_important_law_type = {
+	OR = {
+		law_type:law_frontier_colonization = scope:law.type
+	}
+}
+
+should_carve_up_yulug = {
+	country_rank >= rank_value:great_power
+	NOT = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_valley_of_golden_fields
+				region = sr:region_muru
+				region = sr:region_bataar_kharaal
+			}
+		}
+	}
+	OR = {
+		sr:region_valley_of_golden_fields = {
+			any_scope_state = {
+				is_treaty_port = yes
+				owner = {
+					NOT = { this = root }
+					NOT = { is_country_type = unrecognized }
+				}
+			}
+		}
+		sr:region_muru = {
+			any_scope_state = {
+				is_treaty_port = yes
+				owner = {
+					NOT = { this = root }
+					NOT = { is_country_type = unrecognized }
+				}
+			}
+		}
+		sr:region_bataar_kharaal = {
+			any_scope_state = {
+				is_treaty_port = yes
+				owner = {
+					NOT = { this = root }
+					NOT = { is_country_type = unrecognized }
+				}
+			}
+		}
+	}
+}

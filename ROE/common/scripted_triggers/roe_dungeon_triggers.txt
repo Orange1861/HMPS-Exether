@@ -1,0 +1,17 @@
+﻿is_vulnerable_to_thieves_guild = {
+	OR = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+			}
+			this.b:building_urban_center.level > 10
+			owner = {
+				institution_investment_level = {
+					institution = institution_police
+					value < 3
+				}
+			}
+		}
+	}
+
+}

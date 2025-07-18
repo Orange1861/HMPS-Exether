@@ -1,0 +1,181 @@
+﻿astrology = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/tech_mystical_studies.dds"
+	category = society
+	
+	modifier = {
+		country_institution_magical_focus_max_investment_add = 1
+		state_building_observatory_max_level_add = 1
+	}
+
+	unlocking_technologies = {
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+arcane_concentration = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/tech_arcane_concentration.dds"
+	category = society
+	
+	modifier = {
+		country_institution_magical_focus_max_investment_add=1
+
+	}
+
+	unlocking_technologies = {
+		psychiatry
+		supernatural_studies
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+organized_adventuring = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/organized_adventuring.dds"
+	category = society
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		law_enforcement
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+hero_worship = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/hero_worship.dds"
+	category = society
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		organized_adventuring
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+supernatural_studies = { #Unlocks wizard towers
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/tech_mystical_studies.dds"
+	category = society
+	
+	modifier = {
+		country_institution_magical_focus_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		astrology
+		empiricism
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+psionic_theory = { #Upgrade magic institution
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/psionic_theory.dds"
+	category = society
+	
+	modifier = {
+		country_institution_magical_focus_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		arcane_concentration
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+ethereal_mastery = { #Upgrade magic institution
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/tech_ethereal_mastery.dds"
+	category = society
+	
+	modifier = {
+		country_institution_magical_focus_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		psionic_theory
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+druidry = { 
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/druidry.dds"
+	category = society
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		astrology
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+thought_shielding = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/thought_shielding.dds"
+	category = society
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		philosophical_pragmatism
+		psionic_theory
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+monstrous_eradication = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/monster_eradication.dds"
+	category = society
+	
+	modifier = {
+		country_institution_colonial_affairs_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		civilizing_mission
+		hero_worship
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}

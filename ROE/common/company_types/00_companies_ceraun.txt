@@ -1,0 +1,207 @@
+﻿#Cerunite Sulphur Company
+company_cerunite_sulphur_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_anglo_sicilian_sulphur_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_THE_CHASM }
+	
+	building_types = {
+		building_sulfur_mine
+	}
+
+	extension_building_types = {
+		building_port
+		building_explosives_factory
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_ceraun
+	}
+
+	possible_prestige_goods = {
+		prestige_good_cerunite_sulfur
+	}
+
+	attainable = {
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_THE_CHASM
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_sulfur_mine
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_munition_plants_throughput_add = 0.1
+		building_group_bg_plantations_throughput_add = 0.05
+		building_group_bg_agriculture_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_THE_CHASM
+			is_incorporated = yes
+		}
+	}	
+	
+	ai_construction_targets = {
+		building_sulfur_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_THE_CHASM
+			}
+		}			
+	}		
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Boar's Delight Distillery Company
+company_boar_delight = {
+	icon = "gfx/interface/icons/company_icons/bluebottle2.dds" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_ORCBANE_PASS }
+	
+	building_types = {
+		building_potion_distillery
+		building_distillery
+	}
+
+	extension_building_types = {
+		building_hunting_lodge
+		building_glassworks
+	}
+	
+	potential = {
+
+		has_interest_marker_in_region = region_ceraun
+	}
+
+	possible_prestige_goods = {
+		prestige_good_boars_delight
+	}
+
+	attainable = {
+		any_scope_state = {
+			state_region = s:STATE_ORCBANE_PASS
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_potion_distillery
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		building_group_bg_hunting_throughput_add = 0.1
+		goods_output_luxury_potions_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_ORCBANE_PASS
+			is_incorporated = yes
+		}
+	}	
+	
+	ai_construction_targets = {
+		building_potion_distillery = {
+			level = 5
+
+		}		
+	}		
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_craggedwyn = {
+	icon = "gfx/interface/icons/company_icons/bluebottle2.dds" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_potion_distillery
+		building_oil_rig
+		building_hunting_lodge
+	}
+
+	extension_building_types = {
+		building_arms_industry
+		building_artillery_foundries
+	}
+	
+	potential = {
+		NOT = { has_variable = craggedwyn_collapse_var }
+		NOT = { has_variable = craggedwyn_success_var }
+		c:CER ?= this
+		has_interest_marker_in_region = region_ceraun
+	}
+
+	attainable = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_ORCBANE_PASS
+				state_region = s:STATE_CRAGGEDWYN
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_potion_distillery
+					is_building_type = building_hunting_lodge
+					is_building_type = building_oil_rig
+				}
+				
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_kill_rate_add = 0.1
+		country_infamy_generation_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_ORCBANE_PASS
+			is_incorporated = yes
+		}
+	}	
+	
+	ai_construction_targets = {
+		building_potion_distillery = {
+			level = 5
+
+		}		
+	}		
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

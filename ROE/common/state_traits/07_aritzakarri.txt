@@ -1,0 +1,8 @@
+﻿state_trait_saglithan_forest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.10
+		building_group_bg_hunting_throughput_add = 0.10
+	}
+}

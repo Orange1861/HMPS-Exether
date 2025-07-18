@@ -1,0 +1,189 @@
+﻿charity_for_the_sick = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_pop_attraction_mult = 0.125
+	interest_group_pol_str_mult = 0.05
+}
+
+dragon_sickhouses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
+	state_mortality_mult = -0.03
+	state_lower_strata_standard_of_living_add = 1
+}
+
+tore_down_sickhouses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_negative.dds
+	interest_group_approval_add = -3
+}
+
+loose_quarantine_enforcement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+	interest_group_approval_add = -3
+}
+industrialists_sickhouses_ignored = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+	interest_group_approval_add = -2
+}
+
+ignored_expert_advice = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+	interest_group_approval_add = -3
+}
+modifier_active_dragonblight_outbreak = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_mortality_mult = 0.035
+	state_radicals_from_political_movements_mult = 0.33
+	state_assimilation_mult = -0.33
+	state_migration_pull_mult = -0.5
+}
+
+dragonblight_port_controls = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_negative.dds
+	country_convoys_capacity_mult = -0.3
+}
+dragonblight_forced_charity = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds
+	interest_group_approval_add = -4
+	interest_group_pol_str_mult = -0.1
+	state_upper_strata_standard_of_living_add = -1
+}
+
+defended_birthday_party = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	interest_group_approval_add = 4
+}
+
+wealthy_abusing_disease_restrictions = {
+	state_radicals_from_political_movements_mult = 0.2
+}
+
+reprimanded_for_birthday_party = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_negative.dds
+	interest_group_approval_add = -4
+}
+
+arrested_for_birthday_party = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_negative.dds
+	interest_group_approval_add = -6
+	interest_group_pol_str_mult = -0.1
+}
+
+blighted_yet_triumphant = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
+	country_legitimacy_base_add = 15
+	country_authority_mult = 0.1
+}
+
+sailing_in_fear = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_clipper_negative.dds
+	building_port_throughput_add = -0.1
+	building_fishing_wharf_throughput_add = -0.1
+}
+
+handling_naval_logistics = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_clipper_negative.dds
+	country_bureaucracy_mult = -0.1
+}
+
+forced_back_to_work = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_negative.dds
+	country_authority_mult = -0.10
+}
+
+forced_back_to_work_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_negative.dds
+	state_market_access_price_impact = -0.05
+	building_group_bg_manufacturing_throughput_mult = 0.15
+	building_group_bg_mining_throughput_mult = 0.15
+	state_radicals_from_political_movements_mult = 0.2
+}
+
+dragonborn_staying_home = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_peasant_negative.dds
+	state_working_adult_ratio_add = -0.03
+	building_group_bg_manufacturing_throughput_mult = -0.10
+	building_group_bg_mining_throughput_mult = -0.10
+	state_market_access_price_impact = 0.05
+}
+
+rebuilding_hospital_network  = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_negative.dds
+	state_construction_mult = -0.15
+}
+
+managing_hospital_reconstruction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_negative.dds
+	country_bureaucracy_mult = -0.05
+}
+
+yes_in_your_backyard = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_negative.dds
+	interest_group_approval_add = -6
+	interest_group_pol_str_mult = -0.1
+}
+
+gave_into_sickhouse_protests = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+	state_radicals_from_political_movements_mult = 0.2
+	state_lower_strata_standard_of_living_add = -1
+}
+
+tolerated_conversion_cult_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_radicals_from_political_movements_mult = -0.25
+}
+
+active_conversion_cult = {  #this modifier triggers an effect in the dragonblight JE
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+}
+
+crushed_conversion_cult = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_radicals_from_political_movements_mult = -0.25
+}
+
+scorned_sick_friend = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_letter_negative.dds
+	interest_group_approval_add = -2
+	interest_group_pop_attraction_mult = -0.10
+}
+
+sent_warm_regards = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_letter_positive.dds
+	interest_group_approval_add = 2
+	interest_group_pop_attraction_mult = 0.10
+}
+
+victims_of_dragonblight = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	interest_group_pol_str_mult = -0.10
+}
+
+tolerated_kobold_pogroms = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protest_positive.dds
+	state_radicals_from_political_movements_mult = 0.35
+}
+
+stopped_kobold_pogroms = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protest_negative.dds
+	state_radicals_from_political_movements_mult = -0.15
+}
+
+dragon_collapse = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protest_negative.dds
+	country_liberty_desire_of_subjects_add = 0.15
+	country_prestige_add = -30
+	country_prestige_mult = -0.15
+	country_authority_mult = -0.15
+}
+
+dragonbloc_collapse = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protest_negative.dds
+	power_bloc_cohesion_mult = -0.66
+	power_bloc_cohesion_add = -20
+}
+
+dragonblight_blues = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+	state_assimilation_mult = -0.33
+	state_illvasaari_standard_of_living_add = -0.5
+}

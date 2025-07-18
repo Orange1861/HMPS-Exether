@@ -1,0 +1,26 @@
+﻿CHARACTERS = {
+	c:ARR ?= {
+		create_character = {
+			template = ARR_queen_soranda_template
+		}
+		create_character = {
+			template = ARR_duran_lantry
+		}
+		create_character = {
+			template = ARR_tars_kesten
+		}
+		create_character = {
+			template = ARR_vylar_cardem
+		}
+		create_character = {
+			template = ARR_uthar_helmer
+		}
+		create_character = {
+			template = ARR_vorj_faran
+		}
+		create_character = {
+			template = ARR_kaine_tharnes
+		}
+		
+	}
+}

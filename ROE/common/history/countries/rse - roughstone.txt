@@ -1,0 +1,31 @@
+﻿COUNTRIES = {
+	c:RSE = {
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+		effect_starting_technology_tier_orc_tech = yes
+				
+		effect_starting_politics_traditional = yes
+		
+
+		add_journal_entry = {
+			type = je_winds_of_change
+		}
+
+		activate_law = law_type:law_chiefdom
+		activate_law = law_type:law_elder_council
+
+		activate_law = law_type:law_debt_slavery
+		activate_law = law_type:law_ecumenical_recognition
+		activate_law = law_type:law_divine_miracles
+		activate_law = law_type:law_court_mages
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_magical_schools
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_isolationism
+
+		set_tax_level = medium
+		
+		effect_has_custom_journals = yes 
+	}
+}

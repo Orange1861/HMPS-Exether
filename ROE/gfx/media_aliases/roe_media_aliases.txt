@@ -1,0 +1,167 @@
+﻿# A media alias is a way to refer to a media asset along with a fallback,
+# so that if the original asset is unavailable, the game uses the fallback asset.
+#
+# key = {
+#	texture = "texture path"
+#	video = "video path"
+#	audio = "audio event"
+#
+#	fallback = another_media_alias_key
+#}
+
+
+
+#alphabetized.  Keep it that way.
+
+adventurer_elf_twink = {
+	video = "gfx/event_images/adventurer_elf_twink.bik"
+	audio = "event:/SFX/Events/asia/poor_people_moving"
+}
+
+adventurer_troll_fight = {
+	video = "gfx/event_images/adventurer_troll_fight.bik"
+	audio = "event:/SFX/Events/africa/soldiers_breaking_protest"
+}
+
+bear_talking_to_bureaucrats_negative = {
+	video = "gfx/event_images/bear_talking_to_bureaucrats.bik"
+	audio = "event:/SFX/Events/unspecific/the_octopus"	
+}
+
+bear_talking_to_bureaucrats_positive = {
+	video = "gfx/event_images/bear_talking_to_bureaucrats.bik"
+	audio = "event:/SFX/Events/asia/donghak_rebellion"
+}
+
+darkelf_emissary = {
+	video = "gfx/event_images/darkelf_emissary.bik"
+	audio = "event:/SFX/Events/europenorthamerica/capitalists_meeting"	
+}
+
+dragonbone = {
+	video = "gfx/event_images/dragonbone.bik"
+	audio = "event:/SFX/Events/asia/buddhism"
+}
+
+druid_discussion = {
+	video = "gfx/event_images/druid_discussion.bik"
+	audio = "event:/SFX/Events/africa/animism"
+}
+
+dwarf_bear_tunnel = {
+	video = "gfx/event_images/dwarf_bear_tunnel.bik"
+	audio = "event:/SFX/Events/africa/desert_expedition"
+}
+
+dwarf_bureaucrat = {
+	video = "gfx/event_images/dwarf_bureaucrats.bik"
+	audio = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+}
+
+dwarf_studying = {
+	video = "gfx/event_images/dwarf_studying.bik"
+	audio = "event:/SFX/Events/middleeast/engineer_blueprint"
+}
+
+goblin_capitalists = {
+	video = "gfx/event_images/goblin_capitalists.bik"
+	audio = "event:/SFX/Events/europenorthamerica/capitalists_meeting"	
+}
+
+gnoll_warcamp = {
+	video = "gfx/event_images/gnoll_warcamp.bik"
+	audio = "event:/SFX/Events/asia/farmers_market"
+}
+
+gnome_conscript = {
+	video = "gfx/event_images/gnome_conscript.bik"
+	audio = "event:/SFX/Events/asia/donghak_rebellion"
+}
+
+queen_griffon = {
+	video = "gfx/event_images/queen_griffon.bik"
+	audio = "event:/SFX/Events/unspecific/the_octopus"	
+}
+
+haunted_house = {
+	video = "gfx/event_images/haunted_house.bik"
+	audio = "event:/SFX/Events/unspecific/devastation"
+}
+
+human_preacher = {
+	video = "gfx/event_images/human_preacher.bk2"
+	audio = "event:/SFX/Events/southamerica/brazilian_city"
+}
+
+ice_orc = {
+	video = "gfx/event_images/ice_orc.bik"
+	audio = "event:/SFX/Events/unspecific/arctic"
+}
+
+kobold_mountain = {
+	video = "gfx/event_images/kobold_lookin.bik"
+	audio = "event:/SFX/Events/asia/buddhism"
+}
+
+leviathan_shore = {
+	video = "gfx/event_images/leviathan_shore.bik"
+	audio = "event:/SFX/Events/unspecific/whaling"
+}
+
+mouse_shopkeeper = {
+	video = "gfx/event_images/mouse_shopkeeper.bik"
+	audio = "event:/SFX/Events/africa/prosperous_farm"
+}
+
+mouse_train = {
+	video = "gfx/event_images/mouse_train.bik"
+	audio = "event:/SFX/Events/unspecific/trains"
+	
+}
+
+ogre_vats = {
+	video = "gfx/event_images/ogre_vats.bik"
+	audio = "event:/SFX/Events/middleeast/upperclass_party"
+}
+
+orc_meeting = {
+	video = "gfx/event_images/orc_clan_meeting.bik"
+	audio = "event:/SFX/Events/asia/farmers_market"
+}
+
+potion_seller = {
+	video = "gfx/event_images/potion_seller.bik"
+	audio = "event:/SFX/Events/africa/city_center"
+}
+
+rimeroot_sunstation = {
+	video = "gfx/event_images/sunstation.bik"
+	audio = "event:/SFX/Events/middleeast/mountain_pass_civilian"
+}
+salt_wastes_orc = {
+	video = "gfx/event_images/salt_wastes_orc.bik"
+	audio = "event:/SFX/Events/asia/dead_cattle_poor_harvest"
+}
+
+spirit_witch = {
+	video = "gfx/event_images/spirit_witch.bik"
+	audio = "event:/SFX/Events/unspecific/devastation"
+}
+
+sunstation_interior = {
+	video = "gfx/event_images/sunstation_core.bik"
+	audio = "event:/SFX/Events/unspecific/gears_pistons"
+}
+
+wizard_wheatfield = {
+	video = "gfx/event_images/wizard_wheatfield.bik"
+	audio = "event:/SFX/Events/unspecific/social_banditry"
+}
+
+unspecified_magic_phenomena = {
+	video = "gfx/event_images/unspecified_magic_phenomena.bk2"
+	audio = "event:/SFX/Events/asia/sepoy_mutiny"
+}
+
+
+

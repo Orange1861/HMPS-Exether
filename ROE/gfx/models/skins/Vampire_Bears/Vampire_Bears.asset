@@ -1,0 +1,239 @@
+﻿pdxmesh = {
+        name = "female_vampire_bear_1_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "female_vampire_bear_1.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_vampire_bear_1_entity"
+        pdxmesh = "female_vampire_bear_1_mesh"
+    }
+
+    pdxmesh = {
+        name = "female_vampire_bear_2_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "female_vampire_bear_2.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_vampire_bear_2_entity"
+        pdxmesh = "female_vampire_bear_2_mesh"
+    }
+
+    pdxmesh = {
+        name = "female_vampire_bear_3_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "female_vampire_bear_3.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_vampire_bear_3_entity"
+        pdxmesh = "female_vampire_bear_3_mesh"
+    }
+
+    pdxmesh = {
+        name = "female_vampire_bear_4_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "female_vampire_bear_4.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_vampire_bear_4_entity"
+        pdxmesh = "female_vampire_bear_4_mesh"
+    }
+
+    pdxmesh = {
+        name = "female_vampire_bear_5_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "female_vampire_bear_5.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_vampire_bear_5_entity"
+        pdxmesh = "female_vampire_bear_5_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_1_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_1.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_1_entity"
+        pdxmesh = "male_vampire_bear_1_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_2_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_2.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_2_entity"
+        pdxmesh = "male_vampire_bear_2_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_3_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_3.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_3_entity"
+        pdxmesh = "male_vampire_bear_3_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_4_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_4.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_4_entity"
+        pdxmesh = "male_vampire_bear_4_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_5_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_5.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_5_entity"
+        pdxmesh = "male_vampire_bear_5_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_6_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_6.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_6_entity"
+        pdxmesh = "male_vampire_bear_6_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_7_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_7.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_7_entity"
+        pdxmesh = "male_vampire_bear_7_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_8_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_8.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_8_entity"
+        pdxmesh = "male_vampire_bear_8_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vampire_bear_9_mesh"
+        file = "../hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "male_vampire_bear_9.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vampire_bear_9_entity"
+        pdxmesh = "male_vampire_bear_9_mesh"
+    }
+
+    

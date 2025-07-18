@@ -1,0 +1,153 @@
+namespace = achon_succession
+
+
+achon_succession.1 = { 
+	dlc = dlc_roe
+	type = country_event
+	placement = root
+	
+	title = achon_succession.1.a
+	desc = achon_succession.1.b
+	flavor = achon_succession.1.c
+	
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+	
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	duration = 1
+	
+	trigger = {
+	}
+
+	immediate = {
+		set_variable = new_era_achon
+	}
+	
+	option = {
+		name = achon_succession.1.d
+		default_option = yes
+				trigger_event = { id = achon_succession.2 days = 10 popup = yes }
+				add_radicals = { value = small_radicals }
+				add_modifier = { name = achon_political_uncertainty }
+
+	}	
+}
+
+achon_succession.2 = { 
+	dlc = dlc_roe
+	type = country_event
+	placement = root
+	
+	title = achon_succession.2.a
+	desc = achon_succession.2.b
+	flavor = achon_succession.2.c
+	
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+	
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	duration = 1
+	
+	trigger = {
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = achon_succession.2.d
+		default_option = yes
+				trigger_event = { id = achon_succession.3 days = 30 popup = yes }
+				add_radicals = { value = small_radicals }
+				remove_modifier = achon_political_uncertainty
+				add_modifier = { name = achon_grave_discontent months = 1 }
+	}
+}
+
+achon_succession.3 = { 
+	dlc = dlc_roe
+	type = country_event
+	placement = root
+	
+	title = achon_succession.3.a
+	desc = achon_succession.3.b
+	flavor = achon_succession.3.c
+	
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+	
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	duration = 1
+	
+	trigger = {
+	}
+
+	immediate = {
+			ruler = {
+			save_scope_as = interim_ruler_scope
+		}
+	}
+	
+	option = {
+		name = achon_succession.3.d
+		default_option = yes	
+		hidden_effect = {
+			if = {
+				limit = {
+					has_modifier = achon_grave_discontent
+				}
+			}
+			remove_modifier = achon_grave_discontent
+		}
+		add_modifier = { name = achon_populist_takeover	months = 60 is_decaying = yes }
+		add_radicals = { value = large_radicals culture = cu:changeling }
+
+		custom_tooltip = {
+			text = zvojtir_ruler_tt
+		create_character = {
+			template = AHO_achon_heir_template
+			on_created = {
+						set_as_interest_group_leader = yes
+						set_character_as_ruler = yes
+			}
+		}
+		}
+	}
+	
+	option = {
+		name = achon_succession.3.e
+		hidden_effect = {
+			if = {
+				limit = {
+					has_modifier = achon_grave_discontent
+				}
+			}
+			remove_modifier = achon_grave_discontent
+		}
+		add_modifier = { name = modifier_achon_succession_3	months = 60 is_decaying = yes }	
+		add_radicals = { value = large_radicals culture = cu:achonian }
+		custom_tooltip = {
+			text = zvojtir_agitator_tt
+			create_character = {
+				template = AHO_achon_heir_agitator_template
+			}	
+		}
+
+				
+		scope:interim_ruler_scope = {
+				add_modifier = { name = modifier_interim_unpopular months = 120 is_decaying = yes }
+		}
+	}
+}

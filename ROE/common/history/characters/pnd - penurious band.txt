@@ -1,0 +1,44 @@
+﻿CHARACTERS = {
+	c:PND = {
+		create_character = {
+			first_name = "Geard"
+			last_name = "Droscor"
+			historical = yes
+			ruler = yes
+			is_admiral = yes
+			age = 55
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_anarchist
+			traits = {
+				charismatic
+				bandit
+				expert_naval_commander
+			}
+		}
+
+		create_character = {
+			historical = yes
+			age = 55
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_anarchist
+			traits = {
+				charismatic
+				honorable
+			}
+		}
+		create_character = {
+			historical = yes
+			age = 20
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_anarchist
+			traits = {
+				wrathful
+				inspirational_orator
+				inexperienced
+			}
+		}
+	}
+}

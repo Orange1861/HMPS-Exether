@@ -1,0 +1,195 @@
+﻿je_blood_tribunal = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = bloodtithe_mode_player_crazy
+					has_game_rule = bloodtithe_mode_crazy
+				}
+				is_ai = no
+			}
+			trigger_event = {
+				id = gamerule.4
+			}
+		}
+	}
+
+	complete = {
+		any_country = {
+			is_subject_of = ROOT
+			count >= 5
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = blood_tribunal.2 popup = yes }
+		custom_tooltip = je_blood_tribunal_more_tt
+		set_variable = established_blood_tribunals
+		set_country_type = recognized
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+je_high_courts = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+
+	complete = {
+
+
+		any_direct_subject = {
+			custom_tooltip = {
+				text = high_court_tt
+				any_primary_culture = {
+					has_discrimination_trait = vampiric
+				}
+			}
+			count >= 3
+		}
+	
+
+		any_subject_or_below = {
+			custom_tooltip = {
+				text = high_court_tt_2
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait = vampiric
+					}
+				}
+			}
+
+			count >= 5
+		}
+
+		
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = standardized_tribute_system
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+je_vampire_university = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	group = je_group_historical_content
+
+	scripted_button = halt_tithes_button
+	scripted_button = unhalt_tithes_button
+	scripted_button = halt_ini_rites_button
+	scripted_button = unhalt_ini_rites_button
+	
+	modifiers_while_active = {
+		rvc_tithes
+	}
+
+
+	# on_monthly_pulse = {
+	# 	random_events = {
+
+	# 	}
+	# }
+
+	on_yearly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					has_variable = established_blood_tribunals
+					NOT = { has_variable = halted_tithes_variable }
+					}
+					trigger_event = {
+						id = blood_tribunal.6 #to special measures or to the incorporated state with the most available jobs
+					}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_variable = halted_tithes_variable }
+					}
+					trigger_event = {
+							id = blood_tribunal.7 #to special measures or to the incorporated state with the most available jobs
+					}
+				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = halted_ini_rites_variable
+					}
+				}
+				if = {
+					limit = {
+						any_primary_culture = {
+							has_discrimination_trait = vampiric
+						}
+					}
+					random_primary_culture = {
+						limit = {
+							has_discrimination_trait = vampiric
+						}
+						save_scope_as = vampiric_culture
+					}
+					every_scope_state = {
+						every_scope_pop = {
+							limit = {
+								NOT = {
+									has_pop_culture = vampire
+								}
+							}
+							change_pop_culture = {
+								target = scope:vampiric_culture
+								value = 0.015
+							}
+							}
+						}
+				}
+				else = {
+					random_primary_culture = {
+						save_scope_as = primary_culture_scope
+					}
+					every_scope_state = {
+						every_scope_pop = {
+							change_pop_culture = {
+								target = scope:primary_culture_scope
+								value = 0.015
+							}
+							}
+						}
+				}
+
+					add_modifier = {
+						name = recently_performed_initiations 
+						years = 1
+					}
+			}
+
+
+		}
+
+		random_events = {
+			60 = 0
+			17 = blood_tribunal.8
+			17 = blood_tribunal.9
+			17 = blood_tribunal.3
+		}
+		
+
+		
+
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

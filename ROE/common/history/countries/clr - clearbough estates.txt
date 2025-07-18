@@ -1,0 +1,39 @@
+﻿COUNTRIES = {
+	c:CLR ?= {
+		# set_next_election_date = ???
+		
+		effect_starting_technology_tier_2_tech = yes
+
+		add_technology_researched = dialectics
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = mechanical_tools
+		add_technology_researched = stock_exchange
+		add_technology_researched = corporate_charters
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = thaumacore_factories
+		add_technology_researched = ectoplasm_engines
+
+		
+		
+		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_right_of_assembly		
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_homesteading
+		
+		
+				
+		
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}	
+	}
+}

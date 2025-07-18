@@ -1,0 +1,90 @@
+﻿je_beauty_in_bloom = {
+	icon = "gfx/interface/icons/ig_icons/devout.dds"
+
+	group = je_group_internal_affairs
+
+	# see also: exiling an devout character depletes the progress bar
+
+	scripted_button = beauty_in_bloom_decree_button
+
+	immediate = {
+		save_scope_as = beauty_in_bloom_country_scope
+	}
+
+	complete = {
+		ig:ig_devout ?= {
+			is_in_government = no
+		}
+		custom_tooltip = {
+			text = beauty_in_bloom_complete
+			root.var:beauty_in_bloom_var <= 0
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = beauty_in_bloom.2 popup = yes }
+		show_as_tooltip = {
+			ig:ig_devout ?= {
+				remove_ideology = ideology_chivalrous_conservative
+				add_ideology = ideology_patriarchal
+			}
+			remove_modifier = beauty_in_bloom_modifier
+		}
+	}
+
+	fail = {
+		ig:ig_devout ?= {
+			is_in_government = yes
+		}
+		custom_tooltip = {
+			text = je_beauty_in_bloom_goal_tt
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+	}
+
+	on_fail = {
+		trigger_event = { id = beauty_in_bloom.3 popup = yes }
+		show_as_tooltip = {
+			add_modifier = {
+				name = beauty_in_bloom_modifier
+				multiplier = 2
+			}
+		}
+	}
+
+	on_weekly_pulse = {
+		effect = {
+            calculate_beauty_in_bloom_progress = yes
+        }
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			change_variable = { name = beauty_in_bloom_var add = var:beauty_in_bloom_next }
+		}
+		random_events = {
+			# Pulse events affect the progress bar
+			120 = 0 
+			10 = beauty_in_bloom.4
+			25 = beauty_in_bloom.6
+		}
+	}
+
+	current_value = {
+		value = root.var:beauty_in_bloom_var
+	}
+
+	goal_add_value = {
+		add = 1200
+	}
+
+	progressbar = yes
+
+	weight = 100
+
+	can_revolution_inherit = yes
+	transferable = yes
+	should_be_pinned_by_default = yes
+}

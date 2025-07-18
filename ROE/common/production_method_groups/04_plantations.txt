@@ -1,0 +1,249 @@
+﻿pmg_base_building_coffee_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_coffee_plantation
+		automatic_irrigation_building_coffee_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_coffee = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_coffee_plantation
+		pm_gizmo_waterwrangler_2_coffee
+	}
+}
+
+pmg_train_automation_building_coffee_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_cotton_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_cotton_plantation
+		automatic_irrigation_building_cotton_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_cotton = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_cotton_plantation
+		pm_gizmo_waterwrangler_2_cotton
+	}
+}
+
+pmg_train_automation_building_cotton_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_dye_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_dye_plantation
+		automatic_irrigation_building_dye_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_dye = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_dye_plantation
+		pm_gizmo_waterwrangler_2_dye
+	}
+}
+
+pmg_train_automation_building_dye_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_opium_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_opium_plantation
+		automatic_irrigation_building_opium_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_opium = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_opium_plantation
+		pm_gizmo_waterwrangler_2_opium
+	}
+}
+
+pmg_train_automation_building_opium_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_tea_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_tea_plantation
+		automatic_irrigation_building_tea_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_tea = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_tea_plantation
+		pm_gizmo_waterwrangler_2_tea
+	}
+}
+
+pmg_train_automation_building_tea_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_tobacco_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_tobacco_plantation
+		automatic_irrigation_building_tobacco_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_tobacco = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_tobacco_plantation
+		pm_gizmo_waterwrangler_2_tobacco
+	}
+}
+
+pmg_train_automation_building_tobacco_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_sugar_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_sugar_plantation
+		automatic_irrigation_building_sugar_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_sugar = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_sugar_plantation
+		pm_gizmo_waterwrangler_2_sugar
+	}
+}
+
+pmg_train_automation_building_sugar_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_banana_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_banana_plantation
+		automatic_irrigation_building_banana_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_banana = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_banana_plantation
+		pm_gizmo_waterwrangler_2_banana
+	}
+}
+
+pmg_train_automation_building_banana_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_silk_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_silk_plantation
+		automatic_irrigation_building_silk_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_silk = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_silk_plantation
+		pm_gizmo_waterwrangler_2_silk
+	}
+}
+
+pmg_train_automation_building_silk_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_base_building_vineyard_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_vineyard_plantation
+		automatic_irrigation_building_vineyard_plantation
+	}
+}
+
+pmg_gizmo_waterwrangler_irrigation_vineyard = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_wrangling
+		pm_gizmo_waterwrangler_irrigation_building_vineyard_plantation
+		pm_gizmo_waterwrangler_2_vineyard
+	}
+}
+
+pmg_train_automation_building_vineyard_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}

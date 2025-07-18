@@ -1,0 +1,24 @@
+types grand_expedition_types
+{
+	### Start expedition button
+	type start_expedition_button = button {
+		size = { 100 100 }
+		using = tooltip_above
+
+		block "datacontext" {}
+		block "enabled" {}
+		block "onclick" {}
+		block "tooltip" {}
+		### Made into a button to get the onhover highlight a button have on the icon too
+		button = {
+			size = { 50% 50% }
+			parentanchor = center
+			block "enabled" {}
+			block "onclick" {}
+			block "tooltip" {}
+			block "texture" {}
+		}
+
+
+	}
+}

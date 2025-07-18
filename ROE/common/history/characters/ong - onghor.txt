@@ -1,0 +1,17 @@
+﻿CHARACTERS = {
+	c:ONG ?= {
+	
+		create_character = {
+			template = ONG_onghor_leader_template
+		}	
+		create_character = {
+			template = IG_gerno_hepte_template
+			}	
+		create_character = {
+			template = IG_bedai_katang_template
+			}
+		create_character = {
+			template = IG_paw_stangkang_template
+			}			
+		}
+	}

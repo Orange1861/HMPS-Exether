@@ -1,0 +1,1502 @@
+﻿assign_state_name_region_old_thaloria = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_ENBERFYRN ?= this
+            }
+        }
+        STATE_ENBERFYRN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KUKESPIA ?= this
+            }
+        }
+        STATE_KUKESPIA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_ZATYRE ?= this
+            }
+        }
+        STATE_ZATYRE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TEPELENA ?= this
+            }
+        }
+        STATE_TEPELENA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_USTRIZHYVKA ?= this
+            }
+        }
+        STATE_USTRIZHYVKA_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RIVERTIDE ?= this
+            }
+        }
+        STATE_RIVERTIDE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_LIONS_ROOST ?= this
+            }
+        }
+        STATE_LIONS_ROOST_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WINDMERE ?= this
+            }
+        }
+        STATE_WINDMERE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SHADOWFEN ?= this
+            }
+        }
+        STATE_SHADOWFEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_AMBERWICK ?= this
+            }
+        }
+        STATE_AMBERWICK_state_name_assign = yes
+    }
+
+}
+
+assign_state_name_region_hasals_mirror = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SILVERCREST ?= this
+            }
+        }
+        STATE_SILVERCREST_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SUNDALE ?= this
+            }
+        }
+        STATE_SUNDALE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BELLENBERG ?= this
+            }
+        }
+        STATE_BELLENBERG_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WHITESTONE ?= this
+            }
+        }
+        STATE_WHITESTONE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_WINDSONG ?= this
+            }
+        }
+        STATE_WINDSONG_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TIMMERHAVEN ?= this
+            }
+        }
+        STATE_TIMMERHAVEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_GLIMMERWOUD ?= this
+            }
+        }
+        STATE_GLIMMERWOUD_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_MOONSHADE ?= this
+            }
+        }
+        STATE_MOONSHADE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_HAVENSHIRE ?= this
+            }
+        }
+        STATE_HAVENSHIRE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_FARREACH ?= this
+            }
+        }
+        STATE_FARREACH_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_STORMWATCH ?= this
+            }
+        }
+        STATE_STORMWATCH_state_name_assign = yes
+    }
+
+}
+
+assign_state_name_region_ravik = {
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_BELLENBOS ?= this
+            }
+        }
+        STATE_BELLENBOS_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RAVENHOLME ?= this
+            }
+        }
+        STATE_RAVENHOLME_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_DRAAIKUST ?= this
+            }
+        }
+        STATE_DRAAIKUST_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SNAARGRACHT ?= this
+            }
+        }
+        STATE_SNAARGRACHT_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RATELBERG ?= this
+            }
+        }
+        STATE_RATELBERG_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_GLIMMERDAM ?= this
+            }
+        }
+        STATE_GLIMMERDAM_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KLINGELWEIDE ?= this
+            }
+        }
+        STATE_KLINGELWEIDE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KRULWILGEN ?= this
+            }
+        }
+        STATE_KRULWILGEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_FLUITVELD ?= this
+            }
+        }
+        STATE_FLUITVELD_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_FLUITBOS ?= this
+            }
+        }
+        STATE_FLUITBOS_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TIKKERHAVEN ?= this
+            }
+        }
+        STATE_TIKKERHAVEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TINKELHOVEN ?= this
+            }
+        }
+        STATE_TINKELHOVEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KLINGELBERG ?= this
+            }
+        }
+        STATE_KLINGELBERG_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SPRONKERGROEN ?= this
+            }
+        }
+        STATE_SPRONKERGROEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_PIEPERDORP ?= this
+            }
+        }
+        STATE_PIEPERDORP_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_PIEPERHAVEN ?= this
+            }
+        }
+        STATE_PIEPERHAVEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SMEERGOED ?= this
+            }
+        }
+        STATE_SMEERGOED_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KLINGELMEER ?= this
+            }
+        }
+        STATE_KLINGELMEER_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SMIDSHOEK ?= this
+            }
+        }
+        STATE_SMIDSHOEK_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_MOLENWOUD ?= this
+            }
+        }
+        STATE_MOLENWOUD_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_GNURKENRADE ?= this
+            }
+        }
+        STATE_GNURKENRADE_state_name_assign = yes
+    }
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TROMMELKUST ?= this
+            }
+        }
+        STATE_TROMMELKUST_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KWETTERDIJK ?= this
+            }
+        }
+        STATE_KWETTERDIJK_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_FLUITERHEIDE ?= this
+            }
+        }
+        STATE_FLUITERHEIDE_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TIMMERSTEEN ?= this
+            }
+        }
+        STATE_TIMMERSTEEN_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_DRAAIVELD ?= this
+            }
+        }
+        STATE_DRAAIVELD_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_RATELKUST ?= this
+            }
+        }
+        STATE_RATELKUST_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_SPRANKELMEER ?= this
+            }
+        }
+        STATE_SPRANKELMEER_state_name_assign = yes
+    }
+
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KLOMPPLEIN ?= this
+            }
+        }
+        STATE_KLOMPPLEIN_state_name_assign = yes
+    }
+}
+
+STATE_KLINGELMEER_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_KLINGELMEER_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TINKELHOVEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_TINKELHOVEN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RATELBERG_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_RATELBERG_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_PIEPERDORP_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_PIEPERDORP_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_FLUITBOS_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_FLUITBOS_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SMIDSHOEK_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SMIDSHOEK_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TIKKERHAVEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_TIKKERHAVEN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_MOLENWOUD_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_MOLENWOUD_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BELLENBERG_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_BELLENBERG_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KLINGELBERG_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_KLINGELBERG_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_GNURKENRADE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_GNURKENRADE_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TROMMELKUST_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_TROMMELKUST_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SMEERGOED_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SMEERGOED_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KWETTERDIJK_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_KWETTERDIJK_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_FLUITERHEIDE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_FLUITERHEIDE_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TIMMERSTEEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_TIMMERSTEEN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_DRAAIVELD_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_DRAAIVELD_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_GLIMMERDAM_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_GLIMMERDAM_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KRULWILGEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_KRULWILGEN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KLINGELWEIDE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_KLINGELWEIDE_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SNAARGRACHT_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SNAARGRACHT_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_BELLENBOS_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_BELLENBOS_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RATELKUST_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_RATELKUST_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_PIEPERHAVEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_PIEPERHAVEN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SPRANKELMEER_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SPRANKELMEER_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_FLUITVELD_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_FLUITVELD_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TIMMERHAVEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_TIMMERHAVEN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_KLOMPPLEIN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_KLOMPPLEIN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SPRONKERGROEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SPRONKERGROEN_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_DRAAIKUST_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_DRAAIKUST_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_GLIMMERWOUD_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = gnome_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_GLIMMERWOUD_human
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_HAVENSHIRE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_HAVENSHIRE_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RAVENHOLME_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_RAVENHOLME_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_FARREACH_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_FARREACH_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_MOONSHADE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_MOONSHADE_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_STORMWATCH_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_STORMWATCH_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_ENBERFYRN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_ENBERFYRN_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SUNDALE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SUNDALE_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_WHITESTONE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_WHITESTONE_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_RIVERTIDE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_RIVERTIDE_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_LIONS_ROOST_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_LIONS_ROOST_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_WINDMERE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_WINDMERE_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SHADOWFEN_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SHADOWFEN_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_AMBERWICK_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_AMBERWICK_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_WINDSONG_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_WINDSONG_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_SILVERCREST_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_SILVERCREST_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+
+STATE_KUKESPIA_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_KUKESPIA_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TEPELENA_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_TEPELENA_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+
+}
+
+STATE_USTRIZHYVKA_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_USTRIZHYVKA_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+
+}
+
+STATE_ZATYRE_state_name_assign = {
+    if = {
+        limit = {
+            owner ?= {
+                thaloria_language_trigger = yes
+                NOT = {
+                    any_primary_culture = {
+                        has_discrimination_trait = human_heritage
+                    }
+                }
+            }
+        }
+        set_state_name = STATE_ZATYRE_gnome
+    }
+    else = {
+        reset_state_name = yes
+        reset_hub_names = yes
+    }
+
+}
+
+
+# TEMPLATE TO CREATE FURTHER DYNAMIC STATE NAMES
+#assign_state_name_region_thaloria = {
+#
+#    if = {
+#        limit = {
+#            state_region = {
+#                s:STATE_STATENAME ?= this
+#            }
+#        }
+#        STATE_STATENAME_state_name_assign = yes
+#    }
+#
+#}
+#
+#STATE_STATENAME_state_name_assign = {
+#
+#
+#    if = {
+#        limit = {
+#            owner ?= {
+#                thaloria_language_trigger = yes
+#                NOT = {
+#                    any_primary_culture = {
+#                        has_discrimination_trait = human_heritage
+#                    }
+#                }
+#            }
+#        }
+#
+#        set_state_name = STATE_STATENAME_gnome
+#
+#    }
+#
+#    else = { # switch back to defaults
+#        reset_state_name = yes
+#        reset_hub_names = yes
+#    }
+#}

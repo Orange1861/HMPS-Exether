@@ -1,0 +1,25 @@
+﻿
+label_psionic = {
+	type = terrain
+	modifier_key = psionic
+	modifier = {
+		unit_offense_psionic_add = 1
+		unit_offense_psionic_mult = 1
+		unit_defense_psionic_add = 1
+		unit_defense_psionic_mult = 1
+	}
+}
+
+
+label_plaguewood = {
+	type = terrain
+	modifier_key = plaguewood
+	modifier = {
+		unit_offense_plaguewood_add = 1
+		unit_offense_plaguewood_mult = 1
+		unit_defense_plaguewood_add = 1
+		unit_defense_plaguewood_mult = 1
+	}
+}
+
+

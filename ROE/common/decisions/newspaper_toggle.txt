@@ -1,0 +1,17 @@
+﻿newspaper_trigger_decision = {
+    is_shown = {
+        always = no
+    }
+    possible = {
+        is_player = yes
+    }
+
+    when_taken = {
+        recalculate_pop_ig_support = yes
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}
+		

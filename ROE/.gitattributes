@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+.png filter=lfs diff=lfs merge=lfs -text
+gfx/map/textures/land_mask.dds filter=lfs diff=lfs merge=lfs -text
+gfx/interface/illustrations/frontend/menu_video_final.bk2 filter=lfs diff=lfs merge=lfs -text

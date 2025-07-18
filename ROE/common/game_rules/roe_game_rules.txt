@@ -1,0 +1,52 @@
+﻿# The illusion of choice
+pop_politics_variable = {
+	default = pop_politics_variable_enabled
+
+	pop_politics_variable_enabled = {
+		flag = pop_politics_variable_enabled
+	}
+
+	pop_politics_variable_disabled = {
+		flag = pop_politics_variable_enabled
+	}
+}
+
+ai_diplomatic_plays_dynamic = {
+	default = ai_diplomatic_plays_dynamic_selective
+
+	ai_diplomatic_plays_dynamic_disabled = {
+		flag = ai_diplomatic_plays_dynamic_disabled
+	}
+
+	ai_diplomatic_plays_dynamic_selective = {
+		flag = ai_diplomatic_plays_dynamic_selective
+	}
+
+	ai_diplomatic_plays_dynamic_everyone = {
+		flag = ai_diplomatic_plays_dynamic_everyone
+	}
+}
+
+bloodtithe_mode = {
+	default = bloodtithe_mode_disabled
+
+	bloodtithe_mode_disabled = {
+		flag = bloodtithe_mode_disabled
+	}
+
+	bloodtithe_mode_basic = {
+		flag = bloodtithe_mode_basic
+	}
+
+	bloodtithe_mode_player_basic = {
+		flag = bloodtithe_mode_player_basic
+	}
+
+	bloodtithe_mode_crazy = {
+		flag = bloodtithe_mode_crazy
+	}
+
+	bloodtithe_mode_player_crazy = {
+		flag = bloodtithe_mode_player_crazy
+	}
+}

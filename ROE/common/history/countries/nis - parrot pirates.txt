@@ -1,0 +1,33 @@
+﻿COUNTRIES = {
+	c:NIS = {
+		effect_starting_technology_tier_3_tech = yes
+
+		effect_starting_politics_traditional = yes
+
+		add_technology_researched = human_rights
+		add_technology_researched = anarchism
+		add_technology_researched = power_of_the_purse
+		add_technology_researched = mass_communication
+		add_technology_researched = empiricism
+		add_technology_researched = paddle_steamer
+
+		activate_law = law_type:law_no_police
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_anarchy
+		activate_law = law_type:law_ecumenical_recognition
+		activate_law = law_type:law_professional_army_corsair
+		activate_law = law_type:law_consumption_based_taxation_corsair
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_no_migration_controls
+
+		add_taxed_goods = g:fruit
+		add_taxed_goods = g:meat
+		add_taxed_goods = g:liquor
+		add_taxed_goods = g:services
+
+		set_tax_level = medium
+	}
+}

@@ -1,0 +1,17 @@
+﻿CHARACTERS = {
+	c:NRA = {
+		create_character = {
+			first_name = "Konstantin"
+			last_name = "Rahamagi"
+			historical = yes
+			ig_leader = yes
+			ruler = yes
+			age = 77
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				imposing
+			}
+		}
+	}
+}

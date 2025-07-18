@@ -1,0 +1,18 @@
+﻿CHARACTERS = {
+	c:GMR = {
+		create_character = {
+			first_name = "Mad_Eyes"
+			last_name = "Zatulo"
+			historical = yes
+			ruler = yes
+			female = yes
+			age = 23
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
+			traits = {
+				reckless
+				bandit
+			}
+		}
+	}
+}

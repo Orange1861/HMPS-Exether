@@ -1,0 +1,20 @@
+﻿retainer_cost = {
+	add = scope:recruited_character.popularity
+	add = 100
+	divide = 1000
+	multiply = root.gdp
+
+}
+
+retainer_cost_text = {
+	add = this.popularity
+	add = 100
+	divide = 1000
+	multiply = this.owner.gdp
+}
+
+remaining_money = {
+	add = 1
+	subtract = scaled_debt
+	multiply = credit
+}

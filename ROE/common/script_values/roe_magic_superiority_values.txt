@@ -1,0 +1,56 @@
+unit_type_line_infantry_attacker_spell_power = 0
+unit_type_line_infantry_defender_spell_power = 0
+unit_type_line_infantry_spell_resistance = 1
+
+unit_type_mages_one_attacker_spell_power = 15
+unit_type_mages_one_defender_spell_power = 10
+unit_type_mages_one_spell_resistance = 0
+
+unit_type_mages_two_attacker_spell_power = 25
+unit_type_mages_two_defender_spell_power = 20
+unit_type_mages_two_spell_resistance = 0
+
+unit_type_mages_three_attacker_spell_power = 35
+unit_type_mages_three_defender_spell_power = 30
+unit_type_mages_three_spell_resistance = 0
+
+unit_type_mages_four_attacker_spell_power = 50
+unit_type_mages_four_defender_spell_power = 45
+unit_type_mages_four_spell_resistance = 0
+
+ratio_value = {
+	value = var:ratio
+}
+
+base_ratio = {
+	value = var:total_attacker_magic
+	divide = var:total_magic
+}
+
+base_attacker_multiplier = {
+	value = base_ratio
+	subtract = 0.5
+	multiply = 100
+	round = yes
+}
+
+base_defender_multiplier = {
+	value = 0.5
+	subtract = base_ratio
+	multiply = 100
+	round = yes
+}
+
+attacker_multiplier_difference = {
+	value = base_attacker_multiplier
+	subtract = var:magic_advantage
+}
+
+defender_multiplier_difference = {
+	value = base_defender_multiplier
+	subtract = var:magic_advantage
+}
+
+ms_support_bonus_value = {
+	value = modifier:country_magic_support_bonus
+}

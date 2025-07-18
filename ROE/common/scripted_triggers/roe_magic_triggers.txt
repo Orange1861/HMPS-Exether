@@ -1,0 +1,200 @@
+﻿cast_arcana_id_gryphon_is_valid = {
+    religion = {
+        has_discrimination_trait = gryphon_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_justice_is_valid = {
+    religion = {
+        has_discrimination_trait = justice_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_sphinx_is_valid = {
+    religion = {
+        has_discrimination_trait = sphinx_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_golem_is_valid = {
+    religion = {
+        has_discrimination_trait = golem_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_unicorn_is_valid = {
+    religion = {
+        has_discrimination_trait = unicorn_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_fey_is_valid = {
+    religion = {
+        has_discrimination_trait = fey_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_phoenix_is_valid = {
+    religion = {
+        has_discrimination_trait = phoenix_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_djinn_is_valid = {
+    religion = {
+        has_discrimination_trait = djinn_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_siren_is_valid = {
+    religion = {
+        has_discrimination_trait = siren_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_kraken_is_valid = {
+    religion = {
+        has_discrimination_trait = kraken_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_fiend_is_valid = {
+    religion = {
+        has_discrimination_trait = fiend_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_angel_is_valid = {
+    religion = {
+        has_discrimination_trait = angel_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}
+
+cast_arcana_id_dragon_is_valid = {
+    religion = {
+        has_discrimination_trait = dragon_domain
+    }
+    NOT = { 
+        has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_low_veil_damage_tt
+            root.veil_damage <= 1000
+        }
+    }
+    root = {
+        custom_tooltip = {
+            text = has_reserves_tt
+            root.arcana >= arcana_cost
+        }
+    }
+}

@@ -1,0 +1,52 @@
+﻿je_shivathi_satrapy = {
+    icon = "gfx/interface/icons/event_icons/event_naval.dds"
+
+    group = je_group_historical_content
+
+	modifiers_while_active = {
+	    shivathi_satrap
+	}
+
+    is_shown_when_inactive = {
+
+    }
+
+    possible = { 
+
+    }
+
+    scripted_button = outsider_escalate_buramog_wars
+
+    fail = {
+       NOT = { is_subject_type = subject_type_satrapy }
+    }
+
+    on_fail = {
+
+    }
+
+    complete = {
+        country_rank >= rank_value:unrecognized_major_power
+    }
+
+    on_complete = {
+        			
+		remove_diplomatic_pact = {
+			country = c:XXG
+			type = satrapy
+		}
+    }
+
+    on_monthly_pulse = {
+		events = {
+			1 = shivathi_satrapy.1
+			1 = shivathi_satrapy.2
+		}
+    }
+
+    weight = 100
+
+    can_deactivate = yes
+
+    should_be_pinned_by_default = yes
+}

@@ -1,0 +1,46 @@
+﻿je_gnoll_mountain = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+
+	immediate = {
+		c:NYO ?= {
+            save_scope_as = nyolli_scope
+        }
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			30 = 0
+			40 = gnoll_mountain.5
+			3 = gnoll_mountain.6
+		}
+	}
+
+
+	complete = {
+
+		custom_tooltip = {
+			text = je_gnoll_mountain_complete_tt
+			c:NYO ?= ROOT
+		}
+
+		
+	}
+
+	on_complete = {
+		trigger_event = { id = gnoll_mountain.2 popup = yes }
+		set_country_type = recognized
+	}
+
+	# on_monthly_pulse = {
+	# 	random_events = {
+
+	# 	}
+	# }
+
+	
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

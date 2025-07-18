@@ -1,0 +1,67 @@
+﻿#Observatories
+pmg_base_building_observatory = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_astrological_charts
+		pm_enchanted_orreys
+		pm_astral_projection
+	}
+}
+pmg_observatory_regulation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_self_regulation
+		pm_clerical_oversight
+		pm_government_oversight
+	}
+}
+#Airship Docks
+pmg_airship_mooring_post = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_airships
+		pm_airship_mooring_post
+		pm_airship_advertising
+		pm_airship_propaganda
+	}
+}
+
+pmg_base_building_questing_office = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_problem_solvers
+		pm_questing_boards
+		pm_newspaper_ads
+		pm_questing_switchboards
+	}
+}
+
+pmg_questing_office_bureaucrat_professionalism = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_hereditary_guild_leadership
+		pm_professional_guild_leadership
+	}
+}
+
+pmg_questing_office_oversight = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_oversight
+		pm_military_oversight
+		pm_civilian_oversight
+	}
+
+}

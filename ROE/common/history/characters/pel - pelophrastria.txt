@@ -1,0 +1,19 @@
+﻿CHARACTERS = {
+	c:JUX = {
+		create_character = {
+			first_name = "Ringaudas"
+			last_name = "Kallaur"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			ig_leader = yes
+			age = 45
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				imperious
+				erudite
+			}
+		}
+	}
+}

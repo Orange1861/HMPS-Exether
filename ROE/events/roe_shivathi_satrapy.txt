@@ -1,0 +1,125 @@
+﻿namespace = shivathi_satrapy
+
+# High Liberty Desire
+shivathi_satrapy.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = shivathi_satrapy.1.t
+	desc = shivathi_satrapy.1.d
+	flavor = shivathi_satrapy.1.f
+
+	event_image = {
+		video = "darkelf_emissary"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	trigger = {
+		is_subject = yes
+		liberty_desire >= 74
+	}
+
+	immediate = {
+		add_liberty_desire = -30
+	}
+
+	option = {
+		name = shivathi_satrapy.1.a
+		default_option = yes
+		show_as_tooltip = {
+			add_liberty_desire = -30
+		}
+		if = {
+			limit = {
+				is_player = yes
+			}
+			add_treasury = 100000
+		}
+	}
+
+		option = {
+		name = shivathi_satrapy.1.b
+		default_option = yes
+		show_as_tooltip = {
+			add_liberty_desire = -30
+		}
+		if = {
+			limit = {
+				is_player = yes
+			}
+			add_modifier = {
+				name = success_satrapy
+				days = short_modifier_time
+			}
+		}
+	}
+
+}
+
+# Low Liberty Desire
+shivathi_satrapy.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = shivathi_satrapy.2.t
+	desc = shivathi_satrapy.2.d
+	flavor = shivathi_satrapy.2.f
+
+	event_image = {
+		video = "darkelf_emissary"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	trigger = {
+		is_subject = yes
+		liberty_desire <= 26
+	}
+
+	immediate = {
+		add_liberty_desire = 30
+	}
+
+	option = {
+		name = shivathi_satrapy.2.a
+		default_option = yes
+		show_as_tooltip = {
+			add_liberty_desire = 30
+		}
+		if = {
+			limit = {
+				is_player = yes
+			}
+			add_treasury = -100000
+		}
+
+	}
+
+		option = {
+		name = shivathi_satrapy.2.b
+		default_option = yes
+		show_as_tooltip = {
+			add_liberty_desire = 30
+		}
+		if = {
+			limit = {
+				is_player = yes
+			}
+			add_modifier = {
+				name = failed_satrapy
+				days = short_modifier_time
+			}
+		}
+
+	}
+
+}

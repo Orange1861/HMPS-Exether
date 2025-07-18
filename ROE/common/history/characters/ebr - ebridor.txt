@@ -1,0 +1,109 @@
+﻿CHARACTERS = {
+	c:EBR ?= {
+		create_character = {
+			name = "Geroldt"
+			last_name = "Helmworth"
+			historical = yes
+			age = 55
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				meticulous
+				reserved
+				basic_political_operator
+			}
+		}
+		create_character = {
+			name = "Gustavus"
+			last_name = "Sattler"
+			historical = yes
+			age = 31
+			ig_leader = yes
+			interest_group = ig:ig_petty_bourgeoisie
+			ideology = ideology:ideology_reformer
+			traits = {
+				charismatic
+				direct
+				engineer
+			}
+		}
+		create_character = {
+			name = "Berend"
+			last_name = "Lanner"
+			historical = yes
+			age = 63
+			ig_leader = yes
+			interest_group = ig:ig_devout
+			ideology = ideology:ideology_traditionalist
+			traits = {
+				expensive_tastes
+				pious
+				arrogant
+				literary
+			}
+		}
+		create_character = {
+			name = "Leonus"
+			last_name = "Morrus"
+			historical = yes
+			age = 28
+			ig_leader = yes
+			interest_group = ig:ig_industrialists
+			ideology = ideology:ideology_republican_leader
+			traits = {
+				ambitious
+				persistent
+				master_bureaucrat
+			}
+		}
+		create_character = {
+			name = "Drago"
+			last_name = "Nelview"
+			historical = yes
+			age = 29
+			ig_leader = yes
+			interest_group = ig:ig_intelligentsia
+			ideology = ideology:ideology_republican_leader
+			traits = {
+				innovative
+				cautious
+				erudite
+			}
+		}
+		create_character = {
+			name = "Bogdan"
+			last_name = "Makker"
+			historical = yes
+			age = 42
+			ig_leader = yes
+			interest_group = ig:ig_rural_folk
+			ideology = ideology:ideology_land_reformer
+			traits = {
+				imposing
+				brave
+				demagogue
+			}
+		}
+		create_character = {
+			name = "Brenius"
+			last_name = "Lonn"
+			historical = yes
+			age = 33
+			ig_leader = yes
+			interest_group = ig:ig_mages
+			ideology = ideology:ideology_magocrat
+			traits = {
+				tactful
+				cautious
+				demagogue
+			}
+			culture = cu:achonian
+			on_created = {
+				set_variable = {
+					name = is_Brenius_Lonn
+				}
+			}
+		}
+	}
+}

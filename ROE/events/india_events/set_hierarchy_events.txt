@@ -1,0 +1,244 @@
+﻿namespace = set_hierarchy_event
+
+
+set_hierarchy_event.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_social_hierarchy = default_social_hierarchy
+		OR = {
+			AND = {
+				top_overlord ?= {
+					OR = {
+						religion = rel:old_kragmorn
+						religion = rel:kragmorn
+						religion = rel:buried_gods
+					}
+					
+				}
+				OR = {
+					religion_percent_country = {  
+						target = rel:kragmorn
+						value >= 0.50
+					}
+					religion_percent_country = {  
+						target = rel:old_kragmorn
+						value >= 0.50
+					}
+					religion_percent_country = {  
+						target = rel:buried_gods
+						value >= 0.50
+					}
+				}
+	
+				owner = {
+					any_primary_culture = {
+						has_discrimination_trait = dwarf_heritage
+					}
+				}
+			}
+			AND = {
+				top_overlord ?= {
+					OR = {
+						religion = rel:viticist
+	
+					}
+					
+				}
+				OR = {
+					religion_percent_country = {  
+						target = rel:viticist
+						value >= 0.50
+					}
+	
+				}
+	
+				owner = {
+					any_primary_culture = {
+						has_discrimination_trait = bird_heritage
+					}
+				}
+			}
+			AND = {
+				top_overlord ?= {
+					OR = {
+						religion = rel:sandspeaker_viticist
+	
+					}
+					
+				}
+				OR = {
+					religion_percent_country = {  
+						target = rel:sandspeaker_viticist
+						value >= 0.50
+					}
+	
+				}
+	
+				owner = {
+					any_primary_culture = {
+						has_discrimination_trait = bird_heritage
+					}
+				}
+			}
+
+		}
+		
+	}
+	
+	immediate = { # Replaces the default hierarchy and sets the Caste Not Enforced law
+		owner = {
+			save_scope_as = relevant_country_scope
+		}
+		if = {
+			limit = {
+				AND = {
+					top_overlord ?= {
+						OR = {
+							religion = rel:old_kragmorn
+							religion = rel:kragmorn
+							religion = rel:buried_gods
+						}
+						
+					}
+					OR = {
+						religion_percent_country = {  
+							target = rel:kragmorn
+							value >= 0.50
+						}
+						religion_percent_country = {  
+							target = rel:old_kragmorn
+							value >= 0.50
+						}
+						religion_percent_country = {  
+							target = rel:buried_gods
+							value >= 0.50
+						}
+					}
+		
+					owner = {
+						any_primary_culture = {
+							has_discrimination_trait = dwarf_heritage
+						}
+					}
+				}
+			}
+			set_social_hierarchy = dwarf_social_hierarchy 
+			activate_law = law_type:law_hindu_caste_not_enforced
+			post_notification = caste_hierarchy_appears
+		}
+		else_if = {
+			limit = {
+				AND = {
+					top_overlord ?= {
+						OR = {
+							religion = rel:viticist
+		
+						}
+						
+					}
+					OR = {
+						religion_percent_country = {  
+							target = rel:viticist
+							value >= 0.50
+						}
+		
+					}
+		
+					owner = {
+						any_primary_culture = {
+							has_discrimination_trait = bird_heritage
+						}
+					}
+				}
+			}
+			set_social_hierarchy = avian_social_hierarchy
+			activate_law = law_type:law_avian_caste_not_enforced
+			post_notification = caste_hierarchy_appears
+		}
+		else_if = {
+			limit = {
+				AND = {
+					top_overlord ?= {
+						OR = {
+							religion = rel:sandspeaker_viticist
+		
+						}
+						
+					}
+					OR = {
+						religion_percent_country = {  
+							target = rel:sandspeaker_viticist
+							value >= 0.50
+						}
+		
+					}
+		
+					owner = {
+						any_primary_culture = {
+							has_discrimination_trait = bird_heritage
+						}
+					}
+				}
+			}
+			set_social_hierarchy = west_avian_social_hierarchy
+			activate_law = law_type:law_west_avian_caste_not_enforced
+			post_notification = caste_hierarchy_appears
+		}
+
+	}
+
+}
+
+
+set_hierarchy_event.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		
+		OR = {
+			AND = {
+				has_social_hierarchy = dwarf_social_hierarchy
+				religion_percent_country = {  
+					target = rel:kragmorn
+					value <= 0.10
+				}
+				religion_percent_country = {  
+					target = rel:old_kragmorn
+					value <= 0.10
+				}
+				religion_percent_country = {  
+					target = rel:buried_gods
+					value <= 0.10
+				}
+			}
+			AND = {
+				has_social_hierarchy = avian_social_hierarchy
+				religion_percent_country = {  
+					target = rel:viticist
+					value <= 0.10
+				}
+			}
+			AND = {
+				has_social_hierarchy = west_avian_social_hierarchy
+				religion_percent_country = {  
+					target = rel:sandspeaker_viticist
+					value <= 0.10
+				}
+
+			}
+
+		}
+	}
+	
+	immediate = { # Replaces the British Indian Caste System
+		owner = {
+			save_scope_as = relevant_country_scope
+		}
+		set_social_hierarchy = default_social_hierarchy
+		post_notification = caste_hierarchy_disappears
+	}
+
+}

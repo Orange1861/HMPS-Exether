@@ -1,0 +1,228 @@
+﻿pm_wooden_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+
+	is_default = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fabric_add = 25
+			goods_input_wood_add = 75
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 100
+			building_employment_clerks_add = 100
+			building_employment_laborers_add = 800
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.002
+		}
+	}
+}
+
+
+pm_iron_frame_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+
+	unlocking_technologies = {
+		urban_planning
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 5
+		}
+
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 40   #20 = 800
+			goods_input_fabric_add = 20  #20 = 400
+			goods_input_iron_add = 50   #40 = 2000
+			goods_input_tools_add = 10  #40 = 400    == 3600 expenses
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 100
+			building_employment_clerks_add = 100
+			building_employment_machinists_add = 50
+			building_employment_laborers_add = 750
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.004
+		}
+	}
+}
+
+
+pm_steel_frame_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/steel_frame_buildings.dds"
+
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 50 #50 = 2500
+			goods_input_glass_add = 40 #40 = 1600
+			goods_input_explosives_add = 10 #50 = 500
+			goods_input_tools_add = 20 #40 = 800  == 5400
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 100
+			building_employment_clerks_add = 100
+			building_employment_machinists_add = 150
+			building_employment_laborers_add = 650
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.007
+		}
+	}
+}
+
+pm_arc_welded_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/arc_welded_buildings.dds"
+
+	unlocking_technologies = {
+		arc_welding
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 50  #50 2500
+			goods_input_glass_add = 40  #40 1600
+			goods_input_explosives_add = 20 #50 1000
+			goods_input_tools_add = 40 #40 1600
+			goods_input_blubber_add = 30 #40 1200 == 7900
+		} 
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 100
+			building_employment_clerks_add = 100
+			building_employment_engineers_add = 50
+			building_employment_machinists_add = 150
+			building_employment_laborers_add = 600
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01
+		}
+	}
+}
+
+pm_normally_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/normal_construction.dds"
+	
+	unlocking_technologies = {
+		manufacturies
+	}
+}
+pm_cloudsilver_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/floating_frame.dds"
+	
+	unlocking_technologies = {
+		cloudsilver_refining
+	}
+
+	unlocking_production_methods = {
+			pm_iron_frame_buildings
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_iron_add = -25     # 40
+			goods_input_cloudsilver_add = 20  #40 == 200 profit
+		}
+	
+	}
+
+}
+
+pm_nimbium_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/advanced_floating_frame.dds"
+	
+	unlocking_technologies = {
+		nimbium_tech
+	}
+
+	unlocking_production_methods = {
+			pm_steel_frame_buildings
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_cloudsilver_add = 10 #40 400
+			goods_input_gizmos_add = 10 #60 600
+			goods_input_tools_add = -20 #40 800
+			goods_input_explosives_add = -10 #50 500 == 300 profit
+		}
+		
+	}
+
+}
+
+pm_sky_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/sky_lifted_frames.dds"
+	
+	unlocking_technologies = {
+		maglev
+	}
+
+	unlocking_production_methods = {
+			pm_arc_welded_buildings
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_cloudsilver_add = 15 #40 600
+			goods_input_gizmos_add = 20 #60 1200
+			goods_input_airships_add = 5 #70 350 
+			goods_input_tools_add = -40 #40 1600 
+			goods_input_explosives_add = -20 #50 1000 == 450 profit
+		}
+
+	}
+
+}

@@ -1,0 +1,73 @@
+﻿COUNTRIES = {
+	c:AHO = {
+
+		set_next_election_date = 1178.2.7
+
+		effect_starting_politics_liberal = yes
+		effect_starting_technology_tier_knowledge_tech = yes
+		add_technology_researched = mechanical_tools
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = bessemer_process
+		add_technology_researched = ectoplasm_engines
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = corporate_charters
+		add_technology_researched = joint_stock_companies
+		
+		activate_law = law_type:law_magocracy
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property		
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_court_mages	
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_magical_schools	
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_astrological_studies
+		activate_law = law_type:law_frontier_colonization
+		
+		set_tax_level = medium	
+		
+		add_taxed_goods = g:liquor
+		
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+
+		set_institution_investment_level = {
+			institution = institution_magical_focus
+			level = 3
+		}
+
+		
+		set_ruling_interest_groups = {
+        	ig_mages
+			ig_devout
+        }
+
+		add_journal_entry = {
+			type = je_mimic_demesne
+		}
+
+        add_journal_entry = {
+            type = je_northern_colonial_administration
+        }
+
+		add_company = company_type:company_basic_magic_mining
+        company:company_basic_magic_mining = {
+        set_company_establishment_date = 1158.1.1
+        set_company_state_region = s:STATE_GLIMMERING_COAST
+        }
+
+		add_company = company_type:company_fyrestorm
+        company:company_fyrestorm = {
+        set_company_establishment_date = 1173.1.1
+        set_company_state_region = s:STATE_GLIMMERING_COAST
+        }
+
+	}
+}

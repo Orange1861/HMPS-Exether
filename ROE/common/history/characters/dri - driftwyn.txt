@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:DRI ?= {
+		create_character = {
+			template = DRI_driftwyn_leader_template
+		}
+		create_character = {
+			template = DRI_driftwyn_heir_template
+		}
+	}
+}
+

@@ -1,0 +1,160 @@
+﻿# Fired off on_yearly_pulse_country
+
+# Generic Pulse
+
+
+vampiric_administration_remover = {
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					top_overlord ?= {
+						any_primary_culture = {
+							has_discrimination_trait = vampiric
+						}
+					}
+				}
+				has_modifier = vampiric_administration
+				}
+				remove_modifier = vampiric_administration
+		}
+	}
+}	
+
+craggadari_damacy = {
+	effect = {
+		if = {
+			limit = {
+				owning_company ?= {
+					is_company_type = company_type:company_craggedwyn
+				}
+				top_overlord ?= {
+					has_journal_entry = je_craggedwyn_question
+					je:je_craggedwyn_question ?= {
+						"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 5
+					}
+					je:je_craggedwyn_question ?= {
+						"scripted_bar_progress(craggedwyn_control_progress_bar)" < 8 
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					every_scope_state = {
+						add_arable_land = -2
+					}
+				}
+				25 = {
+					every_scope_state = {
+						state_region = {
+							add_arable_land = -4
+						}	
+					}
+				}
+				25 = {
+					every_scope_state = {
+						add_arable_land = -5
+					}
+				}
+			}	
+		}
+		else_if = {
+			limit = {
+				owning_company ?= {
+					is_company_type = company_type:company_craggedwyn
+				}
+				top_overlord ?= {
+					has_journal_entry = je_craggedwyn_question
+					je:je_craggedwyn_question ?= {
+						"scripted_bar_progress(craggedwyn_control_progress_bar)" >= 8 
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					every_scope_state = {
+						state_region = {
+							add_arable_land = -3
+						}
+						
+					}
+				}
+				25 = {
+					every_scope_state = {
+						state_region = {
+							add_arable_land = -5
+						}
+						
+					}
+				}
+				25 = {
+					every_scope_state = {
+						state_region = {
+							add_arable_land = -6
+						}
+					}
+				}
+			}
+			
+		}
+
+		else_if = {
+			limit = {
+				owning_company ?= {
+					is_company_type = company_type:company_craggedwyn
+				}
+			}
+			random_list = {
+				50 = {
+					every_scope_state = {
+						state_region = {
+							add_arable_land = -1
+						}		
+					}
+				}
+				25 = {
+					every_scope_state = {
+						state_region = {
+							add_arable_land = -2
+						}
+					}
+					
+				}	
+				25 = {
+					every_scope_state = {
+						state_region = {
+							add_arable_land = -2
+						}
+					}
+				}	
+			}	
+		}
+	}
+}
+
+mutagen_medicine_state = {
+	effect = {
+		if = {
+			limit = {
+				modifier:state_mutant_conversion > 0
+			}
+			save_scope_value_as = {
+				name = mutant_conversion
+				value = modifier:state_mutant_conversion
+			}
+			every_scope_pop = {
+				limit = {
+					NOT = {
+						has_pop_culture = mutant
+					}
+					strata = lower
+				}
+				change_pop_culture = {
+					target = cu:mutant
+					value = scope:mutant_conversion
+				}
+			}
+		}
+
+	}
+}

@@ -1,0 +1,205 @@
+﻿je_sunstation = {
+	icon = "gfx/interface/icons/event_icons/event_agriculture.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_thawed_lands
+				region = sr:region_rimeroot_jungle
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = thaumacore_factories
+		hidden_trigger = {
+			NOT = {
+				has_variable = sunstation_je_complete_2 #the JE autocompletes for overlord if subject completes the JE
+			}
+		}
+
+	}
+
+	complete = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_sunstation
+			}
+		}
+		custom_tooltip = {
+			text = sunstation_je_complete_tt
+			has_variable = sunstation_je_complete_1
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = sunstation.1 popup = yes }
+		set_variable = sunstation_je_complete_2
+		set_global_variable = sunstations_awakened
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = journal_entry_sunstation_status_1
+				trigger = {
+					NOT = { has_variable = sunstation_desc_var }
+				}
+			}
+			triggered_desc = {
+				desc = journal_entry_sunstation_status_2
+				trigger = {
+					has_variable = sunstation_desc_var
+				}
+			}
+		}
+	}
+
+	weight = 1000
+	should_be_pinned_by_default = yes
+}
+
+je_heptadron_probs = {
+
+	group = je_group_expeditions
+
+	scripted_progress_bar = expedition_progress_bar
+	scripted_progress_bar = expedition_peril_progress_bar
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = expedition_events.20 #posts a notification
+			65 = sunstation.5 #the security core
+			50 = sunstation.2 #sunstation_storeroom
+			20 = sunstation.12 #heptadrone scouts
+			10 = sunstation.3 #lost
+			10 = sunstation.6 #eating the gnoll ##this needs a triggered description for if you are a gnollish country
+			30 = sunstation.8 #dead heptadron pile
+			25 = sunstation.7 #broken heating grid
+			20 = sunstation.16 #heptadrone ambush
+			20 = sunstation.14 #can we keep it?
+			5 = sunstation.17 #duskmirror in the dungeon
+			15 = sunstation.13 #strange rune
+		}
+	}
+	
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = expedition_leader_var
+			}
+			save_scope_as = expedition_leader
+		}
+	}
+	
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = expedition_low_peril_loc
+				trigger = {
+					scope:journal_entry = {
+						"scripted_bar_progress(expedition_peril_progress_bar)" <= 3
+					}
+				}
+			}
+			triggered_desc = {
+				desc = expedition_medium_peril_loc
+				trigger = {
+					scope:journal_entry = {
+						"scripted_bar_progress(expedition_peril_progress_bar)" <= 5
+					}
+				}
+			}
+			triggered_desc = {
+				desc = expedition_high_peril_loc
+				trigger = {
+					scope:journal_entry = {
+						"scripted_bar_progress(expedition_peril_progress_bar)" > 5
+					}
+				}
+			}
+		}
+	}
+	
+    fail = {
+		custom_tooltip = {
+			text = je_expedition_fail
+			scope:journal_entry = {
+				"scripted_bar_progress(expedition_peril_progress_bar)" >= 8
+			}
+		}
+    }
+	
+	on_fail = {
+		trigger_event = { id = sunstation.4 }
+		remove_variable = on_expedition
+		remove_modifier = modifier_large_expedition_cost
+		random_scope_character = {
+			limit = {
+				has_variable = expedition_leader_var
+			}
+			remove_variable = expedition_leader_var
+		}
+	}
+	
+	complete = {
+		OR = {
+			custom_tooltip = {
+				text = je_expedition_success
+				scope:journal_entry = {
+					"scripted_bar_progress(expedition_progress_bar)" >= 8
+				}
+				has_variable = rimeroot_event_var
+			}
+			custom_tooltip = {
+				text = destroyed_heptadrone_tt
+				has_variable = destroyed_heptadrones_variable
+			}
+		}
+
+
+	}
+	
+	on_complete = {
+
+		if = {
+			limit = {
+				has_variable = destroyed_heptadrones_variable
+			}
+			trigger_event = { id = sunstation.15 }
+		}
+		else = {
+			trigger_event = { id = sunstation.10 }
+			set_global_variable = { name = rimeroot_core_reached }
+			set_variable = rimeroot_expedition_success_var
+			random_scope_state = {
+				limit = {
+					state_is_in_rimeroot = yes
+				}
+				state_region = {
+					start_harvest_condition = heptadrone_swarms_positive
+				}
+			}
+
+		}
+		
+		remove_variable = on_expedition
+		remove_modifier = modifier_large_expedition_cost
+		set_variable = antarctica_expedition_success_var #great exhibition check##change to rimeroot, add to great exhibition JE
+		random_scope_character = {
+			limit = {
+				has_variable = expedition_leader_var
+			}
+			remove_variable = expedition_leader_var
+		}
+
+		custom_tooltip = heptadrone_controller_tt
+	}
+	
+    weight = 200
+    transferable = no
+    should_be_pinned_by_default = yes
+}

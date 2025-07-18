@@ -1,0 +1,75 @@
+﻿# VOZ - Vozmead
+
+VOZ_vozmead_leader_template = {
+			first_name = Egzihk
+   			last_name = Thirzund
+    		historical = yes
+			ruler = yes
+    		age = 34
+    		dna = dna_vozmead_leader
+    		culture = cu:vozi
+			religion = rel:kragmorn
+			interest_group = ig_intelligentsia
+   			ideology = ideology_reformer
+    			traits = {
+				aesthete
+				reserved
+				romantic
+				experienced_diplomat
+    }	
+}
+
+VOZ_vozmead_wedding_heir_template = {
+			first_name = Shezda
+   			last_name = Thirzund
+    		historical = yes
+			female = yes
+			heir = yes
+    		age = 18
+    		dna = dna_vozmead_wedding_heir
+    		culture = cu:vozi
+			religion = rel:kragmorn
+			interest_group = ig_intelligentsia
+   			ideology = ideology_humanitarian_royalist
+    			traits = {
+				ambitious
+				brave
+				inexperienced
+    }	
+}
+
+VOZ_vozmead_traditional_heir_template = {
+			first_name = Hulguddeg
+   			last_name = Thirzund
+    		historical = yes
+			heir = yes
+    		age = 40
+    		dna = dna_vozmead_traditional_heir
+    		culture = cu:vozi
+			religion = rel:kragmorn
+			interest_group = ig_landowners
+   			ideology = ideology_traditionalist
+    			traits = {
+				bigoted
+				ambitious
+				experienced_political_operator
+    }	
+}
+
+VOZ_vozmead_traditional_agitator_template = {
+			first_name = Hulguddeg
+   			last_name = Thirzund
+    		historical = yes
+			is_agitator = yes
+    		age = 50
+    		dna = dna_vozmead_traditional_heir
+    		culture = cu:vozi
+			religion = rel:kragmorn
+			interest_group = ig_landowners
+   			ideology = ideology_traditionalist
+    			traits = {
+				bigoted
+				ambitious
+				experienced_political_operator
+    }	
+}

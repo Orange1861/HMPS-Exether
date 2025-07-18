@@ -1,0 +1,378 @@
+﻿building_orc_ruins = {
+	building_group = bg_orc_ruins
+	icon = "gfx/interface/icons/building_icons/orc_ruins.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_human_ruins = {
+	building_group = bg_human_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_halfling_ruins = {
+	building_group = bg_halfling_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+
+building_goblin_ruins = {
+	building_group = bg_goblin_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+
+building_dragon_ruins = {
+	building_group = bg_dragon_ruins
+	icon = "gfx/interface/icons/building_icons/dragon_ruins.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+# Not really lore relavent
+# Placeholder for now
+building_lizard_ruins = {
+	building_group = bg_lizard_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+# Need more info
+building_gnomish_ruins = {
+    building_group = bg_gnomish_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+# Arritzikarri
+building_arritz_ruins = {
+    building_group = bg_arritz_ruins
+	icon = "gfx/interface/icons/building_icons/bird_ruins.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+# Ogre
+building_ogre_ruins = {
+    building_group = bg_ogre_ruins
+	icon = "gfx/interface/icons/building_icons/ogre_ruins.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+# Elvish
+building_elvish_ruins = {
+    building_group = bg_elvish_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+# Dwarf
+building_dwarf_ruins = {
+    building_group = bg_dwarf_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+building_collapsed_godsbane_vault = {
+    building_group = bg_collapsed_godsbane_vault
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+
+	city_type = wood
+	levels_per_mesh = 5
+
+	required_construction = construction_cost_medium
+
+	production_method_groups = {
+		pmg_equipment_dwarven_ruins
+		pmg_diggy_diggy_dwarf_collapsed
+	}
+
+	ownership_type = self
+ 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_renovated_godsbane_vault = {
+    building_group = bg_renovated_godsbane_vault
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+
+	city_type = wood
+	levels_per_mesh = 5
+
+	required_construction = construction_cost_medium
+
+	production_method_groups = {
+		pmg_equipment_dwarven_ruins
+		pmg_diggy_diggy_dwarf_renovated
+		pmg_renovated_godsbane_vault_rituals
+	}
+
+#   TODO: Change to match adventurer ownership methods
+ 	ownership_type = self
+
+ 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+# Giant
+building_giant_ruins = {
+	building_group = bg_giant_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+# Khus
+building_khus_ruins = {
+	building_group = bg_khus_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+
+building_asuroth_ruins = {
+	building_group = bg_asuroth_ruins
+	icon = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_ruins
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}
+
+
+building_archeology = {
+	building_group = bg_archeology
+	icon = "gfx/interface/icons/building_icons/building_archeology.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_archeology
+		pmg_steam_automation_building_iron_mine
+		pmg_train_automation_building_iron_mine
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
+}

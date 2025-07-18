@@ -1,0 +1,52 @@
+﻿COUNTRIES = {
+	c:SLB = {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_liberal = yes
+
+		ig:ig_petty_bourgeoisie ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_devout ?= {
+			add_ruling_interest_group = yes
+		}
+
+		set_tax_level = medium
+		
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:luxury_clothes
+
+		add_technology_researched = dialectics
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = railways
+		add_technology_researched = mechanical_tools
+		add_technology_researched = stock_exchange
+		add_technology_researched = corporate_charters
+
+		effect_starting_politics_traditional = yes
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_ecumenical_recognition
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_right_of_assembly		
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_right_of_assembly
+
+
+
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+
+	}
+}

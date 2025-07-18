@@ -1,0 +1,10 @@
+﻿CHARACTERS = {
+	c:TEF ?= {
+		create_character = {
+			template = TEF_teferet_sister_template
+		}
+		create_character = {
+			template = TEF_teferet_brother_template
+		}
+	}
+}

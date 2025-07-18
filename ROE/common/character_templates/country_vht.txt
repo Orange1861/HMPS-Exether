@@ -1,0 +1,20 @@
+﻿# Secretkeepers - VHT
+
+VHT_secretkeepers_leader_template = {
+			first_name = Khozr
+   			last_name = Rokhrandin
+    		historical = yes
+			ruler = yes
+    		age = 60
+    		dna = dna_secretkeepers_ruler
+    		culture = cu:vynduri
+			religion = rel:erigian
+			interest_group = ig_mages
+   			ideology = ideology_magocrat
+    			traits = {
+				meticulous
+				cautious
+				masterful_diplomat
+				erudite
+    }
+}

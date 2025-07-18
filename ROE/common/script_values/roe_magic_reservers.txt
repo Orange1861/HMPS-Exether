@@ -1,0 +1,128 @@
+﻿magic_institution_level = {
+	value = 0
+
+	if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 1
+			}
+		}
+		add = 1
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 2
+			}
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 3
+			}
+		}
+		add = 3
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 4
+			}
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 5
+			}
+		}
+		add = 5
+	}
+
+  }
+
+  magic_institution_bonus = {
+	value = 0
+	add = magic_institution_level
+	multiply = 100
+  }
+
+arcana = {
+	add = arcana_generation
+	add = arcana_upkeep
+	add = arcana_usage
+}
+
+arcana_multiplier = {
+	value = 1
+	add = modifier:country_arcana_gen_mult
+	add = modifier:country_arcana_cost_mult
+}
+
+magic_arcana_costs = {
+	value = var:num_arcana
+	multiply = -200
+  }
+
+arcana_generation = {
+	value = modifier:country_arcana_pos_add
+	multiply = arcana_generation_mult
+}
+
+arcana_generation_mult = {
+	value = 1
+	add = modifier:country_arcana_gen_mult
+}
+
+arcana_usage = {
+	value = modifier:country_arcana_neg_add
+	multiply = {
+		value = 1
+		add = modifier:country_arcana_cost_mult
+	}
+}
+
+arcana_upkeep = {
+	value = modifier:country_arcana_upkeep
+	multiply = {
+		value = 1
+		add = modifier:country_arcana_cost_mult
+	}
+}
+
+total_arcana_usage = {
+	value = arcana_upkeep
+	add = arcana_usage 
+}
+
+normalized_magic_surplus = {
+	value = arcana
+
+	divide = 600
+	min = -1
+	max = 1
+  }
+
+  normalized_magic_deficit = {
+	value = arcana
+
+	divide = 600
+	min = -1
+	max = 0
+  }
+
+  normalized_arcana = {
+	value = arcana
+
+	divide = 600
+	min = -1
+	max = 1
+  }

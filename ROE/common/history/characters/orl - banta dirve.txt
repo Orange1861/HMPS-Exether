@@ -1,0 +1,75 @@
+﻿CHARACTERS = {
+	c:ORL = {
+		create_character = {
+			first_name = "Grifa"
+			last_name = "Tallcat"
+			noble = yes
+			historical = yes
+			female = yes
+			ruler = yes
+			age = 51
+			interest_group = ig_mages
+			ideology = ideology_magocrat #could swap for artificer baron, depending on level of EME influence
+			traits = {
+				ambitious
+				innovative
+				experienced_political_operator
+			}
+			on_created = {
+       			set_variable = {
+            		name = is_tallcat
+        		}
+
+				set_variable = {
+					name = memento_mori_immunity
+					years = 10
+				}             
+    		}
+		}
+
+		create_character = {
+			first_name = Twaid
+			last_name = Bigheart
+			historical = yes
+			ig_leader = yes
+			age = 42
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader #could swap for artificer baron, depending on level of EME influence
+			traits = {
+				basic_defensive_strategist
+				innovative
+			}
+		}
+
+		create_character = {
+			first_name = Gaghaz
+			last_name = Tallcat
+			historical = yes
+			ig_leader = yes
+			noble = yes
+			age = 29
+			interest_group = ig_mages
+			ideology = ideology_magocrat #could swap for artificer baron, depending on level of EME influence
+			traits = {
+				starbrand_phoenix
+				demagogue
+				basic_political_operator
+			}
+		}
+
+		create_character = {
+			first_name = Needa
+			last_name = Shorthat
+			historical = yes
+			female = yes
+			ig_leader = yes
+			age = 39
+			interest_group = ig_rural_folk
+			ideology = ideology_royalist
+			traits = {
+				basic_political_operator
+				opium_addiction
+			}
+		}
+	}
+}

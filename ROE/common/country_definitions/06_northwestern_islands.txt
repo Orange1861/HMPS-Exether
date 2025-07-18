@@ -1,0 +1,315 @@
+﻿#Dragon Isles
+DIS = {
+	color = rgb{ 160 142 123 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { illvasaari } 
+	capital = STATE_CARTHAROS
+}
+
+#Ihizketari
+NRA = {
+	color = rgb{ 50 60 50 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { blacktalon } 
+	capital = STATE_GRORBONFOW
+}
+
+#Ehekti
+XRA = {
+	color = rgb{ 50 120 65 } 
+
+	country_type = decentralized
+
+	religion = avian_druidism
+
+	tier = principality
+
+	cultures = { blacktalon } 
+	capital = STATE_ZIENTZI
+}
+
+#Gurabzemi
+GUR = {
+	color = rgb{ 100 56 100 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { kotskarvi } 
+	capital = STATE_MYSARA
+}
+
+#Ialolaur
+IAL = {
+	color = rgb{ 40 86 140 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { kotskarvi } 
+	capital = STATE_RUSARYA
+}
+
+#Svandrin
+SVN = {
+	color = rgb{ 0 156 140 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { kotskarvi } 
+	capital = STATE_GADYRUS
+}
+
+#Kvavilak
+KVA = {
+	color = rgb{ 100 56 40 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { kotskarvi } 
+	capital = STATE_CYRRA
+}
+
+#Mesksarvi
+MVI = {
+	color = rgb{ 56 56 140 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { kotskarvi } 
+	capital = STATE_BYSSYRA
+}
+
+#Tushilkor
+TKR = {
+	color = rgb{ 230 56 140 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { kotskarvi } 
+	capital = STATE_HADRA
+}
+
+#Rkoniqari
+RKO = {
+	color = rgb{ 130 56 140 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { garagoz } 
+	capital = STATE_KURTHARA
+}
+
+#Imerumar
+IMR = {
+	color = rgb{ 230 56 140 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { kotskarvi } 
+	capital = STATE_ZAMARA
+}
+
+#Qarinor
+QAR = {
+	color = rgb{ 86 56 140 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { drogori } 
+	capital = STATE_RAROMARA
+}
+
+
+#Váralftis
+VAR = {
+	color = rgb{ 50 50 50 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { umbradorn } 
+	capital = STATE_RAVGA
+}
+
+#Gravskugard
+GRD = {
+	color = rgb{ 75 0 70 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { toftir_giant } 
+	capital = STATE_NUWUKUNBRUKT
+}
+
+#Haugvegr
+HVR = {
+	color = rgb{ 110 80 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { toftir_giant } 
+	capital = STATE_RUAATTA
+}
+
+#Dökkálfhold
+DOK = {
+	color = rgb{ 10 80 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { toftir_giant } 
+	capital = STATE_BRIFTEPLYG
+}
+
+#Valrúnir
+VAL = {
+	color = rgb{ 100 80 60 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { toftir_giant } 
+	capital = STATE_SATBULV
+}
+
+#Heljarriket
+HEL = {
+	color = rgb{ 10 80 100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { toftir_giant } 
+	capital = STATE_BRAATTA
+}
+
+#Hukapakaiheide
+HUK = {
+	color = rgb{ 130 85 200 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lonolot } 
+	capital = STATE_PUCOVATU
+}
+
+#Treidapak
+TPK = {
+	color = rgb{ 160 175 155 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { kealohi } 
+	capital = STATE_GARPATIA
+}
+
+
+#Skiepke
+SKI = {
+	color = rgb{ 160 95 95 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lonolot } 
+	capital = STATE_LUNARATA
+}
+
+#Iisflot
+IIS = {
+	color = rgb{ 160 185 95 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lonolot } 
+	capital = STATE_RUMATARI
+}
+
+
+#Grinhea
+GNE = {
+	color = rgb{ 120 185 120 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lonolot } 
+	capital = STATE_LUNARATA
+}
+
+#Nauwaad
+NAU = {
+	color = rgb{ 120 25 120 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lonolot } 
+	capital = STATE_RONGOMARA
+}
+
+#Jaahlo
+ORO = {
+	color = rgb{ 20 165 130 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { garagoz } 
+	capital = STATE_SYLVARIN
+}
+
+ZRA = {
+	color = rgb{ 50 125 100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { blacktalon } 
+	capital = STATE_DASRUGODA
+}

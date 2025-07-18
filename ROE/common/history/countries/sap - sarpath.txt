@@ -1,0 +1,31 @@
+﻿COUNTRIES = {
+	c:SAP = {
+		effect_starting_technology_tier_3_tech = yes
+		effect_starting_politics_traditional = yes
+		
+		activate_law = law_type:law_peasant_levies
+		activate_law = law_type:law_debt_slavery
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_divine_miracles	
+		activate_law = law_type:law_serfdom
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_theocracy
+
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+
+		add_modifier = {
+			name = jihduk_paseb
+		}
+
+		add_journal_entry = {
+			type = je_restore_upashna
+		}
+
+		effect_has_custom_journals = yes 
+	}
+}

@@ -1,0 +1,8 @@
+﻿ig_trait_supernational_influence = {
+	icon = "gfx/interface/icons/ig_trait_icons/supernational_influence.dds"
+	min_approval = loyal
+	
+	modifier = {
+		country_leverage_generation_mult = 0.25
+	}
+}

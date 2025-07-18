@@ -1,0 +1,154 @@
+CHARACTERS = {
+	c:ZKW = {
+		create_character = { 
+			first_name = "Znancho"
+			last_name = "Vzrol"
+			historical = yes
+			ruler = yes
+			age = 59
+			culture = cu:achonian
+			interest_group = ig_mages
+			ideology = ideology_magocrat
+			traits = {
+				persistent
+				literary
+				expert_colonial_administrator 
+				kidney_stones
+			}
+		}
+		create_character = {
+			first_name = "Anzhe"
+			last_name = "Srolzhor"
+			historical = yes
+			ig_leader = yes
+			age = 62
+			culture = cu:achonian
+			interest_group = ig_devout
+			ideology = ideology_magocrat
+			traits = {
+				pious
+				compliant
+				literary
+			}
+		}
+		create_character = {
+			first_name = "Joaquim"
+			last_name = "Vilela"
+			historical = yes
+			ig_leader = yes
+			age = 60
+			culture = cu:vairian
+			religion = rel:cult_of_the_sea
+			interest_group = ig_landowners
+			ideology = ideology_reformer
+			traits = {
+				pious
+				tactful
+				expensive_tastes
+			}
+		}
+		create_character = {
+			first_name = "Velm"
+			last_name = "Izhderk"
+			historical = yes
+			ig_leader = yes
+			age = 35
+			interest_group = ig_industrialists
+			ideology = ideology_artificer_baron
+			traits = {
+				arrogant
+				meticulous
+				engineer
+			}
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 5
+				}
+			}
+		}
+		create_character = {
+			first_name = "Sago"
+			last_name = "Zitaber"
+			historical = yes
+			ig_leader = yes
+			age = 45
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_protectionist
+			traits = {
+				honorable
+				basic_diplomat
+				master_bureaucrat
+			}
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 5
+				}
+			}
+		}
+		create_character = {
+			first_name = "Zihnana"
+			last_name = "Kolzati"
+			historical = yes
+			ig_leader = yes
+			is_female = yes
+			age = 41
+			interest_group = ig_intelligentsia
+			ideology = ideology_radical
+			traits = {
+				erudite
+				cautious
+				cocaine_addiction
+			}
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 5
+				}
+			}
+		}
+		create_character = {
+			first_name = "Truzen"
+			last_name = "Vaur"
+			historical = yes
+			ig_leader = yes
+			age = 31
+			interest_group = ig_rural_folk
+			ideology = ideology_radical
+			traits = {
+				hedonist
+				brave
+				inspirational_orator
+			}
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 5
+				}
+			}
+		}
+		create_character = {
+			first_name = "Valdemar"
+			last_name = "Trolle"
+			historical = yes
+			is_agitator = yes
+			age = 19
+			culture = cu:wood_giant
+			religion = rel:druidic
+			interest_group = ig_rural_folk
+			ideology = ideology_radical
+			traits = {
+				starbrand_fey #replace with djinn when it gets made
+				inexperienced
+				social_bandit
+			}
+			on_created = {
+				set_variable = {
+					name = memento_mori_immunity
+					years = 10
+				}
+			}
+		}
+	}
+}

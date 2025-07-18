@@ -1,0 +1,56 @@
+﻿pmg_base_building_subsistence_terrace_farms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_subsistence_terrace_farms
+	}
+}
+
+pmg_home_workshops_building_subsistence_terrace_farms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_home_workshops_no_building_subsistence_terrace_farms
+		pm_home_workshops_building_subsistence_terrace_farms
+	}
+}
+
+pmg_serfdom_building_subsistence_terrace_farms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_serfdom_no
+		pm_tribes_subsistence
+		pm_serfdom_building_subsistence_terrace_farms
+    }
+}
+
+pmg_base_building_subsistence_lichen_farms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_subsistence_lichen_farms
+	}
+}
+
+pmg_home_workshops_building_subsistence_lichen_farms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_home_workshops_no_building_subsistence_rice_paddies
+		pm_home_workshops_building_subsistence_rice_paddies
+	}
+}
+
+pmg_serfdom_building_subsistence_lichen_farms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_serfdom_no
+		pm_tribes_subsistence
+		pm_serfdom_building_subsistence_rice_paddies
+		pm_homesteading_building_subsistence
+	}
+}
+
+pmg_racial_tech = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_racial_tech
+		pm_gnome_subsistence
+	}
+}

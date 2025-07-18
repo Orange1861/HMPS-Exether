@@ -1,0 +1,16 @@
+﻿CHARACTERS = {
+	c:VAR = {
+		create_character = {
+			first_name = "Osku"
+			last_name = "Nuorane"
+			historical = yes
+			ruler = yes
+			age = 55
+			interest_group = ig_mages
+			ideology = ideology_theocrat
+			traits = {
+				pious
+			}
+		}
+	}
+}

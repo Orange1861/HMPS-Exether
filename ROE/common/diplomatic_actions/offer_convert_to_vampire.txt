@@ -1,0 +1,977 @@
+﻿offer_convert_to_vampire = {
+	groups= {
+		overlord
+	}
+
+	texture = "gfx/interface/icons/diplomatic_action_icons/take_state.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_13_handle_states"
+
+	requires_approval = yes
+	can_use_obligations = yes
+
+	unlocking_technologies = {
+		international_relations
+	}
+	
+	potential = {
+		has_variable = high_tribunal_variable
+		scope:target_country = {
+			is_subject_of = root
+			NOT = {
+				any_primary_culture = {
+					has_discrimination_trait = vampiric
+				}
+			}
+		}
+	}
+	
+	accept_effect = {
+		scope:target_country = {
+			random_primary_culture = {
+				save_scope_as = original_primary_culture
+			}
+
+			if = {
+				limit = {
+					country_is_in_settler_coast = yes
+					NOT = {
+						any_primary_culture = {
+							has_discrimination_trait = cloud_dwarf
+						}
+					}
+				}
+				add_primary_culture = cu:settler_coast_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = thoughtsmith_culture_group
+					}
+				}
+				add_primary_culture = cu:awakened_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = vairia_culture_group
+					}
+				}
+				add_primary_culture = cu:vairipire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = gnoll
+					}
+				}
+				add_primary_culture = cu:gnoll_vampire
+			}
+
+			else_if = {
+				limit = {
+					OR = {
+						c:LUR ?= this
+						c:CRG ?= this
+						c:KCH ?= this
+						c:HIZ ?= this
+						c:GAI ?= this
+						c:POA ?= this
+					}
+				}
+				add_primary_culture = cu:west_avian_vampire
+			}
+
+			else_if = {
+				limit = {
+					country_is_in_east_locari = yes
+					NOT = {
+						any_primary_culture = {
+							OR = {
+								has_discrimination_trait = cloud_dwarf
+								has_discrimination_trait = kharai_urchu_culture_group
+							}
+						}
+					}
+				}
+				add_primary_culture = cu:awakened_vampire
+			}
+			else_if = {
+				limit = {
+					OR = {
+						c:NRA ?= this
+						AND = {
+							country_is_in_aritzakarri = yes
+							NOT = {
+								any_primary_culture = {
+									OR = {
+										has_discrimination_trait = cloud_dwarf
+										has_discrimination_trait = kharai_oni_culture_group
+									}
+									
+								}
+							}
+						}
+					}
+
+				}
+				add_primary_culture = cu:avian_vampire
+			}
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = kharai_oni_culture_group
+					}
+				}
+				add_primary_culture = cu:ogre_vampire
+			}
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = chin_culture_group
+					}
+				}
+				add_primary_culture = cu:qiinat_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = kailan_culture_group
+					}
+				}
+				add_primary_culture = cu:kailan_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = new_dumonia_culture_group
+					}
+				}
+				add_primary_culture = cu:hiadud_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = vaythir_culture_group
+					}
+				}
+				add_primary_culture = cu:thiralian_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = khussite_culture_group
+					}
+				}
+				add_primary_culture = cu:khussite_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = southern_elf
+					}
+				}
+				add_primary_culture = cu:dark_elf_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = wood_elf
+					}
+				}
+				add_primary_culture = cu:wood_elf_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = kharai_urchu_culture_group
+					}
+				}
+				add_primary_culture = cu:goblin_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = gavkhani_culture_group
+					}
+				}
+				add_primary_culture = cu:gavkhani_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = tunnel_cursed
+					}
+				}
+				add_primary_culture = cu:dark_dwarven_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = high_elf
+					}
+				}
+				add_primary_culture = cu:high_elf_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = gnome_heritage
+					}
+				}
+				add_primary_culture = cu:gnome_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = dragonborn_culture_group
+					}
+				}
+				add_primary_culture = cu:draconic_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						AND = {
+							has_discrimination_trait = plaguewoods_culture_group
+							has_discrimination_trait = orc_heritage
+						}
+
+					}
+				}
+				add_primary_culture = cu:buramog_vampire
+			}	
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						AND = {
+							has_discrimination_trait = embervein_warriors_culture_group
+							has_discrimination_trait = orc_heritage
+						}
+
+					}
+				}
+				add_primary_culture = cu:embervein_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						AND = {
+							has_discrimination_trait = saltwaste_survivor_culture_group
+						}
+
+					}
+				}
+				add_primary_culture = cu:orc_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						AND = {
+							has_discrimination_trait = uriks_passage_culture_group
+						}
+
+					}
+				}
+				add_primary_culture = cu:uriki_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						AND = {
+							has_discrimination_trait = moorwealder_culture_group
+						}
+
+					}
+				}
+				add_primary_culture = cu:mousefolk_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = kobold_culture_group
+					}
+				}
+				add_primary_culture = cu:kobold_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = kobold_culture_group
+					}
+				}
+				add_primary_culture = cu:kobold_vampire
+			}
+
+			else_if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = cloud_dwarf
+					}
+				}
+				add_primary_culture = cu:dwarven_vampire
+			}
+
+			else = {
+				add_primary_culture = cu:vampire
+			}
+			remove_primary_culture = scope:original_primary_culture
+			add_modifier = {
+				name = vampiric_administration
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						any_primary_culture = {
+							NOT = {
+								has_discrimination_trait = vampiric
+							}
+						}
+					}
+					random_primary_culture = {
+						limit = {
+							NOT = {
+								has_discrimination_trait = vampiric
+							}
+						}
+						save_scope_as = removed_primary_culture_2
+					}
+					set_variable = two_primary_var
+					remove_primary_culture = scope:removed_primary_culture_2
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						any_primary_culture = {
+							NOT = {
+								has_discrimination_trait = vampiric
+							}
+						}
+					}
+					random_primary_culture = {
+						limit = {
+							NOT = {
+								has_discrimination_trait = vampiric
+							}
+						}
+						save_scope_as = removed_primary_culture_3
+					}
+					remove_variable = two_primary_var
+					set_variable = three_primary_var
+					remove_primary_culture = scope:removed_primary_culture_3
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						any_primary_culture = {
+							NOT = {
+								has_discrimination_trait = vampiric
+							}
+						}
+					}
+					random_primary_culture = {
+						limit = {
+							NOT = {
+								has_discrimination_trait = vampiric
+							}
+						}
+						save_scope_as = removed_primary_culture_4
+					}
+					remove_variable = two_primary_var
+					remove_variable = three_primary_var
+					set_variable = four_primary_var
+					remove_primary_culture = scope:removed_primary_culture_4
+				}
+			}
+
+			random_primary_culture = {
+				limit = {
+					has_discrimination_trait = vampiric
+				}
+				save_scope_as = vampire_culture
+			}
+			custom_tooltip = {
+				text = vampiric_admin_tt
+				every_scope_state = {
+					every_scope_pop = {
+						change_pop_culture = {
+							target = scope:vampire_culture
+							value = 0.07
+						}
+					}
+					every_scope_pop = {
+						change_pop_religion = {
+							target = rel:lunar_masquerade
+							value = 0.13
+						}
+					}
+					
+				}
+				
+			}
+			custom_tooltip = {
+				text = kill_the_clergy_tt
+				midnight_enforcement = yes  #replaces clergy, archmages and aristos with midnight heritage pops
+			}
+
+			custom_tooltip = {
+				text = kill_the_clergy_tt_2
+			}
+			custom_tooltip = {
+				text = vampirize_characters_tt
+				every_scope_character = { #lmao
+				limit = {
+					is_historical = no
+				}
+					random_list = {
+						25 = {
+							kill_character = yes
+						}
+						30 = {
+							exile_character = yes
+						}
+						30 = {
+							change_character_culture = scope:vampire_culture
+						}
+						15 = {
+
+						}
+					}
+				}
+
+				every_scope_character = { #lmao
+				limit = {
+					is_historical = yes
+				}
+					random_list = {
+						25 = {
+							exile_character = yes
+						}
+						75 = {
+							change_character_culture = scope:vampire_culture
+						}
+
+					}
+				}
+			}
+			custom_tooltip = {
+				text = vampiric_homelands_tt
+				if = {
+					limit = {
+						has_variable = two_primary_var
+					}
+					every_scope_state = {
+						limit = {
+							state_region = {
+								OR = {
+									is_homeland = scope:original_primary_culture
+									is_homeland = scope:removed_primary_culture_2
+								}
+							}
+						}
+						hidden_effect = {
+							
+						}
+						state_region = {
+							add_homeland = scope:vampire_culture
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_variable = three_primary_var
+					}
+					every_scope_state = {
+						limit = {
+							state_region = {
+								OR = {
+									is_homeland = scope:original_primary_culture
+									is_homeland = scope:removed_primary_culture_2
+									is_homeland = scope:removed_primary_culture_3
+								}
+							}
+						}
+						state_region = {
+							add_homeland = scope:vampire_culture
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_variable = four_primary_var
+					}
+					every_scope_state = {
+						limit = {
+							state_region = {
+								OR = {
+									is_homeland = scope:original_primary_culture
+									is_homeland = scope:removed_primary_culture_2
+									is_homeland = scope:removed_primary_culture_3
+								}
+							}
+						}
+						state_region = {
+							add_homeland = scope:vampire_culture
+						}
+					}
+				}
+				else = {
+					every_scope_state = {
+						limit = {
+							state_region = {
+								OR = {
+									is_homeland = scope:original_primary_culture
+								}
+							}
+						}
+						state_region = {
+							add_homeland = scope:vampire_culture
+						}
+					}
+				}
+			}
+			
+			set_state_religion = rel:lunar_masquerade
+			
+			add_journal_entry = {
+				type = je_vampire_university
+			}
+		}	
+	}
+
+	ai = {
+		check_acceptance_for_will_break = yes
+		check_acceptance_for_will_propose = yes
+		
+		evaluation_chance = {
+			value = 0.1
+			
+			add = {
+				value = country_rank
+				multiply = 0.05
+			}			
+		}			
+	
+		accept_score = {
+			value = 0
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
+				value = -100
+			}
+
+			if = {
+				limit = {
+					has_strategic_adjacency = scope:actor
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_NEIGHBORS"
+					value = 10
+				}	
+			}			
+
+			if = {
+				limit = { 
+					has_strategy = ai_strategy_armed_isolationism 
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ISOLATIONIST"
+					add = -50
+				}
+			}			
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH"
+				value = "scope:actor.ai_army_comparison(root)"
+				min = -50
+				max = 50
+			}	
+
+			if = {
+				limit = {
+					"scope:actor.ai_ideological_opinion(root)" > 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION"
+					value = "scope:actor.ai_ideological_opinion(root)"
+					multiply = 0.5
+					max = 20
+				}					
+			}
+			else_if = {
+				limit = {
+					"scope:actor.ai_ideological_opinion(root)" < 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION_NEGATIVE"
+					value = "scope:actor.ai_ideological_opinion(root)"
+					multiply = 0.5
+					min = -20
+				}					
+			}						
+							
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+				if = {
+					limit = {
+						OR = {
+							has_attitude = {
+								who = scope:actor
+								attitude = genial
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = conciliatory
+							}							
+							has_attitude = {
+								who = scope:actor
+								attitude = loyal
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = protective
+							}							
+						}
+					}
+					value = 50
+				}
+				if = {
+					limit = {
+						has_attitude = {
+							who = scope:actor
+							attitude = cooperative
+						}
+					}
+					value = 25
+				}				
+				if = {
+					limit = {
+						has_attitude = {
+							who = scope:actor
+							attitude = cautious
+						}
+					}
+					value = -50
+				}					
+				if = {
+					limit = {
+						OR = {
+							has_attitude = {
+								who = scope:actor
+								attitude = antagonistic
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = domineering
+							}	
+							has_attitude = {
+								who = scope:actor
+								attitude = belligerent
+							}	
+							has_attitude = {
+								who = scope:actor
+								attitude = rebellious
+							}							
+						}
+					}
+					value = -1000
+				}							
+			}			
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"			
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:amicable
+						"relations(scope:actor)" < relations_threshold:friendly
+					}
+					value = 25
+				}	
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:friendly
+					}
+					value = 50
+				}				
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:infamous
+						"scope:actor.infamy" < infamy_threshold:notorious
+					}
+					value = -10
+				}	
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:notorious
+						"scope:actor.infamy" < infamy_threshold:pariah
+					}
+					value = -25
+				}
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:pariah
+					}
+					value = -50
+				}					
+			}					
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+	
+				if = {
+					limit = { scope:actor = { country_rank > root.country_rank } }
+					value = 20
+				}
+				
+				if = {
+					limit = { scope:actor = { country_rank < root.country_rank } }
+					value = -20
+				}				
+			}	
+
+			if = {
+				limit = {
+					"num_alliances_and_defensive_pacts_with_rivals(scope:actor)" > 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ALLIED_TO_RIVALS"
+					value = "num_alliances_and_defensive_pacts_with_rivals(scope:actor)"
+					multiply = -25
+				}	
+			}	
+
+			if = {
+				limit = {
+					"num_alliances_and_defensive_pacts_with_allies(scope:actor)" > 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ALLIED_TO_ALLIES"
+					value = "num_alliances_and_defensive_pacts_with_allies(scope:actor)"
+					multiply = 10
+				}	
+			}
+
+			if = {
+				limit = {
+					"num_shared_rivals(scope:actor)" > 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_SHARED_RIVALS"
+					value = "num_shared_rivals(scope:actor)"
+					multiply = 10
+					max = 30
+				}	
+			}				
+
+			if = {
+				limit = {
+					NOT = {
+					any_scope_treaty = {
+						binds = root
+						any_scope_article = {
+							has_type = alliance
+						}
+					}				
+					}	
+					"num_alliances" > 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_NUM_ALLIES"
+					value = "num_alliances"
+					multiply = -10
+				}					
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ACTOR_PRO_LOBBY_CLOUT"					
+				value = "scope:actor.lobby_foreign_pro_clout(scope:target_country)"
+				multiply = 50
+				max = 25
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ACTOR_ANTI_LOBBY_CLOUT"					
+				value = "scope:actor.lobby_foreign_anti_clout(scope:target_country)"
+				multiply = -50
+				min = -25
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_TARGET_PRO_LOBBY_CLOUT"					
+				value = "scope:target_country.lobby_foreign_pro_clout(scope:actor)"
+				multiply = 100
+				max = 25
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_TARGET_ANTI_LOBBY_CLOUT"					
+				value = "scope:target_country.lobby_foreign_anti_clout(scope:actor)"
+				multiply = -100
+				min = -25
+			}	
+			
+			if = {
+				limit = {
+					scope:actor = {
+						has_variable = pro_lobby_proposal_alliance
+						var:pro_lobby_opportunity_target ?= scope:target_country
+					}
+				}
+				add = {
+					desc = "LOBBY_OPPORTUNITY_BONUS"
+					value = 100
+				}
+			}
+
+			if = {
+				limit = {
+					scope:actor = {
+						has_variable = anti_lobby_proposal_alliance
+						var:anti_lobby_opportunity_target ?= scope:target_country
+					}
+				}
+				add = {
+					desc = "LOBBY_OPPORTUNITY_BONUS"
+					value = 50
+				}
+			}
+			
+			if = {
+				limit = {
+					exists = power_bloc
+					exists = scope:actor.power_bloc			
+				}
+				if = {
+					limit = {
+						power_bloc = scope:actor.power_bloc
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_SAME_POWER_BLOC"
+						value = 15
+					}					
+				}
+				else = {
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_POWER_BLOC"
+						value = -25
+					}					
+				}				
+			}			
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_PRINCIPLE_SACRED_CIVICS"
+
+				if = {
+					limit = {
+						AND = {
+							scope:actor.power_bloc ?= {
+								OR = {
+									has_principle = principle:principle_sacred_civics_1
+									has_principle = principle:principle_sacred_civics_2
+									has_principle = principle:principle_sacred_civics_3
+								}
+							}
+							scope:actor.religion = root.religion
+						}
+					}
+					add = 10
+				}
+			}
+		}
+
+		propose_score = {
+			value = 10
+
+			if = {
+				limit = {
+					country_has_primary_culture = cu:british
+				}
+				add = {
+					value = 50
+				}
+			}
+			
+			add = {
+				value = scope:target_country.country_rank
+				multiply = 3
+			}			
+		}
+
+		propose_break_score = {
+			value = 10
+		}
+		
+		use_obligation_chance = {
+			value = 0
+	
+			add = {
+				if = {
+					limit = {
+						scope:target_country = { country_rank = root.country_rank }
+					}					
+					value = 25
+				}			
+			}
+	
+			add = {
+				if = {
+					limit = {
+						scope:target_country = { country_rank > root.country_rank }
+					}					
+					value = 50
+				}			
+			}
+		}
+		
+		owe_obligation_chance = {
+			value = 0
+	
+			add = {
+				if = {
+					limit = {
+						scope:target_country = { country_rank = root.country_rank }
+					}				
+					value = 5
+				}	
+			}			
+	
+			add = {
+				if = {
+					limit = {
+						scope:target_country = { country_rank > root.country_rank }
+					}				
+					value = 10
+				}	
+			}		
+		}	
+	}
+}

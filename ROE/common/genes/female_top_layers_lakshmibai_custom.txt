@@ -1,0 +1,20 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_top_layers1 = {
+			inheritable = no
+			
+			lakshmibai_top_layer = {
+				index = 1
+				male = {
+				}
+				
+				female = {
+						1 = female_top_layers_lakshmibai_custom
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

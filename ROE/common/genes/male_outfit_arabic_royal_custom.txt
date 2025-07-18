@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_outfits4 = {
+			inheritable = no
+			
+			persian_outfits = {
+				index = 1
+				male = {
+						1 = male_outfit_arabic_royal_custom
+				}
+				
+				female = {
+						1 = female_outfit_european_common_01
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

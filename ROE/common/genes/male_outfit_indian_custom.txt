@@ -1,0 +1,21 @@
+special_genes = {
+	accessory_genes = {
+
+		MOD_outfits = {
+			inheritable = no
+			
+			indian_outfits = {
+				index = 1
+				male = {
+						1 = male_outfit_indian_custom
+				}
+				
+				female = {
+						1 = female_outfit_south_american_02_high
+				}
+				boy = male
+				girl = female
+			}		
+		}	
+	}
+}

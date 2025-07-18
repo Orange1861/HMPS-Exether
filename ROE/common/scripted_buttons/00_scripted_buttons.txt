@@ -1,0 +1,45 @@
+﻿je_positivist_movement_embrace_positivism_button = {
+	name = "je_positivist_movement_embrace_positivism_button"
+	desc = "je_positivist_movement_embrace_positivism_button_desc"
+
+	visible = { always = yes }
+
+	cooldown = { days = 365 }
+
+	effect = {
+		custom_tooltip = {
+			text = positivists_advance_10
+			je:je_positivist_movement = {
+				add_progress = { value = 10 name = positivist_progress_bar }
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			strata = lower
+		}
+		custom_tooltip = cooldown_year_tt
+	}
+}
+
+je_positivist_movement_suppress_positivism_button = {
+	name = "je_positivist_movement_suppress_positivism_button"
+	desc = "je_positivist_movement_suppress_positivism_button_desc"
+
+	visible = { always = yes }
+
+	cooldown = { days = 365 }
+
+	effect = {
+		custom_tooltip = {
+			text = positivists_retreat_10
+			je:je_positivist_movement = {
+				add_progress = { value = -10 name = positivist_progress_bar }
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			strata = middle
+		}
+		custom_tooltip = cooldown_year_tt
+	}
+}

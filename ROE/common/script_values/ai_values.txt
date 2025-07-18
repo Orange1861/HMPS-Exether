@@ -1,0 +1,192 @@
+﻿get_net_income = {
+	value = income
+	subtract = investment_pool_income
+}
+
+get_net_income_sq = {
+	value = get_net_income
+	divide = 1000
+	save_temporary_value_as = small_net_income
+	min = 0
+	multiply = scope:small_net_income
+}
+
+get_investment_income = {
+	value = investment_pool_income
+}
+
+get_investment_income_sq = {
+	value = get_investment_income
+	divide = 1000
+	save_temporary_value_as = small_investmnet_income
+	min = 0
+	multiply = scope:small_investmnet_income
+}
+
+get_wanted_construction = {
+	value = 10
+
+	add = {
+		value = investment_pool_income
+		divide = 1000
+		multiply = modifier:country_private_construction_allocation_mult		
+	}
+
+	add = {
+		value = get_investment_income_sq
+		divide = 400
+		multiply = modifier:country_private_construction_allocation_mult		
+	}
+	
+	add = {
+		value = get_net_income
+				
+		divide = 2000 # 1 construction output per this much income
+
+		min = 0
+		max = 200 # Above a certain point more government income isn't going to lead to more AI government construction
+	}
+
+	add = {
+		value = get_net_income_sq
+		divide = 2000
+		
+		max = 200
+	}
+
+	add = {
+		value = total_population
+
+		divide = 2000000 # 1 construction output per this much population
+		max = 100
+	}
+
+	if = {
+		limit = { 
+			country_rank < rank_value:major_power 
+			NOR = {
+				has_strategy = ai_strategy_industrial_expansion
+				has_strategy = ai_strategy_resource_expansion
+			}
+		}
+		multiply = 0.75
+	}	
+	
+	if = {
+		limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
+		multiply = 0.1		
+	}	
+	
+	min = { 
+		value = income
+		if = {
+			limit = {
+				is_country_type = unrecognized
+			}
+			divide = 4000
+		}
+		else = {
+			divide = 2000
+		}
+		
+	}
+	max = 1000
+}
+
+base_impose_law_weight= {
+	value = 0.01
+
+	# Impose law is a fairly hostile act, AIs should use it mostly when angry at a subject
+	if = {
+		limit = {
+			has_attitude = {
+				who = scope:target_country
+				attitude = domineering
+			}
+		}
+		multiply = 0.5
+	}
+
+	# Non ideological unions make less use of this
+	if = {
+		limit = {
+			NOT = { power_bloc ?= { has_identity = identity:identity_ideological_union } }
+		}
+		multiply = 0.5
+	}
+
+	# Less likely to do this to subjects unless LD is low
+	if = {
+		limit = {
+			scope:target_country = {
+				is_subject = yes
+				liberty_desire > 25
+			}
+		}
+		multiply = 0.5
+	}
+
+	# Shouldn't care much about meddling in really tiny countries
+	if = {
+		limit = {
+			scope:target_country = {
+				gdp < 100000
+			}
+		}
+		multiply = 0.25
+	}
+	else_if = {
+		limit = {
+			scope:target_country = {
+				gdp < 250000
+			}
+		}
+		multiply = 0.5
+	}
+	else_if = {
+		limit = {
+			scope:target_country = {
+				gdp < 500000
+			}
+		}
+		multiply = 0.75
+	}
+
+	# Impact of AI strategies
+	if = {
+		limit = {
+			has_strategy = ai_strategy_world_revolution
+		}
+		multiply = 5
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_strategy = ai_strategy_anti_imperialism
+				has_strategy = ai_strategy_maintain_power_balance
+			}
+		}
+		multiply = 2
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_strategy = ai_strategy_armed_isolationism
+				has_strategy = ai_strategy_socialism_in_one_country
+			}
+		}
+		multiply = 0.5
+	}		
+}
+
+get_coastal_pop_ratio = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			check_is_coastal = yes
+			is_incorporated = yes
+		}
+		add = state_population
+	}
+	divide = total_population
+}

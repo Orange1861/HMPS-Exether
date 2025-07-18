@@ -1,0 +1,42 @@
+﻿# DRI - Driftwyn
+
+DRI_driftwyn_leader_template = {
+			first_name = Werdeveur
+   			last_name = Stach
+    		historical = yes
+			ruler = yes
+    		age = 41
+    		dna = dna_driftwyn_ruler
+    		culture = cu:ravikian
+			religion = rel:creed_of_hasal
+			interest_group = ig_petty_bourgeoisie
+   			ideology = ideology_positivist
+    			traits = {
+				innovative
+				meticulous
+				ambitious
+				arrogant
+				engineer
+    }
+}
+
+DRI_driftwyn_heir_template = {
+			first_name = Ispre
+   			last_name = Girtgreef
+    		historical = yes
+			female = yes
+			heir = yes
+    		age = 26
+    		dna = dna_driftwyn_heir
+    		culture = cu:yrian
+			religion = rel:creed_of_hasal
+			interest_group = ig_intelligentsia
+   			ideology = ideology_positivist
+    			traits = {
+				innovative
+				reserved
+				erudite
+				engineer
+				
+    }
+}

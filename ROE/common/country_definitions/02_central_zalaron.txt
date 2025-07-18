@@ -1,0 +1,823 @@
+﻿
+#Rannnor
+CLL = {
+	color = rgb{ 0  160  150 } 
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { rannorian } 
+	capital = STATE_CAM_CALLAIRD 
+}
+
+#Salzadernland
+SAZ = {
+	color = rgb{ 40  120  150 } 
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { leiner } 
+	capital = STATE_LILLESO
+}
+
+
+#Vairia
+VAI = {
+	color = rgb{ 0  50  150 } 
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { vairian } 
+	capital = STATE_VENTAFALCO
+}
+
+#Teferet
+TEF = {
+	color = hsv360{ 18  107  83 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { tefereti } 
+	capital = STATE_MARZEHZARIN
+}
+
+#Seleneth
+SET = {
+	color = rgb{ 71 32 94 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { seleni } 
+	capital = STATE_FARASHIL
+}
+
+#Opalath
+OPA = {
+	color = hsv360{ 0  107  83 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { kashtarnel } 
+	capital = STATE_KALMBIQUIS
+}
+
+#Thiral
+THI = {
+	color = hsv360{ 143  75  61 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { thiralian } 
+	capital = STATE_AUBERN_FLOW
+}
+
+#Prilyra
+PRI = {
+	color = hsv360{ 73  195  41 }
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { wealder } 
+	capital = STATE_WAYFARE_MEADOWS
+}
+
+#Kracia
+KRC = {
+	color = hsv360{ 20  195  41 }
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { bossardi } 
+	capital = STATE_MISTREACH
+}
+
+#Emparal
+EMP = {
+	color = hsv360{ 33  105  101 }
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { bossardi } 
+	capital = STATE_THE_AMBER_RUN
+}
+
+
+#Darvak
+DAR = {
+	color = rgb{ 10 20 30 }
+
+	country_type = recognized 
+	social_hierarchy = dwarf_social_hierarchy
+	tier = kingdom
+
+	cultures = { yelfi } 
+	capital = STATE_MOUNT_YELFIS
+}
+
+
+#Lisinia
+LIS = {
+	color = rgb{ 40  80  10 }
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { qinnaat } 
+	capital = STATE_ALMARAQI
+}
+
+#Tisenaria
+TIZ= {
+	color = rgb{ 50  10  50 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { azmaraan } 
+	capital = STATE_RAHMANTO
+}
+
+#Oazojaro
+OAZ= {
+	color = rgb{ 120  120  120 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { azmaraan } 
+	capital = STATE_ALJUMARO
+}
+
+#Solnomo
+SNM= {
+	color = rgb{ 120  50  100 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { qinnaat } 
+	capital = STATE_NURADINO
+}
+
+#Zahratia
+ZHR= {
+	color = rgb{ 120  70  130 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { azmaraan } 
+	capital = STATE_RAHMANTO
+}
+
+#Verkisirio
+VER= {
+	color = rgb{ 20  20  20 }
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { azmaraan } 
+	capital = STATE_RAHMANTO
+}
+
+#Zubayra
+ZUB = {
+	color = rgb{ 32  55  69 }  
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { qinnaat } 
+	capital = STATE_ESPRASHAD
+}
+
+#Dushambay
+DSB = {
+	color = rgb{ 60  80  140 }
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { astreval } 
+	capital = STATE_DUSHAMBAY
+}
+
+#Astrevon
+AST = {
+	color = rgb{ 80  60  130 }
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { astreval } 
+	capital = STATE_DUSHAMBAY
+}
+
+#Farrider
+FAR = {
+	color = rgb{ 150  80  150 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { korkaz } 
+	capital = STATE_BARIKHARGUL
+}
+
+#Zrulbal
+OCR = {
+	color = rgb{ 161 164 136 } 
+
+	country_type = preindustrial 
+
+	tier = principality
+
+	cultures = { korkaz } 
+	capital = STATE_PLAGUES_END
+}
+
+#Redmane
+RDM = {
+	color = rgb{ 150  10  20 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { astreval } 
+	capital = STATE_WESTERN_EQUINE_PLAIN
+}
+
+#Ghul-e-Noor
+GOO = {
+	color = rgb{ 200  75  100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { wastecrawler } 
+	capital = STATE_ZARGIKS
+}
+
+#Nashrabad
+NSR = {
+	color = rgb{ 120  200  100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { wastecrawler } 
+	capital = STATE_ESPARASHIM
+}
+
+#Haykal
+HKL = {
+	color = rgb{ 40  60  20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { starwoken } 
+	capital = STATE_QAMARUD
+}
+
+#Borasak
+BSK = {
+	color = rgb{ 100  60  20 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { starwoken } 
+	capital = STATE_ALQADIM
+}
+
+#Kahkashan
+KHK = {
+	color = rgb{ 50  180  100 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { nightwalker } 
+	capital = STATE_SHIRAFIQ
+}
+
+#Crystal Fields
+KHU = {
+	color = rgb{ 70  20  70 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { nightwalker } 
+	capital = STATE_KASHAMAD
+}
+
+#Laerania
+LIA = {
+	color = rgb{ 20  60  20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { changeling } 
+	capital = STATE_LAERANELS_DESOLATION
+}
+
+#Zilvania
+ZIL = {
+	color = rgb{ 200  180  20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { glabrekthorn } 
+	capital = STATE_VAVULAN
+}
+
+#Krovador
+KRO = {
+	color = rgb{ 120  60  20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { glabrekthorn } 
+	capital = STATE_FIKOLIK
+}
+
+#Renalpia
+RLP = {
+	color = rgb{ 120  120  20 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { lumvareth } 
+	capital = STATE_FOBAN
+}
+
+#Balumland
+BLL = {
+	color = rgb{ 120  60  120 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { lumvareth } 
+	capital = STATE_KOTIK
+}
+
+#Plenovia
+PVA = {
+	color = rgb{ 120  200  120 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { lumvareth } 
+	capital = STATE_ZIKAN
+}
+
+#Wolkara
+WRA = {
+	color = rgb{ 120  200  180 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { glabrekthorn } 
+	capital = STATE_BANOKIK
+}
+
+#Xalutia
+XAL = {
+	color = rgb{ 120  200  20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lumvareth glabrekthorn } 
+	capital = STATE_FOBAN
+}
+
+#Thornwall
+TRW = {
+	color = rgb{ 120  200  60 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lumvareth glabrekthorn } 
+	capital = STATE_POFIKAN
+}
+
+#Vinewall
+VWL = {
+	color = rgb{ 120  240  20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lumvareth glabrekthorn } 
+	capital = STATE_ZALULIK
+}
+
+#Lumanta
+LTA = {
+	color = rgb{ 0  120  120 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { lumvareth } 
+	capital = STATE_KOTIK
+}
+
+#Mornalia
+MLA = {
+	color = rgb{ 60  120  120 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { glabrekthorn } 
+	capital = STATE_POFIKAN
+}
+
+#Istrana
+IRA = {
+	color = rgb{ 230  200  200 } 
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { lumvareth } 
+	capital = STATE_ZALULIK
+}
+
+#Dark Morass
+DMS = {
+	color = rgb{ 275  72  54 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { nuzaptan } 
+	capital = STATE_EARTHCHURN
+}
+
+#Ceadciu
+STR = {
+	color = hsv360 { 95 32 74 }
+	
+
+	country_type = recognized
+
+	tier = city_state
+
+	cultures = { scordian } 
+	religion = human_druidism
+	capital = STATE_EIREKS_WASH
+}
+
+#Penurious Band
+PND = {
+	color = hsv360 { 345 72 54 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { scordian } 
+	
+	capital = STATE_THE_CRIMSON_MORASS
+}
+
+#Ican
+ICA = {
+	color = hsv360 { 205 72 54 }
+
+	country_type = preindustrial
+
+	tier = principality
+
+	cultures = { nuzaptan } 
+	capital = STATE_BEARTZUNGUL
+}
+
+#Feylight Reservation
+FEY = {
+	color = hsv360 { 105 72 54 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { erdei } 
+	capital = STATE_FAERONDALE
+}
+
+#Kamuy
+KAM = {
+	color = hsv360 { 305 22 54 }
+
+	country_type = recognized
+	social_hierarchy = dwarf_social_hierarchy
+	tier = kingdom
+
+	cultures = { koshiri } 
+	capital = STATE_KORO
+}
+
+#Chronicle
+CHR = {
+	color = hsv360 { 150 42 54 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { vandori } 
+	capital = STATE_INAMGI
+	is_named_from_capital = yes
+}
+
+#Western Path
+WTH = {
+	color = hsv360 { 105 72 54 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { vandori } 
+	capital = STATE_HANALLA
+}
+
+#Eastern Path
+EAH = {
+	color = hsv360 { 35 72 54 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { vandori } 
+	capital = STATE_SUKONCO_3
+}
+
+#Seaward Path
+STH = {
+	color = hsv360 { 75 72 54 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { vandori } 
+	capital = STATE_SANGARI
+}
+
+#Muschelhavn
+SHE = {
+	color = hsv360 { 225 25 100 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { leiner } 
+	capital = STATE_PINCER_PENINSULA
+	is_named_from_capital = yes
+}
+
+#Flussholm
+FLU = {
+	color = rgb{ 30  30  80 } 
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { leiner } 
+	capital = STATE_JOURNEYEND
+}
+
+#Anwarth
+ANW = {
+	color = hsv360{ 38  97  83 } # Old color = RGB 0 26 100
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { anwarthi } 
+	capital = STATE_THINSILVER
+}
+
+
+#Mondhain
+MNN = {
+	color = hsv360 { 35 32 74 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { kesswenu } 
+	capital = STATE_SC12
+}
+
+#Houtblom
+HOU = {
+	color = hsv360 { 165 72 74 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { stranfolk } 
+	capital = STATE_STJERROPTOCHT
+}
+
+#Seeskat
+SEE = {
+	color = hsv360 { 200 12 74 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { stranfolk } 
+	capital = STATE_SKIMERWALD
+}
+
+#Fiskeroer
+FIS = {
+	color = hsv360 { 250 60 74 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { stranfolk } 
+	capital = STATE_BLOEIJENDREAM
+}
+
+#Bûtenbosk
+BUT = {
+	color = hsv360 { 15 22 74 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { gachscho stranfolk } 
+	capital = STATE_SULVERSTREAM
+}
+
+
+#New Khus
+NEK = {
+	color = { 77 38 55 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { qinnaat azmaraan }
+	capital = STATE_NURADINO
+}
+
+#Sirlael
+XXP = {
+	color = { 129 49 176 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { timari }
+	capital = STATE_KASKADVIVO
+}
+
+#Whialor
+WHX = {
+	color = { 20 93 100 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { whiali }
+	capital = STATE_RADIANTAJO
+}
+
+#Ranseann
+GFL = {
+	color = rgb{ 20 20 70 } 
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { leiner rannorian } 
+	capital = STATE_JOURNEYEND
+}
+
+#Starshimmer Federation
+SFD = {
+	color = hsv360{ 245 215 110 }
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { tefereti seleni anwarthi} 
+	capital = STATE_MARZEHZARIN
+}
+
+EUT = {
+	color = hsv360{ 0 215 110 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { eutrateri } 
+	capital = STATE_ZYRELIANAR
+}
+
+NAG = {
+	color = hsv360{ 225 215 110 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { nangarlith } 
+	capital = STATE_NORTHERN_FEYSTALK
+}
+
+LVA = {
+	color = { 190 133 82 }
+
+	country_type = unrecognized
+
+	tier = kingdom
+	
+	cultures = { lumvareth glabrekthorn }
+	capital = STATE_ZIKAN
+}

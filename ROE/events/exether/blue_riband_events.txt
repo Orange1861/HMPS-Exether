@@ -1,0 +1,1282 @@
+namespace = blue_riband
+#Brinewick (Arrador), Last Hearth (Dumonia), For Locari it would be in the South Sea Company, but I'm not sure we named it yet.
+
+#Ceraun would be in Urik's Landing. Lagoon Coast either one of the emerald league cities or Serbinelle
+
+#there's a Bintu Dirve port with an Ocelian name that's probably the canon #1 coffee exporting port in the world
+
+blue_riband.1 = { #First blue riband
+	type = country_event
+	placement = root
+
+    hidden = yes
+
+	trigger = {
+		has_technology_researched = gantry_cranes
+        year >= 1203 # lore would be dumonia
+		NOT = {
+			has_global_variable = blue_riband
+		}
+	}
+
+	immediate = {
+		set_global_variable = blue_riband
+
+		add_modifier = {
+			name = blue_riband_leader
+		}
+
+        set_global_variable = {
+			name = blue_riband_holder
+			value = this
+		}
+
+        set_global_variable = {
+			name = blue_riband_holder_score
+			value = 3000
+		}
+	}
+
+}
+
+blue_riband.2 = { #Blue riband Stage 1 launch
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.2.t
+	desc = blue_riband.2.d
+	flavor = blue_riband.2.f
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = {
+            name = blue_riband_score
+            value = blue_riband_point
+		}
+        #trigger_event = {blue_riband.3 days = 0 popup = yes}
+		add_journal_entry = {
+			type = je_blue_riband
+		}
+	}
+
+    option = { # a choice to not get event spammed
+		name = blue_riband.2.a
+        default_option = yes
+	}
+
+	#option = {
+	#	name = blue_riband.2.b
+    #    custom_tooltip = {
+	#		text = interested_in_blue_riband_tt
+    #        set_variable = {
+    #            name = interested_in_blue_riband
+    #        }
+    #    }
+	#}
+
+	#option = { 
+	#	name = blue_riband.2.g
+    #    custom_tooltip = {
+	#		text = interested_in_blue_riband_tt
+    #        set_variable = {
+    #            name = interested_in_blue_riband
+    #        }
+    #    }
+    #    trigger_event = {id = blue_riband.80 days = 0}
+	#}
+}
+
+blue_riband.3 = { #Blue riband Stage 1 calculation
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.3.t
+	desc = {
+		first_valid = {
+            triggered_desc = {
+				desc = blue_riband.3.e
+                trigger = {
+                    has_modifier = blue_riband_leader
+                }
+			}
+			triggered_desc = {
+				desc = blue_riband.3.d
+			}
+		}
+	}
+	flavor = {
+		first_valid = {
+            triggered_desc = {
+				desc = blue_riband.3.h
+                trigger = {
+                    has_modifier = blue_riband_leader
+                }
+			}
+			triggered_desc = {
+				desc = blue_riband.3.f
+			}
+		}
+	}
+
+	duration = 3
+
+	trigger = {
+        #NOT = {
+            #has_variable = blue_riband_cooldown
+        #}
+        has_journal_entry = je_blue_riband
+	}
+
+	immediate = {
+        #set_variable = {
+			#name = blue_riband_cooldown # every ship is built and launched discretely
+			#value = yes
+			#months = 48 # without government subsidy, that is
+		#}
+        every_country = {
+            limit = {
+                has_modifier = blue_riband_leader
+            }
+            remove_modifier = blue_riband_leader
+            trigger_event = {id = blue_riband.4 days = 0}
+        }
+        add_modifier = blue_riband_leader
+	}
+
+    option = { # a choice to not get event spammed
+		name = blue_riband.3.b
+        custom_tooltip = {
+			text = uninterested_in_blue_riband_tt
+            remove_variable = interested_in_blue_riband
+        }
+        default_option = yes
+		show_as_tooltip = {
+			add_modifier = blue_riband_leader
+		}
+	}
+
+	option = {
+		name = blue_riband.3.c
+        trigger = {
+           has_modifier = blue_riband_leader
+        }
+        custom_tooltip = {
+			text = interested_in_blue_riband_tt
+            set_variable = {
+                name = interested_in_blue_riband
+            }
+        }
+		show_as_tooltip = {
+			add_modifier = blue_riband_leader
+		}
+	}
+
+}
+
+blue_riband.4 = { # trigger only interested
+	type = country_event
+	placement = root
+
+    hidden = yes
+    
+    trigger = {
+
+	}
+
+	immediate = {
+        if = {
+            limit = {
+                has_variable = interested_in_blue_riband
+            }
+            trigger_event = {id = blue_riband.11 days = 0}
+        }
+	}
+}
+
+
+blue_riband.11 = { # Lose the blue riband
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.11.t
+	desc = blue_riband.11.d
+	flavor = blue_riband.11.f
+
+	duration = 3
+
+	trigger = {
+        NOT = {has_modifier = blue_riband_leader}
+        has_variable = interested_in_blue_riband
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blue_riband.11.a
+		default_option = yes
+	}
+
+    #option = {
+		#name = blue_riband.11.b
+        #trigger = {
+            #NOT = {has_variable = blue_riband_subsidy_cooldown}
+        #}
+        #add_treasury = -30000
+        #hidden_effect = {
+            #trigger_event = {
+                #id = blue_riband.19 months = 40
+            #}
+            #set_variable = {
+			#name = blue_riband_subsidy_cooldown # every ship is built and launched discretely
+			#value = yes
+			#months = 40 # without government subsidy, that is
+		    #}
+        #}
+	#}
+}
+
+blue_riband.19 = { # subsidy
+	type = country_event
+	placement = root
+
+    hidden = yes
+    
+    trigger = {
+
+	}
+
+	immediate = {
+        remove_variable= blue_riband_cooldown
+        trigger_event = {id = blue_riband.3 days = 0}
+	}
+}
+
+
+blue_riband.40 = { # regular flavor on action
+	type = country_event
+	placement = root
+
+    hidden = yes
+    
+    trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+	}
+
+	immediate = {
+		random_list = {
+			89 = {}
+			2 = {trigger_event = {id = blue_riband.41 days = 8}} #cruise line normal
+			3 = {trigger_event = {id = blue_riband.43 days = 8}} #paid shipyard event 2
+			3 = {trigger_event = {id = blue_riband.44 days = 8}} #paid shipyard event 3
+			3 = {trigger_event = {id = blue_riband.45 days = 8}} #company shipyard event 4
+		}
+	}
+}
+
+blue_riband.41 = { # Blue riband normal cruising line
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	title = blue_riband.41.t
+	desc = blue_riband.41.d
+	flavor = blue_riband.41.f
+
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_technology_researched = corporate_management
+		NOT = {has_variable = blue_riband_cruise_cd}
+		any_company = {
+			is_shipyard_company = yes
+			prosperity >= 100
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			has_active_building = building_port
+			has_active_building = building_tavern
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 3
+			}
+			NOT = {has_modifier = blue_riband_cruising_service} #if lucky enough can fire before modifier expires
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				has_active_building = building_port
+				has_active_building = building_tavern
+				any_scope_building = {
+					is_building_type = building_urban_center
+					level >= 5
+				}
+				NOT = {has_modifier = blue_riband_cruising_service}
+			}
+			save_scope_as = blue_riband_cruising_dest
+		}
+		set_variable = {
+			name = blue_riband_cruise_cd
+			#days = very_long_modifier_time_modifier_time
+		}
+		random_company = {
+			limit = {
+				is_shipyard_company = yes
+				prosperity >= 100
+			}
+			save_scope_as = blue_riband_cruising_company
+		}
+	}
+
+	option = {
+		name = blue_riband.41.a
+		scope:blue_riband_cruising_dest = {
+			add_modifier = {
+				name = blue_riband_cruising_service
+				days = very_long_modifier_time
+			}
+			add_loyalists_in_state = {
+				value = 0.02
+			}
+		}
+		default_option = yes	
+	}
+
+	#option = {
+		#name = blue_riband.41.b
+		#scope:blue_riband_cruising_dest = {
+			#add_radicals_in_state = {
+				#value = small_radicals
+			#}
+		#}
+	#}
+}
+
+blue_riband.42 = {
+	type = country_event
+	placement = ROOT
+
+	title = blue_riband.42.t
+	desc = blue_riband.42.d
+	flavor = blue_riband.42.f
+
+	event_image = {
+		video = "middleeast_upperclass_party"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = {has_variable = blue_riband_paid_shipyard_cd}
+		NOT = {has_law = law_type:law_command_economy}
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+		NOT = { has_variable = industrialists_petition_var }
+		country_has_building_type_levels = {
+  			target = bt:building_shipyards   value <= 5 # 3 is too harsh considering JE unlocked at t3
+		}
+		any_scope_building = {
+            is_building_type = building_shipyards
+            occupancy >= 0.9
+			weekly_profit > 0
+        }
+	}
+	
+	immediate = {
+		ig:ig_industrialists = { save_scope_as = industrialists_ig }
+		set_variable = {
+			name = industrialists_petition_var
+			days = normal_modifier_time
+		}
+		set_variable = {
+			name = blue_riband_paid_shipyard_cd
+			#days = very_long_modifier_time
+		}
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_shipyards
+					weekly_profit > 0
+					occupancy > 0.9
+				}
+			}
+			save_scope_as = blue_riband_paid_shipyard1_state
+		}
+	}
+
+	option = { #listen to them
+		name = blue_riband.42.a
+		add_treasury = -400000 # government inefficiency
+		add_investment_pool = 500000
+		scope:blue_riband_paid_shipyard1_state = {
+			start_privately_funded_building_construction = building_shipyards
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { gold_reserves > 5000000 }
+				add = 30
+			}
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > 10000
+					gold_reserves > 0
+				}
+				add = 30
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+					has_law = law_type:law_traditionalism
+				}
+				add = -1000
+			}		
+		}
+	}
+
+	option = { #get lost
+		name = blue_riband.42.b
+		default_option = yes
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = rejected_petition
+				days = normal_modifier_time
+			}
+		}
+		ai_chance = {base = 40}
+	}
+}
+
+blue_riband.43 = {
+	type = country_event
+	placement = ROOT
+
+	title = blue_riband.43.t
+	desc = blue_riband.43.d
+	flavor = blue_riband.43.f
+
+	event_image = {
+		video = "middleeast_upperclass_party"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_technology_researched = mutual_funds
+		NOT = {has_variable = blue_riband_paid_shipyard_cd2}
+		NOT = {has_law = law_type:law_command_economy}
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+		NOT = { has_variable = industrialists_petition_var }
+		country_has_building_type_levels = {
+  			target = bt:building_shipyards   value >= 5
+		}
+		country_has_building_type_levels = {
+  			target = bt:building_shipyards   value <= 20
+		}
+		any_scope_building = {
+            is_building_type = building_shipyards
+            occupancy >= 0.9
+			weekly_profit > 0
+			level >= 3
+        }
+	}
+	
+	immediate = {
+		ig:ig_industrialists = { save_scope_as = industrialists_ig }
+		set_variable = {
+			name = industrialists_petition_var
+			days = normal_modifier_time
+		}
+		set_variable = {
+			name = blue_riband_paid_shipyard_cd2
+			#days = very_long_modifier_time
+		}
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_shipyards
+					weekly_profit > 0
+					occupancy > 0.9
+					level >= 3
+				}
+			}
+			save_scope_as = blue_riband_paid_shipyard2_state
+		}
+	}
+
+	option = { #listen to them
+		name = blue_riband.43.a
+		add_treasury = -350000 # government inefficiency
+		add_investment_pool = 500000
+		scope:blue_riband_paid_shipyard2_state = {
+			start_privately_funded_building_construction = building_shipyards
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { gold_reserves > 5000000 }
+				add = 30
+			}
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > 10000
+					gold_reserves > 0
+				}
+				add = 30
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+	}
+
+	option = { #get lost
+		name = blue_riband.43.b
+		default_option = yes
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = rejected_petition
+				days = normal_modifier_time
+			}
+		}
+		ai_chance = {base = 40}
+	}
+}
+
+blue_riband.44 = {
+	type = country_event
+	placement = ROOT
+
+	title = blue_riband.44.t
+	desc = blue_riband.44.d
+	flavor = blue_riband.44.f
+
+	event_image = {
+		video = "middleeast_upperclass_party"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_technology_researched = mutual_funds
+		has_technology_researched = concrete_dockyards
+		NOT = {has_variable = blue_riband_paid_shipyard_cd3}
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+		NOT = { has_variable = industrialists_petition_var }
+		country_has_building_type_levels = {
+  			target = bt:building_shipyards   value >= 20
+		}
+		country_has_building_type_levels = {
+  			target = bt:building_shipyards   value <= 40
+		}
+		any_scope_building = {
+            is_building_type = building_shipyards
+            occupancy >= 0.9
+			weekly_profit > 0
+			level >= 5
+        }
+	}
+	
+	immediate = {
+		ig:ig_industrialists = { save_scope_as = industrialists_ig }
+		set_variable = {
+			name = industrialists_petition_var
+			days = normal_modifier_time
+		}
+		set_variable = {
+			name = blue_riband_paid_shipyard_cd3
+			#days = very_long_modifier_time
+		}
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_shipyards
+					weekly_profit > 0
+					occupancy > 0.9
+					level >= 5
+				}
+			}
+			save_scope_as = blue_riband_paid_shipyard3_state
+		}
+	}
+
+	option = { #listen to them
+		name = blue_riband.44.a
+		add_treasury = -350000 # government inefficiency
+		add_investment_pool = 500000
+		scope:blue_riband_paid_shipyard3_state = {
+			start_privately_funded_building_construction = building_shipyards
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { gold_reserves > 5000000 }
+				add = 30
+			}
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > 10000
+					gold_reserves > 0
+				}
+				add = 30
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+	}
+
+	option = { #get lost
+		name = blue_riband.44.b
+		default_option = yes
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = rejected_petition
+				days = normal_modifier_time
+			}
+		}
+		ai_chance = {base = 40}
+	}
+}
+
+blue_riband.45 = { #When PDX does not add start company construct effect
+	type = country_event
+	placement = ROOT
+
+	title = blue_riband.45.t
+	desc = blue_riband.45.d
+	flavor = blue_riband.45.f
+
+	event_image = {
+		video = "middleeast_upperclass_party"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_technology_researched = investment_banks
+		has_technology_researched = atmospheric_engine #better check than sorry
+		NOT = {has_variable = blue_riband_company_shipyard_cd}
+		NOT = {has_law = law_type:law_command_economy}
+		any_company = {
+			is_shipyard_company = yes
+			prosperity >= 100
+		}
+		country_has_building_type_levels = {
+  			target = bt:building_shipyards   value <= 80
+		}
+		any_scope_building = {
+            is_building_type = building_shipyards
+            occupancy >= 0.9
+			level >= 5
+        }
+	}
+	
+	immediate = {
+		set_variable = {
+			name = blue_riband_company_shipyard_cd
+			days = long_modifier_time
+		}
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_shipyards
+					occupancy > 0.9
+					level >= 5
+				}
+			}
+			save_scope_as = blue_riband_paid_shipyard4_state
+		}
+		random_company = {
+			limit = {
+				is_shipyard_company = yes
+				prosperity >= 100
+			}
+			save_scope_as = blue_riband_paid_shipyard4_company
+		}
+	}
+
+	option = { #listen to them
+		name = blue_riband.45.a
+		add_treasury = -300000 # government inefficiency
+		add_investment_pool = 650000
+		scope:blue_riband_paid_shipyard4_state = {
+			start_privately_funded_building_construction = building_motor_industry #surprised?
+			add_loyalists_in_state = {
+				pop_type = capitalists
+				value = 0.10
+			}
+		} 
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = { gold_reserves > 3000000 }
+				add = 40
+			}
+			modifier = {
+				trigger = { 
+					weekly_net_fixed_income > 5000
+					gold_reserves > 0
+				}
+				add = 40
+			}		
+			modifier = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+				add = -1000
+			}		
+		}
+	}
+
+	option = { #get lost
+		name = blue_riband.45.b
+		default_option = yes
+		ai_chance = {base = 20}
+	}
+}
+
+blue_riband.60 = { # holder flavor on action
+	type = country_event
+	placement = root
+
+    hidden = yes
+    
+    trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_modifier = blue_riband_leader
+	}
+
+	immediate = {
+		random_list = {
+			55 = {}
+			20 = {trigger_event = {id = blue_riband.61 days = 9}} #immigration boost
+			20 = {trigger_event = {id = blue_riband.62 days = 9}} #colonization boost
+			5 = {trigger_event = {id = blue_riband.63 days = 9}} #cruise line for holder
+		}
+	}
+}
+
+blue_riband.61 = { # Blue riband holder immigration boost
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "southamerica_factory_opening"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.61.t
+	desc = blue_riband.61.d
+	flavor = blue_riband.61.f
+
+	duration = 3
+
+	trigger = {
+		is_at_war = no
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_modifier = blue_riband_leader
+		NOT = {has_variable = blue_riband_holder_immigration_cd}
+		any_scope_state = {
+			has_active_building = building_port
+			has_decree = decree_greener_grass_campaign
+			NOT = {has_modifier = blue_riband_holder_immigration_boost} #if lucky enough can fire before modifier expires
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_active_building = building_port
+				has_decree = decree_greener_grass_campaign
+				NOT = {has_modifier = blue_riband_holder_immigration_boost}
+			}
+			save_scope_as = blue_riband_port_state
+		}
+		set_variable = {
+			name = blue_riband_holder_immigration_cd
+			days = normal_modifier_time
+		}
+	}
+
+	option = {
+		name = blue_riband.61.a
+		default_option = yes
+		scope:blue_riband_port_state = {
+			add_modifier = {
+				name = blue_riband_holder_immigration_boost
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	#option = {
+		#name = blue_riband.61.b	
+	#}
+}
+
+blue_riband.62 = { # Blue riband holder colonization boost
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	title = blue_riband.62.t
+	desc = blue_riband.62.d
+	flavor = blue_riband.62.f
+
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_modifier = blue_riband_leader
+		NOT = {has_variable = blue_riband_holder_colonization_cd}
+		any_scope_state = {
+			is_incorporated = no
+			check_is_coastal = yes
+			any_neighbouring_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+			NOT = {has_modifier = blue_riband_holder_colonization_boost} #if lucky enough can fire before modifier expires
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = no
+				check_is_coastal = yes
+				any_neighbouring_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				NOT = {has_modifier = blue_riband_holder_colonization_boost} 
+			}
+			save_scope_as = blue_riband_port_colony
+		}
+		set_variable = {
+			name = blue_riband_holder_colonization_cd
+			days = normal_modifier_time
+		}
+	}
+
+	option = {
+		name = blue_riband.62.a
+		default_option = yes
+		scope:blue_riband_port_colony = {
+			add_modifier = {
+				name = blue_riband_holder_colonization_boost
+				days = normal_modifier_time
+			}
+		}
+	}
+
+	#option = {
+		#name = blue_riband.62.b	
+	#}
+}
+
+blue_riband.63 = { # Blue riband holder cruising line
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	title = blue_riband.63.t
+	desc = blue_riband.63.d
+	flavor = blue_riband.63.f
+
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_blue_riband
+		has_variable = interested_in_blue_riband
+		has_modifier = blue_riband_leader
+		has_technology_researched = corporate_management
+		NOT = {has_variable = blue_riband_cruise_cd}
+		any_company = {
+			is_shipyard_company = yes
+			prosperity >= 100
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			has_active_building = building_port
+			has_active_building = building_tavern
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 3
+			}
+			NOT = {has_modifier = blue_riband_cruising_service} #if lucky enough can fire before modifier expires
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				has_active_building = building_port
+				has_active_building = building_tavern
+				any_scope_building = {
+					is_building_type = building_urban_center
+					level >= 5
+				}
+				NOT = {has_modifier = blue_riband_cruising_service}
+			}
+			save_scope_as = blue_riband_cruising_dest2
+		}
+		set_variable = {
+			name = blue_riband_cruise_cd
+			#days = very_long_modifier_time_modifier_time
+		}
+		random_company = {
+			limit = {
+				is_shipyard_company = yes
+				prosperity >= 100
+			}
+			save_scope_as = blue_riband_cruising_company2
+		}
+	}
+
+	option = {
+		name = blue_riband.63.a
+		scope:blue_riband_cruising_dest2 = {
+			add_modifier = {
+				name = blue_riband_cruising_service
+				days = very_long_modifier_time
+			}
+			add_loyalists_in_state = {
+				value = 0.02
+			}
+		}
+		default_option = yes	
+	}
+
+	#option = {
+		#name = blue_riband.63.b
+		#scope:blue_riband_cruising_dest2 = {
+			#add_radicals_in_state = {
+				#value = small_radicals
+			#}
+		#}
+	#}
+}
+
+blue_riband.80 = { # Blue riband Explanation events
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.80.t
+	desc = blue_riband.80.d
+	flavor = blue_riband.80.f
+
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_blue_riband
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blue_riband.80.a
+		default_option = yes
+		trigger_event = {id = blue_riband.81 days = 0}
+	}
+}
+
+blue_riband.81 = { # Blue riband Explanation events
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.81.t
+	desc = blue_riband.81.d
+	flavor = blue_riband.81.f
+
+	duration = 3
+
+	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blue_riband.81.a
+		default_option = yes
+		trigger_event = {id = blue_riband.82 days = 0}
+	}
+}
+
+blue_riband.82 = { # Blue riband Explanation events
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.82.t
+	desc = blue_riband.82.d
+	flavor = blue_riband.82.f
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = blue_riband.82.a
+		default_option = yes
+	}
+}
+
+blue_riband.90 = { #Blue riband Stage 1 End
+	type = country_event
+	placement = root
+
+	event_image = {
+
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = blue_riband.90.t
+	desc = blue_riband.90.d
+	flavor = blue_riband.90.f
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+        remove_variable = interested_in_blue_riband
+        remove_modifier = blue_riband_leader
+        set_variable = {
+            name = blue_riband_point #reset
+            value = 299
+        }
+	}
+
+	option = {
+		name = blue_riband.90.a
+		default_option = yes
+	}
+
+}
+
+blue_riband.101 = { # Blue riband T4
+	type = country_event
+	placement = root
+
+    hidden = yes
+
+	trigger = {
+		has_technology_researched = arc_welding
+	}
+
+	immediate = {
+		if = {
+			limit = 		
+			{NOT = {has_global_variable = blue_riband_stage2}}
+		}
+		set_global_variable = blue_riband_stage2
+
+		#add_modifier = {
+			#name = blue_riband_stage2_leader
+		#}
+
+        #set_global_variable = {
+			#name = blue_riband_stage2_holder
+			#value = this
+		#}
+
+        #set_global_variable = {
+			#name = blue_riband_stage2_holder_score
+			#value = 3000
+		#}
+
+		trigger_event = {id = blue_riband.201 years = 40}
+	}
+
+}
+
+blue_riband.201 = { # Blue riband End
+	type = country_event
+	placement = root
+
+    hidden = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		if = {
+			limit = 		
+			{NOT = {has_global_variable = blue_riband_stage3}}
+		}
+		set_global_variable = blue_riband_stage3
+
+		#add_modifier = {
+			#name = blue_riband_stage2_leader
+		#}
+
+        #set_global_variable = {
+			#name = blue_riband_stage2_holder
+			#value = this
+		#}
+
+        #set_global_variable = {
+			#name = blue_riband_stage2_holder_score
+			#value = 3000
+		#}
+
+		#trigger_event = {id = blue_riband.102 years = 40}
+	}
+
+}

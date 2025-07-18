@@ -1,0 +1,22 @@
+﻿MILITARY_DEPLOYMENTS = {
+	
+	c:TLE ?= {
+		every_military_formation = {
+			limit = {
+				is_army = yes
+			}
+			fully_mobilize_army = yes
+			teleport_to_front = p:x5EDFFE.front
+		}
+	}
+
+	c:RAV ?= {
+		every_military_formation = {
+			limit = {
+				is_army = yes
+			}
+			fully_mobilize_army = yes
+			teleport_to_front = p:xF8B665.front
+		}
+	}
+}

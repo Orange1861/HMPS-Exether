@@ -1,0 +1,40 @@
+﻿# Root = Character
+on_character_death = {
+	effect = {
+		if = {
+			limit = {
+				is_ruler = yes
+				exists = c:AHO
+				owner = c:AHO
+				owner = {
+					NOT = { has_variable = new_era_achon }
+				}
+			}
+			owner = {
+				trigger_event = achon_succession.1
+				create_character = {
+					template = AHO_achon_interim_template
+				}
+			}
+		}
+	}
+}
+
+on_character_death = {
+	effect = {
+		if = {
+			limit = {
+				is_ruler = yes
+				exists = c:AUM
+				owner = c:AUM	
+				owner = { 	
+						has_law = law_type:law_theocracy	
+						NOT = { has_law = law_type:law_anarchy }
+					}				
+			}
+			owner = {
+				trigger_event = pope_succession.1
+			}
+		}
+	}
+}

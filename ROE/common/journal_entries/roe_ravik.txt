@@ -1,0 +1,136 @@
+﻿je_ravik_natural_borders = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		exists = c:RAV
+		this = c:RAV
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = won_crusade
+			NOT = {
+				exists = c:TLE
+			}
+		}
+		has_technology_researched = nationalism
+		any_interest_group = {
+			is_powerful = yes
+			is_in_government = yes
+			leader = {
+				OR = {
+					has_ideology = ideology:ideology_jingoist_leader
+					has_ideology = ideology:ideology_ethno_nationalist
+					has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_integralist
+				}
+			}
+		}
+
+
+	}
+
+	immediate = {
+		trigger_event = { id = natural_borders.1 popup = yes }
+	}
+
+	complete = {
+		is_at_war = no
+		custom_tooltip = {
+			text = own_all_raviki_homelands
+			NOT = {
+				any_state = {
+					state_region = {
+						is_homeland = cu:ravikian
+					}
+					OR = {
+						region = sr:region_hasals_mirror
+						region = sr:region_ravik
+					}
+					
+					NOT = { owner = ROOT }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = own_all_yrian_homelands
+			NOT = {
+				any_state = {
+					state_region = {
+						is_homeland = cu:yrian
+					}
+					NOT = { owner = ROOT }
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = own_all_gascho_homelands
+			NOT = {
+				any_state = {
+					state_region = {
+						is_homeland = cu:gachscho
+					}
+					region = sr:region_hasals_mirror
+					NOT = { owner = ROOT }
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = own_all_florishnom_homelands
+			NOT = {
+				any_state = {
+					state_region = {
+						is_homeland = cu:florishnom
+					}
+					NOT = { owner = ROOT }
+				}
+			}
+		}
+
+		any_scope_state = {
+			state_region = s:STATE_CHELKSPYR
+			is_incorporated = yes
+			is_split_state = no
+		}
+		any_scope_state = {
+			state_region = s:STATE_KLINGELBERG
+			is_incorporated = yes
+			is_split_state = no
+		}
+		any_scope_state = {
+			state_region = s:STATE_KRULWILGEN
+			is_incorporated = yes
+			is_split_state = no
+		}
+		any_scope_state = {
+			state_region = s:STATE_GLIMMERDAM
+			is_incorporated = yes
+			is_split_state = no
+		}
+		any_scope_state = {
+			state_region = s:STATE_STORMWATCH
+			is_incorporated = yes
+			is_split_state = no
+		}
+	}
+
+	on_complete = {
+		set_variable = completed_natural_borders_je
+		trigger_event = { id = natural_borders.2 popup = yes }
+	}
+
+	invalid = {
+		custom_tooltip = {
+			text = reject_natural_borders_tt
+			has_variable = reject_natural_borders
+		}
+	}
+
+	should_be_pinned_by_default = yes
+
+	weight = 100
+}

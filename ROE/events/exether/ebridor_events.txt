@@ -1,0 +1,49 @@
+﻿namespace = ebridor_events
+
+ebridor_events.1 = {
+	type = country_event
+	placement = root
+
+	title = ebridor_events.1.t
+	desc = ebridor_events.1.d
+	flavor = ebridor_events.1.f
+	dlc = dlc_roe
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	option = {
+		name = ebridor_events.1.a
+		ai_chance = {
+			base = 100
+		}
+		default_option = yes
+		custom_tooltip = {
+			text = ebridor_arrinvestment_tt
+			hidden_effect = {
+				create_treaty = {
+					first_country = c:ARR
+					second_country = root
+
+					is_draft = no
+					binding_period = { years = 25  }
+
+					articles_to_create = {
+						{ 
+							article = foreign_investment_rights
+							source_country = root
+							target_country = c:ARR
+						}
+
+
+					}
+				}
+			}
+		}
+	}
+}

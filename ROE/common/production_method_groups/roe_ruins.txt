@@ -1,0 +1,58 @@
+﻿
+pmg_equipment_dwarven_ruins = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_accumulation_dwarven_ruins
+		pm_complex_accumulation_dwarven_ruins
+		pm_uses_gizmo_accumulation_dwarven_ruins
+	}
+}
+
+pmg_diggy_diggy_dwarf_collapsed = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+
+	is_hidden_when_unavailable = yes
+
+	production_methods = {
+		pm_no_diggy_dwarf
+		pm_diggy_dwarf_collapsed
+	}
+}
+
+pmg_diggy_diggy_dwarf_renovated = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+
+	is_hidden_when_unavailable = yes
+	
+	production_methods = {
+		pm_no_diggy_dwarf
+		pm_diggy_diggy_dwarf_renovated
+	}
+}
+
+pmg_renovated_godsbane_vault_rituals = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_ritual_vault
+		pm_buried_rituals
+		pm_terrace_dwarf_rituals
+	}
+}
+pmg_train_automation_building_dragon_ruins = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+
+pmg_base_archeology = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_base_archaeology_survey
+		pm_base_archaeology_excavation
+		pm_base_archaeology_reconstruction
+		pm_base_archaeology_restoration
+	}
+}

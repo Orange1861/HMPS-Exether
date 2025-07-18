@@ -1,0 +1,41 @@
+﻿# Teferet - TEF
+
+TEF_teferet_sister_template = {
+			first_name = Loni
+   			last_name = Nahtentu_Amye
+    		historical = yes
+			ig_leader = yes
+			heir = yes
+   			female = yes
+   		 birth_date = 1142.11.11
+    		dna = dna_teferet_sister
+    		culture = cu:tefereti
+			religion = rel:orthodox_fosirmi
+			interest_group = ig_mages
+   			ideology = ideology_magocrat
+    			traits = {
+				meticulous
+				persistent
+				arrogant
+				master_bureaucrat
+    }
+}
+
+TEF_teferet_brother_template = {
+			first_name = Pehtas
+   			last_name = Nahtentu_Amye
+    		historical = yes
+			ruler = yes
+   		 birth_date = 1142.11.11
+    		dna = dna_teferet_brother
+    		culture = cu:tefereti
+			religion = rel:orthodox_fosirmi
+			interest_group = ig_mages
+   			ideology = ideology_magocrat
+    			traits = {
+				charismatic
+				experienced_political_operator
+				arrogant
+				romantic
+    }
+}

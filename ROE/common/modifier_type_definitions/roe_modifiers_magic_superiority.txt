@@ -1,0 +1,83 @@
+country_magic_superiority_base = {
+	color = good
+	percent = no
+}
+
+country_magic_support_bonus = {
+	color = good
+	percent = yes
+	decimals = 1
+}
+
+country_magic_morale_bonus_attacker_bool = {
+    boolean = yes
+    color = good
+    percent = no
+}
+
+country_magic_morale_bonus_attacker = {
+	color = good
+	percent = yes
+	decimals = 1
+}
+
+country_magic_morale_bonus_defender_bool = {
+    boolean = yes
+    color = good
+    percent = no
+}
+
+country_magic_morale_bonus_defender = {
+	color = good
+	percent = yes
+	decimals = 1
+}
+
+country_technology_magic_enabled = {
+    boolean = yes
+    color = good
+    percent = no
+}
+
+country_technology_generals_roll_arcanist_traits_bool = {
+    boolean = yes
+    color = good
+    percent = no
+}
+
+### ROE
+unit_magic_offense_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=10000
+	}
+}
+
+unit_magic_defense_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=10000
+	}
+}
+
+unit_magic_resistance_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=10000
+	}
+}
+
+unit_magic_offense_mult={
+	decimals=0
+	color=good
+	percent = yes
+}
+
+unit_magic_defense_mult={
+	decimals=0
+	color=good
+	percent = yes
+}

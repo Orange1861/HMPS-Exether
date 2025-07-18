@@ -1,0 +1,589 @@
+﻿MILITARY_FORMATIONS = {
+	c:DOB ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			name = "Awakened Warriors"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_DER_IBBENN
+				count = 25
+			}
+
+			save_scope_as = dob_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_thoughtsmith_ridge
+			save_scope_as = dob_general
+		}
+		scope:dob_general = {
+			transfer_to_formation = scope:dob_army
+		}
+	}
+
+	c:GAN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			name = "Outland Watch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BORKAGAUW
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BORKAGAUW
+				service_type = conscript
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PULIKOTSK
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BORKAGAUW
+				service_type = conscript
+				count = 20
+			}
+
+			save_scope_as = gan_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_thoughtsmith_ridge
+			save_scope_as = gan_general
+		}
+		scope:gan_general = {
+			transfer_to_formation = scope:gan_army
+		}
+	}
+
+	c:GLI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			name = "Royal Cavern Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHARGISHABBO
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHARGISHABBO	
+				service_type = conscript
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GLIDGRED_RIZRA
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GLIDGRED_RIZRA
+				service_type = conscript
+				count = 15
+			}
+
+			save_scope_as = gli_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_thoughtsmith_ridge
+			save_scope_as = gli_general
+		}
+		scope:gli_general = {
+			transfer_to_formation = scope:gli_army
+		}
+	}
+	
+	c:TKI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dreamweaver_jungle
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSURWA
+				count = 10
+			}
+
+			save_scope_as = tki_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_dreamweaver_jungle
+			save_scope_as = tki_general
+		}
+		
+		scope:tki_general = {
+			transfer_to_formation = scope:tki_army
+		}
+	}
+	
+	c:DUU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KIT_RAUNAQ
+				count = 5
+			}
+
+			save_scope_as = duu_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = duu_general
+		}
+		
+		scope:duu_general = {
+			transfer_to_formation = scope:duu_army
+		}
+	}
+	
+	c:SEK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_scalethane_realms
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHREM_YAIQ
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_AEMQAA
+				count = 3
+			}
+
+			save_scope_as = sek_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_scalethane_realms
+			save_scope_as = sek_general
+		}
+		
+		scope:sek_general = {
+			transfer_to_formation = scope:sek_army
+		}
+	}
+	
+	c:IZA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HASQSTALE
+				count = 8
+			}
+
+			save_scope_as = iza_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = iza_general
+		}
+		
+		scope:iza_general = {
+			transfer_to_formation = scope:iza_army
+		}
+	}
+
+	c:ASR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_sarpakshetra
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_EDLAFIG
+				count = 10
+			}
+
+			save_scope_as = asr_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_sarpakshetra
+			save_scope_as = asr_general
+		}
+		
+		scope:asr_general = {
+			transfer_to_formation = scope:asr_army
+		}
+	}
+
+	c:BHR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_sarpakshetra
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UAK_KEDLI
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KUTHOPAHOP
+				count = 15
+			}
+
+			save_scope_as = bhr_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_sarpakshetra
+			save_scope_as = bhr_general
+		}
+		
+		scope:bhr_general = {
+			transfer_to_formation = scope:bhr_army
+		}
+	}
+
+	c:JIV ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_sarpakshetra
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KULUWANDU
+				count = 25
+			}
+			save_scope_as = jiv_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_sarpakshetra
+			save_scope_as = jiv_general
+		}
+		
+		scope:jiv_general = {
+			transfer_to_formation = scope:jiv_army
+		}
+	}
+
+	c:SAP ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_sarpakshetra
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LAZILKEP
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PANTAMOLPO
+				count = 25
+			}
+
+			save_scope_as = sap_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_sarpakshetra
+			save_scope_as = sap_general
+		}
+		
+		scope:sap_general = {
+			transfer_to_formation = scope:sap_army
+		}
+	}
+
+	c:AKB ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dreamweaver_jungle
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SHANTINAGAR
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VISHUDDHIKARA
+				count = 25
+			}
+
+			save_scope_as = akb_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_dreamweaver_jungle
+			save_scope_as = akb_general
+		}
+		
+		scope:akb_general = {
+			transfer_to_formation = scope:akb_army
+		}
+	}
+
+	c:GDY ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dreamweaver_jungle
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KUHWUNUKILI
+				count = 20
+			}
+			save_scope_as = gdy_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_dreamweaver_jungle
+			save_scope_as = gdy_general
+		}
+		
+		scope:gdy_general = {
+			transfer_to_formation = scope:gdy_army
+		}
+	}
+	
+
+	c:DJA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dreamweaver_jungle
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DHARMARAJYA
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_SURYANAGARI
+				count = 20
+			}
+
+			save_scope_as = dja_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_dreamweaver_jungle
+			save_scope_as = dja_general
+		}
+		
+		scope:dja_general = {
+			transfer_to_formation = scope:dja_army
+		}
+	}
+	
+	c:GAH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_scalethane_realms
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LAUHIVIL
+				count = 5
+			}
+
+			save_scope_as = gah_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_scalethane_realms
+			save_scope_as = gah_general
+		}
+		
+		scope:gah_general = {
+			transfer_to_formation = scope:gah_army
+		}
+	}
+	
+	c:PAY ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_scalethane_realms
+
+			name = "Royal Army of Chibaasi"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CHMACAJ
+				count = 32
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_CHMACAJ
+				count = 20
+			}
+
+			save_scope_as = pay_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_scalethane_realms
+			save_scope_as = pay_general
+		}
+		
+		scope:pay_general = {
+			transfer_to_formation = scope:pay_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_scalethane_realms
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CHMACAJ
+				count = 18
+			}
+
+			save_scope_as = pay_fleet
+
+			
+		}
+		create_character = {
+				is_admiral = yes
+				hq = region_scalethane_realms
+				save_scope_as = pay_admiral
+			}
+
+			scope:pay_admiral = {
+				transfer_to_formation = scope:pay_fleet
+			}
+
+	}
+
+	c:SSC ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NYINGMAWASKAHIKAN
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KHANGYO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SHIGATSENIPIY
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KIMKHAH
+				count = 4
+			}
+			save_scope_as = ssc_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = ssc_general
+		}
+		
+		scope:ssc_general = {
+			transfer_to_formation = scope:ssc_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_NYINGMAWASKAHIKAN
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_NYINGMAWASKAHIKAN
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KHANGYO
+				count = 4
+			}
+
+			save_scope_as = ssc_fleet
+
+			
+		}
+		create_character = {
+				is_admiral = yes
+				hq = region_new_dumonia
+				save_scope_as = ssc_admiral
+			}
+
+			scope:ssc_admiral = {
+				transfer_to_formation = scope:ssc_fleet
+			}
+	}
+}

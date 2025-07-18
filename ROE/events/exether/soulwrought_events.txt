@@ -1,0 +1,176 @@
+﻿namespace = synthetic_dawn
+
+synthetic_dawn.1 = {
+	type = state_event
+	dlc = dlc_roe
+	placement = ROOT
+	title = synthetic_dawn.1.t
+	desc = synthetic_dawn.1.d
+	flavor = synthetic_dawn.1.f
+
+	duration = 3
+
+
+	event_image = {
+		video = "asia_farmers_market"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_soulwrought_assembly_plant
+
+		}
+		state_region = {
+			NOT = { is_homeland = soulwrought }
+		}
+		
+		culture_percent_state = {     target = cu:soulwrought     value >= 0.3   }
+		
+	}
+
+	immediate = {
+		state_region = {
+			add_homeland = cu:soulwrought
+		}
+	}
+
+	option = {
+		name = synthetic_dawn.1.a #I, for one, welcome our new Soulwrought citizens.
+		default_option = yes
+		add_modifier = {
+			name = accepting_soulwrought_homelands
+			days = normal_modifier_time
+		}
+		show_as_tooltip = {
+			state_region = {
+				add_homeland = cu:soulwrought
+			}
+		}
+	}
+
+	option = {
+		name = synthetic_dawn.1.b #They ought to spend less time thinking about such questions
+		add_modifier = {
+			name = rejecting_soulwrought_homelands
+			days = normal_modifier_time
+		}
+		show_as_tooltip = {
+			state_region = {
+				add_homeland = cu:soulwrought
+			}
+		}
+	}
+}
+
+synthetic_dawn.2 = { #soulwrought protesting for legal acceptance
+	type = country_event
+	dlc = dlc_roe
+	placement = root
+	title = synthetic_dawn.2.t
+	desc = synthetic_dawn.2.d
+	flavor = synthetic_dawn.2.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 8
+    }
+	event_image = {
+		video = "europenorthamerica_sufferage"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {            
+        OR = {
+			is_enacting_law = law_type:law_cultural_exclusion
+			is_enacting_law = law_type:law_multicultural
+		}
+	}
+	immediate = {
+		random_primary_culture = {
+			save_scope_as = primary_culture_scope
+		}
+	}
+
+	
+	option = {
+		name = synthetic_dawn.2.a #we will support these demonstrations
+		default_option = yes
+        add_modifier = {
+            name = supporting_soulwrought_demonstrations
+            years = 2
+           }  
+		   add_radicals = {
+			value = 0.03
+			culture = scope:primary_culture_scope
+		   }  
+	}
+
+    option = {
+		name = synthetic_dawn.2.b #we will clamp 
+        add_modifier = {
+            name = clamping_down_on_soulwrought_protests
+            years = 3
+           }
+		   add_radicals = {
+			value = 0.1
+			culture = cu:soulwrought
+		   }  
+	}
+    
+}
+
+synthetic_dawn.3 = { #soulwrought protesting for legal acceptance
+	type = country_event
+	dlc = dlc_roe
+	placement = root
+	title = synthetic_dawn.3.t
+	desc = synthetic_dawn.3.d
+	flavor = synthetic_dawn.3.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 8
+    }
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {            
+		#soulwrought subjects je success event
+	}
+	immediate = {
+		random_primary_culture = {
+			save_scope_as = primary_culture_scope
+		}
+	}
+
+	
+	option = {
+		name = synthetic_dawn.3.a #they have worked hard for their new status.
+        add_modifier = {
+            name = soulwrought_legal_equality
+            years = 4
+           }
+		add_loyalists = {
+			value = 0.1
+			culture = cu:soulwrought
+		}  
+		show_as_tooltip = {
+			add_primary_culture = cu:soulwrought
+		}
+	}
+
+    
+}
+

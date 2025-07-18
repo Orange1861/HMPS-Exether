@@ -1,0 +1,50 @@
+CHARACTERS = {
+	c:LAR = {
+		create_character = {
+			first_name = "Orion"
+			last_name = "Thrain"
+			historical = yes
+			ruler = yes
+			age = 25
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+			ideology = ideology_reformer
+			traits = {
+				imposing
+				pious
+				basic_diplomat
+			}
+		}
+		create_character = {
+			first_name = "Pyrros"
+			last_name = "Thiel"
+			historical = yes
+			ig_leader = yes
+			age = 41
+			culture = cu:dumonian
+			religion = rel:cult_of_the_sun
+			interest_group = ig_devout
+			ideology = ideology_market_liberal
+			traits = {
+				wrathful
+				explorer
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = "Amadi"
+			last_name = "Kasanda"
+			historical = yes
+			ig_leader = yes
+			age = 53
+			religion = rel:animist
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist_minoritarian
+			traits = {
+				persistent
+				expert_political_operator
+				expensive_tastes
+			}
+		}
+	}
+}

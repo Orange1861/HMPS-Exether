@@ -1,0 +1,402 @@
+﻿human_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		state_trade_advantage_mult = 0.1
+		state_trade_quantity_mult = 0.1
+		country_production_tech_research_speed_mult = 0.1
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+dwarf_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		state_building_underways_max_level_add = 15
+		state_construction_mult = 0.05
+		state_infrastructure_mult = 0.05
+		building_working_conditions_mult = -0.10
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+naga_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		country_bureaucracy_mult = 0.10
+		country_authority_mult = 0.10
+		state_upper_strata_expected_sol_add = 2
+		state_harvest_condition_psionic_winds_impact_mult = -0.8
+		state_harvest_condition_psionic_storms_impact_mult = -0.5
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+hiadud_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		country_tech_spread_mult = 0.1
+		state_harvest_condition_psionic_winds_impact_mult = -0.8
+		state_harvest_condition_psionic_storms_impact_mult = -0.5
+		state_loyalists_from_political_movements_mult = 0.15
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+elf_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		country_prestige_from_navy_power_projection_mult = 0.05
+		country_influence_mult = 0.1
+		country_infamy_decay_mult = 0.15
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+half_elf_tech = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		country_improve_relations_speed_mult = 0.25
+		country_legitimacy_ideological_incoherence_mult = -0.15
+		state_radicalism_increases_violent_hostility_mult = -0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.05
+		state_radicalism_increases_open_prejudice_mult = -0.05
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+gnome_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		country_weekly_innovation_mult = 0.05
+		country_machinists_pol_str_mult = 0.25
+		state_building_soulwrought_assembly_plant_max_level_add = 15
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+mechanical_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		state_mortality_mult = -0.10
+		state_working_adult_ratio_add = 0.10
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+
+dragon_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		country_loan_interest_rate_add = -0.1
+		country_minting_mult = 0.1
+		country_prestige_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+goblin_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = military
+	can_research = no
+	
+	modifier = {
+		state_building_underways_max_level_add = 15
+		unit_morale_loss_mult = 0.20
+		state_conscription_rate_mult = 0.1
+		country_military_goods_cost_mult = -0.25
+		country_war_exhaustion_casualties_mult = -0.75
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+planetouched_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		country_loan_interest_rate_add = -0.1
+		country_arcana_pos_add = 100
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+ogre_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = military
+	can_research = no
+	
+	modifier = {
+		unit_kill_rate_add = 0.05
+		state_expected_sol_mult = 0.15
+		state_political_strength_from_welfare_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+monster_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = military
+	can_research = no
+	
+	modifier = {
+		state_building_underways_max_level_add = 15
+		unit_supply_consumption_mult = -0.1
+		state_construction_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+midnight_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = military
+	can_research = no
+	
+	modifier = {
+		state_mortality_mult = -0.05
+		country_arcana_pos_add = 100
+		state_aristocrats_investment_pool_efficiency_mult = 0.1 #thousand year investments bro
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+bird_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		unit_advancement_speed_mult = 0.20
+		military_formation_movement_speed_mult = 0.15
+		state_infrastructure_from_population_add = 1
+		country_society_tech_research_speed_mult = 0.1
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+mouse_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		battle_defense_owned_province_mult = 0.15
+		battle_offense_owned_province_mult = 0.15
+		state_building_underways_max_level_add = 15
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+orc_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = military
+	can_research = no
+	
+	modifier = {
+		unit_army_offense_mult = 0.05
+		unit_morale_loss_mult = -0.1
+		country_military_tech_research_speed_mult = 0.1
+		country_soldiers_pol_str_mult = 0.25
+		country_officers_pol_str_mult = 0.50
+	}
+	ai_weight = {
+		value = 1
+	}
+}
+
+halfling_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		state_standard_of_living_add = 1
+		state_migration_pull_mult = 0.25
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+giant_tech = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = military
+	can_research = no
+	
+	modifier = {
+		country_legitimacy_headofstate_add = 10
+		unit_morale_loss_mult = -0.05
+		country_authority_mult = 0.10
+		building_group_bg_extraction_employee_mult = -0.65
+		building_group_bg_manufacturing_employee_mult = -0.25
+		building_group_bg_magic_manufacturing_employee_mult = -0.25
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+awakened_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		country_tech_spread_mult = 0.25
+		state_radicals_from_political_movements_mult = -0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.10
+		state_harvest_condition_psionic_winds_impact_mult = -0.8
+		state_harvest_condition_psionic_storms_impact_mult = -0.5
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+lizard_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		state_expected_sol_mult = -0.1
+		building_silk_plantation_throughput_add = 0.25
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+drow_tech = {
+
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/placeholder.dds"
+	category = military
+	can_research = no
+	
+	modifier = {
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}

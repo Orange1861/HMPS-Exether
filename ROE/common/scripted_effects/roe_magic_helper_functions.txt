@@ -1,0 +1,685 @@
+﻿grpyhon_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_gryphon_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 1
+                        root = {
+                            OR = {
+                                has_law = law_type:law_free_trade
+                                has_law = law_type:law_laissez_faire
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 2
+                        root = {
+                            OR = {
+                                has_law = law_type:law_free_trade
+                                has_law = law_type:law_laissez_faire
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 3
+                        root = {
+                                is_at_war = yes
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 4
+                        root = {
+                            any_scope_state = {
+                                any_scope_building = {
+                                    is_building_type = building_barracks
+                                    level >= 5
+                                }
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                            OR = {
+                                any_scope_state = {
+                                    any_scope_building = {
+                                        OR = {
+                                            is_building_type = building_port
+                                            is_building_type = building_airship_dock
+                                        }
+                                        level >= 5
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_gryphon
+                    value = prev
+                 }
+            }
+         }
+    }
+}
+
+justice_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_justice_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 1
+                        root = {
+                            OR = {
+                                has_law = law_type:law_autocracy
+                                has_law = law_type:law_oligarchy
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 2
+                        root = {
+                            OR = {
+                                has_law = law_type:law_public_schools
+                                has_law = law_type:law_private_schools
+                                has_law = law_type:law_magical_schools
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 3
+                        root = {
+                            any_scope_state = {
+                                any_scope_building = {
+                                    OR = {
+                                        is_building_type = building_coal_mine
+                                        is_building_type = building_iron_mine
+                                    }
+                                    level >= 5
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 4
+                        root = {
+                            OR = {
+                                has_law = law_type:law_appointed_bureaucrats
+                                has_law = law_type:law_professional_army
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                            any_scope_state = {
+                                any_scope_building = {
+                                    is_building_type = building_urban_center
+                                    level >= 10
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_justice
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+sphinx_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_sphinx_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 1
+                        root = {
+                            OR = {
+                                has_law = law_type:law_elected_bureaucrats
+                                has_law = law_type:law_magical_schools
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 2
+                        root = {
+                            any_scope_building = {
+                                is_building_type = building_university
+                                level >= 5
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 3
+                        root = {
+                            literacy_rate < 0.5
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 4
+                        root = {
+                            any_interest_group = {
+                                is_interest_group_type = ig_intelligentsia
+                                ig_clout > 0.2
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                            any_scope_state = {
+                                any_scope_building = {
+                                    is_building_type = building_government_administration
+                                    level >= 10
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_sphinx
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+golem_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_golem_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 3
+                        root = {
+                            any_scope_state = {
+                                any_scope_building = {
+                                    is_building_type = building_barracks
+                                    level >= 10
+                                }
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 4
+                        root = {
+                            OR = {
+                                has_law = law_type:law_no_migration_controls
+                                has_law = law_type:law_migration_controls
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                            any_scope_state = {
+                                any_scope_building = {
+                                    OR = {
+                                        is_building_type = building_coal_mine
+                                        is_building_type = building_iron_mine
+                                        is_building_type = building_oil_rig
+                                        is_building_type = building_rubber_plantation
+                                    }
+                                    level >= 10
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_golem
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+unicorn_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_unicorn_list
+            weight = {
+                base = 10
+
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 2
+                        root = {
+                            government_legitimacy <= 80
+                            OR = {
+                                has_law = law_type:law_monarchy
+                                has_law = law_type:law_oligarchy
+                                has_law = law_type:law_theocracy
+                            }
+                        }
+                    }
+                }
+
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_unicorn
+                    value = prev
+                }
+            }
+            }
+            
+        }
+    }
+
+fey_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_fey_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 1
+                        root = {
+                            any_scope_state = {
+                                state_has_building_group_levels = {
+                                    type = bg_plantations
+                                    value = 10
+                                }
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 100
+                    AND = {
+                        NOT = { this = 5 }
+                        root = {
+                            NOT = {
+                                OR = {
+                                    has_law = law_type:law_colonial_resettlement
+                                    has_law = law_type:law_colonial_exploitation
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_fey
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+phoenix_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_phoenix_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 1
+                        root = {
+                            OR = {
+                                has_law = law_type:law_professional_army
+                                has_law = law_type:law_national_militia
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 2
+                        root = {
+                                is_at_war = yes
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 4
+                        root = {
+                            any_scope_state = {
+                                any_scope_building = {
+                                    is_building_type = building_construction_sector
+                                    level >= 5
+                                }
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                            any_scope_state = {
+                                state_has_building_group_levels = {
+                                    type = bg_manufacturing
+                                    value = 20
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_phoenix
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+djinn_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_djinn_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 4
+                        root = {
+                            OR = {
+                                has_law = law_type:law_professional_army
+                                has_law = law_type:law_national_militia
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                            OR = {
+                                has_law = law_type:law_autocracy
+                                has_law = law_type:law_oligarchy
+                            }
+                            any_interest_group = {
+                                is_marginal = no
+                                is_insurrectionary = yes
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_djinn
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+siren_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_siren_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 4
+                        root = {
+                            any_scope_state = {
+                                state_has_building_group_levels = {
+                                    type = bg_magic_light_industry
+                                    value = 5
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_siren
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+kraken_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_kraken_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 2
+                        root = {
+                            OR = {
+                                has_law = law_type:law_free_trade
+                                has_law = law_type:law_mercantilism
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                            AND = {
+                                country_rank >= rank_value:major_power
+                                navy_size >= 50
+                            }
+                        }
+                    }
+                }
+                
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_kraken
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+fiend_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_fiend_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 1
+                        root = {
+                            OR = {
+                                has_law = law_type:law_autocracy
+                                has_law = law_type:law_oligarchy
+                            }
+                            any_interest_group = {
+                                is_interest_group_type = ig_mages
+                                ig_clout > 0.2
+                            }
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_fiend
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+angel_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_angel_list
+            weight = {
+                base = 10
+                modifier = {
+                    add = 50
+                    AND = {
+                        this = 5
+                        root = {
+                                is_at_war = yes
+                        }
+                    }
+                }
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_angel
+                    value = prev
+                }
+            }
+        }
+    }
+}
+
+dragon_ai_selection = {
+    if = {
+        limit = {
+            is_ai = yes 
+        }
+        random_in_list = {
+            variable = available_arcana_id_dragon_list
+            weight = {
+                base = 10
+            }
+            prev = {
+                save_scope_value_as = {
+                    name = arcana_id_dragon
+                    value = prev
+                }
+            }
+        }
+    }
+}

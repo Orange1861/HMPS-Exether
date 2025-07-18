@@ -1,0 +1,171 @@
+﻿##############
+#  Exether   #
+##############
+
+##
+# Enchanted items, historical relics, personal items.
+# Diverse in nature and not useful in large scale industry.
+# See Gizmos for standardized magical tools.
+#
+trinkets = {
+	texture = "gfx/interface/icons/goods_icons/trinkets.dds"
+	cost = 100
+	category = luxury
+
+	obsession_chance = 1.0
+	prestige_factor = 10
+
+	traded_quantity = 2 #200
+}
+
+##
+# Used in trinkets production chain
+#
+relics = {
+	texture = "gfx/interface/icons/goods_icons/relics.dds"
+	cost = 30
+    category = industrial
+
+    prestige_factor = 3
+	traded_quantity = 7 #210
+}
+
+luxury_potions = {
+	texture = "gfx/interface/icons/goods_icons/luxury_potions.dds"
+	cost = 80  #debatable
+	category = luxury
+
+	obsession_chance = 1.8 #hmmm
+	prestige_factor = 15
+	traded_quantity = 3 #240
+}
+
+
+cloudsilver = {
+	texture = "gfx/interface/icons/goods_icons/cloudsilver.dds"
+	cost = 40
+	category = industrial
+	traded_quantity = 5 #225
+	prestige_factor = 5
+}
+
+blubber = {
+	texture = "gfx/interface/icons/goods_icons/blubber.dds"
+	cost = 40
+	category = industrial
+
+	prestige_factor = 5
+	traded_quantity = 5
+	consumption_tax_cost = 200
+}
+
+wishstone = {
+	texture = "gfx/interface/icons/goods_icons/wishstone.dds"
+	cost = 30
+	category = industrial
+
+	prestige_factor = 10
+	traded_quantity = 7
+	convoy_cost_multiplier = 1.5
+}
+
+monster_essence = {
+	texture = "gfx/interface/icons/goods_icons/monster_essence.dds"
+	cost = 40
+	category = industrial #WIP?
+
+	traded_quantity = 5
+	prestige_factor = 5
+}
+
+potions = {
+	texture = "gfx/interface/icons/goods_icons/potions.dds"
+	cost = 50
+	category = industrial #WIP?
+
+	traded_quantity = 4
+	prestige_factor = 10
+}
+
+ectoplasm = {
+	texture = "gfx/interface/icons/goods_icons/ectoplasm.dds"
+	cost = 50
+	category = industrial
+
+	prestige_factor = 5
+
+	traded_quantity = 4
+	convoy_cost_multiplier = 1.5
+}
+
+airships = {
+	texture = "gfx/interface/icons/goods_icons/airship.dds"
+	cost = 70
+	category = industrial
+
+	obsession_chance = 0.6
+	prestige_factor = 6
+	traded_quantity = 3
+	convoy_cost_multiplier = 0.25
+}
+
+thaumacores = {
+	texture = "gfx/interface/icons/goods_icons/thaumacores.dds" #Replace icon later
+	cost = 150
+	category = industrial
+	convoy_cost_multiplier = 1.25
+	prestige_factor = 10
+	traded_quantity = 5
+}
+
+gizmos = {
+	texture = "gfx/interface/icons/goods_icons/gizmo.dds"
+	cost = 60
+	category = industrial
+	
+	prestige_factor = 15
+	
+	traded_quantity = 4
+	convoy_cost_multiplier = 1.5
+}
+
+soulwrought_intangible = {
+	texture = "gfx/interface/icons/generic_icons/population.dds"
+	cost = 100
+	category = luxury
+	tradeable = no
+	fixed_price = yes
+	prestige_factor = 0
+}
+
+#nimbium = {
+#	texture = "gfx/interface/icons/goods_icons/nimbium.dds"
+#	cost = 55
+#	category = industrial
+#
+#	prestige_factor = 10
+#
+#	traded_quantity = 4
+#	convoy_cost_multiplier = 1.25
+#	
+#}
+# #skycruisers = {
+# 	texture = "gfx/interface/icons/goods_icons/steamers.dds"
+# 	cost = 80
+# 	category = industrial
+
+# 	obsession_chance = 0.6
+# 	prestige_factor = 6
+# 	traded_quantity = 3
+# 	convoy_cost_multiplier = 0.25
+# }
+
+ice = {	
+	texture = "gfx/interface/icons/goods_icons/ice.dds"
+	cost = 30
+	category = luxury
+	obsession_chance = 2.0
+	prestige_factor = 4
+	convoy_cost_multiplier = 0.75
+	traded_quantity = 7
+}

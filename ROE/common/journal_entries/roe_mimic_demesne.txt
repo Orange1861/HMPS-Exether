@@ -1,0 +1,52 @@
+﻿je_mimic_demesne = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		exists = c:MMD
+		any_neighbouring_state = {
+			owner = c:MMD
+		}
+		OR = {
+			country_has_primary_culture = cu:achonian
+			country_has_primary_culture = cu:changeling
+			country_has_primary_culture = cu:eberri
+		}
+	}
+
+	scripted_button = mimic_button
+
+	possible = {
+		NOT = { has_law = law_type:law_no_colonial_affairs }
+	}
+
+	complete = {
+
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_SHIFTING_SCAR
+					state_region = s:STATE_SHIFTING_SCAR_2
+					state_region = s:STATE_SARABENDO
+				}
+				is_split_state = no
+				
+				count >= 2
+			}
+		
+	}
+
+	on_complete = {
+		trigger_event = { id = mimic_demesne.1 }
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			85 = 0
+			10 = mimic_demesne.2
+			5 = bp1_mimic_demesne.1
+		}
+	}
+
+	weight = 20
+}

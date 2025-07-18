@@ -1,0 +1,32 @@
+CHARACTERS = {
+	c:KUN = {
+		create_character = {
+			first_name = "Alejandro"
+			last_name = "Chambi"
+			historical = yes
+			ruler = yes
+			age = 35
+			is_general = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
+			traits = {
+				charismatic
+				brave
+				ruthless
+				direct
+			}
+		}
+
+		create_character = {
+			historical = yes
+			age = 35
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
+			traits = {
+				ruthless
+				direct
+			}
+		}
+	}
+}

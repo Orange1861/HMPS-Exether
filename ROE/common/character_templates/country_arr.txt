@@ -1,0 +1,256 @@
+﻿# Arrador - ARR
+
+ARR_queen_soranda_template = {
+    first_name = Soranda
+    last_name = Taldren
+    historical = yes
+	ruler = yes
+    female = yes
+    noble = yes
+    birth_date = 1144.2.26
+    dna = dna_queen_soranda
+    culture = cu:dorite
+    interest_group = ig_industrialists
+    ideology = ideology_market_liberal
+    traits = {
+		ambitious
+		arrogant
+		political_appointee
+    }
+}
+
+ARR_duran_lantry = {
+	first_name = Duran
+	last_name = Lantry
+	historical = yes
+	birth_date = 1150.6.4
+	ig_leader = yes
+	interest_group = ig_rural_folk
+	ideology = ideology_pacifist
+	culture = cu:dorite
+	religion = rel:cult_of_commerce
+	traits = {
+		basic_political_operator
+		innovative 
+	}
+}
+
+ARR_tars_kesten = {
+	first_name = Tars
+	last_name = Kesten
+	historical = yes
+	birth_date = 1132.6.4
+	ig_leader = yes
+	interest_group = ig_landowners
+	ideology = ideology_romantic
+	culture = cu:dorite
+	religion = rel:cult_of_commerce
+	traits = {
+		honorable
+		cautious
+	}
+}
+
+ARR_uthar_helmer = {
+	first_name = Uthar
+	last_name = Helmer
+	historical = yes
+	birth_date = 1128.6.4
+	ig_leader = yes
+	interest_group = ig_industrialists
+	ideology = ideology_astra
+	culture = cu:dorite
+	religion = rel:cult_of_commerce
+	traits = {
+		meticulous
+		innovative
+	}
+}
+
+ARR_vylar_cardem = {
+	first_name = Vylar
+	last_name = Cardem
+	historical = yes
+	birth_date = 1146.6.4
+	ig_leader = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_romantic
+	culture = cu:dorite
+	religion = rel:cult_of_commerce
+	traits = {
+		charismatic
+		ambitious
+	}
+}
+
+ARR_kaine_tharnes = {
+	first_name = Kaine
+	last_name = Tharnes
+	historical = yes
+	birth_date = 1153.1.20
+	is_general = yes
+	ig_leader = yes
+	commander_rank = default
+	interest_group = ig_armed_forces
+	ideology = ideology_astra
+	culture = primary_culture
+	religion = rel:cult_of_commerce
+	traits = {
+		brave
+		bigoted
+	}
+}
+
+ARR_vorj_faran = {
+	first_name = Vorj
+	last_name = Faran
+	historical = yes
+	birth_date = 1143.3.26
+	interest_group = ig_devout
+	ig_leader = yes
+	ideology = ideology_moderate
+	culture = primary_culture
+	religion = rel:cult_of_commerce
+	traits = {
+		hedonist
+		pious
+	}
+}
+
+ARR_stend_nolsen = {
+	first_name = Stend
+	last_name = Nolsen
+	historical = yes
+	birth_date = 1152.6.15 
+	is_admiral = yes
+	commander_rank = default
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	culture = cu:dorite
+	religion = rel:cult_of_commerce
+	traits = {
+		brave
+		convoy_raider_commander
+	}
+	commander_usage = {
+		country_trigger = {
+			
+				c:ARR ?= THIS
+	
+		}
+		role = admiral
+		earliest_usage_date = 1188.1.1
+		latest_usage_date = 1208.1.1	
+		chance = 50
+	}
+	trait_generation = { }
+}
+
+ARR_curlot_devir = { 
+	first_name = Curlot
+	last_name = Devir
+	historical = yes
+	female = no
+	ig_leader = yes
+	culture = primary_culture
+	religion = rel:cult_of_commerce
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	birth_date = 1131.9.26
+	traits = {
+		honorable
+	}
+    interest_group_leader_usage = {
+        country_trigger = {
+			OR = {
+				c:ARR ?= THIS
+
+
+			}
+			
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+        }   
+        earliest_usage_date = 1180.1.1
+        latest_usage_date = 1200.1.1
+    }   
+	trait_generation = { }
+}
+
+##agitators
+
+
+ARR_dursin_toppe = {
+	first_name = Dursin
+	last_name = Toppe
+	historical = yes
+	culture = cu:dorite
+	religion = rel:atheist
+	female = no
+	is_agitator = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_anarchist
+	birth_date = 1193.12.4
+	traits = {
+		persistent
+		charismatic
+		inspirational_orator
+	}
+	agitator_usage = {
+		country_trigger = {
+			
+			OR = {
+				c:ARR ?= THIS
+			}
+			
+
+			
+		
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_trade_unions
+            } 
+        }   
+		earliest_usage_date = 1222.9.15 
+		latest_usage_date = 1246.1.1
+		chance = 50
+	}
+}
+
+ARR_maril_kesten = { 
+	first_name = Maril
+	last_name = Kesten
+	historical = yes
+	female = yes
+	is_agitator = yes 
+	culture = cu:dorite
+	religion = rel:cult_of_commerce
+	interest_group = ig_petty_bourgeoisie 
+	ideology = ideology_fascist 
+	birth_date = 1226.5.10
+	traits = {
+		literary
+		bigoted
+		firebrand #Bigoted is such a decrease in character popularity that it's needed
+	}
+    agitator_usage = {
+        country_trigger = {
+				c:ARR ?= THIS
+		
+			
+		}
+        interest_group_trigger = {
+			OR = {
+			is_interest_group_type = ig_petty_bourgeoisie  
+			is_interest_group_type = ig_landowners #considering swapping for industrialists
+			}
+        }   
+        earliest_usage_date = 1251.1.1
+        latest_usage_date = 1278.1.1
+        chance = 50
+    }   
+}

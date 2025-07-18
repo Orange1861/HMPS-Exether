@@ -1,0 +1,516 @@
+﻿l_english:
+  country_ezd_zol_acceptance_min_add: "Minimum [concept_acceptance] for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $ezd_zol$ [concept_social_class] won't be able to fall below"
+
+  country_thoma_acceptance_min_add: "Minimum [concept_acceptance] for the $thoma$ [concept_social_class]"
+  country_thoma_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $thoma$ [concept_social_class] won't be able to fall below"
+
+  country_udat_acceptance_min_add: "Minimum [concept_acceptance] for the $udat$ [concept_social_class]"
+  country_udat_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $udat$ [concept_social_class] won't be able to fall below"
+
+  country_nisnar_acceptance_min_add: "Minimum [concept_acceptance] for the $nisnar$ [concept_social_class]"
+  country_nisnar_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $nisnar$ [concept_social_class] won't be able to fall below"
+
+  country_sassat_acceptance_min_add: "Minimum [concept_acceptance] for the $sassat$ [concept_social_class]"
+  country_sassat_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $sassat$ [concept_social_class] won't be able to fall below"
+
+  country_jaguda_acceptance_min_add: "Minimum [concept_acceptance] for the $jaguda$ [concept_social_class]"
+  country_jaguda_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $jaguda$ [concept_social_class] won't be able to fall below"
+
+  country_ezd_zol_acceptance_max_add: "Maximum [concept_acceptance] for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $ezd_zol$ [concept_social_class] won't be able to exceed"
+
+  country_udat_acceptance_max_add: "Maximum [concept_acceptance] for the $udat$ [concept_social_class]"
+  country_udat_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $udat$ [concept_social_class] won't be able to exceed"
+
+  country_nisnar_acceptance_max_add: "Maximum [concept_acceptance] for the $nisnar$ [concept_social_class]"
+  country_nisnar_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $nisnar$ [concept_social_class] won't be able to exceed"
+
+  country_sassat_acceptance_max_add: "Maximum [concept_acceptance] for the $sassat$ [concept_social_class]"
+  country_sassat_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $sassat$ [concept_social_class] won't be able to exceed"
+
+  country_jaguda_acceptance_max_add: "Maximum [concept_acceptance] for the $jaguda$ [concept_social_class]"
+  country_jaguda_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $jaguda$ [concept_social_class] won't be able to exceed"
+
+  country_ezd_zol_cultural_acceptance_add: "Cultural [concept_acceptance] for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $ezd_zol$ [concept_social_class]"
+
+  country_thoma_cultural_acceptance_add: "Cultural [concept_acceptance] for the $thoma$ [concept_social_class]"
+  country_thoma_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $thoma$ [concept_social_class]"
+
+  country_udat_cultural_acceptance_add: "Cultural [concept_acceptance] for the $udat$ [concept_social_class]"
+  country_udat_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $udat$ [concept_social_class]"
+
+  country_nisnar_cultural_acceptance_add: "Cultural [concept_acceptance] for the $nisnar$ [concept_social_class]"
+  country_nisnar_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $nisnar$ [concept_social_class]"
+
+  country_sassat_cultural_acceptance_add: "Cultural [concept_acceptance] for the $sassat$ [concept_social_class]"
+  country_sassat_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $sassat$ [concept_social_class]"
+
+  country_jaguda_cultural_acceptance_add: "Cultural [concept_acceptance] for the $jaguda$ [concept_social_class]"
+  country_jaguda_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $jaguda$ [concept_social_class]"
+
+  country_ezd_zol_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $ezd_zol$ [concept_social_class]"
+
+  country_udat_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $udat$ [concept_social_class]"
+  country_udat_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $udat$ [concept_social_class]"
+
+  country_nisnar_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $nisnar$ [concept_social_class]"
+  country_nisnar_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $nisnar$ [concept_social_class]"
+
+  country_sassat_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $sassat$ [concept_social_class]"
+  country_sassat_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $sassat$ [concept_social_class]"
+
+  country_jaguda_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $jaguda$ [concept_social_class]"
+  country_jaguda_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $jaguda$ [concept_social_class]"
+
+  country_ezd_zol_education_access_add: "[concept_education_access] for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $ezd_zol$ [concept_social_class]"
+
+  country_udat_education_access_add: "[concept_education_access] for the $udat$ [concept_social_class]"
+  country_udat_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $udat$ [concept_social_class]"
+
+  country_nisnar_education_access_add: "[concept_education_access] for the $nisnar$ [concept_social_class]"
+  country_nisnar_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $nisnar$ [concept_social_class]"
+
+  country_sassat_education_access_add: "[concept_education_access] for the $sassat$ [concept_social_class]"
+  country_sassat_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $sassat$ [concept_social_class]"
+
+  country_jaguda_education_access_add: "[concept_education_access] for the $jaguda$ [concept_social_class]"
+  country_jaguda_education_access_add_desc: "A flat increase or decrease to [concept_education_access] for the $jaguda$ [concept_social_class]"
+
+  country_ezd_zol_education_access_mult: "[concept_education_access] for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $ezd_zol$ [concept_social_class]"
+
+  country_udat_education_access_mult: "[concept_education_access] for the $udat$ [concept_social_class]"
+  country_udat_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $udat$ [concept_social_class]"
+
+  country_nisnar_education_access_mult: "[concept_education_access] for the $nisnar$ [concept_social_class]"
+  country_nisnar_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $nisnar$ [concept_social_class]"
+
+  country_sassat_education_access_mult: "[concept_education_access] for the $sassat$ [concept_social_class]"
+  country_sassat_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $sassat$ [concept_social_class]"
+
+  country_jaguda_education_access_mult: "[concept_education_access] for the $jaguda$ [concept_social_class]"
+  country_jaguda_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $jaguda$ [concept_social_class]"
+
+  country_cuoflir_education_access_mult: "[concept_education_access] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $cuoflir$ [concept_social_class]"
+  
+  country_perfis_education_access_mult: "[concept_education_access] for the $perfis$ [concept_social_class]"
+  country_perfis_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $perfis$ [concept_social_class]"
+  
+  country_guchesgru_education_access_mult: "[concept_education_access] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $guchesgru$ [concept_social_class]"
+
+  country_chesgru_education_access_mult: "[concept_education_access] for the $chesgru$ [concept_social_class]"
+  country_chesgru_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $chesgru$ [concept_social_class]"
+
+  country_dalbe_education_access_mult: "[concept_education_access] for the $dalbe$ [concept_social_class]"
+  country_dalbe_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $dalbe$ [concept_social_class]"
+
+  country_adrir_education_access_mult: "[concept_education_access] for the $adrir$ [concept_social_class]"
+  country_adrir_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $adrir$ [concept_social_class]"
+
+  country_denoi_education_access_mult: "[concept_education_access] for the $denoi$ [concept_social_class]"
+  country_denoi_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $denoi$ [concept_social_class]"
+
+  country_gumefir_education_access_mult: "[concept_education_access] for the $gumefir$ [concept_social_class]"
+  country_gumefir_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $gumefir$ [concept_social_class]"
+
+  country_cuoflir_2_education_access_mult: "[concept_education_access] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $cuoflir$ [concept_social_class]"
+  
+  country_perfis_2_education_access_mult: "[concept_education_access] for the $perfis$ [concept_social_class]"
+  country_perfis_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $perfis$ [concept_social_class]"
+  
+  country_guchesgru_2_education_access_mult: "[concept_education_access] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $guchesgru$ [concept_social_class]"
+
+  country_chesgru_2_education_access_mult: "[concept_education_access] for the $chesgru$ [concept_social_class]"
+  country_chesgru_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $chesgru$ [concept_social_class]"
+
+  country_dalbe_2_education_access_mult: "[concept_education_access] for the $dalbe$ [concept_social_class]"
+  country_dalbe_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $dalbe$ [concept_social_class]"
+
+  country_adrir_2_education_access_mult: "[concept_education_access] for the $adrir$ [concept_social_class]"
+  country_adrir_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $adrir$ [concept_social_class]"
+
+  country_denoi_2_education_access_mult: "[concept_education_access] for the $denoi$ [concept_social_class]"
+  country_denoi_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $denoi$ [concept_social_class]"
+
+  country_gumefir_2_education_access_mult: "[concept_education_access] for the $gumefir$ [concept_social_class]"
+  country_gumefir_2_education_access_mult_desc: "A percentage increase or decrease to [concept_education_access] for the $gumefir$ [concept_social_class]"
+
+
+  country_thoma_qualification_growth_mult: "Qualification Growth for the $thoma$ [concept_social_class]"
+  country_thoma__qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $thoma$ [concept_social_class]"
+
+  country_ezd_zol_qualification_growth_add: "Qualification Growth for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $ezd_zol$ [concept_social_class]"
+
+  country_udat_qualification_growth_add: "Qualification Growth for the $udat$ [concept_social_class]"
+  country_udat_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $udat$ [concept_social_class]"
+
+  country_nisnar_qualification_growth_add: "Qualification Growth for the $nisnar$ [concept_social_class]"
+  country_nisnar_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $nisnar$ [concept_social_class]"
+
+  country_sassat_qualification_growth_add: "Qualification Growth for the $sassat$ [concept_social_class]"
+  country_sassat_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $sassat$ [concept_social_class]"
+
+  country_jaguda_qualification_growth_add: "Qualification Growth for the $jaguda$ [concept_social_class]"
+  country_jaguda_qualification_growth_add_desc: "A flat increase or decrease to Qualification Growth for the $jaguda$ [concept_social_class]"
+
+  country_ezd_zol_qualification_growth_mult: "Qualification Growth for the $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $ezd_zol$ [concept_social_class]"
+
+  country_udat_qualification_growth_mult: "Qualification Growth for the $udat$ [concept_social_class]"
+  country_udat_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $udat$ [concept_social_class]"
+
+  country_nisnar_qualification_growth_mult: "Qualification Growth for the $nisnar$ [concept_social_class]"
+  country_nisnar_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $nisnar$ [concept_social_class]"
+
+  country_denoi_2_cultural_acceptance_add: "Cultural [concept_acceptance] for the $denoi$ [concept_social_class]"
+  country_denoi_2_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $denoi$ [concept_social_class]"
+
+  country_dalbe_2_cultural_acceptance_add: "Cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  country_dalbe_2_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  
+  country_cuoflir_2_cultural_acceptance_add: "Cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_2_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+
+  country_gumefir_2_cultural_acceptance_add: "Cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_2_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+
+  country_adrir_2_cultural_acceptance_add: "Cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+  country_adrir_2_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+
+  country_denoi_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $denoi$ [concept_social_class]"
+  country_denoi_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $denoi$ [concept_social_class]"
+
+  country_dalbe_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  country_dalbe_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+
+  country_cuoflir_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+
+  country_gumefir_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+
+  country_adrir_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+  country_adrir_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+
+  country_chesgru_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $chesgru$ [concept_social_class]"
+  country_chesgru_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $chesgru$ [concept_social_class]"
+
+  country_perfis_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $perfis_2$ [concept_social_class]"
+  country_perfis_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $perfis$ [concept_social_class]"
+
+  country_denoi_2_acceptance_min_add: "Minimum [concept_acceptance] for the $denoi_2$ [concept_social_class]"
+  country_denoi_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $denoi_2$ [concept_social_class] won't be able to fall below"
+
+  country_dalbe_2_acceptance_min_add: "Minimum [concept_acceptance] for the $dalbe_2$ [concept_social_class]"
+  country_dalbe_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $dalbe_2$ [concept_social_class] won't be able to fall below"
+  
+  country_adrir_2_acceptance_min_add: "Minimum [concept_acceptance] for the $adrir_2$ [concept_social_class]"
+  country_adrir_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $adrir_2$ [concept_social_class] won't be able to fall below"
+
+  country_chesgru_2_acceptance_min_add: "Minimum [concept_acceptance] for the $chesgru_2$ [concept_social_class]"
+  country_chesgru_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $chesgru_2$ [concept_social_class] won't be able to fall below"
+
+  country_cuoflir_2_acceptance_min_add: "Minimum [concept_acceptance] for the $cuoflir_2$ [concept_social_class]"
+  country_cuoflir_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $cuoflir_2$ [concept_social_class] won't be able to fall below"
+
+  country_guchesgru_2_acceptance_min_add: "Minimum [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $guchesgru$ [concept_social_class] won't be able to fall below"
+
+  country_perfis_2_acceptance_min_add: "Minimum [concept_acceptance] for the $perfis$ [concept_social_class]"
+  country_perfis_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $perfis$ [concept_social_class] won't be able to fall below"
+
+  country_perfis_2_acceptance_max_add: "Maximum [concept_acceptance] for the $perfis$ [concept_social_class]"
+  country_perfis_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $perfis$ [concept_social_class] won't be able to exceed"
+  
+  country_guchesgru_2_acceptance_max_add: "Maximum [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $guchesgru$ [concept_social_class] won't be able to exceed"
+
+  country_cuoflir_2_acceptance_max_add: "Maximum [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $cuoflir$ [concept_social_class] won't be able to exceed"
+
+  country_chesgru_2_acceptance_max_add: "Maximum [concept_acceptance] for the $chesgru$ [concept_social_class]"
+  country_chesgru_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $chesgru$ [concept_social_class] won't be able to exceed"
+
+  country_adrir_2_acceptance_max_add: "Maximum [concept_acceptance] for the $adrir$ [concept_social_class]"
+  country_adrir_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $adrir$ [concept_social_class] won't be able to exceed"
+
+  country_gumefir_2_acceptance_max_add: "Maximum [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $gumefir$ [concept_social_class] won't be able to exceed"
+
+  country_denoi_2_acceptance_max_add: "Maximum [concept_acceptance] for the $denoi$ [concept_social_class]"
+  country_denoi_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $denoi$ [concept_social_class] won't be able to exceed"
+
+  country_dalbe_2_acceptance_max_add: "Maximum [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  country_dalbe_2_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $dalbe$ [concept_social_class] won't be able to exceed"
+
+  country_gumefir_2_acceptance_min_add: "Minimum [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_2_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $gumefir$ [concept_social_class] won't be able to fall below"
+
+  country_guchesgru_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+
+  country_perfis_2_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_perfis_2_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+
+  country_denoi_2_qualification_growth_same_class_mult: "Qualification Growth within $denoi$ [concept_social_class]"
+  country_dalbe_2_qualification_growth_same_class_mult: "Qualification Growth within $dalbe$ [concept_social_class]"
+  country_cuoflir_2_qualification_growth_same_class_mult: "Qualification Growth within $cuoflir$ [concept_social_class]"
+	country_gumefir_2_qualification_growth_same_class_mult: "Qualification Growth within $gumefir$ [concept_social_class]"
+	country_adrir_2_qualification_growth_same_class_mult: "Qualification Growth within $adrir$ [concept_social_class]"
+	country_chesgru_2_qualification_growth_same_class_mult: "Qualification Growth within $chesgru$ [concept_social_class]"
+	country_guchesgru_2_qualification_growth_same_class_mult: "Qualification Growth within $guchesgru$ [concept_social_class]"
+	country_perfis_2_qualification_growth_same_class_mult: "Qualification Growth within $perfis$ [concept_social_class]"
+
+  country_denoi_2_qualification_growth_mult: "Qualification Growth for the $denoi$ [concept_social_class]"
+  country_denoi_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $denoi$ [concept_social_class]"
+
+  country_dalbe_2_qualification_growth_mult: "Qualification Growth for the $dalbe$ [concept_social_class]"
+  country_dalbe_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $dalbe$ [concept_social_class]"
+
+  country_cuoflir_2_qualification_growth_mult: "Qualification Growth for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $cuoflir$ [concept_social_class]"
+
+  country_gumefir_2_qualification_growth_mult: "Qualification Growth for the $gumefir$ [concept_social_class]"
+  country_gumefir_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $gumefir$ [concept_social_class]"
+
+  country_adrir_2_qualification_growth_mult: "Qualification Growth for the $adrir$ [concept_social_class]"
+  country_adrir_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $adrir$ [concept_social_class]"
+  
+  country_chesgru_2_qualification_growth_mult: "Qualification Growth for the $chesgru$ [concept_social_class]"
+  country_chesgru_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $chesgru$ [concept_social_class]"
+  
+  country_guchesgru_2_qualification_growth_mult: "Qualification Growth for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $guchesgru$ [concept_social_class]"
+
+  country_perfis_2_qualification_growth_mult: "Qualification Growth for the $perfis$ [concept_social_class]"
+  country_perfis_2_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $perfis$ [concept_social_class]"
+
+  country_sassat_qualification_growth_mult: "Qualification Growth for the $sassat$ [concept_social_class]"
+  country_sassat_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $sassat$ [concept_social_class]"
+
+  country_jaguda_qualification_growth_mult: "Qualification Growth for the $jaguda$ [concept_social_class]"
+  country_jaguda_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $jaguda$ [concept_social_class]"
+
+  country_ezd_zol_qualification_growth_same_class_mult: "Qualification Growth within $ezd_zol$ [concept_social_class]"
+  country_ezd_zol_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $ezd_zol$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $ezd_zol$ $concept_social_class$"
+
+  country_udat_qualification_growth_same_class_mult: "Qualification Growth within $udat$ [concept_social_class]"
+  country_udat_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $udat$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $udat$ $concept_social_class$"
+
+  country_nisnar_qualification_growth_same_class_mult: "Qualification Growth within $nisnar$ [concept_social_class]"
+  country_nisnar_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $nisnar$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $nisnar$ $concept_social_class$"
+
+  country_sassat_qualification_growth_same_class_mult: "Qualification Growth within $sassat$ [concept_social_class]"
+  country_sassat_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $sassat$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $sassat$ $concept_social_class$"
+
+  country_jaguda_qualification_growth_same_class_mult: "Qualification Growth within $jaguda$ [concept_social_class]"
+  country_jaguda_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $jaguda$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $jaguda$ $concept_social_class$"
+
+  country_thoma_qualification_growth_same_class_mult: "Qualification Growth within $thoma$ [concept_social_class]"
+  country_thoma_qualification_growth_same_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $thoma$ [concept_social_class] towards [Concept('concept_profession', '$concept_professions$')] in the $jaguda$ $concept_social_class$"
+
+  country_thoma_qualification_growth_other_class_mult: "Qualification Growth outside the $thoma$ [concept_social_class] for $thoma$"
+  country_thoma_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $thoma$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_ezd_zol_qualification_growth_other_class_mult: "Qualification Growth outside the $ezd_zol$ [concept_social_class] for $ezd_zol$"
+  country_ezd_zol_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $ezd_zol$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_udat_qualification_growth_other_class_mult: "Qualification Growth outside the $udat$ [concept_social_class] for $udat$"
+  country_udat_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $udat$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_nisnar_qualification_growth_other_class_mult: "Qualification Growth outside the $nisnar$ [concept_social_class] for $nisnar$"
+  country_nisnar_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $nisnar$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_sassat_qualification_growth_other_class_mult: "Qualification Growth outside the $sassat$ [concept_social_class] for $sassat$"
+  country_sassat_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $sassat$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_jaguda_qualification_growth_other_class_mult: "Qualification Growth outside the $jaguda$ [concept_social_class] for $jaguda$"
+  country_jaguda_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $jaguda$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_perfis_2_qualification_growth_other_class_mult: "Qualification Growth outside the $perfis$ [concept_social_class] for $perfis$"
+  country_perfis_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $perfis$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_dalbe_2_qualification_growth_other_class_mult: "Qualification Growth outside the $dalbe$ [concept_social_class] for $dalbe$"
+  country_dalbe_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $dalbe$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_cuoflir_2_qualification_growth_other_class_mult: "Qualification Growth outside the $cuoflir$ [concept_social_class] for $cuoflir$"
+  country_cuoflir_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $cuoflir$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_gumefir_2_qualification_growth_other_class_mult: "Qualification Growth outside the $gumefir$ [concept_social_class] for $gumefir$"
+  country_gumefir_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $gumefir$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_adrir_2_qualification_growth_other_class_mult: "Qualification Growth outside the $adrir$ [concept_social_class] for $adrir$"
+  country_adrir_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $adrir$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_denoi_2_qualification_growth_other_class_mult: "Qualification Growth outside the $denoi$ [concept_social_class] for $denoi$"
+  country_denoi_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $denoi$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_chesgru_2_qualification_growth_other_class_mult: "Qualification Growth outside the $chesgru$ [concept_social_class] for $chesgru$"
+  country_chesgru_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $chesgru$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_guchesgru_2_qualification_growth_other_class_mult: "Qualification Growth outside the $guchesgru$ [concept_social_class] for $guchesgru$"
+  country_guchesgru_2_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $guchesgru$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_perfis_qualification_growth_other_class_mult: "Qualification Growth outside the $perfis$ [concept_social_class] for $perfis$"
+  country_perfis_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $perfis$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_dalbe_qualification_growth_other_class_mult: "Qualification Growth outside the $dalbe$ [concept_social_class] for $dalbe$"
+  country_dalbe_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $dalbe$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_cuoflir_qualification_growth_other_class_mult: "Qualification Growth outside the $cuoflir$ [concept_social_class] for $cuoflir$"
+  country_cuoflir_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $cuoflir$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_gumefir_qualification_growth_other_class_mult: "Qualification Growth outside the $gumefir$ [concept_social_class] for $gumefir$"
+  country_gumefir_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $gumefir$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_adrir_qualification_growth_other_class_mult: "Qualification Growth outside the $adrir$ [concept_social_class] for $adrir$"
+  country_adrir_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $adrir$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_denoi_qualification_growth_other_class_mult: "Qualification Growth outside the $denoi$ [concept_social_class] for $denoi$"
+  country_denoi_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $denoi$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_chesgru_qualification_growth_other_class_mult: "Qualification Growth outside the $chesgru$ [concept_social_class] for $chesgru$"
+  country_chesgru_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $chesgru$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_guchesgru_qualification_growth_other_class_mult: "Qualification Growth outside the $guchesgru$ [concept_social_class] for $guchesgru$"
+  country_guchesgru_qualification_growth_other_class_mult_desc: "A percentage increase or decrease to Qualification Growth for the $guchesgru$ towards [Concept('concept_profession', '$concept_professions$')] in other [Concept('concept_social_class', '$concept_social_classes$')]"
+
+  country_dalbe_cultural_acceptance_add: "Cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  country_dalbe_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  
+  country_cuoflir_cultural_acceptance_add: "Cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+
+  country_gumefir_cultural_acceptance_add: "Cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+
+  country_adrir_cultural_acceptance_add: "Cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+  country_adrir_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+
+  country_denoi_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $denoi$ [concept_social_class]"
+  country_denoi_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $denoi$ [concept_social_class]"
+
+  country_dalbe_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  country_dalbe_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $dalbe$ [concept_social_class]"
+
+  country_cuoflir_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+
+  country_gumefir_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $gumefir$ [concept_social_class]"
+
+  country_adrir_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+  country_adrir_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $adrir$ [concept_social_class]"
+
+  country_chesgru_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $chesgru$ [concept_social_class]"
+  country_chesgru_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $chesgru$ [concept_social_class]"
+
+  country_denoi_acceptance_min_add: "Minimum [concept_acceptance] for the $denoi$ [concept_social_class]"
+  country_denoi_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $denoi$ [concept_social_class] won't be able to fall below"
+
+  country_dalbe_acceptance_min_add: "Minimum [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  country_dalbe_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $dalbe$ [concept_social_class] won't be able to fall below"
+  
+  country_adrir_acceptance_min_add: "Minimum [concept_acceptance] for the $adrir$ [concept_social_class]"
+  country_adrir_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $adrir$ [concept_social_class] won't be able to fall below"
+
+  country_chesgru_acceptance_min_add: "Minimum [concept_acceptance] for the $chesgru$ [concept_social_class]"
+  country_chesgru_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $chesgru$ [concept_social_class] won't be able to fall below"
+
+  country_cuoflir_acceptance_min_add: "Minimum [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $cuoflir$ [concept_social_class] won't be able to fall below"
+
+  country_guchesgru_acceptance_min_add: "Minimum [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $guchesgru$ [concept_social_class] won't be able to fall below"
+
+  country_perfis_acceptance_min_add: "Minimum [concept_acceptance] for the $perfis$ [concept_social_class]"
+  country_perfis_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $perfis$ [concept_social_class] won't be able to fall below"
+
+  country_perfis_acceptance_max_add: "Maximum [concept_acceptance] for the $perfis$ [concept_social_class]"
+  country_perfis_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $perfis$ [concept_social_class] won't be able to exceed"
+  
+  country_guchesgru_acceptance_max_add: "Maximum [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $guchesgru$ [concept_social_class] won't be able to exceed"
+
+  country_cuoflir_acceptance_max_add: "Maximum [concept_acceptance] for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $cuoflir$ [concept_social_class] won't be able to exceed"
+
+  country_chesgru_acceptance_max_add: "Maximum [concept_acceptance] for the $chesgru$ [concept_social_class]"
+  country_chesgru_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $chesgru$ [concept_social_class] won't be able to exceed"
+
+  country_adrir_acceptance_max_add: "Maximum [concept_acceptance] for the $adrir$ [concept_social_class]"
+  country_adrir_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $adrir$ [concept_social_class] won't be able to exceed"
+
+  country_gumefir_acceptance_max_add: "Maximum [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $gumefir$ [concept_social_class] won't be able to exceed"
+
+  country_denoi_acceptance_max_add: "Maximum [concept_acceptance] for the $denoi$ [concept_social_class]"
+  country_denoi_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $denoi$ [concept_social_class] won't be able to exceed"
+
+  country_dalbe_acceptance_max_add: "Maximum [concept_acceptance] for the $dalbe$ [concept_social_class]"
+  country_dalbe_acceptance_max_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $dalbe$ [concept_social_class] won't be able to exceed"
+
+  country_gumefir_acceptance_min_add: "Minimum [concept_acceptance] for the $gumefir$ [concept_social_class]"
+  country_gumefir_acceptance_min_add_desc: "A threshold describing the [concept_acceptance] value that [Concept('concept_pop', '$concept_pops$')] in the $gumefir$ [concept_social_class] won't be able to fall below"
+
+  country_guchesgru_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+
+  country_perfis_cultural_acceptance_mult: "Cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+  country_perfis_cultural_acceptance_mult_desc: "A percentage increase or decrease to cultural [concept_acceptance] for the $guchesgru$ [concept_social_class]"
+
+  country_denoi_qualification_growth_same_class_mult: "Qualification Growth within $denoi$ [concept_social_class]"
+  country_dalbe_qualification_growth_same_class_mult: "Qualification Growth within $dalbe$ [concept_social_class]"
+  country_cuoflir_qualification_growth_same_class_mult: "Qualification Growth within $cuoflir$ [concept_social_class]"
+	country_gumefir_qualification_growth_same_class_mult: "Qualification Growth within $gumefir$ [concept_social_class]"
+	country_adrir_qualification_growth_same_class_mult: "Qualification Growth within $adrir$ [concept_social_class]"
+	country_chesgru_qualification_growth_same_class_mult: "Qualification Growth within $chesgru$ [concept_social_class]"
+	country_guchesgru_qualification_growth_same_class_mult: "Qualification Growth within $guchesgru$ [concept_social_class]"
+	country_perfis_qualification_growth_same_class_mult: "Qualification Growth within $perfis$ [concept_social_class]"
+
+  country_denoi_qualification_growth_mult: "Qualification Growth for the $denoi$ [concept_social_class]"
+  country_denoi_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $denoi$ [concept_social_class]"
+
+  country_dalbe_qualification_growth_mult: "Qualification Growth for the $dalbe$ [concept_social_class]"
+  country_dalbe_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $dalbe$ [concept_social_class]"
+
+  country_cuoflir_qualification_growth_mult: "Qualification Growth for the $cuoflir$ [concept_social_class]"
+  country_cuoflir_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $cuoflir$ [concept_social_class]"
+
+  country_gumefir_qualification_growth_mult: "Qualification Growth for the $gumefir$ [concept_social_class]"
+  country_gumefir_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $gumefir$ [concept_social_class]"
+
+  country_adrir_qualification_growth_mult: "Qualification Growth for the $adrir$ [concept_social_class]"
+  country_adrir_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $adrir$ [concept_social_class]"
+  
+  country_chesgru_qualification_growth_mult: "Qualification Growth for the $chesgru$ [concept_social_class]"
+  country_chesgru_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $chesgru$ [concept_social_class]"
+  
+  country_guchesgru_qualification_growth_mult: "Qualification Growth for the $guchesgru$ [concept_social_class]"
+  country_guchesgru_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $guchesgru$ [concept_social_class]"
+
+  country_perfis_qualification_growth_mult: "Qualification Growth for the $perfis$ [concept_social_class]"
+  country_perfis_qualification_growth_mult_desc: "A percentage increase or decrease to Qualification Growth for the $perfis$ [concept_social_class]"
+
+  country_upper_class_cultural_acceptance_add: "Cultural [concept_acceptance] for the $upper_class$ [concept_social_class]"
+  country_upper_class_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $upper_class$ [concept_social_class]"
+  country_middle_class_cultural_acceptance_add: "Cultural [concept_acceptance] for the $middle_class$ [concept_social_class]"
+  country_middle_class_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $middle_class$ [concept_social_class]"
+  country_lower_class_cultural_acceptance_add: "Cultural [concept_acceptance] for the $lower_class$ [concept_social_class]"
+  country_lower_class_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $lower_class$ [concept_social_class]"
+
+  country_upper_class_minority_cultural_acceptance_add: "Cultural [concept_acceptance] for the $upper_class_minority$ [concept_social_class]"
+  country_upper_class_minority_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $upper_class_minority$ [concept_social_class]"
+  country_middle_class_minority_cultural_acceptance_add: "Cultural [concept_acceptance] for the $middle_class_minority$ [concept_social_class]"
+  country_middle_class_minority_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $middle_class_minority$ [concept_social_class]"
+  country_lower_class_minority_cultural_acceptance_add: "Cultural [concept_acceptance] for the $lower_class_minority$ [concept_social_class]"
+  country_lower_class_minority_cultural_acceptance_add_desc: "A flat increase or decrease to cultural [concept_acceptance] for the $lower_class_minority$ [concept_social_class]"

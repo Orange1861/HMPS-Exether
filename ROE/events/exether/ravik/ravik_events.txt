@@ -1,0 +1,616 @@
+﻿namespace = natural_borders
+
+# start event
+natural_borders.1 = {
+	type = country_event
+	placement = root
+	title = natural_borders.1.t
+	desc = natural_borders.1.d
+	flavor = natural_borders.1.f
+
+	dlc = dlc_roe
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	trigger = {
+		# triggered by je_french_natural_borders
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				is_powerful = yes
+				is_in_government = yes
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_jingoist_leader
+							has_ideology = ideology:ideology_ethno_nationalist
+							has_ideology = ideology:ideology_fascist
+							has_ideology = ideology:ideology_authoritarian
+							has_ideology = ideology:ideology_bonapartist
+						}
+					}
+				}
+			}
+			leader = { save_scope_as = borders_leader }
+		}
+		s:STATE_HIMMELSTIM = {
+			random_scope_state = {
+				save_scope_as = twilgach_state
+			}
+		}
+		s:STATE_CHELKSPYR = {
+			random_scope_state = {
+				save_scope_as = chelkspyr_state
+			}
+		}
+		s:STATE_GLIMMERDAM = {
+			random_scope_state = {
+				save_scope_as = glimmerdam_state
+			}
+		}
+		c:RAV = { save_scope_as = ravik_scope }
+	}
+
+	option = {
+		name = natural_borders.1.a
+		default_option = yes
+		ai_chance = {
+			base = 50
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_RAVENHOLME }
+			}
+			s:STATE_RAVENHOLME = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_CHELKSPYR }
+			}
+			s:STATE_CHELKSPYR = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_BULKARKRIFF }
+			}
+			s:STATE_BULKARKRIFF = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_GLIMMERDAM }
+			}
+			s:STATE_GLIMMERDAM = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_HAVENSHIRE }
+			}
+			s:STATE_HAVENSHIRE = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KRULWILGEN }
+			}
+			s:STATE_KRULWILGEN = {
+				add_claim = ROOT
+			}
+		}		
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KLINGELBERG }
+			}
+			s:STATE_KLINGELBERG = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_MOONSHADE }
+			}
+			s:STATE_MOONSHADE = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_FARREACH }
+			}
+			s:STATE_FARREACH = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_STORMWATCH }
+			}
+			s:STATE_STORMWATCH = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SINNEBEAM }
+			}
+			s:STATE_SINNEBEAM = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_EKENKUST }
+			}
+			s:STATE_EKENKUST = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_GRINWALD }
+			}
+			s:STATE_GRINWALD = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_HIMMELSTIM }
+			}
+			s:STATE_HIMMELSTIM = {
+				add_claim = ROOT
+			}
+		}
+		add_modifier = {
+			name = france_natural_borders_pursuit
+			days = very_long_modifier_time
+			# country_infamy_decay_mult
+		}
+		every_country = {
+			limit = {
+				NOT = { THIS = ROOT }
+				any_scope_state = {
+					OR = {
+						state_region = s:STATE_KLINGELBERG
+						state_region = s:STATE_MOONSHADE
+						state_region = s:STATE_FARREACH
+						state_region = s:STATE_STORMWATCH
+						state_region = s:STATE_SINNEBEAM
+						state_region = s:STATE_EKENKUST
+						state_region = s:STATE_GRINWALD
+						state_region = s:STATE_KRULWILGEN
+						state_region = s:STATE_HAVENSHIRE
+						state_region = s:STATE_GLIMMERDAM
+						state_region = s:STATE_HIMMELSTIM
+						state_region = s:STATE_BULKARKRIFF
+						state_region = s:STATE_CHELKSPYR
+						state_region = s:STATE_RAVENHOLME
+					}
+				}
+			}
+			trigger_event = { id = natural_borders.4 }
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_diplomatic_relevance = c:RAV
+					NOT = { THIS = ROOT }
+				}
+				post_notification = fra_natural_borders_notification
+			}
+		}
+	}
+	option = { # imperialist IG's unhappy
+		name = natural_borders.1.b
+		ai_chance = {
+			base = 50
+		}
+		custom_tooltip = {
+			text = dismiss_natural_borders_tt
+			set_variable = reject_natural_borders
+		}
+		every_interest_group = {
+			limit = {
+				ig_clout >= 0.12
+				is_in_government = yes
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_jingoist_leader
+							has_ideology = ideology:ideology_ethno_nationalist
+							has_ideology = ideology:ideology_fascist
+							has_ideology = ideology:ideology_authoritarian
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = no_natural_borders
+				days = long_modifier_time
+				is_decaying = yes
+				# interest_group_approval_add
+			}
+		}
+	}
+}
+
+# reward event
+natural_borders.2 = {
+	type = country_event
+	placement = root
+	title = natural_borders.2.t
+	desc = natural_borders.2.d
+	flavor = natural_borders.2.f
+
+	dlc = dlc_roe
+	
+	duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	trigger = {
+		# triggered by je_french_natural_borders
+	}
+
+	option = { # assimilate the new states
+		name = natural_borders.2.a
+		default_option = yes
+		add_modifier = {
+			name = natural_borders_assimilation
+			days = very_long_modifier_time
+			# state_assimilation_mult
+		}
+	}
+
+	option = { # empower imperialist IG's
+		name = natural_borders.2.b
+		trigger = {
+			any_interest_group = {
+				is_marginal = no
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_jingoist_leader
+							has_ideology = ideology:ideology_ethno_nationalist
+							has_ideology = ideology:ideology_fascist
+							has_ideology = ideology:ideology_authoritarian
+
+						}
+					}
+				}
+			}
+		}
+		every_interest_group = {
+			limit = {
+				is_marginal = no
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_jingoist_leader
+							has_ideology = ideology:ideology_ethno_nationalist
+							has_ideology = ideology:ideology_fascist
+							has_ideology = ideology:ideology_authoritarian
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = natural_borders_achieved
+				days = long_modifier_time
+				# interest_group_approval_add
+				# interest_group_pol_str_mult
+			}
+		}
+	}
+
+	option = { # get French cultures as primary
+		name = natural_borders.2.c
+		add_primary_culture = cu:yrian
+		add_primary_culture = cu:florishnom
+		add_primary_culture = cu:gachscho
+	}
+}
+
+natural_borders.3 = {
+	type = country_event
+	placement = scope:savoy_state
+	title = natural_borders.3.t
+	desc = natural_borders.3.d
+	flavor = natural_borders.3.f
+
+	duration = 3
+
+	dlc = dlc004
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	trigger = {
+		# triggered by rav_annex_twilgach
+	}
+
+	immediate = {
+        random_country = {
+            limit = {
+                NOT = {
+                    any_scope_state = {
+                        region = sr:region_hasals_mirror
+                        NOT = { state_region = s:STATE_HIMMELSTIM }
+                    }
+                }
+                any_scope_state = {
+                    state_region = s:STATE_HIMMELSTIM
+                    is_capital = no
+                }
+                is_player = no
+            }
+			save_scope_as = savoy_country
+			ruler = {
+				save_scope_as = savoy_ruler
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_HIMMELSTIM
+					is_capital = no
+				}
+				save_scope_as = savoy_state
+			}
+		}
+	}
+
+	option = { # incorporate Twilgach into Ravik
+		name = natural_borders.3.a
+		default_option = yes
+		if = {
+			limit = {
+				is_owed_obligation_by = scope:savoy_country
+			}
+			scope:savoy_country = {
+				set_owes_obligation_to = {
+					country = ROOT
+					setting = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = fra_savoy_sardinia
+			}
+			show_as_tooltip = {
+				set_owes_obligation_to = {
+					country = scope:savoy_country
+					setting = yes
+				}
+			}
+		}
+		scope:savoy_state = {
+			set_state_owner = ROOT
+			set_state_type = incorporated
+		}
+	}
+
+	option = { # conduct a plebiscite
+		name = natural_borders.3.b
+		default_option = yes
+		if = {
+			limit = {
+				is_owed_obligation_by = scope:savoy_country
+			}
+			scope:savoy_country = {
+				set_owes_obligation_to = {
+					country = ROOT
+					setting = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = fra_savoy_sardinia
+			}
+			show_as_tooltip = {
+				set_owes_obligation_to = {
+					country = scope:savoy_country
+					setting = yes
+				}
+			}
+		}
+		scope:savoy_state = {
+			set_state_owner = ROOT
+			set_state_type = unincorporated
+			add_loyalists_in_state = {
+				culture = cu:gachscho
+				value = large_radicals
+			}
+			add_loyalists_in_state = {
+				culture = cu:ravikian
+				value = very_large_radicals
+			}
+		}
+	}
+	option = {
+		name = natural_borders.3.c
+		add_radicals = {
+			culture = cu:ravikian
+			value = 0.02
+		}
+
+		every_interest_group = {
+			limit = {
+				ig_clout >= 0.12
+				is_in_government = yes
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_jingoist_leader
+							has_ideology = ideology:ideology_ethno_nationalist
+							has_ideology = ideology:ideology_fascist
+							has_ideology = ideology:ideology_authoritarian
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = turned_down_twilgach
+				days = long_modifier_time
+				is_decaying = yes
+				# interest_group_approval_add
+			}
+		}
+	}
+}
+
+natural_borders.4 = {
+	type = country_event
+	placement = scope:french_claim_state
+	title = natural_borders.4.t
+	desc = natural_borders.4.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = natural_borders.4.f
+				trigger = {
+					NOT = {
+						owner = {
+							any_primary_culture = {
+								has_discrimination_trait = gnome_heritage
+							}
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = natural_borders.4.f2
+				trigger = {
+					owner = {
+						any_primary_culture = {
+							has_discrimination_trait = gnome_heritage
+						}
+					}
+				}
+			}
+		}		
+	}
+
+	duration = 3
+
+	dlc = dlc_roe
+
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	trigger = {
+		# triggered by je_french_natural_borders
+	}
+
+	immediate = {
+		c:RAV = {
+			save_scope_as = ravik_scope
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_STORMWATCH
+					state_region = s:STATE_MOONSHADE
+					state_region = s:STATE_SINNEBEAM
+					state_region = s:STATE_GRINWALD
+					state_region = s:STATE_GLIMMERDAM
+					state_region = s:STATE_CHELKSPYR
+					state_region = s:STATE_EKENKUST
+					state_region = s:STATE_HIMMELSTIM
+					state_region = s:STATE_RAVENHOLME
+					state_region = s:STATE_KRULWILGEN
+					state_region = s:STATE_KLINGELBERG
+					state_region = s:STATE_TIMMERHAVEN
+					state_region = s:STATE_HAVENSHIRE
+					state_region = s:STATE_FARREACH
+					state_region = s:STATE_BULKARKRIFF
+				}
+			}
+			save_scope_as = french_claim_state
+		}
+	}
+
+	option = { # Prepare for war
+		name = natural_borders.4.a
+		default_option = yes
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_STORMWATCH
+					state_region = s:STATE_MOONSHADE
+					state_region = s:STATE_SINNEBEAM
+					state_region = s:STATE_GRINWALD
+					state_region = s:STATE_GLIMMERDAM
+					state_region = s:STATE_CHELKSPYR
+					state_region = s:STATE_EKENKUST
+					state_region = s:STATE_HIMMELSTIM
+					state_region = s:STATE_RAVENHOLME
+					state_region = s:STATE_KRULWILGEN
+					state_region = s:STATE_KLINGELBERG
+					state_region = s:STATE_TIMMERHAVEN
+					state_region = s:STATE_HAVENSHIRE
+					state_region = s:STATE_FARREACH
+					state_region = s:STATE_BULKARKRIFF
+				}
+			}
+			add_modifier = {
+				name = rally_against_france
+				days = long_modifier_time
+				# state_conscription_rate_mult
+			}
+		}
+		ai_chance = {
+			base = 19
+		}
+	}
+
+	option = { # Try to appease France
+		name = natural_borders.4.b
+		change_relations = {
+			country = c:RAV
+			value = 20
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
