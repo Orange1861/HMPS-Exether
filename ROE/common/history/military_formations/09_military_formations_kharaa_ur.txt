@@ -485,12 +485,6 @@
 			hq_region = sr:region_yamkhanato
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_KHULEKKA
-				count = 15
-			}
-
-			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KIYOMORIN
 				count = 15
@@ -499,7 +493,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_BATOKYOAN
-				count = 10
+				count = 25
 			}
 
 			save_scope_as = gol_army

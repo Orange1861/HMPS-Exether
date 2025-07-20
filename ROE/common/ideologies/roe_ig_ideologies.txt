@@ -70,11 +70,11 @@ ideology_matriarchal = {
 	icon = "gfx/interface/icons/ideology_icons/womens_liberation.dds"
 	
 	lawgroup_rights_of_women = {
-		law_no_womens_rights = strongly_disapprove
+		law_no_womens_rights = approve
 		law_women_own_property = disapprove
-		law_women_in_the_workplace = approve
-		law_womens_suffrage = disapprove
-		law_matriarchy = strongly_approve
+		law_women_in_the_workplace = disapprove
+		law_womens_suffrage = strongly_disapprove
+		law_matriarchy = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {

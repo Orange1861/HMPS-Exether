@@ -348,6 +348,7 @@ on_half_yearly_pulse_country = {
 		lobbies_proposals_half_yearly_events
 		delay = { days = 20 }
 		movement_half_yearly_events
+		adventurer_coverage_events
 	}
 }
 
@@ -1006,7 +1007,11 @@ on_character_death = {
 			if = {
 				limit = { 
 					owner = {
-						has_law = law_type:law_matriarchy
+						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 					}
 				}
 				owner = {
@@ -1311,6 +1316,12 @@ on_country_released_as_independent = {
 				trigger_event = { id = slave_revolt_events.1 days = 0 }
 			}
 		}
+		if = {
+			limit = {
+				has_technology_researched = gnome_tech
+			}
+			set_variable = soulwrought_production_var
+		}
 	}
 }
 
@@ -1319,6 +1330,13 @@ on_country_released_as_independent = {
 on_country_released_as_own_subject = {
 	effect = {
 		calculate_arcanas = yes
+
+		if = {
+			limit = {
+				has_technology_researched = gnome_tech
+			}
+			set_variable = soulwrought_production_var
+		}
 	}
 }
 
@@ -1338,6 +1356,12 @@ on_country_released_as_company_subject = {
 		activate_law = law_type:law_child_labor_allowed
 		activate_law = law_type:law_no_social_security
 		activate_law = law_type:law_migration_controls
+		if = {
+			limit = {
+				has_technology_researched = gnome_tech
+			}
+			set_variable = soulwrought_production_var
+		}
 	}
 }
 
@@ -1346,6 +1370,12 @@ on_country_released_as_company_subject = {
 on_country_released_as_overlord_subject = {
 	effect = {
 		calculate_arcanas = yes
+		if = {
+			limit = {
+				has_technology_researched = gnome_tech
+			}
+			set_variable = soulwrought_production_var
+		}
 	}
 }
 
@@ -2618,6 +2648,7 @@ on_state_owner_change = {
 	effect = {
 		evaluate_and_assign_state_hub_dynamic_names = yes # All dynamic naming is handled by this scripted effect
 		mutagen_vats_powerswitch = yes
+		giant_modifier_remover = yes
 	}
 }
 
@@ -3106,13 +3137,20 @@ build_soulwrought = {
 					create_pop = {
 						pop_type = laborers
 						culture  = soulwrought
-						literacy_rate = 0.3
-						working_adult_ratio = 0.5
 						size = 20000
 					}
 					change_variable = {
 						name = soulwrought_assemble_count
 						subtract = 20000
+					}
+					every_scope_pop = {
+						limit = {
+							has_pop_culture = soulwrought
+							pop_literacy < 0.33
+						}
+						set_pop_literacy = {
+							literacy_rate = 0.33
+						}
 					}
 				}
 				else_if = {
@@ -3123,13 +3161,20 @@ build_soulwrought = {
 					create_pop = {
 						pop_type = laborers
 						culture  = soulwrought
-						literacy_rate = 0.3
-						working_adult_ratio = 0.5
 						size = 40000
 					}
 					change_variable = {
 						name = soulwrought_assemble_count
 						subtract = 40000
+					}
+					every_scope_pop = {
+						limit = {
+							has_pop_culture = soulwrought
+							pop_literacy < 0.33
+						}
+						set_pop_literacy = {
+							literacy_rate = 0.33
+						}
 					}
 				}
 
@@ -3140,13 +3185,20 @@ build_soulwrought = {
 					create_pop = {
 						pop_type = laborers
 						culture  = soulwrought
-						literacy_rate = 0.3
-						working_adult_ratio = 0.5
 						size = 60000
 					}
 					change_variable = {
 						name = soulwrought_assemble_count
 						subtract = 60000
+					}
+					every_scope_pop = {
+						limit = {
+							has_pop_culture = soulwrought
+							pop_literacy < 0.33
+						}
+						set_pop_literacy = {
+							literacy_rate = 0.33
+						}
 					}
 				}
 			}
@@ -3159,13 +3211,20 @@ build_soulwrought = {
 					create_pop = {
 						pop_type = slaves
 						culture  = soulwrought
-						literacy_rate = 0.2
-						working_adult_ratio = 0.5
 						size = 20000
 					}
 					change_variable = {
 						name = soulwrought_assemble_count
 						subtract = 20000
+					}
+					every_scope_pop = {
+						limit = {
+							has_pop_culture = soulwrought
+							pop_literacy < 0.2
+						}
+						set_pop_literacy = {
+							literacy_rate = 0.2
+						}
 					}
 				}
 				else_if = {
@@ -3176,13 +3235,20 @@ build_soulwrought = {
 					create_pop = {
 						pop_type = slaves
 						culture  = soulwrought
-						literacy_rate = 0.2
-						working_adult_ratio = 0.5
 						size = 40000
 					}
 					change_variable = {
 						name = soulwrought_assemble_count
 						subtract = 40000
+					}
+					every_scope_pop = {
+						limit = {
+							has_pop_culture = soulwrought
+							pop_literacy < 0.2
+						}
+						set_pop_literacy = {
+							literacy_rate = 0.2
+						}
 					}
 				}
 
@@ -3193,13 +3259,20 @@ build_soulwrought = {
 					create_pop = {
 						pop_type = slaves
 						culture  = soulwrought
-						literacy_rate = 0.2
-						working_adult_ratio = 0.5
 						size = 60000
 					}
 					change_variable = {
 						name = soulwrought_assemble_count
 						subtract = 60000
+					}
+					every_scope_pop = {
+						limit = {
+							has_pop_culture = soulwrought
+							pop_literacy < 0.2
+						}
+						set_pop_literacy = {
+							literacy_rate = 0.2
+						}
 					}
 				}
 			}

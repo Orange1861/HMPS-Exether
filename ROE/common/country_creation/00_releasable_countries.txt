@@ -221,7 +221,6 @@ CRT = {
         STATE_ARATZIRI
         STATE_KASKOHARI
 		STATE_KHANBA
-		STATE_BATOHAIN
 		STATE_MENDARI
 		STATE_KIYOMU
 	}
@@ -294,7 +293,6 @@ LUR = {
 	states = { 
 		STATE_ERDIGARA
 		STATE_GORRIMENDIA
-		STATE_GARRAMU
 		STATE_KHIARHI
 		STATE_KHANOR
 	}
@@ -723,7 +721,6 @@ TEM = {
 TEM = {
 	
 	states = {
-		STATE_KHULANJO
 		STATE_KURULANDU
 		STATE_JARGALTSAI
 		STATE_YAMAKHANJU
@@ -916,7 +913,6 @@ GOL = {
 	
 	states = {
 		STATE_KIYOMORIN
-		STATE_KHULEKKA
 		STATE_BATOKYOAN
 	}
 
@@ -1021,7 +1017,6 @@ IAL = {
 IMR = {
 	states = {
 		STATE_ZAMARA
-		STATE_LEPTORIA
 	}
 	required_num_states = 1
 
@@ -1113,7 +1108,6 @@ MGR = {
 		STATE_TROPOJA
 		STATE_NYZHNE_SENIA
 		STATE_BREZHKE
-		STATE_SHKUMBINIA
 	}
 	required_num_states = 2
 
@@ -1143,7 +1137,6 @@ KHE = {
 	states = {
 		STATE_OSTATU
 		STATE_TXINPART
-		STATE_TIHAR
 	}
 	required_num_states = 1
 

@@ -300,6 +300,7 @@ pmg_cloudsilver_alloying = {
 	production_methods = {
 		pm_no_alloying
 		pm_cloudsilver_alloying
+		pm_cloudsilver_alloying_guild_bonded
 	}
 }
 
@@ -335,9 +336,11 @@ pmg_automation_building_motor_industry = {
 	production_methods = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_motor_industry
+		pm_watertube_boiler_building_motor_industry_guild_bonded
 		pm_artificer_watertube_boiler_building_steel_mills
 		pm_artificer_watertube_boiler_building_steel_mills_guild_bonded
 		pm_rotary_valve_engine_building_motor_industry
+		pm_rotary_valve_engine_building_motor_industry_guild_bonded
 		pm_artificer_rotary_valve_engine_building_steel_mills
 		pm_assembly_lines_building_motor_industry
 		pm_assembly_lines_building_motor_industry_guild_bonded
@@ -388,7 +391,7 @@ pmg_automobile_production = {
 		pm_automobile_production_arcane
 		pm_automobile_production__arcane_guild_bonded
 		pm_mass_automobile_production_arcane
-		pm_mass_automobile_production__arcane_guild_bonded
+		pm_mass_automobile_production_arcane_guild_bonded
 	}
 }
 

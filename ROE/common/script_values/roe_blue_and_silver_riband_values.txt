@@ -1,10 +1,10 @@
-blue_riband_point = {
+﻿blue_riband_point = {
     value = blue_riband_point_base
     multiply = blue_riband_point_multiplier
 }
 
 blue_riband_point_base = {
-    value = 30
+    value = 25
 
     every_scope_building = {
         limit = { is_building_type = building_shipyards }
@@ -52,7 +52,7 @@ blue_riband_point_base = {
 
     if = {
         limit = {
-            literacy_rate >= 0.35
+            literacy_rate >= 0.5
         }
         add = 3
     }
@@ -95,6 +95,16 @@ blue_riband_point_base = {
                 has_technology_researched = macroeconomics
             }
             add = 1
+        }
+
+        if = {
+            limit = {
+                any_company = {
+                    can_potentially_produce_prestige_goods = prestige_good_clyde_built_liners
+                    is_producing_prestige_goods = yes
+                }
+            }  
+            add = 3
         }
     }
 }

@@ -15,22 +15,20 @@
     	text = can_build_in_arrola_tt
     		OR = {
 				any_scope_treaty = {
-					binds = scope:arrola_owner_scope
-					any_scope_article = {
-						has_type = foreign_investment_rights
-					}
-				}
-			}
-
+							binds = scope:arrola_owner_scope
+							any_scope_article = {
+								has_type = foreign_investment_rights
+							}
+						}
         		any_country = {
-            		
-               		is_direct_subject_of = root
-            		
+               		is_subject_of = root
+            	
             		any_scope_state = {
             			state_region = s:STATE_ARROLA
             		}
         		}
     		}
+		}
   		}
 		OR = {
             has_free_retainer = yes

@@ -226,43 +226,7 @@ pm_luxury_potion = {
 		}
 	}
 }
-
-pm_anchorage_airship = {
-	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	
-	low_pop_method = yes # AI will activate this method for states with low population
-
-	unlocking_technologies = {
-		skyports
-	}
-	
-	building_modifiers = {
-
-		workforce_scaled = {	
-			goods_input_cloudsilver_add = 5 #40
-			goods_input_fabric_add = 5 #100
-			goods_output_merchant_marine_add = 10 
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 900
-			building_employment_bureaucrats_add = 100
-		}
-	}
-	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 20
-			
-		}
-	}
-	state_modifiers = {
-		workforce_scaled = {
-			state_infrastructure_add = 5
-		}
-	}
-}	
-
 pm_carpet_enchanting_posts = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	
@@ -282,7 +246,7 @@ pm_carpet_enchanting_posts = {
 	
 	country_modifiers = {
 		workforce_scaled = {
-			country_convoys_capacity_add = 25
+			country_convoys_capacity_add = 50
 			
 		}
 	}
@@ -355,7 +319,7 @@ pm_carpet_enchanting_emporium = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 12.5
+			state_infrastructure_add = 10
 		}
 	}
 }
@@ -377,7 +341,7 @@ pm_basic_tapestries = {
 
 	building_modifiers = {
 		workforce_scaled = { 
-			goods_input_silk_add = 5      #200
+			goods_input_silk_add = 7      #280
 			goods_output_fine_art_add = 2 # 400
 		}
 
@@ -403,12 +367,48 @@ pm_exotic_tapestries = {
 
 		workforce_scaled = { #480 profit
 			goods_input_silk_add = 13 # 520
-			goods_output_fine_art_add = 5 # 1000
+			goods_output_fine_art_add = 4 # 800
 		}
 		level_scaled = {
 			building_employment_laborers_add = -400
 			building_employment_academics_add = 400
 
+		}
+	}
+}
+
+pm_anchorage_airship = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	
+	low_pop_method = yes # AI will activate this method for states with low population
+
+	unlocking_technologies = {
+		skyports
+	}
+	
+	building_modifiers = {
+
+		workforce_scaled = {	
+			goods_input_cloudsilver_add = 3 #40
+			goods_input_fabric_add = 2 #20
+			goods_output_merchant_marine_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 175
+			building_employment_bureaucrats_add = 25
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 25
+			
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 2
 		}
 	}
 }
@@ -422,8 +422,8 @@ pm_basic_port_airship = {
 
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_airships_add = 6
-			goods_output_merchant_marine_add = 15
+			goods_input_airships_add = 4
+			goods_output_merchant_marine_add = 10
 		}
 		level_scaled = {
 			building_employment_laborers_add = 900
@@ -433,12 +433,12 @@ pm_basic_port_airship = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_convoys_capacity_add = 150
+			country_convoys_capacity_add = 100
 		}
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 5
 		}
 	}
 }		
@@ -452,8 +452,8 @@ pm_industrial_port_airship = {
 
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_airships_add = 8
-			goods_output_merchant_marine_add = 30
+			goods_input_airships_add = 7
+			goods_output_merchant_marine_add = 20
 		}
 		level_scaled = {
 			building_employment_laborers_add = 800
@@ -464,12 +464,12 @@ pm_industrial_port_airship = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_convoys_capacity_add = 175
+			country_convoys_capacity_add = 150
 		}
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 12
+			state_infrastructure_add = 7.5
 		}
 	}	
 }
@@ -483,7 +483,7 @@ pm_modern_port_airship = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_airships_add = 10
-			goods_output_merchant_marine_add = 60
+			goods_output_merchant_marine_add = 30
 		}
 		level_scaled = {
 			building_employment_laborers_add = 600
@@ -494,12 +494,12 @@ pm_modern_port_airship = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_convoys_capacity_add = 225
+			country_convoys_capacity_add = 200
 		}
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 15
+			state_infrastructure_add = 10
 		}
 	}
 }

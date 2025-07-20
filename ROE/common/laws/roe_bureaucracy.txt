@@ -8,7 +8,7 @@ law_court_mages = {
 	progressiveness = -50
 
 	modifier = {
-		country_influence_mult = 0.25
+		state_construction_mult = 0.025 #excess bureaucracy goes into construction
 	}
 
 	on_enact = {

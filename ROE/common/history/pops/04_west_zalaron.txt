@@ -334,14 +334,6 @@
 		}
 	}
   }
-  s:STATE_SHKUMBINIA = {
-	region_state:MGR = {
-		create_pop = {
-			culture = larltri
-			size = 876677
-		}
-	}
-  }
   s:STATE_KUKESPIA = {
 	region_state:DKO = {
 		create_pop = {
@@ -358,7 +350,7 @@
 	region_state:MGR = {
 		create_pop = {
 			culture = larltri
-			size = 716797
+			size = 1116797
 		}
 	}
   }
@@ -390,7 +382,7 @@
 	region_state:MGR = {
 		create_pop = {
 			culture = larltri
-			size = 2333803
+			size = 2703803
 		}
 	}
   }
@@ -462,23 +454,11 @@
 	region_state:ZIN = {
 		create_pop = {
 			culture = dales_togrul
-			size = 981420
+			size = 1581420
 		}
 		create_pop = {
 			culture = atiukura
-			size = 220000
-		}
-	}
-  }
-  s:STATE_KORCOVA = {
-	region_state:ZIN = {
-		create_pop = {
-			culture = atiukura
-			size = 126132
-		}
-		create_pop = {
-			culture = dales_togrul
-			size = 597800
+			size = 340000
 		}
 	}
   }
@@ -828,23 +808,6 @@
 		}
 	}
   }
-  s:STATE_DIYINAKHAD = {
-	region_state:KHD = {
-		create_pop = {
-			culture = duneshar
-			size = 253389
-		}
-		create_pop = {
-			culture = tozhi
-			size = 123262
-		}
-		create_pop = {
-			culture = tozhi
-			religion = skarrakhlot
-			size = 94163
-		}
-	}
-  }
   s:STATE_NASHAYAZH = {
 	region_state:KHD = {
 		create_pop = {
@@ -861,7 +824,11 @@
 	region_state:KHD = {
 		create_pop = {
 			culture = duneshar
-			size = 2547485
+			size = 3547485
+		}
+		create_pop = {
+			culture = tozhi
+			size = 180663
 		}
 	}
   }
@@ -873,7 +840,7 @@
 		}
 		create_pop = {
 			culture = tozhi
-			size = 375668
+			size = 475668
 		}
 	}
   }
@@ -903,23 +870,17 @@
 	region_state:KHD = {
 		create_pop = {
 			culture = tozhi
-			size = 385479
+			size = 515479
 		}
 		create_pop = {
 			culture = duneshar
-			size = 643938
+			size =  1523938
 		}
-	}
-  }
-  s:STATE_NAKOKAIN = {
-	region_state:KHD = {
-		create_pop = {
-			culture = duneshar
-			size = 2166614
-		}
+		
 		create_pop = {
 			culture = tozhi
-			size = 380663
+			religion = skarrakhlot
+			size = 94163
 		}
 	}
   }
@@ -927,11 +888,11 @@
 	region_state:KHD = {
 		create_pop = {
 			culture = duneshar
-			size = 937485
+			size = 1337485
 		}
 		create_pop = {
 			culture = tozhi
-			size = 133083
+			size = 233083
 		}
 	}
   }

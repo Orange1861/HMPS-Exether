@@ -1,0 +1,293 @@
+﻿
+namespace = rust_gorge
+
+rust_gorge.100 = { #thassarcia shattered ring success event
+	type = country_event
+	placement = ROOT
+	
+	title = rust_gorge.100.t
+	desc = rust_gorge.100.d
+	flavor = rust_gorge.100.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "dwarf_studying"
+	}
+
+	# immediate = {
+	# 	random_scope_state = {
+	# 		limit = {
+	# 			is_capital = yes
+	# 		}
+	# 		save_scope_as = capital_scope
+	# 	}
+	# }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = {
+		name = rust_gorge.100.a
+		add_modifier = {
+			name = shattered_ring_victory
+			years = 15
+			is_decaying = yes
+		}
+	}
+}
+
+rust_gorge.101 = { #thassarcia shattered ring failure event
+	type = country_event
+	placement = ROOT
+	
+	title = rust_gorge.101.t
+	desc = rust_gorge.101.d
+	flavor = rust_gorge.101.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "orc_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = {
+		name = rust_gorge.101.a
+		add_modifier = {
+			name = shattered_ring_defeat
+			years = 10
+			is_decaying = yes
+		}
+	}
+}
+
+rust_gorge.102 = { #khaduras ring on it success event
+	type = country_event
+	placement = ROOT
+	
+	title = rust_gorge.102.t
+	desc = rust_gorge.102.d
+	flavor = rust_gorge.102.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "orc_meeting"
+	}
+
+	immediate = {
+		# create_power_bloc = {
+		# 	name = KHD_BLOC
+
+		# 	map_color = { 78 134 62 }
+
+		# 	identity = identity_military_treaty
+		# 	principle = principle_defensive_cooperation_1
+
+		# 	# subjects are automatically part of the bloc
+		# }
+		# if = {
+		# 	limit = {
+		# 		has_dlc_feature = power_bloc_features
+		# 	}
+		# 	power_bloc ?= {
+		# 		add_principle = principle_market_unification_2
+		# 	}
+		# }
+		
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = {
+		name = rust_gorge.102.a
+		add_modifier = {
+			name = put_a_ring_on_it
+			years = 10
+		}
+		# c:KHD ?= { ##PDX WHY??? doesn't work after game start
+		# 	create_power_bloc = {
+		# 	name = KHD_BLOC
+
+		# 	map_color = { 78 134 62 }
+
+		# 	identity = identity_military_treaty
+		# 	principle = principle_defensive_cooperation_1
+
+		# 	member = c:TSH
+		# 	# subjects are automatically part of the bloc
+		# }
+		# }
+		
+
+		# if = {
+		# 	limit = {
+		# 		has_dlc_feature = power_bloc_features
+		# 	}
+		# 	power_bloc ?= {
+		# 		add_principle = principle_market_unification_2
+		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		c:TSH ?= {
+		# 			is_ai = yes
+		# 		}
+		# 	}
+		# 	c:TSH ?= {
+		# 		join_power_bloc = c:KHD
+		# 	}
+		# }
+		# else = {
+		# 	c:TSH ?= {
+		# 		trigger_event = rust_gorge.107
+		# 	}
+		# }
+
+	}
+}
+
+rust_gorge.103 = { #khaduras ring on it failure event
+	type = country_event
+	placement = ROOT
+	
+	title = rust_gorge.103.t
+	desc = rust_gorge.103.d
+	flavor = rust_gorge.103.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "dwarf_bureaucrat"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = {
+		name = rust_gorge.103.a
+		add_modifier = {
+			name = left_at_the_altar
+			years = 10
+		}
+	}
+}
+
+rust_gorge.105 = { #thassarcia je invalidation event
+	type = country_event
+	placement = ROOT
+	
+	title = rust_gorge.105.t
+	desc = rust_gorge.105.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					c:TSH = {
+						any_enemy_in_war = {
+							c:KHD ?= this
+						}
+					}
+				}
+				desc = rust_gorge.105.f
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = rust_gorge.105.f2
+			}
+		}
+	}
+	
+	duration = 3
+	
+	immediate = {
+		c:KHD ?= {
+			save_scope_as = khd_scope
+		}
+
+		c:TSH ?= {
+			save_scope_as = tsh_scope
+		}
+	}
+	event_image = {
+		video = "kobold_mountain"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = { #how tf did this happen?
+		name = rust_gorge.105.a
+
+	}
+}
+
+rust_gorge.106 = { #khaduras je invalidation event ##wow yo can't believe you didn't want to do my awesome JE
+	type = country_event
+	placement = ROOT
+	
+	title = rust_gorge.106.t
+	desc = rust_gorge.106.d
+	flavor = rust_gorge.106.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "dwarf_studying"
+	}
+
+	immediate = {
+		c:KHD ?= {
+			save_scope_as = khd_scope
+		}
+
+		c:TSH ?= {
+			save_scope_as = tsh_scope
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = { #we will court them by the sword!
+		name = rust_gorge.106.a
+
+	}
+}
+
+rust_gorge.107 = { #stihugnado join powerbloc
+	type = country_event
+	placement = ROOT
+	
+	title = rust_gorge.107.t
+	desc = rust_gorge.107.d
+	flavor = rust_gorge.107.f
+	
+	duration = 3
+	
+	event_image = {
+		video = "dwarf_studying"
+	}
+
+	immediate = {
+		c:KHD ?= {
+			save_scope_as = khd_scope
+		}
+
+		c:TSH ?= {
+			save_scope_as = tsh_scope
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	option = { #hell yea
+		name = rust_gorge.107.a
+		default_option = yes
+		join_power_bloc = c:KHD
+	}
+	    option = { #naw bro
+        name = rust_gorge.107.b
+        trigger = {
+		   is_player = yes
+		}    
+    }
+}

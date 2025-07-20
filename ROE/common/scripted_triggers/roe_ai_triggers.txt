@@ -1,8 +1,32 @@
-ai_wants_colonial_affairs = {
+﻿ai_wants_colonial_affairs = {
 	OR = {
 		c:TTN ?= this
 		c:ZKW ?= this
 		c:OPA?= this
+	}
+}
+
+has_je_alliance_reason = {
+	OR = {
+		AND = {
+			has_journal_entry = je_ring_on_it
+			$TARGET$ = {
+				exists = c:TSH
+				$TARGET$ = c:TSH
+			}
+		}
+	}
+}
+
+has_je_military_assistance_reason = {
+	OR = {
+		AND = {
+			has_journal_entry = je_ring_on_it
+			$TARGET$ = {
+				exists = c:TSH
+				$TARGET$ = c:TSH
+			}
+		}
 	}
 }
 

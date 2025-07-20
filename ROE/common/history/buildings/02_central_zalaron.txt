@@ -3680,8 +3680,6 @@
 			}
 		}
 	}
-	s:STATE_DROWNED_LANDS = {
-	}
 	s:STATE_CARGOMIRE = {
 	}
 	s:STATE_ZALDUA = {
@@ -7713,16 +7711,8 @@
 			}
 		}
 	}
-	s:STATE_STELINSULO = {
+	s:STATE_NOVAJLANDIO = {
 		region_state:VAI = {
-			create_building = {
-				building = "building_port"
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					"pm_basic_port"
-				}
-			}
 			create_building = {
 				building = "building_tavern"
 				add_ownership = {
@@ -7730,7 +7720,7 @@
 						type = "building_financial_district"
 						country = "c:VAI"
 						levels = 2
-						region = "STATE_STELINSULO"
+						region = "STATE_NOVAJLANDIO"
 					}
 				}
 				reserves = 1
@@ -7745,7 +7735,7 @@
 						type = "building_financial_district"
 						country = "c:VAI"
 						levels = 5
-						region = "STATE_STELINSULO"
+						region = "STATE_NOVAJLANDIO"
 					}
 				}
 				reserves = 1
@@ -7754,10 +7744,6 @@
 					"pm_no_exotic"
 				}
 			}
-		}
-	}
-	s:STATE_NOVAJLANDIO = {
-		region_state:VAI = {
 			create_building = {
 				building = "building_fishing_wharf"
 				add_ownership = {
@@ -7776,7 +7762,7 @@
 			}
 			create_building = {
 				building = "building_port"
-				level = 1
+				level = 2
 				reserves = 1
 				activate_production_methods = {
 					"pm_anchorage"

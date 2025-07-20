@@ -141,7 +141,13 @@
                                         has_law = law_type:law_monarchy
                                     }
                                 }
-                                culture = cu:jazamandroso
+                                OR = {
+                                    culture = cu:littoral_thalorian
+                                    culture = cu:heartland_thalorian
+                                    culture = cu:lake_thalorian
+                                    culture = cu:gnome_thalorian
+                                }
+                                
                                 OR = {
                                     has_trait = social_bandit
                                     has_trait = bandit
@@ -1342,7 +1348,7 @@
                                 scope:character ?= {
                                     NOT = {
                                         OR = {
-                                            has_ideology = ideology:ideology_matriarchal_traditionalist
+                                            
                                             has_ideology = ideology:ideology_traditionalist
                                             has_ideology = ideology:ideology_ecumenical_traditionalist
                                         } 
@@ -1496,7 +1502,7 @@
                                 scope:character ?= {
                                     NOT = {                                       
                                         OR = {
-                                            has_ideology = ideology:ideology_matriarchal_traditionalist
+                                            
                                             has_ideology = ideology:ideology_traditionalist
                                             has_ideology = ideology:ideology_ecumenical_traditionalist
                                         }  
@@ -3169,4 +3175,599 @@
             }
         }
     }
+
+         lithorin_kings_hat = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = indian_royalty_02
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 5000
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    has_culture = cu:lithorin
+                     owner ?={
+                    OR = {
+                        has_law = law_type:law_monarchy
+                        has_law = law_type:law_corporate_state
+                         }
+                            }
+                }
+            }
+        }
+    }
+
+             duneshar_kings_hat = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = arabic_turban_mohammad_khan
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 999999
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    has_culture = cu:duneshar
+                     owner ?={
+                    OR = {
+                        has_law = law_type:law_monarchy
+                        has_law = law_type:law_corporate_state
+                         }
+                            }
+                }
+            }
+        }
+    }
+
+
+                 island_ogres_hat = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = arabic_turban
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 999999
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    has_culture = cu:onisazae
+                     owner ?={
+                    OR = {
+                        has_law = law_type:law_monarchy
+                        has_law = law_type:law_corporate_state
+                         }
+                            }
+                }
+            }
+        }
+    }
+    
+                     desert_ogres_hat = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = african_common_headgear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 999999
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    has_culture = cu:onikoku
+                     owner ?={
+                    OR = {
+                        has_law = law_type:law_monarchy
+                        has_law = law_type:law_corporate_state
+                         }
+                            }
+                }
+            }
+        }
+    }
+        dwarf_male_theocrat_hat = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = maharaja_singh_01
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+                    scope:character ?= {
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                        is_ruler = yes
+                        owner ?={
+                    OR = {
+                        has_law = law_type:law_theocracy
+                         }
+                            }
+                    }
+            }
+        }
+    }
+
+        dwarf_female_theocrat_hat = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = headgear_indian_high_02
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+                        scope:character ?= {
+						is_female = yes						
+                        has_role = politician
+                        interest_group = {
+                            is_interest_group_type = ig_devout
+                        }
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }     
+                    }
+				}
+			}
+		}
+
+        dark_elf_aridrun_female_hat = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = MOD_dark_elf_head
+                template = slavic_headgear
+                range = { 0 1 }
+            }
+        } 	
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = yes						
+                        has_role = politician
+                        culture = cu:aridrun     
+					}
+					
+					    scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        culture = cu:aridrun    
+                    }
+				}
+			}
+		}
+	}
+	
+        dark_elf_empire_female_hat = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = MOD_dark_elf_head2
+                template = slavic_headgear
+                range = { 0 1 }
+            }
+        } 
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = yes						
+                        has_role = politician
+                        culture = cu:cithrel    
+					}
+					
+					    scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        culture = cu:cithrel
+                    }
+				}
+			}
+		}
+	}	
+	
+        pirate_ruler_male_hat = {
+	       dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = european_admiral_headgear
+                range = { 0.9 1 }
+            }
+		}
+		
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+					    scope:character ?= {
+						is_female = no						
+                        is_ruler = yes
+                        culture = cu:south_sea_ravager    
+				}
+			}
+		}
+	}		
+	
+        pirate_ruler_female_hat = {
+		dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        } 
+	
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+					    scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        culture = cu:south_sea_ravager
+
+				}
+			}
+		}
+	}	
+
+    wizard_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = wizard_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+
+                OR = {
+                    scope:pop ?= {
+                        OR = {
+                            is_pop_type = archmages
+							is_pop_type = wizards
+                        }
+                        exists = home_country
+                        home_country = {
+                            OR = {
+                                is_country_type = recognized
+                                is_country_type = colonial
+                            }	
+                        }
+                    }
+                    scope:character ?= {
+                        is_ruler = no
+                        is_interest_group_type = ig_mages
+                        exists = home_country
+                        home_country = {
+                            OR = {
+                                is_country_type = recognized
+                                is_country_type = colonial
+                            }	
+                        }
+	                }
+                }
+            }
+        }
+    }
+
+ ### Anbennar Additions, thanks for letting us use these! ###
+   
+    gnomish_common_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = gnomish_common_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    scope:pop ?= {
+                        OR = {
+                            culture = cu:qinnaat
+					    }
+                    }
+                }
+            }
+        }
+    }
+
+    gnomish_common_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = gnomish_common_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+
+                OR = {
+                    scope:character ?= {
+                        OR = {
+                            culture = cu:qinnaat
+                        }
+                    }
+                }
+            }
+        }
+    }
+	
+    gnomish_frontier_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = gnomish_frontier_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    scope:pop ?= {
+                        OR = {
+                            culture = cu:azmaraan
+					    }
+                    }
+                }
+            }
+        }
+    }
+
+    gnomish_frontier_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = gnomish_frontier_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+
+                OR = {
+                    scope:character ?= {
+                        OR = {
+                            culture = cu:azmaraan
+                        }
+                    }
+                }
+            }
+        }
+    }
+	   
+    dwarven_kronium_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dwarven_kronium_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100000
+
+                scope:character ?= {
+                    OR = {
+                        culture = cu:koshiri
+                        culture = cu:vynduri
+                        culture = cu:lithorin
+                        culture = cu:duneshar
+                        culture = cu:hornodukh
+                        culture = cu:starwoken
+                    }
+                    OR = {
+                        has_role = general
+                        has_role = admiral
+                        is_interest_group_type = ig_armed_forces
+                    }
+                }
+            }
+        }
+    }
+	
+    dwarven_basalt_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dwarven_basalt_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100000
+
+                scope:character ?= {
+                    OR = {
+                        culture = cu:yelfi
+                    }
+                    OR = {
+                        has_role = general
+                        has_role = admiral
+                        is_interest_group_type = ig_armed_forces
+                    }
+                }
+            }
+        }
+    }
+	
+	dwarven_gold_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dwarven_gold_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100000
+
+                scope:character ?= {
+                    OR = {
+                        culture = cu:vozi
+                    }
+                    OR = {
+                        has_role = general
+                        has_role = admiral
+                        is_interest_group_type = ig_armed_forces
+                    }		
+                }
+            }
+        }
+    }
+	
+	dwarven_obsidian_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dwarven_obsidian_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100000
+
+                scope:character ?= {
+                    culture = cu:arcthar
+                    OR = {
+                        has_role = general
+                        has_role = admiral
+                        is_interest_group_type = ig_armed_forces
+                    }		
+                }
+            }
+        }
+    }
+	
+	dwarven_common_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dwarven_common_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+
+                OR = {
+                    scope:pop ?= {
+                        OR = {
+                            culture = cu:arcthar
+                            culture = cu:starwoken
+                            culture = cu:hornodukh
+                            culture = cu:vynduri
+                            culture = cu:rizraflez
+                        }
+                        OR = {
+                            is_pop_type = farmers
+                            is_pop_type = laborers
+                            is_pop_type = peasants
+							is_pop_type = machinists
+                        }					
+                    }
+                }
+            }
+        }
+    }
+	
+	
 }
+

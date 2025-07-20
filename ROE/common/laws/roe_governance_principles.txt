@@ -86,6 +86,7 @@ law_plutocracy = {
 		country_legitimacy_ideological_incoherence_mult = 0.15
 		country_authority_add = 150
 		country_capitalists_pol_str_mult = 0.25
+		country_free_charters_add = 4
 	}
 
 	on_activate = {

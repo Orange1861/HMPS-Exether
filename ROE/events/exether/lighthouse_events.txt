@@ -100,4 +100,31 @@ lighthouse.2 = {
             days = normal_modifier_time
         }
 	}
+
+    	option = {
+		name = lighthouse.2.b
+        trigger = {
+            custom_tooltip = {
+        		text = lighthouse_built_tooltip
+        	}
+           has_modifier = blue_riband_leader
+           NOT = { 
+                scope:lighthouse_state_scope = {
+                has_modifier = {
+                    name = blue_riband_holder_immigration_boost
+                }
+            }
+        }
+        }
+        add_modifier = {
+            name = lighthouse_built
+            days = normal_modifier_time
+        }
+        	scope:lighthouse_state_scope = {
+		    add_modifier = {
+				name = blue_riband_holder_immigration_boost
+				days = normal_modifier_time
+			}
+		}
+	}
 }

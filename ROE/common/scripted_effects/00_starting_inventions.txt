@@ -295,8 +295,8 @@ effect_starting_technology_tier_knowledge_tech = {  # Magically focused nations.
 
 }
 
-# The standardized tech system for all orc nations
-effect_starting_technology_tier_orc_tech = {	
+# The standardized tech system for all barbarian nations (Orcs, gnolls, Conan-types)
+effect_starting_technology_tier_barbarian_tech = {
 	# Economic
 	add_technology_researched = enclosure
 	add_technology_researched = manufacturies
@@ -339,6 +339,7 @@ effect_starting_technology_tier_orc_tech = {
 	add_technology_researched = mass_communication
 	add_technology_researched = law_enforcement
 	add_technology_researched = organized_adventuring
+	add_technology_researched = international_relations
 	add_technology_researched = colonization
 }
 
@@ -389,7 +390,9 @@ effect_starting_technology_tier_druid_tech = {
 }
 
 # The standardized tech system for all Goblin nations
-effect_starting_technology_tier_goblin_tech = {	
+effect_starting_technology_tier_goblin_tech = {
+	add_technology_researched = goblin_tech
+
 	# Economic
 	add_technology_researched = enclosure
 	add_technology_researched = manufacturies
@@ -421,7 +424,9 @@ effect_starting_technology_tier_goblin_tech = {
 
 # The standardized tech system for all Ogre nations
 
-effect_starting_technology_tier_ogre_tech = {	
+effect_starting_technology_tier_ogre_tech = {
+	add_technology_researched = ogre_tech
+
 	# Economic
 	add_technology_researched = enclosure
 	add_technology_researched = manufacturies

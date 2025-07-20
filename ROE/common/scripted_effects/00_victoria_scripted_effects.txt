@@ -113,7 +113,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 									has_ideology = ideology:ideology_fascist
 									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
-									has_ideology = ideology:ideology_matriarchal_traditionalist
+									
 									has_ideology = ideology:ideology_traditionalist
 									has_ideology = ideology:ideology_ecumenical_traditionalist
 								}
@@ -171,7 +171,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 									has_ideology = ideology:ideology_fascist
 									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
-									has_ideology = ideology:ideology_matriarchal_traditionalist
+									
                 					has_ideology = ideology:ideology_traditionalist
                 					has_ideology = ideology:ideology_ecumenical_traditionalist
 								}
@@ -229,7 +229,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 									has_ideology = ideology:ideology_fascist
 									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
-									has_ideology = ideology:ideology_matriarchal_traditionalist
+									
 									has_ideology = ideology:ideology_traditionalist
 									has_ideology = ideology:ideology_ecumenical_traditionalist
 								}
@@ -286,7 +286,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 									has_ideology = ideology:ideology_fascist
 									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
-									has_ideology = ideology:ideology_matriarchal_traditionalist
+									
                 					has_ideology = ideology:ideology_traditionalist
                 					has_ideology = ideology:ideology_ecumenical_traditionalist
 								}
@@ -473,7 +473,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 									has_ideology = ideology:ideology_fascist
 									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
-									has_ideology = ideology:ideology_matriarchal_traditionalist
+									
                 					has_ideology = ideology:ideology_traditionalist
                 					has_ideology = ideology:ideology_ecumenical_traditionalist
 								}
@@ -690,7 +690,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 					NOT = {	
 						scope:exiling_country_scope.ruler ?= {
 							OR = {
-								has_ideology = ideology:ideology_matriarchal_traditionalist
+								
                 				has_ideology = ideology:ideology_traditionalist
                 				has_ideology = ideology:ideology_ecumenical_traditionalist
 							}
@@ -744,7 +744,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 									has_ideology = ideology:ideology_fascist
 									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
-									has_ideology = ideology:ideology_matriarchal_traditionalist
+									
                 					has_ideology = ideology:ideology_traditionalist
                 					has_ideology = ideology:ideology_ecumenical_traditionalist
 								}
@@ -1498,7 +1498,7 @@ conservative_agitator_election_scope_effect = {
 				has_ideology = ideology:ideology_abolitionist
 			}
 			OR = {
-				has_ideology = ideology:ideology_matriarchal_traditionalist
+				
                 has_ideology = ideology:ideology_traditionalist
                 has_ideology = ideology:ideology_ecumenical_traditionalist
 				has_ideology = ideology:ideology_slaver
@@ -2808,21 +2808,12 @@ character_traditionalist_switch_effect = {
 				religion = owner.religion
 			}
 			OR = {
-				has_ideology = ideology:ideology_matriarchal_traditionalist
+				
                 has_ideology = ideology:ideology_traditionalist
                 has_ideology = ideology:ideology_ecumenical_traditionalist
 			}
 		}
-		if = {
-			limit = {
-				has_ideology = ideology:ideology_matriarchal_traditionalist
-			}
-			set_ideology = ideology:ideology_matriarchal_minoritarian
-		}
-		else = {
-			set_ideology = ideology:ideology_traditionalist_minoritarian
-		}
-		
+		set_ideology = ideology:ideology_traditionalist_minoritarian
 	}
 	if = {
 		limit = {
@@ -2840,13 +2831,6 @@ character_traditionalist_switch_effect = {
 		else = {
 			set_ideology = ideology:ideology_traditionalist
 		}
-	}
-	if = {
-		limit = {
-			religion = owner.religion
-			has_ideology = ideology:ideology_matriachal_minoritarian
-		}
-		set_ideology = ideology:ideology_matriarchal_traditionalist
 	}
 }
 

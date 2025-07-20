@@ -1,4 +1,4 @@
-license_soulwrought_production = {
+﻿license_soulwrought_production = {
 	kind = directed
 	cost = 50
 
@@ -92,7 +92,7 @@ license_soulwrought_production = {
 	on_entry_into_force = {
 		scope:article_options.target_country ?= {
 			set_variable = soulwrought_production_var
-			if = {
+			if = { #Reactivate old buildings
 				limit = {
 					any_scope_state = {
 						state_has_building_type_levels = {
@@ -228,7 +228,7 @@ license_soulwrought_production = {
 						}
 						
 					}
-					add = {
+					add = { #licensing country has too many peasants
 						desc = "DIPLOMATIC_ACCEPTANCE_TOO_MANY_PEASANTS"
 						add = -15
 					}
@@ -419,6 +419,18 @@ license_soulwrought_production = {
 						add = 10
 					}
 				}
+				if = {
+					limit = {
+						scope:target_country ?= {
+							has_journal_entry = je_strength_of_thousands
+						}
+					}
+					add = {
+						desc = "ACCEPTANCE_FROM_GIANT"
+						add = -150
+					}
+				}
+
 				if = {
 					limit = {
 						scope:target_country ?= {

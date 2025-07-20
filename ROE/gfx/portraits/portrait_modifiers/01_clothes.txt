@@ -1967,7 +1967,7 @@
         weight = {
             base = 0
             modifier = {
-			    add = 90000
+			    add = 900000
 				
 			    has_dlc_feature = ep1_cosmetics
 				has_dlc_feature = voice_of_the_people_content
@@ -1992,7 +1992,7 @@
         weight = {
             base = 0
             modifier = {
-			    add = 90000
+			    add = 900000
 				
 			    has_dlc_feature = ep1_cosmetics
 				has_dlc_feature = voice_of_the_people_content
@@ -2017,7 +2017,7 @@
         weight = {
             base = 0
             modifier = {
-			    add = 90000
+			    add = 900000
 				
 			    has_dlc_feature = ep1_cosmetics
 				has_dlc_feature = voice_of_the_people_content
@@ -2051,7 +2051,7 @@
         weight = {
             base = 0
             modifier = {
-			    add = 90000
+			    add = 900000
 				
 			    has_dlc_feature = ep1_cosmetics
 				has_dlc_feature = voice_of_the_people_content
@@ -2764,7 +2764,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 90000
+                add = 9000
 
                 has_dlc_feature = ep1_cosmetics
 
@@ -2952,150 +2952,6 @@
     }
 
 ### Executives
-
-    ceo_arnold_peter_moller_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = civilian_coats
-                template = european_civilian_coats
-                accessory = male_civilian_coat_european_01
-            }
-            accessory = {
-                mode = add
-                gene = waistcoats
-                template = black_waistcoat
-                range = { 0 1 }
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear
-                range = { 0 1 }
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    always = no
-                }
-            }
-        }
-    }
-    ceo_lars_magnus_ericsson_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = civilian_coats
-                template = european_civilian_coats
-                accessory = male_civilian_coat_european_01
-            }
-            accessory = {
-                mode = add
-                gene = waistcoats
-                template = historical_waistcoats_dickens
-                range = { 0 1 }
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear
-                range = { 0 1 }
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    always = no
-                }
-            }
-        }
-    }
-    ceo_talaat_harb_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = top_layer
-                template = executive_overcoat
-                range = { 0 0.5 } # For the randomness to work correctly
-            }
-
-            accessory = {
-                mode = add
-                gene = civilian_coats
-                template = european_executive_coats
-                range = { 0 1 } # For the randomness to work correctly
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear
-                range = { 0 1 } # For the randomness to work correctly
-            }
-            # headgear set in arabic_fez headgear file
-        }
-
-        weight = {
-            modifier = {
-                add = 90000
-                has_dlc_feature = mp1_cosmetics
-                scope:character ?= {
-                    always = no
-                }
-            }
-        }
-    }
-    ceo_isambard_kingdom_brunel_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = top_layer
-                template = executive_overcoat
-                range = { 0 1 } # For the randomness to work correctly
-            }
-
-            accessory = {
-                mode = add
-                gene = civilian_coats
-                template = european_executive_coats
-                range = { 0 1 } # For the randomness to work correctly
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear
-                range = { 0 1 } # For the randomness to work correctly
-            }
-
-            accessory = {
-                mode = add
-                gene = props
-                template = cigar_and_pipes
-                range = { 0.9 1 } # For cigars only
-            }
-
-            # headgear set in headgear file
-        }
-
-        weight = {
-            modifier = {
-                add = 90000
-                has_dlc_feature = mp1_cosmetics
-                scope:character ?= {
-                    AND = {
-                        always = no
-                        has_role = executive
-                    }
-                }
-            }
-        }
-    }
 
 ### BACK TO YOUR REGULAR SCHEDULED PROGRAMMING ###
 
@@ -6079,6 +5935,16 @@ indigenous_oceanic_high_clothes_recognized = {
         modifier = {
             add = 1000
             OR = {
+                    NOT = {
+                        scope:character ?= {
+                            culture = {
+                                has_discrimination_trait = embervein_warriors_culture_group
+                            }
+                        }
+                    }
+            }			
+			
+            OR = {
                 indigenous_oceanic_clothes_trigger = yes
                 scope:pop ?= {
                     culture = {
@@ -7443,7 +7309,7 @@ indigenous_oceanic_high_clothes_recognized = {
             }
         }
     }
-
+	
     zulu_ruler_clothes = {
         dna_modifiers = {
             accessory = {
@@ -7464,8 +7330,8 @@ indigenous_oceanic_high_clothes_recognized = {
         weight = {
             base = 0
             modifier = {
-                add = 1000
-
+                add = 5000
+                recognized_country_trigger = no
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
@@ -7474,6 +7340,7 @@ indigenous_oceanic_high_clothes_recognized = {
                     OR = {
                         has_culture = cu:kaalkid
                         has_culture = cu:tozhi
+                        has_culture = cu:underkaal						
                     }
                 }
             }
@@ -7492,16 +7359,17 @@ indigenous_oceanic_high_clothes_recognized = {
         weight = {
             base = 0
             modifier = {
-                add = 1000
+                add = 5000
 
                 has_dlc_feature = ep1_cosmetics
-
+                recognized_country_trigger = no
                 scope:character ?= {
                     is_heir = yes
                     is_female = no
                     OR = {
                         has_culture = cu:kaalkid
                         has_culture = cu:tozhi
+                        has_culture = cu:underkaal						
                     }
                 }
             }
@@ -7526,8 +7394,8 @@ indigenous_oceanic_high_clothes_recognized = {
         weight = {
             base = 0
             modifier = {
-                add = 1000
-
+                add = 5000
+                recognized_country_trigger = no
                 has_dlc_feature = ep1_cosmetics
 
                 OR = {
@@ -7535,6 +7403,7 @@ indigenous_oceanic_high_clothes_recognized = {
                         OR = {
                             culture = cu:kaalkid
                             culture = cu:tozhi
+							culture = cu:underkaal								
                         }
                         OR = {
                             is_pop_type = aristocrats
@@ -7548,6 +7417,7 @@ indigenous_oceanic_high_clothes_recognized = {
                         OR = {
                             has_culture = cu:kaalkid
                             has_culture = cu:tozhi
+							has_culture = cu:underkaal								
                         }                    
                     }
                 }
@@ -7860,6 +7730,9 @@ buddhist_religious_clothes = {
             OR = {
                 AND = {
                     buddhist_clothes_pop_trigger = yes
+                }
+                scope:character ?= {
+                     is_interest_group_type = ig_mages
                 }
 
             }
@@ -8448,5 +8321,875 @@ ottoman_military_clothes = {
     }
 }
 
+    embervein_orcs_recognized_ruler_male = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = indian_high_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = sashes
+                template = african_sashes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = african_necklace
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }		
+		
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+                recognized_country_trigger = yes
+                scope:character ?= {
+                    is_ruler = yes
+                    is_female = no
+                    OR = {
+                        has_culture = cu:kaalkid
+                        has_culture = cu:tozhi
+                        has_culture = cu:underkaal						
+                    }
+					
+                    }
+                }
+            }
+        }
+    
+	
+    embervein_orcs_recognized_ruler_female = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = indian_high_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = sashes
+                template = african_sashes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = indian_necklaces
+                range = { 0 0.4 } # For the randomness to work correctly
+            }
+        }		
+		
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+                recognized_country_trigger = yes
+                scope:character ?= {
+                    is_ruler = yes
+                    is_female = yes
+                    OR = {
+                        has_culture = cu:kaalkid
+                        has_culture = cu:tozhi
+                        has_culture = cu:underkaal						
+                    }
+					
+                }
+            }
+        }
+    }	
 
-}
+    Yingulnado_autocrat_ruler_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = late_american_soldier_coat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_late_military_legwear
+                accessory = male_legwear_british_late_military_01
+            }
+        }
+
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = belts
+                template = late_military_belts
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+		
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = all_epaulettes
+                accessory = male_epaulettes_04
+            }
+        }
+		
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = african_necklaces
+                range = { 0 0.4 } # For the randomness to work correctly
+            }
+        }		
+		
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+				
+                scope:character ?= {
+                    is_ruler = yes
+					is_female = no
+                    home_country ?= c:THK
+					
+                    owner ?={
+						OR = {
+							has_law = law_type:law_monarchy
+							has_law = law_type:law_corporate_state
+							has_law = law_type:law_plutocracy
+                         }
+                    }
+                }
+            }
+        }
+    }
+
+    Yingulnado_democrat_ruler_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = african_outfits_politician
+                range = { 0.7 1 } # For the randomness to work correctly
+            }
+        }		
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = african_necklaces
+                range = { 0 0.4 } # For the randomness to work correctly
+            }
+        }		
+		
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+				
+                scope:character ?= {
+                    is_ruler = yes
+                    home_country ?= c:THK
+					
+                    owner ?={
+						NOR = {
+							has_law = law_type:law_monarchy
+							has_law = law_type:law_corporate_state
+							has_law = law_type:law_plutocracy
+                         }
+                    }
+                }
+            }
+        }
+    }
+	
+    dwarf_rulers_male = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = indian_high_outfits
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 9999
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+					is_female = no
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                }
+            }
+        }
+    }
+
+        duneshar_kings = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = persian_royal_coat
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = male_legwear_russian_military_01
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template = persian_royal_belt
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    culture = cu:duneshar
+                     owner ?={
+                    OR = {
+                        has_law = law_type:law_monarchy
+                        has_law = law_type:law_corporate_state
+                         }
+                            }
+                }
+            }
+        }
+    }
+
+    desert_ogre_kings = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = prussian_coats
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = male_legwear_russian_military_01
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = cuirass_top_layer
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    culture = cu:onikoku
+                     owner ?={
+                    OR = {
+                        has_law = law_type:law_monarchy
+                        has_law = law_type:law_corporate_state
+                         }
+                            }
+                }
+            }
+        }
+    }
+
+    desert_ogre_kings = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = prussian_coats
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = male_legwear_russian_military_01
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = cuirass_top_layer
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    culture = {
+                        has_discrimination_trait = dwarf_heritage
+                    }
+                    OR = {
+                        has_role = general
+                        has_role = admiral
+                        is_interest_group_type = ig_armed_forces
+                    }
+                }
+            }
+        }
+    }
+
+        lithorin_theocrat = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = indian_scarf_layer
+                range = { 0 1 }
+            }
+                        accessory = {
+                mode = add
+                gene = outfits
+                template = semitic_upper_outfits
+                range = { 0 1 }
+            }
+                        accessory = {
+                mode = add
+                gene = legwear
+                template = south_american_legwear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+                    scope:character ?= {
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                        is_ruler = yes
+                        owner ?={
+                    OR = {
+                        has_law = law_type:law_theocracy
+                         }
+                            }
+                    }
+            }
+        }
+    }
+
+        dwarf_theocrat_ig = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = indian_scarf_layer
+                range = { 0 1 }
+            }
+                        accessory = {
+                mode = add
+                gene = outfits
+                template = semitic_upper_outfits
+                range = { 0 1 }
+            }
+                        accessory = {
+                mode = add
+                gene = legwear
+                template = south_american_legwear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+                        scope:character ?= {
+						is_female = no
+                        has_role = politician
+                        interest_group = {
+                            is_interest_group_type = ig_devout
+                        }
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                        is_ruler = no
+                    }
+            }
+        }
+    }
+
+        dwarf_female_theocrat = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = outfit_indian_cotton
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = yes						
+                        has_role = politician
+                        interest_group = {
+                            is_interest_group_type = ig_devout
+                        }
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }     
+                    }
+					                       
+						scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        interest_group = {
+                            is_interest_group_type = ig_devout
+                        }
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }     
+                    }
+				}
+			}
+		}
+	}	
+	
+        dwarf_female_politician = {
+            dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = female_outfit_indian_diwali
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = necklaces
+                template = indian_necklaces
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 9999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = yes						
+                        has_role = politician
+                         NOT = { 
+                           is_interest_group_type = ig_devout
+                         }
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+						}     
+					}
+					
+					    scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }     
+                    }
+				}
+			}
+		}
+	}
+	
+        dark_elf_aridrun_female_politician = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = MOD_dark_elf_colors
+                template = slavic_outfits
+                range = { 0 1 }
+            }
+        }	
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = yes						
+                        has_role = politician
+                        culture = cu:aridrun     
+					}
+					
+					    scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        culture = cu:aridrun    
+                    }
+				}
+			}
+		}
+	}
+	
+        dark_elf_aridrun_male_politician = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = MOD_dark_elf_colors_male
+                template = slavic_outfits
+                range = { 0 1 }
+            }
+        }	
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                accessory = male_legwear_european_01_black
+            }
+		}
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = no						
+                        has_role = politician
+                        culture = cu:aridrun    
+					}
+					
+					    scope:character ?= {
+						is_female = no						
+                        is_ruler = yes
+                        culture = cu:aridrun     
+                    }
+				}
+			}
+		}
+	}	
+	
+        dark_elf_empire_female_politician = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = MOD_dark_elf_colors2
+                template = slavic_outfits
+                range = { 0 1 }
+            }
+        }	
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = yes						
+                        has_role = politician
+                        culture = cu:cithrel    
+					}
+					
+					    scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        culture = cu:cithrel
+                    }
+				}
+			}
+		}
+	}
+	
+        dark_elf_empire_male_politician = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = MOD_dark_elf_colors2_male
+                template = slavic_outfits
+                range = { 0 1 }
+            }
+        }	
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                accessory = male_legwear_european_01_white
+            }
+		}
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+				OR = {
+                        scope:character ?= {
+						is_female = no						
+                        has_role = politician
+                        culture = cu:cithrel    
+					}
+					
+					    scope:character ?= {
+						is_female = no						
+                        is_ruler = yes
+                        culture = cu:cithrel     
+                    }
+				}
+			}
+		}
+	}		
+	
+        pirate_ruler_female = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = coats
+                template = vivandiere_coats
+                range = { 0.6 1 } 
+            }
+		}	
+			dna_modifiers = {			
+            accessory = {
+                mode = add
+                gene = legwear
+                template = vivandiere_legwear
+                range = { 0 1 } 
+            }
+        } 
+			dna_modifiers = {		
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 } 
+            }	
+		}	
+		
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+					    scope:character ?= {
+						is_female = yes						
+                        is_ruler = yes
+                        culture = cu:south_sea_ravager
+
+				}
+			}
+		}
+	}
+	
+        pirate_ruler_male = {
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = european_outfits_agitator
+                range = { 0 1 }
+            }
+        }	
+			dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = legwear
+                template = male_legwear_colored_military_01
+                range = { 0 1 }
+            }
+		}
+        weight = {
+            base = 0
+            modifier = {
+                add = 99999
+
+                has_dlc_feature = ep1_cosmetics
+
+					    scope:character ?= {
+						is_female = no						
+                        is_ruler = yes
+                        culture = cu:south_sea_ravager    
+				}
+			}
+		}
+	}
+
+    european_common_executive_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = executive_overcoat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_executive_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = props
+                template = gene_lences
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                has_dlc_feature = mp1_cosmetics
+                AND = {
+                    OR = {
+                        european_clothes_trigger = yes
+                        african_diaspora_clothes_trigger = yes
+                        AND = {
+                            european_clothes_trigger = no
+                            scope:character ?= {
+                                NOT = { has_ideology = ideology:ideology_traditionalist }
+                                owner ?= {
+                                    OR = {
+                                        AND = {
+                                            has_technology_researched = investment_banks
+                                            NOT = {
+                                                has_law = law_type:law_isolationism
+                                            }
+                                        }
+                                        is_country_type = recognized
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    OR = {
+                        AND = {
+                            politician_clothes_trigger = yes
+                            scope:character ?= {
+                                is_interest_group_type = ig_industrialists
+                            }
+                        }
+                        executive_clothes_trigger = yes
+                    }
+                }
+            }
+        }
+    }
+
+common_gnome_cloths = {
+        dna_modifiers = {
+             accessory = {
+                mode = add
+                gene = exether_shirts
+                template = gnome_common_shirt
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = exether_neckleces
+                template = gnome_common_scarf
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = exether_legwear
+                template = gnome_common_cloths
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+
+                OR = {
+                    scope:pop ?= {
+                        OR = {
+                            culture = cu:azmaraan
+                            culture = cu:qinnaat
+                        }
+                        OR = {
+                            is_pop_type = farmers
+                            is_pop_type = laborers
+                            is_pop_type = peasants
+							is_pop_type = machinists
+						}	
+					}		
+                }
+            }
+        }
+    }
+
+  
+
+}		

@@ -34,7 +34,7 @@
 		exists = ruler
 		ruler = {
 			OR = {
-				has_ideology = ideology:ideology_matriarchal_traditionalist
+				
                 has_ideology = ideology:ideology_traditionalist
                 has_ideology = ideology:ideology_ecumenical_traditionalist
 			}

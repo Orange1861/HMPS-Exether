@@ -29,6 +29,9 @@
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_dwarf_compulsory_guild_apprenticeship
 
+		add_journal_entry = {
+			type = je_ring_on_it
+		}
 		set_tax_level = medium
 	}
 }

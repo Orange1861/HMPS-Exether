@@ -1209,10 +1209,12 @@ pm_steam_engines_guild_bonded = {
 pm_cloudsilver_alloying_guild_bonded = {
 	texture = "gfx/interface/icons/production_method_icons/electric_arc_process.dds"
 
+	is_hidden_when_unavailable = yes
+
 	unlocking_production_methods = {
-		pm_bessemer_process
-		pm_open_hearth_process
-		pm_electric_arc_process
+		pm_bessemer_process_guild_bonded
+		pm_open_hearth_process_guild_bonded
+		pm_electric_arc_process_guild_bonded
 	}
 
 	unlocking_laws = {
@@ -1221,7 +1223,7 @@ pm_cloudsilver_alloying_guild_bonded = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 25
+			state_pollution_generation_add = 5
 		}
 	}
 	
@@ -1232,17 +1234,12 @@ pm_cloudsilver_alloying_guild_bonded = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_cloudsilver_add = 10 #40 = -400
+			goods_input_cloudsilver_add = 15 #40 = -600
 			
 			# output goods
 			goods_output_steel_add = 15 #50 = 750
 		}
 
-		level_scaled = {
-			# employment
-			building_employment_guild_bonded_add = -500
-			building_employment_machinists_add = 500
-		}
 	}
 
 }
@@ -2105,14 +2102,11 @@ pm_cloudsilver_cartridges_guild_bonded = {
 		workforce_scaled = {
 			# input goods
 			goods_input_cloudsilver_add = 20 #40 = 800
+			goods_input_lead_add = -10 #40 = -400
 			# output goods
-			goods_output_ammunition_add = 20 #50 = 1000
+			goods_output_ammunition_add = 10 #50 = 500
 		}
 
-		level_scaled = {
-			building_employment_guild_bonded_add = -500
-			building_employment_machinists_add = 500
-		}
 	}
 }
 
@@ -2580,6 +2574,67 @@ pm_mechamagic_looms_guild_bonded = {
 		level_scaled = {
 			# profit = 
 			building_employment_guild_bonded_add = -2500
+		}
+	}
+}
+
+pm_watertube_boiler_building_gizmo_workshop_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	is_hidden_when_unavailable = yes
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_technologies = {
+		watertube_boiler
+	}
+	
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 5
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1000
+		}
+	}
+}
+
+pm_rotary_valve_engine_building_motor_industry_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	is_hidden_when_unavailable = yes
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1000 #no guild pm
+			building_employment_machinists_add = -500
 		}
 	}
 }
@@ -3094,6 +3149,160 @@ pm_watertube_boiler_building_furniture_manufacturies_guild_bonded = {
 	}
 }
 
+pm_rotary_valve_engine_building_potion_distillery_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	unlocking_production_methods = {
+		pm_early_potion_vat_production
+		pm_wishtone_potion_process_production
+		pm_cool_name_potion_process_production
+	}
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1000
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
+pm_rotary_valve_engine_building_furniture_manufacturies_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -2000
+		}
+	}
+}
+
+pm_assembly_line_bottling_blubber_building_potion_distillery_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15  
+		}
+	}
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_industry_banned
+	}
+
+	unlocking_production_methods = {
+		pm_early_potion_vat_production
+		pm_wishtone_potion_process_production
+		pm_cool_name_potion_process_production
+	}
+	unlocking_technologies = {
+		conveyors
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_blubber_add = 5
+			goods_input_electricity_add = 5
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1250
+			building_employment_machinists_add = -750
+		}
+	}
+
+	required_input_goods = electricity
+}
+
+pm_watertube_boiler_building_potion_distillery_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	is_hidden_when_unavailable = yes
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_production_methods = {
+		pm_early_potion_vat_production
+		pm_wishtone_potion_process_production
+		pm_cool_name_potion_process_production
+	}
+
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	unlocking_technologies = {
+		watertube_boiler
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 5
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -500
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
 pm_assembly_lines_building_motor_industry_guild_bonded = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 
@@ -3367,6 +3576,37 @@ pm_magical_looms_guild_bonded = {
 	}
 }
 
+pm_watertube_boiler_building_motor_industry_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	is_hidden_when_unavailable = yes
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	unlocking_technologies = {
+		watertube_boiler
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 5
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -500 #no guild pm
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
 pm_rotary_valve_engine_building_gizmo_workshop_guild_bonded = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	
@@ -3397,6 +3637,34 @@ pm_rotary_valve_engine_building_gizmo_workshop_guild_bonded = {
 			building_employment_guild_bonded_add = -1500
 		}
 	}
+}
+
+pm_assembly_line_building_thaumacore_foundry_guild_bonded = {
+	is_hidden_when_unavailable = yes
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+
+	unlocking_technologies = {
+		conveyors
+	}
+	
+	unlocking_laws = {
+		law_guild_bondage
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 5
+			goods_input_blubber_add = 5
+			goods_input_electricity_add = 5
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1500
+			building_employment_machinists_add = -500
+		}
+	}
+
+	required_input_goods = electricity
 }
 
 pm_artificer_assembly_line_building_thaumacore_foundry_guild_bonded = {
@@ -3484,6 +3752,275 @@ pm_artificer_watertube_boiler_building_steel_mills_guild_bonded = {
 
 		level_scaled = {
 			building_employment_guild_bonded_add = -1500
+		}
+	}
+}
+
+pm_artificer_watertube_boiler_building_gizmo_workshop_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5
+		}
+	}
+
+	unlocking_technologies = {
+		advanced_contraptions
+	}
+
+	unlocking_laws = {
+		law_artificer_guilds
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_mage_hunters
+		law_druidic_circles
+		law_divine_miracles
+		law_no_magic
+		law_slavery_banned
+		law_debt_slavery
+		law_slave_trade
+		law_legacy_slavery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wishstone_add = 10
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1000
+		}
+	}
+}
+
+pm_artificer_rotary_valve_engine_building_gizmo_workshop_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		thaumaic_engines
+	}
+
+	unlocking_laws = {
+		law_artificer_guilds
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_mage_hunters
+		law_druidic_circles
+		law_divine_miracles
+		law_no_magic
+		law_slavery_banned
+		law_debt_slavery
+		law_slave_trade
+		law_legacy_slavery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ectoplasm_add = 9
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1500
+		}
+	}
+}
+
+pm_artificer_watertube_boiler_building_thaumacore_foundry_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10
+		}
+	}
+	unlocking_technologies = {
+		advanced_contraptions
+	}
+	unlocking_laws = {
+		law_artificer_guilds
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_mage_hunters
+		law_druidic_circles
+		law_divine_miracles
+		law_no_magic
+		law_slavery_banned
+		law_debt_slavery
+		law_slave_trade
+		law_legacy_slavery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wishstone_add = 10
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -500
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
+pm_artificer_rotary_valve_engine_building_thaumacore_foundry_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		thaumaic_engines
+	}
+
+	unlocking_laws = {
+		law_artificer_guilds
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_mage_hunters
+		law_druidic_circles
+		law_divine_miracles
+		law_no_magic
+		law_slavery_banned
+		law_debt_slavery
+		law_slave_trade
+		law_legacy_slavery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gizmos_add = 7.5
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1000
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
+pm_artificer_watertube_boiler_building_potion_distillery_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	is_hidden_when_unavailable = yes
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5
+		}
+	}
+
+
+	unlocking_production_methods = {
+		pm_early_potion_vat_production
+		pm_wishtone_potion_process_production
+		pm_cool_name_potion_process_production
+	}
+
+	unlocking_laws = {
+		law_artificer_guilds
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_mage_hunters
+		law_druidic_circles
+		law_divine_miracles
+		law_no_magic
+		law_slavery_banned
+		law_debt_slavery
+		law_slave_trade
+		law_legacy_slavery
+	}
+	
+	unlocking_technologies = {
+		advanced_contraptions
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wishstone_add = 12
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -500
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
+pm_artificer_rotary_valve_engine_building_potion_distillery_guild_bonded = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	is_hidden_when_unavailable = yes
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 10
+		}
+	}
+
+	unlocking_production_methods = {
+		pm_early_potion_vat_production
+		pm_wishtone_potion_process_production
+		pm_cool_name_potion_process_production
+	}
+
+	unlocking_laws = {
+		law_artificer_guilds
+		law_guild_bondage
+	}
+
+	disallowing_laws = {
+		law_magic_banned
+		law_mage_hunters
+		law_druidic_circles
+		law_divine_miracles
+		law_no_magic
+		law_slavery_banned
+		law_debt_slavery
+		law_slave_trade
+		law_legacy_slavery
+	}
+	
+	unlocking_technologies = {
+		thaumaic_engines
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_ectoplasm_add = 10
+		}
+
+		level_scaled = {
+			building_employment_guild_bonded_add = -1000
+			building_employment_machinists_add = -500
 		}
 	}
 }

@@ -617,7 +617,7 @@
       region_state:OEX = {
         create_pop = {
           culture = arcthar
-          size = 3053200
+          size = 953200
         }
         create_pop = {
           pop_type = slaves
@@ -726,30 +726,6 @@
         }
       }
   }
-
-
-    s:STATE_LOCHTYRE = {
-      region_state:DUM = {
-        create_pop = {
-          culture = dumonian
-          size = 650857
-        }
-        create_pop = {
-          culture = uplander
-          size = 82037
-        }
-        create_pop = {
-          culture = dumonian
-          religion = cult_of_the_sun
-          size = 56840
-        }
-        create_pop = {
-          culture = gelidrumin
-          size = 159944
-        }
-      }
-    }
-
 
     s:STATE_MELENLECK = {
       region_state:DUM = {
@@ -876,16 +852,21 @@
       region_state:DUM = {
         create_pop = {
           culture = dumonian
-          size = 1644358
+          size = 2244358
         }
         create_pop = {
           culture = gelidrumin
-          size = 102912
+          size = 322912
         }
         create_pop = {
           culture = gelidrumin
           religion = cult_of_the_sun
           size = 9821
+        }
+        create_pop = {
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 56840
         }
       }
     }

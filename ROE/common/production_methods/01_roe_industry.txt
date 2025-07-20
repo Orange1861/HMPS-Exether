@@ -136,13 +136,13 @@ pm_otherworldly_gizmos = {
 #alter workforce for gizmo productiom PMs soon-Grappes
 pm_watertube_boiler_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
-	
+	replacement_if_valid = pm_watertube_boiler_building_gizmo_workshop_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 5
 		}
 	}
-	
+
 	unlocking_technologies = {
 		watertube_boiler
 	}
@@ -155,7 +155,6 @@ pm_watertube_boiler_building_gizmo_workshop = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -1000
 			building_employment_laborers_add = -1000
 		}
 	}
@@ -426,7 +425,7 @@ pm_sweet_mixins = {
 
 pm_watertube_boiler_building_potion_distillery = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
-	
+	replacement_if_valid = pm_watertube_boiler_building_potion_distillery_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 5
@@ -450,7 +449,6 @@ pm_watertube_boiler_building_potion_distillery = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -500
 			building_employment_laborers_add = -500
 			building_employment_machinists_add = -500
 		}
@@ -459,7 +457,7 @@ pm_watertube_boiler_building_potion_distillery = {
 
 pm_rotary_valve_engine_building_potion_distillery = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
-	
+	replacement_if_valid = pm_rotary_valve_engine_building_potion_distillery_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -483,7 +481,6 @@ pm_rotary_valve_engine_building_potion_distillery = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -1000
 			building_employment_laborers_add = -1000
 			building_employment_machinists_add = -500
 		}
@@ -492,6 +489,7 @@ pm_rotary_valve_engine_building_potion_distillery = {
 
 pm_assembly_line_bottling_blubber_building_potion_distillery = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	replacement_if_valid = pm_assembly_line_bottling_blubber_building_potion_distillery_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 15  
@@ -502,6 +500,7 @@ pm_assembly_line_bottling_blubber_building_potion_distillery = {
 		pm_wishtone_potion_process_production
 		pm_cool_name_potion_process_production
 	}
+	
 	unlocking_technologies = {
 		conveyors
 	}
@@ -515,7 +514,6 @@ pm_assembly_line_bottling_blubber_building_potion_distillery = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -1250
 			building_employment_laborers_add = -1250
 			building_employment_machinists_add = -750
 		}
@@ -981,7 +979,7 @@ pm_rotary_valve_engine_building_thaumacore_foundry = {
 pm_assembly_line_building_thaumacore_foundry = {
 
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
-
+	replacement_if_valid = pm_assembly_line_building_thaumacore_foundry_guild_bonded
 	unlocking_technologies = {
 		conveyors
 	}
@@ -1286,7 +1284,7 @@ pm_artificer_assembly_lines_building_furniture_manufacturies = {
 pm_artificer_watertube_boiler_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
 	is_hidden_when_unavailable = yes
-
+	replacement_if_valid = pm_artificer_watertube_boiler_building_gizmo_workshop_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 5
@@ -1312,13 +1310,13 @@ pm_artificer_watertube_boiler_building_gizmo_workshop = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1000
-			building_employment_guild_bonded_add = -1000
 		}
 	}
 }
 
 pm_artificer_rotary_valve_engine_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	replacement_if_valid = pm_artificer_rotary_valve_engine_building_gizmo_workshop_guild_bonded
 	is_hidden_when_unavailable = yes
 
 	state_modifiers = {
@@ -1346,7 +1344,6 @@ pm_artificer_rotary_valve_engine_building_gizmo_workshop = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1500
-			building_employment_guild_bonded_add = -1500
 		}
 	}
 }
@@ -1390,6 +1387,7 @@ pm_artificer_assembly_lines_building_gizmo_workshop = {
 
 pm_artificer_watertube_boiler_building_thaumacore_foundry = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	replacement_if_valid = pm_artificer_watertube_boiler_building_thaumacore_foundry_guild_bonded
 	is_hidden_when_unavailable = yes
 
 	state_modifiers = {
@@ -1414,7 +1412,6 @@ pm_artificer_watertube_boiler_building_thaumacore_foundry = {
 
 		level_scaled = {
 			building_employment_laborers_add = -500
-			building_employment_guild_bonded_add = -500
 			building_employment_machinists_add = -500
 		}
 	}
@@ -1423,6 +1420,7 @@ pm_artificer_watertube_boiler_building_thaumacore_foundry = {
 pm_artificer_rotary_valve_engine_building_thaumacore_foundry = {
 
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	replacement_if_valid = pm_artificer_rotary_valve_engine_building_thaumacore_foundry_guild_bonded
 	is_hidden_when_unavailable = yes
 
 	state_modifiers = {
@@ -1449,7 +1447,6 @@ pm_artificer_rotary_valve_engine_building_thaumacore_foundry = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1000
-			building_employment_guild_bonded_add = -1000
 			building_employment_machinists_add = -500
 		}
 	}
@@ -1494,6 +1491,7 @@ pm_artificer_assembly_line_building_thaumacore_foundry = {
 pm_artificer_watertube_boiler_building_potion_distillery = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
 	is_hidden_when_unavailable = yes
+	replacement_if_valid = pm_artificer_watertube_boiler_building_potion_distillery_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 5
@@ -1524,7 +1522,6 @@ pm_artificer_watertube_boiler_building_potion_distillery = {
 
 		level_scaled = {
 			building_employment_laborers_add = -500
-			building_employment_guild_bonded_add = -500
 			building_employment_machinists_add = -500
 		}
 	}
@@ -1533,6 +1530,7 @@ pm_artificer_watertube_boiler_building_potion_distillery = {
 pm_artificer_rotary_valve_engine_building_potion_distillery = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	is_hidden_when_unavailable = yes
+	replacement_if_valid = pm_artificer_rotary_valve_engine_building_potion_distillery_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_veil_integrity_contribution = 10
@@ -1562,7 +1560,6 @@ pm_artificer_rotary_valve_engine_building_potion_distillery = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1000
-			building_employment_guild_bonded_add = -1000
 			building_employment_machinists_add = -500
 		}
 	}

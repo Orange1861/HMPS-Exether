@@ -321,14 +321,6 @@ s:STATE_DRUMAGAR = {
 	add_homeland = cu:fire_giant
 }
 
-s:STATE_LOCHTYRE = {
-	create_state = {
-	country = c:DUM
-	owned_provinces = { "x6FEDF4" "x7CFDCF" "xC0BE88" "xCAACFD" "xCBC6B7" "xD9ACE1" "xDDA87A" "xE6BFED" "xEAE630" "xF4B08B" "xFC7EC4" "xFE5AE8" "xFEA99C" "xFEF142" }
-	}
-	add_homeland = cu:dumonian #Sets the state to be a homeland for whatever culture you put here.
-}
-
 s:STATE_MELENLECK = {
 	create_state = {
 	country = c:DUM
@@ -356,7 +348,7 @@ s:STATE_URIKS_GIFT = {
 s:STATE_INVERINGAR = {
 	create_state = {
 	country = c:DUM
-	owned_provinces = { "x2BDEF3" "x3CD9FA" "x5CE0CC" "x6AD0DE" "x90F8FC" "x9F8BE0" "xAF77D1" "xD3F0CA" "xD9E0FE" "xE3C2F2" "xE76CAF" "xECEAF9" "xF7EB9B" "xF8E594" "xF9C7FC" }
+	owned_provinces = { x1FFDFC x2BDEF3 x3CD9FA x5CE0CC x6AD0DE x90F8FC x9F8BE0 xAF77D1 xC4B499 xD3F0CA xD9E0FE xE3C2F2 xE52CF3 xE76CAF xECEAF9 "xF7EB9B" "xF8E594" "xF9C7FC" }
 	}
 	add_homeland = cu:dumonian #Sets the state to be a homeland for whatever culture you put here.
 }
@@ -401,7 +393,7 @@ s:STATE_ARCTHARAL = {
 s:STATE_MALINMORE = {
 	create_state = {
 	country = c:DUM
-	owned_provinces = { "x1FFDFC" "x6BA5F7" "x88CAE1" "xA9E39B" "xB4A3F1" "xB7C6EE" "xB9E9B7" "xBCE06B" "xC07BED" "xC4B499" "xD990F4" "xE52CF3" "xF095A2" "xF5B494" }
+	owned_provinces = { x6BA5F7 x6FEDF4 x7CFDCF x88CAE1 xA9E39B xB4A3F1 xB7C6EE xB9E9B7 xBCE06B xC07BED xC0BE88 "xCAACFD" "xCBC6B7" "xD990F4" "xD9ACE1" "xDDA87A" "xE6BFED" "xEAE630" "xF095A2" "xF4B08B" "xF5B494" "xFC7EC4" "xFE5AE8" "xFEA99C" "xFEF142" }
 	}
 	add_homeland = cu:dumonian #Sets the state to be a homeland for whatever culture you put here.
 }

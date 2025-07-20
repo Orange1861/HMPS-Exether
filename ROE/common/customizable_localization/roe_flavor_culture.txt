@@ -517,6 +517,13 @@
 		}
 		localization_key = rahoru_flavor
 	}
+	
+	text = {
+		trigger = {
+			this = cu:atamkumi
+		}
+		localization_key = atamkumi_flavor
+	}
 
 	text = {
 		trigger = {
@@ -837,13 +844,6 @@
 			this = cu:praprandgaw
 		}
 		localization_key = praprandgaw_flavor
-	}
-
-	text = {
-		trigger = {
-			this = cu:awakened_east2
-		}
-		localization_key = awakened_east2_flavor
 	}
 
 	text = {

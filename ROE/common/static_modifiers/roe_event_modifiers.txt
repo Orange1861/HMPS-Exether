@@ -1,4 +1,4 @@
-﻿
+
 thalorian_victor = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
 	country_prestige_add = 25
@@ -567,7 +567,7 @@ secrets_of_the_obelisks_2 = {
 
 mutagenic_ranches_modifier  = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
-	building_group_bg_livestock_ranches_throughput_add = 0.2
+	building_group_bg_ranching_throughput_add = 0.2
 }
 
 centralized_mutagenetic_testing = {
@@ -647,6 +647,233 @@ mutagens_restricted = {
 	state_radicals_from_political_movements_mult = 0.2
 }
 
+wards_of_the_state = {
+	icon = 	"gfx/interface/icons/timed_modifier_icons/modifier_soldier_positive.dds"
+	state_education_access_add = 0.05
+	state_adventurer_coverage_mult = -0.2
+	country_expenses_add = 500
+}
+
+child_adventurers = {
+	icon = 	"gfx/interface/icons/timed_modifier_icons/modifier_soldier_negative.dds"
+	state_education_access_add = -0.1
+	state_adventurer_coverage_add = 20
+	state_adventurer_coverage_mult = 0.15
+}
+
+adventurer_wage_stipends = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	state_adventurers_dependent_wage_mult = 0.2
+	state_adventurer_coverage_add = 10
+	state_adventurer_coverage_mult = 0.15
+	country_bureaucracy_mult -0.03
+	country_expenses_add = 500
+}
+
+denied_adventurer_wage_stipends = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_negative.dds"
+	country_adventurers_pol_str_mult = -0.15
+	state_adventurer_coverage_mult = -0.25
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+adventurer_auxiliaries = { 
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	unit_army_experience_gain_mult = 0.2
+	unit_recovery_rate_add = 0.1
+}
+
+adventurers_tome = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_positive.dds"
+	country_prestige_mult = 0.1
+	building_group_bg_hunting_throughput_add = 0.15
+}
+
+adventurers_gone_fishing = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_positive.dds"
+	building_group_bg_fishing_throughput_add = 0.2
+	country_adventurers_pol_str_mult = -0.15
+}
+
+the_adventurer_class = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	country_adventurers_pol_str_mult = 0.35
+	state_adventurer_coverage_mult = 0.25
+}
+
+anti_monster_fund = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	state_adventurer_coverage_mult = 0.2
+	state_adventurer_coverage_add = 10
+}
+
+strength_of_thousands = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	building_group_bg_extraction_employee_mult = -0.65
+	building_group_bg_manufacturing_employee_mult = -0.25
+	building_group_bg_magic_manufacturing_employee_mult = -0.25
+}
+
+strength_of_hundreds = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	building_group_bg_extraction_employee_mult = -0.35
+}
+
+famous_adventurer_death = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds"
+	country_prestige_mult = -0.1
+	state_adventurer_coverage_mult = -0.1
+}
+
+adventurers_curriculum = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_positive.dds"
+	state_education_access_add = 0.1
+	interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.15
+}
+
+ignored_radical_druid = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds"
+	interest_group_approval_add = -3
+}
+
+crushed_radical_druid = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds"
+	interest_group_approval_add = 3
+}
+
+radical_druid = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds"
+	state_radicals_from_political_movements_mult = 0.25
+	state_adventurer_coverage_add = -25
+}
+
+natural_society_studies = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_positive.dds"
+	country_society_tech_research_speed_mult = 0.1
+}
+
+adventurers_sky_marshals = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds"
+	state_adventurer_coverage_mult = -0.25
+}
+
+sky_pirates = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_mobilization_negative.dds"
+	building_airship_dock_throughput_add = -0.2
+}
+
+sky_pirate_base = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_mobilization_negative.dds"
+	state_adventurer_coverage_mult = -0.25
+	state_market_access_price_impact = -0.1
+}
+
+ignored_adventurer_death = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	interest_group_approval_add = -3
+}
+machine_gun_restrictions = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds"
+	state_adventurer_coverage_mult = -0.3
+}
+
+refused_machine_gun_restrictions = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	interest_group_approval_add = -3
+}
+
+small_arms_refactoring = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_soldier_negative.dds"
+	building_arms_industry_throughput_add = -0.15
+}
+
+restricted_machinegun_ownership = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	interest_group_approval_add = 4
+}
+
+mage_patrols = {
+	icon = 	"gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	state_adventurer_coverage_add = 40
+}
+
+ghost_towns = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	state_migration_pull_mult = -0.33
+}
+ghost_town_tourist_traps = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	state_migration_pull_add = 15
+}
+
+adventurer_company_buyout = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds"
+	state_adventurer_coverage_mult = -0.2
+}
+
+adventurers_buying_potions = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds"
+	building_potion_distillery_throughput_add = 0.25
+}
+
+adventurers_potion_endorsements = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds"
+	goods_output_luxury_potions_mult = 0.1
+}
+
+monster_roads = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_engineer_negative.dds"
+	state_market_access_price_impact = -0.1
+	state_food_security_add = -0.05
+}
+
+adventurer_air_crews = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_engineer_positive.dds"
+	state_adventurer_coverage_mult = 0.2
+	building_airship_dock_throughput_add = 0.15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+}
+
+state_patrols = {
+	icon = 	"gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	state_adventurer_coverage_add = 50
+}
+
+slayer_campaign = { 
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	interest_group_pop_attraction_mult = 0.25
+}
+
+menial_tasks = {
+	icon = 	"gfx/interface/icons/timed_modifier_icons/modifier_soldier_negative.dds"
+	interest_group_approval_add = -4
+}
+
+organizing_patrols = { 
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	interest_group_pop_attraction_mult = 0.25
+}
+
+private_patrols = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	state_adventurer_coverage_add = 20
+}
+
+pest_patrols = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	state_adventurer_coverage_add = 20
+	state_adventurer_coverage_mult = 0.15
+}
+
+pest_assistance = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	interest_group_approval_add = 2
+}
+
+honored_adventurer_death = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	interest_group_approval_add = 2
+}
+
 soulwrought_centralization = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_engineer_negative.dds"
 	state_building_soulwrought_assembly_plant_max_level_add = -5
@@ -664,6 +891,29 @@ soulwrought_assembly_hub_ai = {
 	state_building_soulwrought_assembly_plant_max_level_add = 30
 	state_soulwrought_assembled_mult = 0.1
 	goods_output_soulwrought_intangible_mult = 0.2
+}
+
+put_a_ring_on_it = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	power_bloc_mandate_progress_mult = 1.25
+	country_prestige_mult = 0.15
+}
+
+left_at_the_altar = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	country_liberty_desire_of_subjects_add = 0.15
+	country_prestige_mult = -0.2
+}
+
+shattered_ring_victory = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	country_prestige_mult = 0.25
+	country_prestige_add = 20
+}
+
+shattered_ring_defeat = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	country_prestige_add = -30
 }
 
 mutagen_magnanimity = {
@@ -772,7 +1022,7 @@ blue_riband_cruising_service = {
 
 blue_riband_holder_immigration_boost ={
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue2_positive.dds
-	state_migration_pull_add = 10
+	state_migration_pull_add = 15
 }
 
 blue_riband_holder_colonization_boost = {

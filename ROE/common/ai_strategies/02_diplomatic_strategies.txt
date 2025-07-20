@@ -2670,7 +2670,32 @@ ai_strategy_unify_atamzotayit = {
 				add = 500
 			}				
 		}
-	}	
+	}
+	
+	# Version 1.9.6
+	# Bloodthorn: Starts with 50 + 10, desires 46
+	# Rustaxe: Starts with 35 + 0, desires 44
+	# Horkaa: Starts with 5 + 10, desires 35
+	# Roughstone: Starts with 20 + 0, desires 27
+	# Bonegnawer: Starts with 10 + 0, desires 21
+	# Ghostmurder: Starts with 7 + 0, desires 15
+	# Snailbane: Starts with 5 + 0, desires 13
+
+	wanted_army_size = {
+		value = 0
+		
+		if = {
+			limit = {
+				is_country_type = preindustrial
+			}
+			
+			# Desire an additional 1 level of barracks per 100k incorporated population
+			add = {
+				value = cached_ai_incorporated_population
+				divide = 100000
+			}
+		}
+	}
 
 	possible = {
 		is_subject = no

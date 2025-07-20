@@ -255,6 +255,7 @@ company_sandsparrow_guild = {
 
 	extension_building_types = {
 		building_arms_industry
+		building_potion_distillery
 	}
 	
 	possible_prestige_goods = {
@@ -332,10 +333,19 @@ company_axe_hammer = {
 
 	extension_building_types = {
 		building_steel_mills
+		building_munition_plants
+		building_electrics_industry
 	}
 
 	possible_prestige_goods = {
-		prestige_good_generic_tools
+		prestige_good_generic_small_arms
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_small_arms_complete_tt
+			has_variable = prestige_good_generic_small_arms_var
+		}
 	}
 
 	potential = {
@@ -2405,10 +2415,22 @@ company_suez_company = {
 
 	extension_building_types = {
 		building_military_shipyards
+		building_airshipyards
 	}
 
 	potential = {
 		has_interest_marker_in_region = region_sanbang
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_merchant_marine
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_merchant_marine_complete_tt
+			has_variable = prestige_good_generic_merchant_marine_var
+		}
 	}
 
 	attainable = {
@@ -2639,6 +2661,12 @@ company_wowdam = {
 	}
 
 	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_KHULEKI
+				is_incorporated = yes
+			}
+		}
 	}
 
 	possible = {

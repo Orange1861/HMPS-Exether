@@ -8739,21 +8739,6 @@
 				reserves = 1
 			}
 			create_building = {
-				building = "building_hunting_lodge"
-				add_ownership = {
-					building = {
-						type = "building_wizard_tower"
-						country = "c:CLR"
-						levels = 3
-						region = "STATE_CLEARBOUGH_ESTATES"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_simple_hunting"
-				}
-			}
-			create_building = {
 				building = "building_argentum_rail"
 				add_ownership = {
 					building = {

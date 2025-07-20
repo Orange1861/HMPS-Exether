@@ -108,7 +108,7 @@ luddite_law_events.2 = {
 			leader = {
 				OR = {
 					OR = {
-						has_ideology = ideology:ideology_matriarchal_traditionalist
+						
 						has_ideology = ideology:ideology_traditionalist
 						has_ideology = ideology:ideology_ecumenical_traditionalist
 					}
@@ -144,7 +144,7 @@ luddite_law_events.2 = {
 				leader = {
 					OR = {
 						OR = {
-							has_ideology = ideology:ideology_matriarchal_traditionalist
+							
 							has_ideology = ideology:ideology_traditionalist
 							has_ideology = ideology:ideology_ecumenical_traditionalist
 						}

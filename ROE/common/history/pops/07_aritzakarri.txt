@@ -73,7 +73,7 @@
 		region_state:KCH = {
 			create_pop = {
 				culture = sandcircler
-				size = 1240000
+				size = 1710000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -83,30 +83,16 @@
 		}
   }
 
-  s:STATE_BATOHAIN = {
-		region_state:KCH = {
-			create_pop = {
-				culture = sandcircler
-				size = 972797
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = sandcircler
-				size = 70000
-			}
-		}
-  }
-
   s:STATE_KHANBA = {
 		region_state:KCH = {
 			create_pop = {
 				culture = sandcircler
-				size = 927030
+				size = 1377030
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = sandcircler
-				size = 35000
+				size = 105000
 			}
 		}
   }
@@ -302,38 +288,18 @@
 	region_state:LUR = {
 		create_pop = {
 			culture = cliffpercher
-			size = 540505
+			size = 670505
 		}
 		create_pop = {
 			culture = blacktalon
 			religion = sandspeaker_viticist
-			size = 686137
-		}
-		create_pop = {
-			culture = blacktalon
-			pop_type = slaves
-			religion = sandspeaker_viticist
-			size = 42000
-		}
-	}
-  }
-
-  s:STATE_GARRAMU = {
-	region_state:LUR = {
-		create_pop = {
-			culture = cliffpercher
-			size = 122178
-		}
-		create_pop = {
-			culture = blacktalon
-			religion = sandspeaker_viticist
-			size = 280077
+			size = 968137
 		}
 		create_pop = {
 			culture = blacktalon
 			pop_type = slaves
 			religion = sandspeaker_viticist
-			size = 63000
+			size = 105000
 		}
 	}
   }
@@ -592,19 +558,6 @@
 		create_pop = {
 			culture = saglithan
 			size = 622163
-		}
-	}
-  }
-
-  s:STATE_MENDIBURU = {
-	region_state:KHE = {
-		create_pop = {
-			culture = lomarash
-			size = 509492
-		}
-		create_pop = {
-			culture = illvasaari
-			size = 17634
 		}
 	}
   }
@@ -895,28 +848,15 @@
 	}
   }
 
-  s:STATE_TIHAR = {
-	region_state:OKH = {
-		create_pop = {
-			culture = lomarash
-			size = 151897
-		}
-		create_pop = {
-			culture = tskharvani
-			size = 445200
-		}
-	}
-  }
-
   s:STATE_ARROLA = {
 	region_state:OKH = {
 		create_pop = {
 			culture = tskharvani
-			size = 463957
+			size = 923957
 		}
 		create_pop = {
 			culture = lomarash
-			size = 194880
+			size = 344880
 		}
 		create_pop = {
 			culture = saglithan
@@ -991,20 +931,11 @@
 	region_state:KHE = {
 		create_pop = {
 			culture = lomarash
-			size = 758794
+			size = 1258794
 		}
 		create_pop = {
 			culture = illvasaari
-			size = 22337
-		}
-	}
-  }
-
-  s:STATE_IBAIA = {
-	region_state:HEG = {
-		create_pop = {
-			culture = cliffpercher
-			size = 700078
+			size = 42337
 		}
 	}
   }
@@ -1013,7 +944,7 @@
 	region_state:HEG = {
 		create_pop = {
 			culture = cliffpercher
-			size = 910783
+			size = 1610783
 		}
 	}
   }

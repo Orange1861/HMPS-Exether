@@ -296,7 +296,7 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_LOCHTYRE
+				state_region = s:STATE_MALINMORE
 				count = 10
 			}
 
@@ -307,7 +307,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mages_one
-				state_region = s:STATE_LOCHTYRE
+				state_region = s:STATE_MALINMORE
 				count = 10
 			}
 			save_scope_as = dumarmy3

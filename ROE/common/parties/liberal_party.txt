@@ -131,7 +131,7 @@ liberal_party = {
 			limit = {
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_matriarchal_traditionalist
+						
                 		has_ideology = ideology:ideology_traditionalist
                 		has_ideology = ideology:ideology_ecumenical_traditionalist
 						has_ideology = ideology:ideology_royalist

@@ -5,6 +5,7 @@
   TRIGGER_IS_HOMELAND_OF_COUNTRY_CULTURES_NONE_NOT: "Is not a homeland for a Primary Culture of [TARGET_COUNTRY.GetName]"
   TRIGGER_ANY_SCOPE_STATE_PERCENT_IN_STRATEGIC_REGION_THIRD: "[STATE_REGION.GetName]"
   TRIGGER_ANY_SCOPE_STATE_PERCENT_IN_STRATEGIC_REGION_THIRD_NOT: "Not [STATE_REGION.GetName]"
+  TRIGGER_COUNTRY_CAN_FORM_POWER_BLOC: "#tooltippable #tooltip:can_form_power_bloc_tt #yellow #bold Can form#!#!#!#! a [concept_power_bloc]"
 
 lobby_pro_country: "Pro-Country Lobby"
  lobby_pro_country_name: "[COUNTRY.GetAdjectiveNoFormatting]-[TARGET_COUNTRY.GetAdjectiveNoFormatting] $CUSTOM_NAME$"

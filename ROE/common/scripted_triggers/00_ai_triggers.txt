@@ -104,7 +104,6 @@ has_je_conquest_reason = {
 				any_scope_state = {
 					OR = {
 						state_region = s:STATE_ARGI
-						state_region = s:STATE_IBAIA
 					}
 				}
 			}
@@ -117,7 +116,6 @@ has_je_conquest_reason = {
 					OR = {
 						state_region = s:STATE_KIYOMU
 						state_region = s:STATE_MENDARI
-						state_region = s:STATE_BATOHAIN
 						state_region = s:STATE_URRAZPI
 						state_region = s:STATE_KHANBA
 						state_region = s:STATE_HIRUMENDI
@@ -226,6 +224,30 @@ has_je_conquest_reason = {
 	}
 }
 
+has_je_alliance_reason = {
+	OR = {
+		AND = {
+			has_journal_entry = je_ring_on_it
+			$TARGET$ = {
+				exists = c:TSH
+				$TARGET$ = c:TSH
+			}
+		}
+	}
+}
+
+has_je_military_assistance_reason = {
+	OR = {
+		AND = {
+			has_journal_entry = je_ring_on_it
+			$TARGET$ = {
+				exists = c:TSH
+				$TARGET$ = c:TSH
+			}
+		}
+	}
+}
+
 has_je_subjugation_reason = {
 	can_reach_target_country = yes
 	OR = {
@@ -276,6 +298,13 @@ has_je_subjugation_reason = {
 				}
 			}
 		}
+		AND = {
+			has_journal_entry = je_shattered_ring
+			$TARGET$ = {
+				exists = c:TSH
+				$TARGET$ = c:TSH
+			}
+		}
 	}
 }
 
@@ -299,6 +328,14 @@ has_je_protect_reason = {
 			always = no
 			exists = c:DUM
 			$TARGET$ = c:DUM		
+		}
+
+		AND = {
+			has_journal_entry = je_ring_on_it
+			$TARGET$ = {
+				exists = c:TSH
+				$TARGET$ = c:TSH
+			}
 		}
 	}
 }

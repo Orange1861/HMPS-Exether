@@ -64,7 +64,7 @@ anti_state_religion.1 = { # Advance
 					}
 					has_ideology = ideology:ideology_theocrat
 					OR = {
-						has_ideology = ideology:ideology_matriarchal_traditionalist
+						
 						has_ideology = ideology:ideology_traditionalist
 						has_ideology = ideology:ideology_ecumenical_traditionalist
 					}

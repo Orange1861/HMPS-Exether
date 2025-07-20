@@ -601,7 +601,6 @@ STATE_TSIMIHAVANA = {
     capped_resources = {
         bg_logging = 8
         bg_coal_mining = 32
-        bg_ship_graveyard = 18
         bg_sulfur_mining = 20
         bg_fishing = 7
         bg_leviathan_outpost = 10
@@ -621,6 +620,7 @@ STATE_TSIMIHAVANA = {
     }
     resource = {
         type = "bg_ship_graveyard"
+		discovered_amount = 18
         undiscovered_amount = 3
     }
     naval_exit_id = 3021
@@ -644,12 +644,12 @@ STATE_YNTHOLG = {
         bg_logging = 30
         bg_leviathan_outpost = 23
         bg_fishing = 22
-        bg_ship_graveyard = 40
         bg_iron_mining = 50
         bg_gold_mining = 5
     }
     resource = {
         type = "bg_ship_graveyard"
+		discovered_amount = 40
         undiscovered_amount = 33
     }
     resource = {

@@ -433,6 +433,17 @@
         size = 657688
       }
     }
+	 region_state:DMS = {
+      create_pop = {
+        culture = nuzaptan
+        size = 92400
+      }
+	  create_pop = {
+		religion = human_druidism
+        culture = scordian
+        size = 27860
+      }
+    }
   }
     
   s:STATE_COBALT_KEEP = {
@@ -468,20 +479,6 @@
 		religion = human_druidism
         culture = scordian
         size = 412350
-      }
-    }
-  }
-    
-  s:STATE_DROWNED_LANDS = {
-    region_state:DMS = {
-      create_pop = {
-        culture = nuzaptan
-        size = 92400
-      }
-	  create_pop = {
-		religion = human_druidism
-        culture = scordian
-        size = 27860
       }
     }
   }
@@ -1114,20 +1111,11 @@
 		}
   }
     
-  s:STATE_STELINSULO = {
-		region_state:VAI = {
-			create_pop = {
-				culture = vairian
-				size = 265650
-			}
-		}
-  }
-    
   s:STATE_NOVAJLANDIO = {
 		region_state:VAI = {
 			create_pop = {
 				culture = vairian
-				size = 377427
+				size = 504427
 			}
 		}	
   }

@@ -199,7 +199,7 @@ native_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			has_discrimination_trait = gnome_heritage
+			has_discrimination_trait = wood_gnome
 		}
 	}
 }
@@ -207,7 +207,9 @@ native_american_clothes_trigger = {
 native_north_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-always = no
+		culture = {
+			has_discrimination_trait = wood_gnome
+		}
 	}
 }
 
@@ -377,27 +379,21 @@ arabic_fez_trigger = {
 		exists = home_country
 		OR = {
 			home_country = {
-				OR = {
-					is_country_type = recognized
-					is_country_type = colonial
-				}	
-			}
-			home_country = {
-				top_overlord = {
-					OR = {
-						is_country_type = recognized
-						is_country_type = colonial
-					}	
-				}
-			}
-			home_country = {
 				exists = c:TEF
 				c:TEF = this
-				c:TEF = { has_law = law_type:law_monarchy }
+			}
+			home_country = {
+				exists = c:SET
+				c:SET = this
+			}
+			home_country = {
+				exists = c:ANW
+				c:ANW = this
 			}
 		}
-	}       
-}
+	}
+}       
+
 
 arabic_military_fez_pop_trigger = {
 	exists = scope:pop
@@ -435,7 +431,7 @@ arabic_clothes_trigger = {
 				}
 			}
 			culture = cu:anwarthi
-			culture = cu:rahoru
+			culture = cu:jazamandroso
 		}
 	}        
 }
@@ -495,8 +491,6 @@ european_clothes_trigger = {
 				}
 				culture = cu:glethach
 				culture = cu:anwarthi
-				culture = cu:azmaraan
-				culture = cu:qinnaat
 				culture = cu:waste_walker
 			}
 
@@ -595,46 +589,28 @@ recognized_country_trigger = {
 	exists = scope:character
 	scope:character = {
 		exists = home_country
-		OR = {
 			home_country = {
 				OR = {
 					is_country_type = recognized
 					is_country_type = colonial
 				}	
 			}
-			home_country = {
-				top_overlord = {
-					OR = {
-						is_country_type = recognized
-						is_country_type = colonial
-					}	
-				}
-			}
 		}
 	}       
-}
+
 
 recognized_country_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		OR = {
 			home_country = {
 				OR = {
 					is_country_type = recognized
 					is_country_type = colonial
 				}	
 			}
-			home_country = {
-				top_overlord = {
-					OR = {
-						is_country_type = recognized
-						is_country_type = colonial
-					}	
-				}
-			}
 		}
 	}       
-}
+
 
 christian_clothes_trigger = {
   	exists = scope:character
@@ -833,8 +809,7 @@ arabic_clothes_pop_trigger = {
 			culture = {
 				has_discrimination_trait = chin_culture_group
 			}   
-			culture = cu:rahoru
-			culture = cu:anwarthi
+			culture = cu:jazamandroso
 		}
 	}
 }
@@ -1212,11 +1187,11 @@ buddhist_clothes_pop_trigger = {
      exists = scope:pop
      scope:pop = {
   		OR = {
-
-			culture = cu:anwarthi
+			wizard_clothes_pop_trigger = yes
 		}
      }
 }
+
 
 
 slightly_underweight_pop_trigger = {
