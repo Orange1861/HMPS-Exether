@@ -64,6 +64,12 @@ vandori = {
 
 		10 = { name = old_nose_always_old   range = { 0 0.1 }      }
 	}
+
+    gene_ogre_horns={ 
+        50 = { name = no_horns    range = { 0.5 1 }    }
+        50 = { name = all_horns    range = { 0 0.1 }    }
+        25 = { name = all_horns    range = { 0.75 1 }    }
+     }
 	
     skin_color = {
         10 = { 0.78 0.70 0.80 0.78 }    

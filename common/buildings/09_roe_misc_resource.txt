@@ -34,6 +34,10 @@ building_desert_hunting_lodge = {
 		hunting_lodges
 	}
 
+	potential = {
+		has_potential_resource = bg_desert_hunting
+	}
+
 	production_method_groups = {
 		pmg_base_building_hunting_lodge
 		pmg_hunting_dye
@@ -57,6 +61,11 @@ building_winter_hunting_lodge = {
 	unlocking_technologies = {
 		hunting_lodges
 	}
+
+	potential = {
+		has_potential_resource = bg_winter_hunting
+	}
+
 
 	production_method_groups = {
 		pmg_base_building_hunting_lodge
@@ -199,6 +208,10 @@ building_logging_camp_crystalwood= {
 	terrain_manipulator = forestry
 	levels_per_mesh = 5
 
+	potential = {
+		has_potential_resource = bg_logging_crystalwood
+	}
+
 	production_method_groups = {
 		pmg_base_building_logging_camp_crystalwood
 		pmg_glass_bark
@@ -265,6 +278,10 @@ building_cactus_farm = {
 	terrain_manipulator = forestry
 	levels_per_mesh = 5
 
+	potential = {
+		has_potential_resource = bg_cactus_farm
+	}
+
 	production_method_groups = {
 		pmg_base_building_logging_camp
 		pmg_logging_potions
@@ -282,6 +299,10 @@ building_fishing_wharf_rusttails = {
 	icon = "gfx/interface/icons/building_icons/rusttail.dds"
 	city_type = port
 	required_construction = construction_cost_low
+
+	potential = { 	
+		has_potential_resource = bg_fishing_rusttails
+	}
 
 	production_method_groups = {
 		pmg_base_building_fishing_wharf
@@ -326,6 +347,10 @@ building_fishing_wharf_glowfish = {
 	icon = "gfx/interface/icons/building_icons/lanternfish.dds"
 	city_type = port
 	required_construction = construction_cost_low
+	
+	potential = { 	
+		has_potential_resource = bg_fishing_glowfish
+	}
 
 	production_method_groups = {
 		pmg_base_building_fishing_wharf
@@ -347,6 +372,10 @@ building_hippo_ranches = {
 	
 	unlocking_technologies = {
 		enclosure
+	}
+
+	potential = { 	
+		has_potential_resource = bg_hippos
 	}
 
 	production_method_groups = {
@@ -485,6 +514,10 @@ building_squid_squad = {
 	city_type = port
 	required_construction = construction_cost_low
 
+	potential = { 	
+		has_potential_resource = bg_squidding
+	}
+
 	production_method_groups = {
 		pmg_base_building_squid_squad
 		pmg_monster_hunters_squids
@@ -517,6 +550,10 @@ building_seasnake_wharf = {
 		
 	}
 	
+	potential = { 	
+		has_potential_resource = bg_seasnake_wharf
+	}
+
 	possible = {
 		is_sea_adjacent = yes
 	}

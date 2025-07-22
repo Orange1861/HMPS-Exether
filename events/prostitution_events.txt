@@ -69,7 +69,7 @@ prostitution.1 = {
 			OR = {
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_matriarchal_traditionalist
+						
         				has_ideology = ideology:ideology_traditionalist
         				has_ideology = ideology:ideology_ecumenical_traditionalist
 					}
@@ -119,7 +119,7 @@ prostitution.1 = {
 				OR = {
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_matriarchal_traditionalist
+							
 							has_ideology = ideology:ideology_traditionalist
 							has_ideology = ideology:ideology_ecumenical_traditionalist
 						}
@@ -282,7 +282,7 @@ prostitution.2 = {
 					OR = {
 						leader = {
 							OR = {
-								has_ideology = ideology:ideology_matriarchal_traditionalist
+								
 								has_ideology = ideology:ideology_traditionalist
 								has_ideology = ideology:ideology_ecumenical_traditionalist
 							}
@@ -306,7 +306,7 @@ prostitution.2 = {
 					OR = {
 						leader = {
 							OR = {
-								has_ideology = ideology:ideology_matriarchal_traditionalist
+								
 								has_ideology = ideology:ideology_traditionalist
 								has_ideology = ideology:ideology_ecumenical_traditionalist
 							}

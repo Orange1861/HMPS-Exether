@@ -145,7 +145,12 @@ pm_magical_bureaucrats = {
 	unlocking_laws = {
 		law_court_mages
 	}	
-	
+	state_modifiers = {
+		workforce_scaled = {
+			state_loyalists_from_political_movements_mult = 0.01
+		}
+	}
+
 	building_modifiers = {
 		level_scaled = {
 			building_employment_wizards_add = 500
@@ -481,6 +486,7 @@ pm_airship_advertising = {
 	country_modifiers = { 
 		workforce_scaled = { 
 			country_prestige_add = 10
+			state_trade_advantage_mult = 0.05
 		}
 	}
 

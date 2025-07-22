@@ -12,3 +12,4 @@ DIPLOMATIC_ACCEPTANCE_ANGEL_DOMAIN: "[SCOPE.sCountry('target').GetName]'s religi
 DIPLOMATIC_ACCEPTANCE_FEY_DOMAIN: "[SCOPE.sCountry('target').GetName]'s religion is within the domain of the [concept_fey]"
 DIPLOMATIC_ACCEPTANCE_SOULWROUGHT_ABOMINATION: "[GetCulture('soulwrought').GetName] are an #red #bold abomination#!#!"
 DIPLOMATIC_ACCEPTANCE_TOO_MANY_PEASANTS: "[SCOPE.sCountry('target').GetName] has too many peasants to want more [Concept('concept_pop', '$concept_pops$')]"
+ACCEPTANCE_FROM_GIANT: ""We don't usually make them that big""

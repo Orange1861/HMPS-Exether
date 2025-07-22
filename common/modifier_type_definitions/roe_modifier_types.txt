@@ -157,6 +157,7 @@ building_group_bg_subsistence_agriculture_output_mult = {
 }
 
 state_adventurer_coverage_add = {
+	decimals=1
 	color=good
 	percent = no
 	game_data={
@@ -441,6 +442,14 @@ building_leviathan_outpost_throughput_add={
 
 building_ice_pond_throughput_add={
 	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_arms_industries_throughput_add = {
 	color=good
 	percent=yes
 	game_data={
@@ -1473,6 +1482,15 @@ state_harvest_condition_ghostly_harbingers_impact_mult = {
 building_group_bg_extraction_employee_mult={
 	decimals=1
 	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_adventurers_dependent_wage_mult={
+	decimals=0
+	color=good
 	percent=yes
 	game_data={
 		ai_value=0

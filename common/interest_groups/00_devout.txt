@@ -13,7 +13,6 @@
 	character_ideologies = {
 		ideology_moderate
 		ideology_traditionalist
-		ideology_matriarchal_traditionalist
 		ideology_legitimist
 	}
 
@@ -820,7 +819,11 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_matriarchy
+											OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 				}
 
 			}
@@ -840,7 +843,11 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_matriarchy
+											OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 				}
 
 			}
@@ -968,7 +975,11 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_matriarchy
+											OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 				}
 
 			}

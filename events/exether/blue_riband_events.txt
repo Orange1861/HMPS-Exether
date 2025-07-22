@@ -1,4 +1,4 @@
-namespace = blue_riband
+﻿namespace = blue_riband
 #Brinewick (Arrador), Last Hearth (Dumonia), For Locari it would be in the South Sea Company, but I'm not sure we named it yet.
 
 #Ceraun would be in Urik's Landing. Lagoon Coast either one of the emerald league cities or Serbinelle
@@ -39,7 +39,7 @@ blue_riband.1 = { #First blue riband
 
 }
 
-blue_riband.2 = { #Blue riband Stage 1 launch
+blue_riband.2 = { #Oceanliner JE
 	type = country_event
 	placement = root
 
@@ -68,9 +68,9 @@ blue_riband.2 = { #Blue riband Stage 1 launch
             value = blue_riband_point
 		}
         #trigger_event = {blue_riband.3 days = 0 popup = yes}
-		add_journal_entry = {
-			type = je_blue_riband
-		}
+		#add_journal_entry = {
+			#type = je_blue_riband
+		#}
 	}
 
     option = { # a choice to not get event spammed
@@ -78,29 +78,29 @@ blue_riband.2 = { #Blue riband Stage 1 launch
         default_option = yes
 	}
 
-	#option = {
-	#	name = blue_riband.2.b
-    #    custom_tooltip = {
-	#		text = interested_in_blue_riband_tt
-    #        set_variable = {
-    #            name = interested_in_blue_riband
-    #        }
-    #    }
-	#}
+	option = {
+		name = blue_riband.2.b
+        custom_tooltip = {
+			text = interested_in_blue_riband_tt
+           set_variable = {
+                name = interested_in_blue_riband
+           }
+        }
+	}
 
-	#option = { 
-	#	name = blue_riband.2.g
-    #    custom_tooltip = {
-	#		text = interested_in_blue_riband_tt
-    #        set_variable = {
-    #            name = interested_in_blue_riband
-    #        }
-    #    }
-    #    trigger_event = {id = blue_riband.80 days = 0}
-	#}
+	option = { 
+		name = blue_riband.2.g
+        custom_tooltip = {
+			text = interested_in_blue_riband_tt
+            set_variable = {
+                name = interested_in_blue_riband
+            }
+       }
+        trigger_event = {id = blue_riband.80 days = 0}
+	}
 }
 
-blue_riband.3 = { #Blue riband Stage 1 calculation
+blue_riband.3 = { #Blue riband JE
 	type = country_event
 	placement = root
 
@@ -249,64 +249,30 @@ blue_riband.11 = { # Lose the blue riband
 		name = blue_riband.11.a
 		default_option = yes
 	}
-
-    #option = {
-		#name = blue_riband.11.b
-        #trigger = {
-            #NOT = {has_variable = blue_riband_subsidy_cooldown}
-        #}
-        #add_treasury = -30000
-        #hidden_effect = {
-            #trigger_event = {
-                #id = blue_riband.19 months = 40
-            #}
-            #set_variable = {
-			#name = blue_riband_subsidy_cooldown # every ship is built and launched discretely
-			#value = yes
-			#months = 40 # without government subsidy, that is
-		    #}
-        #}
-	#}
 }
 
-blue_riband.19 = { # subsidy
-	type = country_event
-	placement = root
 
-    hidden = yes
+# blue_riband.40 = { # regular flavor on action
+# 	type = country_event
+# 	placement = root
+
+#     hidden = yes
     
-    trigger = {
+#     trigger = {
+# 		has_journal_entry = je_blue_riband
+# 		has_variable = interested_in_blue_riband
+# 	}
 
-	}
-
-	immediate = {
-        remove_variable= blue_riband_cooldown
-        trigger_event = {id = blue_riband.3 days = 0}
-	}
-}
-
-
-blue_riband.40 = { # regular flavor on action
-	type = country_event
-	placement = root
-
-    hidden = yes
-    
-    trigger = {
-		has_journal_entry = je_blue_riband
-		has_variable = interested_in_blue_riband
-	}
-
-	immediate = {
-		random_list = {
-			89 = {}
-			2 = {trigger_event = {id = blue_riband.41 days = 8}} #cruise line normal
-			3 = {trigger_event = {id = blue_riband.43 days = 8}} #paid shipyard event 2
-			3 = {trigger_event = {id = blue_riband.44 days = 8}} #paid shipyard event 3
-			3 = {trigger_event = {id = blue_riband.45 days = 8}} #company shipyard event 4
-		}
-	}
-}
+# 	immediate = {
+# 		random_list = {
+# 			89 = {}
+# 			2 = {trigger_event = {id = blue_riband.41 days = 8}} #cruise line normal
+# 			3 = {trigger_event = {id = blue_riband.43 days = 8}} #paid shipyard event 2
+# 			3 = {trigger_event = {id = blue_riband.44 days = 8}} #paid shipyard event 3
+# 			3 = {trigger_event = {id = blue_riband.45 days = 8}} #company shipyard event 4
+# 		}
+# 	}
+# }
 
 blue_riband.41 = { # Blue riband normal cruising line
 	type = country_event
@@ -328,7 +294,6 @@ blue_riband.41 = { # Blue riband normal cruising line
 	duration = 3
 
 	trigger = {
-		has_journal_entry = je_blue_riband
 		has_variable = interested_in_blue_riband
 		has_technology_researched = corporate_management
 		NOT = {has_variable = blue_riband_cruise_cd}
@@ -519,7 +484,6 @@ blue_riband.43 = {
 	duration = 3
 
 	trigger = {
-		has_journal_entry = je_blue_riband
 		has_variable = interested_in_blue_riband
 		has_technology_researched = mutual_funds
 		NOT = {has_variable = blue_riband_paid_shipyard_cd2}
@@ -627,7 +591,6 @@ blue_riband.44 = {
 	duration = 3
 
 	trigger = {
-		has_journal_entry = je_blue_riband
 		has_variable = interested_in_blue_riband
 		has_technology_researched = mutual_funds
 		has_technology_researched = concrete_dockyards
@@ -735,7 +698,6 @@ blue_riband.45 = { #When PDX does not add start company construct effect
 	duration = 3
 
 	trigger = {
-		has_journal_entry = je_blue_riband
 		has_variable = interested_in_blue_riband
 		has_technology_researched = investment_banks
 		has_technology_researched = atmospheric_engine #better check than sorry
@@ -820,27 +782,27 @@ blue_riband.45 = { #When PDX does not add start company construct effect
 	}
 }
 
-blue_riband.60 = { # holder flavor on action
-	type = country_event
-	placement = root
+# blue_riband.60 = { # holder flavor on action
+# 	type = country_event
+# 	placement = root
 
-    hidden = yes
+#     hidden = yes
     
-    trigger = {
-		has_journal_entry = je_blue_riband
-		has_variable = interested_in_blue_riband
-		has_modifier = blue_riband_leader
-	}
+#     trigger = {
+# 		has_journal_entry = je_blue_riband
+# 		has_variable = interested_in_blue_riband
+# 		has_modifier = blue_riband_leader
+# 	}
 
-	immediate = {
-		random_list = {
-			55 = {}
-			20 = {trigger_event = {id = blue_riband.61 days = 9}} #immigration boost
-			20 = {trigger_event = {id = blue_riband.62 days = 9}} #colonization boost
-			5 = {trigger_event = {id = blue_riband.63 days = 9}} #cruise line for holder
-		}
-	}
-}
+# 	immediate = {
+# 		random_list = {
+# 			55 = {}
+# 			20 = {trigger_event = {id = blue_riband.61 days = 9}} #immigration boost
+# 			20 = {trigger_event = {id = blue_riband.62 days = 9}} #colonization boost
+# 			5 = {trigger_event = {id = blue_riband.63 days = 9}} #cruise line for holder
+# 		}
+# 	}
+# }
 
 blue_riband.61 = { # Blue riband holder immigration boost
 	type = country_event
@@ -1170,80 +1132,80 @@ blue_riband.82 = { # Blue riband Explanation events
 	}
 }
 
-blue_riband.90 = { #Blue riband Stage 1 End
-	type = country_event
-	placement = root
+# blue_riband.90 = { #Blue riband Stage 1 End
+# 	type = country_event
+# 	placement = root
 
-	event_image = {
+# 	event_image = {
 
-		video = "unspecific_steam_ship"
-	}
+# 		video = "unspecific_steam_ship"
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	title = blue_riband.90.t
-	desc = blue_riband.90.d
-	flavor = blue_riband.90.f
+# 	title = blue_riband.90.t
+# 	desc = blue_riband.90.d
+# 	flavor = blue_riband.90.f
 
-	duration = 3
+# 	duration = 3
 
-	trigger = {
+# 	trigger = {
 
-	}
+# 	}
 
-	immediate = {
-        remove_variable = interested_in_blue_riband
-        remove_modifier = blue_riband_leader
-        set_variable = {
-            name = blue_riband_point #reset
-            value = 299
-        }
-	}
+# 	immediate = {
+#         remove_variable = interested_in_blue_riband
+#         remove_modifier = blue_riband_leader
+#         set_variable = {
+#             name = blue_riband_point #reset
+#             value = 299
+#         }
+# 	}
 
-	option = {
-		name = blue_riband.90.a
-		default_option = yes
-	}
+# 	option = {
+# 		name = blue_riband.90.a
+# 		default_option = yes
+# 	}
 
-}
+# }
 
-blue_riband.101 = { # Blue riband T4
-	type = country_event
-	placement = root
+# blue_riband.101 = { # Blue riband T4
+# 	type = country_event
+# 	placement = root
 
-    hidden = yes
+#     hidden = yes
 
-	trigger = {
-		has_technology_researched = arc_welding
-	}
+# 	trigger = {
+# 		has_technology_researched = arc_welding
+# 	}
 
-	immediate = {
-		if = {
-			limit = 		
-			{NOT = {has_global_variable = blue_riband_stage2}}
-		}
-		set_global_variable = blue_riband_stage2
+# 	immediate = {
+# 		if = {
+# 			limit = 		
+# 			{NOT = {has_global_variable = blue_riband_stage2}}
+# 		}
+# 		set_global_variable = blue_riband_stage2
 
-		#add_modifier = {
-			#name = blue_riband_stage2_leader
-		#}
+# 		#add_modifier = {
+# 			#name = blue_riband_stage2_leader
+# 		#}
 
-        #set_global_variable = {
-			#name = blue_riband_stage2_holder
-			#value = this
-		#}
+#         #set_global_variable = {
+# 			#name = blue_riband_stage2_holder
+# 			#value = this
+# 		#}
 
-        #set_global_variable = {
-			#name = blue_riband_stage2_holder_score
-			#value = 3000
-		#}
+#         #set_global_variable = {
+# 			#name = blue_riband_stage2_holder_score
+# 			#value = 3000
+# 		#}
 
-		trigger_event = {id = blue_riband.201 years = 40}
-	}
+# 		trigger_event = {id = blue_riband.201 years = 40}
+# 	}
 
-}
+# }
 
 blue_riband.201 = { # Blue riband End
 	type = country_event

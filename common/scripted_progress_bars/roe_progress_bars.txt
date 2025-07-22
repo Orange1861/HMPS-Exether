@@ -318,3 +318,290 @@ dragonblight_vaccine_progress_bar = {
 	min_value = 0
 	max_value = 8
  }
+
+ orc_ring_bad_progress_bar = {
+	name = "orc_ring_bad_progress_bar"
+	desc = "orc_ring_bad_progress_bar_desc"
+
+	default_bad = yes
+	
+
+
+
+				
+	monthly_progress = {
+		if = {
+			limit = {
+				c:TSH ?= {
+					any_scope_treaty = {
+							binds = c:KHD
+							any_scope_article = {
+								has_type = alliance
+							}
+						}
+				}
+			}
+			add = {
+				desc = "ring_progress_from_alliance_tt"
+				add = 5
+			}
+		}
+		if = {
+			limit = {
+				c:TSH ?= {
+					any_scope_treaty = {
+							binds = c:KHD
+							any_scope_article = {
+								has_type = defensive_pact
+							}
+						}
+				}
+			}
+			add = {
+				desc = "ring_progress_from_defensive_pact_tt"
+				add = 3
+			}
+		}
+		if = {
+			limit = {
+				c:TSH ?= {
+					any_scope_treaty = {
+							binds = c:KHD
+							any_scope_article = {
+								has_type = military_assistance
+							}
+						}
+				}
+			}
+			add = {
+				desc = "ring_progress_from_military_assistance_tt"
+				add = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					"c:TSH.relations(c:KHD)" = 0
+				}
+			}
+			add = {
+				desc = "ring_progress_from_relations"
+				value = "c:TSH.relations(c:KHD)"
+				divide = 50
+				min = -0.5
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					"c:HOZ.relations(c:KHD)" = 0
+				}
+			}
+			add = {
+				desc = "ring_progress_from_hoz_relations"
+				value = "c:HOZ.relations(c:KHD)"
+				divide = 100
+				min = -0.5
+			}
+		}
+
+		if = { 
+			limit = {
+				c:KDH ?= {
+					power_bloc ?= {
+						leverage_advantage = {
+							target = c:TSH
+							value >= 30
+						}
+					}
+				}	
+			}
+			add = {
+				desc = "ring_progress_from_kdh_leverage"
+				value = "c:KDH.power_bloc.leverage_advantage(c:TSH)"
+				divide = 125
+				max = 4
+			}
+		}
+
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+						who = c:TSH
+						type = fund_lobbies
+				}
+			}
+
+			subtract = {
+				value = 2
+				desc = "progress_from_thass_funding_lobbies"
+			}
+		}
+
+		if = { 
+			limit = {
+				power_bloc ?= {
+					leverage_advantage = {
+						target = c:TSH
+						value >= 30
+					}
+				}
+			}
+			subtract = {
+				desc = "ring_progress_from_thass_leverage"
+				value = "power_bloc.leverage_advantage(c:TSH)"
+				divide = 125
+				max = 4
+			}
+		}
+	}
+	
+	start_value = 380
+	min_value = 0
+	max_value = 2000
+
+ }
+
+  orc_ring_good_progress_bar = {
+	name = "orc_ring_good_progress_bar"
+	desc = "orc_ring_good_progress_bar_desc"
+
+	default_green = yes
+				
+	monthly_progress = {
+		if = {
+			limit = {
+				c:TSH ?= {
+					any_scope_treaty = {
+							binds = c:KHD
+							any_scope_article = {
+								has_type = alliance
+							}
+						}
+				}
+			}
+			add = {
+				desc = "ring_progress_from_alliance_tt"
+				add = 5
+			}
+		}
+		if = {
+			limit = {
+				c:TSH ?= {
+					any_scope_treaty = {
+							binds = c:KHD
+							any_scope_article = {
+								has_type = defensive_pact
+							}
+						}
+				}
+			}
+			add = {
+				desc = "ring_progress_from_defensive_pact_tt"
+				add = 3
+			}
+		}
+		if = {
+			limit = {
+				c:TSH ?= {
+					any_scope_treaty = {
+							binds = c:KHD
+							any_scope_article = {
+								has_type = military_assistance
+							}
+						}
+				}
+			}
+			add = {
+				desc = "ring_progress_from_military_assistance_tt"
+				add = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					"c:TSH.relations(c:KHD)" = 0
+				}
+			}
+			add = {
+				desc = "ring_progress_from_relations"
+				value = "c:TSH.relations(c:KHD)"
+				divide = 50
+				min = -0.5
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					"c:HOZ.relations(c:KHD)" = 0
+				}
+			}
+			add = {
+				desc = "ring_progress_from_hoz_relations"
+				value = "c:HOZ.relations(c:KHD)"
+				divide = 100
+				min = -0.5
+			}
+		}
+
+		if = { 
+			limit = {
+				c:KDH ?= {
+					power_bloc ?= {
+						leverage_advantage = {
+							target = c:TSH
+							value >= 30
+						}
+					}
+				}	
+			}
+			add = {
+				desc = "ring_progress_from_kdh_leverage"
+				value = "c:KDH.power_bloc.leverage_advantage(c:TSH)"
+				divide = 125
+				max = 4
+			}
+		}
+
+		if = {
+			limit = {
+				c:SNB ?= {
+					has_diplomatic_pact = {
+						who = c:TSH
+						type = fund_lobbies
+					}
+				}
+			}
+			subtract = {
+				value = 2
+				desc = "progress_from_thass_funding_lobbies"
+			}
+		}
+
+		if = { 
+			limit = {
+				c:SNB ?= {
+					power_bloc ?= {
+						leverage_advantage = {
+							target = c:TSH
+							value >= 30
+						}
+					}
+				}
+			}  
+			subtract = {
+				desc = "ring_progress_from_thass_leverage"
+				value = "power_bloc.leverage_advantage(c:TSH)"
+				divide = 125
+				max = 4
+			}
+		}
+	}
+	
+	start_value = 380
+	min_value = 0
+	max_value = 2000
+
+ }

@@ -99,6 +99,17 @@ company_skysail = {
 		building_trade_center
 	}
 	
+	possible_prestige_goods = {
+		prestige_good_generic_airships
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_airships_complete_tt
+			has_variable = prestige_good_generic_airships_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_arrador
 	}

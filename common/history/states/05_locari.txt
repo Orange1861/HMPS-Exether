@@ -50,7 +50,7 @@ add_homeland = cu:awakened
 s:STATE_BODHISATTVA = {
 	create_state = {
 		country = c:TEN
-		owned_provinces = {x64D1F8 x7AB4D8 x93E984 x94D4DD xB0ECC1 xB7E4AA xBCA8F1 xC6EE65 xD9ABB4 xD9F1B8 xE742EB xEED498 "xF9BEC2" }
+		owned_provinces = { x7AB4D8 x93E984 x94D4DD xB0ECC1 xB7E4AA xBCA8F1 xC6EE65 xD9ABB4 xD9F1B8 xE742EB xEED498 xF9BEC2 }
 }
 add_homeland = cu:taiamican
 }
@@ -233,7 +233,7 @@ add_homeland = cu:navrozdok
 s:STATE_NYINGMAWASKAHIKAN = {
 	create_state = {
 		country = c:SSC
-		owned_provinces = { "x39FDE1" "x43EDE3" "x56F5FB" "x5DF3FB" "xA3F5A9" "xC1F9F8" "xCC8DBD" "xCD60D5" "xCEE4DB" "xD1BCCC" "xE0F2E0" "xEB69C4" "xF842D7" "xF9ED22" }
+		owned_provinces = { x39FDE1 x43EDE3 x56F5FB x5DF3FB x64D1F8 xA3F5A9 xCC8DBD xCD60D5 xCEE4DB xD1BCCC xE0F2E0 xEB69C4 "xF842D7" }
 }
 add_homeland = cu:taiamican
 add_homeland = cu:vystemian
@@ -288,7 +288,7 @@ add_homeland = cu:navrozdok
 s:STATE_SHIGATSENIPIY = {
 	create_state = {
 		country = c:SSC
-		owned_provinces = { "x5FC6F8" "x6ED7B5" "x8EE8D6" "xB586D3" "xBFDEB9" "xC7E993" "xCEA4D4" "xD5F5B3" "xE076D4" "xE4E863" "xECEE46" "xF0A069" "xF4D537" "xF98B8A" }
+		owned_provinces = { x5FC6F8 x6ED7B5 x8EE8D6 xB586D3 xBFDEB9 xC1F9F8 xC7E993 xCEA4D4 xD5F5B3 xE076D4 xE4E863 xECEE46 xF0A069 xF4D537 "xF98B8A" "xF9ED22" }
 }
 add_homeland = cu:koquilla
 add_homeland = cu:vystemian

@@ -14,7 +14,7 @@
 		set_relations = { country = c:THK value = -70 }
 		set_relations = { country = c:KHD value = -70 }
 		set_relations = { country = c:HOZ value = -70 }
-		set_relations = { country = c:VLT value = -70 }
+		set_relations = { country = c:VLT value = 15 }
 		set_relations = { country = c:SKR value = -70 }
 		set_relations = { country = c:SKR value = -70 }
 		set_relations = { country = c:FMJ value = 35 }
@@ -23,6 +23,15 @@
 		set_relations = { country = c:JUX value = 50 }
 		set_relations = { country = c:SAE value = 50 }
 		set_relations = { country = c:VHA value = 50 }
+	}
+
+	c:VLT = {
+		set_relations = { country = c:TSH value = -20 }
+		set_relations = { country = c:THK value = 35 }
+		set_relations = { country = c:KHD value = -20 }
+		set_relations = { country = c:HOZ value = -20 }
+		set_relations = { country = c:VLT value = 15 }
+		set_relations = { country = c:SNB value = 25 }
 	}
 	c:LPS = {
 		set_relations = { country = c:VHO value = 50 }
@@ -556,7 +565,7 @@ c:RVE = {
 	# Western Orcs
 
 	c:TSH = {
-		set_relations = { country = c:VLT value = 50 }
+		set_relations = { country = c:VLT value = -20 }
 		set_relations = { country = c:KHD value = 50 }
 		set_relations = { country = c:THK value = 5 }
 		set_relations = { country = c:SNB value = -50 }

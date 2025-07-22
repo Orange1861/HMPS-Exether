@@ -158,3 +158,26 @@ mutagen_medicine_state = {
 
 	}
 }
+
+adventurer_coverage_events = {
+	random_events = {
+		325 = 0
+		13 = adventurer_coverage.1 #adventurer child labor
+		18 = adventurer_coverage.2 #rural folk set up private patrols
+		19 = adventurer_coverage.3 #adventurers demand higher wages
+		20 = adventurer_coverage.4 #adventurers start having outsized political impact
+		9 = adventurer_coverage.5 #adventurers joining the military
+		13 = adventurer_coverage.6 #adventurers joining the fish
+		5 = adventurer_coverage.7 #adventurers tome written
+		15 = adventurer_coverage.8 #adventurer dies
+		30 = adventurer_coverage.9 #mages help out in a state
+		9 = adventurer_coverage.10 #adventurers demand machine gun restrictions
+		20 = adventurer_coverage.11 #state gets reputation as a ghost town
+		12 = adventurer_coverage.12 #adventurers using airships
+		17 = adventurer_coverage.13 #adventuring company buyout
+		13 = adventurer_coverage.14 #monster mapi penalty
+		7 = adventurer_coverage.15 #adventurers buying potions 
+		3 = adventurer_coverage.16 #crazy druid compound
+		15 = adventurer_coverage.17 #the age of air piracy
+	}
+}

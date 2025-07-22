@@ -1,4 +1,4 @@
-﻿STATE_ZYRAS = {
+STATE_ZYRAS = {
     id = 3692
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { x64C8F2 x7BC0CB x95D2CB x99DCF0 xA0DCB9 xABB0CC xABC1B5 xAFB3EA xBB70F3 xC3F188 xC866E7 xCAE893 xCDBAF8 xCE9CCA xD964E1 xDFEEB8 xE989BD xEB67F1 xF2EAB7 xF416F7 xF9B68D xFA6E9C }
@@ -237,36 +237,20 @@ STATE_HADRUMEA = {
     }
     naval_exit_id = 3040
 }
-STATE_CARTHALIA = {
-    id = 3702
-    subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { x83F2B6 x8ADFD2 x91ECB1 x97BBAF xD9A3C2 xDCC8ED xE4F72A xF062E2 xFB48D8 xFE72E1 }
-    port = x83F2B6
-    city = xFE72E1
-    farm = xFB48D8
-    mine = xF062E2
-    wood = xE4F72A
-    arable_land = 14
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
-    capped_resources = {
-        bg_fishing_glowfish = 12
-    }
-    naval_exit_id = 3071
-}
 STATE_ZAMARA = {
     id = 3705
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { x44BDF9 x5AFABA x71A7E9 x79D5B1 x7E99F9 x80FDB4 xA4BDBA xADFEDD xB2CCED xBDF184 xC7CAEA xDAA092 xDB7AB2 xDCC7DD xDEBD5B xE3F882 xEDFBBF xF0F8A3 xF218EB xFC6BAC }
+    provinces = { x36F1F0 x44BDF9 x5AFABA x71A7E9 x79D5B1 x7E99F9 x80FDB4 x83F2B6 x8ADFD2 x91ECB1 x97BBAF xA4BDBA xABC5EF xADFEDD xB2CCED xB3E793 xBDF184 xC7CAEA xD6F886 xD8D2A0 "xD9A3C2" "xDAA092" "xDB7AB2" "xDBA2B9" "xDCC7DD" "xDCC8ED" "xDEBD5B" "xE2C0EC" "xE3F882" "xE4F72A" "xE59D9A" "xEC9CA4" "xEDFBBF" "xF062E2" "xF0F8A3" "xF218EB" "xF967CF" "xFB48D8" "xFC6BAC" "xFC6EEE" "xFE72E1" }
     port = xDEBD5B
     city = xFC6BAC
     farm = xF0F8A3
     mine = xEDFBBF
     wood = xDB7AB2
-    arable_land = 65
+    arable_land = 75
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_logging = 13
-        bg_fishing = 15
+        bg_logging = 20
+        bg_fishing = 22
         bg_lead_mining = 12
         bg_sulfur_mining = 18
     }
@@ -276,23 +260,6 @@ STATE_ZAMARA = {
         undiscovered_amount = 5
     }
     naval_exit_id = 3040
-}
-STATE_LEPTORIA = {
-    id = 3706
-    subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { x36F1F0 xABC5EF xB3E793 xD6F886 xD8D2A0 xDBA2B9 xE2C0EC xE59D9A xEC9CA4 xF967CF xFC6EEE }
-    port = x36F1F0
-    city = xFC6EEE
-    farm = xF967CF
-    mine = xEC9CA4
-    wood = xE59D9A
-    arable_land = 25
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
-    capped_resources = {
-        bg_logging = 8
-        bg_fishing = 7
-    }
-    naval_exit_id = 3071
 }
 STATE_GADYRUS = {
     id = 3707
@@ -325,7 +292,7 @@ STATE_EBYSS = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 9
-        bg_fishing = 3
+        bg_fishing = 8
         bg_haunted_grounds = 6
     }
     resource = {
@@ -348,7 +315,7 @@ STATE_SIGARA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 10
-        bg_fishing = 13
+        bg_fishing = 15
         bg_haunted_grounds = 6
     }
     resource = {
@@ -372,7 +339,7 @@ STATE_MOTHYA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 18
-        bg_fishing = 13
+        bg_fishing = 15
         bg_sulfur_mining = 20
         bg_haunted_grounds = 6
     }
@@ -952,6 +919,11 @@ STATE_KJELLORU = {
     capped_resources = {
         bg_fishing = 6
         bg_wishstone_mining = 12 #seems out of place
+
+
+
+
+
 
 
 

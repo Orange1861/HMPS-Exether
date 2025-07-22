@@ -549,35 +549,7 @@
 			}
 		}
 	}
-	s:STATE_CARTHALIA = {
-		region_state:DIS = {
-			create_building = {
-				building = "building_fishing_wharf_glowfish"
-				add_ownership = {
-					building = {
-						type = "building_wizard_tower"
-						country = "c:DIS"
-						levels = 4
-						region = "STATE_CARTHALIA"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_simple_fishing"
-					"pm_early_glowfish_harvesting"
-					"pm_unrefrigerated"
-				}
-			}
-			create_building = {
-				building = "building_port"
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					"pm_anchorage"
-				}
-			}
-		}
-	}
+	
 	s:STATE_ZAMARA = {
 		region_state:IMR = {
 			create_building = {
@@ -649,22 +621,10 @@
 			}
 			create_building = {
 				building = "building_port"
-				level = 1
+				level = 2
 				reserves = 1
 				activate_production_methods = {
 					"pm_basic_port"
-				}
-			}
-		}
-	}
-	s:STATE_LEPTORIA = {
-		region_state:IMR = {
-			create_building = {
-				building = "building_port"
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					"pm_anchorage"
 				}
 			}
 		}
@@ -895,7 +855,7 @@
 					building = {
 						type = "building_wizard_tower"
 						country = "c:DIS"
-						levels = 2
+						levels = 5
 						region = "STATE_LILYBAEUM"
 					}
 				}

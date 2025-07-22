@@ -151,15 +151,16 @@ exether_technology_events.2 = {
 				}
 			}
         }
-		create_character = {
-			is_agitator = yes
-			interest_group = ig:ig_mages
-			ideology = ideology_mad_scientist
-		}
 		add_modifier = {
 			name = mutagenic_ranches_modifier 
 			days = short_modifier_time
 		}
+		ig:ig_mages ?= {
+			leader = { set_ideology = ideology:ideology_mad_scientist }
+			add_modifier = {
+				name = ig_gaining_support
+				days = short_modifier_time
+			}
+		}
 	}
-
 }

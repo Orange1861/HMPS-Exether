@@ -61,3 +61,10 @@ state_adventurer_coverage_multiplier = {
 	subtract = 1
 	max = 2
 }
+
+adventure_company_buyout = {
+	value = 0
+	subtract = root.gdp
+	divide = 20
+	max = 1500000
+}

@@ -408,226 +408,6 @@ ideology_traditionalist_minoritarian = {
 	}
 }
 
-ideology_matriarchal_traditionalist = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_traditionalist.dds" 
-	
-	character_ideology = yes
-	
-	lawgroup_rights_of_women = {
-		law_no_womens_rights = strongly_disapprove
-		law_women_own_property = disapprove
-		law_women_in_the_workplace = approve
-		law_womens_suffrage = disapprove
-		law_matriarchy = strongly_approve
-	}
-
-	lawgroup_church_and_state = {
-		law_state_religion = approve
-		law_freedom_of_conscience = disapprove
-		law_religious_tax = disapprove
-		law_total_separation = strongly_disapprove
-		law_state_atheism = strongly_disapprove
-	}
-
-	lawgroup_dwarf_guild_dominance = {
-		law_dwarf_compulsory_guild_apprenticeship = approve
-		law_dwarf_guild_privileges = strongly_approve
-		law_dwarf_no_guild_privileges = neutral
-		law_dwarf_guilds_discouraged = disapprove
-	}
-
-	lawgroup_avian_caste_hegemony = {
-		law_avian_caste_codified = approve
-		law_avian_caste_enforced = strongly_approve
-		law_avian_caste_not_enforced = disapprove
-		law_abirbbative_action = strongly_disapprove
-	}
-
-	lawgroup_west_avian_caste_hegemony = {
-		law_west_avian_caste_codified = approve
-		law_west_avian_caste_enforced = strongly_approve
-		law_west_avian_caste_not_enforced = disapprove
-		law_west_abirbbative_action = strongly_disapprove
-	}
-
-	country_trigger = {
-		# only for countries with strong matriarchal tradition
-		any_interest_group = {
-			has_ideology = ideology:ideology_matriarchal
-		}
-	}
-
-	interest_group_leader_trigger = {
-		ideology_traditionalist_valid_trigger = yes
-	}
-	
-	non_interest_group_leader_trigger = {
-		# Agitators should have an ideology at odds with current laws
-		NAND = {
-			has_role = agitator
-			owner = {
-				has_law = law_type:law_matriarchy
-				has_law = law_type:law_state_religion
-				#has_law = law_type:law_hindu_caste_enforced #what does it do here
-			}
-		}
-		interest_group = {
-			ideology_traditionalist_valid_trigger = yes
-		}
-	}
-	
-	interest_group_leader_weight = {
-		value = 100
-		
-		if = {
-			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_fascism
-				}
-			}
-			multiply = 0.1
-		}	
-	}
-	
-	non_interest_group_leader_weight = {
-		value = 100
-
-		if = {
-			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_fascism
-					}
-				}
-			}
-			multiply = 0.1
-		}	
-	}
-}
-
-ideology_matriarchal_minoritarian = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_traditionalist.dds"
-	
-	character_ideology = yes
-	
-	lawgroup_rights_of_women = {
-		law_no_womens_rights = strongly_disapprove
-		law_women_own_property = disapprove
-		law_women_in_the_workplace = approve
-		law_womens_suffrage = disapprove
-		law_matriarchy = strongly_approve
-	}
-
-	lawgroup_church_and_state = {
-		law_state_religion = strongly_disapprove
-		law_freedom_of_conscience = disapprove
-		law_total_separation = approve
-		law_state_atheism = strongly_disapprove
-	}
-
-	lawgroup_dwarf_guild_dominance = { # Political strength on PB is bad for foreigners
-		law_dwarf_compulsory_guild_apprenticeship = strongly_disapprove
-		law_dwarf_guild_privileges = disapprove
-		law_dwarf_no_guild_privileges = strongly_approve
-		law_dwarf_guilds_discouraged = neutral
-	}
-
-	lawgroup_avian_caste_hegemony = { #these guys are probably discriminated against under the eastern caste
-		law_avian_caste_enforced = strongly_disapprove
-		law_avian_caste_codified = disapprove
-		law_avian_caste_not_enforced = strongly_approve
-		law_abirbbative_action = neutral
-	}
-
-	lawgroup_west_avian_caste_hegemony = { #however, the mostly likely recipients of this ideology are probably not discriminated against under the west
-		law_west_avian_caste_enforced = strongly_approve
-		law_west_avian_caste_codified = approve
-		law_west_avian_caste_not_enforced = neutral
-		law_west_abirbbative_action = strongly_disapprove
-	}
-
-	country_trigger = {
-		# only for countries with strong matriarchal tradition
-		any_interest_group = {
-			has_ideology = ideology:ideology_matriarchal
-		}
-	}
-
-	interest_group_leader_trigger = {
-		ideology_traditionalist_minoritarian_valid_trigger = yes
-	}
-	
-	non_interest_group_leader_trigger = {
-		# Agitators should have an ideology at odds with current laws
-		NAND = {
-			has_role = agitator
-			owner = {
-				has_law = law_type:law_matriarchy
-				has_law = law_type:law_state_religion
-			}
-		}
-		interest_group = {
-			ideology_traditionalist_minoritarian_valid_trigger = yes
-		}
-	}
-	
-	interest_group_leader_weight = {
-		value = 100
-
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
-		if = {
-			limit = {
-				has_variable = anti_dreyfusard_victory
-			}
-			add = 50
-		}
-		
-		if = {
-			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_fascism
-				}
-			}
-			multiply = 0.1
-		}
-	}
-	
-	non_interest_group_leader_weight = {
-		value = 100
-		
-		if = {
-			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_fascism
-					}
-				}
-			}
-			multiply = 0.1
-		}	
-	}
-}
-
 ideology_nihilist = { # 
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_nihilist.dds"
 	
@@ -1304,7 +1084,11 @@ ideology_feminist = {
 			owner = {
 				OR = {
 					has_law = law_type:law_womens_suffrage
-					has_law = law_type:law_matriarchy
+						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 				}
 			}
 		}
@@ -1322,7 +1106,11 @@ ideology_feminist = {
 					owner = {
 						OR = {
 							has_law = law_type:law_womens_suffrage
-							has_law = law_type:law_matriarchy
+							OR = {
+								has_law = law_type:law_matriarchy
+								has_law = law_type:law_men_own_property
+								has_law = law_type:law_men_in_the_workplace
+							}
 							AND = {
 								has_law = law_type:law_women_in_the_workplace
 								OR = {

@@ -2741,22 +2741,6 @@
 				}
 			}
 			create_building = {
-				building = "building_artillery_foundries"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:OEX"
-						levels = 1
-						region = "STATE_ELDBERG"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_cannons"
-					"pm_automation_disabled"
-				}
-			}
-			create_building = {
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
@@ -2899,21 +2883,6 @@
 				}
 			}
 			create_building = {
-				building = "building_motor_industry"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:OEX"
-						levels = 1
-						region = "STATE_ELDBERG"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_steam_engines"
-				}
-			}
-			create_building = {
 				building = "building_railway"
 				add_ownership = {
 					building = {
@@ -2997,21 +2966,6 @@
 					"pm_mushroom_mills"
 					"pm_no_focus"
 					"pm_rail_transport_building_logging_camp"
-				}
-			}
-			create_building = {
-				building = "building_steel_mills"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:OEX"
-						levels = 1
-						region = "STATE_ELDBERG"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_blister_steel_process"
 				}
 			}
 			create_building = {
@@ -3300,103 +3254,6 @@
 			}
 		}
 	}
-	s:STATE_LOCHTYRE = {
-		region_state:DUM = {
-			create_building = {
-				building = "building_textile_mills"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
-						levels = 2
-						region = "STATE_CROWNPEAK"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_dye_workshops"
-					"pm_no_luxury_clothes"
-					"pm_no_magic_clothes"
-					"pm_magical_looms"
-				}
-			}
-			create_building = {
-				building = "building_logging_camp"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
-						levels = 5
-						region = "STATE_LOCHTYRE"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_saw_mills"
-					"pm_hardwood"
-					"pm_no_equipment"
-					"pm_road_carts"
-				}
-			}
-			create_building = {
-				building = "building_rye_farm"
-				add_ownership = {
-					building = {
-						type = "building_manor_house"
-						country = "c:DUM"
-						levels = 15
-						region = "STATE_LOCHTYRE"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_soil_enriching_farming"
-					"pm_potatoes"
-					"pm_tools"
-					"pm_farms_basic_earth_shaping"
-				}
-			}
-			create_building = {
-				building = "building_fishing_wharf"
-				add_ownership = {
-					building = {
-						type = "building_wizard_tower"
-						country = "c:DUM"
-						levels = 1
-						region = "STATE_LOCHTYRE"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_unrefrigerated"
-					"pm_fishing_trawlers"
-				}
-			}
-			create_building = {
-				building = "building_arms_industry"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
-						levels = 1
-						region = "STATE_LOCHTYRE"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_muskets"
-				}
-			}
-			create_building = {
-				building = "building_port"
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					"pm_basic_port"
-				}
-			}
-		}
-	}
 	s:STATE_MELENLECK = {
 		region_state:DUM = {
 			create_building = {
@@ -3405,7 +3262,7 @@
 					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 1
+						levels = 2
 						region = "STATE_MELENLECK"
 					}
 				}
@@ -3488,7 +3345,7 @@
 						type = "building_wizard_tower"
 						country = "c:DUM"
 						levels = 2
-						region = "STATE_LOCHTYRE"
+						region = "STATE_MALINMORE"
 					}
 				}
 				reserves = 1
@@ -3831,7 +3688,7 @@
 					building = {
 						type = "building_manor_house"
 						country = "c:DUM"
-						levels = 1
+						levels = 6
 						region = "STATE_INVERINGAR"
 					}
 				}
@@ -4421,7 +4278,7 @@
 					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 4
+						levels = 9
 						region = "STATE_MALINMORE"
 					}
 				}
@@ -4439,7 +4296,7 @@
 					building = {
 						type = "building_wizard_tower"
 						country = "c:DUM"
-						levels = 4
+						levels = 5
 						region = "STATE_MALINMORE"
 					}
 				}
@@ -4455,7 +4312,7 @@
 					building = {
 						type = "building_manor_house"
 						country = "c:DUM"
-						levels = 45
+						levels = 55
 						region = "STATE_MALINMORE"
 					}
 				}
@@ -4484,8 +4341,26 @@
 				}
 			}
 			create_building = {
+				building = "building_textile_mills"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:DUM"
+						levels = 2
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_dye_workshops"
+					"pm_no_luxury_clothes"
+					"pm_no_magic_clothes"
+					"pm_magical_looms"
+				}
+			}
+			create_building = {
 				building = "building_port"
-				level = 2
+				level = 3
 				reserves = 1
 				activate_production_methods = {
 					"pm_basic_port"

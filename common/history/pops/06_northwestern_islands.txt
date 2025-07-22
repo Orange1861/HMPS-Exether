@@ -107,39 +107,15 @@
 			}
 		}
 	}
-	s:STATE_CARTHALIA = {
-		region_state:DIS = {
-			create_pop = {
-				culture = kotskarvi
-				size = 41994
-			}
-			create_pop = {
-				culture = illvasaari
-				size = 77778
-			}
-		}
-	}
 	s:STATE_ZAMARA = {
 		region_state:IMR = {
 			create_pop = {
 				culture = kotskarvi
-				size = 1057000
+				size = 1397000
 			}
 			create_pop = {
 				culture = illvasaari
-				size = 29400
-			}
-		}
-	}
-	s:STATE_LEPTORIA = {
-		region_state:IMR = {
-			create_pop = {
-				culture = kotskarvi
-				size = 342637
-			}
-			create_pop = {
-				culture = illvasaari
-				size = 21700
+				size = 50400
 			}
 		}
 	}
@@ -183,11 +159,11 @@
 		region_state:DIS = {
 			create_pop = {
 				culture = illvasaari
-				size = 593457
+				size = 633457
 			}
 			create_pop = {
 				culture = kotskarvi
-				size = 142100
+				size = 232100
 			}
 		}
 	}

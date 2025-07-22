@@ -103,14 +103,8 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_TIHAR
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ARROLA
-				count = 15
+				count = 25
 			}
 
 			combat_unit = {
@@ -436,7 +430,7 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_BATOHAIN
+				state_region = s:STATE_KHANBA
 				count = 10
 			}
 
@@ -604,7 +598,7 @@
 		}
 		create_character = {
 			is_admiral = yes
-			hq = region_vulture_coast
+			hq = region_khantar
 			commander_rank = commander_rank_1
 			interest_group = ig_armed_forces
 			save_scope_as = zih_admiral2
@@ -614,7 +608,7 @@
 		}
 		create_character = {
 			is_admiral = yes
-			hq = region_vulture_coast
+			hq = region_khantar
 			commander_rank = commander_rank_1
 			interest_group = ig_armed_forces
 			save_scope_as = zih_admiral

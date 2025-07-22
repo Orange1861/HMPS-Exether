@@ -117,7 +117,8 @@
 		
 		### Country-Specific Movements
 		c:ZKW ?= {
-		create_political_movement = { type = movement_radical }
+			create_political_movement = { type = movement_radical }
+			create_political_movement = { type = movement_cultural_minority culture = cu:wood_giant }
 		}
 
 		c:VAE = {
@@ -135,6 +136,52 @@
 		}
 		c:DUM = {
 			create_political_movement = { type = movement_religious_minority religion = rel:cult_of_the_sun }
+		}
+		c:YOK = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:kojiniu }
+		}
+		c:RUG = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:kojiniu }
+		}
+		c:YUL = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:puarfejiin }
+		}
+		c:PUA = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:puarfejiin }
+		}
+		c:KCN = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:morevnamarya }
+		}
+		c:TAH = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:sarhbalb }
+		}
+		c:SUN = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:yakamimbo }
+		}
+		c:RAV = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:soulwrought }
+			create_political_movement = { type = movement_religious_minority religion = rel:gnomish_druidism }
+		}
+		c:DRI = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:soulwrought }
+		}
+		c:CLL = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:nangarlith }
+		}
+		c:TEF = {
+			create_political_movement = { type = movement_cultural_minority culture = cu:eutrateri }
+		}
+		c:ZUB = {
+			create_political_movement = { type = movement_religious_minority religion = rel:marktarian }
+		}
+		c:SNM = {
+			create_political_movement = { type = movement_religious_minority religion = rel:marktarian }
+		}
+		c:TIZ = {
+			create_political_movement = { type = movement_religious_minority religion = rel:marktarian_antimagic }
+		}
+		c:THI = {
+			create_political_movement = { type = movement_religious_minority religion = rel:wild_fosirmi }
 		}
 	}
 }

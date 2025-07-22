@@ -31,11 +31,19 @@ grant_command_to_ruler = {
 		OR = {
 			AND = {
 				is_female = no
-				NOT = { scope:actor = { has_law = law_type:law_matriarchy } }
+				NOT = { scope:actor = { 						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						} } }
 			}
 			AND = {
 				is_female = yes
-				scope:actor = { has_law = law_type:law_matriarchy }
+				scope:actor = { 						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						} }
 			}
 		}
 		owner = {
@@ -139,7 +147,7 @@ grant_leadership_to_agitator = {
 			NOR = {
 				has_ideology = ideology:ideology_theocrat
 				has_ideology = ideology:ideology_integralist
-				has_ideology = ideology:ideology_matriarchal_traditionalist
+				
                 has_ideology = ideology:ideology_traditionalist
                 has_ideology = ideology:ideology_ecumenical_traditionalist
 			}
@@ -154,13 +162,21 @@ grant_leadership_to_agitator = {
 			AND = {
 				is_female = yes
 				OR = {
-					scope:actor ?= { has_law = law_type:law_matriarchy }
+					scope:actor ?= { 						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						} }
 					scope:actor ?= { has_law = law_type:law_womens_suffrage }
 				}
 			}
 			AND = {
 				is_female = no
-				NOT = { scope:actor ?= { has_law = law_type:law_matriarchy } }
+				NOT = { scope:actor ?= { 						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						} } }
 			}
 		}
 		custom_tooltip = {
@@ -240,13 +256,21 @@ grant_command_to_agitator = {
 			AND = {
 				is_female = yes
 				OR = {
-					scope:actor = { has_law = law_type:law_matriarchy }
+					scope:actor = { 						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						} }
 					scope:actor = { has_law = law_type:law_womens_suffrage }
 				}
 			}
 			AND = {
 				is_female = no
-				NOT = { scope:actor = { has_law = law_type:law_matriarchy } }
+				NOT = { scope:actor = { 						OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						} } }
 			}
 		}
 		exists = owner.capital.land_hq

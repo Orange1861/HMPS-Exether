@@ -18,7 +18,20 @@
 
             modifier = {
                 add = 10000
-                no_portrait_trigger = yes
+                OR = {
+                     no_portrait_trigger = yes
+                    scope:character ?= {
+                        culture = {
+                            has_discrimination_trait = dwarf_heritage
+                        }
+                        OR = {
+                            has_role = general
+                            has_role = admiral
+                            is_interest_group_type = ig_armed_forces
+                        }
+                    }
+                }
+               
             }
         }
     }

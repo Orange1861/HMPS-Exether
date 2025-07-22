@@ -174,30 +174,10 @@ s:STATE_HADRUMEA = {
 add_homeland = cu:illvasaari
 }
 
-s:STATE_CARTHALIA = {
-	create_state = {
-		country = c:DIS
-		owned_provinces = { "x83F2B6" "x8ADFD2" "x91ECB1" "x97BBAF" "xD9A3C2" "xDCC8ED" "xE4F72A" "xF062E2" "xFB48D8" "xFE72E1" }
-}
-add_homeland = cu:illvasaari
-}
-
-
-
 s:STATE_ZAMARA = {
 	create_state = {
 		country = c:IMR
-		owned_provinces = { x71A7E9 x79D5B1 x80FDB4 xDB7AB2 xDEBD5B xEDFBBF xF0F8A3 xFC6BAC x44BDF9 x5AFABA x7E99F9 xA4BDBA xADFEDD xB2CCED xBDF184 xC7CAEA xDAA092 xDCC7DD xE3F882 xF218EB }
-}
-add_homeland = cu:kotskarvi
-add_homeland = cu:illvasaari
-add_claim = c:DIS
-}
-
-s:STATE_LEPTORIA = {
-	create_state = {
-		country = c:IMR
-		owned_provinces = { "x36F1F0" "xABC5EF" "xB3E793" "xD6F886" "xD8D2A0" "xDBA2B9" "xE2C0EC" "xE59D9A" "xEC9CA4" "xF967CF" "xFC6EEE" }
+		owned_provinces = { x36F1F0 x44BDF9 x5AFABA x71A7E9 x79D5B1 x7E99F9 x80FDB4 x83F2B6 x8ADFD2 x91ECB1 x97BBAF xA4BDBA xABC5EF xADFEDD xB2CCED xB3E793 xBDF184 xC7CAEA xD6F886 xD8D2A0 "xD9A3C2" "xDAA092" "xDB7AB2" "xDBA2B9" "xDCC7DD" "xDCC8ED" "xDEBD5B" "xE2C0EC" "xE3F882" "xE4F72A" "xE59D9A" "xEC9CA4" "xEDFBBF" "xF062E2" "xF0F8A3" "xF218EB" "xF967CF" "xFB48D8" "xFC6BAC" "xFC6EEE" "xFE72E1" }
 }
 add_homeland = cu:kotskarvi
 add_homeland = cu:illvasaari

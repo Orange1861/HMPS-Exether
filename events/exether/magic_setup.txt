@@ -1,4 +1,4 @@
-﻿namespace = civic_setup
+namespace = civic_setup
 
 civic_setup.1 = {
 	type = country_event
@@ -15,17 +15,6 @@ civic_setup.1 = {
             calculate_arcanas = yes
 
         }
-
-        #JURIAN'S INQUSITION
-        if = {
-            limit = {
-                root ?= c:JUR
-            }
-            arcana_unicorn_2 = yes
-            get_cost = yes
-            calculate_arcanas = yes
-
-        }	
 
         #RAVENCLIFF
         if = {
@@ -239,5 +228,5 @@ civic_setup.1 = {
             calculate_arcanas = yes
 
         }
-
+    }
 }

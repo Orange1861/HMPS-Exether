@@ -738,23 +738,6 @@
     }
   }
 
-  s:STATE_KHULANJO = {
-    region_state:TAH = {
-      create_pop = {
-        culture = sarhbalb
-        size = 396625
-      }
-      create_pop = {
-        culture = kojiniu
-        size = 2615778
-      }
-      create_pop = {
-        culture = onikoku
-        size = 548594
-      }
-    }
-  }
-
   s:STATE_HOKUDAIHAN = {
     region_state:HIR = {
       create_pop = {
@@ -785,7 +768,7 @@
       }
       create_pop = {
         culture = sarhbalb
-        size = 4352681
+        size = 5152681
       }
     }
   }
@@ -803,11 +786,15 @@
     region_state:TAH = {
       create_pop = {
         culture = sarhbalb
-        size = 3373451
+        size = 5373451
       }
       create_pop = {
         culture = onikoku
-        size = 488671
+        size = 988671
+      }
+      create_pop = {
+        culture = kojiniu
+        size = 815778
       }
     }
   }
@@ -816,7 +803,7 @@
     region_state:GOL = {
       create_pop = {
         culture = zangedlittuy
-        size = 2873394
+        size = 4373394
       }
       create_pop = {
         culture = onikoku
@@ -829,33 +816,22 @@
     region_state:GOL = {
       create_pop = {
         culture = zangedlittuy
-        size = 2554574
+        size = 3054574
       }
       create_pop = {
         culture = onikoku
-        size = 131492
+        size = 391492
       }
     }
   }
 
-  s:STATE_KHULEKKA = {
-    region_state:GOL = {
-      create_pop = {
-        culture = zangedlittuy
-        size = 2025117
-      }
-      create_pop = {
-        culture = onikoku
-        size = 297198
-      }
-    }
-  }
+
 
   s:STATE_HOKUKHAN = {
     region_state:YOK = {
       create_pop = {
         culture = kojiniu
-        size = 2562056
+        size = 2662056
       }
       create_pop = {
         culture = onikoku
@@ -881,7 +857,7 @@
     region_state:YOK = {
       create_pop = {
         culture = onikoku
-        size = 1425494
+        size = 2325494
       }
     }
   }
@@ -907,7 +883,7 @@
       }
       create_pop = {
         culture = kojiniu
-        size = 1278274
+        size = 2178274
       }
     }
   }
@@ -916,7 +892,7 @@
     region_state:TEM = {
       create_pop = {
         culture = batukai
-        size = 1376727
+        size = 1476727
       }
       create_pop = {
         culture = kojiniu
@@ -1000,20 +976,17 @@
       }
       create_pop = {
         culture = kojiniu
-        size = 2573922
+        size = 1573922
       }
     }
-  }
-
-  s:STATE_SHINKANBATA = {
     region_state:YOK = {
       create_pop = {
         culture = kojiniu
-        size = 17583
+        size = 57583
       }
       create_pop = {
         culture = onikoku
-        size = 5494
+        size = 298494
       }
     }
   }

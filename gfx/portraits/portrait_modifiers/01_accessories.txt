@@ -2566,4 +2566,48 @@ orc_clothes = {
     }
 }
 
+	goblin_goggles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = exether_props
+                template = gene_goblin_goggle
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000000
+                
+                OR = {
+                    OR = {
+                        scope:pop ?= {
+                            OR = {
+                                culture = {
+                                    has_discrimination_trait = gnome_heritage
+                                }
+                            }
+                            OR = {
+                                is_pop_type = machinists
+                            }					
+                        }
+                    }
+                    OR = {
+                        scope:character ?= {
+                            OR = {
+                                culture = {
+                                    has_discrimination_trait = gnome_heritage
+                                }
+                            }
+                            OR = {
+                                is_interest_group_type = ig_trade_unions
+                            }	
+                        }		
+                    }
+                }
+            }
+        }
+    }
+
 }

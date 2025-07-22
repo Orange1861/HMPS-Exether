@@ -145,7 +145,7 @@
 					country_has_primary_culture = cu:atiukura
 					country_has_primary_culture = cu:shkemger
 					country_has_primary_culture = cu:morevnamarya
-					country_has_primary_culture = cu:puarfeijiin
+					country_has_primary_culture = cu:puarfejiin
 					country_has_primary_culture = cu:zangedlittuy
 					country_has_primary_culture = cu:sarhbalb
 					country_has_primary_culture = cu:kojiniu
@@ -635,7 +635,11 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_matriarchy
+											OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 				}
 
 			}
@@ -672,7 +676,11 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_matriarchy
+											OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 				}
 
 			}
@@ -741,7 +749,11 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_matriarchy
+											OR = {
+							has_law = law_type:law_matriarchy
+							has_law = law_type:law_men_own_property
+							has_law = law_type:law_men_in_the_workplace
+						}
 				}
 
 			}

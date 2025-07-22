@@ -607,6 +607,96 @@ midnight_enforcement = { #replaces clergy, archmages and aristos with midnight h
 	
 }
 
+add_giant_modifiers = {
+			every_scope_state = {
+                limit = {
+					OR = {
+						culture_percent_state = {  
+							target = cu:frost_giant
+							value >= 0.25
+						}
+						culture_percent_state = {  
+							target = cu:fire_giant 
+							value >= 0.25
+						}
+						culture_percent_state = {  
+							target = cu:toftir_giant
+							value >= 0.25
+						}
+						culture_percent_state = {  
+							target = cu:cloud_giant
+							value >= 0.25
+						}
+						culture_percent_state = {  
+							target = cu:wood_giant
+							value >= 0.25
+						}
+					}
+                }
+				if = {
+					limit = {
+						has_modifier = strength_of_thousands
+					}
+					remove_modifier = strength_of_thousands
+				}
+				set_local_variable = {
+					name  = giant_modifier_multiplier
+					value = giant_percent_state
+				}
+				add_modifier = { 
+                    name = strength_of_thousands
+					multiplier = local_var:giant_modifier_multiplier
+                }
+			}
+		every_scope_state = {
+                limit = {
+					culture_percent_state = {  
+						target = cu:grendleth
+						value >= 0.25
+					}
+                }
+				if = {
+					limit = {
+						has_modifier = strength_of_hundreds
+					}
+					remove_modifier = strength_of_hundreds
+				}
+				set_local_variable = {
+					name  = half_giant_modifier_multiplier
+					value = half_giant_percent_state
+				}
+				add_modifier = { 
+                    name = strength_of_hundreds
+					multiplier = local_var:half_giant_modifier_multiplier
+                }
+			}
+}
+
+giant_modifier_remover = {
+	if = {
+		limit = {
+			has_modifier = strength_of_thousands
+			owner = {
+				NOT = {
+					has_journal_entry = je_strength_of_thousands
+				}
+			}
+		}
+		remove_modifier = strength_of_thousands
+	}
+	if = {
+		limit = {
+			has_modifier = strength_of_hundreds
+			owner = {
+				NOT = {
+					has_journal_entry = je_strength_of_thousands
+				}
+			}
+		}
+		remove_modifier = strength_of_hundreds
+	}
+}
+
 mutagen_vats_powerswitch = {
 	if = {
 		limit = {

@@ -280,7 +280,6 @@ cavern_collapse = {
 		OR = {
 			undermountain_state_weather = yes
 			any_scope_state = {
-				state_region = s:STATE_NAKOKAIN
 				state_region = s:STATE_YAASKCASCH
 				state_region = s:STATE_KEENAVOK
 				state_region = s:STATE_TAYIGAMU
@@ -401,7 +400,6 @@ dark_feeders = {
 		OR = {
 			undermountain_state_weather = yes
 			any_scope_state = {
-				state_region = s:STATE_NAKOKAIN
 				state_region = s:STATE_YAASKCASCH
 				state_region = s:STATE_TAYIGAMU
 				state_region = s:STATE_GUGNOS
@@ -1515,8 +1513,8 @@ living_trees = {
 
 	duration = {
 		fixed_range = {
-			min = 36
-			max = 104
+			min = 50
+			max = 120
 		}
 	}
 

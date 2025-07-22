@@ -1393,7 +1393,7 @@ land_ownership_law_events.11 = {
 				OR = {
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_matriarchal_traditionalist
+							
 							has_ideology = ideology:ideology_traditionalist
 							has_ideology = ideology:ideology_ecumenical_traditionalist
 						}

@@ -119,24 +119,6 @@
 					"pm_road_carts"
 				}
 			}
-			create_building = {
-				building = "building_gold_mine"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:ZIH"
-						levels = 1
-						region = "STATE_HIRUMENDI"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_picks_and_shovels_building_gold_mine"
-					"pm_no_explosives"
-					"pm_no_steam_automation"
-					"pm_road_carts"
-				}
-			}
 						create_building = {
 				building = "building_shipyards"
 				add_ownership = {
@@ -467,7 +449,7 @@
 				add_ownership = {
 					building = {
 						type = "building_financial_district"
-						country = "c:HIZ"
+						country = "c:KCH"
 						levels = 2
 						region = "STATE_ARATZIRI"
 					}
@@ -510,16 +492,8 @@
 			}
 		}
 	}
-	s:STATE_BATOHAIN = {
+	s:STATE_KHANBA = {
 		region_state:KCH = {
-			create_building = {
-				building = "building_government_administration"
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					"pm_simple_organization"
-				}
-			}
 			create_building = {
 				building = "building_opium_plantation"
 				add_ownership = {
@@ -527,7 +501,7 @@
 						type = "building_financial_district"
 						country = "c:KCH"
 						levels = 3
-						region = "STATE_BATOHAIN"
+						region = "STATE_KHANBA"
 					}
 				}
 				reserves = 1
@@ -542,29 +516,7 @@
 					building = {
 						type = "building_manor_house"
 						country = "c:KCH"
-						levels = 3
-						region = "STATE_BATOHAIN"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_open_air_stockyards"
-					"pm_simple_ranch"
-					"pm_standard_fences"
-					"pm_unrefrigerated"
-				}
-			}
-		}
-	}
-	s:STATE_KHANBA = {
-		region_state:KCH = {
-						create_building = {
-				building = "building_livestock_ranch"
-				add_ownership = {
-					building = {
-						type = "building_manor_house"
-						country = "c:KCH"
-						levels = 5
+						levels = 8
 						region = "STATE_KHANBA"
 					}
 				}
@@ -582,6 +534,14 @@
 				reserves = 1
 				activate_production_methods = {
 					"pm_anchorage"
+				}
+			}
+			create_building = {
+				building = "building_government_administration"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_organization"
 				}
 			}
 			create_building = {
@@ -1359,6 +1319,30 @@
 				}
 			}
 			create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:LUR"
+						levels = 2
+						region = "STATE_KHIARHI"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_fishing"
+					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_port"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_port"
+				}
+			}
+			create_building = {
 				building = "building_gardenback_beetle_ranches"
 				add_ownership = {
 					building = {
@@ -1407,34 +1391,6 @@
 					"pm_saw_mills"
 					"pm_no_equipment"
 					"pm_road_carts"
-				}
-			}
-		}
-	}
-	s:STATE_GARRAMU = {
-		region_state:LUR = {
-			create_building = {
-				building = "building_fishing_wharf"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:LUR"
-						levels = 2
-						region = "STATE_GARRAMU"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_simple_fishing"
-					"pm_unrefrigerated"
-				}
-			}
-			create_building = {
-				building = "building_port"
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					"pm_basic_port"
 				}
 			}
 		}
@@ -2511,49 +2467,7 @@
 			}
 		}
 	}
-	s:STATE_MENDIBURU = {
-		region_state:KHE = {
-			create_building = {
-				building = "building_fishing_wharf"
-				add_ownership = {
-					building = {
-						type = "building_wizard_tower"
-						country = "c:KHE"
-						levels = 3
-						region = "STATE_MENDIBURU"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_fishing_trawlers"
-					"pm_unrefrigerated"
-				}
-			}
-			create_building = {
-				building = "building_shipyards"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:KHE"
-						levels = 1
-						region = "STATE_MENDIBURU"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_basic_shipbuilding"
-				}
-			}
-			create_building = {
-				building = "building_port"
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					"pm_anchorage"
-				}
-			}
-		}
-	}
+
 	s:STATE_URRIKO = {
 		region_state:AIZ = {
 			create_building = {
@@ -3414,25 +3328,6 @@
 			}
 		}
 	}
-	s:STATE_TIHAR = {
-		region_state:OKH = {
-			create_building = {
-				building = "building_vineyard_plantation"
-				add_ownership = {
-					building = {
-						type = "building_manor_house"
-						country = "c:OKH"
-						levels = 1
-						region = "STATE_TIHAR"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"default_building_vineyard_plantation"
-				}
-			}
-		}
-	}
 	s:STATE_ARROLA = {
 		region_state:OKH = {
 			create_building = {
@@ -3489,6 +3384,21 @@
 				reserves = 1
 				activate_production_methods = {
 					"pm_basic_shipbuilding"
+				}
+			}
+			create_building = {
+				building = "building_vineyard_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:OKH"
+						levels = 1
+						region = "STATE_ARROLA"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"default_building_vineyard_plantation"
 				}
 			}
 			create_building = {
@@ -4138,7 +4048,7 @@
 					building = {
 						type = "building_wizard_tower"
 						country = "c:KHE"
-						levels = 3
+						levels = 6
 						region = "STATE_LARRIN"
 					}
 				}
@@ -4146,6 +4056,21 @@
 				activate_production_methods = {
 					"pm_fishing_trawlers"
 					"pm_unrefrigerated"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				add_ownership = {
+					building = {
+						type = "building_financial_district"
+						country = "c:KHE"
+						levels = 1
+						region = "STATE_LARRIN"
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_basic_shipbuilding"
 				}
 			}
 			create_building = {
@@ -4218,7 +4143,7 @@
 			}
 		}
 	}
-	s:STATE_IBAIA = {
+	s:STATE_ARGI = {
 		region_state:HEG = {
 			create_building = {
 				building = "building_construction_sector"
@@ -4235,7 +4160,7 @@
 						type = "building_financial_district"
 						country = "c:HEG"
 						levels = 1
-						region = "STATE_IBAIA"
+						region = "STATE_ARGI"
 					}
 				}
 				reserves = 1
@@ -4246,62 +4171,13 @@
 				}
 			}
 			create_building = {
-				building = "building_cotton_plantation"
-				add_ownership = {
-					building = {
-						type = "building_manor_house"
-						country = "c:HEG"
-						levels = 1
-						region = "STATE_IBAIA"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"default_building_cotton_plantation"
-					"pm_road_carts"
-				}
-			}
-			create_building = {
-				building = "building_logging_camp"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:HEG"
-						levels = 2
-						region = "STATE_IBAIA"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_saw_mills"
-					"pm_no_equipment"
-					"pm_road_carts"
-				}
-			}
-			create_building = {
-				building = "building_fishing_wharf"
-				add_ownership = {
-					building = {
-						type = "building_wizard_tower"
-						country = "c:HEG"
-						levels = 3
-						region = "STATE_IBAIA"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_fishing_trawlers"
-					"pm_unrefrigerated"
-				}
-			}
-			create_building = {
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
 						type = "building_financial_district"
 						country = "c:HEG"
 						levels = 1
-						region = "STATE_IBAIA"
+						region = "STATE_ARGI"
 					}
 				}
 				reserves = 1
@@ -4316,7 +4192,7 @@
 						type = "building_manor_house"
 						country = "c:HEG"
 						levels = 1
-						region = "STATE_IBAIA"
+						region = "STATE_ARGI"
 					}
 				}
 				reserves = 1
@@ -4324,27 +4200,6 @@
 					"default_building_vineyard_plantation"
 				}
 			}
-			create_building = {
-				building = "building_logging_camp"
-				add_ownership = {
-					building = {
-						type = "building_financial_district"
-						country = "c:HEG"
-						levels = 1
-						region = "STATE_IBAIA"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_saw_mills"
-					"pm_no_equipment"
-					"pm_road_carts"
-				}
-			}
-		}
-	}
-	s:STATE_ARGI = {
-		region_state:HEG = {
 			create_building = {
 				building = "building_government_administration"
 				level = 1
@@ -4361,7 +4216,7 @@
 					building = {
 						type = "building_manor_house"
 						country = "c:HEG"
-						levels = 3
+						levels = 4
 						region = "STATE_ARGI"
 					}
 				}
@@ -4377,7 +4232,7 @@
 					building = {
 						type = "building_wizard_tower"
 						country = "c:HEG"
-						levels = 3
+						levels = 6
 						region = "STATE_ARGI"
 					}
 				}
@@ -4458,7 +4313,7 @@
 					building = {
 						type = "building_financial_district"
 						country = "c:HEG"
-						levels = 4
+						levels = 6
 						region = "STATE_ARGI"
 					}
 				}

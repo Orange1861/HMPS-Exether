@@ -7,6 +7,7 @@ ai_strategy_default = {
 	# If this trigger evaluates to true for any active strategy, the AI will try to form a power bloc
 	# Empty trigger counts as evaluating false in this specific case
 	will_form_power_bloc = {
+		has_variable = ring_of_steel_var #lets AI khaduras complete the JE
 	}
 
 	# These are the tax levels the AI will try to stay within, though it can go above max tax level if in a financial emergency

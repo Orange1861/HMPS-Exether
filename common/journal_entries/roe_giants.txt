@@ -1,0 +1,98 @@
+﻿je_strength_of_thousands = {
+	icon = "gfx/interface/icons/event_icons/event_revolt.dds"
+
+	is_shown_when_inactive = {
+		any_scope_state = {
+			OR = {
+				culture_percent_state = {  
+					target = cu:frost_giant
+					value >= 0.1
+				}
+				culture_percent_state = {  
+					target = cu:fire_giant 
+					value >= 0.1
+				}
+				culture_percent_state = {  
+					target = cu:toftir_giant
+					value >= 0.1
+				}
+				culture_percent_state = {  
+					target = cu:cloud_giant
+					value >= 0.1
+				}
+				culture_percent_state = {  
+					target = cu:wood_giant
+					value >= 0.1
+				}
+				culture_percent_state = {  
+					target = cu:grendleth
+					value >= 0.1
+				}
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				culture_percent_state = {  
+					target = cu:frost_giant
+					value >= 0.25
+				}
+				culture_percent_state = {  
+					target = cu:fire_giant 
+					value >= 0.25
+				}
+				culture_percent_state = {  
+					target = cu:toftir_giant
+					value >= 0.25
+				}
+				culture_percent_state = {  
+					target = cu:cloud_giant
+					value >= 0.25
+				}
+				culture_percent_state = {  
+					target = cu:wood_giant
+					value >= 0.25
+				}
+				culture_percent_state = {  
+					target = cu:grendleth
+					value >= 0.25
+				}
+			}
+		}
+	}
+
+	group = je_group_internal_affairs
+
+	immediate = {
+		cu:frost_giant ?= {
+			save_scope_as = frost_giant
+		}
+		cu:fire_giant ?= {
+			save_scope_as = fire_giant
+		}
+		cu:toftir_giant ?= {
+			save_scope_as = toftir_giant
+		}
+		cu:cloud_giant ?= {
+			save_scope_as = cloud_giant
+		}
+		cu:wood_giant ?= {
+			save_scope_as = wood_giant
+		}
+		cu:grendleth ?= {
+			save_scope_as = grendleth
+		}
+		add_giant_modifiers = yes
+	}
+	
+	on_monthly_pulse = {
+		effect = {
+			add_giant_modifiers = yes
+		}
+	}
+
+	can_deactivate = yes
+	weight = 10
+}

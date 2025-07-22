@@ -487,21 +487,6 @@
 		}
 	}
 
-     create_treaty = {
-		first_country = c:WIT
-		second_country = c:HAG
-
-		is_draft = no
-		entered_into_force_on = 1153.8.21
-		binding_period = { years = 50 }
-
-		articles_to_create = {
-			{ 
-			    article = alliance
-			}
-		}
-	}
-
     create_treaty = {
 		first_country = c:LAZ
 		second_country = c:OKH

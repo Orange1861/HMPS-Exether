@@ -3294,21 +3294,6 @@
 				}
 			}
 			create_building = {
-				building = "building_hunting_lodge"
-				add_ownership = {
-					building = {
-						type = "building_wizard_tower"
-						country = "c:OLC"
-						levels = 2
-						region = "STATE_SAMARTHYA"
-					}
-				}
-				reserves = 1
-				activate_production_methods = {
-					"pm_firearms_hunting"
-				}
-			}
-			create_building = {
 				building = "building_cotton_plantation"
 				add_ownership = {
 					building = {

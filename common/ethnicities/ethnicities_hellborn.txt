@@ -50,6 +50,12 @@ hellborn = {
         # Black
 		95 = { 0.01 0.9 0.5 0.99 }
 	}
+
+    gene_ogre_horns={ 
+        25 = { name = no_horns    range = { 0.5 1 }    }
+        25 = { name = all_horns    range = { 0.5 1 }    }
+        50 = { name = all_horns    range = { 0.5 0.5 }    }
+     }
 ### Additive anim genes ###
     
     gene_forehead_height = {

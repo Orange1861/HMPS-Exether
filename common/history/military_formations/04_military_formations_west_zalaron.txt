@@ -126,7 +126,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
-				state_region = s:STATE_NAKOKAIN
+				state_region = s:STATE_KEENAVOK
 				count = 10
 			}
 
@@ -1270,14 +1270,8 @@ c:DRI ?= {
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_SHKUMBINIA
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_NYZHNE_SENIA
-				count = 10
+				count = 20
 			}
 
 			save_scope_as = mgrarmy2

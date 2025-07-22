@@ -2428,16 +2428,10 @@ pm_cloudsilver_alloying = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_cloudsilver_add = 10 #40 = -400
+			goods_input_cloudsilver_add = 15 #40 = -600
 			
 			# output goods
 			goods_output_steel_add = 15 #50 = 750
-		}
-
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = -500
-			building_employment_machinists_add = 500
 		}
 	}
 }
@@ -2618,7 +2612,7 @@ pm_diesel_engines = {
 
 pm_watertube_boiler_building_motor_industry = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
-	
+	replacement_if_valid = pm_watertube_boiler_building_motor_industry_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 5
@@ -2637,45 +2631,44 @@ pm_watertube_boiler_building_motor_industry = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -500
 			building_employment_laborers_add = -500
 			building_employment_machinists_add = -500
 		}
 	}
 }
 
-pm_wishstone_boiler_building_motor_industry = {  #there's no way this is better than the regular boiler.  but maybe it shouldn't be?  not sure how I feel about wishstone boilers.
-	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+# pm_wishstone_boiler_building_motor_industry = {  #there's no way this is better than the regular boiler.  but maybe it shouldn't be?  not sure how I feel about wishstone boilers.
+# 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
 	
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 5 #magic
-		}
-	}
+# 	state_modifiers = {
+# 		workforce_scaled = {
+# 			state_veil_integrity_contribution = 5 #magic
+# 		}
+# 	}
 	
-	unlocking_technologies = {
-		watertube_boiler
-	}
+# 	unlocking_technologies = {
+# 		watertube_boiler
+# 	}
 	
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 5
-			goods_input_wishstone_add = 10 #30 300
-		}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			# input goods
+# 			goods_input_tools_add = 5
+# 			goods_input_wishstone_add = 10 #30 300
+# 		}
 
-		level_scaled = {
-			building_employment_guild_bonded_add = -800
-			building_employment_laborers_add = -800
-			building_employment_machinists_add = -500
-			building_employment_wizards_add = 200
-		}
-	}
-}
+# 		level_scaled = {
+# 			building_employment_guild_bonded_add = -800 #no guild pm
+# 			building_employment_laborers_add = -800
+# 			building_employment_machinists_add = -500
+# 			building_employment_wizards_add = 200
+# 		}
+# 	}
+# }
 
 pm_rotary_valve_engine_building_motor_industry = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
-	
+	replacement_if_valid = pm_rotary_valve_engine_building_motor_industry_guild_bonded
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -2694,7 +2687,6 @@ pm_rotary_valve_engine_building_motor_industry = {
 		}
 
 		level_scaled = {
-			building_employment_guild_bonded_add = -1000
 			building_employment_laborers_add = -1000
 			building_employment_machinists_add = -500
 		}
@@ -3802,14 +3794,11 @@ pm_cloudsilver_cartridges = {
 		workforce_scaled = {
 			# input goods
 			goods_input_cloudsilver_add = 20 #40 = 800
+			goods_input_lead_add = -10 #40 = -400
 			# output goods
-			goods_output_ammunition_add = 20 #50 = 1000
+			goods_output_ammunition_add = 10 #50 = 500
 		}
 
-		level_scaled = {
-			building_employment_laborers_add = -500
-			building_employment_machinists_add = 500
-		}
 	}
 }
 

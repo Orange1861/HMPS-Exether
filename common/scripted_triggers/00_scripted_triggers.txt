@@ -61,6 +61,17 @@ country_can_form_power_bloc = {
 		}
 		NOT = { has_law = law_type:law_isolationism }
 		OR = {
+			trigger_if = {
+				limit = {
+					c:KHD ?= this
+				}
+				always = yes
+				# custom_tooltip = {
+				# 	text = ring_of_steel_tt
+				# 	has_variable = ring_of_steel_var
+				# }
+			}
+			
 			AND = {
 				country_rank >= rank_value:unrecognized_major_power
 				gdp > 10000000
@@ -1229,7 +1240,7 @@ has_socialist_ideology = {
 
 has_reactionary_ideology = {
 	OR = {
-		has_ideology = ideology:ideology_matriarchal_traditionalist
+		
         has_ideology = ideology:ideology_traditionalist
         has_ideology = ideology:ideology_ecumenical_traditionalist
 		has_ideology = ideology:ideology_fascist
@@ -1243,7 +1254,7 @@ has_reactionary_ideology = {
 
 has_conservative_ideology = {
 	OR = {
-		has_ideology = ideology:ideology_matriarchal_traditionalist
+		
         has_ideology = ideology:ideology_traditionalist
         has_ideology = ideology:ideology_ecumenical_traditionalist
 		has_ideology = ideology:ideology_slaver

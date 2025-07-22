@@ -1,4 +1,4 @@
-je_blue_riband = {
+﻿je_blue_riband = {
 	icon = "gfx/interface/icons/event_icons/event_naval.dds"
 
 	group = je_group_technology
@@ -44,7 +44,7 @@ je_blue_riband = {
 				}
 			}
 			set_variable = held_riband
-			trigger_event = { id = blue_riband.2 days = 0 popup = yes}
+			trigger_event = { id = blue_riband.3 days = 0 popup = yes}
 		}
 	}
 
@@ -65,8 +65,10 @@ je_blue_riband = {
 	
 	on_monthly_pulse = {
 		random_events = {
-			95 = 0
-            5 = blue_riband.3
+			955 = 0
+			20 = blue_riband.61  #immigration boost
+			20 = blue_riband.62  #colonization boost
+			5 = blue_riband.63  #cruise line for holder
 		}
 	}
 
@@ -130,21 +132,22 @@ je_oceanliner = {
 	}
 
 	complete = {
-            OR = {
+        OR = {
                 leading_producer_of = g:steamers
                 has_shipyard_company = yes
-            }
-		any_scope_building = {
-			is_building_type = building_shipyards
-			has_active_production_method = pm_metal_shipbuilding
-			 level >= 3
+				any_scope_building = {
+					is_building_type = building_shipyards
+					has_active_production_method = pm_metal_shipbuilding
+					level >= 3
+				}
 		}
+		
 	}
 
 	on_monthly_pulse = {
 		random_events = {
 			95 = 0
-            5 = blue_riband.42 #paid shipyard event 1
+            5 = blue_riband.42
 		}
 	}
 
@@ -154,9 +157,9 @@ je_oceanliner = {
 			months = 60
 			is_decaying = yes
 		}
+		trigger_event = { id = blue_riband.2 days = 0 popup = yes}
 		set_variable = {
 			name = completed_oceanliner_je
 		}
 	}
-
 }

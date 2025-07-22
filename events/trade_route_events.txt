@@ -390,8 +390,7 @@ trade_route_events.66 = {
 	duration = 3
 
 	trigger = {
-		exists = ig:ig_mages
-		ig:ig_mages = {
+		ig:ig_mages ?= {
 			is_marginal = no
 		}
 		capital.market = {

@@ -113,7 +113,7 @@
 				exists = ruler
 				ruler = {
 					OR = {
-						has_ideology = ideology:ideology_matriarchal_traditionalist
+						
                         has_ideology = ideology:ideology_traditionalist
                         has_ideology = ideology:ideology_ecumenical_traditionalist
 						has_monarchist_ideology = yes
@@ -251,7 +251,7 @@ ai_strategy_reactionary_agenda = {
 				}
 			}
 			OR = {
-				has_ideology = ideology:ideology_matriarchal_traditionalist
+				
                 has_ideology = ideology:ideology_traditionalist
                 has_ideology = ideology:ideology_ecumenical_traditionalist
 				has_ideology = ideology:ideology_slaver
