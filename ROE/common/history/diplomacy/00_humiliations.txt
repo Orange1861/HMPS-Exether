@@ -1,9 +1,0 @@
-﻿DIPLOMACY = {
-	c:ARR ?= {
-		create_diplomatic_pact = {
-			country = c:DUM
-			type = humiliation
-			months = 60
-		}	
-	}
-}
