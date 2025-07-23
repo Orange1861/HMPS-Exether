@@ -26,9 +26,17 @@
 				}
 				add_ownership = {
 					building = {
+						type = "building_trade_center"
+						country = "c:DUM"
+						levels = 11
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 15
+						levels = 4
 						region = "STATE_CROWNPEAK"
 					}
 				}
@@ -62,9 +70,17 @@
 				building = "building_ice_cap"
 				add_ownership = {
 					building = {
+						type = "building_ice_cap"
+						country = "c:DUM"
+						levels = 5
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 6
+						levels = 1
 						region = "STATE_CROWNPEAK"
 					}
 				}
@@ -77,9 +93,17 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
+						type = "building_furniture_manufacturies"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 5
+						levels = 1
 						region = "STATE_CROWNPEAK"
 					}
 				}
@@ -95,9 +119,17 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
+						type = "building_paper_mills"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 5
+						levels = 1
 						region = "STATE_CROWNPEAK"
 					}
 				}
@@ -128,9 +160,17 @@
 				building = "building_wishstone_mine"
 				add_ownership = {
 					building = {
+						type = "building_wishstone_mine"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_CROWNPEAK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 4
+						levels = 1
 						region = "STATE_CROWNPEAK"
 					}
 				}
@@ -144,7 +184,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:DUM"
 						levels = 1
 						region = "STATE_CROWNPEAK"
@@ -166,10 +206,10 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:DUM"
 						levels = 3
-						region = "STATE_CROWNPEAK"
+						region = "STATE_CALDAMUS"
 					}
 				}
 				reserves = 1
@@ -183,9 +223,17 @@
 				building = "building_food_industry"
 				add_ownership = {
 					building = {
+						type = "building_food_industry"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_CALDAMUS"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 2
+						levels = 1
 						region = "STATE_CROWNPEAK"
 					}
 				}
@@ -216,9 +264,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:DUM"
+						levels = 6
+						region = "STATE_CALDAMUS"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 7
+						levels = 1
 						region = "STATE_CALDAMUS"
 					}
 				}
@@ -307,9 +363,17 @@
 				building = "building_artillery_foundries"
 				add_ownership = {
 					building = {
+						type = "building_artillery_foundries"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_SERONTAIN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 2
+						levels = 1
 						region = "STATE_SERONTAIN"
 					}
 				}
@@ -323,9 +387,17 @@
 				building = "building_food_industry"
 				add_ownership = {
 					building = {
+						type = "building_food_industry"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_SERONTAIN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 2
+						levels = 1
 						region = "STATE_SERONTAIN"
 					}
 				}
@@ -340,7 +412,7 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_distillery"
 						country = "c:DUM"
 						levels = 1
 						region = "STATE_SERONTAIN"
@@ -357,7 +429,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:DUM"
 						levels = 3
 						region = "STATE_SERONTAIN"
@@ -388,9 +460,17 @@
 				building = "building_wishstone_mine"
 				add_ownership = {
 					building = {
+						type = "building_wishstone_mine"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_SERONTAIN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 2
+						levels = 1
 						region = "STATE_SERONTAIN"
 					}
 				}
@@ -407,10 +487,10 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_railway"
+						country = "c:UPP"
 						levels = 1
-						region = "STATE_CROWNPEAK"
+						region = "STATE_NORTH_HIGHLANDS"
 					}
 				}
 				reserves = 1
@@ -423,10 +503,10 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_furniture_manufacturies"
+						country = "c:UPP"
 						levels = 1
-						region = "STATE_CALDAMUS"
+						region = "STATE_NORTH_HIGHLANDS"
 					}
 				}
 				reserves = 1
@@ -440,7 +520,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:UPP"
 						levels = 9
 						region = "STATE_NORTH_HIGHLANDS"
@@ -457,7 +537,7 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_coal_mine"
 						country = "c:UPP"
 						levels = 6
 						region = "STATE_NORTH_HIGHLANDS"
@@ -487,7 +567,7 @@
 				building = "building_food_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_food_industry"
 						country = "c:UPP"
 						levels = 2
 						region = "STATE_HIGHPASS"
@@ -504,7 +584,7 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_distillery"
 						country = "c:UPP"
 						levels = 2
 						region = "STATE_HIGHPASS"
@@ -520,7 +600,7 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_coal_mine"
 						country = "c:UPP"
 						levels = 6
 						region = "STATE_HIGHPASS"
@@ -538,7 +618,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:UPP"
 						levels = 2
 						region = "STATE_HIGHPASS"
@@ -560,10 +640,10 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_iron_mine"
+						country = "c:UPP"
 						levels = 2
-						region = "STATE_CROWNPEAK"
+						region = "STATE_SOUTH_HIGHLANDS"
 					}
 				}
 				reserves = 1
@@ -578,10 +658,10 @@
 				building = "building_lead_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_lead_mine"
+						country = "c:UPP"
 						levels = 2
-						region = "STATE_CROWNPEAK"
+						region = "STATE_SOUTH_HIGHLANDS"
 					}
 				}
 				reserves = 1
@@ -596,10 +676,10 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_coal_mine"
+						country = "c:UPP"
 						levels = 2
-						region = "STATE_CROWNPEAK"
+						region = "STATE_SOUTH_HIGHLANDS"
 					}
 				}
 				reserves = 1
@@ -670,9 +750,17 @@
 				building = "building_chemical_plants"
 				add_ownership = {
 					building = {
+						type = "building_chemical_plants"
+						country = "c:DEW"
+						levels = 4
+						region = "STATE_SLUDGE_COAST"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DEW"
-						levels = 6
+						levels = 2
 						region = "STATE_SLUDGE_COAST"
 					}
 				}
@@ -685,9 +773,17 @@
 				building = "building_sulfur_mine"
 				add_ownership = {
 					building = {
+						type = "building_sulfur_mine"
+						country = "c:DEW"
+						levels = 3
+						region = "STATE_SLUDGE_COAST"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DEW"
-						levels = 5
+						levels = 2
 						region = "STATE_SLUDGE_COAST"
 					}
 				}
@@ -722,9 +818,17 @@
 				}
 				add_ownership = {
 					building = {
+						type = "building_trade_center"
+						country = "c:DEW"
+						levels = 1
+						region = "STATE_SLUDGE_COAST"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DEW"
-						levels = 2
+						levels = 1
 						region = "STATE_SLUDGE_COAST"
 					}
 				}
@@ -734,10 +838,10 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_tooling_workshops"
+						country = "c:DEW"
 						levels = 1
-						region = "STATE_CROWNPEAK"
+						region = "STATE_SLUDGE_COAST"
 					}
 				}
 				reserves = 1
@@ -833,7 +937,7 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_railway"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_LAST_HEARTH"
@@ -849,7 +953,7 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_shipyards"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_LAST_HEARTH"
@@ -864,7 +968,7 @@
 				building = "building_military_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_military_shipyards"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_LAST_HEARTH"
@@ -879,7 +983,7 @@
 				building = "building_explosives_factory"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_explosives_factory"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_LAST_HEARTH"
@@ -894,7 +998,7 @@
 				building = "building_munition_plants"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_munition_plants"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_LAST_HEARTH"
@@ -909,7 +1013,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_LAST_HEARTH"
@@ -924,7 +1028,7 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_paper_mills"
 						country = "c:RAL"
 						levels = 5
 						region = "STATE_LAST_HEARTH"
@@ -940,7 +1044,7 @@
 				building = "building_glassworks"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_glassworks"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_LAST_HEARTH"
@@ -957,7 +1061,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:RAL"
 						levels = 16
 						region = "STATE_LAST_HEARTH"
@@ -1007,7 +1111,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:RAL"
 						levels = 2
 						region = "STATE_LAST_HEARTH"
@@ -1068,7 +1172,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_ZENDEN"
@@ -1131,7 +1235,7 @@
 				building = "building_sulfur_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_sulfur_mine"
 						country = "c:DEW"
 						levels = 1
 						region = "STATE_TAR_PITS"
@@ -1171,7 +1275,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:YAN"
 						levels = 2
 						region = "STATE_WEST_YANGER_STEPPE"
@@ -1252,10 +1356,10 @@
 				building = "building_squid_squad"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:BIE"
+						type = "building_squid_squad"
+						country = "c:YAN"
 						levels = 1
-						region = "STATE_KENLYNE"
+						region = "STATE_EAST_YANGER_STEPPE"
 					}
 				}
 				reserves = 1
@@ -1275,7 +1379,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:YAN"
 						levels = 2
 						region = "STATE_RIDERS_MOOT"
@@ -1321,7 +1425,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:YAN"
 						levels = 2
 						region = "STATE_RIDERS_MOOT"
@@ -1339,7 +1443,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:YAN"
 						levels = 2
 						region = "STATE_RIDERS_MOOT"
@@ -1373,7 +1477,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:YAN"
 						levels = 1
 						region = "STATE_RIDERS_MOOT"
@@ -1390,7 +1494,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:YAN"
 						levels = 2
 						region = "STATE_RIDERS_MOOT"
@@ -1407,7 +1511,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:YAN"
 						levels = 2
 						region = "STATE_RIDERS_MOOT"
@@ -1427,9 +1531,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:ABR"
+						levels = 7
+						region = "STATE_FROSTGATE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:ABR"
-						levels = 9
+						levels = 2
 						region = "STATE_MIDCLACK"
 					}
 				}
@@ -1445,9 +1557,17 @@
 				building = "building_fishing_wharf"
 				add_ownership = {
 					building = {
+						type = "building_fishing_wharf"
+						country = "c:ABR"
+						levels = 1
+						region = "STATE_FROSTGATE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:ABR"
-						levels = 2
+						levels = 1
 						region = "STATE_MIDCLACK"
 					}
 				}
@@ -1469,7 +1589,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:AUM"
 						levels = 2
 						region = "STATE_TEMPLE_HILL"
@@ -1486,7 +1606,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:AUM"
 						levels = 2
 						region = "STATE_TEMPLE_HILL"
@@ -1519,7 +1639,7 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_shipyards"
 						country = "c:AUM"
 						levels = 1
 						region = "STATE_TEMPLE_HILL"
@@ -1537,7 +1657,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:AUM"
 						levels = 2
 						region = "STATE_TEMPLE_HILL"
@@ -1565,7 +1685,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:AUM"
 						levels = 1
 						region = "STATE_TEMPLE_HILL"
@@ -1581,7 +1701,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:AUM"
 						levels = 1
 						region = "STATE_TEMPLE_HILL"
@@ -1606,7 +1726,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:AUM"
 						levels = 3
 						region = "STATE_TEMPLE_HILL"
@@ -1636,7 +1756,7 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_paper_mills"
 						country = "c:AUM"
 						levels = 1
 						region = "STATE_TEMPLE_HILL"
@@ -1670,7 +1790,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:AUM"
 						levels = 5
 						region = "STATE_TEMPLE_HILL"
@@ -1727,10 +1847,10 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_tooling_workshops"
+						country = "c:GED"
 						levels = 1
-						region = "STATE_CROWNPEAK"
+						region = "STATE_OSTREN"
 					}
 				}
 				reserves = 1
@@ -1751,10 +1871,10 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_textile_mills"
+						country = "c:GED"
 						levels = 3
-						region = "STATE_CROWNPEAK"
+						region = "STATE_OSTREN"
 					}
 				}
 				reserves = 1
@@ -1768,10 +1888,10 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:DUM"
+						type = "building_iron_mine"
+						country = "c:GED"
 						levels = 2
-						region = "STATE_CROWNPEAK"
+						region = "STATE_OSTREN"
 					}
 				}
 				reserves = 1
@@ -1790,9 +1910,17 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
+						type = "building_iron_mine"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_NORLEA"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 4
+						levels = 1
 						region = "STATE_NORLEA"
 					}
 				}
@@ -1867,7 +1995,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_RAVENCLIFF"
@@ -1936,7 +2064,7 @@
 				building = "building_lead_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_lead_mine"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_RAVENCLIFF"
@@ -1955,7 +2083,7 @@
 				building = "building_glassworks"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_glassworks"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_RAVENCLIFF"
@@ -1972,9 +2100,17 @@
 				building = "building_food_industry"
 				add_ownership = {
 					building = {
+						type = "building_food_industry"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_RAVENCLIFF"
 					}
 				}
@@ -1990,7 +2126,7 @@
 				building = "building_motor_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_motor_industry"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_RAVENCLIFF"
@@ -2005,9 +2141,17 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
+						type = "building_railway"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_RAVENCLIFF"
 					}
 				}
@@ -2039,9 +2183,17 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
+						type = "building_coal_mine"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_RAVENCLIFF"
 					}
 				}
@@ -2076,7 +2228,7 @@
 				building = "building_steel_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_steel_mills"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_RAVENCLIFF"
@@ -2110,9 +2262,17 @@
 				building = "building_gizmo_workshop"
 				add_ownership = {
 					building = {
+						type = "building_gizmo_workshop"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 3
+						levels = 1
 						region = "STATE_RAVENCLIFF"
 					}
 				}
@@ -2157,9 +2317,17 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
+						type = "building_iron_mine"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 4
+						levels = 1
 						region = "STATE_RAVENCLIFF"
 					}
 				}
@@ -2177,9 +2345,17 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
+						type = "building_tooling_workshops"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_RAVENCLIFF"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_RAVENCLIFF"
 					}
 				}
@@ -2193,7 +2369,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_RAVENCLIFF"
@@ -2209,7 +2385,7 @@
 				building = "building_artillery_foundries"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_artillery_foundries"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_RAVENCLIFF"
@@ -2227,8 +2403,8 @@
 				building = "building_ice_cap"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:RVC"
+						type = "building_ice_cap"
+						country = "c:RVD"
 						levels = 2
 						region = "STATE_RAVENCLIFF"
 					}
@@ -2289,7 +2465,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:YAN"
 						levels = 1
 						region = "STATE_CROWNSHADE"
@@ -2401,7 +2577,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:ABR"
 						levels = 1
 						region = "STATE_MIDCLACK"
@@ -2416,9 +2592,17 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
+						type = "building_paper_mills"
+						country = "c:ABR"
+						levels = 2
+						region = "STATE_MIDCLACK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:ABR"
-						levels = 3
+						levels = 1
 						region = "STATE_MIDCLACK"
 					}
 				}
@@ -2435,7 +2619,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:ABR"
 						levels = 1
 						region = "STATE_MIDCLACK"
@@ -2447,9 +2631,17 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
+						type = "building_textile_mills"
+						country = "c:ABR"
+						levels = 2
+						region = "STATE_MIDCLACK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:ABR"
-						levels = 3
+						levels = 1
 						region = "STATE_MIDCLACK"
 					}
 				}
@@ -2464,9 +2656,17 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
+						type = "building_iron_mine"
+						country = "c:ABR"
+						levels = 3
+						region = "STATE_MIDCLACK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:ABR"
-						levels = 4
+						levels = 1
 						region = "STATE_MIDCLACK"
 					}
 				}
@@ -2523,9 +2723,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:ABR"
+						levels = 5
+						region = "STATE_MIDCLACK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:ABR"
-						levels = 6
+						levels = 1
 						region = "STATE_MIDCLACK"
 					}
 				}
@@ -2581,7 +2789,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_BANEKERT"
@@ -2596,7 +2804,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:RAL"
 						levels = 4
 						region = "STATE_BANEKERT"
@@ -2613,7 +2821,7 @@
 				building = "building_glassworks"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_glassworks"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_BANEKERT"
@@ -2695,7 +2903,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:OEX"
 						levels = 1
 						region = "STATE_ELDBERG"
@@ -2712,9 +2920,17 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
+						type = "building_distillery"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:OEX"
-						levels = 2
+						levels = 1
 						region = "STATE_ELDBERG"
 					}
 				}
@@ -2759,7 +2975,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:OEX"
 						levels = 1
 						region = "STATE_ELDBERG"
@@ -2792,7 +3008,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:OEX"
 						levels = 1
 						region = "STATE_ELDBERG"
@@ -2855,7 +3071,7 @@
 				building = "building_gizmo_workshop"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_gizmo_workshop"
 						country = "c:OEX"
 						levels = 1
 						region = "STATE_ELDBERG"
@@ -2870,9 +3086,17 @@
 				building = "building_artifactory"
 				add_ownership = {
 					building = {
+						type = "building_artifactory"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:OEX"
-						levels = 2
+						levels = 1
 						region = "STATE_ELDBERG"
 					}
 				}
@@ -2886,7 +3110,7 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_railway"
 						country = "c:OEX"
 						levels = 1
 						region = "STATE_ELDBERG"
@@ -2972,9 +3196,17 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
+						type = "building_iron_mine"
+						country = "c:OEX"
+						levels = 1
+						region = "STATE_ELDBERG"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:OEX"
-						levels = 2
+						levels = 1
 						region = "STATE_ELDBERG"
 					}
 				}
@@ -3020,7 +3252,7 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_railway"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_ADRIANSEN"
@@ -3036,7 +3268,7 @@
 				building = "building_motor_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_motor_industry"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_ADRIANSEN"
@@ -3051,7 +3283,7 @@
 				building = "building_steel_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_steel_mills"
 						country = "c:RAL"
 						levels = 2
 						region = "STATE_ADRIANSEN"
@@ -3066,7 +3298,7 @@
 				building = "building_artillery_foundries"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_artillery_foundries"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_ADRIANSEN"
@@ -3082,7 +3314,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:RAL"
 						levels = 2
 						region = "STATE_ADRIANSEN"
@@ -3100,7 +3332,7 @@
 				building = "building_food_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_food_industry"
 						country = "c:RAL"
 						levels = 2
 						region = "STATE_ADRIANSEN"
@@ -3117,7 +3349,7 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_distillery"
 						country = "c:RAL"
 						levels = 1
 						region = "STATE_ADRIANSEN"
@@ -3146,10 +3378,10 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:RAL"
 						levels = 4
-						region = "STATE_LAST_HEARTH"
+						region = "STATE_ADRIANSEN"
 					}
 				}
 				reserves = 1
@@ -3162,10 +3394,10 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:RAL"
 						levels = 3
-						region = "STATE_LAST_HEARTH"
+						region = "STATE_ADRIANSEN"
 					}
 				}
 				reserves = 1
@@ -3260,9 +3492,17 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
+						type = "building_arms_industry"
+						country = "c:DUM"
+						levels = 1
+						region = "STATE_MELENLECK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 2
+						levels = 1
 						region = "STATE_MELENLECK"
 					}
 				}
@@ -3275,9 +3515,17 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
+						type = "building_paper_mills"
+						country = "c:DUM"
+						levels = 3
+						region = "STATE_MELENLECK"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 4
+						levels = 1
 						region = "STATE_CROWNPEAK"
 					}
 				}
@@ -3308,7 +3556,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:DUM"
 						levels = 2
 						region = "STATE_MELENLECK"
@@ -3324,7 +3572,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:DUM"
 						levels = 2
 						region = "STATE_MELENLECK"
@@ -3370,7 +3618,7 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_distillery"
 						country = "c:DOV"
 						levels = 4
 						region = "STATE_BALLYNE"
@@ -3389,7 +3637,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_BALLYNE"
@@ -3418,7 +3666,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_BALLYNE"
@@ -3435,7 +3683,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_BALLYNE"
@@ -3459,7 +3707,7 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_paper_mills"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_BALLYNE"
@@ -3508,7 +3756,7 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_coal_mine"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_BALLYNE"
@@ -3526,7 +3774,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:DOV"
 						levels = 5
 						region = "STATE_BALLYNE"
@@ -3564,10 +3812,10 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:BIE"
+						type = "building_arms_industry"
+						country = "c:YAN"
 						levels = 2
-						region = "STATE_KENLYNE"
+						region = "STATE_URIKS_GIFT"
 					}
 				}
 				reserves = 1
@@ -3579,10 +3827,10 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:BIE"
+						type = "building_iron_mine"
+						country = "c:YAN"
 						levels = 1
-						region = "STATE_KENLYNE"
+						region = "STATE_URIKS_GIFT"
 					}
 				}
 				reserves = 1
@@ -3597,10 +3845,10 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:BIE"
+						type = "building_distillery"
+						country = "c:YAN"
 						levels = 2
-						region = "STATE_KENLYNE"
+						region = "STATE_URIKS_GIFT"
 					}
 				}
 				reserves = 1
@@ -3630,10 +3878,10 @@
 				building = "building_rye_farm"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:BIE"
+						type = "building_rye_farm"
+						country = "c:YAN"
 						levels = 4
-						region = "STATE_KENLYNE"
+						region = "STATE_URIKS_GIFT"
 					}
 				}
 				reserves = 1
@@ -3668,7 +3916,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:DUM"
 						levels = 3
 						region = "STATE_INVERINGAR"
@@ -3706,7 +3954,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:MBR"
 						levels = 2
 						region = "STATE_GLASLIESH"
@@ -3841,9 +4089,17 @@
 				building = "building_artifactory"
 				add_ownership = {
 					building = {
+						type = "building_artifactory"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 6
+						levels = 3
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -3857,9 +4113,17 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
+						type = "building_paper_mills"
+						country = "c:BCT"
+						levels = 1
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 2
+						levels = 1
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -3873,9 +4137,17 @@
 				building = "building_artillery_foundries"
 				add_ownership = {
 					building = {
+						type = "building_artillery_foundries"
+						country = "c:BCT"
+						levels = 1
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 2
+						levels = 1
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -3889,9 +4161,17 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
+						type = "building_textile_mills"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 5
+						levels = 3
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -3906,7 +4186,7 @@
 				building = "building_sulfur_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_sulfur_mine"
 						country = "c:BCT"
 						levels = 1
 						region = "STATE_LIGHTSCOURGE"
@@ -3924,9 +4204,17 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
+						type = "building_furniture_manufacturies"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 3
+						levels = 1
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -3941,9 +4229,17 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
+						type = "building_distillery"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 6
+						levels = 3
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -4040,9 +4336,17 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
+						type = "building_arms_industry"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 3
+						levels = 1
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -4072,7 +4376,7 @@
 				building = "building_motor_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_motor_industry"
 						country = "c:BCT"
 						levels = 1
 						region = "STATE_LIGHTSCOURGE"
@@ -4087,9 +4391,17 @@
 				building = "building_steel_mills"
 				add_ownership = {
 					building = {
+						type = "building_steel_mills"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 3
+						levels = 1
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -4102,9 +4414,17 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
+						type = "building_iron_mine"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 4
+						levels = 2
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -4121,9 +4441,17 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
+						type = "building_tooling_workshops"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 5
+						levels = 2
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -4137,9 +4465,17 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
+						type = "building_coal_mine"
+						country = "c:BCT"
+						levels = 2
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 4
+						levels = 2
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -4156,9 +4492,17 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
+						type = "building_railway"
+						country = "c:BCT"
+						levels = 3
+						region = "STATE_LIGHTSCOURGE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 6
+						levels = 3
 						region = "STATE_LIGHTSCOURGE"
 					}
 				}
@@ -4192,9 +4536,17 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
+						type = "building_furniture_manufacturies"
+						country = "c:BCT"
+						levels = 1
+						region = "STATE_ARCTHARAL"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:BCT"
-						levels = 2
+						levels = 1
 						region = "STATE_ARCTHARAL"
 					}
 				}
@@ -4237,10 +4589,10 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_railway"
 						country = "c:DUM"
 						levels = 1
-						region = "STATE_CROWNPEAK"
+						region = "STATE_MALINMORE"
 					}
 				}
 				reserves = 1
@@ -4253,9 +4605,17 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
+						type = "building_shipyards"
+						country = "c:DUM"
+						levels = 4
+						region = "STATE_MALINMORE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 5
+						levels = 1
 						region = "STATE_MALINMORE"
 					}
 				}
@@ -4276,9 +4636,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:DUM"
+						levels = 7
+						region = "STATE_MALINMORE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:DUM"
-						levels = 9
+						levels = 2
 						region = "STATE_MALINMORE"
 					}
 				}
@@ -4328,7 +4696,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:DUM"
 						levels = 2
 						region = "STATE_MALINMORE"
@@ -4344,10 +4712,10 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:DUM"
 						levels = 2
-						region = "STATE_CROWNPEAK"
+						region = "STATE_MALINMORE"
 					}
 				}
 				reserves = 1
@@ -4374,7 +4742,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:AUM"
 						levels = 1
 						region = "STATE_FALNALECK"
@@ -4445,7 +4813,7 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_distillery"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_THORNWALL"
@@ -4464,7 +4832,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_THORNWALL"
@@ -4510,7 +4878,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_THORNWALL"
@@ -4567,7 +4935,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:ICE"
 						levels = 1
 						region = "STATE_SNOWBREACH"
@@ -4625,7 +4993,7 @@
 				building = "building_fur_hunting_lodge"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_fur_hunting_lodge"
 						country = "c:BIE"
 						levels = 1
 						region = "STATE_KENLYNE"
@@ -4676,7 +5044,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:BIE"
 						levels = 3
 						region = "STATE_KENLYNE"
@@ -4695,7 +5063,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:BIE"
 						levels = 2
 						region = "STATE_KENLYNE"
@@ -4710,7 +5078,7 @@
 				building = "building_artillery_foundries"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_artillery_foundries"
 						country = "c:BIE"
 						levels = 1
 						region = "STATE_KENLYNE"
@@ -4729,7 +5097,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:BIE"
 						levels = 4
 						region = "STATE_KENLYNE"
@@ -4756,7 +5124,7 @@
 				building = "building_leviathan_outpost"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_leviathan_outpost"
 						country = "c:BIE"
 						levels = 2
 						region = "STATE_KENLYNE"
@@ -4772,7 +5140,7 @@
 				building = "building_fur_hunting_lodge"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_fur_hunting_lodge"
 						country = "c:BIE"
 						levels = 2
 						region = "STATE_KENLYNE"
@@ -4788,7 +5156,7 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_shipyards"
 						country = "c:BIE"
 						levels = 1
 						region = "STATE_KENLYNE"
@@ -4803,7 +5171,7 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_paper_mills"
 						country = "c:BIE"
 						levels = 1
 						region = "STATE_KENLYNE"
@@ -4835,7 +5203,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:BIE"
 						levels = 2
 						region = "STATE_KENLYNE"
@@ -4863,7 +5231,7 @@
 				building = "building_squid_squad"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_squid_squad"
 						country = "c:BIE"
 						levels = 1
 						region = "STATE_KENLYNE"
@@ -4879,7 +5247,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:BIE"
 						levels = 2
 						region = "STATE_KENLYNE"
@@ -4895,7 +5263,7 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_coal_mine"
 						country = "c:BIE"
 						levels = 1
 						region = "STATE_KENLYNE"
@@ -4922,7 +5290,7 @@
 				building = "building_fishing_wharf"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_fishing_wharf"
 						country = "c:BIE"
 						levels = 5
 						region = "STATE_KENLYNE"
@@ -4972,7 +5340,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:BIE"
 						levels = 3
 						region = "STATE_KENLYNE"
@@ -5105,7 +5473,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:HAG"
 						levels = 1
 						region = "STATE_BANCFAN"
@@ -5138,7 +5506,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:HAG"
 						levels = 2
 						region = "STATE_BANCFAN"
@@ -5194,7 +5562,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:ROF"
 						levels = 1
 						region = "STATE_BANCFAN"
@@ -5206,7 +5574,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:ROF"
 						levels = 2
 						region = "STATE_BANCFAN"
@@ -5224,7 +5592,7 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_shipyards"
 						country = "c:ROF"
 						levels = 1
 						region = "STATE_BANCFAN"
@@ -5239,7 +5607,7 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_paper_mills"
 						country = "c:ROF"
 						levels = 1
 						region = "STATE_BANCFAN"
@@ -5255,7 +5623,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:ROF"
 						levels = 1
 						region = "STATE_BANCFAN"
@@ -5271,7 +5639,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:ROF"
 						levels = 2
 						region = "STATE_BANCFAN"
@@ -5288,7 +5656,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:ROF"
 						levels = 1
 						region = "STATE_BANCFAN"
@@ -5362,7 +5730,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:ROF"
 						levels = 2
 						region = "STATE_BANCFAN"
@@ -5378,7 +5746,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:ROF"
 						levels = 6
 						region = "STATE_BANCFAN"
@@ -5492,7 +5860,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:HAG"
 						levels = 1
 						region = "STATE_MAESBELAN"
@@ -5504,9 +5872,17 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
+						type = "building_textile_mills"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:HAG"
-						levels = 2
+						levels = 1
 						region = "STATE_MAESBELAN"
 					}
 				}
@@ -5521,7 +5897,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:HAG"
 						levels = 1
 						region = "STATE_MAESBELAN"
@@ -5554,9 +5930,17 @@
 				building = "building_wishstone_mine"
 				add_ownership = {
 					building = {
+						type = "building_wishstone_mine"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:HAG"
-						levels = 2
+						levels = 1
 						region = "STATE_MAESBELAN"
 					}
 				}
@@ -5570,9 +5954,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:HAG"
+						levels = 4
+						region = "STATE_MAESBELAN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:HAG"
-						levels = 5
+						levels = 1
 						region = "STATE_MAESBELAN"
 					}
 				}
@@ -5587,7 +5979,7 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_paper_mills"
 						country = "c:HAG"
 						levels = 1
 						region = "STATE_MAESBELAN"
@@ -5603,7 +5995,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:HAG"
 						levels = 2
 						region = "STATE_MAESBELAN"
@@ -5619,9 +6011,17 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
+						type = "building_iron_mine"
+						country = "c:HAG"
+						levels = 1
+						region = "STATE_MAESBELAN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:HAG"
-						levels = 2
+						levels = 1
 						region = "STATE_MAESBELAN"
 					}
 				}
@@ -5658,7 +6058,7 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_coal_mine"
 						country = "c:AUM"
 						levels = 1
 						region = "STATE_MAESBELAN"
@@ -5680,7 +6080,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:AUM"
 						levels = 1
 						region = "STATE_MAESBELAN"
@@ -5692,7 +6092,7 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_paper_mills"
 						country = "c:AUM"
 						levels = 3
 						region = "STATE_MAESBELAN"
@@ -5723,7 +6123,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:AUM"
 						levels = 2
 						region = "STATE_MAESBELAN"
@@ -5739,7 +6139,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:AUM"
 						levels = 7
 						region = "STATE_MAESBELAN"
@@ -5765,7 +6165,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:AUM"
 						levels = 2
 						region = "STATE_MAESBELAN"
@@ -5782,10 +6182,10 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:AUM"
 						levels = 1
-						region = "STATE_FALNALECK"
+						region = "STATE_MAESBELAN"
 					}
 				}
 				reserves = 1
@@ -5940,9 +6340,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:FOX"
+						levels = 3
+						region = "STATE_GLYNFFORDD"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:FOX"
-						levels = 4
+						levels = 1
 						region = "STATE_GLYNFFORDD"
 					}
 				}
@@ -5978,9 +6386,17 @@
 				}
 				add_ownership = {
 					building = {
+						type = "building_trade_center"
+						country = "c:FOX"
+						levels = 3
+						region = "STATE_GWYNWEN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:FOX"
-						levels = 4
+						levels = 1
 						region = "STATE_GWYNWEN"
 					}
 				}
@@ -6007,9 +6423,17 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
+						type = "building_furniture_manufacturies"
+						country = "c:FOX"
+						levels = 2
+						region = "STATE_GWYNWEN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:FOX"
-						levels = 3
+						levels = 1
 						region = "STATE_GWYNWEN"
 					}
 				}
@@ -6023,9 +6447,17 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
+						type = "building_textile_mills"
+						country = "c:FOX"
+						levels = 2
+						region = "STATE_GWYNWEN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:FOX"
-						levels = 3
+						levels = 1
 						region = "STATE_GWYNWEN"
 					}
 				}
@@ -6100,9 +6532,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:FOX"
+						levels = 4
+						region = "STATE_GWYNWEN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:FOX"
-						levels = 5
+						levels = 1
 						region = "STATE_GWYNWEN"
 					}
 				}
@@ -6118,9 +6558,17 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
+						type = "building_tooling_workshops"
+						country = "c:FOX"
+						levels = 1
+						region = "STATE_GWYNWEN"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:FOX"
-						levels = 2
+						levels = 1
 						region = "STATE_GWYNWEN"
 					}
 				}
@@ -6134,7 +6582,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:FOX"
 						levels = 2
 						region = "STATE_GWYNWEN"
@@ -6152,7 +6600,7 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_shipyards"
 						country = "c:FOX"
 						levels = 1
 						region = "STATE_GWYNWEN"
@@ -6167,7 +6615,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:FOX"
 						levels = 1
 						region = "STATE_GWYNWEN"
@@ -6183,7 +6631,7 @@
 				building = "building_artillery_foundries"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_artillery_foundries"
 						country = "c:FOX"
 						levels = 1
 						region = "STATE_GWYNWEN"
@@ -6203,10 +6651,10 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:FOX"
+						type = "building_tooling_workshops"
+						country = "c:DRK"
 						levels = 2
-						region = "STATE_GWYNWEN"
+						region = "STATE_CASTELL_DRYSGOLMARK"
 					}
 				}
 				reserves = 1
@@ -6227,7 +6675,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:DRK"
 						levels = 3
 						region = "STATE_CASTELL_DRYSGOLMARK"
@@ -6253,15 +6701,15 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:FOX"
+						type = "building_logging_camp"
+						country = "c:DRK"
 						levels = 4
-						region = "STATE_GWYNWEN"
+						region = "STATE_CASTELL_DRYSGOLMARK"
 					}
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:DRK"
 						levels = 4
 						region = "STATE_CASTELL_DRYSGOLMARK"
@@ -6303,7 +6751,7 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_furniture_manufacturies"
 						country = "c:DRK"
 						levels = 2
 						region = "STATE_CASTELL_DRYSGOLMARK"
@@ -6323,7 +6771,7 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_coal_mine"
 						country = "c:ABR"
 						levels = 2
 						region = "STATE_CARREGRICE"
@@ -6341,9 +6789,17 @@
 				building = "building_wishstone_mine"
 				add_ownership = {
 					building = {
+						type = "building_wishstone_mine"
+						country = "c:ABR"
+						levels = 2
+						region = "STATE_CARREGRICE"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:ABR"
-						levels = 3
+						levels = 1
 						region = "STATE_CARREGRICE"
 					}
 				}
@@ -6377,7 +6833,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:EVR"
 						levels = 2
 						region = "STATE_TALNANT"
@@ -6411,7 +6867,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:EVR"
 						levels = 1
 						region = "STATE_TALNANT"
@@ -6427,7 +6883,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_textile_mills"
 						country = "c:EVR"
 						levels = 1
 						region = "STATE_TALNANT"
@@ -6474,7 +6930,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:RVC"
 						levels = 2
 						region = "STATE_BLACKDON"
@@ -6486,9 +6942,17 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
+						type = "building_coal_mine"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6506,9 +6970,17 @@
 				building = "building_railway"
 				add_ownership = {
 					building = {
+						type = "building_railway"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6538,9 +7010,17 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
+						type = "building_textile_mills"
+						country = "c:RVC"
+						levels = 4
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 6
+						levels = 2
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6556,7 +7036,7 @@
 				building = "building_sulfur_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_sulfur_mine"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_BLACKDON"
@@ -6576,7 +7056,7 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_shipyards"
 						country = "c:RVC"
 						levels = 1
 						region = "STATE_BLACKDON"
@@ -6591,9 +7071,17 @@
 				building = "building_fishing_wharf"
 				add_ownership = {
 					building = {
+						type = "building_fishing_wharf"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 4
+						levels = 1
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6655,9 +7143,17 @@
 				building = "building_distillery"
 				add_ownership = {
 					building = {
+						type = "building_distillery"
+						country = "c:RVC"
+						levels = 3
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 4
+						levels = 1
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6672,9 +7168,17 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
+						type = "building_logging_camp"
+						country = "c:RVC"
+						levels = 2
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 3
+						levels = 1
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6707,9 +7211,17 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
+						type = "building_paper_mills"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6723,9 +7235,17 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
+						type = "building_furniture_manufacturies"
+						country = "c:RVC"
+						levels = 1
+						region = "STATE_BLACKDON"
+					}
+				}
+				add_ownership = {
+					building = {
 						type = "building_financial_district"
 						country = "c:RVC"
-						levels = 2
+						levels = 1
 						region = "STATE_BLACKDON"
 					}
 				}
@@ -6810,7 +7330,7 @@
 				building = "building_food_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_food_industry"
 						country = "c:RVE"
 						levels = 2
 						region = "STATE_BLACKDON"
@@ -6828,7 +7348,7 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_logging_camp"
 						country = "c:RVE"
 						levels = 2
 						region = "STATE_BLACKDON"
@@ -6860,7 +7380,7 @@
 				}
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_trade_center"
 						country = "c:DOV"
 						levels = 4
 						region = "STATE_GLASINBLAIR"
@@ -6872,7 +7392,7 @@
 				building = "building_ice_cap"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_ice_cap"
 						country = "c:DOV"
 						levels = 7
 						region = "STATE_GLASINBLAIR"
@@ -6904,7 +7424,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:DOV"
 						levels = 2
 						region = "STATE_GLASINBLAIR"
@@ -6930,7 +7450,7 @@
 				building = "building_tooling_workshops"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tooling_workshops"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_GLASINBLAIR"
@@ -6946,7 +7466,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_GLASINBLAIR"
@@ -6961,7 +7481,7 @@
 				building = "building_artillery_foundries"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_artillery_foundries"
 						country = "c:DOV"
 						levels = 1
 						region = "STATE_GLASINBLAIR"
@@ -7080,10 +7600,10 @@
 				building = "building_tavern"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:VAI"
+						type = "building_tavern"
+						country = "c:VAE"
 						levels = 2
-						region = "STATE_VENTAFALCO"
+						region = "STATE_ZAWADKA"
 					}
 				}
 				reserves = 1
@@ -7114,18 +7634,18 @@
 					"pm_basic_port"
 				}
 			}
-			create_building={
-				building="building_arts_academy"
-				add_ownership={
-					building={
-						type="building_financial_district"
-						country="c:VAI"
-						levels=2
-						region="STATE_VENTAFALCO"
+			create_building = {
+				building = "building_arts_academy"
+				add_ownership = {
+					building = {
+						type = "building_arts_academy"
+						country = "c:VAE"
+						levels = 2
+						region = "STATE_ZAWADKA"
 					}
 				}
-				reserves=1
-				activate_production_methods={ "pm_ice_sculpture" }
+				reserves = 1
+				activate_production_methods = { "pm_ice_sculpture" }
 			}
 		}
 	}
@@ -7156,10 +7676,10 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:AHO"
+						type = "building_textile_mills"
+						country = "c:ZKW"
 						levels = 2
-						region = "STATE_GLIMMERING_COAST"
+						region = "STATE_CZERWIONKA"
 					}
 				}
 				reserves = 1
@@ -7188,7 +7708,7 @@
 				building = "building_tavern"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_tavern"
 						country = "c:ZKW"
 						levels = 1
 						region = "STATE_CZERWIONKA"
@@ -7215,7 +7735,7 @@
 				building = "building_lead_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_lead_mine"
 						country = "c:ZKW"
 						levels = 1
 						region = "STATE_ZARKI"
@@ -7290,7 +7810,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_arms_industry"
 						country = "c:ZKW"
 						levels = 1
 						region = "STATE_ZARKI"
@@ -7305,10 +7825,10 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:AHO"
+						type = "building_furniture_manufacturies"
+						country = "c:ZKW"
 						levels = 1
-						region = "STATE_SOLEMN_STONES"
+						region = "STATE_ZARKI"
 					}
 				}
 				reserves = 1
@@ -7352,7 +7872,7 @@
 				building = "building_iron_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_iron_mine"
 						country = "c:ZKW"
 						levels = 1
 						region = "STATE_ZARKI"
@@ -7466,10 +7986,10 @@
 				building = "building_furniture_manufacturies"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:AHO"
+						type = "building_furniture_manufacturies"
+						country = "c:ZKW"
 						levels = 1
-						region = "STATE_SOLEMN_STONES"
+						region = "STATE_WHISPERPINE_WOODS"
 					}
 				}
 				reserves = 1
@@ -7499,7 +8019,7 @@
 				building = "building_coal_mine"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_coal_mine"
 						country = "c:ZKW"
 						levels = 1
 						region = "STATE_WHISPERPINE_WOODS"
@@ -7517,10 +8037,10 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
-						country = "c:AHO"
+						type = "building_shipyards"
+						country = "c:ZKW"
 						levels = 1
-						region = "STATE_SOLEMN_STONES"
+						region = "STATE_WHISPERPINE_WOODS"
 					}
 				}
 				reserves = 1
@@ -7654,7 +8174,7 @@
 				building = "building_ice_cap"
 				add_ownership = {
 					building = {
-						type = "building_financial_district"
+						type = "building_ice_cap"
 						country = "c:YAN"
 						levels = 1
 						region = "STATE_SOUTH_YANGER_STEPPE"
