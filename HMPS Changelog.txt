@@ -180,6 +180,10 @@ Ported over HMPS gfx/interface/icons/law_icons
 
 - HMPS law icons appear in game, I just pulled both folders together
 
+Overrided common/history/buildings to remove most of the financial dsitricts
+
+Override common/power_bloc_principles to remove references to innovation and sol increase
+
 TODO:
 
 Go through ROE laws for balance
