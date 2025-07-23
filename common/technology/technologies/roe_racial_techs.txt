@@ -119,7 +119,7 @@ gnome_tech = {
 	can_research = no
 	
 	modifier = {
-		country_weekly_innovation_mult = 0.05
+		country_tech_research_speed_mult = 0.05
 		country_machinists_pol_str_mult = 0.25
 		state_building_soulwrought_assembly_plant_max_level_add = 15
 	}

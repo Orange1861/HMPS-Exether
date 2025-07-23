@@ -68,12 +68,12 @@ country_arcana_sphinx_2 = {
 }
 country_arcana_sphinx_3 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
-	country_tech_spread_mult = 0.10
+	country_tech_spread_mult = 0.15
 
 }
 country_arcana_sphinx_4 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
-	country_weekly_innovation_mult = 0.10
+	country_tech_spread_mult = 0.1
 	power_bloc_mandate_progress_mult = 0.05
 }
 country_arcana_sphinx_5 = {
@@ -321,8 +321,7 @@ country_arcana_angel_3 = {
 country_arcana_angel_4 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
 	state_pop_qualifications_mult = 0.10
-	country_weekly_innovation_mult = 0.05
-
+	country_tech_spread_mult = 0.05
 }
 country_arcana_angel_5 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
