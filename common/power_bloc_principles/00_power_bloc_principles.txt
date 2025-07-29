@@ -539,9 +539,10 @@ principle_aggressive_coordination_3 = {
 	icon = "gfx/interface/icons/principles_icons/aggressive_coordination.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 
-	power_bloc_modifier = {
+
+	power_bloc_modifier = {	
 		# Reduces cohesion
-		power_bloc_cohesion_add = -10
+		power_bloc_cohesion_add = -5
 	}
 
 	member_modifier = {
@@ -551,7 +552,7 @@ principle_aggressive_coordination_3 = {
 
 		# Countries forced to join diplomatic plays of members, other countries are not happy about this threat
 		country_join_power_bloc_member_in_plays_bool = yes
-		country_infamy_generation_mult = 0.15
+		unit_offense_mult = 0.10
 	}
 
 	ai_weight = {
@@ -797,7 +798,7 @@ principle_police_coordination_3 = {
 	institution = institution_police
 	institution_modifier = {
 		# Police institution adds authority
-		country_authority_add = 50
+		country_authority_mult = 0.05
 
 		# Police institution reduces radicalism of political movements
 		political_movement_radicalism_add = -0.05
