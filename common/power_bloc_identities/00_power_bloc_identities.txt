@@ -553,7 +553,7 @@ identity_military_treaty_organization = {
 				add = scope:power_bloc.power_bloc_worst_infamy
 			}
 			divide = define:NDiplomacy|INFAMY_THRESHOLD_PARIAH
-			multiply = -1
+			multiply = -0.75
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_WORST_INFAMY
 		}
@@ -854,7 +854,7 @@ identity_cultural = {
 	}
 
 	member_modifier = {
-		state_shopkeepers_investment_pool_efficiency_mult = 0.25
+		state_shopkeepers_investment_pool_efficiency_mult = 0.33
 		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.25
 	}
 

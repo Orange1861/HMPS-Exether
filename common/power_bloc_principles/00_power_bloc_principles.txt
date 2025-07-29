@@ -1346,6 +1346,7 @@ principle_divine_economics_2 = {
 		country_subject_income_transfer_heathen_mult = 0.5
 
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
+		state_clergymen_investment_pool_efficiency_mult = 0.25
 	}
 
 	ai_weight = {
@@ -1363,9 +1364,11 @@ principle_divine_economics_3 = {
 		country_subject_income_transfer_heathen_mult = 0.5
 
 		# Higher wages for state religion pops
-		country_state_religion_wages_mult = 0.25
+		country_state_religion_wages_mult = 0.1
 
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
+		state_clergymen_investment_pool_efficiency_mult = 1.0
+		state_clergymen_investment_pool_contribution_add = 0.05	
 	}
 
 	ai_weight = {
@@ -1466,7 +1469,7 @@ principle_exploit_members_3 = {
 
 	leader_modifier = {
 		# Modifiers from previous level(s)
-		country_authority_mult = 0.2
+		country_authority_mult = 0.25
 		# Increase leader influence
 		country_influence_mult = 0.2
 	}
@@ -1646,7 +1649,7 @@ principle_ideological_truth_3 = {
 		country_party_whip_impact_mult = 0.2
 
 		# Members Legitimacy can't fall under 25
-		country_legitimacy_min_add = 25
+		country_legitimacy_base_add = 15
 	}
 
 	ai_weight = {
