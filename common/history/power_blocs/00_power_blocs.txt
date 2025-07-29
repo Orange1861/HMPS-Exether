@@ -131,6 +131,24 @@
 			}
 		}
 	}
+	
+	c:TLE = {
+		create_power_bloc = {
+			name = WESTERN_HUMANITY
+
+			founding_date = 784.5.12
+			identity = identity_cultural
+			principle = principle_freedom_of_movement_1
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_military_industry_1
+			}
+		}
+	}
 
 	c:YUL = {
 		create_power_bloc = {
