@@ -3317,10 +3317,10 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_arms_industry"
 						country = "c:MOK"
 						levels = 1
-						region = ""
+						region = "STATE_GROMMOK"
 					}
 				}
 				reserves = 1
@@ -3528,10 +3528,10 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_paper_mills"
 						country = "c:HIR"
 						levels = 2
-						region = ""
+						region = "STATE_VAHGRAK"
 					}
 				}
 				reserves = 1
@@ -3627,10 +3627,10 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_arms_industry"
 						country = "c:HIR"
 						levels = 1
-						region = ""
+						region = "STATE_VAHGRAK"
 					}
 				}
 				reserves = 1
@@ -3717,10 +3717,10 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_shipyards"
 						country = "c:HIR"
 						levels = 1
-						region = ""
+						region = "STATE_HOKUDAIHAN"
 					}
 				}
 				reserves = 1
@@ -3911,7 +3911,7 @@
 				}
 				reserves = 1
 			}
-						create_building = {
+			create_building = {
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
@@ -4490,10 +4490,10 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_paper_mills"
 						country = "c:TEM"
 						levels = 2
-						region = ""
+						region = "STATE_NISHIGUCHI"
 					}
 				}
 				reserves = 1
@@ -4540,10 +4540,10 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_arms_industry"
 						country = "c:TEM"
 						levels = 1
-						region = ""
+						region = "STATE_NISHIGUCHI"
 					}
 				}
 				reserves = 1
@@ -4747,10 +4747,10 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_paper_mills"
 						country = "c:YOK"
 						levels = 2
-						region = ""
+						region = "STATE_KHULEKI"
 					}
 				}
 				reserves = 1
@@ -4864,10 +4864,10 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_arms_industry"
 						country = "c:YOK"
 						levels = 2
-						region = ""
+						region = "STATE_KHULEKI"
 					}
 				}
 				reserves = 1
@@ -5025,10 +5025,10 @@
 				building = "building_shipyards"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_shipyards"
 						country = "c:RUG"
 						levels = 1
-						region = ""
+						region = "STATE_HARUGAWASAI"
 					}
 				}
 				reserves = 1
@@ -5040,10 +5040,10 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_arms_industry"
 						country = "c:RUG"
 						levels = 1
-						region = ""
+						region = "STATE_HARUGAWASAI"
 					}
 				}
 				reserves = 1
@@ -5141,10 +5141,10 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = ""
+						type = "building_paper_mills"
 						country = "c:RUG"
 						levels = 1
-						region = ""
+						region = "STATE_HARUGAWASAI"
 					}
 				}
 				reserves = 1
