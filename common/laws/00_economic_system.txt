@@ -349,9 +349,9 @@ law_laissez_faire_corpo = {
 	
 	modifier = {
 		country_loan_interest_rate_mult = -0.1
-		state_shopkeepers_investment_pool_efficiency_mult = 0.15	
+		state_shopkeepers_investment_pool_efficiency_mult = 0.20	
 		state_capitalists_investment_pool_efficiency_mult = 0.15
-		country_private_construction_allocation_mult = 0.75
+		country_private_construction_allocation_mult = 0.8
 		country_government_dividends_reinvestment_add = 1.0		
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
@@ -602,7 +602,6 @@ law_extraction_economy = {
 	}
 
 	modifier = {
-		country_liberty_desire_add = -0.4
 	
 		building_group_bg_agriculture_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
