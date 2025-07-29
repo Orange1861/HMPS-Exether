@@ -333,7 +333,7 @@ pm_migration_focus = {
 
 	state_modifiers = {
 		workforce_scaled = { 
-			state_migration_pull_mult = 0.02
+			state_migration_pull_mult = 0.025
 		}
 	}
 }
