@@ -6,9 +6,10 @@
 	can_research = no
 	
 	modifier = {
-		state_trade_advantage_mult = 0.2
-		country_influence_mult = 0.05
-		country_production_tech_research_speed_mult = 0.1
+		state_trade_advantage_mult = 0.20
+		country_influence_mult = 0.10
+		country_production_tech_research_speed_mult = 0.10
+		state_expected_sol_mult = 0.05
 	}
 	
 	ai_weight = {
@@ -82,9 +83,10 @@ elf_tech = {
 	can_research = no
 	
 	modifier = {
-		country_prestige_from_navy_power_projection_mult = 0.05
+		country_prestige_mult = 0.1
 		country_influence_mult = 0.1
-		country_infamy_decay_mult = 0.15
+		country_infamy_decay_mult = 0.1
+		military_formation_organization_gain_mult = 0.1
 	}
 	
 	ai_weight = {
@@ -155,8 +157,8 @@ dragon_tech = {
 	can_research = no
 	
 	modifier = {
-		country_loan_interest_rate_add = -0.1
-		country_minting_mult = 0.15
+		country_loan_interest_rate_add = -0.05
+		country_minting_mult = 0.20
 		state_capitalists_investment_pool_efficiency_mult = 0.05
 		country_prestige_mult = 0.05
 	}
@@ -195,7 +197,7 @@ planetouched_tech = {
 	
 	modifier = {
 		country_loan_interest_rate_add = -0.1
-		country_arcana_pos_add = 100
+		country_arcana_pos_add = 200
 	}
 	
 	ai_weight = {
@@ -211,9 +213,10 @@ ogre_tech = {
 	can_research = no
 	
 	modifier = {
-		unit_kill_rate_add = 0.1
+		unit_kill_rate_add = 0.15
 		state_expected_sol_mult = 0.15
 		state_political_strength_from_welfare_mult = 0.05
+		country_tech_spread_mult = -0.05
 	}
 	
 	ai_weight = {
@@ -265,8 +268,8 @@ bird_tech = {
 	can_research = no
 	
 	modifier = {
-		unit_advancement_speed_mult = 0.3
-		military_formation_movement_speed_mult = 0.3
+		unit_advancement_speed_mult = 0.5
+		military_formation_movement_speed_mult = 0.5
 		state_infrastructure_from_population_add = 1
 		country_society_tech_research_speed_mult = 0.1
 	}
@@ -286,6 +289,7 @@ mouse_tech = {
 	modifier = {
 		battle_defense_owned_province_mult = 0.15
 		battle_offense_owned_province_mult = 0.15
+		state_infrastructure_from_population_add = 1
 		state_building_underways_max_level_add = 15
 	}
 	
@@ -304,6 +308,7 @@ orc_tech = {
 	modifier = {
 		unit_army_offense_mult = 0.1
 		unit_morale_loss_mult = -0.1
+		unit_morale_recovery_mult = 0.1
 		country_military_tech_research_speed_mult = 0.1
 		country_soldiers_pol_str_mult = 0.25
 		country_officers_pol_str_mult = 0.50
