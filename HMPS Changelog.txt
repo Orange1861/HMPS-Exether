@@ -190,6 +190,10 @@ Override common/buildings/11_roe_ruins to make dwarve ruins not downsize
 
 Override common/history/00_global to remove starting tariffs on goods
 
+Override common/history/pop_types for engineers and machinists to make the quals more punishing to get them
+
+Override common/pop_needs/00_pop_needs to fix porcelian bug and to make relics purchasable by rich people
+
 Added HMPS devout modifiers
 
 TODO:
@@ -199,10 +203,7 @@ Tech Cost?
 Check if Arrador is supposed to pass Republic
 Port HMPS UI changes like GDP ownership
 Do changelog between July 5th and July 18th
-Add changelog for HMPS quals and relic changes
 Fix pause and OOS UI
-Localize unis
-Nerf coal and iron
 
 Possible:
 

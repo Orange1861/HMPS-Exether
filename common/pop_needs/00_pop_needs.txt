@@ -394,7 +394,7 @@ popneed_luxury_items = {
 		goods = trinkets
 		
 		weight = 1
-		max_supply_share = 0.75
+		max_supply_share = 0.5
 		min_supply_share = 0.0
 	}
 	
@@ -402,15 +402,7 @@ popneed_luxury_items = {
 		goods = relics
 		
 		weight = 0.5
-		max_supply_share = 0.1
-		min_supply_share = 0.0
-	}
-
-	entry = {
-		goods = porcelain
-		
-		weight = 1
-		max_supply_share = 0.5
+		max_supply_share = 0.15
 		min_supply_share = 0.0
 	}
 
