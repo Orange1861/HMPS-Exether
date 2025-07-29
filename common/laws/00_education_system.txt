@@ -160,6 +160,7 @@ law_public_schools = {
 		state_assimilation_mult = 0.05
 		state_education_access_add = 0.045
 		state_education_access_wealth_add = 0.005
+		state_political_strength_from_wealth_mult = -0.01
 	}
 	
 	can_impose = {
