@@ -633,9 +633,6 @@ GFL = {
 	ai_will_do = { always = yes }
 
 	possible = {
-		OR = {
-			c:FLU ?= this
-		}
 		has_technology_researched = nationalism
 	}
 }

@@ -30,6 +30,12 @@ pick_dispel_arcana_gryphon = {
        } 
        dispel_arcana_gryphon_5 = yes
     }
+    else_if = {
+        limit = {
+            scope:arcana_id_gryphon = 6
+       } 
+       dispel_arcana_gryphon_6 = yes
+    }
 }
 
 # JUSTICE
@@ -99,6 +105,12 @@ pick_dispel_arcana_sphinx = {
        } 
        dispel_arcana_sphinx_5 = yes
     }
+    else_if = {
+        limit = {
+            scope:arcana_id_sphinx = 6
+       } 
+       dispel_arcana_sphinx_6 = yes
+    }
 	calculate_arcanas = yes
 }
 
@@ -133,6 +145,12 @@ pick_dispel_arcana_golem = {
             scope:arcana_id_golem = 5
        } 
        dispel_arcana_golem_5 = yes
+    }
+    else_if = {
+        limit = {
+            scope:arcana_id_golem = 6
+       } 
+       dispel_arcana_golem_6 = yes
     }
 	calculate_arcanas = yes
 }
@@ -169,6 +187,12 @@ pick_dispel_arcana_unicorn = {
        } 
        dispel_arcana_unicorn_5 = yes
     }
+    else_if = {
+        limit = {
+            scope:arcana_id_unicorn = 6
+       } 
+       dispel_arcana_unicorn_6 = yes
+    }
 	calculate_arcanas = yes
 }
 
@@ -203,6 +227,18 @@ pick_dispel_arcana_fey = {
             scope:arcana_id_fey = 5
        } 
        dispel_arcana_fey_5 = yes
+    }
+    else_if = {
+        limit = {
+            scope:arcana_id_fey = 6
+       } 
+       dispel_arcana_fey_6 = yes
+    }
+    else_if = {
+        limit = {
+            scope:arcana_id_fey = 7
+       } 
+       dispel_arcana_fey_7 = yes
     }
 	calculate_arcanas = yes
 }
@@ -239,6 +275,12 @@ pick_dispel_arcana_phoenix = {
        } 
        dispel_arcana_phoenix_5 = yes
     }
+    else_if = {
+        limit = {
+            scope:arcana_id_phoenix = 6
+       } 
+       dispel_arcana_phoenix_6 = yes
+    }
 	calculate_arcanas = yes
 }
 
@@ -273,6 +315,12 @@ pick_dispel_arcana_djinn = {
             scope:arcana_id_djinn = 5
        } 
        dispel_arcana_djinn_5 = yes
+    }
+    else_if = {
+        limit = {
+            scope:arcana_id_djinn = 6
+       } 
+       dispel_arcana_djinn_6 = yes
     }
 	calculate_arcanas = yes
 }
@@ -379,6 +427,12 @@ pick_dispel_arcana_fiend = {
        } 
        dispel_arcana_fiend_5 = yes
     }
+    else_if = {
+        limit = {
+            scope:arcana_id_fiend = 6
+       } 
+       dispel_arcana_fiend_6 = yes
+    }
 	calculate_arcanas = yes
 }
 
@@ -417,38 +471,37 @@ pick_dispel_arcana_angel = {
 	calculate_arcanas = yes
 }
 
-# DRAGON disabled due to Error: Unknown effect dispel_arcana_dragon_X at  file: common/scripted_effects/roe_magic_names_dispel_and_costs.txt (Replace X with 1/2/3/4/5)
 pick_dispel_arcana_dragon = {
-    #if = { 
-    #    limit = {
-    #         scope:arcana_id_dragon = 1
-    #    } 
-    #    dispel_arcana_dragon_1 = yes
-    #}
-    #else_if = {
-    #    limit = {
-    #       scope:arcana_id_dragon = 2
-    #   } 
-    #   dispel_arcana_dragon_2 = yes
-    #}
-    #else_if = {
-    #    limit = {
-    #        scope:arcana_id_dragon = 3
-    #   } 
-    #   dispel_arcana_dragon_3 = yes
-    #}
-    #else_if = {
-    #    limit = {
-    #        scope:arcana_id_dragon = 4
-    #   } 
-    #   dispel_arcana_dragon_4 = yes
-    #}
-    #else_if = {
-    #    limit = {
-    #        scope:arcana_id_dragon = 5
-    #   } 
-    #   dispel_arcana_dragon_5 = yes
-    #}
+    if = { 
+        limit = {
+             scope:arcana_id_dragon = 1
+        } 
+        dispel_arcana_dragon_1 = yes
+    }
+    else_if = {
+        limit = {
+           scope:arcana_id_dragon = 2
+       } 
+       dispel_arcana_dragon_2 = yes
+    }
+    else_if = {
+        limit = {
+            scope:arcana_id_dragon = 3
+       } 
+       dispel_arcana_dragon_3 = yes
+    }
+    else_if = {
+        limit = {
+            scope:arcana_id_dragon = 4
+       } 
+       dispel_arcana_dragon_4 = yes
+    }
+    else_if = {
+        limit = {
+            scope:arcana_id_dragon = 5
+       } 
+       dispel_arcana_dragon_5 = yes
+    }
 	calculate_arcanas = yes
 }
 
@@ -472,6 +525,10 @@ dispel_arcana_gryphon_4 = {
 }
 dispel_arcana_gryphon_5 = {
     remove_modifier = country_arcana_gryphon_5
+    remove_cost = yes
+}
+dispel_arcana_gryphon_6 = {
+    remove_modifier = country_arcana_gryphon_6
     remove_cost = yes
 }
 
@@ -518,6 +575,10 @@ dispel_arcana_sphinx_5 = {
     remove_modifier = country_arcana_sphinx_5
     remove_cost = yes
 }
+dispel_arcana_sphinx_6 = {
+    remove_modifier = country_arcana_sphinx_6
+    remove_cost = yes
+}
 
 # GOLEM
 dispel_arcana_golem_1 = {
@@ -538,6 +599,10 @@ dispel_arcana_golem_4 = {
 }
 dispel_arcana_golem_5 = {
     remove_modifier = country_arcana_golem_5
+    remove_cost = yes
+}
+dispel_arcana_golem_6 = {
+    remove_modifier = country_arcana_golem_6
     remove_cost = yes
 }
 
@@ -562,6 +627,10 @@ dispel_arcana_unicorn_5 = {
     remove_modifier = country_arcana_unicorn_5
     remove_cost = yes
 }
+dispel_arcana_unicorn_6 = {
+    remove_modifier = country_arcana_unicorn_6
+    remove_cost = yes
+}
 
 # FEY
 dispel_arcana_fey_1 = {
@@ -582,6 +651,14 @@ dispel_arcana_fey_4 = {
 }
 dispel_arcana_fey_5 = {
     remove_modifier = country_arcana_fey_5
+    remove_cost = yes
+}
+dispel_arcana_fey_6 = {
+    remove_modifier = country_arcana_fey_6
+    remove_cost = yes
+}
+dispel_arcana_fey_7 = {
+    remove_modifier = country_arcana_fey_7
     remove_cost = yes
 }
 
@@ -607,6 +684,11 @@ dispel_arcana_phoenix_5 = {
     remove_cost = yes
 }
 
+dispel_arcana_phoenix_6 = {
+    remove_modifier = country_arcana_phoenix_6
+    remove_cost = yes
+}
+
 # DJINN
 dispel_arcana_djinn_1 = {
     remove_modifier = country_arcana_djinn_1
@@ -626,6 +708,10 @@ dispel_arcana_djinn_4 = {
 }
 dispel_arcana_djinn_5 = {
     remove_modifier = country_arcana_djinn_5
+    remove_cost = yes
+}
+dispel_arcana_djinn_6 = {
+    remove_modifier = country_arcana_djinn_6
     remove_cost = yes
 }
 
@@ -672,6 +758,14 @@ dispel_arcana_kraken_5 = {
     remove_modifier = country_arcana_kraken_5
     remove_cost = yes
 }
+dispel_arcana_kraken_6 = {
+    remove_modifier = country_arcana_kraken_6
+    remove_cost = yes
+}
+dispel_arcana_kraken_7 = {
+    remove_modifier = country_arcana_kraken_7
+    remove_cost = yes
+}
 
 # FIEND
 dispel_arcana_fiend_1 = {
@@ -692,6 +786,10 @@ dispel_arcana_fiend_4 = {
 }
 dispel_arcana_fiend_5 = {
     remove_modifier = country_arcana_fiend_5
+    remove_cost = yes
+}
+dispel_arcana_fiend_6 = {
+    remove_modifier = country_arcana_fiend_6
     remove_cost = yes
 }
 
@@ -740,6 +838,11 @@ arcana_gryphon_4 = {
 arcana_gryphon_5 = {
     add_modifier = {
         name = country_arcana_gryphon_5
+    }
+}
+arcana_gryphon_6 = {
+    add_modifier = {
+        name = country_arcana_gryphon_6
     }
 }
 
@@ -796,6 +899,11 @@ arcana_sphinx_5 = {
         name = country_arcana_sphinx_5
     }
 }
+arcana_sphinx_6 = {
+    add_modifier = {
+        name = country_arcana_sphinx_6
+    }
+}
 
 # GOLEM
 arcana_golem_1 = {
@@ -821,6 +929,11 @@ arcana_golem_4 = {
 arcana_golem_5 = {
     add_modifier = {
         name = country_arcana_golem_5
+    }
+}
+arcana_golem_6 = {
+    add_modifier = {
+        name = country_arcana_golem_6
     }
 }
 
@@ -850,6 +963,11 @@ arcana_unicorn_5 = {
         name = country_arcana_unicorn_5
     }
 }
+arcana_unicorn_6 = {
+    add_modifier = {
+        name = country_arcana_unicorn_6
+    }
+}
 
 # FEY
 arcana_fey_1 = {
@@ -875,6 +993,16 @@ arcana_fey_4 = {
 arcana_fey_5 = {
     add_modifier = {
         name = country_arcana_fey_5
+    }
+}
+arcana_fey_6 = {
+    add_modifier = {
+        name = country_arcana_fey_6
+    }
+}
+arcana_fey_7 = {
+    add_modifier = {
+        name = country_arcana_fey_7
     }
 }
 
@@ -904,6 +1032,11 @@ arcana_phoenix_5 = {
         name = country_arcana_phoenix_5
     }
 }
+arcana_phoenix_6 = {
+    add_modifier = {
+        name = country_arcana_phoenix_6
+    }
+}
 
 # DJINN
 arcana_djinn_1 = {
@@ -929,6 +1062,11 @@ arcana_djinn_4 = {
 arcana_djinn_5 = {
     add_modifier = {
         name = country_arcana_djinn_5
+    }
+}
+arcana_djinn_6 = {
+    add_modifier = {
+        name = country_arcana_djinn_6
     }
 }
 
@@ -985,6 +1123,16 @@ arcana_kraken_5 = {
         name = country_arcana_kraken_5
     }
 }
+arcana_kraken_6 = {
+    add_modifier = {
+        name = country_arcana_kraken_6
+    }
+}
+arcana_kraken_7 = {
+    add_modifier = {
+        name = country_arcana_kraken_7
+    }
+}
 
 # FIEND
 arcana_fiend_1 = {
@@ -1010,6 +1158,11 @@ arcana_fiend_4 = {
 arcana_fiend_5 = {
     add_modifier = {
         name = country_arcana_fiend_5
+    }
+}
+arcana_fiend_6 = {
+    add_modifier = {
+        name = country_arcana_fiend_6
     }
 }
 
@@ -1067,6 +1220,26 @@ arcana_dragon_5 = {
     }
 }
 
+dispel_arcana_dragon_1 = {
+    remove_modifier = country_arcana_dragon_1
+    remove_cost = yes
+}
+dispel_arcana_dragon_2 = {
+    remove_modifier = country_arcana_dragon_2
+    remove_cost = yes
+}
+dispel_arcana_dragon_3 = {
+    remove_modifier = country_arcana_dragon_3
+    remove_cost = yes
+}
+dispel_arcana_dragon_4 = {
+    remove_modifier = country_arcana_dragon_4
+    remove_cost = yes
+}
+dispel_arcana_dragon_5 = {
+    remove_modifier = country_arcana_dragon_5
+    remove_cost = yes
+}
 
 ### COST ###
 #######################

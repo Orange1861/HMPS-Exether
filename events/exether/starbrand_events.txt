@@ -1,0 +1,1086 @@
+﻿namespace = starbrand_events
+
+
+
+starbrand_events.1 = { #mines displace monks
+	type = country_event
+	title = starbrand_events.1.t
+	desc = starbrand_events.1.d
+	flavor = starbrand_events.1.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "rock_elementals"
+    }
+
+	placement = scope:monk_state
+	cooldown = { years = 55 }
+
+	trigger = {
+		OR = {
+			ig:ig_devout ?= {
+					is_marginal = no
+				}
+			ig:ig_mages ?= {
+					is_marginal = no
+				}	
+		}
+		ig:ig_industrialists ?= {
+			is_marginal = no
+		}	
+		
+		any_scope_state = {
+			is_incorporated = yes
+			state_has_building_group_levels = {
+				type  = bg_mining value >= 5
+			}
+		}
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				state_has_building_group_levels = {
+					type  = bg_mining value >= 5
+				}
+			}
+			save_scope_as = monk_state
+		}
+	}
+
+
+	option = {
+		name = starbrand_events.1.a #why do we care?
+		default_option = yes
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = ignored_starbrand_protests
+				years = 10
+				is_decaying = yes
+			}
+		}			
+				scope:monk_state = {
+					add_modifier = {
+						name = mine_protests
+						years = 10
+					}
+			}
+		
+	}
+
+	option = {
+		name = starbrand_events.1.b #send in the military!
+		if = {
+			limit = {
+				ig:ig_devout ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_devout ?= {
+				add_modifier = {
+					name = crushed_monastic_protest
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				ig:ig_mages ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_mages ?= {
+				add_modifier = {
+					name = crushed_monastic_protest
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+		scope:monk_state = {
+			state_region = {
+				start_harvest_condition = rock_elementals
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+		}
+
+	}
+}
+
+starbrand_events.2 = { #INTENTIONAL WISHSTONE SHOWERS???
+	type = country_event
+	title = starbrand_events.2.t
+	desc = starbrand_events.2.d
+	flavor = starbrand_events.2.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "southamerica_factory_opening"
+    }
+
+	placement = scope:shower_state
+	cooldown = { years = 30 }
+
+	trigger = {
+		has_technology_researched = barrier_disruption
+		OR = {
+			ig:ig_industrialists ?= {
+				is_marginal = no
+				is_insurrectionary = no
+			}
+			ig:ig_mages ?= {
+				is_marginal = no
+				is_insurrectionary = no
+			}
+		}
+		
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_wishstone_mine
+				level >= 5
+				occupancy > 0.5	
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_wishstone_mine
+					level >= 5
+					occupancy > 0.5
+				}
+			}
+			save_scope_as = shower_state
+		}
+	}
+
+
+	option = {
+		name = starbrand_events.2.a #get me a ticket!
+		scope:shower_state = {
+			random_list = {
+				33 = {
+					scope:shower_state = {
+						state_region = {
+							start_harvest_condition = wishstone_showers
+						}
+						every_neighbouring_state = {
+							limit = {
+								any_scope_building = {
+									OR = {
+										is_building_type = building_wishstone_mine
+										is_building_type = building_wishstone_reefs
+									}
+									
+									level >= 1
+								}
+							}
+							state_region = {
+								start_harvest_condition = wishstone_showers
+							}
+						}
+					}
+					if = {
+						limit = {
+							owner = { 
+								ig:ig_industrialists ?= {
+									is_marginal = no
+									NOT = {
+										leader = { has_ideology = ideology:ideology_artificer_baron }
+									}
+								}
+							}
+						}
+						random_list = {
+							50 = {}
+							50 = { 
+								owner = {
+									ig:ig_industrialists ?= {
+										leader = { set_ideology = ideology:ideology_artificer_baron }
+									}
+								}
+								
+							}
+						}
+					}
+				}
+				33 = {
+					scope:shower_state = {
+						state_region = {
+							start_harvest_condition = magical_hotspots
+						}
+						add_radicals_in_state = {
+							value = 0.1
+						}
+						if = {
+							limit = {
+								any_neighbouring_state = {
+									owner = root
+								}
+							}
+							random_neighbouring_state = {
+								limit = {
+									owner = root
+								}
+								state_region = {
+									start_harvest_condition = magical_hotspots
+								} 
+								add_radicals_in_state = {
+									value = 0.1
+								}
+							}
+						}
+						
+					}
+				}
+				33 = {
+					if = {
+						limit = {
+							veil_integrity_total < 50
+						}
+						scope:shower_state = {
+							add_modifier = {
+								name = planar_rifts
+								years = 10
+								is_decaying = yes
+							}
+							add_radicals_in_state = {
+								value = 0.1
+							}
+						}
+					}
+					if = {
+						limit = {
+							veil_integrity_total < 25
+						}
+						scope:shower_state = {
+							state_region = {
+								start_harvest_condition = caelum_radiation
+							}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+
+	option = {
+		name = starbrand_events.2.b #this is dangerous yo
+		default_option = yes
+		if = {
+			limit = {
+				ig:ig_industrialists ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_industrialists ?= {
+				add_modifier = {
+					name = denied_comet_rituals
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				ig:ig_mages ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_mages ?= {
+				add_modifier = {
+					name = denied_comet_rituals
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+		
+	}
+
+	option = {
+		name = starbrand_events.2.c #send mages to watch over the comet ritual
+		highlighted_option = yes
+		trigger = {
+			has_law = law_type:law_astrological_studies
+		}
+			random_list = {
+				66 = {
+					scope:shower_state = {
+						state_region = {
+							start_harvest_condition = wishstone_showers
+						}
+						every_neighbouring_state = {
+							limit = {
+								any_scope_building = {
+									OR = {
+										is_building_type = building_wishstone_mine
+										is_building_type = building_wishstone_reefs
+									}
+									
+									level >= 1
+								}
+							}
+							state_region = {
+								start_harvest_condition = wishstone_showers
+							}
+						}
+					}
+				}
+				33 = {
+					scope:shower_state = {
+						state_region = {
+							start_harvest_condition = magical_hotspots
+						}
+						add_radicals_in_state = {
+							value = 0.1
+						}
+						if = {
+							limit = {
+								any_neighbouring_state = {
+									owner = root
+								}
+							}
+							random_neighbouring_state = {
+								limit = {
+									owner = root
+								}
+								state_region = {
+									start_harvest_condition = magical_hotspots
+								}
+							}
+						}
+						
+					}
+				}
+			}	
+		ai_chance = {
+			base = 100
+		}
+	}	
+}
+
+starbrand_events.3 = { #wizards helping at da schools
+	type = country_event
+	title = starbrand_events.3.t
+	desc = starbrand_events.3.d
+	flavor = starbrand_events.3.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "wizard_wheatfield"
+    }
+
+	cooldown = { years = 30 }
+
+	trigger = {
+		ig:ig_mages ?= {
+				is_marginal = no
+			}		
+		has_law = law_type:law_magical_schools	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_academia.dds"
+
+	option = {
+		name = starbrand_events.3.a #cool
+		default_option = yes
+		ig:ig_mages ?= {
+			add_modifier = {
+				name = mages_of_tomorrow
+				years = 10
+			}
+		}			
+		add_modifier = {
+			name = apprentice_assistance
+			years = 10
+		}
+	}
+}
+
+starbrand_events.4 = { #ectoplasm trial
+	type = country_event
+	title = starbrand_events.4.t
+	desc = starbrand_events.4.d
+	flavor = starbrand_events.4.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "votp_hostile_court"
+    }
+
+	cooldown = { years = 125 } #once per game
+
+	trigger = {
+		has_technology_researched = thaumaic_engines
+		any_scope_state = {
+			is_incorporated = yes
+			state_has_building_group_levels = {
+				type  = bg_haunted_grounds value >= 5
+			}
+		}
+
+		any_scope_state = {
+			is_incorporated = yes
+			state_has_building_type_levels = {
+				target = bt:building_thaumacore_foundry value >= 2
+			}
+		}
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_capital = yes
+			}
+			save_scope_as = ecto_state
+		}
+	}
+
+	option = {
+		name = starbrand_events.4.a #such a sad story
+		add_modifier = {
+			name = soul_filtration_regulation
+			years = 10
+			is_decaying = yes
+		}
+	}
+
+	option = {
+		name = starbrand_events.4.b #throw this case out
+		default_option = yes
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = blocked_ectoplasm_regulation
+				years = 5
+			}
+		}			
+				scope:ecto_state = {
+					add_radicals_in_state = {
+						value = 0.1
+					}
+			}
+	}
+
+		option = {
+		name = starbrand_events.4.c #there is not a jury under hasal that would rule against this
+		highlighted_option = yes
+		trigger = {
+			custom_tooltip = {
+				text = creed_of_hasal_tt
+				religion = {
+					rel:creed_of_hasal ?= this
+				}
+			}
+			
+		}
+		add_modifier = {
+			name = clarified_necromantic_legality
+			years = 10
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+starbrand_events.5 = { #devout is angry about heretical magic teachings
+	type = country_event
+	title = starbrand_events.5.t
+	desc = starbrand_events.5.d
+	flavor = starbrand_events.5.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "middleeast_islam"
+    }
+
+	cooldown = { years = 40 }
+
+	trigger = {
+		ig:ig_devout ?= {
+				is_marginal = no
+				is_in_government = yes
+			}
+		OR = {
+			has_law = law_type:law_magical_schools
+			has_law = law_type:law_public_schools
+			has_law = law_type:law_private_schools
+		}		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_academia.dds"
+
+	option = {
+		name = starbrand_events.5.a #give them more control over the curriculum
+		default_option = yes	
+		add_modifier = {
+			name = religious_magical_theory
+			years = 10
+		}
+		if = {
+			limit = {
+				ig:ig_mages ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_mages ?= {
+				add_modifier = {
+					name = censured_magical_theory
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = starbrand_events.5.b #no dude
+		default_option = yes	
+		add_modifier = {
+			name = magical_religious_contradictions
+			years = 10
+		}
+		ig:ig_devout ?= {
+			add_modifier = {
+				name = heretical_magic_theory
+				years = 10
+				is_decaying = yes
+			}
+		}
+	}
+		option = {
+		name = starbrand_events.5.c #we need not compromise
+		trigger = {
+			has_law = law_type:law_astrological_studies
+		}
+		add_modifier = {
+			name = religious_magical_communion
+			years = 10
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+starbrand_events.6 = { #mages want more funding for observatories
+	type = country_event
+	title = starbrand_events.6.t
+	desc = starbrand_events.6.d
+	flavor = starbrand_events.6.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "middleeast_engineer_blueprint"
+    }
+
+	cooldown = { years = 55 }
+
+	trigger = {
+		in_default = no 
+		is_at_war = no
+		ig:ig_mages ?= {
+				is_marginal = no
+				is_insurrectionary = no
+			}
+		any_scope_state = {
+			is_incorporated = yes
+			state_has_building_type_levels = {
+				target = bt:building_observatory value >= 1
+			}
+			count >=2
+		}	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_academia.dds"
+
+	option = {
+		name = starbrand_events.6.a #give them what they want
+		add_modifier = {
+			name = observatory_upgrades
+			years = 10
+		}
+		add_treasury = observatory_upgrade
+	}
+
+	option = {
+		name = starbrand_events.6.b #no dude
+		default_option = yes	
+		ig:ig_mages ?= {
+			add_modifier = {
+				name = denied_observatory_funding
+				years = 10
+				is_decaying = yes
+			}
+		}
+	}
+	option = {
+		name = starbrand_events.6.c #same as a but cheaper
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				has_law = law_type:law_astrological_studies
+				has_law = law_type:law_mage_hunters
+			}
+		}
+		add_modifier = {
+			name = observatory_upgrades
+			years = 10
+		}
+		add_treasury = observatory_upgrade_discount
+
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = starbrand_events.6.e #an excellent opportunity to test some new build designs!
+		highlighted_option = yes
+		trigger = {
+			has_law = law_type:law_artificer_guilds
+		}
+		add_modifier = {
+			name = architecture_testing
+			years = 10
+		}
+		add_treasury = observatory_upgrade_discount
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+starbrand_events.7 = { #witch doctors
+	type = country_event
+	title = starbrand_events.7.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = starbrand_events.7.d
+				trigger = {
+					has_law = law_type:law_druidic_circles
+				}
+			}
+			triggered_desc = {
+				desc = starbrand_events.7.d2
+				trigger = {
+					AND = {
+						religion = {
+							has_discrimination_trait = fey_domain
+						}
+						ig:ig_devout ?= {
+							is_marginal = no
+						}
+					}
+				}
+			}
+		}
+	}	
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = starbrand_events.7.f
+				trigger = {
+					has_law = law_type:law_druidic_circles
+				}
+			}
+			triggered_desc = {
+				desc = starbrand_events.7.f2
+				trigger = {
+					AND = {
+						religion = {
+							has_discrimination_trait = fey_domain
+						}
+						ig:ig_devout ?= {
+							is_marginal = no
+						}
+					}
+				}
+			}
+		}
+	}
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "druid_discussion"
+    }
+
+	cooldown = { years = 50 }
+
+	trigger = {
+		OR = {
+			has_law = law_type:law_druidic_circles
+			AND = {
+				religion = {
+					has_discrimination_trait = fey_domain
+				}
+				ig:ig_devout ?= {
+					is_marginal = no
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_pop = {
+			limit = {
+				religion = root.religion
+			}
+			save_scope_as = majority_religion
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_academia.dds"
+
+	option = {
+		name = starbrand_events.7.a #help them serve more patients
+		default_option = yes	
+		add_modifier = {
+			name = witch_doctor_system
+			years = 10
+		}
+		if = {
+			limit = {
+				AND = {
+					religion = {
+						has_discrimination_trait = fey_domain
+					}
+					ig:ig_devout ?= {
+						is_marginal = no
+					}
+				}
+			}
+			ig:ig_devout ?= {
+				add_modifier = {
+					name = regional_witch_doctors
+					years = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				ig:ig_mages ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_mages ?= {
+				add_modifier = {
+					name = regional_witch_doctors
+					years = 10
+				}
+			}
+		}
+	}
+
+	option = {
+		name = starbrand_events.7.b #get them the ingredients they need!
+		trigger = {
+			any_scope_state = {
+				is_incorporated = yes
+				state_has_building_type_levels = {
+					target = bt:building_potion_distillery value >= 1
+				}
+			}
+		}
+		add_modifier = {
+			name = reagents_drive
+			years = 15
+			is_decaying = yes
+		}
+	}
+}
+
+starbrand_events.8 = { #bad omens at the observatories
+	type = country_event
+	title = starbrand_events.8.t
+	desc = starbrand_events.8.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = starbrand_events.8.f
+				trigger = {
+					is_year_of_the_angel = yes
+				}
+			}
+			triggered_desc = {
+				desc = starbrand_events.8.f2
+				trigger = {
+					is_year_of_the_fiend = yes
+				}
+			}
+		}
+	}
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "middleeast_engineer_blueprint"
+    }
+
+	cooldown = { years = 40 }
+
+	trigger = {
+		OR = {
+			is_year_of_the_angel = yes
+			is_year_of_the_fiend = yes
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			state_has_building_type_levels = {
+				target = bt:building_observatory value >= 1
+			}
+		}	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_academia.dds"
+
+	option = {
+		name = starbrand_events.8.a #we can ignore this
+		default_option = yes	
+		add_modifier = {
+			name = ignoring_prophecy
+			years = 12
+			is_decaying = yes
+		}
+		
+	}
+
+	option = {
+		name = starbrand_events.8.b #DOOM!  GLOOM!
+		add_modifier = {
+			name = doom_and_gloom
+			years = 12
+			is_decaying = yes
+		}
+	}
+	option = {
+		name = starbrand_events.8.c #debunk the bullshit
+		highlighted_option = yes
+		trigger = {
+			has_law = law_type:law_astrological_studies
+		}
+		
+		add_modifier = {
+			name = debunked_doomsday_prophecy
+			years = 10
+			
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+starbrand_events.9 = { #herald of fertility
+	type = country_event
+	title = starbrand_events.9.t
+	desc = starbrand_events.9.d
+	flavor = starbrand_events.9.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "middleeast_engineer_blueprint"
+    }
+
+	cooldown = { years = 40 }
+
+	trigger = {
+		OR = {
+			is_year_of_the_fey = yes
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			state_has_building_type_levels = {
+				target = bt:building_observatory value >= 1
+			}
+		}	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_academia.dds"
+
+	option = {
+		name = starbrand_events.9.a #food
+		default_option = yes	
+		add_modifier = {
+			name = fertile_omens_agro
+			years = 6
+		}
+		
+	}
+
+	option = {
+		name = starbrand_events.9.b #birth
+		add_modifier = {
+			name = fertile_omens
+			years = 6
+		}
+	}
+	option = {
+		name = starbrand_events.9.c #both
+		highlighted_option = yes
+		trigger = {
+			has_law = law_type:law_astrological_studies
+		}
+
+		add_modifier = {
+			name = fertile_omens_agro
+			years = 6
+		}
+		add_modifier = {
+			name = fertile_omens
+			years = 6
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+starbrand_events.10 = { #GOLEM DEMANDS INFRASTRUCTURE FUNDING
+	type = country_event
+	title = starbrand_events.10.t
+	desc = starbrand_events.10.d
+	flavor = starbrand_events.10.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "asia_poor_people_moving"
+    }
+
+	cooldown = { years = 40 }
+
+	trigger = {
+		is_year_of_the_golem = yes
+		OR = {
+			ig:ig_mages ?= {
+				is_marginal = no
+				is_insurrectionary = no
+			}
+			any_scope_state = {
+				is_incorporated = yes
+				state_has_building_type_levels = {
+					target = bt:building_observatory value >= 1
+				}
+			}	
+		}
+		OR = {
+			any_scope_state = {
+				is_incorporated = yes
+				state_has_building_type_levels = {
+					target = bt:building_railway value >= 1
+				}
+			}
+			any_scope_state = {
+				is_incorporated = yes
+				state_has_building_type_levels = {
+					target = bt:building_argentum_rail value >= 1
+				}
+			}
+		}
+		
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	option = {
+		name = starbrand_events.10.a #ignored 
+		default_option = yes	
+		add_modifier = {
+			name = infrastructure_disrepair
+			years = 6
+		}
+		
+	}
+
+	option = {
+		name = starbrand_events.10.b #the road to success is a paved one!
+		add_modifier = {
+			name = visionary_repairs
+			years = 12
+		}
+		add_treasury = golem_infrastructure
+	}
+	option = {
+		name = starbrand_events.10.c #we could be more precise
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				has_law = law_type:law_astrological_studies
+				has_law = law_type:law_mage_hunters
+			}
+			
+		}
+		add_modifier = {
+			name = visionary_repairs
+			years = 12
+		}
+		add_treasury = golem_infrastructure_discount
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = starbrand_events.10.e #we could take this even further
+		highlighted_option = yes
+		trigger = {
+			has_law = law_type:law_artificer_guilds
+		}
+		add_modifier = {
+			name = visionary_repairs_2
+			years = 12
+		}
+		add_treasury = golem_infrastructure_more
+	}
+}

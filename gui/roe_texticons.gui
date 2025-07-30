@@ -755,6 +755,15 @@ texticon = {
 }
 
 texticon = {
+  icon = manticore_attacks
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/manticores.dds"
+    fontsize = 150
+  }
+}
+
+texticon = {
   icon = vampire_spawn
   iconsize = {
     offset = { 0 30 }
@@ -1344,6 +1353,16 @@ texticon = {
 	icon = prestige_good_wyrmfruit
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/prestige_goods/prestige_good_wyrmfruit.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_chili_peppers
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/chili_peppers.dds"
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18

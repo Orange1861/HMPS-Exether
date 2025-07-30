@@ -66,5 +66,40 @@ adventure_company_buyout = {
 	value = 0
 	subtract = root.gdp
 	divide = 20
-	max = 1500000
+	min = -1500000
+}
+
+observatory_upgrade = {
+	value = 0
+	subtract = root.gdp
+	divide = 16
+	min = -4000000
+}
+
+observatory_upgrade_discount = {
+	value = 0
+	subtract = root.gdp
+	divide = 24
+	min = -2600000
+}
+
+golem_infrastructure = {
+	value = 0
+	subtract = root.gdp
+	divide = 21
+	min = -2000000
+}
+
+golem_infrastructure_more = {
+	value = 0
+	subtract = root.gdp
+	divide = 15
+	min = -2500000
+}
+
+golem_infrastructure_discount = {
+	value = 0
+	subtract = root.gdp
+	divide = 28
+	min = -1500000
 }

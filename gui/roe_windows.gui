@@ -12,6 +12,19 @@ types roe_window_types {
             minimize_button_large = {
                 onclick = "[GetVariableSystem.Clear('roe_open_window')]"
                 onclick = "[GetVariableSystem.Clear('roe_alert_action')]"
+                onclick = "[GetVariableSystem.Clear('show_gryphon_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_justice_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_sphinx_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_phoenix_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_unicorn_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_fey_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_golem_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_djinn_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_siren_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_kraken_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_fiend_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_dragon_constellation')]"
+                onclick = "[GetVariableSystem.Clear('show_angel_constellation')]"
                 parentanchor = center
                 shortcut = "close_window"
             }
@@ -23,6 +36,8 @@ types roe_window_types {
         blockoverride "window_header_name" {
             text = "domains_window_title"
             default_format = "#bold"
+            using = header_font_fancy
+			fontsize = 32
         }
         blockoverride "content" {}
 
@@ -55,9 +70,12 @@ types roe_window_types {
 
         ### SETTING SIZE OF WINDOW
         flowcontainer = {
+
+
             resizeparent = yes
-            margin = { 35 0 }
-            margin_bottom = 25
+            margin = { 25 0 }
+            margin_bottom = 15
+            margin_top = -10
 
             ### VIDEO/IMAGE + TEXT/OPTIONS
             container = {
@@ -65,92 +83,17 @@ types roe_window_types {
                     minimumsize = { 1120 -1 }
                     position = { 0 90 }
 
-                    ### EVENT IMAGE / CONTENT
-                    widget = {
-                        position = { 3 3 }
-                        size = { 1120 600 }
-
-                        # animated video ( most images should have this )
-                        video_icon = {
-                            video = "gfx/event_images/unspecified_magic_phenomena.bk2"
-                            size = { 100% 100% }
-                            alwaystransparent = yes
-                            loop = no
-                        }
-                    }
-
-                    ### INNER FRAME + FADE OVER THE IMAGE
-                    icon = {
-                        texture = "gfx/interface/event_window/event_inner_frame_fullscreen_horizontal.dds"
-                        size = { 100% 100% }
-                        spriteType = Corneredtiled
-                        spriteborder = { 25 25 }
-                        texture_density = 2
-                        #visible = no
-
-                        modify_texture = {
-                            texture = "gfx/interface/backgrounds/default_bg_shading.dds"
-                            spriteType = Corneredstretched
-                            spriteborder = { 0 0 }
-                            blend_mode = overlay
-                        }
-                        modify_texture = {
-                            using = texture_velvet
-                        }
-                    }
-
-                    ### CONTENT DESIGNATION ICON
-                    flowcontainer = {
-                        spacing = 10
-                        parentanchor = bottom|left
-                        position = { 10 -10 }
-
-                        container = {
-                            datamodel = "[GetDlcCollection]"
-
-                            item = {
-                                flowcontainer = {
-                                    tooltip = ROE_WINDOW_DLC_TOOLTIP
-                                    visible = "[ObjectsEqual(Localize('dlc_roe'), Dlc.GetName)]"
-                                    spacing = 10
-
-                                    icon = {
-                                        size = { 40 40 }
-                                        texture = "gfx/interface/backgrounds/round_frame_dec.dds"
-                                        parentanchor = bottom|left
-
-                                        icon = {
-                                            size = { 40 40 }
-                                            position = { 3 -3 }
-                                            texture = "[Dlc.GetIcon]"
-                                            parentanchor = center
-
-                                        }
-                                    }
-
-                                    textbox = {
-                                        size = { 150 20 }
-                                        align = left|vcenter
-                                        parentanchor = left|vcenter
-                                        elide = right
-                                        using = fontsize_large
-                                        fontsize_min = 12
-                                        alpha = 0.7
-
-                                        text = "[Dlc.GetName]"
-                                    }
-                                }
-                            }
-                        }
-                    }
-
                     flowcontainer = {
                         direction = horizontal
                         spacing = 0
                         widget = {
+                        background = {
+                            using = entry_bg
+                            margin = { -16 -21 }
+                        }
                             size = { 560 600 }
                             widget = {
-                                size = { 100% 94% }
+                                size = { 100% 100% }
 
                                 background = {
                                     texture = "gfx/interface/backgrounds/tutorial_bg.dds"
@@ -159,7 +102,7 @@ types roe_window_types {
                                     alpha = 0.94
 
                                     modify_texture = {
-                                        texture = "gfx/interface/backgrounds/gradient_overlay.dds"
+                                        texture = "gfx/interface/illustrations/modded_ui/constellation_background.dds"
                                         spriteType = Corneredstretched
                                         spriteborder = { 0 0 }
                                         blend_mode = overlay
@@ -168,13 +111,33 @@ types roe_window_types {
                                     margin = { -15 -20 }
                                 }
 
+							back_button_large = {
+								position = { 30 35 }
+								    onclick = "[GetVariableSystem.Clear('show_gryphon_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_justice_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_sphinx_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_phoenix_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_unicorn_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_fey_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_golem_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_djinn_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_siren_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_kraken_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_fiend_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('show_angel_constellation')]"
+                                    onclick = "[GetVariableSystem.Clear('hide_domain_tutorial')]"
+                                    onclick = "[GetVariableSystem.Clear('show_dragon_constellation')]"
+                                    visible = "[GetVariableSystem.Exists('hide_domain_tutorial')]"
+							}
+
                                 flowcontainer = {
                                     direction = vertical
                                     using = default_list_position
                                     spacing = 5
-                                    margin = { 50 50 }
+                                    margin = { 50 35 }
 
                                     textbox = {
+                                        visible = "[Not(GetVariableSystem.Exists('hide_domain_tutorial'))]"
                                         name = "description"
                                         multiline = yes
                                         autoresize = yes
@@ -183,7 +146,250 @@ types roe_window_types {
                                         parentanchor = top|hcenter
                                         align = hcenter|nobaseline
                                         raw_text = "domains_window_description"
-                                        margin = { 20 10 }
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_golem_constellation')]"
+                                        name = "golem_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "golem_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_justice_constellation')]"
+                                        name = "justice_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "justice_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_sphinx_constellation')]"
+                                        name = "sphinx_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "sphinx_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_sphinx_constellation')]"
+                                        name = "sphinx_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "sphinx_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_phoenix_constellation')]"
+                                        name = "phoenix_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "phoenix_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_siren_constellation')]"
+                                        name = "siren_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "siren_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_angel_constellation')]"
+                                        name = "angel_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "angel_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_dragon_constellation')]"
+                                        name = "dragon_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "dragon_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_fiend_constellation')]"
+                                        name = "fiend_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "fiend_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_phoenix_constellation')]"
+                                        name = "phoenix_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "phoenix_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_unicorn_constellation')]"
+                                        name = "unicorn_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "unicorn_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_fey_constellation')]"
+                                        name = "fey_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "fey_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_gryphon_constellation')]"
+                                        name = "gryphon_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "gryphon_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_djinn_constellation')]"
+                                        name = "djinn_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "djinn_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
+                                    }
+                                    
+                                    textbox = {
+                                        visible = "[GetVariableSystem.Exists('show_kraken_constellation')]"
+                                        name = "kraken_title"
+                                        multiline = yes
+                                        autoresize = yes
+                                        minimumsize = { 420 -1 }
+                                        maximumsize = { 420 -1 }
+                                        parentanchor = top|hcenter
+                                        align = hcenter|nobaseline
+                                        raw_text = "kraken_title"
+                                        default_format = "#header"
+                                        margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
                                     }
 
                                     divider_decorative = {
@@ -192,24 +398,171 @@ types roe_window_types {
                                     }
 
                                     textbox = {
+                                        visible = "[Not(GetVariableSystem.Exists('hide_domain_tutorial'))]"
                                         name = "flavortext"
                                         multiline = yes
                                         autoresize = yes
                                         minimumsize = { 420 -1 }
                                         maximumsize = { 420 -1 }
                                         parentanchor = top|hcenter
-                                        align = top|hcenter
+                                        align = top|left
                                         text = domains_window_flavor
-                                        default_format = "#lore"
                                         margin = { 30 10 }
+                                    }
+
+                                }
+
+                    roe_domain_dragon_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_dragon_constellation')]"
+                    }
+
+                    roe_domain_golem_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_golem_constellation')]"
+                    }
+
+                    roe_domain_justice_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_justice_constellation')]"
+                    }
+
+                    roe_domain_sphinx_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_sphinx_constellation')]"
+                    }
+
+                    roe_domain_phoenix_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_phoenix_constellation')]"
+                    }
+
+                    roe_domain_unicorn_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_unicorn_constellation')]"
+                    }
+
+                    roe_domain_fey_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_fey_constellation')]"
+                    }
+
+                    roe_domain_gryphon_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_gryphon_constellation')]"
+                    }
+
+                    roe_domain_djinn_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_djinn_constellation')]"
+                    }
+
+                    roe_domain_siren_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_siren_constellation')]"
+                    }
+
+                    roe_domain_kraken_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_kraken_constellation')]"
+                    }
+
+                    roe_domain_fiend_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_fiend_constellation')]"
+                    }
+
+                    roe_domain_angel_constellation = { 
+                        size = { 100% 100% }
+                        position = { 0 0 }
+                        visible = "[GetVariableSystem.Exists('show_angel_constellation')]"
+                    }
+
+
+                                                    ### CONTENT DESIGNATION ICON
+                    flowcontainer = {
+                        spacing = 10
+                        parentanchor = bottom|left
+                        position = { 30 -30 }
+
+                        container = {
+                            datamodel = "[GetDlcCollection]"
+
+                            item = {
+                                flowcontainer = {
+                                    size = { 215 50}
+                                    visible = "[ObjectsEqual(Localize('dlc_roe'), Dlc.GetName)]"
+                                    spacing = 165
+                                    flowcontainer = {
+                                        tooltip = ROE_WINDOW_DLC_TOOLTIP
+                                        spacing = 10
+
+                                        icon = {
+                                            size = { 50 50 }
+                                            texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+                                            parentanchor = bottom|left
+
+                                            icon = {
+                                                size = { 51 51 }
+                                                position = {3 -1.7 }
+                                                texture = "[Dlc.GetIcon]"
+                                                parentanchor = center
+
+                                            }
+                                        }
+
+                                        textbox = {
+                                            size = { 150 20 }
+                                            align = left|vcenter
+                                            parentanchor = left|vcenter
+                                            elide = right
+                                            using = fontsize_large
+                                            fontsize_min = 12
+                                            alpha = 0.7
+
+                                            text = "[Dlc.GetName]"
+                                        }
+                                    }
+                                    textbox = {
+                                        size = { 130 50 }
+                                        align = left|vcenter
+                                        parentanchor = left|vcenter
+                                        using = entry_bg
+                                        margin = { 10 5 }
+                                        name = "tutorial_highlight_magic_reserves"
+                                        using = fontsize_mega
+                                        raw_text = "@magic![AccessPlayer.MakeScope.ScriptValue('arcana')|=+D]"
+                                        tooltip = "MAGIC_TOOLTIP"
                                     }
                                 }
                             }
                         }
+
+
+                    }
+
+                            }
+                        }
                         widget = {
                             size = { 560 600 }
+                        background = {
+                            using = entry_bg
+                            margin = { -16 -21 }
+                        }
                             widget = {
-                                size = { 100% 94% }
+                                size = { 100% 100% }
 
                                 background = {
                                     texture = "gfx/interface/backgrounds/tutorial_bg.dds"
@@ -218,7 +571,8 @@ types roe_window_types {
                                     alpha = 0.94
 
                                     modify_texture = {
-                                        texture = "gfx/interface/backgrounds/gradient_overlay.dds"
+
+                                        texture = "gfx/interface/illustrations/modded_ui/star_background.dds"
                                         spriteType = Corneredstretched
                                         spriteborder = { 0 0 }
                                         blend_mode = overlay
@@ -231,7 +585,7 @@ types roe_window_types {
                                     direction = vertical
                                     using = default_list_position
                                     spacing = 5
-                                    margin = { 50 50 }
+                                    margin = { 50 35 }
 
                                     textbox = {
                                         name = "sub_title"
@@ -244,6 +598,8 @@ types roe_window_types {
                                         text = domains_window_sub_title
                                         default_format = "#header"
                                         margin = { 20 0 }
+                                        using = header_font_fancy
+			                            fontsize = 28
                                     }
 
                                     divider_decorative = {
@@ -254,302 +610,690 @@ types roe_window_types {
 
                                 widget = {
                                     size = { 100% 100% }
+                                    position = { 0 -10 }
                                     widget = {
-                                        size = { 400 400 }
+                                        size = { 500 500 }
                                         parentanchor = vcenter|hcenter
 
                                         widget = {
-                                            size = { 400 400 }
+                                            size = { 500 500 }
                                             parentanchor = vcenter|hcenter
                                             roe_domain_button = {
-                                                position = { 0 0 }
-                                                blockoverride "button_tooltip" {
-                                                    tooltip = domains_window_material_plane
-                                                }
-                                                blockoverride "button_enabled" {
-                                                    enabled = no
-                                                }
-                                                blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
-                                                }
-                                                blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
-                                                }
-                                            }
-                                            roe_domain_button = {
-                                                position = { 0 -150 }
-                                                blockoverride "button_tooltip" {
-                                                    tooltip = concept_gryphon_desc
-                                                }
-                                                blockoverride "button_enabled" {
-                                                    enabled = no
-                                                }
-                                                blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
-                                                }
-                                                blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
-                                                }
-                                                roe_domain_line = {
-                                                    blockoverride "line_points" {
-                                                        points = {
-                                                            { 30 60 }
-                                                            { 30 150 }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            roe_domain_button = {
-                                                position = { 0 150 }
-                                                blockoverride "button_tooltip" {
-                                                    tooltip = concept_justice_desc
-                                                }
-                                                blockoverride "button_enabled" {
-                                                    enabled = no
-                                                }
-                                                blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
-                                                }
-                                                blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
-                                                }
-                                                roe_domain_line = {
-                                                    blockoverride "line_points" {
-                                                        points = {
-                                                            { 30 0 }
-                                                            { 30 -90 }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            roe_domain_button = {
-                                                position = { -150 0 }
-                                                blockoverride "button_tooltip" {
-                                                    tooltip = concept_sphinx_desc
-                                                }
-                                                blockoverride "button_enabled" {
-                                                    enabled = no
-                                                }
-                                                blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
-                                                }
-                                                blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
-                                                }
-                                                roe_domain_line = {
-                                                    blockoverride "line_points" {
-                                                        points = {
-                                                            { 60 30 }
-                                                            { 150 30 }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            roe_domain_button = {
-                                                position = { 150 0 }
+                                                position = { 0 -175 }
+                                                
                                                 blockoverride "button_tooltip" {
                                                     tooltip = concept_golem_desc
                                                 }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_golem_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_golem_list'))]#!"
+                                                }
                                                 blockoverride "button_enabled" {
-                                                    enabled = no
+                                                    datacontext = "[GetScriptedGui('golem_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
                                                 }
                                                 blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
+                                                    onclick = "[GetVariableSystem.Toggle('show_golem_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_golem_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_golem_constellation')]"
                                                 }
                                                 blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
+                                                    raw_text = "@state!"
                                                 }
+                                                blockoverride "text" {
+                                                    text= "[concept_golem]"
+                                                }
+                                                blockoverride "line" {
                                                 roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('golem_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
                                                     blockoverride "line_points" {
                                                         points = {
-                                                            { 0 30 }
-                                                            { -90 30 }
+                                                            { 30 60 }
+                                                            { 30 200 }
                                                         }
                                                     }
                                                 }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('golem_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 30 60 }
+                                                            { 30 200 }
+                                                        }
+                                                    }
+                                                }
+                                                }
                                             }
                                             roe_domain_button = {
-                                                position = { 125 75 }
+                                                position = { 0 225 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_gryphon_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_gryphon_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_gryphon_list'))]#!"
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_gryphon_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_gryphon_list'))]#!"
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    datacontext = "[GetScriptedGui('gryphon_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    onclick = "[GetVariableSystem.Toggle('show_gryphon_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_gryphon_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_gryphon_constellation')]"
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@inf!"
+                                                }
+                                                blockoverride "text" {
+                                                    text= "[concept_gryphon]"
+                                                }
+                                                blockoverride "line" {
+                                                roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('gryphon_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 30 0 }
+                                                            { 30 -140 }
+                                                        }
+                                                    }
+                                                }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('gryphon_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 30 0 }
+                                                            { 30 -140 }
+                                                        }
+                                                    }
+                                                }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { -200 25 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_kraken_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_kraken_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_kraken_list'))]#!"
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    datacontext = "[GetScriptedGui('kraken_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    onclick = "[GetVariableSystem.Toggle('show_kraken_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_kraken_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_kraken_constellation')]"
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@leverage!"
+                                                }
+                                                blockoverride "text" {
+                                                    text= "[concept_kraken]"
+                                                }
+                                                blockoverride "line" {
+                                                roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('kraken_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 60 30 }
+                                                            { 200 30 }
+                                                        }
+                                                    }
+                                                }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('kraken_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 60 30 }
+                                                            { 200 30 }
+                                                        }
+                                                    }
+                                                }
+
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 200 25 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_phoenix_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_phoenix_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_phoenix_list'))]#!"
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    datacontext = "[GetScriptedGui('phoenix_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    onclick = "[GetVariableSystem.Toggle('show_phoenix_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_phoenix_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_phoenix_constellation')]"
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@wildfire!"
+                                                }
+                                                blockoverride "text" {
+                                                    text= "[concept_phoenix]"
+                                                }
+                                                blockoverride "line" {
+                                                roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('phoenix_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 0 30 }
+                                                            { -140 30 }
+                                                        }
+                                                    }
+                                                }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('phoenix_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 0 30 }
+                                                            { -140 30 }
+                                                        }
+                                                    }
+                                                }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 175 125 }
                                                 blockoverride "button_tooltip" {
                                                     tooltip = concept_unicorn_desc
                                                 }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_unicorn_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_unicorn_list'))]#!"
+                                                }
                                                 blockoverride "button_enabled" {
-                                                    enabled = no
+                                                    datacontext = "[GetScriptedGui('unicorn_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
                                                 }
                                                 blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
+                                                    onclick = "[GetVariableSystem.Toggle('show_unicorn_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_unicorn_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_unicorn_constellation')]"
                                                 }
                                                 blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
+                                                    raw_text = "@clergymen!"
                                                 }
+                                                blockoverride "text" {
+                                                    text= "[concept_unicorn]"
+                                                }
+                                                blockoverride "line" {
                                                 roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('unicorn_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
                                                     blockoverride "line_points" {
                                                         points = {
-                                                            { -70 -30 }
+                                                            { -120 -55 }
                                                             { 5 15 }
                                                         }
                                                     }
                                                 }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('unicorn_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { -120 -55 }
+                                                            { 5 15 }
+                                                        }
+                                                    }
+                                                }
+                                                }
                                             }
                                             roe_domain_button = {
-                                                position = { 75 125 }
+                                                position = { 100 195 }
                                                 blockoverride "button_tooltip" {
-                                                    tooltip = concept_unicorn_desc
+                                                    tooltip = concept_fey_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_fey_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_fey_list'))]#!"
                                                 }
                                                 blockoverride "button_enabled" {
-                                                    enabled = no
+                                                    datacontext = "[GetScriptedGui('fey_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
                                                 }
                                                 blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
+                                                    onclick = "[GetVariableSystem.Toggle('show_fey_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_fey_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_fey_constellation')]"
                                                 }
                                                 blockoverride "button_text" {
                                                     raw_text = "@innovation!"
                                                 }
+                                                blockoverride "text" {
+                                                    text= "[concept_fey]"
+                                                }
+                                                blockoverride "line" {
                                                 roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('fey_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
                                                     blockoverride "line_points" {
                                                         points = {
-                                                            { -30 -70 }
+                                                            { -55 -115 }
                                                             { 15 5 }
                                                         }
                                                     }
                                                 }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('fey_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { -55 -115 }
+                                                            { 15 5 }
+                                                        }
+                                                    }
+                                                }
+                                                }
                                             }
                                             roe_domain_button = {
-                                                position = { -75 -125 }
+                                                position = { -100 -150 }
                                                 blockoverride "button_tooltip" {
-                                                    tooltip = concept_fey_desc
+                                                    tooltip = concept_angel_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_angel_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_angel_list'))]#!"
                                                 }
                                                 blockoverride "button_enabled" {
-                                                    enabled = no
+                                                    datacontext = "[GetScriptedGui('angel_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
                                                 }
                                                 blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
+                                                    onclick = "[GetVariableSystem.Toggle('show_angel_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_angel_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_angel_constellation')]"
                                                 }
                                                 blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
+                                                    raw_text = "@attrition!"
                                                 }
+                                                blockoverride "text" {
+                                                    text= "[concept_angel]"
+                                                }
+                                                blockoverride "line" {
                                                 roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('angel_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
                                                     blockoverride "line_points" {
                                                         points = {
                                                             { 45 55 }
-                                                            { 90 130 }
+                                                            { 115 180 }
                                                         }
                                                     }
                                                 }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('angel_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 45 55 }
+                                                            { 115 180 }
+                                                        }
+                                                    }
+                                                }
+                                                }
                                             }
                                             roe_domain_button = {
-                                                position = { -125 -75 }
+                                                position = { -175 -75 }
                                                 blockoverride "button_tooltip" {
-                                                    tooltip = concept_fey_desc
+                                                    tooltip = concept_fiend_desc
                                                 }
                                                 blockoverride "button_enabled" {
-                                                    enabled = no
+                                                    datacontext = "[GetScriptedGui('fiend_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_fiend_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_fiend_list'))]#!"
                                                 }
                                                 blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
+                                                    onclick = "[GetVariableSystem.Toggle('show_fiend_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_fiend_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_fiend_constellation')]"
                                                 }
                                                 blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
+                                                    raw_text = "@warning!"
                                                 }
+                                                blockoverride "text" {
+                                                    text= "[concept_fiend]"
+                                                }
+                                                blockoverride "line" {
                                                 roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('fiend_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
                                                     blockoverride "line_points" {
                                                         points = {
                                                             { 55 45 }
-                                                            { 130 90 }
+                                                            { 180 115 }
                                                         }
                                                     }
                                                 }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('fiend_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 55 45 }
+                                                            { 180 115 }
+                                                        }
+                                                    }
+                                                }
+                                                }
                                             }
                                             roe_domain_button = {
-                                                position = { 75 -125 }
+                                                position = { 100 -150 }
                                                 blockoverride "button_tooltip" {
-                                                    tooltip = concept_phoenix_desc
+                                                    tooltip = concept_justice_desc
                                                 }
                                                 blockoverride "button_enabled" {
-                                                    enabled = no
+                                                    datacontext = "[GetScriptedGui('justice_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_justice_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_justice_list'))]#!"
                                                 }
                                                 blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
+                                                    onclick = "[GetVariableSystem.Toggle('show_justice_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_justice_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_justice_constellation')]"
                                                 }
                                                 blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
+                                                    raw_text = "@aut!"
                                                 }
+                                                blockoverride "text" {
+                                                    text= "[concept_justice]"
+                                                }
+                                                blockoverride "line" {
                                                 roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('justice_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
                                                     blockoverride "line_points" {
                                                         points = {
                                                             { 15 55 }
-                                                            { -30 130 }
+                                                            { -55 180 }
+                                                        }
+                                                    }
+                                                }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('justice_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 15 55 }
+                                                            { -55 180 }
+                                                        }
+                                                    }
+                                                }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 175 -75 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_sphinx_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_sphinx_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_sphinx_list'))]#!"
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    datacontext = "[GetScriptedGui('sphinx_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    onclick = "[GetVariableSystem.Toggle('show_sphinx_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_sphinx_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_sphinx_constellation')]"
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@bur!"
+                                                }
+                                                blockoverride "text" {
+                                                    text= "[concept_sphinx]"
+                                                }
+                                                blockoverride "line" {
+                                                    roe_domain_line = {
+                                                        datacontext = "[GetScriptedGui('sphinx_enabled')]"
+                                                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
+                                                        blockoverride "line_points" {
+                                                            points = {
+                                                                { 5 45 }
+                                                                { -120 115 }
+                                                            }
+                                                        }
+                                                    }
+                                                    roe_domain_line_active = {
+                                                        datacontext = "[GetScriptedGui('sphinx_enabled')]"
+                                                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                        blockoverride "line_points" {
+                                                            points = {
+                                                                { 5 45 }
+                                                                { -120 115 }
+                                                            }
                                                         }
                                                     }
                                                 }
                                             }
                                             roe_domain_button = {
-                                                position = { 125 -75 }
+                                                
+					
+                                                position = { -175 125 }
                                                 blockoverride "button_tooltip" {
-                                                    tooltip = concept_phoenix_desc
+                                                    tooltip = concept_siren_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_siren_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_siren_list'))]#!"
                                                 }
                                                 blockoverride "button_enabled" {
-                                                    enabled = no
+                                                    datacontext = "[GetScriptedGui('siren_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    #tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
                                                 }
                                                 blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
+                                                    onclick = "[GetVariableSystem.Toggle('show_siren_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_siren_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_siren_constellation')]"
                                                 }
                                                 blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
+                                                    raw_text = "@politically_unaligned!"
                                                 }
+                                                blockoverride "text" {
+                                                    text= "[concept_siren]"
+                                                }
+                                                blockoverride "line" {
                                                 roe_domain_line = {
+                                                    datacontext = "[GetScriptedGui('siren_enabled')]"
+                                                    visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
                                                     blockoverride "line_points" {
                                                         points = {
-                                                            { 5 45 }
-                                                            { -70 90 }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            roe_domain_button = {
-                                                position = { -75 125 }
-                                                blockoverride "button_tooltip" {
-                                                    tooltip = concept_djinn_desc
-                                                }
-                                                blockoverride "button_enabled" {
-                                                    enabled = no
-                                                }
-                                                blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
-                                                }
-                                                blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
-                                                }
-                                                roe_domain_line = {
-                                                    blockoverride "line_points" {
-                                                        points = {
-                                                            { 90 -70 }
-                                                            { 45 5 }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            roe_domain_button = {
-                                                position = { -125 75 }
-                                                blockoverride "button_tooltip" {
-                                                    tooltip = concept_djinn_desc
-                                                }
-                                                blockoverride "button_enabled" {
-                                                    enabled = no
-                                                }
-                                                blockoverride "button_onclick" {
-                                                    #TODO: Add onclick
-                                                }
-                                                blockoverride "button_text" {
-                                                    raw_text = "@innovation!"
-                                                }
-                                                roe_domain_line = {
-                                                    blockoverride "line_points" {
-                                                        points = {
-                                                            { 130 -30 }
+                                                            { 180 -55 }
                                                             { 55 15 }
                                                         }
                                                     }
+                                                }
+                                                roe_domain_line_active = {
+                                                    datacontext = "[GetScriptedGui('siren_enabled')]"
+                                                    visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                    blockoverride "line_points" {
+                                                        points = {
+                                                            { 180 -55 }
+                                                            { 55 15 }
+                                                        }
+                                                    }
+                                                }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { -100 195 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_djinn_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_djinn_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_djinn_list'))]#!"
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    datacontext = "[GetScriptedGui('djinn_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    onclick = "[GetVariableSystem.Toggle('show_djinn_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_djinn_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_djinn_constellation')]"
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@popularity!"
+                                                }
+                                                blockoverride "text" {
+                                                    text= "[concept_djinn]"
+                                                }
+                                                blockoverride "line" {
+                                                    roe_domain_line = {
+                                                        datacontext = "[GetScriptedGui('djinn_enabled')]"
+                                                        visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End))]"
+                                                        blockoverride "line_points" {
+                                                            points = {
+                                                                { 115 -115 }
+                                                                { 45 5 }
+                                                            }
+                                                        }
+                                                    }
+                                                    roe_domain_line_active = {
+                                                        datacontext = "[GetScriptedGui('djinn_enabled')]"
+                                                        visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                        blockoverride "line_points" {
+                                                            points = {
+                                                                { 115 -115 }
+                                                                { 45 5 }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            roe_domain_button = {
+                                                position = { 0 25 }
+                                                blockoverride "button_tooltip" {
+                                                    tooltip = concept_dragon_desc
+                                                }
+                                                blockoverride "number_visible" {
+                                                    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_dragon_list')), '(int32)0')]"
+                                                }
+                                                blockoverride "number_text" {
+                                                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_dragon_list'))]#!"
+                                                }
+                                                blockoverride "button_enabled" {
+                                                    datacontext = "[GetScriptedGui('dragon_enabled')]"
+                                                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+                                                }
+                                                blockoverride "button_onclick" {
+                                                    onclick = "[GetVariableSystem.Toggle('show_dragon_constellation')]"
+                                                }
+                                                blockoverride "button_selected" {
+                                                    visible = "[GetVariableSystem.Exists('show_dragon_constellation')]"
+                                                }
+                                                blockoverride "selected_visibility" {
+                                                    visible = "[GetVariableSystem.Exists('show_dragon_constellation')]"
+                                                }
+                                                blockoverride "button_text" {
+                                                    raw_text = "@innovation!"
+                                                }
+                                                blockoverride "text" {
+                                                    text= "[concept_dragon]"
                                                 }
                                             }
                                         }
@@ -566,13 +1310,53 @@ types roe_window_types {
     type roe_domain_button = widget {
         parentanchor = vcenter|hcenter
         size = { 60 60 }
+        
         block "button_tooltip" {
             tooltip = concept_gryphon_desc
         }
+        using = selected_sidepanel_animation_small
+        blockoverride "selected_visibility" {
+            block "selected_visibility" {
+                visible = no
+            }
+        }
 
+
+
+         block "line" {
+        }
+
+        textbox = {
+            position = { 0 47.5 }
+            name = "description"
+            multiline = yes
+            autoresize = yes
+            minimumsize = { 0 -1 }
+            maximumsize = { 420 -1 }
+            parentanchor = top|hcenter
+            align = hcenter|nobaseline
+                        background = {
+				using = blurry_dark_background
+
+			}
+			background = {
+				using = paper_bg
+                alpha = 0.95
+				margin = { -10 -5 }
+			}
+
+            block "text" {
+                text = "domain_name"
+            }
+            margin = { 20 10 }
+        }
+
+        
         sidepanel_button_small = {
             position = { 0 0 }
             size = { 60 60 }
+
+
             blockoverride "icon" {
                 textbox = {
                     size = { 60 60 }
@@ -587,8 +1371,184 @@ types roe_window_types {
             block "button_enabled" {
                 enabled = no
             }
+            onclick = "[GetVariableSystem.Clear('show_gryphon_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_justice_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_sphinx_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_phoenix_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_unicorn_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_fey_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_golem_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_djinn_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_siren_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_kraken_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_fiend_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_angel_constellation')]"
+            onclick = "[GetVariableSystem.Clear('show_dragon_constellation')]"
+            onclick = "[GetVariableSystem.Set('hide_domain_tutorial', 'active')]"
+            block "button_onclick" {}
+
+            textbox = {
+				parentanchor = right|top
+				position = { -5 0 }
+				autoresize = yes
+                block "number_text" {
+                    raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_siren_list'))]#!"
+                }
+                block "number_visible" {
+				    visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_all_list')), '(int32)0')]"
+                }
+				align = left|nobaseline
+				using = fontsize_small
+				background = {
+					using = default_background
+					margin = { 8 5 }
+				}
+			}
+        }
+    }
+
+    type roe_constellation_button = widget {
+        using = tooltip_above
+        parentanchor = vcenter|hcenter
+        size = { 45 45 }
+        
+
+        using = selected_sidepanel_animation_small
+        blockoverride "selected_visibility" {
+            visible = no
+        }
+
+         block "line" {
+        }
+
+        textbox = {
+            position = { 0 32 }
+            name = "description"
+            multiline = yes
+            autoresize = yes
+            minimumsize = { 0 -1 }
+            maximumsize = { 420 -1 }
+            parentanchor = top|hcenter
+            align = hcenter|nobaseline
+                        background = {
+				using = blurry_dark_background
+
+			}
+			background = {
+				using = paper_bg
+                alpha = 0.95
+				margin = { -10 -5 }
+			}
+
+            block "text" {
+                text = "domain_name"
+            }
+            margin = { 20 10 }
+        }
+
+        
+
+        
+
+        widget = {
+            size = { 45 45 }
+            	block "highlight" {
+                visible = no
+            }
+        button = {
+            using = glow_button
+            icon = {
+				size = { 45 45 }
+				texture = "gfx/interface/backgrounds/round_button_bg.dds"
+			}
+            block "button_active_tooltip" {
+                tooltip = concept_gryphon_desc
+            }
+            position = { 0 0 }
+            size = { 45 45 }
+
+        	using = default_fade_in_out
+
+            block "button_active_enabled" {
+                enabled = no
+            }
+        }
+        button = {
+        	size = { 45 45 }
+            block "button_active_enabled" {
+                enabled = no
+            }
+        	using = default_fade_in_out
+        	icon = {
+        		using = rotate_glow_animation_02
+                size = { 125 125 }
+                position = { -40 -40 }
+        	}
+        	icon = {
+        		texture = "gfx/interface/buttons/gem_icon.dds"
+        		size = { 100% 100% }
+        		position = { 0 0 }
+                alpha = 0.9
+        	}
+
+        }
+        button = {
+            using = glow_button
+            block "button_active_tooltip" {
+                tooltip = concept_gryphon_desc
+            }
+            position = { 0 0 }
+            size = { 45 45 }
+
+        	using = default_fade_in_out
+
+            block "button_active_enabled" {
+                enabled = no
+            }
+            block "button_active_onclick" {}
+        }
+ }
+        widget = {
+            size = { 45 45 }
+                block "hide_cast" {
+                visible = yes
+            }
+        button = {
+            using = glow_button
+            icon = {
+				size = { 45 45 }
+				texture = "gfx/interface/backgrounds/round_button_bg.dds"
+                 
+			}
+            block "button_tooltip" {
+                tooltip = concept_gryphon_desc
+            }
+            position = { 0 0 }
+            size = { 45 45 }
+        	using = default_fade_in_out
+
+
+
+            block "button_enabled" {
+                enabled = no
+            }
+        }
+        button = {
+            using = glow_button
+            block "button_tooltip" {
+                tooltip = concept_gryphon_desc
+            }
+            position = { 0 0 }
+            size = { 45 45 }
+        	using = default_fade_in_out
+            block "button_enabled" {
+                enabled = no
+            }
             block "button_onclick" {}
         }
+ }
+
+
     }
 
     type roe_domain_line = line {
@@ -609,4 +1569,24 @@ types roe_window_types {
             }
         }
     }
+
+    type roe_domain_line_active = line {
+        position = { 0 0 }
+        gfxtype = linegfx
+        line_type = BSpline
+        block "tech_line_texture" {
+            texture = "gfx/interface/tech_tree/tech_line_research_done.dds"
+        }
+        mask = "gfx/interface/tech_tree/tech_line_mask.dds"
+        width = 4
+        alpha = 0.8
+
+        block "line_points" {
+            points = {
+                { 0 0 }
+                { 0 0 }
+            }
+        }
+    }
+            
 }

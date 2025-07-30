@@ -1,0 +1,185 @@
+
+company_whisker_agricultural_research = {
+
+	icon = "gfx/interface/icons/company_icons/honeycomb.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_beekeeping
+		building_chemical_plants
+		building_potion_distillery
+	}
+
+	extension_building_types = {
+		building_rye_farm
+		building_cotton_plantation
+		building_oil_rig
+		building_tooling_workshops
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_honey
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_moorweald
+
+	}
+	
+		attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WHISKER_FIELDS
+			}
+		}
+	}
+
+	possible = {
+
+		any_scope_state = {
+			state_region = s:STATE_WHISKER_FIELDS
+			any_scope_building = {
+				OR = {
+					is_building_type = building_beekeeping
+				}
+				level >= 5
+			}
+			count >= 1
+		}
+		
+		any_scope_state = {
+			state_region = s:STATE_WHISKER_FIELDS
+			any_scope_building = {
+				OR = {
+					is_building_type = building_university
+				}
+				level >= 3
+			}
+			count >= 1
+		}
+	}
+	
+	prosperity_modifier = {
+		country_production_tech_research_speed_mult = 0.15
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_WHISKER_FIELDS
+			is_incorporated = yes
+		}
+	}
+	
+	ai_construction_targets = {
+		building_beekeeping = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_WHISKER_FIELDS
+			}
+		}	
+		building_university = {
+			level = 3
+			state_trigger = {			
+				state_region = s:STATE_WHISKER_FIELDS
+			}
+		}		
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+
+company_whisker_cheese_cartel = {
+    #TODO Graphics
+	icon = "gfx/interface/icons/company_icons/cheese.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_rye_farm
+		building_food_industry
+		building_livestock_ranch
+	}
+
+	extension_building_types = {
+        building_distillery
+		building_tea_plantation
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_cheese
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_moorweald
+
+	}
+	
+		attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WHISKER_FIELDS
+			}
+		}
+	}
+
+	possible = {
+
+		any_scope_state = {
+			state_region = s:STATE_WHISKER_FIELDS
+			any_scope_building = {
+				OR = {
+					is_building_type = building_livestock_ranch
+				}
+				level >= 5
+			}
+			count >= 1
+		}
+		
+        any_scope_state = {
+			state_region = s:STATE_WHISKER_FIELDS
+			any_scope_building = {
+				OR = {
+					is_building_type = building_food_industry
+				}
+				level >= 5
+			}
+			count >= 1
+		}
+	}
+	
+	prosperity_modifier = {
+		country_legitimacy_base_add = 10
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_WHISKER_FIELDS
+			is_incorporated = yes
+		}
+	}
+	
+	ai_construction_targets = {
+		building_livestock_ranch = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_WHISKER_FIELDS
+			}
+		}	
+		building_food_industry = {
+			level = 5
+			state_trigger = {			
+				state_region = s:STATE_WHISKER_FIELDS
+			}
+		}		
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

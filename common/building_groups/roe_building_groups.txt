@@ -346,6 +346,15 @@ bg_game_hunting = {
 	default_building = building_fur_hunting_lodge
 }
 
+bg_logging_dreamwood = {
+	
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_dreamwood
+
+	can_use_slaves = yes
+}
+
 bg_logging_stonewood = {
 	
 	parent_group = bg_logging

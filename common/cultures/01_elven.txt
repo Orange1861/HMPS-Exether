@@ -1060,6 +1060,90 @@ cithrel = {
 	graphics = darkelf_graphics
 }
 
+iasi = {
+	color= hsv{ 0.1 0.43 0.56 }
+	religion = southern_fosirmi
+	traits = { southern_elf elf_heritage }
+	obsessions = {
+		clippers
+	}
+	male_common_first_names={
+		Rom
+		Saund
+		Hond
+		Gwulre
+		Angunt
+		Aend
+		Crosce
+		Dralph
+		Holl
+		Tron
+		Rhichei
+		Drugog
+		Dolph
+		Boch
+		Thar
+		Urch
+		Rhaephn
+	}
+	female_common_first_names = {
+		Lulre
+		Rongleth
+		Caerdh
+		Irn
+		Hynd
+		Ynthai
+		Ladletha
+		Lhynt
+		Heidh
+		Lom
+		Surph
+		Hapha
+		Nuinni
+		Treid
+		Sur
+		Pirdh
+		Bemli
+		Dreiw
+		Gelphill
+		Arweilph
+		Siwi
+		Myrn
+		Sehe
+		Aennansa
+		Crigweirn
+	}	
+	noble_last_names = {
+		Nomoch
+		Lolbernill
+		Drauvrall
+		Gwydrau
+		Vaspi
+		Hodhym
+		Eiphrusae
+	}
+	common_last_names={
+		Nolphombiss
+		Cumanno
+		Vergesc
+		Vaspi
+		Semgi
+		Odaelch
+		Drusc
+		Vaeb
+		Rhant
+		Drammae
+		Craes
+		Elch
+		Traw
+		Gumidh
+	}
+	ethnicities = {
+		1 = elf_dark
+	}
+	graphics = darkelf_graphics
+}
+
 umbradorn={
 	color= hsv{ 0.40 0.36 0.70 }
 	religion = raven_queen

@@ -438,6 +438,23 @@ goods_output_grain_mult = {
 		ai_value=0
 	}
 }
+goods_output_luxury_furniture_mult = {
+	decimals=1
+	color = good
+	percent = yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_furniture_mult = {
+	decimals=1
+	color = good
+	percent = yes
+	game_data={
+		ai_value=0
+	}
+}
 
 goods_output_blubber_mult = {
 	decimals=1

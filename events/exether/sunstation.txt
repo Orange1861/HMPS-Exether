@@ -29,6 +29,7 @@ sunstation.1 = { #sunstation JE success event
 			}
 			save_scope_as = sunstation_state
 		}
+		set_variable = heptadrone_swarms_variable
 	}
 
 	option = {

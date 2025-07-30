@@ -55,6 +55,17 @@ calculate_arcanas_gryphon = {
 	else = {
 		add_to_variable_list = { name = available_arcana_id_gryphon_list target = 5 }
 	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_gryphon_6
+		}
+		add_to_variable_list = { name = active_arcana_id_gryphon_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 6 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_gryphon_list target = 6 }
+	}
 }
 
 # JUSTICE
@@ -175,6 +186,18 @@ calculate_arcanas_sphinx = {
 	else = {
 		add_to_variable_list = { name = available_arcana_id_sphinx_list target = 5 }
 	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_sphinx_6
+		}
+		add_to_variable_list = { name = active_arcana_id_sphinx_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 206 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_sphinx_list target = 6 }
+	}
+
 }
 
 # GOLEM
@@ -234,6 +257,17 @@ calculate_arcanas_golem = {
 	}
 	else = {
 		add_to_variable_list = { name = available_arcana_id_golem_list target = 5 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_golem_6
+		}
+		add_to_variable_list = { name = active_arcana_id_golem_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 306 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_golem_list target = 6 }
 	}
 }
 
@@ -295,6 +329,16 @@ calculate_arcanas_unicorn = {
 	else = {
 		add_to_variable_list = { name = available_arcana_id_unicorn_list target = 5 }
 	}
+	if = {
+		limit = {
+			has_modifier = country_arcana_unicorn_6
+		}
+		add_to_variable_list = { name = active_arcana_id_unicorn_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 406 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_unicorn_list target = 6 }
+	}
 }
 
 # FEY
@@ -354,6 +398,28 @@ calculate_arcanas_fey = {
 	}
 	else = {
 		add_to_variable_list = { name = available_arcana_id_fey_list target = 5 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fey_6
+		}
+		add_to_variable_list = { name = active_arcana_id_fey_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 506 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fey_list target = 6 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fey_7
+		}
+		add_to_variable_list = { name = active_arcana_id_fey_list target = 7 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 507 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fey_list target = 7 }
 	}
 }
 
@@ -415,6 +481,17 @@ calculate_arcanas_phoenix = {
 	else = {
 		add_to_variable_list = { name = available_arcana_id_phoenix_list target = 5 }
 	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_phoenix_6
+		}
+		add_to_variable_list = { name = active_arcana_id_phoenix_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 606 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_phoenix_list target = 6 }
+	}
 }
 
 # DJINN
@@ -474,6 +551,17 @@ calculate_arcanas_djinn = {
 	}
 	else = {
 		add_to_variable_list = { name = available_arcana_id_djinn_list target = 5 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_djinn_6
+		}
+		add_to_variable_list = { name = active_arcana_id_djinn_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 706 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_djinn_list target = 6 }
 	}
 }
 
@@ -595,6 +683,28 @@ calculate_arcanas_kraken = {
 	else = {
 		add_to_variable_list = { name = available_arcana_id_kraken_list target = 5 }
 	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_kraken_6
+		}
+		add_to_variable_list = { name = active_arcana_id_kraken_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 906 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_kraken_list target = 6 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_kraken_7
+		}
+		add_to_variable_list = { name = active_arcana_id_kraken_list target = 7 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 907 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_kraken_list target = 7 }
+	}
 }
 
 # FIEND
@@ -654,6 +764,17 @@ calculate_arcanas_fiend = {
 	}
 	else = {
 		add_to_variable_list = { name = available_arcana_id_fiend_list target = 5 }
+	}
+
+	if = {
+		limit = {
+			has_modifier = country_arcana_fiend_6
+		}
+		add_to_variable_list = { name = active_arcana_id_fiend_list target = 6 }
+		add_to_variable_list = { name = active_arcana_id_all_list target = 1006 }
+	}
+	else = {
+		add_to_variable_list = { name = available_arcana_id_fiend_list target = 6 }
 	}
 }
 

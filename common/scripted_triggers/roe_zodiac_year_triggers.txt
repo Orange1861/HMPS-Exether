@@ -15,34 +15,41 @@
 }
 
 is_year_of_the_justice = {
-	OR = {
-		year = 1177
-		year = 1189
-		year = 1201
-		year = 1213
-		year = 1225
-		year = 1237
-		year = 1249
-		year = 1261
-		year = 1273
-		year = 1285
-		year = 1297
+	custom_tooltip = {
+		text = year_of_the_justice_tt
+		OR = {
+			year = 1177
+			year = 1189
+			year = 1201
+			year = 1213
+			year = 1225
+			year = 1237
+			year = 1249
+			year = 1261
+			year = 1273
+			year = 1285
+			year = 1297
+		}
 	}
+
 }
 
 is_year_of_the_sphinx = {
-	OR = {
-		year = 1178
-		year = 1190
-		year = 1202
-		year = 1214
-		year = 1226
-		year = 1238
-		year = 1250
-		year = 1262
-		year = 1274
-		year = 1286
-		year = 1298
+	custom_tooltip = {
+		text = year_of_the_sphinx_tt
+		OR = {
+			year = 1178
+			year = 1190
+			year = 1202
+			year = 1214
+			year = 1226
+			year = 1238
+			year = 1250
+			year = 1262
+			year = 1274
+			year = 1286
+			year = 1298
+		}
 	}
 }
 
@@ -159,33 +166,39 @@ is_year_of_the_kraken = {
 }
 
 is_year_of_the_fiend = {
-	OR = {
-		year = 1186
-		year = 1198
-		year = 1210
-		year = 1222
-		year = 1234
-		year = 1246
-		year = 1258
-		year = 1270
-		year = 1282
-		year = 1294
-		year = 1306
+	custom_tooltip = {
+		text = year_of_the_fiend_tt
+		OR = {
+			year = 1186
+			year = 1198
+			year = 1210
+			year = 1222
+			year = 1234
+			year = 1246
+			year = 1258
+			year = 1270
+			year = 1282
+			year = 1294
+			year = 1306
+		}
 	}
 }
 
 is_year_of_the_angel = {
-	OR = {
-		year = 1187
-		year = 1199
-		year = 1211
-		year = 1223
-		year = 1235
-		year = 1247
-		year = 1259
-		year = 1271
-		year = 1283
-		year = 1295
-		year = 1307
+	custom_tooltip = {
+		text = year_of_the_angel_tt
+		OR = {
+			year = 1187
+			year = 1199
+			year = 1211
+			year = 1223
+			year = 1235
+			year = 1247
+			year = 1259
+			year = 1271
+			year = 1283
+			year = 1295
+			year = 1307
+		}
 	}
 }

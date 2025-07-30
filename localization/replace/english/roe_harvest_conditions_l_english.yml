@@ -73,6 +73,12 @@
 
   kisqi_raids: "Kisqi Raids"
   kisqi_raids_desc: "[Concept('concept_kisqi_raids', '$concept_kisqi$')] or frogmen, are a semi-sentient species of amphibian that makes its living raiding the local townships and traders."
+  manticore_attacks: "Manticore Attacks"
+  manticore_attacks_desc: "[Concept('concept_manticore_attacks', '$concept_manticores$')] are winged carnivorous chimaeras, sharing qualities of both griffons and exotic cats. "
+  concept_manticore_attacks_desc: "$manticore_attacks$ are a [Concept('concept_monstrous_harvest_condition', '$monstrous$')] [concept_harvest_condition] unique to the Hyena Plains through the Rust Gorge. They are more likely to appear in states with low adventurer coverage and low urbanization."
+  concept_manticore_attacks: "Manticore Attacks"
+  concept_manticores: "Manticores"
+  
   concept_kisqi_raids: "Kisqi Raids"
   concept_kisqi: "Kisqi"
   concept_kisqi_raids_desc: "$kisqi_raids$ are a [Concept('concept_monstrous_harvest_condition', '$monstrous$')] [concept_harvest_condition] unique to the Citrus Currents. Their likelihood is #green reduced#! with positive [concept_adventurer_coverage], and #red increased#! with negative [concept_adventurer_coverage]. They are more likely to appear in states with an accessible coastline."

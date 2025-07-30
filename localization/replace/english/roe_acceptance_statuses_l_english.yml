@@ -17,3 +17,5 @@
  country_political_strength_veneration_mult_desc: "$country_political_strength_status_generic_desc$"
  country_radicalism_increases_veneration_mult: "[Concept('concept_radical', '$concept_radicalism$')] increases for the @acceptance_status_6! $veneration$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')]"
  country_radicalism_increases_veneration_mult_desc: "$country_radicalism_increases_generic_desc$"
+ country_loyalism_increases_veneration_mult: "[Concept('concept_loyalist', '$concept_loyalism$')] increases for the @acceptance_status_6! $veneration$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')]"
+ country_loyalism_increases_veneration_mult_desc: "$country_loyalism_increases_generic_desc$"

@@ -39,6 +39,7 @@
   everfrost_expedition_lore_tt: "#lore With new technology and brave explorers, the hidden lands beyond the Gruaav Range may finally be reached. The race to discover the giants' homeland is on, and we must be the first to uncover its secrets! #!"
   has_expedition_tt: "[ROOT.GetCountry.GetName] already has an active expedition"
   ice_wall_found_tt: "The secrets of the Giants have already been uncovered"
+  adventurer_coverage_positive_tt: "Local [concept_adventurer_coverage] balance is #bold #green above 0#!#!"
   not_giant_tt: "[ROOT.GetCountry.GetName] does not have [GetTechnology('giant_tech').GetName]"
   not_tallcat_tt: "Grifa Tallcat is not the ruler of [ROOT.GetCountry.GetName]"
   is_tallcat_tt: "Grifa Tallcat is the ruler of [ROOT.GetCountry.GetName]"
@@ -110,3 +111,4 @@
   stihug_power_bloc_tt: "[SCOPE.sCountry('tsh_scope').GetName] is in our [concept_power_bloc]"
   DIPLOMATIC_ACCEPTANCE_TRADE_STATE_CRAGGED: "$company_craggedwyn$ has relocated before..."
   DIPLOMATIC_ACCEPTANCE_JOURNAL_ENTRY_TT: "from a [concept_journal_entry]"
+  constellation_nodes_connected_tt: "Linked to an Active Blessing"

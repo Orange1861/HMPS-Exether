@@ -1195,6 +1195,115 @@ company_basic_rimeroot_plantations = {
 	}
 }
 
+company_kailando_peppers = {
+	icon = "gfx/interface/icons/company_icons/pepperlogo.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+	}
+
+	building_types = {  
+		building_rice_farm
+		building_coffee_plantation
+		building_dye_plantation
+	}
+
+	extension_building_types = { 
+		building_food_industry
+		building_millet_farm
+	}
+
+	possible_prestige_goods = {
+		prestige_good_chili_peppers
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_grain_complete_tt
+			has_variable = prestige_good_generic_grain_var
+		}
+	}
+
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_lacertia
+			has_interest_marker_in_region = region_elusive_coves
+		}
+		
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					region = sr:region_lacertia
+					region = sr:region_elusive_coves
+				}
+			}
+		}
+	}
+		
+	possible = { 
+		any_scope_state = {
+				OR = {
+					region = sr:region_lacertia
+					region = sr:region_elusive_coves
+				}
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_food_industry_throughput_add = 0.1
+		state_mortality_wealth_mult = -0.002
+	}
+
+
+	ai_will_do = { 
+		any_scope_state = {
+			OR = {
+				region = sr:region_lacertia
+				region = sr:region_elusive_coves
+			}
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm
+				}
+				level >= 5
+			}
+		}
+	}
+
+		ai_construction_targets = {
+		building_rice_farm = {
+			level = 5
+			state_trigger = {
+				OR = {
+					region = sr:region_lacertia
+					region = sr:region_elusive_coves
+				}
+			}
+		}
+
+	}
+
+
+	ai_weight = {
+		value = 2 # Higher base value for flavored companies
+	}
+}
+
 company_basic_fine_underground = {
 	icon = "gfx/interface/icons/company_icons/basic_fine_underground.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"

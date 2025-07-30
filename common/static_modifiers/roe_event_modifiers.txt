@@ -1,4 +1,4 @@
-
+﻿
 thalorian_victor = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
 	country_prestige_add = 25
@@ -735,6 +735,281 @@ ignored_radical_druid = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds"
 	interest_group_approval_add = -3
 }
+mine_protests = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_prospecting_negative.dds"
+	building_group_bg_mining_throughput_add = -0.2
+	building_group_bg_mining_infrastructure_usage_mult = 0.15
+}
+
+ignored_starbrand_protests = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	interest_group_approval_add = -3
+}
+
+denied_comet_rituals = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	interest_group_approval_add = -3
+}
+
+crushed_monastic_protest = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	interest_group_approval_add = -3
+}
+
+psionic_woods = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	building_logging_camp_throughput_add = -0.2
+	state_adventurer_coverage_mult = -0.3
+}
+
+dried_dreams = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds"
+	goods_output_ectoplasm_mult = -0.3
+}
+
+animal_sacrifices = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds"
+	building_livestock_ranch_throughput_add = -0.2
+	building_logging_camp_dreamwood_throughput_add = 0.1
+}
+
+weave_revival = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	goods_output_ectoplasm_mult = 0.15
+}
+
+weave_revival_country = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds"
+	building_logging_camp_dreamwood_throughput_add = 0.2
+}
+
+psionic_dialogue = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_diplomacy_positive.dds"
+	goods_output_ectoplasm_mult = 0.2
+}
+
+psionic_bursts = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_theocracy_negative.dds"
+	state_adventurer_coverage_mult = -0.2
+	goods_output_ectoplasm_mult = 0.2
+}
+
+cleared_the_woods = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_laborer_positive.dds"
+	building_group_bg_logging_throughput_add = 0.25
+}
+
+friendly_forests = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds"
+	state_migration_pull_add = 15
+	state_migration_pull_mult = 0.33
+	country_society_tech_spread_mult = 0.1
+}
+
+apprentice_assistance = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_book_positive.dds"
+	state_education_access_add = 0.1
+}
+
+mages_of_tomorrow = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_book_positive.dds"
+	interest_group_pop_attraction_mult = 0.3
+}
+
+psionic_locusts = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds"
+	state_migration_pull_mult = -0.5
+	state_market_access_price_impact = -0.05
+	state_trade_capacity_mult = -0.1
+}
+
+locust_reagents = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds"
+	building_potion_distillery_throughput_add = 0.2
+}
+
+sounds_of_home = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_letter_positive.dds"
+	state_migration_pull_mult = 0.33
+	state_migration_pull_add = 10
+}
+
+blocked_ectoplasm_regulation = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_positive.dds"
+	interest_group_approval_add = 2
+}
+
+censured_magical_theory = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	interest_group_approval_add = -2
+}
+
+denied_observatory_funding = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_academic_negative.dds"
+	interest_group_approval_add = -3
+}
+
+regional_witch_doctors = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_positive.dds"
+	interest_group_approval_add = 2
+	interest_group_pop_attraction_mult = 0.25
+}
+
+reagents_drive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds"
+	building_potion_distillery_throughput_add = 0.2
+	building_group_bg_hunting_throughput_add = 0.2
+}
+
+fertile_omens_agro = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds"
+	building_group_bg_agriculture_throughput_add = 0.2
+	building_group_bg_plantations_throughput_add = 0.2
+}
+
+fertile_omens = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds"
+	state_birth_rate_mult = 0.06
+}
+
+infrastructure_disrepair = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_machinist_negative.dds"
+	state_infrastructure_mult = -0.05
+	state_trade_capacity_mult = -0.05
+}
+
+visionary_repairs = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_machinist_positive.dds"
+	building_railway_throughput_add = 0.1
+	building_argentum_rail_throughput_add = 0.1
+	state_trade_advantage_mult = 0.1
+}
+
+visionary_repairs_2 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_machinist_positive.dds"
+	building_railway_throughput_add = 0.2
+	building_argentum_rail_throughput_add = 0.2
+	state_trade_advantage_mult = 0.1
+	state_infrastructure_from_automobiles_consumption_add = 0.25 
+}
+
+lost_music_duel = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	country_radicals_from_legitimacy_mult = 0.4
+}
+
+won_music_duel = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	country_legitimacy_base_add = 5
+}
+
+turned_back_refugees = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	state_radicals_from_political_movements_mult = 0.2
+	state_radicalism_increases_violent_hostility_mult = 0.2
+}
+
+denied_refugees = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_positive.dds"
+	interest_group_approval_add = 2
+}
+
+historical_relics = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_prospecting_positive.dds"
+	building_group_bg_archeology_throughput_add = 0.25
+	building_group_bg_ruins_throughput_add = 0.25
+}
+
+denied_asuroth_archeology = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_framing_negative.dds"
+	interest_group_approval_add = -2
+}
+
+accepted_refugees = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_negative.dds"
+	interest_group_approval_add = -2	
+}
+
+protector_of_the_furryfolk = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds"
+	country_prestige_mult = 0.1
+	country_improve_relations_speed_mult = 0.15
+	country_infamy_generation_mult = -0.1
+}
+
+debunked_doomsday_prophecy = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	country_legitimacy_base_add = 10
+}
+
+doom_and_gloom = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	state_radicals_from_political_movements_mult = 0.33
+	country_radicals_from_legitimacy_mult = 0.33
+	country_authority_mult = -0.1
+}
+ignoring_prophecy = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	country_tech_spread_mult = -0.15
+	country_legitimacy_base_add = -8
+}
+
+witch_doctor_system = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds"
+	state_mortality_mult = -0.05
+}
+
+architecture_testing = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_framing_positive.dds"
+	building_construction_sector_throughput_add = 0.1
+}
+
+observatory_upgrades = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_academic_postive.dds"
+	country_tech_spread_mult = 0.1
+}
+
+heretical_magic_theory = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	interest_group_approval_add = -3
+}
+
+soul_filtration_regulation = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_negative.dds"
+	building_haunted_grounds_throughput_add = -0.25
+	building_ship_graveyard_throughput_add = -0.25
+	building_thaumacore_foundry_throughput_add = -0.1
+}
+
+clarified_necromantic_legality = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_negative.dds"
+	building_haunted_grounds_throughput_add = 0.2
+	building_ship_graveyard_throughput_add = 0.2
+}
+
+magical_religious_contradictions = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	state_conversion_mult = -0.2
+}
+
+religious_magical_theory = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_negative.dds"
+	state_conversion_mult = 0.25
+	state_education_access_add = -0.1
+	interest_group_ig_devout_pop_attraction_mult = 0.25
+}
+
+religious_magical_communion = {
+	state_conversion_mult = 0.25
+	state_education_access_add = 0.1
+	interest_group_ig_devout_pop_attraction_mult = 0.25
+}
+
+planar_rifts = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	state_pollution_generation_add_mult = 0.33
+	state_adventurer_coverage_mult = -0.33
+}
 
 crushed_radical_druid = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds"
@@ -754,6 +1029,34 @@ natural_society_studies = {
 
 adventurers_sky_marshals = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds"
+	state_adventurer_coverage_mult = -0.25
+}
+
+hungry_leviathans = {
+	building_leviathan_outpost_throughput_add = -0.2
+	state_market_access_price_impact = -0.1
+	building_port_throughput_add = -0.2
+}
+
+hungry_bears = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds"
+	building_songberry_plantation_throughput_add = -0.25
+	building_group_bg_plantations_laborers_mortality_mult = 0.1
+}
+
+bear_wards = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds"
+	building_songberry_plantation_throughput_add = 0.25
+	interest_group_ig_mages_pop_attraction_mult = 0.25
+}
+ 
+plantation_patrols = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds"
+	state_adventurer_coverage_mult = -0.2
+}
+
+sea_patrols = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clipper_negative.dds"
 	state_adventurer_coverage_mult = -0.25
 }
 
@@ -805,12 +1108,87 @@ ghost_town_tourist_traps = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
 	state_migration_pull_add = 15
 }
-
 adventurer_company_buyout = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds"
 	state_adventurer_coverage_mult = -0.2
 }
 
+mutant_livestock_restrictions = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds"
+	building_livestock_ranch_throughput_add = -0.1
+	building_oil_rig_throughput_add = -0.1
+}
+
+allowed_rampant_mutant_tests = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds"
+	interest_group_approval_add = -3
+}
+
+restricted_mutant_livestock = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds"
+	interest_group_approval_add = -3
+}
+
+mutant_livestock_testing = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds"
+	state_adventurer_coverage_add = -50
+	building_group_bg_ranching_laborers_mortality_mult = 0.1
+	building_livestock_ranch_throughput_add = 0.2
+	building_group_bg_ranching_infrastructure_usage_mult = 0.15
+}
+
+production_tech_discovery = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_engineer_positive.dds"
+	country_production_tech_research_speed_mult = 0.1
+}
+
+magical_alloy_discoveries = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_engineer_positive.dds"
+	building_steel_mills_throughput_add = 0.2
+	building_shipyards_throughput_add = 0.2
+	unit_navy_defense_mult = 0.05
+	unit_navy_offense_mult = 0.05
+}
+
+shipbuilding_discoveries = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clipper_positive.dds"
+	building_shipyards_throughput_add = 0.2
+	unit_navy_defense_mult = 0.05
+	unit_navy_offense_mult = 0.05
+}
+
+diving_craze = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clipper_positive.dds"
+	building_wishstone_reefs_throughput_add = 0.25
+	building_ship_graveyard_throughput_add = 0.25
+}
+
+mil_tech_discovery = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_engineer_positive.dds"
+	country_military_tech_research_speed_mult = 0.1
+}
+
+soc_tech_discovery = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_engineer_positive.dds"
+	country_society_tech_research_speed_mult = 0.1
+}
+
+prestigious_discovery = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bank_positive.dds"
+	country_prestige_mult = 0.15
+}
+
+mutant_livestock_studies = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds"
+	country_production_tech_research_speed_mult = 0.15
+}
+
+sailor_superstitions = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_clipper_negative.dds"
+	state_migration_pull_mult = -0.15
+	state_trade_capacity_mult = -0.15
+	building_port_throughput_add = -0.15
+}
 adventurers_buying_potions = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds"
 	building_potion_distillery_throughput_add = 0.25
@@ -845,7 +1223,7 @@ slayer_campaign = {
 
 menial_tasks = {
 	icon = 	"gfx/interface/icons/timed_modifier_icons/modifier_soldier_negative.dds"
-	interest_group_approval_add = -4
+	interest_group_approval_add = -3
 }
 
 organizing_patrols = { 

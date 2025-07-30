@@ -375,18 +375,6 @@ input_context={
 	}
 
 	input_action = {
-		name = "merge"
-		text = "SETTING_INPUT_ACTION_MERGE"
-		scancode = 16 			# M
-	}
-
-	input_action = {
-		name = "country_panel"
-		text = "SETTING_INPUT_ACTION_COUNTRY_PANEL"
-		scancode = 21 			# R
-	}
-
-	input_action = { 
 		name = "toggle_pin"
 		text = "SETTING_INPUT_ACTION_TOGGLE_PIN"
 		binding = {
@@ -394,7 +382,7 @@ input_context={
 		}
 	}
 
-	input_action = { 
+	input_action = {
 		name = "zoom_to"
 		text = "SETTING_INPUT_ACTION_ZOOM_TO"
 		binding = {
@@ -419,11 +407,13 @@ input_context={
 		text = "SETTING_INPUT_ACTION_TOGGLE_GUI_DEBUG"
 		scancode = 18 			# O
 	}
-	
-	### RoE Keybinds
+
+	###MOD ADDED###
+
 	input_action = {
-		name = "open_magic"
-		text = "SETTING_INPUT_ACTION_M"
+		name = "input_m"
+		text = "SETTING_INPUT_ACTION_M" # Arcana
 		scancode = 16			# M
 	}
+
 }

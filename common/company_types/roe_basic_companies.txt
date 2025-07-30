@@ -551,7 +551,7 @@ company_basic_forestry = {
 	building_types = {
 		building_logging_camp
 		building_logging_camp_stonewood
-		building_logging_camp_crystalwood
+		building_logging_camp_dreamwood
 		building_mushroom_logging
 		building_rubber_plantation
 	}
@@ -909,6 +909,9 @@ company_basic_paper = {
 
 	extension_building_types = { 
 		building_logging_camp
+		building_logging_camp_dreamwood
+		building_logging_camp_stonewood
+		building_mushroom_logging
 	}
 
 	possible_prestige_goods = {

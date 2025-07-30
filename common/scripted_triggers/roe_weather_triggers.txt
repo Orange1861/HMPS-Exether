@@ -301,3 +301,19 @@ is_vulnerable_to_kisqi_raids = {
 	}
 
 }
+
+is_vulnerable_to_manticore_attacks = {
+	OR = {
+
+		any_scope_state = {
+			OR = {
+				region = sr:region_hyena_plains
+				region = sr:region_embervein_arroyo
+				region = sr:region_rust_gorge
+				region = sr:region_sanbang
+				region = sr:region_lotus_isles
+			}
+		}
+	}
+
+}

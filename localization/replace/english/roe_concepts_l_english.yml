@@ -1,6 +1,6 @@
 ﻿l_english:
   concept_magic_reserves: "Arcana"
-  concept_magic_reserves_desc: "@magic! Arcana is a [concept_capacity] used to affect internal change to your [concept_country], like playing [concept_arcana_cards] or changing [Concept('concept_production_method', '$concept_production_methods$')]. It represents the mystical and supernatural influence a nation wields. It encapsulates the nation's ability to harness and spread magical knowledge, the populace's awareness and acceptance of the mystical arts, and the overall magical capacity and prowess of the country."
+  concept_magic_reserves_desc: "@magic! Arcana is a [concept_capacity] used to affect internal change to your [concept_country], like channeling [concept_arcana_cards] or changing [Concept('concept_production_method', '$concept_production_methods$')]. It represents the mystical and supernatural influence a nation wields. It encapsulates the nation's ability to harness and spread magical knowledge, the populace's awareness and acceptance of the mystical arts, and the overall magical capacity and prowess of the country."
 
   concept_renown: "Wanderlust"
   concept_renown_desc: "@renown! Renown is a [concept_capacity] used to effect internal change to your [concept_country], like WIP. It represents the reputation a country wields among the heroes of the realm. It encapsulates the nation's ability to call upon legendary adventurers and handling of supernatural threats."
@@ -47,7 +47,7 @@
   concept_age_of_gods_desc: "Legends tell of a time when gods walked upon Exether among mortals. They guided civilizations, overseeing the construction of temples and raising palaces out of the mud.\nA few gods were kind to their followers, while others commanded faith through fear or violence. Every step of mortal life was at the whims of a deity to whom the [concept_material_plane] was a game. The gods had collectively created the world to prove who was superior, with each one convinced that mortals would worship them above all others.\nBut the gods were in for a rude awakening as mortal worship is fickle. Some were hated for their twisted ideals, while others lost their following when the people of Exether picked new favorites. What had started as an honorable competition soon became an all-out divine war as scorned gods lashed out at the world that rejected them with jealousy, leading to the [concept_godsbane]."
 
   concept_material_plane: "Material Plane"
-  concept_material_plane_desc: "The material plane, also known as [concept_exether] exists in between all of the [concept_outer_planes]. The [concept_creation_of_exether] was the result over an eternal struggle between the outer gods. It is seperated from the [concept_outer_planes] by an enormous magical [concept_veil] created by the gods to protect it from their constant warring, but that protection has weakened since the [concept_nightfall] and continues to weaken as magical innovations draw more and more magic through it."
+  concept_material_plane_desc: "The material plane, also known as [concept_exether] exists in between all of the [concept_outer_realms]. The [concept_creation_of_exether] was the result over an eternal struggle between the outer gods. It is seperated from the [concept_outer_realms] by an enormous magical [concept_veil] created by the gods to protect it from their constant warring, but that protection has weakened since the [concept_nightfall] and continues to weaken as magical innovations draw more and more magic through it."
 
   concept_veil_integrity: "Veil Integrity"
   concept_veil_integrity_desc: "Veil Integrity is a measure of how much magic is seeping into the world through the [concept_veil]. Significant enough changes in Veil Integrity will have devastating effects across [concept_exether], and its destruction could doom the [concept_material_plane] as a whole forever."
@@ -56,10 +56,10 @@
   concept_veil_impact_desc: "A measure of your country's individual contribution to the degradation of the [concept_veil]. Significant enough changes in [concept_veil_integrity] will have devastating effects across [concept_exether], and its destruction could doom the [concept_material_plane] as a whole forever."
 
   concept_veil: "Veil"
-  concept_veil_desc: "The veil was created to shield the [concept_material_plane] from the influence of the [concept_outer_planes]. Its creation ended the [concept_age_of_gods] and led to almost a thousand years without magic on [concept_exether]. During the [concept_nightfall], the veil was catastrophically damaged and magic has seeped into the material plane once more through the [concept_stars]."
+  concept_veil_desc: "The veil was created to shield the [concept_material_plane] from the influence of the [concept_outer_realms]. Its creation ended the [concept_age_of_gods] and led to almost a thousand years without magic on [concept_exether]. During the [concept_nightfall], the veil was catastrophically damaged and magic has seeped into the material plane once more through the [concept_stars]."
 
   concept_stars: "Stars"
-  concept_stars_desc: "Stars, which twinkle brightly when the sun is absent, are actually small perforations in the [concept_veil] through which the [concept_outer_planes] can and do influence the [concept_material_plane]. It is also believed that Wishstone originates from these Stars in some way."
+  concept_stars_desc: "Stars, which twinkle brightly when the sun is absent, are actually small perforations in the [concept_veil] through which the [concept_outer_realms] can and do influence the [concept_material_plane]. It is also believed that Wishstone originates from these Stars in some way."
 
   concept_noricum: "Noricum"
   concept_noricum_desc: "Noricum is a continent in the northeast of Exether. It is the home of humanity and giantkind."
@@ -71,10 +71,10 @@
   concept_locari_desc: "Locari is located to the southeast of Exether. It has not been wholly explored, and contains many mysteries such as [concept_psionics]. Traditionally it has been inhabited by Lizardfolk, Naga, Goblins, and Awakened Bears, but the recent success of a few human settlements has made it the target of many aspiring colonizers."
 
   concept_psionics: "Psionics"
-  concept_psionics_desc: "Psionic magic comes from within, rather than as a result of the [concept_outer_planes]. It was therefore unaffected when all other [concept_magic] was cut off during the [concept_age_of_man] by the [concept_veil]."
+  concept_psionics_desc: "Psionic magic comes from within, rather than as a result of the [concept_outer_realms]. It was therefore unaffected when all other [concept_magic] was cut off during the [concept_age_of_man] by the [concept_veil]."
 
   concept_creation_of_exether: "Creation of Exether"
-  concept_creation_of_exether_desc: "After the [concept_coalescence], the first gods began looking outwards toward the other [concept_outer_planes] floating through the ethereal phlogiston. There they met other gods, some of whom were open to cooperation while others attempted conquests. The planes went through a period of epic conflicts, alliances, and plots for dominance of existence, but every invasion failed, every coalition fell apart, and every scheme fizzled out. The planes rejected foreign gods, and fate upheld the status quo no matter what. Realizing the futility of their actions, the gods gathered and came up with a compromise: they would create a new [concept_material_plane] where they could all vie for dominance, a world with nothing set in stone. Thus began the [concept_age_of_gods]."
+  concept_creation_of_exether_desc: "After the [concept_coalescence], the first gods began looking outwards toward the other [concept_outer_realms] floating through the ethereal phlogiston. There they met other gods, some of whom were open to cooperation while others attempted conquests. The planes went through a period of epic conflicts, alliances, and plots for dominance of existence, but every invasion failed, every coalition fell apart, and every scheme fizzled out. The planes rejected foreign gods, and fate upheld the status quo no matter what. Realizing the futility of their actions, the gods gathered and came up with a compromise: they would create a new [concept_material_plane] where they could all vie for dominance, a world with nothing set in stone. Thus began the [concept_age_of_gods]."
 
   concept_long_slumber: "Long Slumber"
   concept_long_slumber_desc: "Fearing the imminent anarchy after the [concept_godsbane] which their runeseers saw with unprecedented clarity, the dwarves retreated into massive subterranean vaults and turned themselves to stone, waiting for their gods to return and free them. What no runeseer had foreseen was that their long sleep would trap them for nearly a millennium, only waking up after the [concept_nightfall] afflicted by the [concept_curse_of_the_mountain]."
@@ -94,53 +94,58 @@
   concept_rememberancers: "Rememberancers"
   concept_rememberancers_desc: "Rememberancy is a type of [concept_magic] that grants perfect recall to the Mage wielding it, professionally known as Rememberancers.  Such Mages are resistant to having their memories probed via [concept_psionics]."
 
-  concept_outer_planes: "Outer Planes"
-  concept_outer_planes_desc: "The twelve Outer planes formed during the [concept_coalescence]. Each one embodies a unique combination of evil and good, as well as order and chaos. These planes are unchanging, and any outside influence on these planes will be erased over time by the natural forces of the universe."
+  concept_outer_realms: "Outer Realms"
+  concept_outer_realms_desc: "The twelve Outer Realms formed during the [concept_coalescence]. Each one embodies a unique combination of evil and good, as well as order and chaos. These planes are unchanging, and any outside influence on these planes will be erased over time by the natural forces of the universe."
 
   concept_coalescence: "Coalescence"
-  concept_coalescence_desc: "The most widely accepted tale of the world's origins is the myth of the Coalescence. The myth holds that the [concept_outer_planes] formed out of the primordial chaos between the Negative and Positive planes at the beginning of time. Soon, the cosmic winds of magic breathed life into the outer planes, giving birth to the first gods who were inextricably bound to their realms and soon sparked the [concept_creation_of_exether]."
+  concept_coalescence_desc: "The most widely accepted tale of the world's origins is the myth of the Coalescence. The myth holds that the [concept_outer_realms] formed out of the primordial chaos between the Negative and Positive planes at the beginning of time. Soon, the cosmic winds of magic breathed life into the Outer Realms, giving birth to the first gods who were inextricably bound to their realms and soon sparked the [concept_creation_of_exether]."
 
   concept_astral_calendar: "Astral Calendar"
   concept_astral_calendar_desc: "The Astral Calendar is the most common interpretation of the movement of the [Concept('concept_constellation','constellations')] across the night sky. Spread across the known world during the height of the [Concept('concept_dumonia','Dumonian Empire')], this calendar categorizes the constellations into twelve star signs: [concept_gryphon], [concept_justice], [concept_sphinx], [concept_golem], [concept_unicorn], [concept_fey], [concept_phoenix], [concept_djinn], [concept_siren], [concept_kraken], [concept_fiend] and [concept_angel]."
   concept_zodiac: "Zodiac"
   concept_zodiac_desc: "The Zodiac is a belt-shaped region of the universe created after the [concept_coalescence]. It consists of twelve [Concept('concept_constellation','constellations')] in a ring around the [concept_material_plane]. It is unknown if anything exists beyond the Zodiac."
   concept_constellation: "Constellation"
-  concept_constellation_desc: "A constellation is collection of [concept_outer_planes] that have embody similar concepts. The constellations form a ring known as the [concept_zodiac]. On [concept_exether], they have been visible to the naked eye as [concept_stars] since the [concept_nightfall]."
+  concept_constellation_desc: "A constellation is collection of [concept_outer_realms] that have embody similar concepts. The constellations form a ring known as the [concept_zodiac]. On [concept_exether], they have been visible to the naked eye as [concept_stars] since the [concept_nightfall]."
 
   concept_gryphon: "Gryphon"
-  concept_gryphon_desc: "The #bold Gryphon#! is the first astrological sign of the [concept_astral_calendar]. The Gryphon contains the [concept_outer_planes] of #bold Wind#! that embody freedom and the primal element of air."
+  concept_gryphon_desc: "The #bold Gryphon#! is the seventh astrological sign of the [concept_astral_calendar]. The Gryphon contains the [concept_outer_realms] of #bold Wind#! that embody freedom and the primal element of air."
   concept_justice: "Justice"
-  concept_justice_desc: "The #bold Justice#! is the second astrological sign of the [concept_astral_calendar]. The Justice contains the [concept_outer_planes] of #bold Order#! that embody law and cooperation."
+  concept_justice_desc: "The #bold Justice#! is the second astrological sign of the [concept_astral_calendar]. The Justice contains the [concept_outer_realms] of #bold Order#! that embody law and cooperation."
   concept_sphinx: "Sphinx"
-  concept_sphinx_desc: "The #bold Sphinx#! is third astrological sign of the [concept_astral_calendar]. The Sphinx contains the [concept_outer_planes] of #bold Logic#! that embody reason and learning."
+  concept_sphinx_desc: "The #bold Sphinx#! is third astrological sign of the [concept_astral_calendar]. The Sphinx contains the [concept_outer_realms] of #bold Logic#! that embody reason and learning."
   concept_golem: "Golem"
-  concept_golem_desc: "The #bold Golem#! is the fourth astrological sign of the [concept_astral_calendar]. The Golem contains the [concept_outer_planes] of #bold Earth#! that embody reliability and the primal element of stone."
+  concept_golem_desc: "The #bold Golem#! is the first astrological sign of the [concept_astral_calendar]. The Golem contains the [concept_outer_realms] of #bold Earth#! that embody reliability and the primal element of stone."
   concept_unicorn: "Unicorn"
-  concept_unicorn_desc: "The #bold Unicorn#! is the fifth astrological sign of the [concept_astral_calendar]. The Unicorn contains the [concept_outer_planes] of #bold Light#! that embody compassion and empathy."
+  concept_unicorn_desc: "The #bold Unicorn#! is the fifth astrological sign of the [concept_astral_calendar]. The Unicorn contains the [concept_outer_realms] of #bold Light#! that embody compassion and empathy."
   concept_fey: "Fey"
-  concept_fey_desc: "The #bold Fey#! is the sixth astrological sign of the [concept_astral_calendar]. The Fey contains the [concept_outer_planes] of #bold Life#! that embody nature and growth."
+  concept_fey_desc: "The #bold Fey#! is the sixth astrological sign of the [concept_astral_calendar]. The Fey contains the [concept_outer_realms] of #bold Life#! that embody nature and growth."
   concept_phoenix: "Phoenix"
-  concept_phoenix_desc: "The #bold Phoenix#! is the seventh astrological sign of the [concept_astral_calendar]. The Phoenix contains the [concept_outer_planes] of #bold Flame#! that embody passion and and the primal element of fire."
+  concept_phoenix_desc: "The #bold Phoenix#! is the fourth astrological sign of the [concept_astral_calendar]. The Phoenix contains the [concept_outer_realms] of #bold Flame#! that embody passion and and the primal element of fire."
   concept_djinn: "Djinn"
-  concept_djinn_desc: "The #bold Djinn#! is the eighth astrological sign of the [concept_astral_calendar]. The Djinn contains the [concept_outer_planes] of #bold Chaos#! that embody disorder and change."
+  concept_djinn_desc: "The #bold Djinn#! is the eighth astrological sign of the [concept_astral_calendar]. The Djinn contains the [concept_outer_realms] of #bold Chaos#! that embody disorder and change."
   concept_siren: "Siren"
-  concept_siren_desc: "The #bold Siren#! is the ninth astrological sign of the [concept_astral_calendar]. The Siren contains the [concept_outer_planes] of #bold Emotion#! that embody feelings and intuition."
+  concept_siren_desc: "The #bold Siren#! is the ninth astrological sign of the [concept_astral_calendar]. The Siren contains the [concept_outer_realms] of #bold Emotion#! that embody feelings and intuition."
   concept_kraken: "Kraken"
-  concept_kraken_desc: "The #bold Kraken#! is the tenth astrological sign of the [concept_astral_calendar]. The Kraken contains the [concept_outer_planes] of #bold Water#! that embody calmness and and the primal element of water."
+  concept_kraken_desc: "The #bold Kraken#! is the tenth astrological sign of the [concept_astral_calendar]. The Kraken contains the [concept_outer_realms] of #bold Water#! that embody calmness and and the primal element of water."
   concept_fiend: "Fiend"
-  concept_fiend_desc: "The #bold Fiend#! is the eleventh astrological sign of the [concept_astral_calendar]. The Fiend contains the [concept_outer_planes] of #bold Darkness#! that embody cruelty and apathy."
+  concept_fiend_desc: "The #bold Fiend#! is the eleventh astrological sign of the [concept_astral_calendar]. The Fiend contains the [concept_outer_realms] of #bold Darkness#! that embody cruelty and apathy."
   concept_angel: "Angel"
-  concept_angel_desc: "The #bold Angel#! is the twelfth astrological sign of the [concept_astral_calendar]. The Angel contains the [concept_outer_planes] of #bold Death#! that embody rot and decay."
+  concept_angel_desc: "The #bold Angel#! is the twelfth astrological sign of the [concept_astral_calendar]. The Angel contains the [concept_outer_realms] of #bold Death#! that embody rot and decay."
+  concept_dragon: "Dragon"
+  concept_dragon_desc: "The #bold Dragon#! is the astrological sign of [concept_exether]. It is not related to the the [concept_outer_realms], but instead symbolizes the power of mortal souls and the sun."
   concept_sky_node: "Sky Node"
   concept_sky_node_desc: "Sky nodes can be found overland where airships can connect to the global market. This allows landlocked nations to interact with the global market"
   concept_opponents: "Opponents"
   concept_opponents_desc: "Placeholder text :D"
+  concept_starbrand: "Starbrand"
+  concept_starbrand_desc: "Starbrands are those born in both the month and year of their [concept_zodiac] sign, manifesting a Zodiac Brand on their body. They are the only people in [concept_exether] who can perform magic without needing some sort of magical focus. They are typically more skilled in magic directly related to their [concept_zodiac] sign."
+  concept_starbrands: "Starbrands"
 
   concept_retainer: "Retainer"
   concept_retainer_desc: "Retainers are hired adventurers that solve various situations and emergencies for the state."
 
-  concept_arcana_cards: "Arcana Cards"
-  concept_arcana_cards_desc: "#bold Arcana Cards#! are played using your country's [concept_magic_reserves] and provide powerful benefits. The Arcana available to you is based on your nation's Religion, and after adding or changing a card you cannot do so again for another 12 years."
+  concept_arcana_cards: "Astral Blessings"
+  concept_arcana_cards_desc: "#bold Astral Blessings#! are cast using your country's [concept_magic_reserves] and provide powerful benefits. The Blessings available to you is based on your nation's [concept_religion], and after adding or changing a blessing you cannot do so again for another 12 years."
 
 
 concept_satrapy: "Satrapy"
@@ -181,7 +186,6 @@ concept_erigan: "Erigan"
 concept_erigan_desc: "Erigan is one of the gods of the [GetReligion('church_of_man').GetName]. He is the god of writing, knowledge, and poets."
 concept_kamiros: "Kamiros"
 concept_kamiros_desc: "Kamiros is one of the gods of the [GetReligion('church_of_man').GetName]. He is the god of light, hope, and justice."
-
 concept_kamiran_conclave: "Concilium Lux Aeternae"
 concept_kamiran_conclave_desc: "The Council of the Eternal Light is a gathering of the [concept_kamiran_cardinals] that takes place shortly after the death of the [concept_luminarch]. The priests enter in solemn communion with [concept_kamiros], waiting for His guiding light to reveal the next Luminarch. The church holds this event to be wholly spiritual endeavor, though it's remarked that Kamiros's guidance often seems to take the form of cutthroat politics. Many among Kamiros' clergy would not reject this accusation however. They say that humanity in all its fickle forms is most precious to the Sun God and that heated discussion followed by unwavering compromise is just what He wishes to see."
 	
@@ -190,3 +194,310 @@ concept_kamiran_cardinals_desc: "The First amongst the Enlightened servants of [
 
 concept_luminarch: "Luminarch"
 concept_luminarch_desc: "The Luminarch is the acting head of the Church of [concept_kamiros] in the Sun Gods' stead. For as long as the Bright Judge remains in the heavens the Luminarch will relay His divine will unto the mortal realm. He is the Solpontarion, the Bridge to the Sun, who is closest to His domain and can see His guiding light most clearly. He is the warden of the empty throne, tasked with keeping the church on track and maintaining the sacraments in accordance with His teachings. The Luminarch also possesses temporal power as ruler of the Dumonian state of Arelon. Though he is always presented as a spiritual figue first, the Luminarch is invariably as much a deft politician as theologian."
+
+outer_plane: "Outer Realm"
+
+#Constellations
+concept_doloria: "Doloria"
+concept_doloria_desc: "#bold Doloria#!, the Weeping Opera, is an [Concept('concept_outer_realms', '$outer_plane$')] where sorrow is sanctified and every heartbreak becomes a scene in a sweeping tragic performance.\n\nHere, even the smallest misfortune is met with trembling voices, quivering hands, and tears that fall like rehearsed rain upon velvet stages."
+doloria_tooltip: "$concept_doloria_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_mirthra: "Mirthra"
+concept_mirthra_desc: "#bold Mirthra#!, the Eternal Masquerade, is an [Concept('concept_outer_realms', '$outer_plane$')] where joy conceals truth and identity is a costume worn and shed without consequence.\n\nLaughter echoes behind gilded masks as dancers drift through candlelit halls, spinning secrets into silk and delight into illusion."
+mirthra_tooltip: "$concept_mirthra_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_vermior: "Vermior"
+concept_vermior_desc: "#bold Vermior#!, the Seething Pit, is an [Concept('concept_outer_realms', '$outer_plane$')] where anger boils over and unrest smolders beneath cracked stone and iron streets.\n\nHere, resentment builds like steam, and every whispered slight becomes the spark that feeds a firestorm of riot and ruin."
+vermior_tooltip: "$concept_vermior_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_morvane: "Morvane"
+concept_morvane_desc: "#bold Morvane#!, the Tower of Nightmares, is an [Concept('concept_outer_realms', '$outer_plane$')] where fear is endless and the mind unravels behind every door.\n\nThe tower winds upward without end, each level conjuring deeper dread; footsteps vanish into darkness, and dreams bleed into waking shadow."
+morvane_tooltip: "$concept_morvane_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_aveline: "Aveline"
+concept_aveline_desc: "#bold Aveline#!, the Isles of Adoration, is an [Concept('concept_outer_realms', '$outer_plane$')] where affection blossoms and desire lingers in every breath of salt wind.\n\nPetals drift across still lagoons as lovers carve vows into bark and whisper promises beneath stars that never fade."
+aveline_tooltip: "$concept_aveline_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_siren', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_rylmar: "Rylmar"
+concept_rylmar_desc: "#bold Rylmar#!, the Feast of Legends, is an [Concept('concept_outer_realms', '$outer_plane$')] where heroes dine in memory and every epic deed is celebrated across golden halls.\n\nBanquet tables float beneath vaulted skies as shades reenact legendary triumphs, their stories echoing through marble pillars and gilded tombs."
+rylmar_tooltip: "$concept_rylmar_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_draelyn: "Draelyn"
+concept_draelyn_desc: "#bold Draelyn#!, the Ethereal Lodge, is an [Concept('concept_outer_realms', '$outer_plane$')] where memories take shape and every lost soul drifts in misty halls.\n\nGhostly lodges sit in fog-choked groves; ephemeral figures wander between spectral inn‑rooms, their whispered recollections weaving threads between life and after."
+draelyn_tooltip: "$concept_draelyn_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_nemorath: "Nemorath"
+concept_nemorath_desc: "#bold Nemorath#!, the Silent Expanse, is an [Concept('concept_outer_realms', '$outer_plane$')] where sound fades and every thought drifts into stillness.\n\nA grey plain stretches beneath a blank sky; petrified trees and cairns stand silent, and even echoes vanish, leaving the landscape hushed and empty."
+nemorath_tooltip: "$concept_nemorath_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_ylvaris: "Ylvaris"
+concept_ylvaris_desc: "#bold Ylvaris#!, the Cenotaph of the Gods, is an [Concept('concept_outer_realms', '$outer_plane$')] where every name ever lost is carved in stone and every memory stands immortal.\n\nRows of towering obelisks and silent sarcophagi stretch into mist; faceless sentinels guard inscriptions of forgotten deities and vanished species."
+ylvaris_tooltip: "$concept_ylvaris_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_morgrith: "Morgrith"
+concept_morgrith_desc: "#bold Morgrith#!, the Rotting Mire, is an [Concept('concept_outer_realms', '$outer_plane$')] where decay thrives and every drop of water births undeath.\n\nFetid bogs bubble with fungal growths and tumbling corpses; undead forms rise from ooze as rot and renewal twist together in the stench of endless decomposition."
+morgrith_tooltip: "$concept_morgrith_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_angel', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_yagaduma: "Yagaduma"
+concept_yagaduma_desc: "#bold Yagaduma#!, the Stoneheart Regime, is an [Concept('concept_outer_realms', '$outer_plane$')] where empires rise on pillars of tyranny and every citizen’s breath is measured by discipline.\n\nMarching columns patrol silent courtyards beneath iron eagles as edicts chisel themselves into monolithic walls. Here, will is forged into obedience, and freedom is a crime carved into the heart of the state."
+yagaduma_tooltip: "$concept_yagaduma_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_drazkar: "Drazkar"
+concept_drazkar_desc: "#bold Drazkar#!, the Academy of Torment, is an [Concept('concept_outer_realms', '$outer_plane$')] where pain is pedagogy and cruelty a fine art learned by design.\n\nAudiences sit in glass amphitheaters as lecturers dissect suffering and apprentices master the balance of nerve-breaking whispers and cold steel discipline."
+drazkar_tooltip: "$concept_drazkar_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_gomgraz: "Gomgraz"
+concept_gomgraz_desc: "#bold Gomgraz#!, the Theater of War, is an [Concept('concept_outer_realms', '$outer_plane$')] where carnage is spectacle and every clash is staged for dominance.\n\nScarlet banners flutter over bloodied amphitheaters as generals choreograph advance and retreat in perfect rhythm—each strategy a drama, each casualty a footnote in the grand design."
+gomgraz_tooltip: "$concept_gomgraz_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_anu_dartu: "Anu‑Dartu"
+concept_anu_dartu_desc: "#bold Anu‑Dartu#!, the Dungeons of Deceit, is an [Concept('concept_outer_realms', '$outer_plane$')] where lies live in stone and every victim is trapped by crafted betrayal.\n\nCorridors twist under false ceilings, whispered promises echo against unbreakable bars, and shadowed wards feed on hope until even truth feels like a conspiracy."
+anu_dartu_tooltip: "$concept_anu_dartu_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_ladregn: "Ladregn"
+concept_ladregn_desc: "#bold Ladregn#!, the Priceless Hoard, is an [Concept('concept_outer_realms', '$outer_plane$')] where wealth is worshipped and every secret priced with gold.\n\nVaults sprawl under crystal domes, coins rain like confessions, and treasure‑hunters barter betrayal for a handful of glimmering trinkets."
+ladregn_tooltip: "$concept_ladregn_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_dulan: "Dulan"
+concept_dulan_desc: "#bold Dulan#!, the Engulfing Darkness, is an [Concept('concept_outer_realms', '$outer_plane$')] where light dissolves and every glance senses the yawning void.\n\nAn all‑black sea stretches beyond sight, boundaries vanish in silent depths, and presence itself becomes a prey swallowed by the living shadow."
+dulan_tooltip: "$concept_dulan_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fiend', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_caymir: "Caymir"
+concept_caymir_desc: "#bold Caymir#!, the Primordial Sea, is an [Concept('concept_outer_realms', '$outer_plane$')] where surface and seabed vanish, and identity drifts in eternal currents.\n\nHere, ancient water‑spirits flow through crushing depth and ceaseless tide. Movement, direction, and sense of self dissolve in an infinite blue."
+caymir_tooltip: "$concept_caymir_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_sebakwa: "Sebakwa"
+concept_sebakwa_desc: "#bold Sebakwa#!, the Fogbound Brokerage, is an [Concept('concept_outer_realms', '$outer_plane$')] where mist asks for more than coin: it claims memories, senses, and certainty.\n\nPale ferrymen guide you through hushed isles, but each toll is a piece of yourself. Wander too long, and you may forget the path home—or who you were."
+sebakwa_tooltip: "$concept_sebakwa_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_jahvarka: "Jahvarka"
+concept_jahvarka_desc: "#bold Jahvarka#!, the Pearl Kingdom, is an [Concept('concept_outer_realms', '$outer_plane$')] where coral towers gleam and merfolk enforce purity with unyielding clarity.\n\nShimmering bays and immaculate reefs sprawl beneath glass‑clear waves. In lagoon courts, every blemish is judged, and every impurity banished with cold precision."
+jahvarka_tooltip: "$concept_jahvarka_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_saphrat: "Saphrat"
+concept_saphrat_desc: "#bold Saphrat#!, the Well of Memories, is an [Concept('concept_outer_realms', '$outer_plane$')] where past reflections swim just beneath the surface—and linger too long.\n\nGrotto pools echo with mirrored recollections. Some are comforting, others twist memory until the mind drowns in its own longing."
+saphrat_tooltip: "$concept_saphrat_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_naylu: "Naylu"
+concept_naylu_desc: "#bold Naylu#!, the Stream of Consciousness, is an [Concept('concept_outer_realms', '$outer_plane$')] where dreams flow like rivers and thoughts carve shifting landscapes.\n\nCurrents wind through waking visions shaped by minds undone or awake. To walk here is to shape reality—and risk drowning in your own ideas."
+naylu_tooltip: "$concept_naylu_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_ondis: "Ondis"
+concept_ondis_desc: "#bold Ondis#!, the Leviathan Depths, is an [Concept('concept_outer_realms', '$outer_plane$')] where pressure crushes light and ancient behemoths drift in ageless dark.\n\nBioluminescent giants glide through trench-black water. Depth here is timeless, and creatures dwell beneath waves older than stars."
+ondis_tooltip: "$concept_ondis_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_bhalora: "Bhalora"
+concept_bhalora_desc: "#bold Bhalora#!, the Shivering Wharf, is an [Concept('concept_outer_realms', '$outer_plane$')] where ice floes creak and survival is carved into frozen silence.\n\nFisher‑folk carve shelters amid drifting icebergs beneath glacial peaks. Their voices meld with crack and howl as they endure the relentless chill in disciplined ritual."
+bhalora_tooltip: "$concept_bhalora_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_kraken', MakeScopeValue('(CFixedPoint)7')).End)]"
+
+concept_khaelith: "Khaelith"
+concept_khaelith_desc: "#bold Khaelith#!, the Warping Crossroads, is an [Concept('concept_outer_realms', '$outer_plane$')] where every road shifts and every direction is unstable.\n\nBridges fold into themselves, portals flicker open mid‑air, and travelers may step forward only to arrive someplace unrecognizable—or return unchanged after countless loops."
+khaelith_tooltip: "$concept_khaelith_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_cyndral: "Cyndral"
+concept_cyndral_desc: "#bold Cyndral#!, the Ephemeral Sands, is an [Concept('concept_outer_realms', '$outer_plane$')] where mirages hatch like dreams and whole cities shimmer into being—then vanish.\n\nShifting dunes hold half‑remembered roads, and travelers chase horizons that retreat before their eyes. One moment the sand is still, the next it births a market of ghosts that dissolves in a breath."
+cyndral_tooltip: "$concept_cyndral_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_myrvak: "Myrvak"
+concept_myrvak_desc: "#bold Myrvak#!, the Unbound Maelstrom, is an [Concept('concept_outer_realms', '$outer_plane$')] where storms reshape reality with no warning.\n\nLightning tears at floating isles while currents of pure chaos twist matter, energy, even thought. Survivors emerge altered—if they emerge at all."
+myrvak_tooltip: "$concept_myrvak_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_ulmeon: "Ulmeon"
+concept_ulmeon_desc: "#bold Ulmeon#!, the Realms of Possibility, is an [Concept('concept_outer_realms', '$outer_plane$')] where every choice fractures existence and spawned paths stretch forever.\n\nHere, wanderers glimpse alternate selves in mirrored crossroads. Every decision flickers branches, and echoes of unlived lives haunt the air."
+ulmeon_tooltip: "$concept_ulmeon_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_tzyrra: "Tzyrra"
+concept_tzyrra_desc: "#bold Tzyrra#!, the Shifting Labyrinth, is an [Concept('concept_outer_realms', '$outer_plane$')] where halls realign and walls betray travelers in endless puzzle.\n\nMonsters lurk behind hidden doors, traps snap shut without warning, and fortunes turn on corridors that relink behind your back. No one truly reaches the center."
+tzyrra_tooltip: "$concept_tzyrra_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_ithraxis: "Ithraxis"
+concept_ithraxis_desc: "#bold Ithraxis#!, the City of Anarchs, is an [Concept('concept_outer_realms', '$outer_plane$')] where rule breaks daily and chaos crowns a new sovereign every dawn.\n\nStatues topple in riots, banners rise in fury, and no decree holds longer than sunrise. Here, authority is momentary, and every citizen is both liberator and convict."
+ithraxis_tooltip: "$concept_ithraxis_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_djinn', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_laurilia: "Laurilia"
+concept_laurilia_desc: "#bold Laurilia#!, the Empty Throne, is an [Concept('concept_outer_realms', '$outer_plane$')] where no ruler holds sway and all voices carry equal weight.\n\nHere, debates stretch across open plazas like wandering breezes, customs shift with every breath, and the wind of discourse never settles. Freedom of choice is law, and every individual’s voice can still turn the tide."
+laurilia_tooltip: "$concept_laurilia_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_voltyr: "Voltyr"
+concept_voltyr_desc: "#bold Voltyr#!, the Heart of Thunder, is an [Concept('concept_outer_realms', '$outer_plane$')] where perpetual storms reign and lightning pulses like a living heartbeat.\n\nBolts strike earth and sky with rhythmic fury, charging the air with raw energy. Thunder rolls in constant crescendo, and the land trembles beneath the storm’s electric pulse."
+voltyr_tooltip: "$concept_voltyr_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_takwilan: "Takwilan"
+concept_takwilan_desc: "#bold Takwilan#!, the Soaring Archipelago, is an [Concept('concept_outer_realms', '$outer_plane$')] where islands drift on eternal currents and flight is as natural as breath.\n\nHigh cliffs and fragile bridges float on sheer wind currents. Gliders and feathered wings carry travelers between drifting isles, and every horizon promises another skyward passage."
+takwilan_tooltip: "$concept_takwilan_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_ravaylen: "Ravaylen"
+concept_ravaylen_desc: "#bold Ravaylen#!, the Sovereign Frontier, is an [Concept('concept_outer_realms', '$outer_plane$')] where wide plains meet jagged ridges and each traveler writes their own law.\n\nWindswept mesas stand under open skies, tents spring up and vanish, and lone traders map the land by the song of the wind. Independence is survival, and solitude sharpens purpose."
+ravaylen_tooltip: "$concept_ravaylen_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_saharzin: "Saharzin"
+concept_saharzin_desc: "#bold Saharzin#!, the Traveler’s Trail, is an [Concept('concept_outer_realms', '$outer_plane$')] where the wind punishes those who linger and rewards those who move.\n\nStorms rise for the static, slashing stillness with sudden gales, while travelers find gusting aid at every mile. Here, journey is life, and pause is peril under restless skies."
+saharzin_tooltip: "$concept_saharzin_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_oragea: "Oragea"
+concept_oragea_desc: "#bold Oragea#!, the Eye of the Storm, is an [Concept('concept_outer_realms', '$outer_plane$')] where cyclones twist reality and only the sky remains.\n\nEndless vortices swirl through open air, winds spiral with savage elegance, and survival depends on the grace to ride chaos. Few live within the tempest’s core—and fewer still learn its dance."
+oragea_tooltip: "$concept_oragea_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_gryphon', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_fushat: "Fushat"
+concept_fushat_desc: "#bold Fushat#!, the Innumerable Swarm, is an [Concept('concept_outer_realms', '$outer_plane$')] where chitin towers rise and hunger never ends.\n\nInsectoid spires march across the land in ceaseless colonies. Every moment bursts with ravenous purpose, and what once was forest falls to grinding mandibles and endless reproduction."
+fushat_tooltip: "$concept_fushat_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue('(CFixedPoint)7')).End)]"
+
+concept_sylveris: "Sylveris"
+concept_sylveris_desc: "#bold Sylveris#!, the Living Canopy, is an [Concept('concept_outer_realms', '$outer_plane$')] where forest and life breathe as one.\n\nEvery vine, moss, and creature is woven into a vast network. Trees whisper warnings through roots, blossoms open in shared response, and intruders feel the forest's unified awareness."
+sylveris_tooltip: "$concept_sylveris_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_myrnella: "Myrnella"
+concept_myrnella_desc: "#bold Myrnella#!, the Rampant Overgrowth, is an [Concept('concept_outer_realms', '$outer_plane$')] where vegetation crushes stone and nature fights to dominate.\n\nCarnivorous blooms lure hapless prey while colossal vines choke ruins. Amid tangled growth, predator and plant wage silent war beneath suffocating green."
+myrnella_tooltip: "$concept_myrnella_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_anvu: "Anvu"
+concept_anvu_desc: "#bold Anvu#!, the Cradle of Immortals, is an [Concept('concept_outer_realms', '$outer_plane$')] where life springs endlessly and death’s sting fades away.\n\nSprings bubble with youth, seeds take root in stillborn soil, and creatures linger beyond mortal span. Time’s grip loosens in gentle meadows of perpetual bloom."
+anvu_tooltip: "$concept_anvu_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_izarbel: "Izarbel"
+concept_izarbel_desc: "#bold Izarbel#!, the Mycelian Undergrove, is an [Concept('concept_outer_realms', '$outer_plane$')] where fungi weave unseen realms and spores carry secret purpose.\n\nMushroom groves pulse beneath the earth, their tendrils connecting root and root. In shaded depths, glowing caps guide silent passage and the mind hums with ancient fungal wisdom."
+izarbel_tooltip: "$concept_izarbel_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_savokar: "Savokar"
+concept_savokar_desc: "#bold Savokar#!, the Savage Beastsprawl, is an [Concept('concept_outer_realms', '$outer_plane$')] where wild creatures roam unchecked and survival sharpens every fang.\n\nJungles teem with roars, claws slice through undergrowth, and the law of tooth and claw rules supreme. Here only cunning or strength endure beneath sun‑dappled canopy."
+savokar_tooltip: "$concept_savokar_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_kalinda: "Kalinda"
+concept_kalinda_desc: "#bold Kalinda#!, the Pools of Rebirth, is an [Concept('concept_outer_realms', '$outer_plane$')] where water heals and transforms with patient clarity.\n\nCrystal pools reflect new forms, wounds close beneath gentle ripples, and what was brittle becomes supple once more. Here, renewal flows through every current."
+kalinda_tooltip: "$concept_kalinda_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_fey', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_aevum: "Aevum"
+concept_aevum_desc: "#bold Aevum#!, the Arsenal of Mercy, is an [Concept('concept_outer_realms', '$outer_plane$')] where justice is tempered with compassion.\n\nAlabaster citadels rise amidst sacred battlegrounds, where lion-like warriors train not for conquest but to shield the helpless. Mercy is shown as a difficult and often painful choice, and fallen enemies who genuinely repent are granted protection and healing."
+aevum_tooltip: "$concept_aevum_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_pharol: "Pharol"
+concept_pharol_desc: "#bold Pharol#!, the Golden Horizon, is an [Concept('concept_outer_realms', '$outer_plane$')] where perpetual dawn brings hope and renewal.\n\nEndless radiant plains stretch beneath golden skies, carved from white marble and gilded sandstone. Temples, forums, and gardens are tended by luminous beings who guide travelers toward renewal and hope, offering refuge to those on the brink of despair."
+pharol_tooltip: "$concept_pharol_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_mendelyn: "Mendelyn"
+concept_mendelyn_desc: "#bold Mendelyn#!, the Soothing Embrace, is an [Concept('concept_outer_realms', '$outer_plane$')] where all wounds find comfort.\n\nThe land itself seems to breathe with empathy, its meadows blooming in calming colors and winds carrying lullabies. Waters from its rivers soothe pain and ease burdens, cared for by gentle beings who ask nothing in return except that visitors pass on the compassion they have received."
+mendelyn_tooltip: "$concept_mendelyn_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_serenica: "Serenica"
+concept_serenica_desc: "#bold Serenica#!, the Untouched Meadow, is an [Concept('concept_outer_realms', '$outer_plane$')] where innocence and purity reign.\n\nRolling hills are dotted with wildflowers, untouched by suffering, hardship, or malice. There are no predators, no storms, no shadows—only a pristine stillness that preserves the purity of existence."
+serenica_tooltip: "$concept_serenica_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_elara: "Elara"
+concept_elara_desc: "#bold Elara#!, the Martyr's Vigil, is an [Concept('concept_outer_realms', '$outer_plane$')] where sacrifice is honored and remembered.\n\nSilent vigil keeps watch over the sacrifices of the past, honoring those who gave all for a greater cause. The realm is a place of reflection and reverence, where the echoes of selfless acts resonate through the ages."
+elara_tooltip: "$concept_elara_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_festus: "Festus"
+concept_festus_desc: "#bold Festus#!, the Merry Hearth, is an [Concept('concept_outer_realms', '$outer_plane$')] where joy and celebration are eternal.\n\nA realm of warmth and laughter, where the hearth never goes cold and the feast never ends. Beings of light and mirth gather to share stories, music, and dance, spreading joy and camaraderie to all who enter."
+festus_tooltip: "$concept_festus_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_unicorn', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_luceros: "Luceros"
+concept_luceros_desc: "#bold Luceros#!, the Foundry of Fascination, is an [Concept('concept_outer_realms', '$outer_plane$')] where creation flows like molten rivers.\n\nLava courses gently across the land, nurturing alien flora and leaving behind rich soil and glittering minerals. Towering basalt spires stand as ancient sentinels, shaped by countless flows, embodying the relentless spirit of invention."
+luceros_tooltip: "$concept_luceros_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_kurothane: "Kurothane"
+concept_kurothane_desc: "#bold Kurothane#!, the Sweltering Canopy, is an [Concept('concept_outer_realms', '$outer_plane$')] where emotion and climate are inextricably linked.\n\nA tropical jungle of warmth and beauty, its mood shifts unpredictably—from serene calm to torrential rain or blood-red mists. The land mirrors the passions of its people, who value loyalty, expression, and deep-rooted customs."
+kurothane_tooltip: "$concept_kurothane_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_grisval: "Grisval"
+concept_grisval_desc: "#bold Grisval#!, the Breakneck Breach, is an [Concept('concept_outer_realms', '$outer_plane$')] where the earth trembles with constant change.\n\nPlains fissure into geysers and hot springs, steam clouds drift between cracks, and underground lakes of scalding water lie exposed in deep ravines. The land reshapes itself constantly, embodying the relentless force of transformation."
+grisval_tooltip: "$concept_grisval_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_tyranor: "Tyranor"
+concept_tyranor_desc: "#bold Tyranor#!, the Igneous Ascent, is an [Concept('concept_outer_realms', '$outer_plane$')] where volcanic peaks challenge the brave.\n\nJagged mountains of obsidian and magma rise against the sky, their slopes treacherous and unforgiving. Only the daring ascend, seeking the glory of the summit and the transformative power of the molten depths."
+tyranor_tooltip: "$concept_tyranor_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_skarnov: "Skarnov"
+concept_skarnov_desc: "#bold Skarnov#!, the Ashen Ruin, is an [Concept('concept_outer_realms', '$outer_plane$')] where decay and rebirth coexist.\n\nRuins of ancient civilizations lie buried beneath layers of ash, their stories preserved in the soot. The land is a testament to the cycle of destruction and renewal, where the past fuels the future's growth."
+skarnov_tooltip: "$concept_skarnov_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_qasyran: "Qasyran"
+concept_qasyran_desc: "#bold Qasyran#!, the Heart of Flame, is an [Concept('concept_outer_realms', '$outer_plane$')] where the essence of fire burns eternal.\n\nA realm of unyielding heat and light, its core pulses with the primal force of creation. Here, the spirit is tested, and only those who endure the searing trials emerge transformed."
+qasyran_tooltip: "$concept_qasyran_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_phoenix', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_pavrion: "Pavrion"
+concept_pavrion_desc: "#bold Pavrion#!, the Infinite Library, is an [Concept('concept_outer_realms', '$outer_plane$')] where all knowledge is cataloged.\n\nEndless corridors house scrolls, books, and tablets, each meticulously indexed. Scholars and seekers navigate its vast halls, searching for truths hidden among the shelves."
+pavrion_tooltip: "$concept_pavrion_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_lamassia: "Lamassia"
+concept_lamassia_desc: "#bold Lamassia#!, the Temporal Museum, is an [Concept('concept_outer_realms', '$outer_plane$')] where history is preserved in stasis.\n\nMoments of significance are frozen in time, displayed as exhibits within its vast wings. Each floor represents a different era, offering a glimpse into the past and future."
+lamassia_tooltip: "$concept_lamassia_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_shingon: "Shingon"
+concept_shingon_desc: "#bold Shingon#!, the Cenobium of Truth, is an [Concept('concept_outer_realms', '$outer_plane$')] where clarity reigns.\n\nA realm of open skies and transparent waters, where illusions are absent. Structures are built from raw, unpolished materials, embodying honesty and openness."
+shingon_tooltip: "$concept_shingon_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_heuravon: "Heuravon"
+concept_heuravon_desc: "#bold Heuravon#!, the College of Reason, is an [Concept('concept_outer_realms', '$outer_plane$')] where logic and deduction are paramount.\n\nEndless lecture halls and debate chambers host scholars engaged in rigorous discourse. The pursuit of knowledge through reason is the realm's guiding principle."
+heuravon_tooltip: "$concept_heuravon_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_tarduk: "Tarduk"
+concept_tarduk_desc: "#bold Tarduk#!, the Vault of Secrets, is an [Concept('concept_outer_realms', '$outer_plane$')] where hidden knowledge is safeguarded.\n\nAncient tomes and forbidden texts are stored within its secure chambers. Only those deemed worthy may access its contents."
+tarduk_tooltip: "$concept_tarduk_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_calyxos: "Calyxos"
+concept_calyxos_desc: "#bold Calyxos#!, the Fractal Forest, is an [Concept('concept_outer_realms', '$outer_plane$')] where patterns and structures proliferate.\n\nA vast forest of repeating geometric shapes and recursive patterns. Each path leads deeper into complexity, reflecting the infinite nature of knowledge."
+calyxos_tooltip: "$concept_calyxos_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_sphinx', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_optima: "Optima"
+concept_optima_desc: "#bold Optima#!, the Perfect Machine, is an [Concept('concept_outer_realms', '$outer_plane$')] where precision and purpose reign.\n\nEndless metal corridors hum with synchronized gears and pistons, each element moving in calculated harmony. Servitors of brass and crystal patrol tirelessly, maintaining the system's flawless operation, while the enigmatic Mechanic oversees its grand design."
+optima_tooltip: "$concept_optima_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_regalon: "Regalon"
+concept_regalon_desc: "#bold Regalon#!, the Unyielding Crown, is an [Concept('concept_outer_realms', '$outer_plane$')] where hierarchy and duty are absolute.\n\nTowering castles preside over meticulously ordered fiefdoms, and every soul knows their place. The laws of Regalon are etched in iron and upheld by the feared Elk Knights, antlered warriors who enforce the will of the Crown with unwavering silence."
+regalon_tooltip: "$concept_regalon_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_senthris: "Senthris"
+concept_senthris_desc: "#bold Senthris#!, the Immutable Canvas, is a vast landscape shaped with exacting care.\n\nEvery flower, every path, every living creature plays a role in a grand aesthetic design. Neatlings—sprite-like caretakers—flit endlessly through the hedges, pruning, polishing, and correcting even the subtlest disruptions. The realm is breathtaking in its perfection, but nothing may change without approval. Beauty is frozen in time, and all must remain in their assigned place, like brushstrokes in a living painting."
+senthris_tooltip: "$concept_senthris_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_korrath: "Korrath"
+concept_korrath_desc: "#bold Korrath#!, the Highest Court, is an [Concept('concept_outer_realms', '$outer_plane$')] where judgment is absolute.\n\nA realm of towering spires and vast chambers, where every dispute is settled with finality. The judges of Korrath are impartial and unyielding, their decisions echoing through the ages as the ultimate authority on justice."
+korrath_tooltip: "$concept_korrath_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_othraal: "Othraal"
+concept_othraal_desc: "#bold Othraal#!, the Harmonious Hive, is an [Concept('concept_outer_realms', '$outer_plane$')] where unity and cooperation are paramount.\n\nA vast network of interconnected chambers and tunnels, where every being works in concert for the greater good. The inhabitants of Othraal are bound by a collective purpose, their actions synchronized to maintain harmony and order."
+othraal_tooltip: "$concept_othraal_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_justice', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_kelvarin: "Kelvarin"
+concept_kelvarin_desc: "#bold Kelvarin#!, the Basalt Bastion, is an [Concept('concept_outer_realms', '$outer_plane$')] where time moves with immense weight.\n\nA landscape of rolling mossy hills, cut through with moats, trenches, and ancient fortresses. Enormous basalt spires rise across the land. Stone golems slowly wage siege across this realm, sometimes waiting centuries before advancing. During these long pauses, they become overgrown with moss and forgotten by time. Conflict here moves slowly, but with immense weight."
+kelvarin_tooltip: "$concept_kelvarin_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue('(CFixedPoint)3')).End)]"
+
+concept_corvalla: "Corvalla"
+concept_corvalla_desc: "#bold Corvalla#!, the Placid Pasture, is an [Concept('concept_outer_realms', '$outer_plane$')] where change is nearly impossible.\n\nA quiet and gentle realm where little ever changes. Grey shepherds dwell among wide fields and low hills, often remaining still for years at a time. They are known for their great beards, which grow longer than they are tall. Time seems to stretch thin here, and change is nearly impossible. Disturbances from outsiders are rare but unwelcome."
+corvalla_tooltip: "$concept_corvalla_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_yronfell: "Yronfell"
+concept_yronfell_desc: "#bold Yronfell#!, the Ceaseless Delve, is an [Concept('concept_outer_realms', '$outer_plane$')] where labor is tireless.\n\nA vast expanse of valleys, mountains, and quarries. This realm is home to the Grymgar, stocky miners and sculptors who never stop working. They extract gemstones to eat and carve grand halls from the stone beneath their feet. The mountains are riddled with tunnels, while the valleys below host enormous stone estates covered in artwork. The Grymgar see no end to their purpose and will tirelessly continue, no matter the obstacles."
+yronfell_tooltip: "$concept_yronfell_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_molgrund: "Molgrund"
+concept_molgrund_desc: "#bold Molgrund#!, the Stone Foundation, is an [Concept('concept_outer_realms', '$outer_plane$')] where the land is ever-changing.\n\nAn elemental realm of jagged rock, unstable canyons, and ever-shifting tectonic forces. Earthquakes and floods frequently alter the terrain, making permanent settlements impossible. Its elemental inhabitants are tribal and adaptable, constantly moving and changing in response to the land. Outsiders rarely find safety here."
+molgrund_tooltip: "$concept_molgrund_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue('(CFixedPoint)6')).End)]"
+
+concept_zarnathul: "Zarnathul"
+concept_zarnathul_desc: "#bold Zarnathul#!, the Venerable Vestige, is an [Concept('concept_outer_realms', '$outer_plane$')] where the past is preserved.\n\nA desert realm of endless dunes and scorching sun. Beneath the sands lie the buried remains of an impossibly ancient city. As sandstorms pass, parts of the city are uncovered or reburied, revealing strange and alien architecture. Silent custodians roam the ruins, tending to the city without explanation. They ignore peaceful visitors but react with violent fury if their work is disturbed."
+zarnathul_tooltip: "$concept_zarnathul_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_tharndrel: "Tharndrel"
+concept_tharndrel_desc: "#bold Tharndrel#!, the Crystalline Waste, is an [Concept('concept_outer_realms', '$outer_plane$')] where stillness is eternal.\n\nA silent realm thick with massive crystal formations that slowly overgrow anything new. Statues, remnants, and even travelers are eventually preserved in crystal. Deep within the caverns sleep enormous worms made of stone and crystal. They seem unaware of the world around them, their occasional breath shaking the caverns. They are ancient and unmoving, and it is best that they remain so."
+tharndrel_tooltip: "$concept_tharndrel_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_golem', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_orravel: "Orravel"
+concept_orravel_desc: "#bold Orravel#!, the Shattered Moon, is both skyborne relic and fallen godstone.\n\nOnce whole, it stood with Varkuun to temper the influence of the outer realms, maintaining balance over Exether. But Orravel was undone—shattered in a divine conspiracy by outer gods. Half remains adrift in the heavens, while the other crashed into the world, birthing the haunted continent of Iaslesh."
+orravel_tooltip: "$concept_orravel_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue('(CFixedPoint)2')).End)]"
+
+concept_varkuun: "Varkuun"
+concept_varkuun_desc: "#bold Varkuun#!, the Widow Moon, orbits alone—dim, watchful, and burdened.\n\nWhere once it joined Orravel in shielding Exether from outer influence, it now circles in silence, its power diminished. Yet even in weakness, Varkuun endures. On cloudless nights, its pale glow weaves subtle resistance against intrusion from the stars beyond, a flickering defense in the long war for the mortal soul."
+varkuun_tooltip: "$concept_varkuun_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue('(CFixedPoint)5')).End)]"
+
+concept_zorai: "Zorai"
+concept_zorai_desc: "#bold Zorai#!, the Radiant Sun, is the blazing soulforge of the mortal realm.\n\nIts fire gave breath to the dragons, who rose to defy the outer realms in the age of strife. More than warmth or light, Zorai is the spiritual fulcrum of Exether—its cycles binding life, time, and death. From its heart flow the raw souls which the gods shaped into mortals. To gaze upon Zorai is to witness the ever-burning defiance of creation."
+zorai_tooltip: "$concept_zorai_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue('(CFixedPoint)1')).End)]"
+
+concept_veil_realm: "The Veil"
+concept_veil_realm_desc: "#bold The Veil#! is the unseen boundary stretched taut between Exether and the outer realms.\n\nIt shimmers like a membrane of potential, sometimes thin, sometimes thick, but always present. Magic leaks through its folds; dreams pass through its cracks. During rare events like the Nightfall, the Veil is torn or weakened—allowing terrible and wonderful things to pass through."
+veil_tooltip: "$concept_veil_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue('(CFixedPoint)4')).End)]"
+
+concept_exether_realm: "Exether"
+concept_exether_realm_desc: "#bold Exether#!, the World, is the crucible of history and the stage of all mortal ambition.\n\nA plane of struggle, beauty, and contradiction, surrounded by the stars and scarred by gods. From its oceans to its highlands, from its cataclysms to its quiet dawns, Exether endures. It is the center of myth, memory, and meaning for all who walk beneath its moons."
+exether_realm_tooltip: "$concept_exether_desc$\n\n[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('arcana_id_dragon', MakeScopeValue('(CFixedPoint)3')).End)]"

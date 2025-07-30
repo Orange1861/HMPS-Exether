@@ -1,4 +1,34 @@
 ﻿cast_arcana_id_gryphon_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_gryphon ?= 4
+                OR = {
+                    has_modifier = country_arcana_gryphon_3
+                    has_modifier = country_arcana_gryphon_6
+                }
+            }
+
+            AND = {
+                scope:arcana_id_gryphon ?= 6
+                OR = {
+                    has_modifier = country_arcana_gryphon_1
+                    has_modifier = country_arcana_gryphon_2
+                    has_modifier = country_arcana_gryphon_4
+                    has_modifier = country_arcana_gryphon_5
+                }
+            }
+
+
+            AND = {
+                NOT = { scope:arcana_id_gryphon ?= 4 }
+                NOT = { scope:arcana_id_gryphon ?= 6 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = gryphon_domain
     }
@@ -14,6 +44,43 @@
 }
 
 cast_arcana_id_justice_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_justice ?= 1
+                OR = {
+                    has_modifier = country_arcana_justice_3
+                    has_modifier = country_arcana_justice_4
+                }
+            }
+
+            AND = {
+                scope:arcana_id_justice ?= 5
+                OR = {
+                    has_modifier = country_arcana_justice_3
+                    has_modifier = country_arcana_justice_4
+                }
+            }
+
+            AND = {
+                scope:arcana_id_justice ?= 3
+                OR = {
+                    has_modifier = country_arcana_justice_1
+                    has_modifier = country_arcana_justice_5
+                    has_modifier = country_arcana_justice_2
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_justice ?= 1 }
+                NOT = { scope:arcana_id_justice ?= 3 }
+                NOT = { scope:arcana_id_justice ?= 5 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = justice_domain
     }
@@ -29,6 +96,43 @@ cast_arcana_id_justice_is_valid = {
 }
 
 cast_arcana_id_sphinx_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_sphinx ?= 2
+                OR = {
+                    has_modifier = country_arcana_justice_1
+                    has_modifier = country_arcana_justice_5
+                    has_modifier = country_arcana_justice_6
+                }
+            }
+
+            AND = {
+                scope:arcana_id_sphinx ?= 5
+                OR = {
+                    has_modifier = country_arcana_sphinx_2
+                    has_modifier = country_arcana_sphinx_3
+                }
+            }
+
+            AND = {
+                scope:arcana_id_sphinx ?= 6
+                OR = {
+                    has_modifier = country_arcana_sphinx_2
+                    has_modifier = country_arcana_sphinx_4
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_sphinx ?= 2 }
+                NOT = { scope:arcana_id_sphinx ?= 5 }
+                NOT = { scope:arcana_id_sphinx ?= 6 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = sphinx_domain
     }
@@ -44,6 +148,37 @@ cast_arcana_id_sphinx_is_valid = {
 }
 
 cast_arcana_id_golem_is_valid = {
+
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_golem ?= 6
+                OR = {
+                    has_modifier = country_arcana_golem_1
+                    has_modifier = country_arcana_golem_2
+                    has_modifier = country_arcana_golem_3
+                    has_modifier = country_arcana_golem_5
+                }
+            }
+
+            AND = {
+                scope:arcana_id_golem ?= 3
+                OR = {
+                    has_modifier = country_arcana_golem_4
+                    has_modifier = country_arcana_golem_6
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_golem ?= 6 }
+                NOT = { scope:arcana_id_golem ?= 3 }
+            }
+        }
+    }
+
+
     religion = {
         has_discrimination_trait = golem_domain
     }
@@ -59,6 +194,43 @@ cast_arcana_id_golem_is_valid = {
 }
 
 cast_arcana_id_unicorn_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_unicorn ?= 2
+                OR = {
+                    has_modifier = country_arcana_unicorn_4
+                    has_modifier = country_arcana_unicorn_6
+                }
+            }
+
+            AND = {
+                scope:arcana_id_unicorn ?= 5
+                OR = {
+                    has_modifier = country_arcana_unicorn_1
+                    has_modifier = country_arcana_unicorn_3
+                    has_modifier = country_arcana_unicorn_6
+                }
+            }
+
+            AND = {
+                scope:arcana_id_unicorn ?= 6
+                OR = {
+                    has_modifier = country_arcana_unicorn_2
+                    has_modifier = country_arcana_unicorn_5
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_unicorn ?= 2 }
+                NOT = { scope:arcana_id_unicorn ?= 5 }
+                NOT = { scope:arcana_id_unicorn ?= 6 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = unicorn_domain
     }
@@ -74,6 +246,38 @@ cast_arcana_id_unicorn_is_valid = {
 }
 
 cast_arcana_id_fey_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_fey ?= 5
+                OR = {
+                    has_modifier = country_arcana_fey_1
+                    has_modifier = country_arcana_fey_2
+                    has_modifier = country_arcana_fey_4
+                    has_modifier = country_arcana_fey_5
+                    has_modifier = country_arcana_fey_6
+                    has_modifier = country_arcana_fey_7
+                }
+            }
+
+            AND = {
+                scope:arcana_id_fey ?= 7
+                OR = {
+                    has_modifier = country_arcana_fey_3
+                    has_modifier = country_arcana_fey_5
+                }
+            }
+
+
+            AND = {
+                NOT = { scope:arcana_id_fey ?= 5 }
+                NOT = { scope:arcana_id_fey ?= 7 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = fey_domain
     }
@@ -89,6 +293,35 @@ cast_arcana_id_fey_is_valid = {
 }
 
 cast_arcana_id_phoenix_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_phoenix ?= 2
+                OR = {
+                    has_modifier = country_arcana_phoenix_3
+                    has_modifier = country_arcana_phoenix_4
+                    has_modifier = country_arcana_phoenix_5
+                    has_modifier = country_arcana_phoenix_6
+                }
+            }
+
+            AND = {
+                scope:arcana_id_phoenix ?= 3
+                OR = {
+                    has_modifier = country_arcana_phoenix_1
+                    has_modifier = country_arcana_phoenix_2
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_phoenix ?= 2 }
+                NOT = { scope:arcana_id_phoenix ?= 3 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = phoenix_domain
     }
@@ -104,6 +337,44 @@ cast_arcana_id_phoenix_is_valid = {
 }
 
 cast_arcana_id_djinn_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_djinn ?= 3
+                OR = {
+                    has_modifier = country_arcana_djinn_1
+                    has_modifier = country_arcana_djinn_4
+                }
+            }
+
+            AND = {
+                scope:arcana_id_djinn ?= 4
+                OR = {
+                    has_modifier = country_arcana_djinn_2
+                    has_modifier = country_arcana_djinn_3
+                    has_modifier = country_arcana_djinn_6
+                }
+            }
+
+            AND = {
+                scope:arcana_id_djinn ?= 6
+                OR = {
+                    has_modifier = country_arcana_djinn_4
+                    has_modifier = country_arcana_djinn_5
+                }
+            }
+
+
+            AND = {
+                NOT = { scope:arcana_id_djinn ?= 3 }
+                NOT = { scope:arcana_id_djinn ?= 4 }
+                NOT = { scope:arcana_id_djinn ?= 6 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = djinn_domain
     }
@@ -119,6 +390,36 @@ cast_arcana_id_djinn_is_valid = {
 }
 
 cast_arcana_id_siren_is_valid = {
+
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_siren ?= 2
+                OR = {
+                    has_modifier = country_arcana_siren_1
+                    has_modifier = country_arcana_siren_3
+                }
+            }
+
+            AND = {
+                scope:arcana_id_siren ?= 3
+                OR = {
+                    has_modifier = country_arcana_siren_2
+                    has_modifier = country_arcana_siren_4
+                    has_modifier = country_arcana_siren_5
+                }
+            }
+
+
+            AND = {
+                NOT = { scope:arcana_id_siren ?= 2 }
+                NOT = { scope:arcana_id_siren ?= 3 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = siren_domain
     }
@@ -134,6 +435,44 @@ cast_arcana_id_siren_is_valid = {
 }
 
 cast_arcana_id_kraken_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_kraken ?= 3
+                OR = {
+                    has_modifier = country_arcana_kraken_2
+                    has_modifier = country_arcana_kraken_4
+                    has_modifier = country_arcana_kraken_5
+                    has_modifier = country_arcana_kraken_6
+                }
+            }
+
+            AND = {
+                scope:arcana_id_kraken ?= 5
+                OR = {
+                    has_modifier = country_arcana_kraken_3
+                    has_modifier = country_arcana_kraken_1
+                }
+            }
+
+            AND = {
+                scope:arcana_id_kraken ?= 6
+                OR = {
+                    has_modifier = country_arcana_kraken_3
+                    has_modifier = country_arcana_kraken_7
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_kraken ?= 3 }
+                NOT = { scope:arcana_id_kraken ?= 5 }
+                NOT = { scope:arcana_id_kraken ?= 6 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = kraken_domain
     }
@@ -149,6 +488,35 @@ cast_arcana_id_kraken_is_valid = {
 }
 
 cast_arcana_id_fiend_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_fiend ?= 1
+                OR = {
+                    has_modifier = country_arcana_fiend_3
+                    has_modifier = country_arcana_fiend_4
+                    has_modifier = country_arcana_fiend_5
+                }
+            }
+
+            AND = {
+                scope:arcana_id_fiend ?= 4
+                OR = {
+                    has_modifier = country_arcana_fiend_1
+                    has_modifier = country_arcana_fiend_2
+                    has_modifier = country_arcana_fiend_6
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_fiend ?= 1 }
+                NOT = { scope:arcana_id_fiend ?= 4 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = fiend_domain
     }
@@ -164,6 +532,34 @@ cast_arcana_id_fiend_is_valid = {
 }
 
 cast_arcana_id_angel_is_valid = {
+
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            AND = {
+                scope:arcana_id_angel ?= 4
+                OR = {
+                    has_modifier = country_arcana_angel_1
+                    has_modifier = country_arcana_angel_5
+                }
+            }
+
+            AND = {
+                scope:arcana_id_angel ?= 5
+                OR = {
+                    has_modifier = country_arcana_angel_2
+                    has_modifier = country_arcana_angel_3
+                    has_modifier = country_arcana_angel_4
+                }
+            }
+
+            AND = {
+                NOT = { scope:arcana_id_angel ?= 4 }
+                NOT = { scope:arcana_id_angel ?= 5 }
+            }
+        }
+    }
+
     religion = {
         has_discrimination_trait = angel_domain
     }
@@ -179,18 +575,28 @@ cast_arcana_id_angel_is_valid = {
 }
 
 cast_arcana_id_dragon_is_valid = {
+    
+    custom_tooltip = {
+        text = constellation_nodes_connected_tt
+        OR = {
+            scope:arcana_id_dragon ?= 3
+
+            has_modifier = country_arcana_dragon_3
+        }
+    }
+
     religion = {
         has_discrimination_trait = dragon_domain
     }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
-    root = {
-        custom_tooltip = {
-            text = has_low_veil_damage_tt
-            root.veil_damage <= 1000
-        }
-    }
+    #root = {
+    #    custom_tooltip = {
+    #        text = has_low_veil_damage_tt
+    #        root.veil_damage <= 1000
+    #    }
+    #}
     root = {
         custom_tooltip = {
             text = has_reserves_tt

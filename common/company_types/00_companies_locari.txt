@@ -407,3 +407,226 @@ company_zephilien = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+company_talminfif = {
+	icon = "gfx/interface/icons/company_icons/talminfif.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_logging_camp_dreamwood
+		building_tooling_workshops
+		building_furniture_manufacturies
+	}
+
+	extension_building_types = {
+		building_glassworks	
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_rosewood
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_sarpakshetra
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_LAZILKEP
+				}	
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_LAZILKEP
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_logging_camp_dreamwood
+				level >= 3
+			}
+		}		
+	}
+	
+	prosperity_modifier = {
+		building_glassworks_throughput_add = 0.1
+		country_construction_goods_cost_mult = -0.05
+		goods_output_furniture_mult = 0.05
+		goods_output_luxury_furniture_mult = -0.05
+	}	
+	
+	ai_will_do = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshops
+					is_building_type = building_logging_camp_dreamwood
+				}
+				level >= 3
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_spirittenders_society = {
+	icon = "gfx/interface/icons/company_icons/rainbowwood.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_logging_camp_dreamwood
+		building_haunted_grounds
+		building_hunting_lodge
+		building_paper_mills
+	}
+
+	extension_building_types = {
+		building_thaumacore_foundry	
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_weavespirit_ectoplasm
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_dreamweaver_jungle
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_SADHANA_MANDAL
+				}	
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_SADHANA_MANDAL
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_logging_camp_dreamwood
+				level >= 3
+			}
+		}		
+	}
+	
+	prosperity_modifier = {
+		building_thaumacore_foundry_throughput_add = 0.05
+		building_logging_camp_dreamwood_throughput_add = 0.15
+	}	
+	
+	ai_will_do = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_logging_camp_dreamwood
+				}
+				level >= 3
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_kiliwipka = {
+	icon = "gfx/interface/icons/company_icons/kiliwipka.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_KUHWUNUKILI }
+
+	building_types = {
+		building_cotton_plantation
+		building_tea_plantation
+		building_millet_farm
+	}
+
+	extension_building_types = {
+		building_food_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_chili_peppers
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_dreamweaver_jungle
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_KUHWUNUKILI
+			}
+			any_scope_building = {
+				OR = {
+					is_building_type = building_cotton_plantation
+					is_building_type = building_millet_farm
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_cotton_plantation_throughput_add = 0.15
+		state_infrastructure_from_population_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_KUHWUNUKILI
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_cotton_plantation = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_KUHWUNUKILI
+				}
+				is_incorporated = yes
+			}
+		}
+		building_millet_farm = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_KUHWUNUKILI
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

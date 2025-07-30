@@ -1,0 +1,56 @@
+﻿retainer_cost = {
+	add = scope:recruited_character.popularity
+	add = 100
+	divide = 1000
+	multiply = root.gdp
+
+}
+
+retainer_cost_text = {
+	add = this.popularity
+	add = 100
+	divide = 1000
+	multiply = this.owner.gdp
+}
+
+remaining_money = {
+	add = 1
+	subtract = scaled_debt
+	multiply = credit
+}
+
+siren_blessings_number = {
+	value = 0
+	root = {
+		if = {
+			limit = {
+				has_modifier = country_arcana_siren_1
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_modifier = country_arcana_siren_2
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_modifier = country_arcana_siren_3
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_modifier = country_arcana_siren_4
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_modifier = country_arcana_siren_5
+			}
+			add = 1
+		}
+	}
+}

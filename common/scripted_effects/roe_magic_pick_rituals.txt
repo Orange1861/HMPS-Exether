@@ -34,6 +34,12 @@ pick_arcana_id_gryphon = {
 		   } 
 		   arcana_gryphon_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 6
+		   } 
+		   arcana_gryphon_6 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -68,6 +74,12 @@ pick_arcana_id_gryphon = {
 				scope:arcana_id_gryphon = 5
 		   } 
 		   arcana_gryphon_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_gryphon = 6
+		   } 
+		   arcana_gryphon_6 = yes
 		}
 	}
 	calculate_arcanas_gryphon = yes
@@ -184,6 +196,12 @@ pick_arcana_id_sphinx = {
 		   } 
 		   arcana_sphinx_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 206
+		   } 
+		   arcana_sphinx_6 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -218,6 +236,12 @@ pick_arcana_id_sphinx = {
 				scope:arcana_id_sphinx = 5
 		   } 
 		   arcana_sphinx_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_sphinx = 6
+		   } 
+		   arcana_sphinx_6 = yes
 		}
 	}
 	calculate_arcanas_sphinx = yes
@@ -294,6 +318,12 @@ pick_arcana_id_golem = {
 		   } 
 		   arcana_golem_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id_golem = 6
+		   } 
+		   arcana_golem_6 = yes
+		}
 	}
 	calculate_arcanas_golem = yes
 }
@@ -334,6 +364,12 @@ pick_arcana_id_unicorn = {
 		   } 
 		   arcana_unicorn_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 406
+		   } 
+		   arcana_unicorn_6 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -368,6 +404,12 @@ pick_arcana_id_unicorn = {
 				scope:arcana_id_unicorn = 5
 		   } 
 		   arcana_unicorn_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_unicorn = 6
+		   } 
+		   arcana_unicorn_6 = yes
 		}
 	}
 	calculate_arcanas_unicorn = yes
@@ -409,6 +451,18 @@ pick_arcana_id_fey = {
 		   } 
 		   arcana_fey_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 506
+		   } 
+		   arcana_fey_6 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 507
+		   } 
+		   arcana_fey_7 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -443,6 +497,18 @@ pick_arcana_id_fey = {
 				scope:arcana_id_fey = 5
 		   } 
 		   arcana_fey_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_fey = 6
+		   } 
+		   arcana_fey_6 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_fey = 7
+		   } 
+		   arcana_fey_7 = yes
 		}
 	}
 	calculate_arcanas_fey = yes
@@ -484,6 +550,12 @@ pick_arcana_id_phoenix = {
 		   } 
 		   arcana_phoenix_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 606
+		   } 
+		   arcana_phoenix_6 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -518,6 +590,12 @@ pick_arcana_id_phoenix = {
 				scope:arcana_id_phoenix = 5
 		   } 
 		   arcana_phoenix_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_phoenix = 6
+		   } 
+		   arcana_phoenix_6 = yes
 		}
 	}
 	calculate_arcanas_phoenix = yes
@@ -559,6 +637,12 @@ pick_arcana_id_djinn = {
 		   } 
 		   arcana_djinn_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 706
+		   } 
+		   arcana_djinn_6 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -593,6 +677,12 @@ pick_arcana_id_djinn = {
 				scope:arcana_id_djinn = 5
 		   } 
 		   arcana_djinn_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_djinn = 6
+		   } 
+		   arcana_djinn_6 = yes
 		}
 	}
 	calculate_arcanas_djinn = yes
@@ -709,6 +799,18 @@ pick_arcana_id_kraken = {
 		   } 
 		   arcana_kraken_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 906
+		   } 
+		   arcana_kraken_6 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 907
+		   } 
+		   arcana_kraken_7 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -743,6 +845,18 @@ pick_arcana_id_kraken = {
 				scope:arcana_id_kraken = 5
 		   } 
 		   arcana_kraken_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_kraken = 6
+		   } 
+		   arcana_kraken_6 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_kraken = 7
+		   } 
+		   arcana_kraken_7 = yes
 		}
 	}
 	calculate_arcanas_kraken = yes
@@ -784,6 +898,12 @@ pick_arcana_id_fiend = {
 		   } 
 		   arcana_fiend_5 = yes
 		}
+		else_if = {
+			limit = {
+				scope:arcana_id = 1006
+		   } 
+		   arcana_fiend_6 = yes
+		}
 	}
 	else_if = {
 		limit = {
@@ -818,6 +938,12 @@ pick_arcana_id_fiend = {
 				scope:arcana_id_fiend = 5
 		   } 
 		   arcana_fiend_5 = yes
+		}
+		else_if = {
+			limit = {
+				scope:arcana_id_fiend = 6
+		   } 
+		   arcana_fiend_6 = yes
 		}
 	}
 	calculate_arcanas_fiend = yes

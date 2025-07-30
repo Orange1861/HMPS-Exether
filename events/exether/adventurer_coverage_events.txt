@@ -346,7 +346,7 @@ adventurer_coverage.6 = { #adventurers are joining the fishing industry
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	icon = "gfx/interface/icons/event_icons/event_naval.dds"
 
 	immediate = {
 		set_variable = {
@@ -1523,6 +1523,720 @@ adventurer_coverage.17 = { #AGE OF AIR PIRACY
 					value = 0.1
 				}	
 			}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+adventurer_coverage.18 = { #leviathans getting ANGERY
+	type = country_event
+	title = adventurer_coverage.18.t
+	desc = adventurer_coverage.18.d
+	flavor = adventurer_coverage.18.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "unspecific_whaling"
+    }
+
+	placement = scope:leviathan_state
+	cooldown = { years = 45 }
+
+	trigger = {
+		any_scope_state = {
+			state_has_building_group_levels = {
+				type  = bg_leviathan_outpost value >= 3
+			}
+			state_adventurer_coverage_balance <= 0
+		}
+		NOT = { has_variable = adventurer_cooldown_variable }  #only one adventurer event every 5 years
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		set_variable = {
+			name = adventurer_cooldown_variable
+			years = 5
+		}
+		random_scope_state = {
+			limit = {
+				state_has_building_group_levels = {
+					type  = bg_leviathan_outpost value >= 3
+				}
+				state_adventurer_coverage_balance <= 0
+			}
+			save_scope_as = leviathan_state
+		}
+	}
+
+
+	option = {
+		name = adventurer_coverage.18.a #the sea is dangerous
+		default_option = yes
+	
+				scope:leviathan_state = {
+					add_modifier = {
+						name = hungry_leviathans
+						years = 15
+						is_decaying = yes
+					}
+			}
+		
+	}
+
+	option = {
+		name = adventurer_coverage.18.b #redirect some adventurers
+		add_modifier = {
+			name = sea_patrols
+			years = 10
+		}
+	}
+}
+
+adventurer_coverage.19 = { #bears eatin da songberries
+	type = country_event
+	title = adventurer_coverage.19.t
+	desc = adventurer_coverage.19.d
+	flavor = adventurer_coverage.19.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "rp1_amazon_exploitation"
+    }
+
+	placement = scope:bear_state
+	cooldown = { years = 45 }
+
+	trigger = {
+		any_scope_state = {
+			state_has_building_group_levels = {
+				type  = bg_songberry_plantations value >= 3
+			}
+			state_adventurer_coverage_balance <= 0
+		}
+		NOT = { has_variable = adventurer_cooldown_variable }  #only one adventurer event every 5 years
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		set_variable = {
+			name = adventurer_cooldown_variable
+			years = 5
+		}
+		random_scope_state = {
+			limit = {
+				state_has_building_group_levels = {
+					type  = bg_songberry_plantations value >= 3
+				}
+				state_adventurer_coverage_balance <= 0
+			}
+			save_scope_as = bear_state
+		}
+	}
+
+
+	option = {
+		name = adventurer_coverage.19.a #they can BEAR the cost
+		default_option = yes
+		scope:bear_state = {
+			add_modifier = {
+				name = hungry_bears
+				years = 10
+			}
+			if = {
+				limit = {
+					any_neighbouring_state = {
+						owner = root
+						state_has_building_group_levels = {
+							type  = bg_songberry_plantations value >= 3
+						}
+						state_adventurer_coverage_balance <= 0
+					}
+				}
+				random_neighbouring_state = {
+					limit = {
+						owner = root
+						state_has_building_group_levels = {
+							type = bg_songberry_plantations value >= 3
+						}
+						state_adventurer_coverage_balance <= 0
+					}
+					add_modifier = {
+						name = hungry_bears
+						years = 10
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.19.b #redirect some adventurers
+		add_modifier = {
+			name = plantation_patrols
+			years = 10
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.19.c #warding, baby!
+		highlighted_option = yes
+		trigger = {
+			ig:ig_mages ?= {
+				is_marginal = no
+				is_insurrectionary = no
+			}
+			has_technology_researched = ward_creation
+		}
+		add_modifier = {
+			name = bear_wards
+			years = 10
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+adventurer_coverage.20 = { #scary squids oooo
+	type = country_event
+	title = adventurer_coverage.20.t
+	desc = adventurer_coverage.20.d
+	flavor = adventurer_coverage.20.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "unspecific_whaling"
+    }
+
+	placement = scope:squid_state
+	cooldown = { years = 50 }
+
+	trigger = {
+		any_scope_state = {
+			state_has_building_group_levels = {
+				type  = bg_squidding value >= 3
+			}
+			state_adventurer_coverage_balance <= 0
+		}
+		NOT = { has_variable = adventurer_cooldown_variable }  #only one adventurer event every 5 years
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_naval.dds"
+
+	immediate = {
+		set_variable = {
+			name = adventurer_cooldown_variable
+			years = 5
+		}
+		random_scope_state = {
+			limit = {
+				state_has_building_group_levels = {
+					type  = bg_squidding value >= 3
+				}
+				state_adventurer_coverage_balance <= 0
+			}
+			save_scope_as = squid_state
+		}
+	}
+
+
+	option = {
+		name = adventurer_coverage.20.a #who cares bro
+		default_option = yes
+		scope:squid_state = {
+			add_modifier = {
+				name = sailor_superstitions
+				years = 10
+			}
+			if = {
+				limit = {
+					any_sea_node_adjacent_state = {
+						owner = root
+						state_has_building_group_levels = {
+							type  = bg_squidding value >= 1
+						}
+						state_adventurer_coverage_balance <= 0
+					}
+				}
+				every_sea_node_adjacent_state  = {
+					limit = {
+						owner = root
+						state_has_building_group_levels = {
+							type = bg_squidding value >= 1
+						}
+						state_adventurer_coverage_balance <= 0
+					}
+					add_modifier = {
+						name = sailor_superstitions
+						years = 10
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.20.b #redirect some adventurers
+		add_modifier = {
+			name = sea_patrols
+			years = 10
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.20.c #retainer time
+		highlighted_option = yes
+		trigger = {
+				OR = {
+        				has_free_retainer = yes
+           				scope:squid_state = {
+                			has_modifier = state_retainer_assigned
+                		}
+           			}
+			}
+			scope:squid_state = {
+				add_loyalists_in_state = {
+					value = 0.1
+				}	
+			}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+adventurer_coverage.21 = { #godsblood ranches BACKFIRE
+	type = country_event
+	title = adventurer_coverage.21.t
+	desc = adventurer_coverage.21.d
+	flavor = adventurer_coverage.21.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "southamerica_factory_opening"
+    }
+
+	placement = scope:mutantranch_state
+	cooldown = { years = 60 }
+
+	trigger = {
+		
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_livestock_ranch
+				level >= 1
+				occupancy > 0.5
+				OR = {
+					has_active_production_method = pm_livestock_godsblood
+					has_active_production_method = pm_livestock_godsblood_increased
+				}	
+			}
+			state_adventurer_coverage_balance <= 0
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+				is_building_type = building_livestock_ranch
+				level >= 1
+				occupancy > 0.5
+				OR = {
+					has_active_production_method = pm_livestock_godsblood
+					has_active_production_method = pm_livestock_godsblood_increased
+				}	
+			}
+				state_adventurer_coverage_balance <= 0
+			}
+			save_scope_as = mutantranch_state
+		}
+	}
+
+
+	option = {
+		name = adventurer_coverage.21.a #who cares bro
+		scope:mutantranch_state = {
+			add_modifier = {
+				name = mutant_livestock_testing
+				years = 10
+			}
+			if = {
+				limit = {
+					any_neighbouring_state = {
+						owner = root
+						state_has_building_group_levels = {
+							type  = bg_livestock_ranches value >= 1
+						}
+					}
+				}
+				random_neighbouring_state = {
+					limit = {
+						owner = root
+						state_has_building_group_levels = {
+							type = bg_livestock_ranches value >= 1
+						}
+					}
+					add_modifier = {
+						name = mutant_livestock_testing
+						years = 10
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				ig:ig_rural_folk ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_rural_folk ?= {
+				add_modifier = {
+					name = allowed_rampant_mutant_tests
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.21.b #shut down the whole thing until we can figure out what's going on
+		default_option = yes
+		add_modifier = {
+			name = mutant_livestock_restrictions
+			years = 10
+		}
+		if = {
+			limit = {
+				ig:ig_industrialists ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_industrialists ?= {
+				add_modifier = {
+					name = restricted_mutant_livestock
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.21.c #retainer time
+		highlighted_option = yes
+		trigger = {
+				OR = {
+						has_law = law_type:law_pest_control
+        				has_free_retainer = yes
+           				scope:mutantranch_state = {
+                			has_modifier = state_retainer_assigned
+                		}
+           			}
+			}
+			scope:mutantranch_state = {
+				add_loyalists_in_state = {
+					value = 0.1
+				}	
+			}
+			if = {
+			limit = {
+				ig:ig_industrialists ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_industrialists ?= {
+				add_modifier = {
+					name = restricted_mutant_livestock
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.21.e #contain it and study it!
+		highlighted_option = yes
+		trigger = {
+			has_law = law_type:law_genetic_testing
+		}
+		scope:mutantranch_state = {
+			add_modifier = {
+				name = mutant_livestock_testing
+				years = 10
+			}
+		}
+		add_modifier = {
+			name = mutant_livestock_studies
+			years = 10
+		}
+		ai_chance = {
+			base = 20
+		}
+		if = {
+			limit = {
+				ig:ig_rural_folk ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_rural_folk ?= {
+				add_modifier = {
+					name = allowed_rampant_mutant_tests
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+	}	
+}
+
+adventurer_coverage.22 = { #adventurer finds something cool
+	type = country_event
+	title = adventurer_coverage.22.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = adventurer_coverage.22.d
+				trigger = {
+					has_variable = prod_tech_var
+				}
+			}
+			triggered_desc = {
+				desc = adventurer_coverage.22.d2
+				trigger = {
+					has_variable = mil_tech_var
+				}
+			}
+			desc = adventurer_coverage.22.d3
+		}
+	}	
+	flavor = adventurer_coverage.22.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "dragonbone"
+    }
+
+	placement = scope:discovery_state
+	cooldown = { years = 30 }
+
+	trigger = {
+	
+		NOT = {
+			any_scope_state = {
+				is_incorporated = yes
+				state_adventurer_coverage_balance < 1
+			}
+		}
+		NOT = { has_variable = adventurer_cooldown_variable }  #only one adventurer event every 5 years
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_list = {
+			33 = {
+				set_variable = prod_tech_var
+			}
+			33 = {
+				set_variable = mil_tech_var
+			}
+			33 = {
+				set_variable = soc_tech_var
+			}
+		}
+		set_variable = {
+			name = adventurer_cooldown_variable
+			years = 5
+		}
+		random_scope_state = {
+			save_scope_as = discovery_state
+		}
+	}
+
+
+	option = {
+		name = adventurer_coverage.22.a #dismantle it!
+		default_option = yes
+		trigger = {
+			OR = {
+				has_variable = prod_tech_var
+				has_variable = mil_tech_var
+			}
+		}
+		if = {
+			limit = {
+				has_variable = prod_tech_var
+			}
+			add_modifier = {
+				name = production_tech_discovery
+				years = 10
+			}
+		}
+
+		if = {
+			limit = {
+				has_variable = mil_tech_var
+			}
+			add_modifier = {
+				name = mil_tech_discovery
+				years = 10
+			}
+		}	
+
+		remove_variable = mil_tech_var
+		remove_variable = soc_tech_var
+		remove_variable = prod_tech_var	
+	}
+
+	option = {
+		name = adventurer_coverage.22.b #same as a but different text
+		default_option = yes
+		trigger = {
+			OR = {
+				has_variable = soc_tech_var
+			}
+		}
+
+		if = {
+			limit = {
+				has_variable = soc_tech_var
+			}
+			add_modifier = {
+				name = soc_tech_discovery
+				years = 10
+			}
+		}	
+		remove_variable = mil_tech_var
+		remove_variable = soc_tech_var
+		remove_variable = prod_tech_var	
+	}
+
+	option = {
+		name = adventurer_coverage.22.c #it belongs in a museum!
+		add_modifier = {
+			name = prestigious_discovery
+			years = 10
+		}
+
+	}
+
+}
+
+adventurer_coverage.23 = { #adventurers find an old shipwreck
+	type = country_event
+	title = adventurer_coverage.23.t
+	desc = adventurer_coverage.23.d
+	flavor = adventurer_coverage.23.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "unspecific_whaling"
+    }
+
+	placement = scope:shipwreck_state
+	cooldown = { years = 65 }
+
+	trigger = {
+		NOT = {
+			any_scope_state = {
+				is_incorporated = yes
+				state_adventurer_coverage_balance < 1
+			}
+		}
+		any_scope_state = {
+			OR = {
+				state_has_building_group_levels = {
+					type = bg_ship_graveyard value >= 1
+				}
+				state_has_building_group_levels = {
+					type = bg_wishstone_reefs value >= 1
+				}
+			}
+		}
+		NOT = { has_variable = adventurer_cooldown_variable }  #only one adventurer event every 5 years
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		set_variable = {
+			name = adventurer_cooldown_variable
+			years = 5
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_has_building_group_levels = {
+						type = bg_ship_graveyard value >= 1
+					}
+					state_has_building_group_levels = {
+						type = bg_wishstone_reefs value >= 1
+					}
+				}
+				state_adventurer_coverage_balance <= 0
+			}
+			save_scope_as = shipwreck_state
+		}
+	}
+
+
+	option = {
+		name = adventurer_coverage.23.a #we should study the shipbuilding techniques!
+		default_option = yes
+		add_modifier = {
+			name = shipbuilding_discoveries
+			years = 10
+		}
+		
+	}
+
+	option = {
+		name = adventurer_coverage.23.b #we should encourage more divers
+		add_modifier = {
+			name = diving_craze
+			years = 10
+		}
+	}
+
+	option = {
+		name = adventurer_coverage.23.c #a unique metal alloy?
+		trigger = {
+			has_law = law_type:law_artificer_guilds
+		}
+		add_modifier = {
+			name = magical_alloy_discoveries
+			years = 10
+		}
 		ai_chance = {
 			base = 100
 		}

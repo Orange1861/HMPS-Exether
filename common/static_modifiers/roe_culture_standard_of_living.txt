@@ -553,6 +553,11 @@ blacktalon_standard_of_living_modifier_positive = {
 	state_blacktalon_standard_of_living_add = 1
 }
 
+ravensworn_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_ravensworn_standard_of_living_add = 1
+}
+
 pabardian_standard_of_living_modifier_positive = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
 	state_pabardian_standard_of_living_add = 1
@@ -1648,6 +1653,12 @@ blacktalon_standard_of_living_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	state_blacktalon_standard_of_living_add = 1
 }
+
+ravensworn_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_ravensworn_standard_of_living_add = 1
+}
+
 
 pabardian_standard_of_living_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"

@@ -173,6 +173,34 @@ building_rotfarm = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
+building_logging_camp_dreamwood = {
+	building_group = bg_logging_dreamwood
+	icon = "gfx/interface/icons/building_icons/dreamwood.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	potential = {
+		state_is_in_locari = yes
+	}
+
+	possible = {
+		state_is_in_locari = yes
+	}
+	production_method_groups = {
+		pmg_base_building_logging_camp_stonewood
+		pmg_logging_potions
+		pmg_dreamwood
+		pmg_equipment
+		pmg_transportation_building_logging_camp
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
 building_logging_camp_stonewood = {
 	building_group = bg_logging_stonewood
 	icon = "gfx/interface/icons/building_icons/vermillion_wood.dds"

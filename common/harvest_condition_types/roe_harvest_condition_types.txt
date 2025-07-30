@@ -1269,7 +1269,7 @@ kiankstauk_colonies = { #shellcrab
 	range = {
 		integer_range = {
 			min = 1
-			max = 1
+			max = 2
 		}
 	}
 
@@ -1317,7 +1317,7 @@ kiankstauk_colonies = { #shellcrab
 
 	}
 
-	color = { 138 102 66 }
+	color = { 138 102 36 }
 	icon = "gfx/interface/icons/harvest_condition_icons/kiankstauk_colonies.dds"
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
 }
@@ -1328,6 +1328,7 @@ kisqi_raids = {
 	}
 
 	incompatible_with = locust_swarm
+	incompatible_with = manticore_attacks
 
 	range = {
 		integer_range = {
@@ -1625,6 +1626,92 @@ living_trees = {
 
 	color = { 46 158 102 }
 	icon = "gfx/interface/icons/harvest_condition_icons/living_trees.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+
+manticore_attacks = {
+	trigger = {
+		is_vulnerable_to_manticore_attacks = yes
+	}
+	incompatible_with = kisqi_raids
+	incompatible_with = locust_swarm
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 2
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 46
+			max = 140
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_ranching_throughput_add = -0.075
+		building_group_bg_plantations_throughput_add = -0.05
+		state_mortality_mult = 0.02
+		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+		state_market_access_price_impact = -0.02
+		goods_output_monster_essence_mult = 0.02
+
+		#Infra
+		state_non_homeland_colony_growth_speed_mult = -0.1
+		state_adventurer_coverage_add = -12
+
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0.015
+
+
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance < -50	
+				}
+			}
+			add = 0.02
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+			multiply = 0.25
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					total_urbanization > 600
+				}
+			}
+			multiply = 0.75
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					total_urbanization > 1200
+				}
+			}
+			multiply = 0.6
+		}
+	}
+	color = { 195 244 214 }
+	icon = "gfx/interface/icons/harvest_condition_icons/manticores.dds"
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
 }
 
@@ -2950,17 +3037,17 @@ wishstone_showers = {
 
 	duration = {
 		fixed_range = {
-			min = 36
-			max = 104
+			min = 72
+			max = 145
 		}
 	}
 
 	modifier = {
 		#Throughput
-		building_wishstone_mine_throughput_add = 0.05
-		building_wishstone_reefs_throughput_add = 0.05
+		building_wishstone_mine_throughput_add = 0.075
+		building_wishstone_reefs_throughput_add = 0.075
 		state_standard_of_living_add = 0.3
-		state_migration_pull_mult =  0.05
+		state_migration_pull_mult =  0.075
 	}
 	intensity = {
 		fixed_range = {

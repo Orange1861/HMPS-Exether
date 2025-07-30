@@ -1,0 +1,1221 @@
+﻿namespace = locari_regional
+
+
+
+locari_regional.1 = { #vagrant hiadud musicians
+	type = country_event
+	title = locari_regional.1.t
+	desc = locari_regional.1.d
+	flavor = locari_regional.1.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "rp1_social_banditry"
+    }
+
+	placement = scope:vagrant_state
+	cooldown = { years = 40 }
+
+	trigger = {
+		any_scope_state = {
+			is_incorporated = yes
+			state_is_in_locari = yes
+		}
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				state_is_in_locari = yes
+			}
+			save_scope_as = vagrant_state
+		}
+	}
+
+
+	option = {
+		name = locari_regional.1.a #why do we care?
+		default_option = yes
+			scope:vagrant_state = {
+				add_radicals_in_state = {
+					value = 0.15
+				}
+				if = {
+					limit = {
+						any_neighbouring_state = {
+							owner = root
+						}
+					}
+					random_neighbouring_state = {
+						limit = {
+							owner = root
+						}
+						add_radicals_in_state = {
+							value = 0.15
+						}
+					}
+				}
+			}
+	}
+
+	option = {
+		name = locari_regional.1.b #send in the military!
+		ig:ig_armed_forces ?= {
+			add_modifier = {
+				name = menial_tasks
+				years = 10
+				is_decaying = yes
+			}
+		}
+		scope:vagrant_state = {
+			add_radicals_in_state = {
+				value = 0.05
+			}
+		}
+
+	}
+	option = {
+		name = locari_regional.1.c #can't the adventurers handle it?
+		highlighted_option = yes
+		trigger = {
+			custom_tooltip = {
+				text = adventurer_coverage_positive_tt
+				scope:vagrant_state = {
+					state_adventurer_coverage_balance > 0
+				}
+			}
+		}
+		scope:vagrant_state = {
+			add_radicals_in_state = {
+				value = 0.05
+			}
+		}
+	}
+	option = {
+		name = locari_regional.1.e #BAN DANCING
+		highlighted_option = yes
+		trigger = {
+			NOT = {
+				has_law = law_type:law_no_police
+			}
+		}
+		scope:vagrant_state = {
+			add_radicals_in_state = {
+				value = 0.05
+			}
+		}
+	}
+	option = {
+		name = locari_regional.1.g #MUSIC DUEEEEEEEEEEEEEEEEEELLLLLLLLLLLLLLLLLLLLLLLL
+		highlighted_option = yes
+		trigger = {
+			any_primary_culture = {
+				has_discrimination_trait = hiadud_heritage
+			}
+		}
+		random_list = {
+			50 = {
+				add_modifier = {
+					name = won_music_duel
+					years = 10
+				}
+			}
+			50 = {
+				add_modifier = {
+					name = lost_music_duel
+					years = 10
+				}
+			}
+		}
+	}
+}
+
+locari_regional.2 = { #refugees escaping the naga
+	type = country_event
+	title = locari_regional.2.t
+	desc = locari_regional.2.d
+	flavor = locari_regional.2.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "bear_talking_to_bureaucrats_positive"
+    }
+
+	placement = scope:refugee_state
+	cooldown = { years = 40 }
+
+	trigger = {
+		any_scope_state = {
+			is_incorporated = yes
+			state_is_in_locari = yes
+			any_neighbouring_state = {
+				owner = {
+					any_primary_culture = {
+						OR = {
+							has_primary_culture = cu:gulf_naga
+							country_has_primary_culture = cu:jungle_naga
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				state_is_in_locari = yes
+				any_neighbouring_state = {
+					owner = {
+						OR = {
+							country_has_primary_culture = cu:gulf_naga
+							country_has_primary_culture = cu:jungle_naga
+						}
+					}
+				}
+			}
+			save_scope_as = refugee_state
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						OR = {
+							country_has_primary_culture = cu:gulf_naga
+							country_has_primary_culture = cu:jungle_naga
+						}
+					}
+				}
+				owner = {
+					save_scope_as = escaped_from_country
+				}
+			}
+		}
+
+	}
+
+
+	option = {
+		name = locari_regional.2.a #our hearts bleed
+		scope:refugee_state = {
+			create_pop = {
+				culture = awakened
+				size = 40000
+			}
+		}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = scope:escaped_from_country
+			}
+		if = {
+			limit = {
+				ig:ig_petty_bourgeoisie ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				add_modifier = {
+					name = accepted_refugees
+					years = 5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = locari_regional.2.b #this is dangerous yo
+		default_option = yes
+		add_modifier = {
+			name = turned_back_refugees
+			years = 10
+			is_decaying = yes
+		}
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_positive
+			target = scope:escaped_from_country
+		}
+		if = {
+			limit = {
+				ig:ig_petty_bourgeoisie ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				add_modifier = {
+					name = denied_refugees
+					years = 5
+				}
+			}
+		}		
+	}
+
+	option = {
+		name = locari_regional.2.c #same as a but you're an awakened too
+		highlighted_option = yes
+		trigger = {
+			any_primary_culture = {
+				has_discrimination_trait = awakened_heritage
+			}
+		}
+		add_modifier = {
+			name = protector_of_the_furryfolk
+			years = 10
+		}
+		every_neighbouring_state = {
+			limit = {
+				owner = {
+					any_primary_culture = {
+						has_discrimination_trait = awakened_heritage
+					}
+				}
+			}
+			owner = {
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_positive
+					target = root
+				}	
+			}
+		}
+		scope:refugee_state = {
+			create_pop = {
+				culture = awakened
+				size = 40000
+			}
+		}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = scope:escaped_from_country
+			}		
+		ai_chance = {
+			base = 100
+		}
+	}	
+}
+
+
+locari_regional.3 = { #crazy shit at the asuroth ruins
+	type = country_event
+	title = locari_regional.3.t
+	desc = locari_regional.3.d
+	flavor = locari_regional.3.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "dwarf_bear_tunnel"
+    }
+
+	cooldown = { years = 45 }
+	placement = scope:asuroth_ruin_state
+	trigger = {
+		has_technology_researched = hero_worship
+		OR = {
+			ig:ig_petty_bourgeoisie ?= {
+				is_marginal = no
+			}
+			ig:ig_mages ?= {
+				is_marginal = no
+			}
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			state_is_in_locari = yes
+			OR = {
+				state_has_building_type_levels = {
+					target = bt:building_asuroth_ruins value >= 1
+				}
+				state_has_building_type_levels = {
+					target = bt:building_archeology value >= 1
+				}
+			}
+
+		}	
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				state_is_in_locari = yes
+				OR = {
+					state_has_building_type_levels = {
+						target = bt:building_asuroth_ruins value >= 1
+					}
+					state_has_building_type_levels = {
+						target = bt:building_archeology value >= 1
+					}
+				}
+				NOT = {
+					has_harvest_condition = psionic_storms
+				}
+			}
+			save_scope_as = asuroth_ruin_state
+		}
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_academia.dds"
+
+	option = {
+		name = locari_regional.3.a #we're not going to allow this
+		if = {
+			limit = {
+				ig:ig_petty_bourgeoisie ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_petty_bourgeoisie ?= {
+				add_modifier = {
+					name = denied_asuroth_archeology
+					years = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				ig:ig_mages ?= {
+					is_marginal = no
+				}
+			}
+			ig:ig_mages ?= {
+				add_modifier = {
+					name = denied_asuroth_archeology
+					years = 5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = locari_regional.3.b #exciting!	
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			random_list = {
+				25 = {
+					add_investment_pool = 900000
+				}
+				25 = {
+					add_investment_pool = 400000
+					scope:asuroth_ruin_state = {
+						add_modifier = {
+							name = historical_relics
+							years = 10
+							is_decaying = yes
+						}
+					}
+				}
+				50 = {
+					if = {
+						limit = {
+							scope:asuroth_ruin_state = {
+								state_region = {
+									has_harvest_condition = psionic_winds
+								}
+							}
+						}
+						scope:asuroth_ruin_state = {
+							state_region = {
+								finish_harvest_condition = psionic_winds
+								start_harvest_condition = psionic_storms
+							}
+							every_neighbouring_state = {
+								limit = {
+									NOR = {
+										state_region = {
+											has_harvest_condition = psionic_storms
+										}
+										state_region = {
+											has_harvest_condition = psionic_winds
+										}
+									}
+								}
+								state_region = {
+									start_harvest_condition = psionic_winds
+								}
+							}
+						}
+					}
+					else = {
+						scope:asuroth_ruin_state = {
+							state_region = {
+								start_harvest_condition = psionic_storms
+							}
+							every_neighbouring_state = {
+								limit = {
+									NOR = {
+										state_region = {
+											has_harvest_condition = psionic_storms
+										}
+										state_region = {
+											has_harvest_condition = psionic_winds
+										}
+									}
+								}
+								state_region = {
+									start_harvest_condition = psionic_winds
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else = {
+			random_list = {
+				25 = {
+					add_investment_pool = 900000
+				}
+				25 = {
+					add_investment_pool = 400000
+					scope:asuroth_ruin_state = {
+						add_modifier = {
+							name = historical_relics
+							years = 10
+							is_decaying = yes
+						}
+					}
+				}
+				25 = {
+					if = {
+						limit = {
+							scope:asuroth_ruin_state = {
+								state_region = {
+									has_harvest_condition = psionic_winds
+								}
+							}
+						}
+						scope:asuroth_ruin_state = {
+							state_region = {
+								finish_harvest_condition = psionic_winds
+								start_harvest_condition = psionic_storms
+							}
+						}
+					}
+					else = {
+						scope:asuroth_ruin_state = {
+							state_region = {
+								start_harvest_condition = psionic_winds
+							}
+						}
+					}
+				}
+				25 = {
+					scope:asuroth_ruin_state = {
+						if = {
+							limit = {
+								state_region = {
+									has_harvest_condition = psionic_winds
+								}
+							}
+							state_region = {
+								finish_harvest_condition = psionic_winds
+							}
+						}
+						state_region = {
+							start_harvest_condition = psionic_storms
+						}
+						every_neighbouring_state = {
+							limit = {
+								NOR = {
+									state_region = {
+										has_harvest_condition = psionic_storms
+									}
+									state_region = {
+										has_harvest_condition = psionic_winds
+									}
+								}
+							}
+							state_region = {
+								start_harvest_condition = psionic_winds
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = locari_regional.3.c #send state mages to oversee
+		trigger = {
+			OR = {
+				has_law = law_type:law_astrological_studies
+				has_law = law_type:law_mage_hunters
+			}
+		}
+		highlighted_option = yes	
+		if = {
+			limit = {
+				veil_integrity_total < 50
+			}
+			random_list = {
+				33 = {
+					add_investment_pool = 450000
+					add_treasury = 450000
+				}
+				33 = {
+					add_investment_pool = 200000
+					add_treasury = 200000
+					scope:asuroth_ruin_state = {
+						add_modifier = {
+							name = historical_relics
+							years = 10
+							is_decaying = yes
+						}
+					}
+				}
+				33 = {
+					if = {
+						limit = {
+							scope:asuroth_ruin_state = {
+								state_region = {
+									has_harvest_condition = psionic_winds
+								}
+							}
+						}
+						scope:asuroth_ruin_state = {
+							state_region = {
+								finish_harvest_condition = psionic_winds
+								start_harvest_condition = psionic_storms
+							}
+							every_neighbouring_state = {
+								limit = {
+									NOR = {
+										state_region = {
+											has_harvest_condition = psionic_storms
+										}
+										state_region = {
+											has_harvest_condition = psionic_winds
+										}
+									}
+								}
+								state_region = {
+									start_harvest_condition = psionic_winds
+								}
+							}
+						}
+					}
+					else = {
+						scope:asuroth_ruin_state = {
+							state_region = {
+								start_harvest_condition = psionic_storms
+							}
+							every_neighbouring_state = {
+								limit = {
+									NOR = {
+										state_region = {
+											has_harvest_condition = psionic_storms
+										}
+										state_region = {
+											has_harvest_condition = psionic_winds
+										}
+									}
+								}
+								state_region = {
+									start_harvest_condition = psionic_winds
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else = {
+			random_list = {
+				38 = {
+					add_investment_pool = 450000
+					add_treasury = 450000
+				}
+				38 = {
+					add_investment_pool = 200000
+					add_treasury = 200000
+					scope:asuroth_ruin_state = {
+						add_modifier = {
+							name = historical_relics
+							years = 10
+							is_decaying = yes
+						}
+					}
+				}
+				12 = {
+					if = {
+						limit = {
+							scope:asuroth_ruin_state = {
+								state_region = {
+									has_harvest_condition = psionic_winds
+								}
+							}
+						}
+						scope:asuroth_ruin_state = {
+							state_region = {
+								finish_harvest_condition = psionic_winds
+								start_harvest_condition = psionic_storms
+							}
+						}
+					}
+					else = {
+						scope:asuroth_ruin_state = {
+							state_region = {
+								start_harvest_condition = psionic_winds
+							}
+						}
+					}
+				}
+				12 = {
+					scope:asuroth_ruin_state = {
+						if = {
+							limit = {
+								state_region = {
+									has_harvest_condition = psionic_winds
+								}
+							}
+							state_region = {
+								finish_harvest_condition = psionic_winds
+							}
+						}
+						state_region = {
+							start_harvest_condition = psionic_storms
+						}
+						every_neighbouring_state = {
+							limit = {
+								NOR = {
+									state_region = {
+										has_harvest_condition = psionic_storms
+									}
+									state_region = {
+										has_harvest_condition = psionic_winds
+									}
+								}
+							}
+							state_region = {
+								start_harvest_condition = psionic_winds
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+locari_regional.4 = { #psionic locusts
+	type = country_event
+	title = locari_regional.4.t
+	desc = locari_regional.4.d
+	flavor = locari_regional.4.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "dreamweaver_jungle"
+    }
+
+	placement = scope:locust_state
+	cooldown = { years = 40 }
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_dreamweaver_jungle
+				region = sr:region_sarpakshetra
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					region = sr:region_dreamweaver_jungle
+					region = sr:region_sarpakshetra
+				}
+			}
+			save_scope_as = locust_state
+		}
+
+	}
+
+
+	option = {
+		name = locari_regional.4.a #this sucks
+		default_option = yes
+		scope:locust_state = {
+			add_modifier = {
+				name = psionic_locusts
+				years = 10
+				is_decaying = yes
+			}
+			every_neighbouring_state = {
+				limit = {
+					owner = root
+				}
+				add_modifier = {
+					name = psionic_locusts
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = locari_regional.4.b #send adventurers
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = adventurer_coverage_positive_tt
+					scope:locust_state = {
+						state_adventurer_coverage_balance > 0
+					}
+				}
+				has_law = law_type:law_pest_control
+			}
+		}
+		add_modifier = {
+			name = locust_reagents
+			years = 10
+			is_decaying = yes
+		}	
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	option = {
+		name = locari_regional.4.c #psioooonic
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				any_primary_culture = {
+					OR = {
+						has_discrimination_trait = awakened_heritage
+						has_discrimination_trait = naga_heritage_culture
+						has_discrimination_trait = hiadud_heritage
+					}
+				}
+				has_technology_researched = thought_shielding
+			}
+		}
+		add_modifier = {
+			name = sounds_of_home
+			years = 10
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}	
+}
+
+locari_regional.5 = { #psionic disturbance in STATE
+	type = country_event
+	title = locari_regional.5.t
+	desc = locari_regional.5.d
+	flavor = locari_regional.5.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "dwarf_bear_tunnel"
+    }
+
+	placement = scope:disturbance_state
+	cooldown = { years = 50 }
+
+	trigger = {
+		any_scope_state = {
+			is_incorporated = yes
+			state_is_in_locari = yes
+			OR = {
+				state_has_building_type_levels = {
+					target = bt:building_logging_camp value >= 3
+				}
+				state_has_building_type_levels = {
+					target = bt:building_logging_camp_dreamwood value >= 3
+				}
+			}
+		}
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				state_is_in_locari = yes
+				OR = {
+					state_has_building_type_levels = {
+						target = bt:building_logging_camp value >= 3
+					}
+					state_has_building_type_levels = {
+						target = bt:building_logging_camp_dreamwood value >= 3
+					}
+				}
+			}
+			save_scope_as = disturbance_state
+		}
+
+	}
+
+
+	option = {
+		name = locari_regional.5.a #this sucks
+		default_option = yes
+		scope:disturbance_state = {
+			add_modifier = {
+				name = psionic_woods
+				years = 10
+				is_decaying = yes
+			}
+		}
+	}
+
+	option = {
+		name = locari_regional.5.b #this sucks
+		default_option = yes
+		add_treasury = -150000
+	}
+
+	option = {
+		name = locari_regional.5.c #send adventurers
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = adventurer_coverage_positive_tt
+					scope:disturbance_state = {
+						state_adventurer_coverage_balance > 0
+					}
+				}
+				has_law = law_type:law_pest_control
+			}
+		}
+		add_treasury = -150000
+		scope:disturbance_state = {
+			add_modifier = {
+				name = cleared_the_woods
+				years = 10
+				is_decaying = yes
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	option = {
+		name = locari_regional.5.e
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				any_primary_culture = {
+					OR = {
+						has_discrimination_trait = awakened_heritage
+					}
+				}
+			}
+		}
+		scope:disturbance_state = {
+			add_modifier = {
+				name = friendly_forests
+				years = 10
+			}
+		}
+
+
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = locari_regional.5.e2
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				any_primary_culture = {
+					OR = {
+						has_discrimination_trait = hiadud_heritage
+					}
+				}
+			}
+		}
+		scope:disturbance_state = {
+			add_modifier = {
+				name = friendly_forests
+				years = 10
+			}
+		}
+
+
+		ai_chance = {
+			base = 100
+		}
+	}	
+}
+
+locari_regional.6 = { #sacrifice them to da trees
+	type = country_event
+	title = locari_regional.6.t
+	desc = locari_regional.6.d
+	flavor = locari_regional.6.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "dreamweaver_jungle"
+    }
+
+	placement = scope:weaver_state
+	cooldown = { years = 40 }
+
+	trigger = {
+		any_scope_state = {
+			state_has_building_type_levels = {
+				target = bt:building_logging_camp_dreamwood value >= 1
+			}
+			count >= 2
+		}
+		NOT = { has_variable = dreamwood_event_variable }
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_has_building_type_levels = {
+					target = bt:building_logging_camp_dreamwood value >= 1
+				}
+			}
+			save_scope_as = weaver_state
+		}
+		set_variable = {
+			name = dreamwood_event_variable
+			years = 10
+		} 
+	}
+
+
+	option = {
+		name = locari_regional.6.a #no
+		default_option = yes
+		scope:weaver_state = {
+			add_modifier = {
+				name = dried_dreams
+				years = 10
+				is_decaying = yes
+			}
+			every_neighbouring_state = {
+				limit = {
+					owner = root
+					state_has_building_type_levels = {
+						target = bt:building_logging_camp_dreamwood value >= 1
+					}
+				}
+				add_modifier = {
+					name = dried_dreams
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = locari_regional.6.b #sure
+		add_modifier = {
+			name = animal_sacrifices
+			years = 10
+			is_decaying = yes
+		}	
+	}
+
+	option = {
+		name = locari_regional.6.c #do the real thing
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				any_primary_culture = {
+					OR = {
+						has_discrimination_trait = naga_heritage_culture
+					}
+					
+				}
+				religion = {
+					has_discrimination_trait = angel_domain
+				}
+			}
+				# scope:weaver_state ?= {
+				# 	state_population > 100000
+				# }
+			
+		}
+		scope:weaver_state ?= {
+			kill_population_in_state = {
+				value = 25000
+				strata = lower
+			}
+			add_modifier = {
+				name = weave_revival
+				years = 10
+			}
+			every_neighbouring_state = {
+				limit = {
+					state_has_building_type_levels = {
+						target = bt:building_logging_camp_dreamwood value >= 1
+					}
+				}
+				add_modifier = {
+					name = weave_revival
+					years = 10
+					is_decaying = yes
+				}
+			}
+		}
+		add_modifier = {
+			name = weave_revival_country
+			years = 10
+			is_decaying = yes
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}	
+}
+
+locari_regional.7 = { #sacrifice them to da trees
+	type = country_event
+	title = locari_regional.7.t
+	desc = locari_regional.7.d
+	flavor = locari_regional.7.f
+
+	duration = 3
+    dlc = dlc_roe
+    event_image = {
+        video = "dreamweaver_jungle"
+    }
+
+	placement = scope:spoopy_state
+	cooldown = { years = 40 }
+
+	trigger = {
+		veil_integrity_total < 75
+		any_scope_state = {
+			state_has_building_type_levels = {
+				target = bt:building_logging_camp_dreamwood value >= 1
+			}
+		}
+		NOT = { has_variable = dreamwood_event_variable }
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_has_building_type_levels = {
+					target = bt:building_logging_camp_dreamwood value >= 1
+				}
+			}
+			save_scope_as = spoopy_state
+		}
+		set_variable = {
+			name = dreamwood_event_variable
+			years = 10
+		} 
+	}
+
+
+	option = {
+		name = locari_regional.7.a #cool
+		default_option = yes
+		every_scope_state = {
+			limit = {
+				state_has_building_type_levels = {
+					target = bt:building_logging_camp_dreamwood value >= 1
+				}
+			}
+			add_modifier = {
+				name = psionic_bursts
+				years = 10
+				is_decaying = yes
+			}
+		}
+
+	}
+
+	option = {
+		name = locari_regional.7.b #we should do something about this
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				has_law = law_type:law_pest_control
+				has_law = law_type:law_mage_hunters
+			}
+		}
+		scope:spoopy_state ?= {
+			add_loyalists_in_state = {
+				value = 0.05
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	option = {
+		name = locari_regional.7.c #do the real thing
+		highlighted_option = yes
+		trigger = {
+			any_primary_culture = {
+				OR = {
+					has_discrimination_trait = awakened_heritage
+					has_discrimination_trait = naga_heritage_culture
+					has_discrimination_trait = hiadud_heritage
+				}
+			}
+		}
+		every_scope_state = {
+			limit = {
+				state_has_building_type_levels = {
+					target = bt:building_logging_camp_dreamwood value >= 1
+				}
+			}
+			add_modifier = {
+				name = psionic_dialogue
+				years = 10
+				is_decaying = yes
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}	
+}

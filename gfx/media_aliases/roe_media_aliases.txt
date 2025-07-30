@@ -9,8 +9,6 @@
 #	fallback = another_media_alias_key
 #}
 
-
-
 #alphabetized.  Keep it that way.
 
 adventurer_elf_twink = {
@@ -21,6 +19,11 @@ adventurer_elf_twink = {
 adventurer_troll_fight = {
 	video = "gfx/event_images/adventurer_troll_fight.bik"
 	audio = "event:/SFX/Events/africa/soldiers_breaking_protest"
+}
+
+arritzakarri_temple_exterior = {
+	video = "gfx/event_images/aritzakarri_temple_exterior.bk2"
+	audio = "event:/SFX/Events/africa/construction_colony"
 }
 
 bear_talking_to_bureaucrats_negative = {
@@ -41,6 +44,11 @@ darkelf_emissary = {
 dragonbone = {
 	video = "gfx/event_images/dragonbone.bik"
 	audio = "event:/SFX/Events/asia/buddhism"
+}
+
+dreamweaver_jungle = {
+	video = "gfx/event_images/dreamweaver_jungle.bk2"
+	audio = "event:/SFX/Events/middleeast/jungle_expedition"
 }
 
 druid_discussion = {
@@ -98,6 +106,11 @@ ice_orc = {
 	audio = "event:/SFX/Events/unspecific/arctic"
 }
 
+kailando_raptor = {
+	video = "gfx/event_images/kailand_raptor.bk2"
+	audio = "event:/SFX/Events/middleeast/jungle_expedition"
+}
+
 kobold_mountain = {
 	video = "gfx/event_images/kobold_lookin.bik"
 	audio = "event:/SFX/Events/asia/buddhism"
@@ -134,10 +147,17 @@ potion_seller = {
 	audio = "event:/SFX/Events/africa/city_center"
 }
 
+
 rimeroot_sunstation = {
 	video = "gfx/event_images/sunstation.bik"
 	audio = "event:/SFX/Events/middleeast/mountain_pass_civilian"
 }
+
+rock_elementals = {
+	video = "gfx/event_images/rock_elementals.bk2"
+	audio = "event:/SFX/Events/africa/soldiers_breaking_protest"
+}
+
 salt_wastes_orc = {
 	video = "gfx/event_images/salt_wastes_orc.bik"
 	audio = "event:/SFX/Events/asia/dead_cattle_poor_harvest"

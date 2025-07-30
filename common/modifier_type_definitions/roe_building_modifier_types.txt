@@ -114,7 +114,14 @@ building_mint_tea_plantation_throughput_add={
 		ai_value=0
 	}
 }
-
+building_songberry_plantation_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
 building_beekeeping_throughput_add={
 	decimals=0
 	color=good
@@ -269,6 +276,15 @@ building_argentum_rail_throughput_add = {
 }
 
 building_blubber_plants_throughput_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_logging_camp_dreamwood_throughput_add = {
 	decimals=0
 	color=good
 	percent=yes

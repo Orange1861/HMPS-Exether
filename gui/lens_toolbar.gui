@@ -54,7 +54,8 @@ types lens_toolbar_types {
 				visible = "[GetVariableSystem.Exists('international_open')]"
 			}
 		}
-	}
+
+		}
 
 	type roe_bottom_button = widget {
 		size = { 46 80 }
@@ -257,7 +258,9 @@ types lens_toolbar_types {
 			}
 
 			### ROE BUTTONS
-			roe_bottom_button_panel = {}
+			roe_bottom_button_panel = {
+			}
+
 
 			### LOCATION FINDER
 			icon = {

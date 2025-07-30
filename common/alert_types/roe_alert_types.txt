@@ -3,8 +3,7 @@
 	texture = gfx/interface/icons/generic_icons/magic_reserves_icon.dds
 
 	valid = {
-		#TODO: Define a reasonable trigger when this is possible
-		always = no
+		arcana >= 200
 	}
 
 	open_panel = domains_window

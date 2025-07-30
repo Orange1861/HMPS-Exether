@@ -431,14 +431,6 @@ building_group_bg_wishstone_mining_throughput_add={
 		ai_value=0
 	}
 }
-building_leviathan_outpost_throughput_add={
-	decimals=1
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
 
 building_ice_pond_throughput_add={
 	decimals=0
@@ -576,6 +568,15 @@ country_arcana_upkeep = {
 }
 
 building_group_bg_archeology_throughput_add = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_ruins_throughput_add = {
 	color=good
 	percent = yes
 	decimals=0
@@ -1228,6 +1229,24 @@ state_harvest_condition_kisqi_raids_duration_mult={
 }
 
 state_harvest_condition_kisqi_raids_impact_mult = {
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_manticore_attacks_duration_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_manticore_attacks_impact_mult = {
 	decimals=0
 	color=bad
 	percent=yes

@@ -160,7 +160,7 @@ mutagen_medicine_state = {
 }
 
 adventurer_coverage_events = {
-	random_events = {
+	random_events = { #can only get 1 adventurer event every 4-6 years
 		325 = 0
 		13 = adventurer_coverage.1 #adventurer child labor
 		18 = adventurer_coverage.2 #rural folk set up private patrols
@@ -179,5 +179,38 @@ adventurer_coverage_events = {
 		7 = adventurer_coverage.15 #adventurers buying potions 
 		3 = adventurer_coverage.16 #crazy druid compound
 		15 = adventurer_coverage.17 #the age of air piracy
+		25 = adventurer_coverage.18 #leviathans are ANGERY
+		25 = adventurer_coverage.19 #bears eating da songberries
+		20 = adventurer_coverage.20 #ah hell naw the squids
+		4 = adventurer_coverage.21 #livestock mutant ranches go crazy ##cooldown exempt, maybe move to a different on action
+		30 = adventurer_coverage.22 #adventurer donates a cool relic to the government## three versions
+		9 = adventurer_coverage.23 #cool post godsbane shipwreck
 	}
+}
+
+starbrand_events = {
+	random_events = {
+		260 = 0
+		7 = starbrand_events.1 #mines displace monks
+		10 = starbrand_events.2 #wishstone quarry owners want to intentionally cause a wishstone shower
+		10 = starbrand_events.3 #apprentice mages helping at the schools
+		7 = starbrand_events.4 #ectoplasm trial
+		20 = starbrand_events.5 #devout angry about heretical magical teachings
+		7 = starbrand_events.6 #mages want more observatory funding
+		18 = starbrand_events.7 #witch doctors event
+		20 = starbrand_events.8 #bad omens at the observatories
+		20 = starbrand_events.9 #fertile omens at the observatories ##maybe move observatory events to another spot
+		20 = starbrand_events.10 #THE GOLEM DEMANDS INFRASTRUCTURE FUNDING ##technically an observatory event
+	}
+}
+
+locari_regional_events = {
+	random_events = {
+		265 = 0
+		9 = locari_regional.1 #hiadud travelling bards
+		9 = locari_regional.2 #escaped naga slaves
+		9 = locari_regional.3 #asuroth ruins explosion or maybe not
+		6 = locari_regional.4 #psionic locusts in the jungle
+	}
+
 }

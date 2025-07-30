@@ -996,6 +996,13 @@
 
 	text = {
 		trigger = {
+			this = cu:ravensworn 
+		}
+		localization_key = ravensworn_flavor
+	}
+
+	text = {
+		trigger = {
 			this = cu:saglithan
 		}
 		localization_key = saglithan_flavor

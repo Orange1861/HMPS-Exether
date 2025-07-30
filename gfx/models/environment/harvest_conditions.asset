@@ -1056,3 +1056,25 @@
 			start_event = {	particle = "harvestconditions/wildfire_04" trigger_once = yes keep_particle = yes }
 		}
 }
+
+		# manticore attacks (100X)
+		state = {
+			name = "manticore_attacks_1"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 1 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_01" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "manticore_attacks_2"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 2 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_01" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "manticore_attacks_3"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 3 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_02" trigger_once = yes keep_particle = yes }
+		}
+		state = {
+			name = "manticore_attacks_4"
+			event = { soundparameter = { "harvest_condition_intensity_level" = 4 } sound = { soundeffect = "event:/SFX/Ambience/3D/harvestconditions/composites/hc_3D_locustSwarm" } keep_sound = yes }
+			start_event = {	particle = "harvestconditions/wildfire_03" trigger_once = yes keep_particle = yes }
+		}

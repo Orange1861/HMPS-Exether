@@ -20,6 +20,9 @@ state_trait_fahavalo_fisheries = {
 state_trait_distant_shores = {
     icon = "gfx/interface/icons/state_trait_icons/tropical_climate.dds"
 	required_techs_for_colonization = { "drow_tech" }
+	disabling_technologies = {
+		"drow_tech"
+	}
 	modifier = {
 	}
 }

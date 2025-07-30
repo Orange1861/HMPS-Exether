@@ -4,7 +4,6 @@ veil_events.1 = {
 	type = country_event
 	title = veil_events.1.t
 	flavor = veil_events.1.f
-	gui_window = newspaper_superevent
 	event_image = {
 		texture = "gfx/event_images/aurora.dds"
 	}
@@ -41,7 +40,6 @@ veil_events.2 = {
 	type = country_event
 	title = veil_events.2.t
 	flavor = veil_events.2.f
-	gui_window = newspaper_superevent
 	event_image = {
 		texture = "gfx/event_images/crack.dds"
 	}
@@ -78,7 +76,6 @@ veil_events.3 = {
 	type = country_event
 	title = veil_events.3.t
 	flavor = veil_events.3.f
-	gui_window = newspaper_superevent
 	event_image = {
 		texture = "gfx/event_images/aurora.dds"
 	}

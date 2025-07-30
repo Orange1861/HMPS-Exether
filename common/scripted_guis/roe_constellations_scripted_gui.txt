@@ -1,0 +1,179 @@
+﻿check_has_golem_modifier = {
+    saved_scopes = { arcana_id_golem }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_golem = 1 has_modifier = country_arcana_golem_1 }
+            AND = { scope:arcana_id_golem = 2 has_modifier = country_arcana_golem_2 }
+            AND = { scope:arcana_id_golem = 3 has_modifier = country_arcana_golem_3 }
+            AND = { scope:arcana_id_golem = 4 has_modifier = country_arcana_golem_4 }
+            AND = { scope:arcana_id_golem = 5 has_modifier = country_arcana_golem_5 }
+        }
+    }
+}
+
+check_has_justice_modifier = {
+    saved_scopes = { arcana_id_justice }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_justice = 1 has_modifier = country_arcana_justice_1 }
+            AND = { scope:arcana_id_justice = 2 has_modifier = country_arcana_justice_2 }
+            AND = { scope:arcana_id_justice = 3 has_modifier = country_arcana_justice_3 }
+            AND = { scope:arcana_id_justice = 4 has_modifier = country_arcana_justice_4 }
+            AND = { scope:arcana_id_justice = 5 has_modifier = country_arcana_justice_5 }
+            AND = { scope:arcana_id_justice = 6 has_modifier = country_arcana_justice_6 }
+        }
+    }
+}
+
+check_has_sphinx_modifier = {
+    saved_scopes = { arcana_id_sphinx }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_sphinx = 1 has_modifier = country_arcana_sphinx_1 }
+            AND = { scope:arcana_id_sphinx = 2 has_modifier = country_arcana_sphinx_2 }
+            AND = { scope:arcana_id_sphinx = 3 has_modifier = country_arcana_sphinx_3 }
+            AND = { scope:arcana_id_sphinx = 4 has_modifier = country_arcana_sphinx_4 }
+            AND = { scope:arcana_id_sphinx = 5 has_modifier = country_arcana_sphinx_5 }
+            AND = { scope:arcana_id_sphinx = 6 has_modifier = country_arcana_sphinx_6 }
+        }
+    }
+}
+
+check_has_phoenix_modifier = {
+    saved_scopes = { arcana_id_phoenix }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_phoenix = 1 has_modifier = country_arcana_phoenix_1 }
+            AND = { scope:arcana_id_phoenix = 2 has_modifier = country_arcana_phoenix_2 }
+            AND = { scope:arcana_id_phoenix = 3 has_modifier = country_arcana_phoenix_3 }
+            AND = { scope:arcana_id_phoenix = 4 has_modifier = country_arcana_phoenix_4 }
+            AND = { scope:arcana_id_phoenix = 5 has_modifier = country_arcana_phoenix_5 }
+            AND = { scope:arcana_id_phoenix = 6 has_modifier = country_arcana_phoenix_6 }
+        }
+    }
+}
+
+check_has_unicorn_modifier = {
+    saved_scopes = { arcana_id_unicorn }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_unicorn = 1 has_modifier = country_arcana_unicorn_1 }
+            AND = { scope:arcana_id_unicorn = 2 has_modifier = country_arcana_unicorn_2 }
+            AND = { scope:arcana_id_unicorn = 3 has_modifier = country_arcana_unicorn_3 }
+            AND = { scope:arcana_id_unicorn = 4 has_modifier = country_arcana_unicorn_4 }
+            AND = { scope:arcana_id_unicorn = 5 has_modifier = country_arcana_unicorn_5 }
+        }
+    }
+}
+
+check_has_fey_modifier = {
+    saved_scopes = { arcana_id_fey }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_fey = 1 has_modifier = country_arcana_fey_1 }
+            AND = { scope:arcana_id_fey = 2 has_modifier = country_arcana_fey_2 }
+            AND = { scope:arcana_id_fey = 3 has_modifier = country_arcana_fey_3 }
+            AND = { scope:arcana_id_fey = 4 has_modifier = country_arcana_fey_4 }
+            AND = { scope:arcana_id_fey = 5 has_modifier = country_arcana_fey_5 }
+            AND = { scope:arcana_id_fey = 6 has_modifier = country_arcana_fey_6 }
+            AND = { scope:arcana_id_fey = 7 has_modifier = country_arcana_fey_7 }
+        }
+    }
+}
+
+check_has_gryphon_modifier = {
+    saved_scopes = { arcana_id_gryphon }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_gryphon = 1 has_modifier = country_arcana_gryphon_1 }
+            AND = { scope:arcana_id_gryphon = 2 has_modifier = country_arcana_gryphon_2 }
+            AND = { scope:arcana_id_gryphon = 3 has_modifier = country_arcana_gryphon_3 }
+            AND = { scope:arcana_id_gryphon = 4 has_modifier = country_arcana_gryphon_4 }
+            AND = { scope:arcana_id_gryphon = 5 has_modifier = country_arcana_gryphon_5 }
+            AND = { scope:arcana_id_gryphon = 6 has_modifier = country_arcana_gryphon_6 }
+        }
+    }
+}
+
+check_has_djinn_modifier = {
+    saved_scopes = { arcana_id_djinn }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_djinn = 1 has_modifier = country_arcana_djinn_1 }
+            AND = { scope:arcana_id_djinn = 2 has_modifier = country_arcana_djinn_2 }
+            AND = { scope:arcana_id_djinn = 3 has_modifier = country_arcana_djinn_3 }
+            AND = { scope:arcana_id_djinn = 4 has_modifier = country_arcana_djinn_4 }
+            AND = { scope:arcana_id_djinn = 5 has_modifier = country_arcana_djinn_5 }
+            AND = { scope:arcana_id_djinn = 6 has_modifier = country_arcana_djinn_6 }
+        }
+    }
+}
+
+check_has_siren_modifier = {
+    saved_scopes = { arcana_id_siren }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_siren = 1 has_modifier = country_arcana_siren_1 }
+            AND = { scope:arcana_id_siren = 2 has_modifier = country_arcana_siren_2 }
+            AND = { scope:arcana_id_siren = 3 has_modifier = country_arcana_siren_3 }
+            AND = { scope:arcana_id_siren = 4 has_modifier = country_arcana_siren_4 }
+            AND = { scope:arcana_id_siren = 5 has_modifier = country_arcana_siren_5 }
+        }
+    }
+}
+
+check_has_kraken_modifier = {
+    saved_scopes = { arcana_id_kraken }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_kraken = 1 has_modifier = country_arcana_kraken_1 }
+            AND = { scope:arcana_id_kraken = 2 has_modifier = country_arcana_kraken_2 }
+            AND = { scope:arcana_id_kraken = 3 has_modifier = country_arcana_kraken_3 }
+            AND = { scope:arcana_id_kraken = 4 has_modifier = country_arcana_kraken_4 }
+            AND = { scope:arcana_id_kraken = 5 has_modifier = country_arcana_kraken_5 }
+            AND = { scope:arcana_id_kraken = 6 has_modifier = country_arcana_kraken_6 }
+            AND = { scope:arcana_id_kraken = 7 has_modifier = country_arcana_kraken_7 }
+        }
+    }
+}
+
+check_has_fiend_modifier = {
+    saved_scopes = { arcana_id_fiend }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_fiend = 1 has_modifier = country_arcana_fiend_1 }
+            AND = { scope:arcana_id_fiend = 2 has_modifier = country_arcana_fiend_2 }
+            AND = { scope:arcana_id_fiend = 3 has_modifier = country_arcana_fiend_3 }
+            AND = { scope:arcana_id_fiend = 4 has_modifier = country_arcana_fiend_4 }
+            AND = { scope:arcana_id_fiend = 5 has_modifier = country_arcana_fiend_5 }
+            AND = { scope:arcana_id_fiend = 6 has_modifier = country_arcana_fiend_6 }
+        }
+    }
+}
+
+check_has_angel_modifier = {
+    saved_scopes = { arcana_id_angel }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_angel = 1 has_modifier = country_arcana_angel_1 }
+            AND = { scope:arcana_id_angel = 2 has_modifier = country_arcana_angel_2 }
+            AND = { scope:arcana_id_angel = 3 has_modifier = country_arcana_angel_3 }
+            AND = { scope:arcana_id_angel = 4 has_modifier = country_arcana_angel_4 }
+            AND = { scope:arcana_id_angel = 5 has_modifier = country_arcana_angel_5 }
+        }
+    }
+}
+
+
+check_has_dragon_modifier = {
+    saved_scopes = { arcana_id_dragon }
+    is_valid = {
+        OR = {
+            AND = { scope:arcana_id_dragon = 1 has_modifier = country_arcana_dragon_1 }
+            AND = { scope:arcana_id_dragon = 2 has_modifier = country_arcana_dragon_2 }
+            AND = { scope:arcana_id_dragon = 3 has_modifier = country_arcana_dragon_3 }
+            AND = { scope:arcana_id_dragon = 4 has_modifier = country_arcana_dragon_4 }
+            AND = { scope:arcana_id_dragon = 5 has_modifier = country_arcana_dragon_5 }
+        }
+    }
+}

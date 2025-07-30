@@ -538,6 +538,39 @@ pm_potion_sap = {
 	}
 }
 
+pm_dreamwood = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_hardwood_add = -10
+			goods_output_ectoplasm_add = 12
+		}
+	}
+}
+
+pm_no_dreamwood = {
+	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
+}
+
+pm_increased_dreamwood = {
+	texture = "gfx/interface/icons/production_method_icons/increased_hardwood.dds"
+
+	unlocking_production_methods = {
+		pm_saw_mills_stonewood
+		pm_electric_saw_mills_stonewood
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_hardwood_add = -20
+			goods_output_ectoplasm_add = 25
+		}
+	}
+}
+
 pm_increased_potion_sap = {
 	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
 
@@ -1043,7 +1076,7 @@ pm_enchanted_orreys = {
 pm_astral_projection = {
 	texture = "gfx/interface/icons/production_method_icons/analytical_philosophy_department.dds"
 	unlocking_technologies = {
-		psionic_theory
+		arcane_concentration
 	}
 	country_modifiers = {
 		workforce_scaled = {
