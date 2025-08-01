@@ -62,7 +62,8 @@ country_arcana_justice_5 = {
 # SPHINX
 country_arcana_sphinx_1 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
-	state_pop_qualifications_mult = 0.10
+	state_pop_qualifications_mult = 0.25
+	building_paper_mills_throughput_add = 0.15
 }
 country_arcana_sphinx_2 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
@@ -79,7 +80,7 @@ country_arcana_sphinx_4 = {
 }
 country_arcana_sphinx_5 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
-	country_weekly_innovation_max_add = 5
+	country_tech_research_speed_mult = 0.02
 	building_group_bg_technology_throughput_add = 0.1
 }
 country_arcana_sphinx_6 = {
@@ -195,7 +196,7 @@ country_arcana_fey_7 = {
 country_arcana_phoenix_1 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
 	building_group_bg_construction_infrastructure_usage_mult = -0.25
-	country_weekly_innovation_mult = 0.05
+	country_tech_research_speed_mult = 0.02
 }
 country_arcana_phoenix_2 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
@@ -247,7 +248,7 @@ country_arcana_djinn_5 = {
 }
 country_arcana_djinn_6 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
-	country_legitimacy_min_add = 25
+	country_legitimacy_base_add = 15
 	country_agitator_slots_add = 1
 	country_revolution_progress_mult = 0.25
 	country_secession_progress_mult = 0.25
@@ -399,13 +400,12 @@ country_arcana_dragon_2 = {
 }
 country_arcana_dragon_3 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
-	state_pop_qualifications_mult = 0.10
+	state_pop_qualifications_mult = 0.30
 	state_working_adult_ratio_add = 0.05
 }
 country_arcana_dragon_4 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
-	state_mortality_mult = -0.05
-	building_working_conditions_mult = -0.1
+	state_mortality_mult = -0.075
 }
 country_arcana_dragon_5 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_arcana_civic_positive.dds"
@@ -427,4 +427,6 @@ surplus_arcana = {
 coverage_deficit = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_map_negative.dds"
 	state_standard_of_living_add = -1
+	state_mortality_mult = 0.05
+	state_market_access_price_impact = -0.025
 }
