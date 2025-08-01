@@ -936,13 +936,32 @@ types information_panel_bar_types {
 
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+					visible = "[Not(GetVariableSystem.Exists('roe_open_window'))]"
 					position = { -100 0 }
 					datacontext = "[GetScriptedGui('recalculate_arcana_lists')]"
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Toggle('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
 						onclick = "[InformationPanelBar.ClosePanel]"
 						onclick = "[MapListPanelManager.CloseCurrentPanel]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
+						onclick = "[GetVariableSystem.Clear('retainer_character_panel_open')]"
+						onclick = "[GetVariableSystem.Clear('hide_domain_tutorial')]"
+						onclick = "[GetVariableSystem.Set('roe_open_window', 'roe_domains_window')]"
+					}
+				}
+				sidebar_label_button_small = {
+					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+					visible = "[GetVariableSystem.Exists('roe_open_window')]"
+					position = { -100 0 }
+					datacontext = "[GetScriptedGui('recalculate_arcana_lists')]"
+					blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Clear('international_open')]"
+						onclick = "[InformationPanelBar.ClosePanel]"
+						onclick = "[MapListPanelManager.CloseCurrentPanel]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
+						onclick = "[GetVariableSystem.Clear('retainer_character_panel_open')]"
+						onclick = "[GetVariableSystem.Clear('hide_domain_tutorial')]"
+						onclick = "[GetVariableSystem.Clear('roe_open_window')]"
 					}
 				}
 
@@ -959,22 +978,42 @@ types information_panel_bar_types {
 					using = sidebar_button_size_small
 					using = selected_sidepanel_animation_small
 					blockoverride "selected_visibility" {
-						visible = "[GetVariableSystem.Exists('show_magic')]"
+						visible = "[GetVariableSystem.Exists('roe_open_window')]"
 					}
 					sidepanel_button_small = {
+						visible = "[Not(GetVariableSystem.Exists('roe_open_window'))]"
+						position = { -4 0 }
+						datacontext = "[GetScriptedGui('recalculate_arcana_lists')]"
+						blockoverride "icon" {
+							texture = "gfx/interface/main_hud/magic_btn.dds"
+						}
+						onclick = "[GetVariableSystem.Clear('international_open')]"
+						onclick = "[InformationPanelBar.ClosePanel]"
+						onclick = "[MapListPanelManager.CloseCurrentPanel]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
+						onclick = "[GetVariableSystem.Clear('retainer_character_panel_open')]"
+						onclick = "[GetVariableSystem.Clear('hide_domain_tutorial')]"
+						onclick = "[GetVariableSystem.Set('roe_open_window', 'roe_domains_window')]"
+						input_action = "input_m"
+					}
+					sidepanel_button_small = {
+						visible = "[GetVariableSystem.Exists('roe_open_window')]"
 						position = { -4 0 }
 						datacontext = "[GetScriptedGui('recalculate_arcana_lists')]"
 						blockoverride "icon" {
 							texture = "gfx/interface/main_hud/magic_btn.dds"
 						}
 						blockoverride "button_selected" {
-							visible = "[GetVariableSystem.Exists('show_magic')]"
+							visible = yes
 						}
-						onclick = "[GetVariableSystem.Toggle('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
 						onclick = "[InformationPanelBar.ClosePanel]"
 						onclick = "[MapListPanelManager.CloseCurrentPanel]"
-						input_action = "open_magic"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
+						onclick = "[GetVariableSystem.Clear('retainer_character_panel_open')]"
+						onclick = "[GetVariableSystem.Clear('hide_domain_tutorial')]"
+						onclick = "[GetVariableSystem.Clear('roe_open_window')]"
+						input_action = "input_m"
 					}
 					textbox = {
 						parentanchor = right|top
